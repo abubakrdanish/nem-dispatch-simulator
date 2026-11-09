@@ -93,3 +93,34 @@ def test_live_resolve_flags_a_price_that_differs_from_the_scored_one(warehouse):
     row = r[(r.interval == T[0]) & r.price.notna()].iloc[0]
     live = data.resolve(warehouse, T[0], {("r4", row.region): row.price + 1.0})
     assert live["r4"]["differs"] == [[row.region, round(row.price + 1.0, 2), round(row.price, 2)]]
+
+
+def test_error_classes():
+    assert data.error_class(43.0, 40.0) == "within $5"
+    assert data.error_class(108.0, 100.0) == "within 10%"
+    assert data.error_class(70.0, 100.0) == "off"
+    assert data.error_class(13.53, 14699.0) == "order of magnitude"
+    assert data.error_class(None, 40.0) is None
+
+
+def _region(name, rrp, r4, **flags):
+    return {"region": name, "rrp": rrp, "flags": flags,
+            "rungs": {"r4": {"price": r4, "excluded": None if r4 is not None else "no_inputs"}}}
+
+
+def test_summary_names_the_limit_aemo_held_that_rung_4_left_out():
+    regions = [_region("VIC1", 14699.0, 13.53), _region("TAS1", 12.0, 12.0)]
+    flows = {"rows": [{"link": "T-V-MNSP1", "from": "TAS1", "to": "VIC1", "flow": 445.0, "r4": 560.4,
+                       "exportlimit": 444.99, "importlimit": 245.0,
+                       "exportgenconid": "F_QNV++MG_R6", "importgenconid": "VTBL_ROC"}]}
+    cons = {"rows": [{"constraintid": "F_QNV++MG_R6", "status": "region terms", "binding": True, "marginalvalue": 693.8}]}
+    s = data.summary(regions, flows, cons, "VIC1")
+    assert s.startswith("AEMO cleared Victoria at $14,699. Rung 4 said $13.53.")
+    assert "560 MW over Basslink" in s and "445 MW" in s and "F_QNV++MG_R6" in s and "because" not in s
+
+
+def test_summary_says_when_nothing_is_happening_and_when_prices_were_administered():
+    quiet = [_region(r, 80.0, 90.0) for r in ("NSW1", "QLD1", "SA1", "TAS1", "VIC1")]
+    assert "Nothing much happening here" in data.summary(quiet, {"rows": []}, {"rows": []}, "NSW1")
+    apc = [_region("SA1", 300.0, 5000.0, apc_flag=True), _region("VIC1", 80.0, 80.0)]
+    assert "administered" in data.summary(apc, {"rows": []}, {"rows": []}, "SA1")

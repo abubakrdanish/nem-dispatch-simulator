@@ -209,11 +209,13 @@ python -m nemsim.web             # then open http://127.0.0.1:8765
 
 Pick an interval and the page shows what the market did, what each rung said, and why they differ. Every modelled price on the page is the scored result already in `results/`. The warehouse is opened read-only, so DuckDB itself refuses any write.
 
-- **Interval view.** For each region, AEMO's price and every rung's price on one symmetric-log axis, so the size of an error is visible as distance. Below that:
-  - **The supply stack** for a region or the whole NEM: offers cheapest first at their loss-adjusted prices, drawn at the capacity each rung could use. Rung 1 uses declared MAXAVAIL, rungs 2 and 3a AEMO's dispatch availability, and rungs 3b and 4 that availability within ramp limits. Demand and the local requirement are drawn on it, with a line for each rung's price.
+- **Interval view.** It opens on the worked example above, 31 January 2020 at 18:45 in Victoria.
+  - **One generated sentence** says what the interval shows: AEMO's price, rung 4's, and, where the data names it, the limit AEMO held that rung 4 left out. It says "nothing much happening" when rung 4 is within $20 everywhere. It never claims a cause the data does not name.
+  - **AEMO against rung 4, per region.** Each error is a coloured, labelled chip: within $5, within 10%, off, or 10× off (a step apart on a log price scale). Each row also gives the value at stake, price × demand ÷ 12, at AEMO's price and at rung 4's, and the difference in dollars. The other rungs are behind a toggle.
+  - **The supply stack**, beside the table, for a region or the whole NEM: offers cheapest first at their loss-adjusted prices, with AEMO's and rung 4's prices drawn on it. The toggle adds the capacity each other rung could use: declared MAXAVAIL for rung 1, AEMO's dispatch availability for rungs 2 and 3a, that availability within ramp limits for 3b and 4.
   - **The invoked constraints**, and what rung 4 did with each: applied, or left out and why.
   - **Interconnector flows**: AEMO's against rungs 3b and 4, re-solved for that interval.
-- **Day view.** One region over 288 intervals, AEMO's price against any rungs you tick. Click a point to open that interval.
+- **Day view.** One region over 288 intervals, AEMO's price against rung 4, and the day's cumulative value at stake at each price, so you can see where the money concentrated. Click a point to open that interval.
 - **Episode buttons** for 31 January 2020, 12 and 26 June 2025, 22 January 2025 and 5 August 2024. Each lands on that day's largest rung 4 error, skipping administered or overridden prices.
 
 Times are AEMO's: interval ending, NEM time (AEST, UTC+10). AEMO's marginal values, LHS and calculated link limits appear on the page beside rung 4's treatment, marked as outcomes. No rung reads them.

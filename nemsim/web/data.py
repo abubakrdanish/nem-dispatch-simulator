@@ -48,6 +48,9 @@ STEP = timedelta(minutes=5)
 
 # The days the project has written about. The landing interval is the one with the largest rung 4
 # error on that day, in any region.
+# What the page opens on when no interval is given: the worked example in the README.
+DEFAULT_VIEW = ("2020-01-31T18:45", "VIC1")
+
 EPISODES = [
     ("2020-01-31", "31 Jan 2020 · SA separation"),
     ("2025-06-12", "12 Jun 2025 · cold snap"),
@@ -121,7 +124,7 @@ class Prices:
 
     def day(self, day: str, region: str) -> pd.DataFrame:
         start = datetime.fromisoformat(day) + STEP
-        return self.q("""select interval, rung, rrp, price, excluded from p
+        return self.q("""select interval, rung, rrp, totaldemand, price, excluded from p
                          where region = ? and interval between ? and ? order by interval, rung""",
                       [region, start, start + timedelta(days=1) - STEP])
 
@@ -174,7 +177,8 @@ def regional(con, t: datetime) -> pd.DataFrame:
 
 def actual_flows(con, t: datetime) -> pd.DataFrame:
     """AEMO's dispatch outcome for each link: flow and the limits the dispatch run calculated."""
-    return con.execute("""select interconnectorid link, mwflow flow, exportlimit, importlimit, marginalvalue
+    return con.execute("""select interconnectorid link, mwflow flow, exportlimit, importlimit, marginalvalue,
+                                 exportgenconid, importgenconid
                           from raw.dispatchinterconnectorres where settlementdate = ? and intervention = 0
                           order by 1""", [t]).df()
 
@@ -289,3 +293,100 @@ def flows(con, t: datetime, stored: dict[tuple[str, str], float]) -> dict:
         rows.append(row)
     return {"rows": pd.DataFrame(rows).replace({np.nan: None}).to_dict("records"),
             "live": {r: {k: v[k] for k in v if k != "flows"} for r, v in live.items()}}
+
+
+# ---------------------------------------------------------------------------------------------
+# What the interval shows, in words
+
+QUIET = 20.0          # $/MWh: if rung 4 is this close in every region, the interval is unremarkable
+REGION_NAME = {"NSW1": "NSW", "QLD1": "Queensland", "SA1": "South Australia", "TAS1": "Tasmania", "VIC1": "Victoria"}
+LINK_NAME = {"T-V-MNSP1": "Basslink", "V-SA": "Heywood", "V-S-MNSP1": "Murraylink", "NSW1-QLD1": "QNI",
+             "N-Q-MNSP1": "Terranora", "VIC1-NSW1": "the Victoria–NSW link"}
+
+
+def error_class(model: float | None, actual: float) -> str | None:
+    """How wrong a price is, in four steps the page colours: within $5; within 10% of the actual;
+    further off; or off by an order of magnitude, meaning one step or more apart on the page's
+    symmetric-log price scale, sign(v) x log10(1 + |v| / 10)."""
+    if model is None:
+        return None
+    err = abs(model - actual)
+    if err <= 5:
+        return "within $5"
+    if err <= 0.1 * abs(actual):
+        return "within 10%"
+    sl = lambda v: np.sign(v) * np.log10(1 + abs(v) / 10)   # noqa: E731
+    return "order of magnitude" if abs(sl(model) - sl(actual)) >= 1 else "off"
+
+
+def money(v: float) -> str:
+    sign = "−" if v < 0 else ""
+    v = abs(v)
+    return f"{sign}${v:,.0f}" if v >= 1000 else f"{sign}${v:,.2f}"
+
+
+def summary(regions: list[dict], flows: dict, cons: dict, region: str) -> str:
+    """One plain sentence on what this interval shows for `region`, from the data on the page only.
+    It says what the model did beside the limit AEMO held, never why, unless the data names it."""
+    r4 = {r["region"]: (r["rungs"].get("r4") or {}).get("price") for r in regions}
+    actual = {r["region"]: r["rrp"] for r in regions}
+    row = next((r for r in regions if r["region"] == region), None)
+    if row is None:
+        return f"No scored prices for {region} at this interval."
+    if r4.get(region) is None:
+        why = (row["rungs"].get("r4") or {}).get("excluded") or "not scored"
+        return f"AEMO cleared {REGION_NAME[region]} at {money(actual[region])}. Rung 4 has no price here ({why})."
+    errs = {k: abs(v - actual[k]) for k, v in r4.items() if v is not None}
+    if errs and max(errs.values()) <= QUIET:
+        n5 = sum(e <= 5 for e in errs.values())
+        return (f"AEMO's prices ran from {money(min(actual.values()))} to {money(max(actual.values()))}; rung 4 was "
+                f"within ${QUIET:.0f} in every region, and within $5 in {n5} of {len(errs)}. Nothing much happening here.")
+    a, m = actual[region], r4[region]
+    if abs(m - a) <= 5:
+        worst = max(errs, key=errs.get)
+        if errs[worst] <= 5:
+            return f"AEMO cleared {REGION_NAME[region]} at {money(a)} and rung 4 matched it, as it did in every region."
+        return (f"AEMO cleared {REGION_NAME[region]} at {money(a)} and rung 4 matched it ({money(m)}). Its largest miss "
+                f"this interval is {REGION_NAME[worst]}: {money(r4[worst])} against AEMO's {money(actual[worst])}.")
+    s = f"AEMO cleared {REGION_NAME[region]} at {money(a)}. Rung 4 said {money(m)}."
+    if row["flags"].get("apc_flag") or row["flags"].get("price_overridden"):
+        return s + " AEMO's price here was administered or overridden, so no offer-based model is expected to match it."
+    status = {c["constraintid"]: c["status"] for c in cons.get("rows", [])}
+    best = None
+    for f in flows.get("rows", []):
+        if region not in (f.get("from"), f.get("to")) or f.get("r4") is None:
+            continue
+        fa, f4 = f["flow"], f["r4"]
+        # AEMO's calculated limits bound the signed flow: importlimit <= flow <= exportlimit.
+        for side, lim, gencon in (("export", f["exportlimit"], f.get("exportgenconid")),
+                                  ("import", f["importlimit"], f.get("importgenconid"))):
+            at_limit = abs(fa - lim) <= 1
+            over = f4 - lim if side == "export" else lim - f4
+            st = status.get(gencon, "not invoked")
+            if at_limit and over > max(20, 0.05 * abs(lim)) and gencon and gencon != "DEFAULT" and st != "applied":
+                if best is None or over > best[0]:
+                    best = (over, f["link"], f4, fa, gencon, st)
+    if best:
+        _, link, f4, fa, gencon, st = best
+        kind = {"FCAS terms": "an FCAS constraint", "region terms": "an FCAS requirement constraint"}.get(st, "a constraint")
+        return (s + f" It flowed {abs(f4):,.0f} MW over {LINK_NAME.get(link, link)}, where AEMO held {abs(fa):,.0f} MW "
+                f"at a limit set by {gencon}, {kind} that rung 4 leaves out.")
+    out = [c for c in cons.get("rows", []) if c.get("binding") and c["status"] != "applied"]
+    if out:
+        top = max(out, key=lambda c: abs(c.get("marginalvalue") or 0))
+        nb = len(out)
+        return s + (f" {nb} constraint{'s' if nb > 1 else ''} binding in AEMO's solution {'were' if nb > 1 else 'was'} "
+                    f"outside rung 4's model, the largest {top['constraintid']} (marginal value "
+                    f"{money(top['marginalvalue'])}); whether they explain this miss is not tested here.")
+    return s + " Every constraint binding in AEMO's solution was in rung 4's model."
+
+
+def money_rows(regions: list[dict]) -> None:
+    """Add the value at stake to each region: price x demand / 12 at AEMO's price and at each rung's price."""
+    for r in regions:
+        d = r.get("totaldemand")
+        r["value"] = None if d is None else r["rrp"] * d / 12
+        for v in r["rungs"].values():
+            v["value"] = None if d is None or v["price"] is None else v["price"] * d / 12
+            v["value_diff"] = None if v["value"] is None or r["value"] is None else v["value"] - r["value"]
+            v["class"] = error_class(v["price"], r["rrp"])

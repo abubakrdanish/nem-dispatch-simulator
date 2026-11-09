@@ -63,7 +63,8 @@ def index():
 def meta():
     return {"regions": list(REGIONS), "rungs": list(data.RUNGS), "rung_names": data.RUNG_NAMES,
             "rungs_by_month": state["prices"].rungs_by_month(), "episodes": state["episodes"],
-            "time_basis": "interval ending, NEM time (AEST, UTC+10)"}
+            "time_basis": "interval ending, NEM time (AEST, UTC+10)",
+            "default": {"t": data.DEFAULT_VIEW[0], "region": data.DEFAULT_VIEW[1]}}
 
 
 @app.get("/api/interval")
@@ -81,8 +82,11 @@ def interval(t: str = Query(...)):
     for r in rows:
         if r["region"] in reg.index:
             r.update({k: float(v) for k, v in reg.loc[r["region"]].items()})
-    return {"interval": f"{when:%Y-%m-%dT%H:%M}", "regions": rows,
-            "flows": data.flows(con, when, stored), "constraints": data.constraints(con, when)}
+    flows, cons = data.flows(con, when, stored), data.constraints(con, when)
+    data.money_rows(rows)
+    return {"interval": f"{when:%Y-%m-%dT%H:%M}", "regions": rows, "flows": flows, "constraints": cons,
+            "summary": {r["region"]: data.summary(rows, flows, cons, r["region"]) for r in rows},
+            "pre_5ms": when < datetime(2021, 10, 1, 0, 5)}
 
 
 @app.get("/api/stack")
@@ -105,6 +109,7 @@ def day(date: str = Query(...), region: str = Query("VIC1")):
     out = {}
     for t, g in df.groupby("interval"):
         out[f"{t:%Y-%m-%dT%H:%M}"] = {"rrp": float(g.rrp.iloc[0]),
+                                      "demand": None if g.totaldemand.isna().iloc[0] else float(g.totaldemand.iloc[0]),
                                       **{r: (None if (e is not None and e == e) or p != p else float(p))
                                          for r, p, e in zip(g.rung, g.price, g.excluded)}}
     return {"date": date, "region": region, "intervals": out}
