@@ -1,0 +1,9 @@
+duckdb
+highspy
+numpy
+pandas
+pyyaml
+requests
+tabulate
+pytest
+pip-tools

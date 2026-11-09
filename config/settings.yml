@@ -1,0 +1,44 @@
+# Where data comes from and where it goes. Paths are relative to the repository root.
+
+nemweb:
+  archive_url: "https://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/"
+  user_agent: "nem-dispatch-simulator/0.1 (personal research project; polite fetch)"
+  min_request_gap_seconds: 3
+
+# This project's own downloads (gitignored) and its own DuckDB file (gitignored).
+raw_dir: data/raw/aemo
+warehouse: warehouse/sim.duckdb
+
+# Tables the nem-market-explainer project already downloaded. Read in place, never written.
+# Change this if that repository lives somewhere else.
+explainer_raw_dir: ../nem-market-explainer/data/raw/aemo
+
+# What to download, by month. Sizes are compressed, from the NEMWEB listing of 2026-11-08.
+# Adding a month costs about 150-185 MB for the bid tables, 110-125 MB for DISPATCHLOAD and
+# 155-195 MB for DISPATCHCONSTRAINT. Going past 1 GB was agreed for rung 2 on 2026-11-08, and
+# DISPATCHCONSTRAINT for every month (1,407 MB) for rung 4 on 2026-11-09.
+downloads:
+  # Stage 2: rung 1 and the research reproduction.
+  "2025-09": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT,
+              LOSSMODEL, LOSSFACTORMODEL, INTERCONNECTORCONSTRAINT]   # research day, case 2
+  "2025-11": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHCONSTRAINT, DISPATCHLOAD]   # case 3
+  "2026-05": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]                       # case 1
+  # Rung 2 needs DISPATCHLOAD wherever it is scored, and bids for the remaining test cases.
+  "2025-08": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # case 7; also the first 48 intervals of 2025-09
+  "2026-01": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # case 4
+  "2025-06": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # case 5
+  "2024-10": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # case 6
+  "2024-11": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # case 9
+  # Stage 4: the summer months, so January is not the only one (agreed 2026-11-08, about 600 MB).
+  "2025-12": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]
+  "2026-02": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]
+
+# Read from the explainer's raw directory for the same months.
+explainer_monthly: [DISPATCHPRICE, DISPATCHREGIONSUM, DISPATCHINTERCONNECTORRES]
+# Standing tables: the newest file holds the full history.
+explainer_standing: [DUDETAILSUMMARY, MARKET_PRICE_THRESHOLDS]
+# Months whose explainer tables are loaded without bids: 2024-09 holds the suspension case,
+# which the harness must refuse to score, so it needs prices and flags only.
+explainer_only_months: ["2024-09"]
+
+regions: [NSW1, QLD1, SA1, TAS1, VIC1]

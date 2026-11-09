@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 466" width="760" height="466" role="img" aria-labelledby="title desc">
+<title id="title">How much of the price each rung explains</title>
+<desc id="desc">Rung 1: 0.1%; Rung 2: 20.3%; Rung 3a: 47.3%; Rung 3b: 16.1%; Rung 4: 55.7%; single-price oracle bound 51.9%; regional-stack bound 72.8%; full-network bound 96.0%.</desc>
+<style>
+  .surface { fill: #fcfcfb; } .bar { fill: #2a78d6; }
+  .ink { fill: #0b0b0b; } .ink2 { fill: #52514e; } .muted { fill: #898781; }
+  .grid { stroke: #e1e0d9; } .axis { stroke: #c3c2b7; }
+  .ceiling { stroke: #52514e; } .nempy { stroke: #898781; } .empty { fill: none; stroke: #c3c2b7; }
+  .lift { fill: none; stroke: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; } .bar { fill: #3987e5; }
+    .ink { fill: #f0efec; } .ink2 { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; } .axis { stroke: #383835; }
+    .ceiling { stroke: #c3c2b7; } .empty { stroke: #383835; } .lift { stroke: #3987e5; }
+  }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<rect class="surface" width="760" height="466" rx="8"/>
+<text class="ink" x="56" y="30" font-size="16" font-weight="600">How much of the price each rung explains</text>
+<text class="ink2" x="56" y="50" font-size="12">Share of region-intervals within $5 of the actual price. 10 months, the same region-intervals for every rung.</text>
+<line class="axis" x1="56" x2="736" y1="374.0" y2="374.0" stroke-width="1"/>
+<text class="muted" x="48" y="378.0" font-size="11" text-anchor="end">0%</text>
+<line class="grid" x1="56" x2="736" y1="299.5" y2="299.5" stroke-width="1"/>
+<text class="muted" x="48" y="303.5" font-size="11" text-anchor="end">25%</text>
+<line class="grid" x1="56" x2="736" y1="225.0" y2="225.0" stroke-width="1"/>
+<text class="muted" x="48" y="229.0" font-size="11" text-anchor="end">50%</text>
+<line class="grid" x1="56" x2="736" y1="150.5" y2="150.5" stroke-width="1"/>
+<text class="muted" x="48" y="154.5" font-size="11" text-anchor="end">75%</text>
+<line class="grid" x1="56" x2="736" y1="76.0" y2="76.0" stroke-width="1"/>
+<text class="muted" x="48" y="80.0" font-size="11" text-anchor="end">100%</text>
+<line class="nempy" x1="56" x2="736" y1="107.3" y2="107.3" stroke-width="1.5" stroke-dasharray="2 4"/>
+<text class="ink2" x="60" y="101.3" font-size="11">nempy, a full NEMDE model: 89.5% (different sample)</text>
+<path class="bar" d="M98.0,374.0 V373.8 Q98.0,373.7 98.2,373.7 H149.8 Q150.0,373.7 150.0,373.8 V374.0 Z"/>
+<text class="ink" x="124.0" y="351.7" font-size="13" font-weight="600" text-anchor="middle">0.1%</text>
+<text class="ink2" x="124.0" y="365.7" font-size="11" text-anchor="middle">0.2% of bound</text>
+<line class="ceiling" x1="62.0" x2="192.0" y1="219.4" y2="219.4" stroke-width="2" stroke-dasharray="6 4"/>
+<text class="ink2" x="62.0" y="212.4" font-size="11">single-price oracle bound: 51.9%</text>
+<text class="ink" x="124.0" y="394" font-size="11.5" text-anchor="middle">1. Offers as declared</text>
+<text class="ink2" x="124.0" y="409" font-size="11.5" text-anchor="middle"></text>
+<path class="bar" d="M234.0,374.0 V317.6 Q234.0,313.6 238.0,313.6 H282.0 Q286.0,313.6 286.0,317.6 V374.0 Z"/>
+<text class="ink" x="260.0" y="291.6" font-size="13" font-weight="600" text-anchor="middle">20.3%</text>
+<text class="ink2" x="260.0" y="305.6" font-size="11" text-anchor="middle">39% of bound</text>
+<line class="ceiling" x1="192.0" x2="322.0" y1="219.4" y2="219.4" stroke-width="2" stroke-dasharray="6 4"/>
+<text class="ink" x="260.0" y="394" font-size="11.5" text-anchor="middle">2. + AEMO dispatch</text>
+<text class="ink2" x="260.0" y="409" font-size="11.5" text-anchor="middle">availability</text>
+<path class="lift" stroke-width="2" stroke-dasharray="4 3" d="M370.0,374.0 V236.9 Q370.0,232.9 374.0,232.9 H418.0 Q422.0,232.9 422.0,236.9 V374.0 Z"/>
+<text class="ink" x="396.0" y="210.9" font-size="13" font-weight="600" text-anchor="middle">47.3%</text>
+<text class="ink2" x="396.0" y="224.9" font-size="11" text-anchor="middle">65% of bound</text>
+<line class="ceiling" x1="334.0" x2="458.0" y1="156.9" y2="156.9" stroke-width="2" stroke-dasharray="6 4"/>
+<text class="ink2" x="334.0" y="149.9" font-size="11">regional-stack bound: 72.8%</text>
+<text class="ink" x="396.0" y="394" font-size="11.5" text-anchor="middle">3a. Regional, flows</text>
+<text class="ink2" x="396.0" y="409" font-size="11.5" text-anchor="middle">held at actual (lift)</text>
+<path class="bar" d="M506.0,374.0 V329.9 Q506.0,325.9 510.0,325.9 H554.0 Q558.0,325.9 558.0,329.9 V374.0 Z"/>
+<text class="ink" x="532.0" y="317.9" font-size="13" font-weight="600" text-anchor="middle">16.1%</text>
+<text class="ink" x="532.0" y="394" font-size="11.5" text-anchor="middle">3b. Flows solved,</text>
+<text class="ink2" x="532.0" y="409" font-size="11.5" text-anchor="middle">losses, ramps</text>
+<path class="bar" d="M642.0,374.0 V212.0 Q642.0,208.0 646.0,208.0 H690.0 Q694.0,208.0 694.0,212.0 V374.0 Z"/>
+<text class="ink" x="668.0" y="186.0" font-size="13" font-weight="600" text-anchor="middle">55.7%</text>
+<text class="ink2" x="668.0" y="200.0" font-size="11" text-anchor="middle">58% of bound</text>
+<line class="ceiling" x1="606.0" x2="730.0" y1="87.8" y2="87.8" stroke-width="2" stroke-dasharray="6 4"/>
+<text class="ink2" x="606.0" y="80.8" font-size="11">full-network bound: 96.0%</text>
+<text class="ink" x="668.0" y="394" font-size="11.5" text-anchor="middle">4. Network</text>
+<text class="ink2" x="668.0" y="409" font-size="11.5" text-anchor="middle">constraints</text>
+<text class="muted" x="56" y="428" font-size="10.5">Outlined bar: the mechanical lift, told the actual flows, not a modelling gain. Dashed steps: the most a model of that kind could</text>
+<text class="muted" x="56" y="442" font-size="10.5">score, found knowing the answer; each is drawn only over the rungs it bounds.</text>
+<text class="muted" x="56" y="456" font-size="10.5">Contains AEMO data; see docs/stage2_results.md.</text>
+</svg>

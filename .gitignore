@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Data that must not be redistributed: raw AEMO downloads, the DuckDB file and scored results
+data/raw/*
+!data/raw/.gitkeep
+warehouse/*
+!warehouse/.gitkeep
+results/*
+!results/.gitkeep
+*.part
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

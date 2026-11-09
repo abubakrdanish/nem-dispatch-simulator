@@ -1,0 +1,20 @@
+[project]
+name = "nem-dispatch-simulator"
+version = "0.1.0"
+description = "How much of the NEM clearing price does each layer of dispatch realism explain? A measured ladder of models scored against AEMO prices"
+requires-python = ">=3.11"
+license = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/abubakrdanish/nem-dispatch-simulator"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nemsim", "nemsim.rungs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
