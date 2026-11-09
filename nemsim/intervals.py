@@ -88,6 +88,9 @@ CASES = [
 # Months with offers loaded (config/settings.yml). Each is a set of every interval in the month.
 MONTHS = ("2024-10", "2024-11", "2025-06", "2025-08", "2025-09", "2025-11", "2025-12", "2026-01", "2026-02",
           "2026-05")
+# Stage 6b: spike months added on purpose (selection rule in the README). Kept apart from MONTHS so that
+# every earlier result, and every module that loops over MONTHS, still means the original ten.
+SPIKE_MONTHS = ("2020-01", "2024-08", "2024-12", "2025-01", "2025-02", "2025-05", "2025-07")
 
 
 def _month(m: str) -> IntervalSet:
@@ -102,6 +105,7 @@ SETS: dict[str, IntervalSet] = {s.name: s for s in [
     IntervalSet("stage1", "The stage 1 research window: 2025-09-01 04:05 to 2025-09-02 02:10, 266 intervals",
                 (("2025-09-01 04:05", "2025-09-02 02:10"),)),
     *(_month(m) for m in MONTHS),
+    *(_month(m) for m in SPIKE_MONTHS),
     IntervalSet("cases", "All nine stage 1 test cases", tuple(r for c in CASES for r in c.ranges)),
     *CASES,
 ]}

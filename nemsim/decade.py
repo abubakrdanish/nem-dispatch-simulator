@@ -119,6 +119,44 @@ def shares(f: pd.DataFrame, price: str, value: str, by: str) -> pd.DataFrame:
     return out.reset_index()
 
 
+def split_5ms() -> pd.DataFrame:
+    """Is the rise in spike share since five-minute settlement (1 Oct 2021) the settlement change, or
+    the 2022 energy crisis, which sits inside the post-5MS years? The $300+ share for periods either
+    side, with and without the crisis, on the 5-minute basis; and post-5MS months re-valued at the
+    half-hour average of their dispatch prices (the pre-5MS settlement rule), to separate the
+    measurement basis from the market. Writes results/decade_5ms_split.csv."""
+    with duckdb.connect(str(DB), read_only=True) as con:
+        f = frame(con)
+    f = f[(f.t > pd.Timestamp(FIRST)) & (f.t <= pd.Timestamp(LAST) + pd.offsets.MonthBegin(1))].copy()
+    f["fy"] = fy(f.t)
+    f["value"] = f.rrp * f.totaldemand / 12
+    # Half-hour average of the six dispatch prices, as settled before 5MS (computed, not AEMO's figure)
+    f["hh_avg"] = f.groupby(["regionid", "tt"]).rrp.transform("mean")
+    s = f.t - pd.Timedelta(minutes=5)
+    pre, post = f.t < FIVE_MINUTE_SETTLEMENT, f.t >= FIVE_MINUTE_SETTLEMENT
+    periods = {
+        "pre-5MS, Jul 2016 - Sep 2021": pre,
+        "pre-5MS, FY2017-FY2021": pre & (f.fy <= "FY2021"),
+        "post-5MS, Oct 2021 - Jun 2026": post,
+        "post-5MS excluding FY2022 (FY2023-FY2026)": f.fy >= "FY2023",
+        "post-5MS excluding calendar 2022 (Jan 2023 - Jun 2026)": post & (s.dt.year >= 2023),
+        "FY2022 alone (Jul 2021 - Jun 2022)": f.fy == "FY2022",
+    }
+    rows = []
+    for name, sel in periods.items():
+        g = f[sel]
+        for basis, price, value in (("5-minute dispatch price", "rrp", g.value),
+                                    ("half-hour average of dispatch prices", "hh_avg", g.hh_avg * g.totaldemand / 12)):
+            hi = g[price] >= 300
+            rows.append({"period": name, "basis": basis, "region_intervals": len(g),
+                         "share_settled_300_pct": value[hi].sum() / value.sum() * 100,
+                         "share_intervals_300_pct": hi.mean() * 100, "settled_$bn": value.sum() / 1e9})
+    out = pd.DataFrame(rows)
+    out.to_csv(ROOT / "results" / "decade_5ms_split.csv", index=False)
+    print(out.round(2).to_string(index=False))
+    return out
+
+
 def report() -> pd.DataFrame:
     with duckdb.connect(str(DB), read_only=True) as con:
         f = frame(con)
@@ -146,4 +184,4 @@ def report() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    {"fetch": fetch, "load": load, "report": report}[sys.argv[1] if len(sys.argv) > 1 else "report"]()
+    {"fetch": fetch, "load": load, "report": report, "split": split_5ms}[sys.argv[1] if len(sys.argv) > 1 else "report"]()

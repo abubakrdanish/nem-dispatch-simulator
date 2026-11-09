@@ -32,6 +32,18 @@ downloads:
   # Stage 4: the summer months, so January is not the only one (agreed 2026-11-08, about 600 MB).
   "2025-12": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]
   "2026-02": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]
+  # Stage 6b: spike months chosen from the decade's prices (results/spike_months.csv) and the AER's
+  # $5,000 reports; selection rule in the README. Agreed 2026-11-09, about 2.8 GB, loaded one at a time
+  # with python -m nemsim.add_month <month> --delete-raw. Only months whose archive carries the
+  # final-offer tables qualify (to February 2021, and from August 2024).
+  "2020-01": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT,
+              DISPATCHPRICE, DISPATCHREGIONSUM, DISPATCHINTERCONNECTORRES]   # 31 Jan, SA islanded; before the explainer's range
+  "2024-08": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 5 Aug, winter, links at limits
+  "2024-12": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 2 Dec, NSW line outages
+  "2025-01": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 22 Jan, QLD record demand
+  "2025-02": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 3 and 12 Feb, SA and VIC
+  "2025-05": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 13 and 28 May, NSW outages
+  "2025-07": [BIDPEROFFER_D, BIDDAYOFFER_D, DISPATCHLOAD, DISPATCHCONSTRAINT]   # 2 Jul, SA imports cut
 
 # Read from the explainer's raw directory for the same months.
 explainer_monthly: [DISPATCHPRICE, DISPATCHREGIONSUM, DISPATCHINTERCONNECTORRES]

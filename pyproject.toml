@@ -5,6 +5,10 @@ description = "How much of the NEM clearing price does each layer of dispatch re
 requires-python = ">=3.11"
 license = "MIT"
 
+[project.optional-dependencies]
+# The local frontend (python -m nemsim.web). Kept out of requirements.lock so CI stays lean.
+frontend = ["fastapi>=0.110", "uvicorn>=0.29"]
+
 [project.urls]
 Homepage = "https://github.com/abubakrdanish/nem-dispatch-simulator"
 
@@ -13,7 +17,10 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["nemsim", "nemsim.rungs"]
+packages = ["nemsim", "nemsim.rungs", "nemsim.web"]
+
+[tool.setuptools.package-data]
+"nemsim.web" = ["static/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

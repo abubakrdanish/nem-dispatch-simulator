@@ -31,6 +31,10 @@ DEFINITION_TABLES = ["GENCONDATA", "SPDCONNECTIONPOINTCONSTRAINT", "SPDINTERCONN
                      "SPDREGIONCONSTRAINT"]
 MAX_MONTHS_BACK = 24
 MONTHS_FILE = ROOT / "config" / "definition_months.txt"
+# Whole-month archives that AEMO does not publish (HTTP 404), so a later run does not ask again. The
+# archive starts in 2009; a constraint version that took effect before that cannot be fetched, and rung 4
+# reports such a constraint as not representable rather than guessing its equation.
+UNAVAILABLE_FILE = ROOT / "config" / "definition_months_unavailable.txt"
 
 
 def _month(d) -> date:
@@ -60,7 +64,15 @@ def fetch_whole_zip_month(client: PoliteClient, archive_url: str, month: date) -
     """Pull the definition tables out of a whole-month zip by range requests, saving each like a folder file."""
     from nemsim.remote_zip import central_directory, fetch_member, find
     url = f"{archive_url}{month:%Y}/MMSDM_{month:%Y_%m}.zip"
-    _, entries = central_directory(client, url)
+    try:
+        _, entries = central_directory(client, url)
+    except RuntimeError as exc:
+        if "404" not in str(exc):
+            raise
+        log.warning("%s is not in AEMO's archive; versions from that month stay missing", url)
+        unavailable = set(UNAVAILABLE_FILE.read_text().split()) if UNAVAILABLE_FILE.exists() else set()
+        UNAVAILABLE_FILE.write_text("\n".join(sorted(unavailable | {f"{month:%Y-%m}"})) + "\n")
+        return []
     out = []
     for table in DEFINITION_TABLES:
         target = path("raw_dir") / f"{table.lower()}_{month:%Y%m}_01.zip"
@@ -89,6 +101,8 @@ def main() -> None:
     start = time.monotonic()
     fetched: set[date] = set(date.fromisoformat(line.strip() + "-01") for line in MONTHS_FILE.read_text().split()
                              if line.strip()) if MONTHS_FILE.exists() else set()
+    if UNAVAILABLE_FILE.exists():   # count as already tried, so a second run makes no request for them
+        fetched |= {date.fromisoformat(line + "-01") for line in UNAVAILABLE_FILE.read_text().split()}
     report, downloaded, steps = [], [], []
     with duckdb.connect(str(path("warehouse"))) as con:
         ensure_schema(con)
@@ -115,7 +129,8 @@ def main() -> None:
                     downloaded += fetch_whole_zip_month(client, cfg["nemweb"]["archive_url"], m)
                 fetched |= want
                 report += load_months(con, sorted(want))
-                MONTHS_FILE.write_text("\n".join(f"{m:%Y-%m}" for m in sorted(fetched)) + "\n")
+                gone = set(UNAVAILABLE_FILE.read_text().split()) if UNAVAILABLE_FILE.exists() else set()
+                MONTHS_FILE.write_text("\n".join(f"{m:%Y-%m}" for m in sorted(fetched) if f"{m:%Y-%m}" not in gone) + "\n")
             offset += 1
         con.execute("checkpoint")
         still = missing_versions(con)

@@ -1007,5 +1007,97 @@ All of these are now corrected in place in [stage1_research.md](stage1_research.
 - **NEMDE casefiles** (`akxen/nemde`'s input route) hold each interval's full NEMDE input, constraint terms included, and NEMDE's own solution. They would replace the definition-table reconstruction and give FCAS and MNSP inputs directly. Their size has not been checked.
 - **The Gorman, MacGill and Bruce paper in full.** Whether it already reports a band or dollar-weighted decomposition decides whether this project's main measurement is a contribution or a replication.
 - **Parallel-path counter-flow** still runs at about twice the real rate in rung 4.
-- **Another winter scarcity month** would test whether the spike results generalise beyond June 2025.
+- **Another winter scarcity month** would test whether the spike results generalise beyond June 2025. Partly done: section 13 adds two winter months, August 2024 and July 2025, and five others.
 - **Data gaps that stay:** the last 20 hours of September 2025 (`DISPATCHLOAD`), 19 November 2024 13:30–13:45 (offers), and the first 48 intervals of 2025-11 and 2026-05.
+
+---
+
+## 13. Stage 6b: the decade, the disk, and seven spike months
+
+### 13.1 How much of the market's money is in spikes, over ten years
+
+**Measured.** The share is the sum of settled value over region-intervals with dispatch price `RRP` ≥ $300, divided by the sum over all region-intervals. Settled value is `DISPATCHPRICE.RRP` × `DISPATCHREGIONSUM.TOTALDEMAND` ÷ 12, pricing run only (`INTERVENTION = 0`). The denominator is every 5-minute region-interval from 1 July 2016 to 30 June 2026: 5.26 million region-intervals and $187.7 billion. Duplicate rows are collapsed; AEMO's September 2016 files repeat 10,080 region-intervals. The sums are signed, so negative-price intervals subtract. These are published outcomes describing the market. They are not inputs to any rung.
+
+- **Pooled, FY2017–FY2026: 23.4%** of settled value, on 2.13% of region-intervals. By financial year it runs from 5.1% (FY2018) to 42.4% (FY2022), with a median of 19.9%.
+- On the ten evaluation months the same computation gives 30.24%, matching the evaluation warehouse's 30.3%. So the README's "a third" described the sample, not the market. The README now says "about a quarter".
+- **Either side of five-minute settlement** (`results/decade_5ms_split.csv`):
+
+| Period | $300+ share |
+|---|---:|
+| Before 1 October 2021 | 14.0% |
+| From 1 October 2021 | 30.5% |
+| From October 2021, without FY2022 (FY2023–FY2026) | 26.3% |
+| From October 2021, without calendar 2022 | 22.3% |
+| FY2022 alone | 42.4% |
+
+  Re-valuing every period at the half-hour average of its six dispatch prices, the settlement rule before October 2021, changes each figure by less than a point (14.0% to 13.1%, 26.3% to 25.9%).
+
+  *Expected:* that most of the rise was the 2022 crisis. *Observed:* the crisis is part of it, but without it the later share is still 22–26% against 14%. *Inferred, untested:* the rest could be five-minute settlement's effect on bidding, gas prices, coal outages or the higher price cap. These figures do not separate them, and nothing here attributes the rise to five-minute settlement.
+
+### 13.2 The disk
+
+The 40 dispatch zips of the original ten months (4,499 MB) were deleted after per-month validation. The validation checks that every planned file is loaded, that each table covers every interval, and that the left-hand side of every applied constraint, rebuilt from the loaded unit dispatch, link flows and definitions, matches AEMO's within 1 MW in at least 99.9% of constraint-intervals. Eight months passed at 100.0%. Two have gaps in AEMO's own files, neither touching a $300+ interval ([DATA.md](DATA.md)). The downloader used to decide what to fetch only by whether a zip existed, so deleting would have triggered a 4.5 GB re-download. It now also skips anything `meta.loaded_files` records. The footprint went from 10.1 GB to 8.6 GB, with seventeen months loaded instead of ten.
+
+### 13.3 The seven months, and how they were chosen
+
+The rule is in the README ("Seven spike months, added on purpose"). The seven are the six highest-ranked months from August 2024 onward not already in the sample, plus the highest-ranked month before 2021, ranked by $300+ settled value among months whose archive carries final offers. They hold 10.3% of the decade's spike value, against the original ten's 11.6%. **The archive has no final-offer tables from March 2021 to July 2024. That window holds 61.9% of the decade's spike value**, including the 2022 crisis and 13 February 2024, the clearest summer transmission collapse in the AER's reports. Only the full rebid history covers it, and this project does not download that.
+
+January 2020 needed three ingest changes: `DIRECTION` filled from registration (tested, [DATA.md](DATA.md)), the 2020 `DISPATCHLOAD` layout's missing columns made optional, and its own price, demand and flow tables fetched. Three constraint versions from 2008 predate the archive and cannot be represented.
+
+### 13.4 Rungs 2 and 4 on the expanded sample
+
+**Measured.** The share of region-intervals where the rung's price is within $5 of `DISPATCHPRICE.RRP` (pricing run). The denominator is the region-intervals both rungs scored. Excluded are a month's first 48 intervals where the previous month's offers are not loaded, and AEMO's own gaps. The $300+ column takes the subset whose actual price is ≥ $300; its range is a 95% day-block bootstrap. "By $" weights by price × demand ÷ 12, using `TRADINGPRICE.RRP` for January 2020 because energy then settled on the 30-minute price. The rungs read offers, availability, invoked constraints and their right-hand sides, and definitions. They read no dispatch outcome (`tests/test_harness.py::test_dispatch_outcomes_are_withheld_from_units`).
+
+| Sample | Region-intervals | Rung 2 | Rung 4 | Rung 2, $300+ | Rung 4, $300+ | Rung 4, by $ |
+|---|---:|---:|---:|---:|---:|---:|
+| Original ten | 433,900 | 20.3% | 55.7% | 2.1% | 26.4% (23.1–31.0) | 44.3% |
+| Seven spike months | 307,440 | 22.1% | 67.5% | 3.0% | 32.9% (26.6–39.7) | 47.3% |
+| All seventeen | 741,340 | 21.0% | 60.6% | 2.5% | 29.1% (25.7–33.3) | 45.7% |
+
+Rung 4 on the $300+ band, month by month (`results/spike_sample.csv`):
+
+| Month | Spike region-intervals | Rung 4 within $5 |
+|---|---:|---:|
+| 2020-01 | 344 | 8.4% |
+| 2024-08 | 1,016 | 36.4% |
+| 2024-12 | 581 | 26.0% |
+| 2025-01 | 189 | 49.2% |
+| 2025-02 | 430 | 44.0% |
+| 2025-05 | 281 | 11.7% |
+| 2025-07 | 746 | 42.2% |
+
+*Expected:* that the original ten's 26.4% would hold roughly, since half of its spike value is one scarcity episode, and network-limited spikes might do better. *Observed:* the seven give 32.9%, and the intervals overlap.
+
+**January 2020.** In SA's four dispatch intervals after the islanding constraints came in (31 January, 13:40–13:55), rung 4 prices SA at the $14,700 cap, exactly as AEMO did. It misses the Victorian and NSW afternoon, where median actual spike prices were $14,700 and $12,786 against rung 4's $497 and $429. The AER puts that afternoon down to heat, lost SA imports and plant failures. By money the month's spike value is 54% NSW, 37% Victoria and 4% SA. So the transmission event carries little of the month's money, and rung 4 reproduces it. *Inferred, untested:* on those afternoons rung 4 finds cheap capacity that could not be dispatched (ramp limits, plant failing within the interval, lost imports).
+
+A first diagnosis, reading `MARGINALVALUE` to see which constraints bound, pointed at violated or FCAS-coupled constraints. The regional split above contradicts it, and it was withdrawn. That reading was a diagnostic only, and no rung read it.
+
+**In passing.** Constraint equations carry terms for units not yet built: 18 of the 20 connection points with no registered unit on 31 January 2020 belong to wind and solar farms registered later in 2020 or 2021. They contribute 0 MW, so dropping them changes nothing, but they inflate rung 4's "unit terms dropped" count for 2020-01 (9.9 million, against 2.8 million for 2025-01).
+
+### 13.5 Open items from this stage
+
+- **The VIC/NSW afternoon of 31 January 2020, and 4 January 2020.** Why rung 4 finds supply at $430–500 where AEMO cleared near the cap. The per-interval inputs are loaded, so this is a diagnosis of hours, not a download.
+- **March 2021 to July 2024.** Reducing each month's rebid history to final offers would open 62% of the decade's spike money. That means about 4–7 GB a month compressed, so it is a job of its own.
+- **The pre-2021 months left out:** February 2017, January 2019 and January 2017, eligible ranks 3, 4 and 7. The ingest now handles the old layout, so each is about 250 MB.
+
+---
+
+## 14. Stage 7: a local frontend, and what it showed in its first hour
+
+`python -m nemsim.web` serves one page over the scored results and the warehouse, both read-only (README, "See it"). Nothing is solved live.
+
+**What was missing from the data, and what was done about it.**
+
+- **Rungs 1, 3a and 3b had been scored only on the original ten months.** They were run on the seven spike months with the unchanged `nemsim.evaluate`, about 25 minutes in all, so the page shows all five rungs for all seventeen months. No earlier result was overwritten.
+- **Modelled interconnector flows are not stored.** The harness keeps regional prices only. `python -m nemsim.web.detail` re-runs rungs 3b and 4 for chosen days as the harness does, about 30 seconds a day, and stores their flows. It has been run for the five episode days.
+- **Per-interval constraint coverage is not stored either.** It is classified on request from the invoked constraints and their equations. A test checks it against rung 4's own counts.
+
+**Measured: the stored rung 3b prices do not reproduce exactly, and that is degeneracy, not stale code.** Every original-ten rung 3b file predates the last edits to `lp.py` and `r3b_flows_solved.py` on 8 November. So rung 3b was re-run on June and September 2025, into the scratchpad. Of the scored region-intervals, 1.35% and 0.60% got a different price, but the within-$5 share was identical to two decimals (11.82%, 19.40%). Rung 2 re-run on September reproduced all 42,000 prices exactly. Within one process, two fresh rung 3b instances agree, and across runs the count of differing prices on 26 June 2025 moved from 37 to 48. *Inferred:* where supply meets demand exactly at a band edge, the LP's dual price is not unique, and the solver's pick within the range depends on its path. Rung 4 differs on 11 of 1,440 region-intervals on 31 January 2020 and on none on the other four episode days. The page flags every interval where a re-solve differed from the scored price.
+
+**Observed: the "$497 at 15:00" in the stage 7 brief was a median, not an interval.** At 15:00 on 31 January 2020 rung 4 priced Victoria at $14,700, as AEMO did. Through the afternoon it alternates between the cap and $0–550 from one interval to the next (the day view shows it). The $497 in section 13 was the median over all Victorian spike intervals, and a median hides that bimodality.
+
+**Observed at 18:45 on 31 January 2020, inferred cause.** AEMO held Basslink at exactly its calculated export limit, 445 MW into Victoria, and cleared Victoria at $14,699. Rung 4 flowed 560 MW over Basslink and cleared Victoria at $13.53. The constraints binding on Basslink in AEMO's solution were two FCAS constraints with region terms (`F_QNV++MG_R6`, `F_QNV++MG_R60`), which rung 4 leaves out. The Basslink constraint `T_V_NIL_BL1` is invoked, but its equation version dates from 2008 and cannot be fetched (section 13). *Inferred, untested:* the extra 115 MW from Tasmania is part of why rung 4 clears Victoria off the cap. A diagnostic run with Basslink capped at AEMO's flow would test it, but that flow is an outcome, so the run would be a probe, not a rung.
+
+**Observed at 19:55 on 12 June 2025, Tasmania.** AEMO cleared at $16,071 and rung 4 at $450. Of the 12 constraints binding in AEMO's solution, 11 are FCAS constraints with region terms that rung 4 cannot represent. One is `F_T+RREG_0050`, with a marginal value of $15,778. This is the energy–FCAS co-optimisation the AER describes for Tasmania that day (section 9.2), visible interval by interval.
+
+**Episode landing intervals** are each day's largest rung 4 error, skipping administered or overridden prices. The first version landed 31 January 2020 on an APC-flagged interval, where AEMO's price is not what the offers produced.

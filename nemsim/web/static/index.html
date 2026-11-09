@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEM Dispatch Simulator</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
+  --r4: #2a78d6; --r2: #eb6834; --r3a: #1baf7a; --r3b: #eda100; --r1: #e87ba4;
+  --actual: #0b0b0b; --wash: rgba(42,120,214,0.08); --bad: #d03b3b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+    --r4: #3987e5; --r2: #d95926; --r3a: #199e70; --r3b: #c98500; --r1: #d55181;
+    --actual: #f0efec; --wash: rgba(57,135,229,0.14);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+  --r4: #3987e5; --r2: #d95926; --r3a: #199e70; --r3b: #c98500; --r1: #d55181;
+  --actual: #f0efec; --wash: rgba(57,135,229,0.14);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+       font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1240px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 18px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 4px; }
+.sub { color: var(--ink2); font-size: 13px; }
+.note { color: var(--muted); font-size: 12px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+button, select, input { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--axis);
+                        border-radius: 6px; padding: 4px 9px; }
+button { cursor: pointer; }
+button.on { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+button.ep { font-size: 13px; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { color: var(--ink2); font-weight: 600; font-size: 12px; }
+th:first-child, td:first-child { text-align: left; }
+tr.sel td { background: var(--wash); }
+tr.click { cursor: pointer; }
+td .err { display: block; font-size: 11px; color: var(--ink2); }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--ink2); margin: 6px 0; }
+.grid2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+.grid2 > * { min-width: 0; }
+svg text { fill: var(--ink2); font-size: 11px; }
+svg .tick line { stroke: var(--grid); }
+.tip { position: fixed; pointer-events: none; background: var(--surface); border: 1px solid var(--ring);
+       border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.12); display: none; z-index: 5; }
+.scroll { overflow-x: auto; }
+.pill { font-size: 11px; padding: 1px 6px; border-radius: 9px; border: 1px solid var(--axis); color: var(--ink2); }
+.warn { color: var(--bad); }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>NEM dispatch simulator</h1>
+  <div class="sub">Pick an interval: what the market did, what each rung said, and why they differ.
+    Times are <b>interval ending, NEM time (AEST, UTC+10)</b>. Prices $/MWh, volumes MW. Nothing is solved here:
+    every modelled price is the scored result in <code>results/</code>.</div>
+
+  <div class="bar">
+    <button id="tabInterval" class="on">Interval</button>
+    <button id="tabDay">Day</button>
+    <span style="width:12px"></span>
+    <input type="date" id="date"> <input type="time" id="time" step="300">
+    <button id="prev" title="Previous interval">←</button><button id="next" title="Next interval">→</button>
+    <select id="region"></select>
+  </div>
+  <div class="bar" id="episodes"><span class="note">Episodes (each lands on that day's largest rung 4 error, skipping intervals where AEMO's price was administered or overridden):</span></div>
+  <div id="msg" class="card hidden"></div>
+
+  <section id="viewInterval">
+    <div class="card">
+      <h2 id="ivTitle">Regional prices</h2>
+      <div class="note">Each row is one region. The black tick is AEMO's price; each dot is a rung, labelled with its number.
+        The line from the tick to rung 4's dot is rung 4's error. Click a row to see its supply stack.</div>
+      <div class="legend" id="rungLegend"></div>
+      <div id="strips"></div>
+      <div class="scroll"><table id="priceTable"></table></div>
+    </div>
+
+    <div class="card">
+      <h2 id="stackTitle">Supply stack</h2>
+      <div class="bar" style="margin:4px 0">
+        <button id="scopeRegion" class="on">Region</button><button id="scopeNEM">Whole NEM</button>
+        <span style="width:8px"></span><button id="stackFull"></button>
+      </div>
+      <div class="note" id="stackNote"></div>
+      <div class="legend" id="stackLegend"></div>
+      <div id="stack"></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h2>Constraints invoked</h2>
+        <div class="note">Which invoked generic constraints rung 4 applied, and why the rest were left out.
+          "Binding" and the marginal value and LHS are AEMO's outcome, shown for comparison; no rung reads them.</div>
+        <div id="consSummary" style="margin:8px 0"></div>
+        <label class="note"><input type="checkbox" id="consAll"> show every invoked constraint, not only binding ones</label>
+        <div class="scroll" style="max-height:420px;overflow-y:auto"><table id="consTable"></table></div>
+      </div>
+      <div class="card">
+        <h2>Interconnector flows</h2>
+        <div class="note">MW, positive from the first region to the second. The bracket is the limit AEMO's dispatch
+          calculated (an outcome; rungs 3b and 4 use standing ratings instead).</div>
+        <div class="legend" id="flowLegend"></div>
+        <div id="flows"></div>
+        <div class="scroll"><table id="flowTable"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="viewDay" class="hidden">
+    <div class="card">
+      <h2 id="dayTitle">Day</h2>
+      <div class="note">288 intervals. The price axis is symmetric-log so a $17,500 spike and a $40 morning share one chart.
+        Click any point to open that interval.</div>
+      <div class="legend" id="dayLegend"></div>
+      <div id="day"></div>
+      <div class="note" id="dayStats"></div>
+    </div>
+  </section>
+  <p class="note">Data: AEMO, nemweb.com.au. AEMO is the author of the data and has not reviewed or endorsed this project.</p>
+</main>
+<div class="tip" id="tip"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const RUNG_ORDER = ["r1", "r2", "r3a", "r3b", "r4"];
+const LABEL = {r1: "1", r2: "2", r3a: "3a", r3b: "3b", r4: "4"};
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const col = r => css("--" + r);
+let META = null;
+const S = {view: "interval", t: null, region: "VIC1", scope: "region", full: false, dayRungs: new Set(["r4"])};
+
+// ---- formatting --------------------------------------------------------------------------
+const money = v => v == null ? "–" : v < 0 ? "−" + money(-v) : (v >= 1000 ? "$" + Math.round(v).toLocaleString() : "$" + v.toFixed(2));
+const signed = v => v == null ? "" : (v >= 0 ? "+" : "−") + money(Math.abs(v));
+const mw = v => v == null ? "–" : Math.round(v).toLocaleString() + " MW";
+const pad = n => String(n).padStart(2, "0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+const parse = s => { const [a, b] = s.split("T"); const [y, m, d] = a.split("-").map(Number); const [h, mi] = b.split(":").map(Number); return new Date(y, m - 1, d, h, mi); };
+const human = s => { const d = parse(s); return d.toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short", year: "numeric"}) + " " + s.slice(11) + " AEST"; };
+// The trading "day" an interval belongs to: an interval ending at 00:00 closes the previous day.
+const dayOf = s => { const d = parse(s); d.setMinutes(d.getMinutes() - 5); return iso(d).slice(0, 10); };
+
+// ---- symmetric log scale ------------------------------------------------------------------
+const SL = v => Math.sign(v) * Math.log10(1 + Math.abs(v) / 10);
+function scale(d0, d1, r0, r1, f = x => x) { const a = f(d0), b = f(d1); const s = v => r0 + (f(v) - a) / (b - a) * (r1 - r0); s.d = [d0, d1]; return s; }
+const PRICE_TICKS = [-1000, -100, 0, 50, 100, 300, 1000, 5000, 15000];
+
+function el(tag, attrs = {}, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function svg(w, h, parent) { parent.innerHTML = ""; return el("svg", {viewBox: `0 0 ${w} ${h}`, width: "100%", role: "img"}, parent); }
+function text(g, x, y, s, attrs = {}) { const t = el("text", {x, y, ...attrs}, g); t.textContent = s; return t; }
+function tipShow(ev, html) { const t = $("tip"); t.innerHTML = html; t.style.display = "block"; t.style.left = Math.min(ev.clientX + 14, innerWidth - 260) + "px"; t.style.top = (ev.clientY + 14) + "px"; }
+function tipHide() { $("tip").style.display = "none"; }
+
+async function get(url) {
+  const r = await fetch(url);
+  if (!r.ok) { const j = await r.json().catch(() => ({detail: r.statusText})); throw new Error(j.detail || r.statusText); }
+  return r.json();
+}
+function message(s) { const m = $("msg"); m.textContent = s || ""; m.classList.toggle("hidden", !s); }
+
+// ---- state and URL ------------------------------------------------------------------------
+function pushState() {
+  const q = new URLSearchParams({view: S.view, t: S.t, region: S.region, scope: S.scope});
+  const th = document.documentElement.dataset.theme; if (th) q.set("theme", th);
+  history.replaceState(null, "", "?" + q.toString());
+  $("date").value = S.t.slice(0, 10); $("time").value = S.t.slice(11);
+  $("region").value = S.region;
+  $("tabInterval").classList.toggle("on", S.view === "interval"); $("tabDay").classList.toggle("on", S.view === "day");
+  $("viewInterval").classList.toggle("hidden", S.view !== "interval"); $("viewDay").classList.toggle("hidden", S.view !== "day");
+  $("scopeRegion").classList.toggle("on", S.scope === "region"); $("scopeNEM").classList.toggle("on", S.scope === "nem");
+}
+async function render() { pushState(); message(""); try { S.view === "interval" ? await renderInterval() : await renderDay(); } catch (e) { message(e.message); } }
+
+// ---- interval view ------------------------------------------------------------------------
+async function renderInterval() {
+  const d = await get(`/api/interval?t=${S.t}`);
+  $("ivTitle").textContent = "Regional prices · " + human(d.interval);
+  const present = RUNG_ORDER.filter(r => d.regions.some(x => x.rungs[r]));
+  $("rungLegend").innerHTML = `<span><span class="sw" style="background:var(--actual);border-radius:1px"></span>AEMO (actual)</span>` +
+    present.map(r => `<span><span class="sw" style="background:${col(r)}"></span>${META.rung_names[r]}</span>`).join("");
+  drawStrips(d.regions, present);
+  priceTable(d.regions, present);
+  constraintsCard(d.constraints);
+  flowsCard(d.flows);
+  await renderStack(d);
+}
+
+function drawStrips(regions, present) {
+  const W = 1180, row = 34, top = 26, left = 70, right = 20, H = top + row * regions.length + 6;
+  const s = svg(W, H, $("strips"));
+  const x = scale(-1000, 17500, left, W - right, SL);
+  for (const v of PRICE_TICKS) { const g = el("g", {class: "tick"}, s); el("line", {x1: x(v), x2: x(v), y1: top - 6, y2: H - 4}, g); text(g, x(v), 14, money(v), {"text-anchor": "middle"}); }
+  regions.forEach((r, i) => {
+    const y = top + i * row + row / 2;
+    const g = el("g", {style: "cursor:pointer"}, s);
+    el("rect", {x: 0, y: y - row / 2, width: W, height: row, fill: r.region === S.region ? css("--wash") : "transparent"}, g);
+    text(g, 8, y + 4, r.region.replace("1", ""), {style: "font-weight:600;fill:var(--ink)"});
+    const a = x(r.rrp);
+    const r4 = r.rungs.r4 && r.rungs.r4.price;
+    if (r4 != null) el("line", {x1: a, x2: x(r4), y1: y, y2: y, stroke: col("r4"), "stroke-width": 3, opacity: 0.45}, g);
+    el("line", {x1: a, x2: a, y1: y - 12, y2: y + 12, stroke: css("--actual"), "stroke-width": 3}, g);
+    // Rungs at the same price share one label ("2·3a·3b·4"), so the labels never pile up.
+    const groups = [];
+    present.forEach(k => { const p = r.rungs[k] && r.rungs[k].price; if (p == null) return;
+      const px = x(p), grp = groups.find(gr => Math.abs(gr.px - px) < 7); grp ? grp.keys.push(k) : groups.push({px, keys: [k]}); });
+    for (const grp of groups) {
+      grp.keys.forEach((k, j) => {
+        const p = r.rungs[k].price;
+        const c = el("circle", {cx: grp.px + (j - (grp.keys.length - 1) / 2) * 4, cy: y, r: k === "r4" ? 6 : 5, fill: col(k), stroke: css("--surface"), "stroke-width": 1.5}, g);
+        c.addEventListener("mousemove", ev => tipShow(ev, `<b>${r.region}</b> · ${META.rung_names[k]}<br>${money(p)} vs AEMO ${money(r.rrp)}<br>error ${signed(p - r.rrp)}`));
+        c.addEventListener("mouseleave", tipHide);
+      });
+      text(g, grp.px, y - 9, grp.keys.map(k => LABEL[k]).join("·"), {"text-anchor": "middle", style: "font-size:10px"});
+    }
+    g.addEventListener("click", () => { S.region = r.region; render(); });
+  });
+}
+
+function priceTable(regions, present) {
+  let h = `<tr><th>Region</th><th>AEMO price</th><th>Demand</th>` + present.map(r => `<th><span class="sw" style="background:${col(r)}"></span>Rung ${LABEL[r]}</th>`).join("") + `<th>Flags</th></tr>`;
+  for (const r of regions) {
+    const flags = Object.entries(r.flags).filter(([, v]) => v).map(([k]) => `<span class="pill">${k.replace("_", " ")}</span>`).join(" ");
+    h += `<tr class="click ${r.region === S.region ? "sel" : ""}" data-r="${r.region}"><td><b>${r.region}</b></td><td><b>${money(r.rrp)}</b></td><td>${mw(r.totaldemand)}</td>`;
+    for (const k of present) {
+      const v = r.rungs[k];
+      if (!v) { h += `<td class="note">not run</td>`; continue; }
+      if (v.price == null) { h += `<td class="note">${v.excluded || "–"}</td>`; continue; }
+      const big = Math.abs(v.error) > 5;
+      h += `<td>${money(v.price)}<span class="err ${big ? "" : "note"}">${Math.abs(v.error) <= 5 ? "within $5" : signed(v.error)}</span></td>`;
+    }
+    h += `<td>${flags}</td></tr>`;
+  }
+  $("priceTable").innerHTML = h;
+  $("priceTable").querySelectorAll("tr.click").forEach(tr => tr.onclick = () => { S.region = tr.dataset.r; render(); });
+}
+
+async function renderStack(iv) {
+  const region = S.scope === "nem" ? "NEM" : S.region;
+  const st = await get(`/api/stack?t=${S.t}&region=${region}`);
+  const reg = iv.regions.find(r => r.region === S.region);
+  $("stackTitle").textContent = `Supply stack · ${S.scope === "nem" ? "whole NEM" : S.region} · ${human(iv.interval)}`;
+  $("stackNote").innerHTML = S.scope === "nem"
+    ? "Every energy offer in the NEM, cheapest first, at its loss-adjusted price. This is the stack rungs 1 and 2 clear against total demand; they give one price to every region. The horizontal lines are each rung's price for the selected region and AEMO's."
+    : `Energy offers located in ${S.region}, cheapest first, at their loss-adjusted price. Rung 3a clears this stack at the <b>local requirement</b> (demand less AEMO's actual net imports). Rungs 3b and 4 solve the five regions together, so their price is not a point on one region's stack: it is drawn as a line.`;
+  const curves = [["declared", "Declared (MAXAVAIL), rung 1", css("--muted"), "4 3"], ["available", "AEMO dispatch availability, rungs 2 and 3a", css("--ink2"), ""], ["ramped", "Within ramp limits too, rungs 3b and 4", css("--ink"), ""]];
+  $("stackLegend").innerHTML = curves.map(c => `<span><svg width="22" height="8"><line x1="0" x2="22" y1="4" y2="4" stroke="${c[2]}" stroke-width="2" stroke-dasharray="${c[3]}"/></svg> ${c[1]}</span>`).join("") +
+    `<span><svg width="22" height="8"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--actual)" stroke-width="3"/></svg> AEMO ${S.region} price</span>`;
+  const bands = st.bands;
+  const W = 1180, H = 460, L = 70, R = 150, T = 14, B = 40;
+  const s = svg(W, H, $("stack"));
+  const tot = Math.max(...curves.map(([k]) => bands.reduce((a, b) => a + b[k], 0)), ...Object.values(st.lines)) * 1.04;
+  // By default the axis starts at 60% of demand: below that the stack is all floor-priced and tells nothing.
+  const x0 = S.full ? 0 : Math.floor(0.6 * Math.min(...Object.values(st.lines)) / 100) * 100;
+  $("stackFull").textContent = S.full ? "Zoom to demand" : `Full stack (axis now starts at ${x0.toLocaleString()} MW)`;
+  const x = scale(x0, tot, L, W - R), y = scale(st.price_floor, st.price_cap, H - B, T, SL);
+  const clip = "c" + Math.random().toString(36).slice(2);
+  el("rect", {x: L, y: 0, width: W - R - L, height: H}, el("clipPath", {id: clip}, el("defs", {}, s)));
+  for (const v of PRICE_TICKS.filter(v => v >= st.price_floor && v <= st.price_cap)) { const g = el("g", {class: "tick"}, s); el("line", {x1: L, x2: W - R, y1: y(v), y2: y(v)}, g); text(g, L - 6, y(v) + 4, money(v), {"text-anchor": "end"}); }
+  const span = tot - x0, st2 = Math.pow(10, Math.floor(Math.log10(span / 5))) * (span / Math.pow(10, Math.floor(Math.log10(span / 5))) > 25 ? 5 : 2);
+  for (let v = Math.ceil(x0 / st2) * st2; v <= tot; v += st2) text(s, x(v), H - B + 16, Math.round(v).toLocaleString(), {"text-anchor": "middle"});
+  text(s, (L + W - R) / 2, H - 6, "cumulative MW, cheapest first", {"text-anchor": "middle"});
+  const at = {};
+  for (const [k, , c, dash] of curves) {
+    let cum = 0, d = "", prev = null; const pts = [];
+    for (const b of bands) { if (b[k] <= 1e-6) continue; const p = Math.max(st.price_floor, Math.min(st.price_cap, b.price));
+      d += (prev === null ? `M${x(cum)},${y(p)}` : `L${x(cum)},${y(p)}`) + `L${x(cum + b[k])},${y(p)}`; pts.push([cum, cum + b[k], p, b]); cum += b[k]; prev = p; }
+    el("path", {d, fill: "none", stroke: c, "stroke-width": k === "ramped" ? 2.2 : 1.6, "stroke-dasharray": dash, "clip-path": `url(#${clip})`}, s);
+    at[k] = pts;
+  }
+  // Requirement lines, and where each curve reaches them
+  const lines = S.scope === "nem" ? [["demand", "NEM demand + scheduled load"]] : [["demand", "regional demand + scheduled load"], ["local", "local requirement (rung 3a)"]];
+  for (const [k, lab] of lines) {
+    const v = st.lines[k]; if (v == null) continue;
+    el("line", {x1: x(v), x2: x(v), y1: T, y2: H - B, stroke: css("--ink2"), "stroke-dasharray": "2 3"}, s);
+    text(s, x(v) + 4, T + 12 + (k === "local" ? 14 : 0), `${lab}: ${mw(v)}`);
+  }
+  // Price lines: AEMO and each rung for the selected region
+  const marks = [["actual", reg.rrp, css("--actual"), "AEMO"]];
+  for (const k of RUNG_ORDER) { const v = reg.rungs[k]; if (v && v.price != null) marks.push([k, v.price, col(k), "rung " + LABEL[k]]); }
+  const used = [];
+  for (const [k, p, c, lab] of marks) {
+    const yy = y(Math.max(st.price_floor, Math.min(st.price_cap, p)));
+    el("line", {x1: L, x2: W - R, y1: yy, y2: yy, stroke: c, "stroke-width": k === "actual" ? 3 : 1.6, opacity: k === "actual" ? 1 : 0.9}, s);
+    let ly = yy + 4; while (used.some(u => Math.abs(u - ly) < 12)) ly += 12; used.push(ly);
+    text(s, W - R + 6, ly, `${lab} ${money(p)}`, {style: `fill:${k === "actual" ? css("--ink") : css("--ink2")}`});
+  }
+  // Hover: which band is under the cursor on the ramp-limited curve
+  const hit = el("rect", {x: L, y: T, width: W - R - L, height: H - B - T, fill: "transparent"}, s);
+  hit.addEventListener("mousemove", ev => {
+    const box = s.getBoundingClientRect(); const mx = (ev.clientX - box.left) / box.width * W;
+    const q = x0 + (mx - L) / (W - R - L) * (tot - x0);
+    const rows = curves.map(([k, lab]) => { const b = at[k].find(p => q >= p[0] && q < p[1]); return b ? `${lab.split(",")[0]}: <b>${b[3].duid}</b> band ${b[3].band} at ${money(b[2])}` : null; }).filter(Boolean);
+    tipShow(ev, `${mw(q)} cumulative<br>` + rows.join("<br>"));
+  });
+  hit.addEventListener("mouseleave", tipHide);
+}
+
+function constraintsCard(c) {
+  const n = c.rows.length, applied = c.counts.applied || 0;
+  const nb = c.rows.filter(r => r.binding).length, ab = c.binding_counts.applied || 0;
+  const reasons = Object.entries(c.counts).filter(([k]) => k !== "applied").map(([k, v]) => `${v} ${k}`).join(", ");
+  $("consSummary").innerHTML = n ? `<b>${applied} of ${n}</b> invoked constraints applied by rung 4 (${(100 * applied / n).toFixed(0)}%). Left out: ${reasons || "none"}.<br>
+    In AEMO's solution <b>${nb}</b> bound; rung 4 applied <b>${ab}</b> of them${nb - ab ? `, and <span class="warn">${nb - ab} binding constraints were not in rung 4's model</span>` : ""}.` : "No constraint data for this interval.";
+  const rows = $("consAll").checked ? c.rows : c.rows.filter(r => r.binding);
+  let h = `<tr><th>Constraint</th><th>Type</th><th>RHS</th><th>AEMO LHS</th><th>AEMO marginal value</th><th>Rung 4</th></tr>`;
+  for (const r of rows.slice(0, 400)) {
+    const st = r.status === "applied" ? (r.unit_terms_dropped ? `applied (${r.unit_terms_dropped} unit terms dropped)` : "applied") : `<span class="warn">${r.status}</span>`;
+    h += `<tr><td>${r.constraintid}</td><td>${r.sense || "–"}</td><td>${r.rhs.toFixed(1)}</td><td>${r.lhs == null ? "–" : r.lhs.toFixed(1)}</td><td>${r.marginalvalue == null ? "–" : money(r.marginalvalue)}</td><td>${st}</td></tr>`;
+  }
+  if (!rows.length) h += `<tr><td colspan="6" class="note">No constraint bound in AEMO's solution.</td></tr>`;
+  $("consTable").innerHTML = h;
+}
+
+function flowsCard(f) {
+  const show = f.modelled ? ["r3b", "r4"] : [];
+  $("flowLegend").innerHTML = `<span><span class="sw" style="background:var(--actual);border-radius:1px"></span>AEMO flow</span>` +
+    show.map(r => `<span><span class="sw" style="background:${col(r)}"></span>rung ${LABEL[r]}</span>`).join("") +
+    Object.entries(f.differs || {}).map(([k, v]) => `<span class="warn">At this interval the re-solve for rung ${LABEL[k]}'s flows gave different prices from the scored run (${v.map(x => `${x[0]} ${money(x[1])} scored, ${money(x[2])} re-solved`).join("; ")}): the LP's price is degenerate here, so read its flows with care.</span>`).join("") +
+    (f.modelled ? "" : `<span class="warn">Modelled flows are not stored for this day. Precompute with <code>python -m nemsim.web.detail ${dayOf(S.t)}</code> (about 30 s).</span>`);
+  const rows = f.rows, W = 1180, row = 30, L = 110, R = 16, T = 20, H = T + row * rows.length + 4;
+  const s = svg(W, H, $("flows"));
+  const ext = Math.max(100, ...rows.flatMap(r => [Math.abs(r.flow), Math.abs(r.exportlimit), Math.abs(r.importlimit), ...show.map(k => Math.abs(r[k] || 0))])) * 1.1;
+  const x = scale(-ext, ext, L, W - R);
+  el("line", {x1: x(0), x2: x(0), y1: T - 6, y2: H, stroke: css("--axis")}, s);
+  text(s, x(-ext) + 2, 11, "← towards first region"); text(s, x(ext) - 2, 11, "towards second region →", {"text-anchor": "end"});
+  rows.forEach((r, i) => {
+    const y = T + i * row + row / 2;
+    text(s, 4, y + 4, r.link, {style: "fill:var(--ink)"});
+    el("line", {x1: x(r.importlimit), x2: x(r.exportlimit), y1: y + 10, y2: y + 10, stroke: css("--axis"), "stroke-width": 2}, s);
+    for (const v of [r.importlimit, r.exportlimit]) el("line", {x1: x(v), x2: x(v), y1: y + 5, y2: y + 15, stroke: css("--ink2"), "stroke-width": 2}, s);
+    el("rect", {x: Math.min(x(0), x(r.flow)), y: y - 7, width: Math.abs(x(r.flow) - x(0)), height: 10, fill: css("--actual"), rx: 2}, s);
+    show.forEach((k, j) => { if (r[k] == null) return; el("circle", {cx: x(r[k]), cy: y - 2 + (j ? 3 : -3), r: 5, fill: col(k), stroke: css("--surface"), "stroke-width": 2}, s); });
+  });
+  let h = `<tr><th>Link</th><th>From → to</th><th>AEMO flow</th>` + show.map(k => `<th>Rung ${LABEL[k]}</th>`).join("") + `<th>AEMO limits (import / export)</th></tr>`;
+  for (const r of rows) h += `<tr><td>${r.link}</td><td>${r.from} → ${r.to}</td><td>${mw(r.flow)}</td>` + show.map(k => `<td>${mw(r[k])}</td>`).join("") + `<td>${mw(r.importlimit)} / ${mw(r.exportlimit)}</td></tr>`;
+  $("flowTable").innerHTML = h;
+}
+
+// ---- day view -----------------------------------------------------------------------------
+async function renderDay() {
+  const date = dayOf(S.t);
+  const d = await get(`/api/day?date=${date}&region=${S.region}`);
+  const keys = Object.keys(d.intervals);
+  const present = RUNG_ORDER.filter(r => keys.some(k => d.intervals[k][r] !== undefined));
+  $("dayTitle").textContent = `${S.region} · ${parse(date + "T12:00").toLocaleDateString("en-AU", {weekday: "long", day: "numeric", month: "long", year: "numeric"})} · intervals ending 00:05 to 24:00 AEST`;
+  $("dayLegend").innerHTML = `<span><svg width="22" height="8"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--actual)" stroke-width="2.5"/></svg> AEMO</span>` +
+    present.map(r => `<label><input type="checkbox" data-r="${r}" ${S.dayRungs.has(r) ? "checked" : ""}> <span class="sw" style="background:${col(r)}"></span>${META.rung_names[r]}</label>`).join("");
+  $("dayLegend").querySelectorAll("input").forEach(i => i.onchange = () => { i.checked ? S.dayRungs.add(i.dataset.r) : S.dayRungs.delete(i.dataset.r); renderDay(); });
+  const W = 1180, H = 440, L = 70, R = 16, T = 14, B = 34;
+  const s = svg(W, H, $("day"));
+  const vals = keys.flatMap(k => [d.intervals[k].rrp, ...[...S.dayRungs].map(r => d.intervals[k][r])]).filter(v => v != null);
+  const lo = Math.min(0, ...vals), hi = Math.max(100, ...vals);
+  const y = scale(lo, hi, H - B, T, SL), x = scale(0, keys.length - 1, L, W - R);
+  for (const v of PRICE_TICKS.filter(v => v >= lo && v <= hi)) { const g = el("g", {class: "tick"}, s); el("line", {x1: L, x2: W - R, y1: y(v), y2: y(v)}, g); text(g, L - 6, y(v) + 4, money(v), {"text-anchor": "end"}); }
+  for (let h = 0; h <= 24; h += 3) text(s, x(Math.min(h * 12, keys.length) - 1 + (h === 0 ? 1 : 0)), H - B + 16, pad(h) + ":00", {"text-anchor": "middle"});
+  const line = (f, c, w) => { let dd = "", on = false; keys.forEach((k, i) => { const v = f(d.intervals[k]); if (v == null) { on = false; return; } dd += (on ? "L" : "M") + x(i) + "," + y(v); on = true; }); el("path", {d: dd, fill: "none", stroke: c, "stroke-width": w, "stroke-linejoin": "round"}, s); };
+  for (const r of present) if (S.dayRungs.has(r)) line(v => v[r], col(r), 1.8);
+  line(v => v.rrp, css("--actual"), 2.5);
+  const sel = keys.indexOf(S.t);
+  if (sel >= 0) el("line", {x1: x(sel), x2: x(sel), y1: T, y2: H - B, stroke: col("r4"), "stroke-dasharray": "3 3"}, s);
+  const cross = el("line", {y1: T, y2: H - B, stroke: css("--axis"), visibility: "hidden"}, s);
+  const hit = el("rect", {x: L, y: T, width: W - R - L, height: H - B - T, fill: "transparent", style: "cursor:pointer"}, s);
+  const idx = ev => { const b = s.getBoundingClientRect(); return Math.max(0, Math.min(keys.length - 1, Math.round(((ev.clientX - b.left) / b.width * W - L) / (W - R - L) * (keys.length - 1)))); };
+  hit.addEventListener("mousemove", ev => { const i = idx(ev), k = keys[i], v = d.intervals[k]; cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    tipShow(ev, `<b>${k.slice(11)} AEST</b><br>AEMO ${money(v.rrp)}<br>` + present.filter(r => S.dayRungs.has(r)).map(r => `rung ${LABEL[r]} ${money(v[r])}${v[r] != null ? " (" + signed(v[r] - v.rrp) + ")" : ""}`).join("<br>") + "<br><span class='note'>click to open</span>"); });
+  hit.addEventListener("mouseleave", () => { tipHide(); cross.setAttribute("visibility", "hidden"); });
+  hit.addEventListener("click", ev => { S.t = keys[idx(ev)]; S.view = "interval"; tipHide(); render(); });
+  const r4 = keys.map(k => d.intervals[k]).filter(v => v.r4 != null);
+  if (r4.length) {
+    const w5 = r4.filter(v => Math.abs(v.r4 - v.rrp) <= 5).length, sp = r4.filter(v => v.rrp >= 300);
+    $("dayStats").textContent = `Rung 4 within $5 of AEMO in ${w5} of ${r4.length} scored intervals (${(100 * w5 / r4.length).toFixed(0)}%)` +
+      (sp.length ? `; at $300 or more, ${sp.filter(v => Math.abs(v.r4 - v.rrp) <= 5).length} of ${sp.length}.` : ".");
+  } else $("dayStats").textContent = "";
+}
+
+// ---- controls -----------------------------------------------------------------------------
+function shift(min) { const d = parse(S.t); d.setMinutes(d.getMinutes() + min); S.t = iso(d); render(); }
+async function init() {
+  META = await get("/api/meta");
+  $("region").innerHTML = META.regions.map(r => `<option>${r}</option>`).join("");
+  for (const e of META.episodes) {
+    const b = document.createElement("button"); b.className = "ep"; b.textContent = e.label;
+    b.title = `${e.interval.replace("T", " ")} AEST, ${e.region}: rung 4 off by ${money(e.rung4_abs_error)}`;
+    b.onclick = () => { S.t = e.interval; S.region = e.region; render(); };
+    $("episodes").appendChild(b);
+  }
+  const q = new URLSearchParams(location.search);
+  const e0 = META.episodes[0];
+  S.view = q.get("view") || "interval"; S.t = q.get("t") || (e0 ? e0.interval : "2025-06-12T18:00");
+  S.region = q.get("region") || (e0 ? e0.region : "VIC1"); S.scope = q.get("scope") || "region";
+  $("tabInterval").onclick = () => { S.view = "interval"; render(); };
+  $("tabDay").onclick = () => { S.view = "day"; render(); };
+  $("prev").onclick = () => shift(-5); $("next").onclick = () => shift(5);
+  $("region").onchange = () => { S.region = $("region").value; render(); };
+  const pick = () => { if ($("date").value && $("time").value) { S.t = $("date").value + "T" + $("time").value; render(); } };
+  $("date").onchange = pick; $("time").onchange = pick;
+  $("scopeRegion").onclick = () => { S.scope = "region"; render(); };
+  $("scopeNEM").onclick = () => { S.scope = "nem"; render(); };
+  $("stackFull").onclick = () => { S.full = !S.full; render(); };
+  if (q.get("theme")) document.documentElement.dataset.theme = q.get("theme");
+  $("consAll").onchange = () => render();
+  render();
+}
+init().catch(e => message(e.message));
+</script>
+</body>
+</html>

@@ -115,6 +115,17 @@ def main() -> None:
         for name in tables:
             for f in files_for(path("raw_dir"), name, month):
                 rows += load_file(con, TABLES[name], f).get("rows_loaded", 0)
+        # Prices, demand and link flows come from the explainer's files unless the month fetches its
+        # own (as nemsim/ingest.py does). Without the flows, every constraint with an interconnector
+        # term fails the LHS rebuild, which is how this step was found to be missing.
+        for name in cfg["explainer_monthly"]:
+            if name in tables:
+                continue
+            found = files_for(path("explainer_raw_dir"), name, month)
+            if not found:
+                raise FileNotFoundError(f"{name} {a.month} is not in the explainer's raw files; list it here")
+            for f in found:
+                rows += load_file(con, TABLES[name], f).get("rows_loaded", 0)
         filled = fill_direction(con)
         con.execute("checkpoint")
     step("load", t0, rows=rows, direction_filled=filled)
