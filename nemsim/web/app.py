@@ -1,7 +1,8 @@
 """The local frontend: python -m nemsim.web   (then open http://127.0.0.1:8765)
 
 A small FastAPI service over the scored results and the warehouse, both read-only, and one static
-page. Nothing is solved here. Needs the optional extras: pip install -e ".[frontend]".
+page. Every price shown is the scored one; only the flows of rungs 3b and 4 for the interval on screen
+are re-solved, with any differing price flagged. Needs the optional extras: pip install -e ".[frontend]".
 """
 from __future__ import annotations
 
@@ -75,11 +76,13 @@ def interval(t: str = Query(...)):
     con = _db()
     reg = data.regional(con, when).set_index("region")
     rows = data.interval_rows(prices)
+    stored = {(r.rung, r.region): float(r.price) for r in prices.itertuples()
+              if (r.excluded is None or r.excluded != r.excluded) and r.price == r.price}
     for r in rows:
         if r["region"] in reg.index:
             r.update({k: float(v) for k, v in reg.loc[r["region"]].items()})
     return {"interval": f"{when:%Y-%m-%dT%H:%M}", "regions": rows,
-            "flows": data.flows(con, when), "constraints": data.constraints(con, when)}
+            "flows": data.flows(con, when, stored), "constraints": data.constraints(con, when)}
 
 
 @app.get("/api/stack")

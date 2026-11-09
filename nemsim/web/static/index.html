@@ -69,8 +69,8 @@ svg .tick line { stroke: var(--grid); }
 <main>
   <h1>NEM dispatch simulator</h1>
   <div class="sub">Pick an interval: what the market did, what each rung said, and why they differ.
-    Times are <b>interval ending, NEM time (AEST, UTC+10)</b>. Prices $/MWh, volumes MW. Nothing is solved here:
-    every modelled price is the scored result in <code>results/</code>.</div>
+    Times are <b>interval ending, NEM time (AEST, UTC+10)</b>. Prices $/MWh, volumes MW. Every modelled price is the
+    scored result in <code>results/</code>; only rungs 3b and 4 are re-solved, for the interval on screen, to show their flows.</div>
 
   <div class="bar">
     <button id="tabInterval" class="on">Interval</button>
@@ -118,6 +118,7 @@ svg .tick line { stroke: var(--grid); }
         <div class="note">MW, positive from the first region to the second. The bracket is the limit AEMO's dispatch
           calculated (an outcome; rungs 3b and 4 use standing ratings instead).</div>
         <div class="legend" id="flowLegend"></div>
+        <div id="flowNotes"></div>
         <div id="flows"></div>
         <div class="scroll"><table id="flowTable"></table></div>
       </div>
@@ -331,11 +332,17 @@ function constraintsCard(c) {
 }
 
 function flowsCard(f) {
-  const show = f.modelled ? ["r3b", "r4"] : [];
+  const show = ["r3b", "r4"].filter(k => f.live[k] && f.live[k].available);
+  const notes = show.map(k => {
+    const v = f.live[k];
+    const d = v.differs.length ? ` <span class="warn">Degenerate price here: the re-solve gives ${v.differs.map(x => `${x[0]} ${money(x[2])} against the scored ${money(x[1])}`).join("; ")}. A range of prices satisfies the LP at this interval, so read these flows with care.</span>` : " Prices match the scored run.";
+    const loop = k === "r3b" ? " Its flows are not unique even where its prices are: without constraints coupling them, parallel paths can carry a loop at no cost, so the same prices can come with different flows from one solve to the next." : "";
+    return `<div class="note">Rung ${LABEL[k]} re-solved live for this interval in ${v.solve_ms} ms.${d}${v.violated.length ? ` Constraints it violated: ${v.violated.join(", ")}.` : ""}${loop}</div>`;
+  }).join("");
   $("flowLegend").innerHTML = `<span><span class="sw" style="background:var(--actual);border-radius:1px"></span>AEMO flow</span>` +
-    show.map(r => `<span><span class="sw" style="background:${col(r)}"></span>rung ${LABEL[r]}</span>`).join("") +
-    Object.entries(f.differs || {}).map(([k, v]) => `<span class="warn">At this interval the re-solve for rung ${LABEL[k]}'s flows gave different prices from the scored run (${v.map(x => `${x[0]} ${money(x[1])} scored, ${money(x[2])} re-solved`).join("; ")}): the LP's price is degenerate here, so read its flows with care.</span>`).join("") +
-    (f.modelled ? "" : `<span class="warn">Modelled flows are not stored for this day. Precompute with <code>python -m nemsim.web.detail ${dayOf(S.t)}</code> (about 30 s).</span>`);
+    show.map(r => `<span><span class="sw" style="background:${col(r)}"></span>rung ${LABEL[r]} (re-solved)</span>`).join("") +
+    (show.length ? "" : `<span class="warn">No offers loaded for this interval, so rungs 3b and 4 cannot be solved.</span>`);
+  $("flowNotes").innerHTML = notes;
   const rows = f.rows, W = 1180, row = 30, L = 110, R = 16, T = 20, H = T + row * rows.length + 4;
   const s = svg(W, H, $("flows"));
   const ext = Math.max(100, ...rows.flatMap(r => [Math.abs(r.flow), Math.abs(r.exportlimit), Math.abs(r.importlimit), ...show.map(k => Math.abs(r[k] || 0))])) * 1.1;

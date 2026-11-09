@@ -8,17 +8,18 @@ Two sources, both read-only:
 - **Per-interval detail**, from the warehouse, opened with `read_only=True` so DuckDB itself refuses
   any write: offers for the supply stack, invoked constraints, demand and actual flows.
 
-Modelled interconnector flows are not in the result files: the harness keeps only regional prices.
-nemsim/web/detail.py precomputes them for chosen days (the episodes by default) by running rungs 3b and
-4 exactly as the harness does, checking that every price it gets matches the stored one.
+Modelled interconnector flows are not in the result files: the harness keeps only regional prices. So
+for the interval on screen, rungs 3b and 4 are re-solved (about 0.1-0.3 s) to show the flows they chose;
+the prices on the page stay the scored ones, and any re-solved price that differs from its scored price
+is flagged (a degenerate LP price). nemsim/web/detail.py does the same for whole days as a batch check.
 
 Times are AEMO's SETTLEMENTDATE: the end of the 5-minute interval, in NEM time (AEST, UTC+10, no
 daylight saving). Prices $/MWh, volumes MW.
 """
 from __future__ import annotations
 
-import json
 import threading
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -29,6 +30,7 @@ import pandas as pd
 from nemsim.config import ROOT, path
 from nemsim.inputs import INTERCONNECTORS, REGIONS, Window
 from nemsim.intervals import MONTHS, SPIKE_MONTHS
+from nemsim.rungs import LADDER
 from nemsim.rungs.r3b_flows_solved import unit_limits
 from nemsim.rungs.r4_constraints import classify
 from nemsim.stack import cap_bands
@@ -242,32 +244,48 @@ def stack(con, t: datetime, region: str | None) -> dict:
             "price_floor": float(x.price_floor), "price_cap": float(x.price_cap)}
 
 
-def modelled_flows(t: datetime, web: Path = WEB) -> pd.DataFrame | None:
-    f = web / "detail" / f"{(t - STEP):%Y-%m-%d}.parquet"
-    if not f.exists():
-        return None
-    return duckdb.connect().execute(f"select * from read_parquet('{f}') where interval = ?", [t]).df()
+LIVE_RUNGS = ("r3b", "r4")
+TOLERANCE = 0.01
 
 
-def flows(con, t: datetime) -> dict:
+def resolve(con, t: datetime, stored: dict[tuple[str, str], float]) -> dict:
+    """Re-solve rungs 3b and 4 for one interval, to show the flows they chose, which the harness does not
+    store. The rung classes are the scored ones, unchanged, fed by the same Window loader the harness
+    uses (here for one interval; the harness loads a day at a time, and the inputs for an interval are the
+    same either way). The page's prices stay the scored ones. Each re-solved price is compared with the
+    scored price for the same region: where they differ the LP's price is degenerate there (a range of
+    prices satisfies it, and the solver's pick depends on its path), and the page says so. About 0.1-0.3 s."""
+    out = {}
+    for key in LIVE_RUNGS:
+        rung = type(LADDER[key])()
+        w = Window(con, t, t, rung.uses)
+        if pd.Timestamp(t) not in set.intersection(*(w.intervals_with(u) for u in rung.uses)):
+            out[key] = {"available": False}        # the harness scores these as no_inputs too
+            continue
+        x = w.at(t)
+        tic = time.perf_counter()
+        res = rung.solve(x)
+        ms = (time.perf_counter() - tic) * 1e3
+        prices = dict(zip(res.region, res.price.astype(float)))
+        differs = [[r, round(stored[(key, r)], 2), round(p, 2)] for r, p in prices.items()
+                   if (key, r) in stored and abs(p - stored[(key, r)]) > TOLERANCE]
+        out[key] = {"available": True, "solve_ms": round(ms, 1), "prices": prices, "differs": differs,
+                    "flows": dict(zip(rung.last["links"], (float(f) for f in rung.last["flows"]))),
+                    "violated": list(rung.last.get("violated") or [])}
+    return out
+
+
+def flows(con, t: datetime, stored: dict[tuple[str, str], float]) -> dict:
     a = actual_flows(con, t)
-    m = modelled_flows(t)
+    live = resolve(con, t, stored)
     rows = []
     for link in a.link:
         row = a[a.link == link].iloc[0].to_dict()
         frm, to = INTERCONNECTORS.get(link, ("?", "?"))
         row.update({"from": frm, "to": to})
-        if m is not None:
-            for r in ("r3b", "r4"):
-                v = m[(m.rung == r) & (m.link == link)].flow
-                row[r] = float(v.iloc[0]) if len(v) else None
+        for r, v in live.items():
+            if v.get("available"):
+                row[r] = v["flows"].get(link)
         rows.append(row)
-    # Where the precompute's re-solved prices did not match the scored ones at this interval (a degenerate
-    # LP price), say so: those flows come from a solve whose prices differ from what the page shows.
-    differs = {}
-    check = WEB / "detail" / f"{(t - STEP):%Y-%m-%d}.json"
-    if m is not None and check.exists():
-        c = json.loads(check.read_text())
-        differs = {r: c[r]["differing"].get(f"{t:%H:%M}") for r in ("r3b", "r4") if c.get(r, {}).get("differing", {}).get(f"{t:%H:%M}")}
     return {"rows": pd.DataFrame(rows).replace({np.nan: None}).to_dict("records"),
-            "modelled": m is not None, "differs": differs}
+            "live": {r: {k: v[k] for k in v if k != "flows"} for r, v in live.items()}}

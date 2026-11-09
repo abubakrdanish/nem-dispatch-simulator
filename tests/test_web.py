@@ -8,7 +8,7 @@ import pandas as pd
 import pytest
 
 from nemsim.harness import evaluate
-from nemsim.inputs import Window
+from nemsim.inputs import INTERCONNECTORS, Window
 from nemsim.rungs import LADDER
 from nemsim.rungs.r4_constraints import build
 from nemsim.web import data
@@ -73,3 +73,23 @@ def test_service_routes_exist():
     from nemsim.web.app import app
     paths = {r.path for r in app.routes}
     assert {"/", "/api/meta", "/api/interval", "/api/stack", "/api/day"} <= paths
+
+
+def test_live_resolve_reproduces_the_scored_prices(warehouse):
+    """The page re-solves rungs 3b and 4 for one interval to show their flows. Fed by a one-interval window,
+    the re-solve must give the prices the harness scored with its day window."""
+    stored = {}
+    for key in data.LIVE_RUNGS:
+        r = evaluate(warehouse, LADDER[key], T)
+        stored.update({(key, row.region): row.price for row in r[r.interval == T[0]].itertuples() if row.price == row.price})
+    live = data.resolve(warehouse, T[0], stored)
+    for key in data.LIVE_RUNGS:
+        assert live[key]["available"] and live[key]["differs"] == []
+        assert live[key]["flows"] and set(live[key]["flows"]) <= set(INTERCONNECTORS)
+
+
+def test_live_resolve_flags_a_price_that_differs_from_the_scored_one(warehouse):
+    r = evaluate(warehouse, LADDER["r4"], T)
+    row = r[(r.interval == T[0]) & r.price.notna()].iloc[0]
+    live = data.resolve(warehouse, T[0], {("r4", row.region): row.price + 1.0})
+    assert live["r4"]["differs"] == [[row.region, round(row.price + 1.0, 2), round(row.price, 2)]]

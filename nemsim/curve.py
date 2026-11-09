@@ -142,11 +142,11 @@ def main() -> None:
     months = len(MONTHS)
     pages = {
         "accuracy_curve.svg": svg(all_score, all_bounds, "How much of the price each rung explains",
-                                  f"Share of region-intervals within $5 of the actual price. {months} months, the same "
-                                  f"region-intervals for every rung.", True),
+                                  f"Share of region-intervals within $5 of the actual price. The original {months} months, "
+                                  f"the same region-intervals for every rung.", True),
         "accuracy_curve_300.svg": svg(hi_score, hi_bounds, "Where the money is: intervals above $300",
-                                      "Share within $5, region-intervals with an actual price of $300 or more: 1.1% of "
-                                      "intervals, about 30% of settled value.", False),
+                                      f"Within $5, actual price $300 or more. The original {months} months: 1.1% of their "
+                                      "region-intervals, 30% of their settled value.", False),
     }
     for name, text in pages.items():
         (ROOT / "docs" / name).write_text(text)

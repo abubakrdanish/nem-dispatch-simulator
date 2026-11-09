@@ -18,7 +18,19 @@ How much of the actual clearing price in Australia's National Electricity Market
 
 ## The finding, as it stands
 
-**Network constraints are the only input-based layer that reaches the money, and even they leave most of it unreached:** rung 4 gets **26.4%** of spike region-intervals (above $300) within $5, against a reachable bound of **75.3%**.
+**Network constraints are the only input-based layer that reaches the spike band, and even they leave most of it unreached.** Rung 4 gets **26.4%** of region-intervals priced at $300 or more within $5 of AEMO's price on the original ten months, and **29.1%** on all seventeen. The **reachable bound** is the share any model of that kind could get within $5, found knowing the actual prices, shadow prices and flows, so it is a bound, never a model. For rung 4 it is **75.3%** on the ten months and **80.7%** on the seventeen. The direction is not new: the abstract of Gorman, MacGill and Bruce (2024) reports that neglecting network and security constraints mainly affects peak prices (the paper itself is paywalled and has not been read here). This project measures that direction a different way; it does not discover it.
+
+**What every number below is measured on.**
+
+- **Within $5** is the share of region-intervals where a rung's regional price is within $5/MWh of AEMO's published dispatch price (`DISPATCHPRICE.RRP`, pricing run, `INTERVENTION = 0`).
+- **Settled value** is price × demand ÷ 12 per region-interval (`TOTALDEMAND`). For January 2020, before five-minute settlement, it uses the 30-minute trading price that actually settled.
+- **Each table is on one sample, named in its heading, and every rung in it is scored on the same region-intervals:** those all five rungs scored. Excluded are suspended intervals, intervals AEMO's own files leave without inputs, and the first 48 intervals of a month whose previous month's offers are not loaded.
+- **Neither sample is random.**
+  - *The original ten months* are the eight months holding the stage 1 research's test cases, plus two summer months (December 2025, February 2026). The test cases were picked to be hard or telling: three cap events, a winter scarcity day, a deep negative price, FCAS stress, an intervention and two ordinary control days.
+  - *The seven spike months* were added in stage 6b because they rank high on $300+ settled value. Checked afterwards, the AER records network limits behind the biggest day in every one ([selection rule below](#seven-spike-months-added-on-purpose)).
+- **Both samples sit outside the months that hold most of the decade's spike money.** March 2021 to July 2024 has no final-offer tables in AEMO's archive, so it is outside every sample here. It holds 62% of the decade's $300+ settled value, including the 2022 crisis ([Data](#data)).
+
+**The original ten months** (433,900 region-intervals, $16.7bn of settled value):
 
 | Actual price | Share of region-intervals | Share of settled value | Rung 2 | Rung 3a (mechanical lift) | Rung 3b | **Rung 4** |
 |---|---:|---:|---:|---:|---:|---:|
@@ -29,7 +41,18 @@ How much of the actual clearing price in Australia's National Electricity Market
 | All | 100% | 100% | 20.3% | 47.3% | 16.1% | **55.7%** |
 | All, weighted by settled value | | | 12.8% | 30.1% | 3.9% | **44.3%** |
 
-The cells are the share within $5 of the actual price, over ten months (433,900 region-intervals, the same for every rung). A $5 miss on a $40 price and on a $5,000 spike are not the same thing, so the table is split by actual price. The two share columns describe these ten months only. What the market looks like over a decade is in the next section, and it is the figure to quote.
+**All seventeen months** (741,340 region-intervals, $30.7bn; the ten above plus the seven spike months):
+
+| Actual price | Share of region-intervals | Share of settled value | Rung 2 | Rung 3a (mechanical lift) | Rung 3b | **Rung 4** |
+|---|---:|---:|---:|---:|---:|---:|
+| Negative | 16.9% | −2.2% | 34.7% | 61.6% | 35.6% | **77.4%** |
+| $0–50 | 19.0% | 3.8% | 15.4% | 40.5% | 20.8% | **54.5%** |
+| $50–300 | 62.9% | 68.1% | 19.4% | 44.4% | 9.1% | **58.5%** |
+| **$300+** | **1.1%** | **30.4%** | **2.5%** | **19.7%** | **0.4%** | **29.1%** |
+| All | 100% | 100% | 21.0% | 46.3% | 15.7% | **60.6%** |
+| All, weighted by settled value | | | 13.6% | 29.8% | 4.0% | **45.7%** |
+
+A $5 miss on a $40 price and on a $5,000 spike are not the same thing, so the tables are split by actual price. Rung 1 is 0.1% (ten months) and 0.2% (seventeen) and is left out of these two tables. The share columns describe each sample only: the samples were chosen with spikes in them, and the market's own spike share is in the next section. Every other measure is in `results/ladder.csv` (`python -m nemsim.ladder report`): within 10%, mean absolute error, and each rung by region and by month.
 
 ### How much of the market's money is in spikes: ten years of the NEM
 
@@ -58,23 +81,46 @@ Each cell is the band's share of settled value, with its share of region-interva
 
 **So the dollar-weighting argument stands, at a smaller size:** a quarter of the decade's money sat in 2% of its region-intervals, and in some years two fifths. A model that misses the spikes misses that money however well it does on the rest.
 
-**The $300+ row is mostly June 2025, and June 2025 was not a network event.** June supplies 45% of the region-intervals above $300 and 53% of that band's settled value. Two episodes, 11–13 June and 26–27 June, carry it. 12 June and 26 June alone hold 42% of the spike band's settled value across all ten months. The AER's report on the quarter's high prices attributes both to cold-weather demand, a calm wind and coal outages. It says network outages "did not contribute", and the mainland regions were price-aligned with interconnectors not limiting. Prices at the margin were set by a few hundred MW of rebids, batteries running out of charge, ramp limits and the energy–FCAS trade-off. [Section 9.2](docs/stage2_results.md#92-what-june-2025-was) has the detail and sources.
+**In the ten-month table, the $300+ row is mostly June 2025, and June 2025 was not a network event.** In the ten months, June supplies 45% of the region-intervals above $300 and 53% of that band's settled value. Two episodes, 11–13 June and 26–27 June, carry it. 12 June and 26 June alone hold 42% of the spike band's settled value across all ten months. The AER's report on the quarter's high prices attributes both to cold-weather demand, a calm wind and coal outages. It says network outages "did not contribute", and the mainland regions were price-aligned with interconnectors not limiting. Prices at the margin were set by a few hundred MW of rebids, batteries running out of charge, ramp limits and the energy–FCAS trade-off. [Section 9.2](docs/stage2_results.md#92-what-june-2025-was) has the detail and sources.
 
-**Without June every directional conclusion holds, and most get stronger.** Rung 4 gets 30.3% within $5 on $300+ and 51.3% weighted by settled value, and the reachable bound is 85.3%. What did depend on June was a magnitude: in these ten months, spikes set 30% of settled value with June and 20% without it. That figure no longer stands for the market; the decade's 23.4%, above, replaces it.
+**Without June every directional conclusion holds, and most get stronger.** On the ten months without June 2025, rung 4 gets 30.3% within $5 on $300+ (95% interval from resampling whole days, 26.3–34.4) and 51.3% weighted by settled value, and the reachable bound on $300+ is 85.3%. On the seventeen months without June it gets 31.8% (27.7–36.1) and 49.2%, against a bound of 86.9%. What did depend on June was a magnitude: in the ten months, spikes set 30% of settled value with June and 20% without it. That figure no longer stands for the market; the decade's 23.4%, above, replaces it.
 
-| Rung | Includes, exactly | Within $5 | Reachable bound | Share of bound |
-|---|---|---:|---:|---:|
-| 1. Merit order, offers capped at declared availability | One NEM-wide stack of final energy offers, each capped at its own MAXAVAIL, and nothing else | 0.1% | 51.9% (single-price oracle) | 0.2% |
-| 2. Merit order, offers capped at AEMO's dispatch availability | Rung 1, with wind and solar capped at AEMO's pre-dispatch forecast (UIGF), not realised output | 20.3% | 51.9% (single-price oracle) | 39% |
-| 3a. Regional, flows held at actual | **The mechanical ceiling lift, not a modelling gain:** rung 2 as five regional stacks, each told its actual net interchange | 47.3% | 72.8% (regional stack) | 65% |
-| 3b. Regional, flows solved | Rung 2 as a five-region LP: flows within standing ratings, AEMO's loss equation, ramp limits. **Worse than no network at all:** without the constraints that couple them, the links run past their real limits and parallel paths run against each other | 16.1% | | |
-| 4. Network constraints | Rung 3b plus every invoked generic constraint it can represent (83% of them): their right-hand sides, set before dispatch, and their equations | 55.7% | 96.0% (full network) | 58% |
+The ladder, with each figure's sample in its column heading. "Within $5" is over all region-intervals. Each rung's bound is of its own kind:
+- **Single-price oracle:** the one NEM-wide price per interval that puts the most regions within $5.
+- **Regional stack:** the actual price is within $5 of a deliverable offer in the region.
+- **Full network:** a deliverable offer adjusted by binding constraints' shadow prices, a scheduled load's bid, or a reachable neighbour's price carried across a link.
+
+All three are found knowing actual outcomes.
+
+| Rung | Includes, exactly | Within $5, ten months | Within $5, seventeen months | Reachable bound, ten / seventeen | Share of bound, ten / seventeen |
+|---|---|---:|---:|---:|---:|
+| 1. Merit order, offers capped at declared availability | One NEM-wide stack of final energy offers, each capped at its own MAXAVAIL, and nothing else on the supply side | 0.1% | 0.2% | 51.9% / 53.2% (single-price oracle) | 0.2% / 0.4% |
+| 2. Merit order, offers capped at AEMO's dispatch availability | Rung 1, with each unit capped at `DISPATCHLOAD.AVAILABILITY`. That changes only wind and solar, which it caps at AEMO's unconstrained forecast for the interval (UIGF), made before dispatch, not at realised output | 20.3% | 21.0% | 51.9% / 53.2% (single-price oracle) | 39% / 40% |
+| 3a. Regional, flows held at actual | **The mechanical ceiling lift, not a modelling gain:** rung 2 as five regional stacks, each told its actual net interchange (an outcome) | 47.3% | 46.3% | 72.8% / 71.2% (regional stack) | 65% / 65% |
+| 3b. Regional, flows solved | Rung 2 as a five-region LP: flows within standing ratings, AEMO's loss equation, ramp limits. **Worse than no network at all overall, and above $50, on both samples** (better than rung 2 only in the negative and $0–50 bands). Without the constraints that couple them, the links run past their real limits and parallel paths run against each other | 16.1% | 15.7% | no bound of its own kind | |
+| 4. Network constraints | Rung 3b plus every invoked generic constraint it can represent (83% of invoked constraint-intervals on the ten months, 84% on the seventeen): their right-hand sides, set before dispatch, and their equations | 55.7% | 60.6% | 96.0% / 96.2% (full network) | 58% / 63% |
+
+**One outcome is in every rung:** each clears against `TOTALDEMAND` plus the scheduled load AEMO actually dispatched (pumping and battery charging), because no rung models a load's bid.
 
 The ladder was renumbered on 2026-11-09. Losses, originally rung 4, now sit inside 3b, so constraints became rung 4 and there is no rung 5.
 
 ![Accuracy curve](docs/accuracy_curve.svg)
 
 ![Accuracy above $300](docs/accuracy_curve_300.svg)
+
+### A worked example: Basslink, 31 January 2020, 18:45
+
+One interval shows where the network rung's remaining error comes from. All times are interval ending, AEST.
+
+- **Observed, AEMO's dispatch.** Victoria cleared at **$14,699**. Basslink carried 445 MW from Tasmania into Victoria, exactly its export limit that interval, 444.99 MW. AEMO records which constraint set that limit (`DISPATCHINTERCONNECTORRES.EXPORTGENCONID`). It was **`F_QNV++MG_R6`, an FCAS constraint** that carries a Basslink term and was binding, with a marginal value of $694. Basslink's own Tasmania–Victoria constraint, `T_V_NIL_BL1`, was not binding: LHS 445 against RHS 594.
+- **Measured, rung 4 as scored.** Rung 4 cleared Victoria at **$13.53** and flowed **560 MW** over Basslink. It leaves out every constraint with FCAS terms, so nothing held Basslink below its standing 594 MW rating, and 115 MW more cheap Tasmanian supply reached Victoria.
+- **Probe, using an outcome.** The same rung 4 solve with Basslink held at AEMO's 445 MW clears Victoria at **$14,700**, and Murraylink then also lands on AEMO's flow. AEMO's flow is a dispatch outcome, so this is a probe, not a rung.
+- **The interval is typical of the afternoon, not picked for effect.**
+  - FCAS constraints set Basslink's export limit in 56 of the 61 intervals from 14:00 to 19:00.
+  - Over the afternoon's 50 Victorian region-intervals at $300 or more, rung 4 sends more over Basslink than AEMO did in all 50, and is within $5 of AEMO's price in 8.
+  - Held at AEMO's Basslink flow, it is within $5 in 33: 26 of the 42 misses are fixed, and one interval that was right goes wrong.
+
+So the largest single error in the transmission-event month is not the transmission event, which rung 4 reproduces (SA at the cap after the islanding, below). It is the energy–FCAS coupling of a link that rung 4 has no way to represent. It is the same mechanism the AER names for Tasmania on 12 June 2025. Modelling FCAS, the first open item in the results document ([section 12](docs/stage2_results.md#12-open-items)), is what would address it. To see it, open the interval in the local frontend: [`python -m nemsim.web`](#see-it-the-local-frontend), then `?t=2020-01-31T18:45&region=VIC1`.
 
 ### Seven spike months, added on purpose
 
@@ -104,12 +150,13 @@ Together the seventeen months hold 21.9% of the decade's $300+ settled value: 11
 Rung 2 gets 2.1% of the original ten's $300+ region-intervals within $5, and 2.5% of the seventeen's.
 
 - **The finding holds on spikes of other kinds.** On the $300+ band rung 4 reaches 26% to 33%, and the two samples' intervals overlap. Rung 2 stays near zero. The network constraints are still the only layer that reaches the spike band at all.
-- **January 2020: rung 4 gets the transmission event right and the heat wrong.** Over the month rung 4 gets 8.4% (3.1–13.3) of 344 spike region-intervals within $5, the lowest of any month with more than 100. But the misses are not the islanding. In SA's four dispatch intervals after the constraints came in, 13:40 to 13:55 on 31 January, rung 4 prices SA at the $14,700 cap, exactly as AEMO did, from offers and invoked constraints alone. What it misses is the Victorian and NSW afternoon. There the median actual price above $300 was $14,700 in Victoria and $12,786 in NSW, against rung 4's $497 and $429. Those are the prices the AER puts down to heat, lost imports and plant failures, a scarcity event like June 2025, and 4 January is the other large miss: median spike price $14,700, mostly NSW, against rung 4's $113. Its cause is not read here. By money, January 2020's spike value is 54% NSW, 37% Victoria and only 4% SA, so the event that makes the month a network test carries little of its money. *Inference, untested:* rung 4 finds cheap capacity on those afternoons that could not actually be dispatched. Ramp limits, plant failing within the interval, and Victoria's lost SA imports are the candidates.
+- **Read rung 4's 67.5% on the seven with their selection in mind.** These months were chosen for spike value, and in every one the AER independently records network limits behind the biggest day. They are network-heavy by construction, and rung 4 is the network rung. Its share of its own reachable bound is also higher on the seven, 70% against 58%. So 67.5% describes rung 4 on network-limited spike months, not a general improvement, and the gap to the ten months' 55.7% is not evidence that the model is better than the ten-month figure says.
+- **January 2020: rung 4 gets the transmission event right and the heat wrong.** Over the month rung 4 gets 8.4% (3.1–13.3) of 344 spike region-intervals within $5, the lowest of any month with more than 100. But the misses are not the islanding. In SA's four dispatch intervals after the constraints came in, 13:40 to 13:55 on 31 January, rung 4 prices SA at the $14,700 cap, exactly as AEMO did, from offers and invoked constraints alone. What it misses is the Victorian and NSW afternoon. There the median actual price above $300 was $14,700 in Victoria and $12,786 in NSW, against rung 4's $497 and $429. Those are the prices the AER puts down to heat, lost imports and plant failures, a scarcity event like June 2025, and 4 January is the other large miss: median spike price $14,700, mostly NSW, against rung 4's $113. Its cause is not read here. By money, January 2020's spike value is 54% NSW, 37% Victoria and only 4% SA, so the event that makes the month a network test carries little of its money. A median hides how it misses: through the afternoon rung 4 flips between the cap and $0–550 from one interval to the next. On the Victorian side most of the miss is measured: Basslink held back by FCAS constraints rung 4 cannot represent ([worked example above](#a-worked-example-basslink-31-january-2020-1845)). The NSW side and 4 January are not diagnosed.
 - **Per-month spread is wide.** Rung 4 on $300+ ranges from 8.4% (2020-01) and 11.7% (2025-05) to 49.2% (2025-01) across the seven. A ten-month mean hides that. `results/spike_sample.csv` has every month.
 
 ### Are spike prices in the bid stack?
 
-Above $300, a region's price is often nowhere near any offer in that region. Offers alone could produce a price within $5 of the actual in only **35.1%** of spike region-intervals. A unit's offer also reaches its region's price through the shadow prices of the binding constraints it sits in; adding those raises the reachable share to **48.8%**. Adding the network carrying a neighbour's price across an interconnector raises it to **75.3%** (95% CI 68.3–84.3). So spike prices are mostly in the bids, reached through constraints and the network. The quarter left is in June 2025's scarcity and in Tasmania, where what sets the price (battery state of charge, rebidding, FCAS co-optimisation) is exactly what no rung here models. These bounds use actual outcomes, so they say what a model of each kind *could* reach, not what any model did.
+Above $300, a region's price is often nowhere near any offer in that region. On the original ten months, offers alone could produce a price within $5 of the actual in only **35.1%** of spike region-intervals. A unit's offer also reaches its region's price through the shadow prices of the binding constraints it sits in; adding those raises the reachable share to **48.8%**. Adding the network carrying a neighbour's price across an interconnector raises it to **75.3%** (95% interval from resampling whole days, 68.3–84.3). On all seventeen months the three steps are 38.7%, 53.9% and 80.7%. So spike prices are mostly in the bids, reached through constraints and the network. In the ten months, the quarter left is in June 2025's scarcity and in Tasmania, where what sets the price (battery state of charge, rebidding, FCAS co-optimisation) is exactly what no rung here models. These bounds use actual outcomes, so they say what a model of each kind *could* reach, not what any model did.
 
 ## Why the numbers can be trusted, and where they cannot
 
@@ -117,17 +164,19 @@ Above $300, a region's price is often nowhere near any offer in that region. Off
 
 - **No outcome reaches a rung.** A rung declares its inputs; the harness never passes the actual price. A test asserts that rung 4 never sees `DISPATCHCONSTRAINT`'s marginal values, violation degrees or reported left-hand sides. Fields that are dispatch outcomes (cleared MW, the semi-dispatch cap flag, the calculated interconnector limits) are withheld. Where an outcome is used on purpose, the rung is labelled for it: 3a is told the flows, and the probe the calculated limits.
 - **Conventions are measured, not assumed.** Several conventions were each settled on the data:
-  - offer prices are divided by TLF × DLF: 71.5% exact against 0% for TLF alone, on marginal units;
+  - offer prices are divided by TLF × DLF. On marginal units whose DLF is meaningfully below 1, over the first eight months loaded, TLF × DLF matches the regional price in 71.5% of cases against 0% for TLF alone;
   - interconnector losses take the sign of the flow;
   - load terms enter constraints with a positive sign;
-  - **constraint shadow prices are subtracted:** on 7,662 marginal units inside a binding constraint, *band price ÷ (TLF × DLF) − Σ(marginal value × coefficient)* matches the regional price to the cent in 70% of cases, against under 1% with the other sign.
-- **The constraint equations are AEMO's.** Rebuilt from actual dispatch, they match AEMO's reported left-hand side within 1 MW in **99.8%** of applied constraint-intervals when every term is included. On the binding energy-only constraints first checked, the match was 89%.
+  - **constraint shadow prices are subtracted:** on 7,662 cases of a marginal unit inside a binding constraint, over the ten months, *band price ÷ (TLF × DLF) − Σ(marginal value × coefficient)* matches the regional price within 5 cents in 70% of cases, against under 1% with the other sign.
+- **The constraint equations are AEMO's.** Rebuilt from actual dispatch, they match AEMO's reported left-hand side within 1 MW in **99.8%** of the ten months' applied constraint-intervals when every term is included. The per-month validation since, on the intervals where `DISPATCHLOAD` exists, gives 100.0% in sixteen of the seventeen months and 99.987% in January 2020 (`python -m nemsim.validate`). Over all its intervals September 2025 is 98.4%, because AEMO's own file is missing 20 hours of `DISPATCHLOAD`. On the binding energy-only constraints first checked, on 26 June 2025, the match was 89%.
 - **A price only explains another if it is itself explained.** In the reachable bound, a region's spike counts as reached through an interconnector only when the neighbour's own price is reachable from that neighbour's offers and shadow prices.
 - **Only what is needed is downloaded.** The constraint equations in force go back to 2008; the archive starts after that, so three versions from 2008 cannot be fetched. Only the months whose versions are actually invoked were fetched: 135 for the original ten months (667 requests at a 3-second gap, 101 MB), and 13 more, about 1 MB, for the seven spike months. For 2014 and earlier AEMO publishes each month only as one 1.9 GB zip, so HTTP range requests read each zip's directory and pulled out just the four small tables, avoiding about 25 GB of download.
 
-**A stated bias.** Rung 4 drops constraint terms on units it has no variable for: loads held at actual, and non-scheduled units. That changes 27.7% of the constraint-intervals it applies. Measured against AEMO's reported values, the change leaves rung 4's constraints **tighter, not looser**, than the real ones. It concentrates in NSW and in negative and low-price intervals, where rung 4's prices also run high (+$8.6 mean error in the negative band). On binding constraints the mean effect is −0.1 MW, and on the $300+ band 94% of applied constraints match AEMO within 1 MW as rung 4 represents them. So it barely touches the 26.4%; the 55.7% has more exposure. The only pre-dispatch stand-in, `INITIALMW`, recovers almost none of it, so the terms stay dropped rather than being filled with actual MW ([section 9.1](docs/stage2_results.md#91-the-dropped-constraint-terms)). Battery charging is held at actual in every rung, and no rung models state of charge.
+**Rungs 3b and 4 are linear programs, and where a price is degenerate the solver's choice can move between runs.** Where supply meets demand exactly at a band edge, a range of prices satisfies the LP. Re-running rung 3b changed 1.35% of June 2025's prices and 0.60% of September 2025's, and not one region-interval's within-$5 outcome. Rung 4 re-run on five episode days changed 11 of 7,200 prices. Rungs 1, 2 and 3a reproduce exactly.
 
-The harness also reproduces the stage 1 research's four simple-model figures to within about a point, including its 28%, which belongs to a model told the actual flows ([nemsim/reproduce.py](nemsim/reproduce.py)).
+**A stated bias.** Rung 4 drops constraint terms on units it has no variable for: loads held at actual, and non-scheduled units. Over the ten months, that changes 27.7% of the constraint-intervals it applies. Measured against AEMO's reported values, the change leaves rung 4's constraints **tighter, not looser**, than the real ones. It concentrates in NSW and in negative and low-price intervals, where rung 4's prices also run high (+$8.6 mean error in the negative band). On binding constraints the mean effect is −0.1 MW, and on the $300+ band 94% of applied constraints match AEMO within 1 MW as rung 4 represents them. So it barely touches the ten-month 26.4%; the 55.7% has more exposure. This audit has not been re-run on the seven spike months. The only pre-dispatch stand-in, `INITIALMW`, recovers almost none of it, so the terms stay dropped rather than being filled with actual MW ([section 9.1](docs/stage2_results.md#91-the-dropped-constraint-terms)). Battery charging is held at actual in every rung, and no rung models state of charge.
+
+On the stage 1 research window (2025-09-01 04:05 to 2025-09-02 02:10, 1,330 region-intervals), the harness also reproduces the research's four simple-model figures to within about a point, including its 28%, which belongs to a model told the actual flows ([nemsim/reproduce.py](nemsim/reproduce.py)).
 
 ## Data
 
@@ -158,18 +207,18 @@ pip install -e ".[frontend]"     # FastAPI and uvicorn, kept out of requirements
 python -m nemsim.web             # then open http://127.0.0.1:8765
 ```
 
-Pick an interval and the page shows what the market did, what each rung said, and why they differ. Nothing is solved live: every modelled price is the scored result already in `results/`. The warehouse is opened read-only, so DuckDB itself refuses any write.
+Pick an interval and the page shows what the market did, what each rung said, and why they differ. Every modelled price on the page is the scored result already in `results/`. The warehouse is opened read-only, so DuckDB itself refuses any write.
 
 - **Interval view.** For each region, AEMO's price and every rung's price on one symmetric-log axis, so the size of an error is visible as distance. Below that:
   - **The supply stack** for a region or the whole NEM: offers cheapest first at their loss-adjusted prices, drawn at the capacity each rung could use. Rung 1 uses declared MAXAVAIL, rungs 2 and 3a AEMO's dispatch availability, and rungs 3b and 4 that availability within ramp limits. Demand and the local requirement are drawn on it, with a line for each rung's price.
   - **The invoked constraints**, and what rung 4 did with each: applied, or left out and why.
-  - **Interconnector flows**: AEMO's against rungs 3b and 4.
+  - **Interconnector flows**: AEMO's against rungs 3b and 4, re-solved for that interval.
 - **Day view.** One region over 288 intervals, AEMO's price against any rungs you tick. Click a point to open that interval.
 - **Episode buttons** for 31 January 2020, 12 and 26 June 2025, 22 January 2025 and 5 August 2024. Each lands on that day's largest rung 4 error, skipping administered or overridden prices.
 
 Times are AEMO's: interval ending, NEM time (AEST, UTC+10). AEMO's marginal values, LHS and calculated link limits appear on the page beside rung 4's treatment, marked as outcomes. No rung reads them.
 
-**Modelled flows are stored only for days that have been precomputed.** The harness keeps regional prices, not flows. `python -m nemsim.web.detail [YYYY-MM-DD ...]` re-runs rungs 3b and 4 on a day, as the harness does, about 30 seconds a day; with no dates it does the episode days. It compares every price it gets with the stored one. A few do not reproduce because the LP's price is degenerate there, and the page flags those intervals.
+**Rungs 3b and 4 are re-solved live for the interval on screen, to show their flows.** The harness keeps regional prices, not flows. Each click re-solves both with the unchanged rung classes: rung 4 takes about 0.1 s, and the whole interval view about 0.3 s. The page keeps showing the scored prices and compares each re-solved price with its scored one. Where they differ, the LP's price is degenerate at that interval, and the page says so beside the flows. `python -m nemsim.web.detail [YYYY-MM-DD ...]` runs the same check over whole days.
 
 ## Run it
 
@@ -190,6 +239,8 @@ python -m nemsim.select_months     # rank the decade's months by settled value a
 python -m nemsim.decade split      # the $300+ share either side of five-minute settlement, with and without the 2022 crisis
 python -m nemsim.add_month 2024-12 --delete-raw   # add one month: download, load, definitions, validate, delete zips on a pass
 python -m nemsim.spike_sample      # rungs 2 and 4 on the original ten months against the expanded seventeen
+python -m nemsim.ladder bounds     # reachable bounds for the seven spike months (the ten months' are already in results/)
+python -m nemsim.ladder report     # every rung on the ten, the seven and all seventeen months, on common region-intervals
 python -m nemsim.cases             # checks the research's test-case facts against the data
 python -m nemsim.evaluate r1 --set stage1     # score rung 1 on the research day
 python -m nemsim.evaluate r1 --set 2025-09    # or a whole month, about 12 s

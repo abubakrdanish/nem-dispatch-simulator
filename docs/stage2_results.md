@@ -2,6 +2,17 @@
 
 Built and run on 2026-11-08. Every figure here comes from the commands in the README, run against `warehouse/sim.duckdb`. Results files land in `results/` (gitignored).
 
+**Which sample each figure is on.** The document grew as months were added, so samples differ by section, and each table or figure names its own:
+
+- **Sections 4 and 5** open on the stage 1 research window (2025-09-01 04:05 to 2025-09-02 02:10, 1,330 region-intervals), then single months.
+- **Section 6** is on the first eight months loaded.
+- **Sections 7 to 10** are on the original ten months, unless a figure names a single month or day.
+- **Section 13** compares the ten with the seven spike months and all seventeen.
+- **Section 14** is single intervals and days.
+- **Section 15** has every rung on all three samples, each on the region-intervals all five rungs scored. It is the place to compare rungs across samples.
+
+The headline tables below are on the original ten months.
+
 **The question this project ends on: are spike prices in the bid stack?** Mostly, yes. In stage 4, offers alone could reach only 35.1% of region-intervals above $300: in two thirds of spikes no offer in the region was near the price. Adding the actual shadow prices of binding constraints raises that reachable bound to 48.8%. Adding the network carrying a neighbour's price across a link raises it to **75.3%** (95% CI 68.3–84.3), and to 85.3% outside June 2025 ([section 8.1](#81-the-reachable-bound-on-the-300-band)). The quarter left is concentrated in the June 2025 scarcity and in Tasmania.
 
 **The headline: accuracy by actual price band, ten months** (433,900 region-intervals, the same for every rung; settled value is price × demand × 5 minutes).
@@ -17,7 +28,7 @@ Built and run on 2026-11-08. Every figure here comes from the commands in the RE
 
 The cells are the share within $5. **June 2025 supplies 45% of the $300+ region-intervals and more than half of that band's settled value**, so every $300+ figure here is substantially a claim about one winter scarcity episode. Without June, rung 4 is 30.3% within $5 on $300+.
 
-**The accuracy curve.** Within $5, against what each kind of model could reach:
+**The accuracy curve, original ten months.** Within $5, against what each kind of model could reach (section 15 has the same on seventeen months):
 
 | Rung | Includes, exactly | Within $5 | Reachable bound | Share of the bound | Within $5, $300+ |
 |---|---|---:|---:|---:|---:|
@@ -37,7 +48,7 @@ The bounds are found knowing the answer, and each applies only to its own kind o
 
 **Short answer.** The harness reproduces the stage 1 research's four simple-model figures to within about one point.
 - **Rung 1** explains essentially none of the price. Wind and solar declare far more availability than the weather supplies, so its stack always clears below zero ([section 4](#why-it-clears-at-about-60-to-100)).
-- **Rung 2** caps them at AEMO's pre-dispatch forecast and reaches 20.3% within $5. It is accurate where money is not: 2.1% on the spike intervals that set 30% of settled value ([section 5](#5-rung-2-merit-order-each-offer-capped-at-aemos-dispatch-availability), [section 6](#6-fixing-the-measurement)).
+- **Rung 2** caps them at AEMO's forecast for the interval (UIGF, made before dispatch) and reaches 20.3% within $5. It is accurate where money is not: 2.1% on the spike intervals that set 30% of settled value ([section 5](#5-rung-2-merit-order-each-offer-capped-at-aemos-dispatch-availability), [section 6](#6-fixing-the-measurement)).
 - **Rung 3a**, told the actual flows, shows regional pricing can reach those intervals (17.3%).
 - **Rung 3b** solves the flows from standing ratings and losses, and does worse than no network at all, because without the constraints that couple them the links run far past their real limits ([section 7](#7-rung-3-as-two-halves)).
 - **Rung 4** adds the invoked constraint equations, from inputs only. It reaches **55.7%** within $5, **44.3%** weighted by settled value and **26.4%** on $300+, and beats the probe that used dispatch's own calculated limits. Its losses fall from 391 MW to 109 MW per interval against 97 MW actual, its overloaded link-intervals from 70% to 15%, and its parallel-path counter-flow by a third to two-fifths ([section 8](#8-rung-4-network-constraints)).
@@ -1101,3 +1112,150 @@ A first diagnosis, reading `MARGINALVALUE` to see which constraints bound, point
 **Observed at 19:55 on 12 June 2025, Tasmania.** AEMO cleared at $16,071 and rung 4 at $450. Of the 12 constraints binding in AEMO's solution, 11 are FCAS constraints with region terms that rung 4 cannot represent. One is `F_T+RREG_0050`, with a marginal value of $15,778. This is the energy–FCAS co-optimisation the AER describes for Tasmania that day (section 9.2), visible interval by interval.
 
 **Episode landing intervals** are each day's largest rung 4 error, skipping administered or overridden prices. The first version landed 31 January 2020 on an APC-flagged interval, where AEMO's price is not what the offers produced.
+
+---
+
+## 15. The whole ladder on each sample
+
+Every rung was scored on all seventeen months by 9 November. Rungs 1, 3a and 3b were run on the seven spike months for the frontend (stage 7) with the unchanged `nemsim.evaluate`, after the last change to any rung's code. Rungs 1, 2 and 3a reproduce their stored ten-month prices exactly when re-run. Rung 3b moves 0.6–1.35% of prices through LP degeneracy without changing any within-$5 outcome (section 14). So no rung needed re-running for this section. `python -m nemsim.ladder report` computes it, and `results/ladder.csv` has every cell.
+
+**Definitions.**
+- **Within $5:** the rung's regional price within $5/MWh of `DISPATCHPRICE.RRP` (pricing run).
+- **Within 10%:** within 10% of |RRP|.
+- **By settled value:** each region-interval weighted by |price × `TOTALDEMAND` ÷ 12|, at the 30-minute `TRADINGPRICE` for January 2020.
+- **Rows:** the region-intervals all five rungs scored. Suspended intervals, and intervals without loaded offers, are excluded.
+- **Bounds** (section 6.2, 7.2, 8.1) are found knowing actual prices, shadow prices and flows:
+  - rungs 1 and 2 are compared with the single-price oracle;
+  - rung 3a with the regional-stack bound;
+  - rung 4 with the network bound.
+
+  Rung 3b, a regional LP without constraints, has no bound of its own kind. For the seven spike months the bounds were computed with the same functions as the ten months' (`python -m nemsim.ladder bounds`), which reproduce the ten months' stored bound on November 2025 exactly.
+- **The 95% intervals** resample whole days (2,000 draws).
+- **No input to any rung is a dispatch outcome**, except rung 3a's net interchange and the scheduled load every rung holds at actual.
+
+**Original ten months** (433,900 region-intervals, the same for every rung):
+
+| Rung | Within $5 | Within 10% | Within $5 by settled value | Mean abs error | Share of own bound | $300+ within $5 (95% interval) | $300+ without June 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 0.1% | 0.1% | 0.1% | $255.9 | 0% of oracle (51.9%) | 0.0% (0.0–0.0) of 4,811 | 0.0% (0.0–0.0) |
+| 2 | 20.3% | 23.7% | 12.8% | $45.1 | 39% of oracle (51.9%) | 2.1% (1.0–3.0) of 4,811 | 0.5% (0.1–0.8) |
+| 3a | 47.3% | 48.6% | 30.1% | $46.5 | 65% of regional stack (72.8%) | 17.3% (14.5–19.9) of 4,811 | 18.0% (14.1–21.3) |
+| 3b | 16.1% | 11.6% | 3.9% | $57.4 | none of its own kind | 0.5% (0.0–1.3) of 4,811 | 0.2% (0.0–0.4) |
+| 4 | 55.7% | 59.3% | 44.3% | $19.5 | 58% of network (96.0%) | 26.4% (23.1–31.0) of 4,811 | 30.3% (26.3–34.4) |
+
+**Seven spike months** (307,440 region-intervals, the same for every rung):
+
+| Rung | Within $5 | Within 10% | Within $5 by settled value | Mean abs error | Share of own bound | $300+ within $5 (95% interval) | $300+ without June 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 0.3% | 0.3% | 0.1% | $291.6 | 1% of oracle (55.0%) | 0.0% (0.0–0.0) of 3,587 | same (no June) |
+| 2 | 22.1% | 29.7% | 14.4% | $53.1 | 40% of oracle (55.0%) | 3.0% (1.6–4.6) of 3,587 | same (no June) |
+| 3a | 44.8% | 49.7% | 29.4% | $64.6 | 65% of regional stack (68.8%) | 22.9% (16.8–28.6) of 3,587 | same (no June) |
+| 3b | 15.2% | 14.6% | 4.0% | $64.9 | none of its own kind | 0.3% (0.1–0.6) of 3,587 | same (no June) |
+| 4 | 67.5% | 74.9% | 47.3% | $22.1 | 70% of network (96.4%) | 32.9% (26.6–39.7) of 3,587 | same (no June) |
+
+**All seventeen months** (741,340 region-intervals, the same for every rung):
+
+| Rung | Within $5 | Within 10% | Within $5 by settled value | Mean abs error | Share of own bound | $300+ within $5 (95% interval) | $300+ without June 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 0.2% | 0.2% | 0.1% | $270.7 | 0% of oracle (53.2%) | 0.0% (0.0–0.0) of 8,398 | 0.0% (0.0–0.0) |
+| 2 | 21.0% | 26.2% | 13.6% | $48.4 | 40% of oracle (53.2%) | 2.5% (1.7–3.3) of 8,398 | 2.0% (1.1–2.9) |
+| 3a | 46.3% | 49.0% | 29.8% | $54.0 | 65% of regional stack (71.2%) | 19.7% (16.7–22.8) of 8,398 | 20.8% (16.8–24.5) |
+| 3b | 15.7% | 12.8% | 4.0% | $60.5 | none of its own kind | 0.4% (0.1–0.9) of 8,398 | 0.2% (0.1–0.4) |
+| 4 | 60.6% | 65.7% | 45.7% | $20.6 | 63% of network (96.2%) | 29.1% (25.7–33.3) of 8,398 | 31.8% (27.7–36.1) |
+
+**Rung 3b stays below rung 2 on every sample** (16.1% against 20.3%, 15.2% against 22.1%, 15.7% against 21.0%), and below it on $50–300 and $300+. It beats rung 2 in the negative and $0–50 bands on every sample, as it already did on the ten months. The mechanism measured in section 7.3 is unchanged.
+
+**By actual price band, within $5:**
+
+*Ten months:*
+
+| Band | Rung 1 | Rung 2 | Rung 3a | Rung 3b | Rung 4 |
+|---|---:|---:|---:|---:|---:|
+| a. negative | 0.6% | 37.6% | 64.8% | 41.3% | 77.6% |
+| b. $0-50 | 0.0% | 9.7% | 39.9% | 19.1% | 44.0% |
+| c. $50-300 | 0.0% | 18.6% | 44.9% | 7.8% | 53.2% |
+| d. $300+ | 0.0% | 2.1% | 17.3% | 0.5% | 26.4% |
+
+*Seven spike months:*
+
+| Band | Rung 1 | Rung 2 | Rung 3a | Rung 3b | Rung 4 |
+|---|---:|---:|---:|---:|---:|
+| a. negative | 1.0% | 29.4% | 55.7% | 25.4% | 77.2% |
+| b. $0-50 | 0.8% | 23.6% | 41.4% | 23.3% | 69.9% |
+| c. $50-300 | 0.0% | 20.5% | 43.7% | 10.9% | 65.3% |
+| d. $300+ | 0.0% | 3.0% | 22.9% | 0.3% | 32.9% |
+
+*Seventeen months:*
+
+| Band | Rung 1 | Rung 2 | Rung 3a | Rung 3b | Rung 4 |
+|---|---:|---:|---:|---:|---:|
+| a. negative | 0.7% | 34.7% | 61.6% | 35.6% | 77.4% |
+| b. $0-50 | 0.3% | 15.4% | 40.5% | 20.8% | 54.5% |
+| c. $50-300 | 0.0% | 19.4% | 44.4% | 9.1% | 58.5% |
+| d. $300+ | 0.0% | 2.5% | 19.7% | 0.4% | 29.1% |
+
+**By region, within $5, seventeen months:**
+
+| Region | Rung 1 | Rung 2 | Rung 3a | Rung 3b | Rung 4 |
+|---|---:|---:|---:|---:|---:|
+| NSW1 | 0.0% | 26.9% | 37.1% | 11.9% | 61.7% |
+| QLD1 | 0.0% | 24.9% | 50.7% | 11.0% | 67.2% |
+| SA1 | 0.4% | 18.9% | 34.5% | 13.4% | 60.3% |
+| TAS1 | 0.2% | 11.3% | 67.0% | 26.4% | 53.6% |
+| VIC1 | 0.3% | 23.3% | 42.1% | 16.0% | 60.1% |
+
+**By month, within $5** (the original ten and the seven, each on its own common rows):
+
+| Month | Rung 1 | Rung 2 | Rung 3a | Rung 3b | Rung 4 |
+|---|---:|---:|---:|---:|---:|
+| 2020-01 | 1.3% | 40.7% | 45.8% | 18.5% | 72.9% |
+| 2024-08 | 0.2% | 15.5% | 42.4% | 17.2% | 65.5% |
+| 2024-10 | 0.2% | 17.7% | 45.2% | 15.8% | 66.1% |
+| 2024-11 | 0.1% | 17.1% | 39.1% | 12.0% | 60.2% |
+| 2024-12 | 0.3% | 20.3% | 40.3% | 11.9% | 65.5% |
+| 2025-01 | 0.1% | 19.9% | 48.2% | 17.1% | 76.4% |
+| 2025-02 | 0.1% | 20.9% | 48.8% | 16.9% | 74.9% |
+| 2025-05 | 0.0% | 22.9% | 45.7% | 15.3% | 67.0% |
+| 2025-06 | 0.1% | 14.5% | 41.2% | 11.8% | 57.5% |
+| 2025-07 | 0.0% | 14.7% | 42.6% | 9.5% | 51.1% |
+| 2025-08 | 0.0% | 17.6% | 44.9% | 10.5% | 49.4% |
+| 2025-09 | 0.2% | 22.3% | 50.2% | 19.4% | 49.7% |
+| 2025-11 | 0.2% | 25.4% | 50.2% | 20.3% | 57.7% |
+| 2025-12 | 0.2% | 23.4% | 51.4% | 17.7% | 57.1% |
+| 2026-01 | 0.0% | 19.4% | 46.7% | 17.1% | 52.6% |
+| 2026-02 | 0.1% | 21.4% | 51.9% | 17.8% | 53.1% |
+| 2026-05 | 0.0% | 24.0% | 52.8% | 19.1% | 53.1% |
+
+**What the seven change.**
+- **Rung 4 rises:** 67.5% on the seven against 55.7% on the ten, and 70% of its network bound against 58%. The seven were chosen for spike value, and the AER records network limits behind the biggest day in each. That favours the network rung by construction, so this is not evidence of a better model.
+- **Rung 3a falls slightly:** 44.8% against 47.3%. Its share of its own bound is unchanged at 65%.
+- **On $300+, rungs 2, 3a and 4 are higher on the seven** (3.0% against 2.1%, 22.9% against 17.3%, 32.9% against 26.4%), and each one's day-resampled interval overlaps the ten months'. Rung 3b is lower (0.3% against 0.5%), and rung 1 is 0.0% on both.
+
+---
+
+## 16. The Basslink worked example, and the live re-solve
+
+**31 January 2020, 18:45, Victoria.**
+- **Observed:** AEMO cleared at $14,699, with Basslink at 445 MW into Victoria, at its export limit (444.99 MW). `DISPATCHINTERCONNECTORRES.EXPORTGENCONID` names the constraint that set the limit: `F_QNV++MG_R6`, an FCAS constraint with a Basslink term (factor −1), binding at a marginal value of $694. `T_V_NIL_BL1`, whose 2008 equation version cannot be fetched (section 13), was not binding: LHS 445, RHS 594.
+- **Measured, as scored:** rung 4 cleared Victoria at $13.53 with Basslink at 560 MW. It leaves out every constraint with FCAS terms, so nothing held Basslink below its 594 MW standing rating.
+- **Probe:** with Basslink's rating set to AEMO's flow for that interval, rung 4 clears Victoria at $14,700, and Murraylink moves to AEMO's −115 MW. At a 500 MW cap Victoria clears at $517.
+
+**The afternoon, 14:00 to 19:00.**
+- **Observed:** FCAS constraints set Basslink's export limit in 56 of 61 intervals: `F_QNV++MG_R6` in 36, `_R60` in 19 and `_R5` in 1. The other 5 were `DEFAULT`.
+- **Measured:** over the 50 Victorian region-intervals at $300 or more, rung 4 flows more over Basslink than AEMO did in all 50, and is within $5 in 8.
+- **Probe:** holding Basslink at AEMO's flow, interval by interval, gives 33 of 50. That fixes 26 of the 42 misses and breaks 1.
+
+**The live re-solve.** The frontend now re-solves rungs 3b and 4 for the interval on screen, with the unchanged rung classes fed by a one-interval `Window`. Rung 4 takes 80–100 ms and the whole interval view 0.27 s.
+- **What it is for:** to show the flows. The prices shown stay the scored ones.
+- **The flag:** each re-solved price is compared with its scored price, and the page flags any difference as a degenerate LP price.
+- **Tests:** a one-interval re-solve reproduces the harness's scored prices on the fixture, and a forced mismatch is flagged.
+
+**Rung 3b's flows are not unique even where its prices are (observed).** At 18:45 on 31 January 2020, the stage 7 precompute and the live re-solve gave identical rung 3b prices, but different flows:
+
+| Link | Precompute | Live re-solve |
+|---|---:|---:|
+| VIC1-NSW1 | −466 MW | −583 MW |
+| V-SA | +304 MW | −82 MW |
+| V-S-MNSP1 | −234 MW | +180 MW |
+
+Rung 4's flows were identical in both. *Inferred:* this is the parallel-path loop of section 7.3, which moves power around a loop at no change in cost. A price comparison cannot detect it, so the page states it beside rung 3b's flows.

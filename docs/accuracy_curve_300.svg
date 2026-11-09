@@ -17,7 +17,7 @@
 </style>
 <rect class="surface" width="760" height="466" rx="8"/>
 <text class="ink" x="56" y="30" font-size="16" font-weight="600">Where the money is: intervals above $300</text>
-<text class="ink2" x="56" y="50" font-size="12">Share within $5, region-intervals with an actual price of $300 or more: 1.1% of intervals, about 30% of settled value.</text>
+<text class="ink2" x="56" y="50" font-size="12">Within $5, actual price $300 or more. The original 10 months: 1.1% of their region-intervals, 30% of their settled value.</text>
 <line class="axis" x1="56" x2="736" y1="374.0" y2="374.0" stroke-width="1"/>
 <text class="muted" x="48" y="378.0" font-size="11" text-anchor="end">0%</text>
 <line class="grid" x1="56" x2="736" y1="299.5" y2="299.5" stroke-width="1"/>
