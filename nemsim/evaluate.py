@@ -38,7 +38,8 @@ def run(rung: Rung, set_name: str, target: str, con: duckdb.DuckDBPyConnection) 
     text = report(result, rung, set_name, time.monotonic() - start)
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
-    stem = f"{set_name}__{rung.key}__{target}"
+    from nemsim import inputs
+    stem = f"{set_name}__{rung.key}__{target}" + ("__fixedbids" if inputs.FIXED_BIDS else "")
     result.to_csv(out / f"{stem}.csv", index=False)
     if getattr(rung, "coverage", None):   # rung 4: which invoked constraints were applied, and why not
         (out / f"{stem}__coverage.json").write_text(json.dumps(dict(rung.coverage), indent=1))
@@ -51,7 +52,12 @@ def main() -> None:
     parser.add_argument("rungs", nargs="+", choices=sorted(LADDER))
     parser.add_argument("--set", default="stage1", choices=sorted(SETS))
     parser.add_argument("--target", default="rrp", choices=["rrp", "rop"])
+    parser.add_argument("--fixed-bids", action="store_true",
+                        help="hold units with a fixed bid at FIXEDLOAD (stage 8); results get the suffix __fixedbids")
     args = parser.parse_args()
+    if args.fixed_bids:
+        from nemsim import inputs
+        inputs.FIXED_BIDS = True
     with duckdb.connect(str(path("warehouse")), read_only=True) as con:
         for key in args.rungs:
             print(run(LADDER[key], args.set, args.target, con)[1])

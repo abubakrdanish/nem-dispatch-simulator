@@ -124,3 +124,15 @@ def test_summary_says_when_nothing_is_happening_and_when_prices_were_administere
     assert "Nothing much happening here" in data.summary(quiet, {"rows": []}, {"rows": []}, "NSW1")
     apc = [_region("SA1", 300.0, 5000.0, apc_flag=True), _region("VIC1", 80.0, 80.0)]
     assert "administered" in data.summary(apc, {"rows": []}, {"rows": []}, "SA1")
+
+
+def test_link_sweep_reads_rung_4_flows_for_hyphenated_links():
+    """Link names contain hyphens; the sweep must still find rung 4's flow on each (a bug it once had)."""
+    from nemsim.link_sweep import ORDER, classify_misses
+    t = pd.Timestamp("2020-01-31 18:45")
+    out = pd.DataFrame([{"interval": t, "region": "VIC1", "expensive_miss": True, "degenerate": False,
+                         "r4flow_T-V-MNSP1": 560.0, "r4flow_V-SA": 0.0}])
+    lim = pd.DataFrame([{"interval": t, "region": "VIC1", "link": "T-V-MNSP1", "aemo_flow": 445.0, "into_sign": 1,
+                         "setter": "F_QNV++MG_R6", "setter_kind": "FCAS"}])
+    m = classify_misses(out, lim)
+    assert m.cause.iloc[0] == ORDER[1] and m.links.iloc[0] == "T-V-MNSP1" and m.over_mw.iloc[0] == pytest.approx(115)

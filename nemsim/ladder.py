@@ -64,15 +64,16 @@ def _bound(name: str, col: str) -> pd.DataFrame:
     return b[["interval", "region", col]].drop_duplicates(["interval", "region"])
 
 
-def load(key: str, months) -> pd.DataFrame:
-    r = pd.concat([pd.read_csv(R / f"{m}__{key}__rrp.csv", low_memory=False, parse_dates=["interval"]).assign(month=m)
+def load(key: str, months, suffix: str = "") -> pd.DataFrame:
+    """suffix "__fixedbids" reads the results re-scored with fixed bids applied (nemsim/fixed_bids.py)."""
+    r = pd.concat([pd.read_csv(R / f"{m}__{key}__rrp{suffix}.csv", low_memory=False, parse_dates=["interval"]).assign(month=m)
                    for m in months])
     return r[r.excluded.isna() & r.price.notna()]
 
 
-def frame(months) -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
+def frame(months, suffix: str = "") -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
     """Each rung on the region-intervals all five scored, plus the bounds for those rows."""
-    frames = {k: load(k, months) for k in RUNGS}
+    frames = {k: load(k, months, suffix) for k in RUNGS}
     common = frames["r1"][["interval", "region"]]
     for k in RUNGS[1:]:
         common = common.merge(frames[k][["interval", "region"]])

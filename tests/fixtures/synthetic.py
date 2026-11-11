@@ -46,6 +46,7 @@ def build(target: Path) -> Path:
         for t in INTERVALS[:2]:
             con.execute("insert into raw.bidperoffer_d values ('2030-01-01', ?, 'ENERGY', 'GEN', ?, ?, "
                         + ", ".join("?" * 10) + ")", [duid, t, maxavail, *mw])
+    con.execute("alter table raw.bidperoffer_d add column fixedload double")   # no fixed bids unless a test sets one
     # Dispatch availability: WIND1's forecast (UIGF) is 50 MW against 150 MW declared; the others
     # are at their MAXAVAIL, as scheduled units always are in the real data.
     con.execute("""create table raw.dispatchload (settlementdate timestamp, duid varchar, intervention integer,

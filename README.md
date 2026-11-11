@@ -8,13 +8,32 @@ How much of the actual clearing price in Australia's National Electricity Market
 
 **This genre is not new, and this project builds on it.**
 
-- **[nempy](https://github.com/UNSW-CEEM/nempy)** (UNSW CEEM, BSD-3-Clause) is an open model of the NEM dispatch procedure that reproduces AEMO's prices closely: 89.5% of region-intervals within $5 in N. Eschenbaum, *Shared Bidding Algorithms and Competition*, arXiv:2607.13002 v3, Appendix B, on a different sample from this one. It is the reference implementation, and this project does not compete with it.
+- **[nempy](https://github.com/UNSW-CEEM/nempy)** (UNSW CEEM, BSD-3-Clause) is an open model of the NEM dispatch procedure, and the reference implementation; this project does not compete with it.
+  - **Its accuracy, measured by Eschenbaum** (*Shared Bidding Algorithms and Competition: Evidence from Electricity Markets*, arXiv:2607.13002 v3, Appendix B.6, Table B14): 89.5% within $5 of AEMO's published price, 72.5% within $1, 97.2% within $20. That is on 3,956 interval-region pairs, in four regions (no Tasmania).
+  - **It is fed "the same MMS-DB and NEMDE-XML inputs that AEMO uses at clearing time"**: NEMDE's own casefiles, every constraint included. This project rebuilds constraints from public definition tables instead, so the two figures are not comparable.
+  - **It too degrades at the top.** Above $1,000/MWh (66 pairs) its within-$20 share falls to 72.7%. Eschenbaum attributes this to price-cap intervals "where AEMO's full constraint set is hardest to reproduce from public inputs".
 - **N. Gorman, I. MacGill and A. Bruce, "Re-dispatch simplification analysis", *Applied Energy* 365 (2024)**, from the same group, asks almost this project's question, with a better method. Starting from a detailed NEM dispatch model, it removes one simplification at a time. It finds that neglecting FCAS and ramp rates has a relatively small effect, that simplifying bidding has a large one, and that **neglecting network and security constraints mainly affects peak prices.** It also names the trap in building a model up from a simple base, which is what this project does: a better fit may only mean errors now cancel. They call this confirmation holism. *I have read the abstract only; the paper is paywalled.*
+- **[susantoj/NEM_constraints](https://github.com/susantoj/NEM_constraints)** (MIT; now served under `ampere-ventures`) is open "Python functions for wrangling public NEMDE constraint equation formulations": finding a constraint, and its left- and right-hand-side terms. This project's rebuild of constraint equations (rung 4) is its own, from the MMS definition tables, but it is not the first open tool for public constraint equations.
 - **[akxen/nemde](https://github.com/akxen/nemde)** rebuilds NEMDE from AEMO's per-interval casefiles, FCAS and fast start included, and backtests against NEMDE's own solution. It reports no aggregate accuracy figure: its README and releases give per-casefile pass/fail checks, not a share of intervals matched. It also starts from NEMDE's full casefile input, every constraint and initial condition NEMDE itself saw, so its problem is not this project's and no figure of its would be comparable.
 
 **What this project inherits:** the question, the answer that network constraints carry the price spikes, and the warning about building up from a simple base. Its ladder builds up from a merit order anyway, so read each rung's gain as a gain *from the rung below*, not as what that mechanism is worth on its own. Rung 3b below is a clean case of the trap.
 
-**The cut I have not found reported:** accuracy **weighted by settled dollars and broken out by price band**, at 5-minute resolution against AEMO's prices, with every rung scored on the same region-intervals; **reachable bounds** saying how much of each band any model of a given kind could reach; and a **negative rung** with its mechanism measured. "Not found" rests on a handful of web searches and one central paper read only in abstract. If that paper reports a band or dollar-weighted decomposition, this part is a replication. [Section 9.3](docs/stage2_results.md#93-the-literature) has what was read and what was not.
+**How it answers the confirmation-holism objection, and where it cannot.** Gorman, MacGill and Bruce's objection is that a better fit after adding a layer may only mean errors now cancel. Four things here are checks against that, not a proof:
+
+1. **Every input is shown to be set before dispatch,** so no rung's gain can come from being told the answer. A test enforces it.
+2. **Each layer's mechanism is measured, not inferred from fit.** Rung 4's constraint equations rebuild AEMO's reported left-hand side within 1 MW. Rung 3b's failure is traced to links run past their limits and parallel paths. The probes isolate single channels, for example Basslink held at AEMO's flow turning a $13.53 price into AEMO's $14,700.
+3. **Each rung is compared with a bound for its own kind of model,** so a gain is read against what that kind could reach.
+4. **The probes report what they break as well as what they fix.**
+
+What remains open is that errors inside rung 4 could still offset each other. The dropped constraint terms tighten its constraints in NSW (section 9.1 of the results) while other errors push the other way, and nothing here rules out that the net is flattering.
+
+**Completeness, in the sense of Fudenberg, Kleinberg, Liang and Mullainathan** ("Measuring the Completeness of Economic Models", *Journal of Political Economy* 130(4), 956–990, 2022, doi:10.1086/718371). They define completeness as the reduction in prediction error a model achieves over a naive rule, divided by the achievable reduction.
+- **Applied to the within-$5 share:** naive is rung 1, a bare merit order, and achievable is the full-network bound. On all seventeen months rung 4's completeness is **(60.6 − 0.2) / (96.2 − 0.2) = 63%** overall, and **(29.1 − 0.0) / (80.7 − 0.0) = 36%** on the $300+ band.
+- **This bound is not their irreducible error.** It is an oracle found knowing outcomes, and restricted to explanations through offers, shadow prices and the network, so a fuller model could in principle exceed it. Read these as completeness against offer-based explanation, not against all possible predictors.
+
+**The cut I have not found reported:** accuracy **weighted by settled dollars**, at 5-minute resolution against AEMO's prices, with every rung of a ladder scored on the same region-intervals. Also **reachable bounds**, saying how much of each price band any model of a given kind could reach, and a **negative rung** with its mechanism measured.
+- **Breaking accuracy out by actual price band is not new.** Eschenbaum's Table B14, Panel D, does it for nempy.
+- **"Not found" rests on a few web searches and one central paper read only in abstract.** If that paper reports a dollar-weighted decomposition, this part is a replication. [Section 9.3](docs/stage2_results.md#93-the-literature) has what was read and what was not.
 
 ## The finding, as it stands
 
@@ -120,7 +139,13 @@ One interval shows where the network rung's remaining error comes from. All time
   - Over the afternoon's 50 Victorian region-intervals at $300 or more, rung 4 sends more over Basslink than AEMO did in all 50, and is within $5 of AEMO's price in 8.
   - Held at AEMO's Basslink flow, it is within $5 in 33: 26 of the 42 misses are fixed, and one interval that was right goes wrong.
 
-So the largest single error in the transmission-event month is not the transmission event, which rung 4 reproduces (SA at the cap after the islanding, below). It is the energy–FCAS coupling of a link that rung 4 has no way to represent. It is the same mechanism the AER names for Tasmania on 12 June 2025. Modelling FCAS, the first open item in the results document ([section 12](docs/stage2_results.md#12-open-items)), is what would address it. To see it, open the interval in the local frontend: [`python -m nemsim.web`](#see-it-the-local-frontend), then `?t=2020-01-31T18:45&region=VIC1`.
+**Across all seventeen months the mechanism is real but not dominant** (`python -m nemsim.link_sweep run`, then `report`; [section 17](docs/stage2_results.md#17-does-the-basslink-finding-generalise)). An expensive miss here is a region-interval at $300 or more that rung 4 misses by more than $5; there are 5,950.
+- **11.1% of them by count, 22.4% by value at stake,** are an interconnector into the region held at a limit AEMO records as set by an FCAS constraint, which rung 4 over-flows. Victoria accounts for most: 47% of its misses, nearly all Basslink.
+- **Probe, using outcomes:** holding just those links at AEMO's flow lifts rung 4 on the $300+ band from 29.1% to 32.5% within $5, and weighted by value from 45.7% to 47.4%. It breaks 17 expensive region-intervals that were right.
+- **Holding every link at AEMO's flow** lifts the band to 33.5% but breaks 371.
+- **The rest of the misses lie elsewhere:** 42% have no link limiting imports into the region at all.
+
+So the largest single error in the transmission-event month is not the transmission event, which rung 4 reproduces (SA at the cap after the islanding, below). It is the energy–FCAS coupling of a link that rung 4 has no way to represent. It is the same mechanism the AER names for Tasmania on 12 June 2025. Modelling FCAS would address it, and was measured instead of built: see [where the ladder stops](#where-the-ladder-stops-and-why). To see it, open the interval in the local frontend: [`python -m nemsim.web`](#see-it-the-local-frontend), then `?t=2020-01-31T18:45&region=VIC1`.
 
 ### Seven spike months, added on purpose
 
@@ -157,6 +182,59 @@ Rung 2 gets 2.1% of the original ten's $300+ region-intervals within $5, and 2.5
 ### Are spike prices in the bid stack?
 
 Above $300, a region's price is often nowhere near any offer in that region. On the original ten months, offers alone could produce a price within $5 of the actual in only **35.1%** of spike region-intervals. A unit's offer also reaches its region's price through the shadow prices of the binding constraints it sits in; adding those raises the reachable share to **48.8%**. Adding the network carrying a neighbour's price across an interconnector raises it to **75.3%** (95% interval from resampling whole days, 68.3–84.3). On all seventeen months the three steps are 38.7%, 53.9% and 80.7%. So spike prices are mostly in the bids, reached through constraints and the network. In the ten months, the quarter left is in June 2025's scarcity and in Tasmania, where what sets the price (battery state of charge, rebidding, FCAS co-optimisation) is exactly what no rung here models. These bounds use actual outcomes, so they say what a model of each kind *could* reach, not what any model did.
+
+## Where the ladder stops, and why
+
+**The ladder stops at rung 4, by measurement, not for lack of time.** The next rung would have been FCAS co-optimisation. FCAS acts on energy prices through two channels, and both were measured with probes: re-solves of rung 4 that hand it a piece of AEMO's dispatch, an outcome. A probe sizes a prize; it is not a rung.
+
+**The two channels, on all seventeen months.** The population is the region-intervals at $300 or more that rung 4 misses by more than $5, on the rows all five rungs scored, starting from rung 4 at 29.3% within $5 on that band:
+
+| Probe | What it hands rung 4 | $300+ within $5 | Within $5 by value |
+|---|---|---:|---:|
+| Rung 4 (fixed bids applied, below) | nothing | 29.3% | 45.9% |
+| Link channel | FCAS-limited interconnectors held at AEMO's flow | 32.5% | 47.4% |
+| Unit channel | units whose FCAS used up their headroom held at AEMO's energy | 30.3% | 46.6% |
+| **Both** | **both of the above** | **33.7%** | **48.3%** |
+| Every FCAS-enabled unit held (as first proposed) | about 71 units an interval at AEMO's energy | 29.1% | 46.0% |
+
+The link-channel row was measured before the fixed-bid correction; every other row after it.
+
+- **A rung 5 that matched AEMO's FCAS outcomes perfectly** would have taken the spike band from about 29% to about 34%, and value-weighted accuracy from about 46% to 48%. It would leave overall accuracy unchanged, at 60.6–60.8% depending on the probe.
+- **A real rung 5 would recover less,** because it would have to find those flows and dispatches itself.
+- **It would also cost about 2.6 GB of re-downloads:** FCAS offers were filtered out at load, and every bid zip has since been deleted.
+- **Holding every FCAS-enabled unit is not a better probe but a worse one.** It fixes 445 misses and breaks 457 spike region-intervals that were right, because it pins most of the stack at AEMO's dispatch inside a model that does not share AEMO's other constraints.
+- **Tasmania, where the AER names energy–FCAS co-optimisation,** rises from 21.5% to 25.1% on the spike band with both channels handed over. Most of its error is not FCAS either.
+
+**Fixed bids were applied, and they turn out to matter very little.**
+- **What they are.** A generating unit can submit a fixed bid (`BIDPEROFFER_D.FIXEDLOAD`), and dispatch then holds it at exactly that MW. AEMO represents each one as a constraint named `$` plus the unit's DUID.
+- **Measured in the data:** in 99.1% of the 198,265 invoked `$` constraint-intervals, the right-hand side equals the named unit's `FIXEDLOAD`. In 99.7% of offers with a fixed bid, the `$` constraint is invoked.
+- **It is an input.** The offer carrying it was made before the interval in every case but one, an offer at 13:00:24 for the interval starting 13:00 on 3 December 2024, which is still the bid in force.
+- **Every rung had ignored it.** Applying it is a correction to how offers are read, not a new rung.
+- **Before and after, all seventeen months, on the matched rows:**
+
+  | Rung | Within $5 | $300+ | By value |
+  |---|---|---|---|
+  | 1 | 0.2% → 0.2% | | |
+  | 2 | 21.0% → 21.1% | 2.5% → 2.5% | |
+  | 3a | 46.3% → 46.4% | 19.7% → 19.7% | |
+  | 3b | 15.7% → 15.7% | 0.4% → 0.4% | |
+  | 4 | 60.6% → 60.7% | 29.1% → 29.3% | 45.7% → 45.9% |
+
+- **Of the 852 rung 4 spike misses with a fixed-bid constraint binding in the same region, it fixes 17.** In most of them the unit's offer already amounted to its fixed MW at the floor price, so rung 4 had dispatched it there anyway. A binding `$` constraint in AEMO's solution, even at a marginal value in the millions, did not mean rung 4 had dispatched that unit differently.
+- **The tables above this section are from before the correction.** No figure in them moves by more than 0.2 points (`results/fixed_bids_ladder.csv`; section 18 of the results).
+
+**What stays unexplained.** On the spike band rung 4 misses about 70% of region-intervals, and handing it both FCAS channels still leaves about 66%. What sits there:
+
+- **Unmodelled, named by the AER on the episode days:**
+  - battery state of charge (no rung models it; battery charging is held at actual);
+  - plant failing within the interval (units are capped at availability as it stood when dispatch ran);
+  - the unit channel of FCAS beyond what the probe measured.
+- **Rebidding is not on this list as a gap.** The final-offer tables are the bids in force at dispatch, rebids included, so they are already in every rung's inputs.
+- **Measured but unexplained:**
+  - **42% of spike misses have no interconnector limiting imports into the region at all.** These are local scarcity and local constraints.
+  - **7.7% are links over-flowed past a limit set by an energy constraint that rung 4 does apply.** That should not happen. Dropped unit terms and constraints violated at their penalty price are untested candidates. It stays open.
+  - **About 4–5% of probed intervals have a degenerate LP price,** where a range of prices satisfies rung 4 and the scored one is the solver's pick.
+- **Outside the sample entirely:** March 2021 to July 2024, 62% of the decade's spike value.
 
 ## Why the numbers can be trusted, and where they cannot
 
@@ -243,6 +321,9 @@ python -m nemsim.add_month 2024-12 --delete-raw   # add one month: download, loa
 python -m nemsim.spike_sample      # rungs 2 and 4 on the original ten months against the expanded seventeen
 python -m nemsim.ladder bounds     # reachable bounds for the seven spike months (the ten months' are already in results/)
 python -m nemsim.ladder report     # every rung on the ten, the seven and all seventeen months, on common region-intervals
+python -m nemsim.link_sweep run    # FCAS link channel: which expensive misses are links held by FCAS constraints (then: report)
+python -m nemsim.fixed_bids run    # re-score every rung with fixed bids applied, where they change an offer
+python -m nemsim.unit_probe run    # FCAS unit channel: probes holding FCAS-crowded units at actual energy (then: report)
 python -m nemsim.cases             # checks the research's test-case facts against the data
 python -m nemsim.evaluate r1 --set stage1     # score rung 1 on the research day
 python -m nemsim.evaluate r1 --set 2025-09    # or a whole month, about 12 s

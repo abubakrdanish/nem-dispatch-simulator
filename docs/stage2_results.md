@@ -1012,7 +1012,7 @@ All of these are now corrected in place in [stage1_research.md](stage1_research.
 
 ## 12. Open items
 
-- **FCAS co-optimisation, now including the "region-term" constraints.** Every region term in `SPDREGIONCONSTRAINT` is an FCAS bid type, so the 15% of invoked constraint-intervals rung 4 leaves out for region terms are FCAS requirement constraints: 15.7 million, 1.28 million of them binding. Adding them means modelling FCAS. The AER attributes Tasmania's June spikes to energy–FCAS co-optimisation, and up to 77 MW of 12 June's marginal capacity to units' joint energy-and-FCAS limits ([section 9.2](#92-what-june-2025-was)).
+- **[Decided in section 18: not built]** **FCAS co-optimisation, now including the "region-term" constraints.** Every region term in `SPDREGIONCONSTRAINT` is an FCAS bid type, so the 15% of invoked constraint-intervals rung 4 leaves out for region terms are FCAS requirement constraints: 15.7 million, 1.28 million of them binding. Adding them means modelling FCAS. The AER attributes Tasmania's June spikes to energy–FCAS co-optimisation, and up to 77 MW of 12 June's marginal capacity to units' joint energy-and-FCAS limits ([section 9.2](#92-what-june-2025-was)).
 - **Batteries' state of charge.** No rung models it, and battery charging is held at actual. The AER names batteries running out of charge as a price-setter on both June spike days.
 - **The dropped constraint terms** bias rung 4's constraints tighter in NSW and in low-price intervals ([section 9.1](#91-the-dropped-constraint-terms)). Non-scheduled units' start-of-interval SCADA is a pre-dispatch source not yet tested as a stand-in.
 - **NEMDE casefiles** (`akxen/nemde`'s input route) hold each interval's full NEMDE input, constraint terms included, and NEMDE's own solution. They would replace the definition-table reconstruction and give FCAS and MNSP inputs directly. Their size has not been checked.
@@ -1259,3 +1259,225 @@ Every rung was scored on all seventeen months by 9 November. Rungs 1, 3a and 3b 
 | V-S-MNSP1 | −234 MW | +180 MW |
 
 Rung 4's flows were identical in both. *Inferred:* this is the parallel-path loop of section 7.3, which moves power around a loop at no change in cost. A price comparison cannot detect it, so the page states it beside rung 3b's flows.
+
+---
+
+## 17. Does the Basslink finding generalise?
+
+`python -m nemsim.link_sweep run` (7.4 minutes, three processes, read-only), then `report`. It is a diagnostic with a probe in it, never a rung. Files: `results/link_sweep*.csv`.
+
+### Definitions
+
+- **Expensive miss:** a region-interval in the seventeen months, on the rows all five rungs scored (section 15), with `DISPATCHPRICE.RRP` (pricing run) at $300 or more and rung 4's scored price more than $5 away. There are **5,950**, in 3,585 intervals on 322 days.
+- **Import-limited into region R:** a link touching R whose AEMO flow sits within 1 MW of the bound that stops more power reaching R. That is `EXPORTLIMIT` if R is the link's second region; if R is its first, it is `IMPORTLIMIT`, which is a signed lower bound on the flow.
+- **The limit's setter** is AEMO's `EXPORTGENCONID` or `IMPORTGENCONID`, classified from the definition tables of the version invoked that interval:
+  - **FCAS:** region terms, or a non-ENERGY unit term;
+  - **energy:** only energy unit terms and link terms;
+  - **no definition:** the version is not in the tables;
+  - **own limit:** `DEFAULT`;
+  - **other.**
+- **Over-flowed:** rung 4, re-solved for the interval exactly as scored, carries more than 5 MW more towards R than AEMO did.
+- **Degenerate, set aside:** an interval whose re-solve does not reproduce the scored prices to the cent. That is 4.9% of probed intervals, holding 213 misses. This keeps out any flow difference the scored price did not come from.
+- **Each miss gets one cause,** in this priority:
+  1. degenerate;
+  2. FCAS-limited link, over-flowed;
+  3. energy-limited link, over-flowed;
+  4. own-limit link, over-flowed;
+  5. no-definition link, over-flowed;
+  6. import-limited, not over-flowed;
+  7. no import limit.
+- **Inputs:** AEMO's flows, limits, limit setters and marginal values are all outcomes, read only to explain misses.
+
+### The sweep (observed and measured)
+
+| Cause | Misses | Share | Share of the misses' value at stake |
+|---|---:|---:|---:|
+| FCAS-limited link, over-flowed | 658 | **11.1%** | **22.4%** |
+| Energy-limited link, over-flowed | 458 | 7.7% | 8.0% |
+| Own-limit or no-definition link, over-flowed | 0 | 0% | 0% |
+| Import-limited, not over-flowed | 2,108 | 35.4% | 33.2% |
+| No link limiting imports | 2,513 | 42.2% | 29.5% |
+| Degenerate (set aside) | 213 | 3.6% | 7.0% |
+
+**By region,** the FCAS-limited share is:
+
+| Region | FCAS-limited share of its misses |
+|---|---:|
+| Victoria | **46.9%** (465 of 992) |
+| Tasmania | 6.5% |
+| NSW | 6.4% |
+| South Australia | 2.8% |
+| Queensland | 1.0% |
+
+**By link** (FCAS-limited misses): Basslink 460, Heywood 119, QNI 91, Terranora 8.
+
+**By month,** the share ranges from 0% (2025-12, 2026-01, 2026-02, 2026-05) to 40.0% (2020-01). It is 11.1% in June 2025, the month with the most misses.
+
+**Episode days against the rest:**
+
+| Day | FCAS-limited misses |
+|---|---:|
+| 31 Jan 2020 | 49 of 105 |
+| 12 Jun 2025 | 50 of 326 |
+| 26 Jun 2025 | 30 of 414 |
+| 22 Jan 2025 | 0 of 30 |
+| 5 Aug 2024 | 44 of 379 |
+| **All other days** | **485 of 4,696 (10.3%)** |
+
+So the 31 January afternoon is the extreme of the sample, not its typical case.
+
+Over-flows are modest: median 70 MW, interquartile range 33–106 MW. Among all import-limited expensive misses, AEMO records an energy constraint as the limit's setter in 4,726 link-cases and an FCAS one in 1,117.
+
+### The probe (uses outcomes: the size of the prize, not a rung)
+
+Each probed interval is re-solved by rung 4 with links held at AEMO's flows, and scored on all five regions. Degenerate intervals are excluded.
+
+| Probe | Expensive misses fixed (of 5,737) | Expensive region-intervals newly broken | All region-intervals: fixed / newly broken | Rung 4, $300+ within $5 (day-resampled 95%) | Rung 4, within $5 by value |
+|---|---:|---:|---:|---:|---:|
+| As scored | | | | 29.1% (25.7–33.3) | 45.7% |
+| FCAS-limited links held | 298 | 17 | 490 / 97 | **32.5%** (29.2–36.5) | **47.4%** |
+| Every link held | 737 | 371 | 2,613 / 1,786 | 33.5% (30.0–37.7) | 48.8% |
+
+- **Fixing the FCAS-limited link fixes only part of those misses.** Of the 658 such misses, holding the link fixes 185 (28%). The rest stay wrong for other reasons.
+- **Holding every link at AEMO's flow is not a clean improvement.** It breaks almost as many region-intervals as it fixes outside the spike band. Rung 4's prices are tuned to its own flows, so AEMO's flows dropped into rung 4's model do not reproduce AEMO's prices.
+- **Overall within $5 does not move:** 60.6% to 60.7% under either probe.
+
+### The parts no rung built this way can reach
+
+- **The three 2008 definitions barely figure.** No expensive miss has its link limit set by a no-definition constraint. Among the binding constraints in the miss intervals, the 2008 versions appear twice (`SVML_000`).
+- **The `$`-prefixed unit constraints figure far more, but they are not a ceiling.** These are constraints such as `$BLOWERNG` and `$STAN-1` that `DISPATCHCONSTRAINT` reports with no equation version at all (null effective date), so the definition tables hold nothing for them. They bind in 2,785 constraint-intervals within the miss intervals, mostly in Queensland and NSW, sometimes at marginal values of $6–8 million, and 852 expensive misses (14.3%) have one binding in the same region. **[Corrected in section 18]** This section called them a hard ceiling. They are fixed bids: an input, now applied to every rung. Applying them fixes 17 of those 852 misses.
+- **The 17% of invoked constraint-intervals rung 4 skips is mostly FCAS** (region terms, 14.3% on seventeen months). That part is not a hard ceiling: it is exactly what an FCAS co-optimisation rung would add.
+
+### Tasmania
+
+Tasmania is the worst region on the $300+ band: 21.4% within $5 on seventeen months, 838 spike region-intervals. Of its 659 expensive misses:
+
+| Cause | Misses |
+|---|---:|
+| No link limiting imports | 437 |
+| Import-limited, not over-flowed | 164 |
+| FCAS-limited link, over-flowed | 43 |
+| Degenerate | 15 |
+
+Holding FCAS-limited links fixes 17 and breaks 5; holding every link fixes 43 and breaks 35. **Tasmania's spike error is not a link problem.** The AER's account of June 2025, energy–FCAS co-optimisation at the units, operates on units. This sweep does not measure that.
+
+### What it means for rung 5
+
+- **The link channel of FCAS is worth about three points on the spike band and under two weighted by value,** at most. The probe bound is 29.1% → 32.5% on $300+ and 45.7% → 47.4% by value, and nothing on the headline. It is a probe that hands rung 4 AEMO's exact flows, so a rung that had to find those flows itself would recover less.
+- **That agrees with the three sources suggesting FCAS will not move the headline.** It also explains the two episodes where it seemed to dominate: they are the extremes. On 31 January 2020 the mechanism covers 47% of the day's misses, and on every other day 10.3%.
+- **The unit channel is unmeasured.** That is energy and FCAS competing for the same unit's capacity, which the AER names for Tasmania. A rung 5 that co-optimises FCAS fully would act on both channels, and only the first is bounded here.
+- **The cost is concrete.** FCAS offers were filtered out at load (`BIDTYPE = 'ENERGY'`), and every bid zip has since been deleted. A rung 5 needs all seventeen months of bid files re-downloaded, about 2.6 GB, over the 1 GB line that needs agreement. It also needs the FCAS requirement constraints rung 4 now skips.
+- **Verdict: optional.** Built for the link channel alone, it is worth a few points on the spike band, not the headline. Its case rests on the unit channel, so measure that first, cheaply: a probe that holds FCAS-enabled units' energy at actual, which needs no new data.
+- **The larger unexplained blocks** are 42% of misses with no link limiting imports, and 14% beside a binding `$` constraint with no published equation.
+
+---
+
+## 18. Fixed bids, the unit channel of FCAS, and where the ladder stops
+
+### 18.1 The `$` constraints are fixed bids, and fixed bids are an input
+
+**The claim.** You reported that AEMO's Constraint Naming Guidelines, section 4.1, reserve the `$` prefix for constraints "automatically created when a generating unit submits a fixed bid". **That document could not be read here:** aemo.com.au and the Internet Archive both refuse automated fetches. The claim is therefore tested against the data, not cited.
+
+**Measured, on every interval of the seventeen months** (pricing run):
+
+| Test | Result |
+|---|---|
+| `$` constraint-intervals invoked | 198,265 |
+| …where the unit named after the `$` has `BIDPEROFFER_D.FIXEDLOAD > 0` and the constraint's RHS equals that `FIXEDLOAD` exactly | 196,460 (99.1%) |
+| …all the rest | have negative right-hand sides: scheduled loads' fixed bids (pumping, charging) |
+| Offers with `FIXEDLOAD > 0` | 197,138 |
+| …that have the matching `$` constraint invoked | 196,460 (99.7%) |
+| The offer carrying the fixed bid was made before the interval began | 197,995 of 197,996 |
+
+The one exception is `$CPP_4`'s 414 MW fixed bid, offered at 13:00:24 for the interval 13:00–13:05 on 3 December 2024. It is still the bid in force in AEMO's final-offer table, so it is still an input.
+
+**The field survived ingest.** `FIXEDLOAD` was loaded with every energy offer, so nothing was downloaded.
+
+### 18.2 Applying them: a correction, not a rung
+
+A fixed bid is part of the participant's offer, and every rung's definition starts from final energy offers. Ignoring `FIXEDLOAD` was an input-reading omission shared by all five rungs, not a missing mechanism, so it is applied as a correction to how offers are read.
+- **How:** a unit with `FIXEDLOAD > 0` is offered as one band of exactly that MW at the −$1,000 floor, the floor throughout the sample (`nemsim/inputs.py`, `FIXED_BIDS`). Every rung then takes it as a price-taker.
+- **Scheduled loads' fixed bids need nothing:** every rung holds scheduled load at actual.
+
+**Re-scored where it changes something.** In 140,916 of the 197,138 fixed-bid offers, the unit's own offer already amounted to "FIXEDLOAD MW at the floor": its MAXAVAIL is at most the fixed MW, and its floor-priced bands cover it. Only the 43,652 intervals where some unit's offer changes were re-scored, for all five rungs, about 40 minutes (`python -m nemsim.fixed_bids run`). They were spliced into copies of the stored results (`results/*__rrp__fixedbids.csv`). Elsewhere the inputs are identical, so the scored prices are kept and no LP degeneracy noise is added.
+
+**Before and after.** "By value" is within $5 weighted by |price × demand ÷ 12|, using the 30-minute trading price for January 2020. The 95% intervals resample whole days. Each sample is on the region-intervals all five rungs scored.
+
+| Sample | Rung | Within $5 | Within 10% | By value | $300+ within $5 (95%) | $300+ without June 2025 |
+|---|---|---|---|---|---|---|
+| Ten | 1 | 0.1 → 0.1 | 0.1 → 0.1 | 0.1 → 0.1 | 0.0 → 0.0 | 0.0 → 0.0 |
+| Ten | 2 | 20.3 → 20.3 | 23.7 → 23.7 | 12.8 → 12.9 | 2.1 → 2.2 | 0.5 → 0.6 |
+| Ten | 3a | 47.3 → 47.4 | 48.6 → 48.7 | 30.1 → 30.1 | 17.3 → 17.3 | 18.0 → 18.0 |
+| Ten | 3b | 16.1 → 16.1 | 11.6 → 11.6 | 3.9 → 3.9 | 0.5 → 0.5 | 0.2 → 0.1 |
+| Ten | 4 | 55.7 → 55.8 | 59.3 → 59.4 | 44.3 → 44.4 | 26.4 → 26.4 (23.1–31.0) | 30.3 → 30.2 |
+| Seven | 2 | 22.1 → 22.2 | 29.7 → 29.7 | 14.4 → 14.4 | 3.0 → 3.0 | – |
+| Seven | 3a | 44.8 → 45.0 | 49.7 → 50.0 | 29.4 → 29.4 | 22.9 → 22.8 | – |
+| Seven | 3b | 15.2 → 15.1 | 14.6 → 14.5 | 4.0 → 3.9 | 0.3 → 0.3 | – |
+| Seven | 4 | 67.5 → 67.6 | 74.9 → 75.0 | 47.3 → 47.6 | 32.9 → 33.1 (26.8–39.9) | – |
+| Seventeen | 1 | 0.2 → 0.2 | 0.2 → 0.2 | 0.1 → 0.1 | 0.0 → 0.0 | 0.0 → 0.0 |
+| Seventeen | 2 | 21.0 → 21.1 | 26.2 → 26.2 | 13.6 → 13.6 | 2.5 → 2.5 | 2.0 → 2.0 |
+| Seventeen | 3a | 46.3 → 46.4 | 49.0 → 49.2 | 29.8 → 29.8 | 19.7 → 19.7 | 20.8 → 20.8 |
+| Seventeen | 3b | 15.7 → 15.7 | 12.8 → 12.8 | 4.0 → 3.9 | 0.4 → 0.4 | 0.2 → 0.2 |
+| Seventeen | 4 | 60.6 → 60.7 | 65.7 → 65.9 | 45.7 → 45.9 | 29.1 → 29.3 (25.8–33.4) | 31.8 → 31.9 |
+
+**Rung 4 by band, seventeen months:**
+
+| Band | Before | After |
+|---|---:|---:|
+| Negative | 77.4% | 77.8% |
+| $0–50 | 54.5% | 54.7% |
+| $50–300 | 58.5% | 58.5% |
+| $300+ | 29.1% | 29.3% |
+
+**Rung 4 by region, seventeen months:**
+
+| Region | Overall, before → after | $300+, before → after |
+|---|---|---|
+| NSW | 61.7 → 61.8 | 27.8 → 28.2 |
+| Queensland | 67.2 → 67.6 | 29.7 → 30.0 |
+| South Australia | 60.3 → 60.3 | 32.7 → 32.6 |
+| Tasmania | 53.6 → 53.6 | 21.4 → 21.5 |
+| Victoria | 60.1 → 60.2 | 28.2 → 28.1 |
+
+**Row counts.** On the ten months "after" has 225 more region-intervals than "before". They are 45 intervals at the start of August 2025, scored as `no_inputs` when August was first run, because July 2025's bid file (which holds them) was loaded only in stage 6b. The re-score picked up those of them with changed fixed bids. The same staleness applies to the first 48 intervals of June 2025, now that May is loaded. It is a small coverage gap in the stored ten-month results, left as it is and stated here. Every comparison above that matters was also made on matched rows.
+
+On the 741,340 matched rows of the seventeen months, rung 4's price moved in 33,804 region-intervals: 2,777 newly within $5, 1,920 newly outside, and on the spike band 31 fixed and 21 broken. **Of the 852 spike misses with a binding `$` constraint in the same region, the correction moves the price in 117 and fixes 17.**
+
+*Expected:* a large effect, given marginal values in the millions. *Observed:* almost none. A binding fixed-bid constraint in AEMO's solution does not mean rung 4 had dispatched the unit differently. On 22 January 2025 at 16:50, for example, BLOWERNG's fixed bid is 48 MW and its MAXAVAIL is 48 MW, so rung 4 already dispatched it at 48. The published tables stay as they were and this section reports the difference: no rung moves by more than 0.2 points on any sample. `FIXED_BIDS` stays off by default so that every stored result reproduces. `python -m nemsim.evaluate <rung> --set <month> --fixed-bids` applies it.
+
+### 18.3 The unit channel of FCAS
+
+`python -m nemsim.unit_probe run` then `report` (13.5 minutes). **These are probes: they hold units' energy at `DISPATCHLOAD.TOTALCLEARED`, an outcome.**
+- **Population:** rung 4's expensive misses after the fixed-bid correction. That is 5,798 non-degenerate misses, in intervals where 3.5% are set aside as degenerate. Every probe is scored on all five regions of each interval.
+
+| Probe | Held | Units per interval (median) | Misses fixed | $300+ newly broken | All region-intervals: fixed / broken | $300+ within $5 (95%) | By value | Tasmania $300+ |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| Rung 4, corrected | – | – | – | – | – | 29.3% | 45.9% | 21.5% |
+| U1, as first proposed | every unit with any FCAS enabled, at its actual energy | 71 | 445 | 457 | 1,111 / 2,938 | 29.1% (25.1–34.0) | 46.0% | 25.8% |
+| U2, crowded units | units whose actual energy plus enabled raise FCAS reaches their availability | 33 | 154 | 67 | 297 / 235 | 30.3% (27.0–34.3) | 46.6% | 23.5% |
+| U3, both channels | U2, plus every FCAS-limited link into a missed region held at AEMO's flow | 33 | 450 | 80 | 774 / 305 | **33.7%** (30.4–37.5) | **48.3%** | 25.1% |
+
+- **U1 is the specification taken literally, and it breaks more than it fixes.** Pinning about 71 units an interval at AEMO's energy, inside a model without AEMO's other constraints, moves the price as often away from AEMO as towards it.
+- **U2 is the cleaner measure of the unit channel.** It is worth about one point on the spike band.
+- **U3 is the combined upper bound for an FCAS co-optimisation rung:** +4.4 points on the spike band, +2.4 by value, and nothing overall (60.7% to 60.8%). Of that, the link channel (section 17) supplies most.
+- **Tasmania:**
+
+  | Probe | Its misses fixed |
+  |---|---:|
+  | U1 | 118 of 651 |
+  | U2 | 27 |
+  | U3 | 46 |
+
+  Its spike-band accuracy reaches at most 25.8%, so FCAS does not explain most of Tasmania's error either.
+
+### 18.4 Where the ladder stops
+
+**No rung 5 is built.** Both channels of FCAS co-optimisation, handed to rung 4 at AEMO's own values, would raise its spike-band accuracy from 29.3% to 33.7% and its value-weighted accuracy from 45.9% to 48.3%, and leave overall accuracy where it is. A rung that had to find those values itself would recover less. FCAS offers would also have to be re-downloaded, about 2.6 GB. That is a measured decision, not work left undone.
+
+**What remains open:**
+- **Spike misses with no link limiting imports:** 42% of rung 4's spike misses (section 17). Local scarcity and constraints, battery state of charge and within-interval plant failures are the candidates, none of them measured.
+- **Energy-limited over-flows, 7.7% of spike misses.** Rung 4 over-flows a link past a limit set by an energy constraint it applies. Dropped unit terms (section 9.1) and violation at penalty are untested candidates.
+- **Degenerate LP prices** in 3.5–5% of probed intervals.
+- **The ten-month result files** carry two small stale exclusions (August and June 2025's first intervals).
+- **The months outside the sample:** March 2021 to July 2024, 62% of the decade's spike value.
+- **Rebidding is not among them.** The final-offer tables are the bids in force at dispatch, rebids included.

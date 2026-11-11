@@ -202,6 +202,18 @@ class Window:
         return x
 
 
+# Fixed bids (stage 8). A generating unit can submit a fixed bid, FIXEDLOAD in its energy offer: dispatch
+# then holds it at exactly that MW whatever its band prices. AEMO represents each one as a constraint
+# named "$" + DUID whose right-hand side equals FIXEDLOAD (measured: 99.1% of 198,265 invoked "$"
+# constraint-intervals, docs/stage2_results.md section 18), which the definition tables do not hold.
+# FIXEDLOAD comes from the participant's offer, made before the interval: an input. With FIXED_BIDS on,
+# a unit with FIXEDLOAD > 0 is offered as one band of exactly FIXEDLOAD MW at the market price floor, so
+# every rung takes it as a price-taker; its band offers are not used. Off reproduces the results scored
+# before stage 8. Scheduled loads' fixed bids need nothing: every rung holds scheduled load at actual.
+FIXED_BIDS = False
+FLOOR = -1000.0      # the market price floor, -$1,000/MWh throughout the sample (MARKET_PRICE_THRESHOLDS)
+
+
 def offers(con: duckdb.DuckDBPyConnection, start: datetime, end: datetime) -> pd.DataFrame:
     """One row per unit, direction, band and interval with MW > 0.
 
@@ -213,23 +225,36 @@ def offers(con: duckdb.DuckDBPyConnection, start: datetime, end: datetime) -> pd
     """
     bands = ", ".join(f"struct_pack(band := {i}, mw := p.bandavail{i}, raw_price := d.priceband{i})"
                       for i in range(1, 11))
+    has_fixed = con.execute("select count(*) from information_schema.columns where table_schema = 'raw' "
+                            "and table_name = 'bidperoffer_d' and column_name = 'fixedload'").fetchone()[0]
+    fixed = "p.fixedload" if has_fixed else "cast(null as double)"
+    use_fixed = "true" if FIXED_BIDS else "false"
     return con.execute(f"""
         with per as (
             select * from raw.bidperoffer_d where interval_datetime between ? and ?),
         joined as (
-            select p.interval_datetime as interval, p.duid, p.direction, p.maxavail,
+            select p.interval_datetime as interval, p.duid, p.direction, p.maxavail, {fixed} as fixedload,
                    unnest([{bands}]) as b
             from per p join raw.biddayoffer_d d
               on d.settlementdate = p.settlementdate and d.duid = p.duid and d.direction = p.direction),
+        fixed as (
+            select j.*, coalesce(j.fixedload, 0) > 0 and j.direction = 'GEN' and {use_fixed} as is_fixed from joined j),
+        bands as (
+            select interval, duid, direction, maxavail, b.band as band, b.mw as mw, b.raw_price as raw_price
+            from fixed where not is_fixed
+            union all
+            select distinct on (interval, duid, direction) interval, duid, direction, maxavail, 1, fixedload, null
+            from fixed where is_fixed),
         units as (
             select duid, regionid, transmissionlossfactor as tlf, coalesce(distributionlossfactor, 1) as dlf,
                    dispatchtype, schedule_type,
                    start_date, end_date from raw.dudetailsummary)
-        select j.interval, j.duid, u.regionid as region, j.direction, j.b.band as band, j.b.mw as mw,
-               j.b.raw_price as raw_price, u.tlf, u.dlf, j.b.raw_price / (u.tlf * u.dlf) as price, j.maxavail,
+        select j.interval, j.duid, u.regionid as region, j.direction, j.band, j.mw,
+               coalesce(j.raw_price, {FLOOR} * u.tlf * u.dlf) as raw_price, u.tlf, u.dlf,
+               coalesce(j.raw_price / (u.tlf * u.dlf), {FLOOR}) as price, j.maxavail,
                u.dispatchtype, u.schedule_type
-        from joined j
+        from bands j
         join units u on u.duid = j.duid
           and j.interval - interval 5 minute >= u.start_date and j.interval - interval 5 minute < u.end_date
-        where j.b.mw > 0
+        where j.mw > 0
         order by j.interval, price""", [start, end]).df()
