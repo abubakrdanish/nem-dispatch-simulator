@@ -4,6 +4,8 @@ How much of the actual clearing price in Australia's National Electricity Market
 
 > Personal portfolio project. It describes past market outcomes. It is not energy market advice or financial advice.
 
+**Where a language model is used, and where it is not.** A language model reads published documents, such as AER reports, and emits structured fields. Every field must carry a span quoted verbatim from the source, so each one can be checked against the document. Extraction accuracy is measured against a hand-coded sample and reported. **No model output becomes a number in any result.** Every model response is cached and committed in [`data/llm_cache`](data/llm_cache), so the whole pipeline rebuilds offline, with no API key, and CI does exactly that ([how](docs/LLM.md)).
+
 ## What is already known, and what this project adds
 
 **This genre is not new, and this project builds on it.**

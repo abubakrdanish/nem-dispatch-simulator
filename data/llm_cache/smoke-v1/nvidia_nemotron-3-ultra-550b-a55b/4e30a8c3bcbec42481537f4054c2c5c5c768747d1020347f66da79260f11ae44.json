@@ -1,0 +1,36 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-14T00:24:36+00:00",
+  "failure": {
+    "detail": "$.claims[6].claim: longer than 300",
+    "kind": "invalid"
+  },
+  "input_sha256": "6d4ca0fe6bc2ec220474ee65f360d8583a394fa6b54152ccb79e85bf61c82b16",
+  "key": "4e30a8c3bcbec42481537f4054c2c5c5c768747d1020347f66da79260f11ae44",
+  "latency_s": 406.16,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "3e30246d05dac3228ea01edd7ad6f62758128733494f25d0f690efca02732a12",
+  "prompt_version": "smoke-v1",
+  "raw_response": "{\"claims\": [{\"claim\": \"The AER identified a combination of contributing factors including high demand, low wind output, baseload outages (all coal-fired generators), and network limitations, plus rebidding.\", \"quote\": \"Causes: 'a combination of contributing factors rather than one single driver, including high demand, low wind output, baseload outages (all coal-fired generators), and network limitations', plus rebidding.\"}, {\"claim\": \"High demand contributed to high prices, with the evening peak averaging 29,836 MW, the highest for June since 2021.\", \"quote\": \"Demand: the evening peak averaged 29,836 MW, the highest for June since 2021.\"}, {\"claim\": \"Low wind output contributed to high prices on 12 June, with wind at about 900 MW against 4,574 MW a week earlier.\", \"quote\": \"Wind was about 900 MW against 4,574 MW a week earlier\"}, {\"claim\": \"Low wind output contributed to high prices on 26 June, with wind at about 260 MW, the year's lowest day at 660 MW.\", \"quote\": \"Wind was about 260 MW, the year's lowest day at 660 MW\"}, {\"claim\": \"Baseload outages contributed to high prices on 12 June, with about 3,100 MW of coal unavailable.\", \"quote\": \"about 3,100 MW of coal was unavailable\"}, {\"claim\": \"Baseload outages contributed to high prices on 26 June, with 2,325 MW of coal on unplanned outage.\", \"quote\": \"2,325 MW of coal was on unplanned outage\"}, {\"claim\": \"Rebidding and specific unit issues contributed to high prices, including Vales Point limited by its ramp rate, up to 77 MW held back due to technical parameters, Loy Yang A1 failing to start (560 MW rebid unavailable), Shell's Rangebank and Koorangie batteries running out of charge (up to 385 MW removed), and a Braemar unit trip.\", \"quote\": \"Those effects: Vales Point limited by its ramp rate; up to 77 MW held back 'due to technical parameters of generating units that provide energy and FCAS at the same time'; Loy Yang A1 failing to start (560 MW rebid unavailable); Shell's Rangebank and Koorangie batteries running out of charge (up to 385 MW removed); and a Braemar unit trip.\"}, {\"claim\": \"FCAS high prices coincided with energy high prices due to energy–FCAS trade-off.\", \"quote\": \"8 of the quarter's 10 FCAS high prices coincided with the 12 and 26 June energy events, from the energy–FCAS trade-off.\"}]}",
+  "result": null,
+  "source": {
+    "document": "tests/fixtures/llm_smoke_document.md"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 3492,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2860,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 799,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "total_tokens": 4291
+  }
+}

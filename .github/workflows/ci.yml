@@ -1,5 +1,6 @@
 # Runs on every push and pull request. Tests use a synthetic fixture warehouse and block the network,
-# so CI never needs AEMO data.
+# so CI never needs AEMO data. It has no NVIDIA_API_KEY and never will: the LLM layer runs offline and
+# rebuilds everything from the committed cache in data/llm_cache, failing on a cache miss.
 name: CI
 
 on:
@@ -25,3 +26,5 @@ jobs:
       - run: pip install -r requirements.lock
 
       - run: python -m pytest
+        env:
+          NEMSIM_LLM_MODE: offline

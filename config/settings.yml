@@ -54,3 +54,17 @@ explainer_standing: [DUDETAILSUMMARY, MARKET_PRICE_THRESHOLDS]
 explainer_only_months: ["2024-09"]
 
 regions: [NSW1, QLD1, SA1, TAS1, VIC1]
+
+# The LLM layer (nemsim/llm). Model responses are cached under llm_cache_dir and committed:
+# every published number rebuilds from that cache with no API key. The key (NVIDIA_API_KEY) and
+# endpoint (NVIDIA_BASE_URL, which overrides base_url) are read from the environment only.
+llm_cache_dir: data/llm_cache
+llm:
+  base_url: "https://integrate.api.nvidia.com/v1"
+  # Chosen 2026-11-14 from the endpoint's own /models list; see docs/LLM.md for why.
+  model: "nvidia/nemotron-3-ultra-550b-a55b"
+  requests_per_minute: 10      # trial reportedly allows ~40/min per model; stay well under
+  read_timeout_s: 120         # longest silence while streaming (17 s seen)
+  total_timeout_s: 1200       # one generation; 282 s seen for a 400-word document
+  max_calls_per_run: 25        # hard caps per run, so a loop cannot burn the trial
+  max_tokens_per_run: 250000
