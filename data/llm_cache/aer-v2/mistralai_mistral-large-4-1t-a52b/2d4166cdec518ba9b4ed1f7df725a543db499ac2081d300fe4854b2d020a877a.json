@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:34:03+00:00",
+  "failure": null,
+  "input_sha256": "ea7915274660d1c6e45a5b63236fe5d2161b1984ef153cd8c11dcf97fb4cdb09",
+  "key": "2d4166cdec518ba9b4ed1f7df725a543db499ac2081d300fe4854b2d020a877a",
+  "latency_s": 408.77,
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-01-14\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"1.35 pm and 1.40 pm dispatch intervals; 2 pm trading interval\", \"quote\": \"While the four hours ahead spot price forecast was around $321 /MWh, the dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.\"}, \"peak_price\": {\"value\": 5022, \"quote\": \"While the four hours ahead spot price forecast was around $321 /MWh, the dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand was close to forecast four hours ahead, and around 900 MW greater than forecast 12 hours ahead while actual availability was around 400 MW lower for the same periods.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The situation was further exacerbated by the forced shutdown of Liddell unit 3.\"}, {\"label\": \"network_outage\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, {\"label\": \"ramp_rates\", \"quote\": \"The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the 2 pm trading interval four system normal constraints were binding, reducing imports into New South Wales and constraining down local generation.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line\"}, {\"id\": \"N>>N-NIL_64\", \"quote\": \"N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line\"}, {\"id\": \"N>>N-NIL__B_15M\", \"quote\": \"N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line\"}, {\"id\": \"N^^N_NIL_1\", \"quote\": \"N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows.\"}, {\"id\": \"N_X_MBTE2_B\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, {\"id\": \"V>>V_NIL_2A-R\", \"quote\": \"1056A CONSTRAINT MANAGEMENT - V>>V_NIL_2A_ R SL\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead.\"}, {\"name\": \"QNI\", \"quote\": \"New South Wales was importing around 800 MW from Queensland over QNI at the time of the high price.\"}, {\"name\": \"Terranora\", \"quote\": \"QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand was close to forecast four hours ahead, and around 900 MW greater than forecast 12 hours ahead while actual availability was around 400 MW lower for the same periods."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The situation was further exacerbated by the forced shutdown of Liddell unit 3."
+          },
+          {
+            "label": "network_outage",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the 2 pm trading interval four system normal constraints were binding, reducing imports into New South Wales and constraining down local generation."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line"
+          },
+          {
+            "id": "N>>N-NIL_64",
+            "quote": "N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line"
+          },
+          {
+            "id": "N>>N-NIL__B_15M",
+            "quote": "N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line"
+          },
+          {
+            "id": "N^^N_NIL_1",
+            "quote": "N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows."
+          },
+          {
+            "id": "N_X_MBTE2_B",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          },
+          {
+            "id": "V>>V_NIL_2A-R",
+            "quote": "1056A CONSTRAINT MANAGEMENT - V>>V_NIL_2A_ R SL"
+          }
+        ],
+        "event_date": "2016-01-14",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead."
+          },
+          {
+            "name": "QNI",
+            "quote": "New South Wales was importing around 800 MW from Queensland over QNI at the time of the high price."
+          },
+          {
+            "name": "Terranora",
+            "quote": "QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively."
+          }
+        ],
+        "intervals": {
+          "quote": "While the four hours ahead spot price forecast was around $321 /MWh, the dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.",
+          "text": "1.35 pm and 1.40 pm dispatch intervals; 2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "While the four hours ahead spot price forecast was around $321 /MWh, the dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.",
+          "value": 5022
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20150114_-_5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20150114%20-%205000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 13002,
+    "per_attempt": [
+      {
+        "completion_tokens": 13002,
+        "completion_tokens_details": {
+          "reasoning_tokens": 12106
+        },
+        "prompt_tokens": 9359,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 22361
+      }
+    ],
+    "prompt_tokens": 9359,
+    "reasoning_tokens": 12106,
+    "total_tokens": 22361
+  }
+}

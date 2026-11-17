@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:12:24+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[1]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "0492982541db647083d3d0762796cb95b391f64860d58f7d02e03f20957e7789",
+  "key": "7d97acb0a7b5d2ea6cfc4a1049f4cca8a7d1e8b5fc7de15b0131e37492b8c97e",
+  "latency_s": 8.38,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-03-17\", \"regions\": [\"VIC1\", \"SNOWY1\"], \"intervals\": {\"text\": \"two trading intervals at 4 pm and 4.30 pm\", \"quote\": \"On 17 March the spot price in Victoria and Snowy exceeded $5000/MWh for two trading intervals at 4 pm and 4.30 pm.\"}, \"peak_price\": {\"value\": 7910, \"quote\": \"Spot price $7910/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Victoria led to a record demand of 9776 MW, which is 764 MW above the previous record.\"}, {\"label\": \"demand\", \"quote\": \"Temperatures in Melbourne reached 38 degrees, two degrees higher than forecast. The high temperatures led to a new record demand of 9776 MW at 4 pm. Demand was around 360 MW higher than that forecast four hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was around 580 MW less generation capacity presented in Victoria compared to the maximum summer capability.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 2.51 pm International Power's Hazelwood unit four tripped reducing its available capacity by 220 MW.\"}, {\"label\": \"rebids\", \"quote\": \"This included reductions through rebids of almost 400 MW of capacity in the four hours leading up to the high prices: From 10.12 am until 3.18 pm TRUenergy reduced the availability of its Yallourn units by 150 MW all of which was priced below $5/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"Snowy Hydro had 810 MW of capacity at Murray power station priced above $5000/MWh during the high priced period. This capacity was offered at this price through day-ahead bids.\"}, {\"label\": \"rebids\", \"quote\": \"In Victoria a total of 116 MW of capacity was priced above $5000/MWh during the high priced period. The majority of this was offered through day-ahead bids by LYMMCO.\"}], \"constraints_named\": [{\"id\": \"Upper Tumut to Murray (65) line for the loss of the Lower Tumut to Wagga line (51)\", \"quote\": \"These flows were close to forecast and were caused by a system normal constraint that manages the load across the Upper Tumut to Murray (65) line for the loss of the Lower Tumut to Wagga line (51).\"}], \"interconnectors_named\": [{\"name\": \"Snowy to New South Wales\", \"quote\": \"During the times of high prices flows from Snowy into New South Wales of around 700 MW occurred - these flows were counter to the prevailing market prices.\"}, {\"name\": \"Snowy to Victoria\", \"quote\": \"Flows from Snowy into Victoria were close to forecast at around 1500 MW compared to the limit of around 1700 MW.\"}, {\"name\": \"Tasmania to Victoria (Basslink)\", \"quote\": \"Flows from Tasmania were close to forecast at the maximum limit of 600 MW.\"}, {\"name\": \"South Australia to Victoria (Heywood)\", \"quote\": \"Flows from South Australia were close to zero.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_17_March_2008_-_VIC_and_Snowy.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_17%20March%202008%20-%20VIC%20and%20Snowy.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 1735,
+    "per_attempt": [
+      {
+        "completion_tokens": 923,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7350,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8273
+      },
+      {
+        "completion_tokens": 812,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7350,
+        "prompt_tokens_details": {
+          "cached_tokens": 4384
+        },
+        "total_tokens": 8162
+      }
+    ],
+    "prompt_tokens": 14700,
+    "reasoning_tokens": 0,
+    "total_tokens": 16435
+  }
+}

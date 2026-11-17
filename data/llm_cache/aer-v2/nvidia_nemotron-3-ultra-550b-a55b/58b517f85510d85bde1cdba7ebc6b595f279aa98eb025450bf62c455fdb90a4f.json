@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:28:09+00:00",
+  "failure": null,
+  "input_sha256": "0883933c606e3f61f9fadc1e337302d0bd0f54af8bba29adc7436669c6fe3b4d",
+  "key": "58b517f85510d85bde1cdba7ebc6b595f279aa98eb025450bf62c455fdb90a4f",
+  "latency_s": 11.96,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-12-30\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"the 3.30 pm trading interval\", \"quote\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.\"}, \"peak_price\": {\"value\": 6443, \"quote\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The actual price was significantly higher than forecast because of the unplanned outage in New South Wales causing a decrease in imports and high priced generation in Victoria being needed to meet demand.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The effect of these constraints, which were in place from the 3.05 pm dispatch interval, saw the flows on the Vic-NSW interconnector reverse from imports in to Victoria to forced exports in to New South Wales.\"}, {\"label\": \"demand\", \"quote\": \"High temperatures in Melbourne led to high demand in Victoria. The temperature exceeded 40°C in Melbourne and demand reached 8204 MW at 3.30 pm.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"On the day there was two large generators offline in Victoria, AGL's Loy Yang A2 (530 MW) and Alinta Energy's Loy Yang B1 (490 MW). The A2 unit had been offline since 27 December due to a plant failure while the B1 unit had been offline since 29 December due to a tube leak.\"}], \"constraints_named\": [{\"id\": \"N-LTWG_RADIAL\", \"quote\": \"The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L\"}, {\"id\": \"V-DBUSS_L\", \"quote\": \"The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"Before the network outage occurred Victoria was importing around 210 MW of electricity from New South Wales across the Vic-NSW interconnector.\"}, {\"name\": \"V-S-MNSP1\", \"quote\": \"The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1\"}, {\"name\": \"V-SA\", \"quote\": \"The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1\"}, {\"name\": \"T-V-MNSP1\", \"quote\": \"The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria. The spot price was significantly higher than forecast due to an unplanned network outage of the Lower Tumut to Wagga 330 kV line in New South Wales which was caused by bushfires in the area.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The actual price was significantly higher than forecast because of the unplanned outage in New South Wales causing a decrease in imports and high priced generation in Victoria being needed to meet demand."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The effect of these constraints, which were in place from the 3.05 pm dispatch interval, saw the flows on the Vic-NSW interconnector reverse from imports in to Victoria to forced exports in to New South Wales."
+          },
+          {
+            "label": "demand",
+            "quote": "High temperatures in Melbourne led to high demand in Victoria. The temperature exceeded 40°C in Melbourne and demand reached 8204 MW at 3.30 pm."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "On the day there was two large generators offline in Victoria, AGL's Loy Yang A2 (530 MW) and Alinta Energy's Loy Yang B1 (490 MW). The A2 unit had been offline since 27 December due to a plant failure while the B1 unit had been offline since 29 December due to a tube leak."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N-LTWG_RADIAL",
+            "quote": "The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L"
+          },
+          {
+            "id": "V-DBUSS_L",
+            "quote": "The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L"
+          }
+        ],
+        "event_date": "2019-12-30",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "Before the network outage occurred Victoria was importing around 210 MW of electricity from New South Wales across the Vic-NSW interconnector."
+          },
+          {
+            "name": "V-S-MNSP1",
+            "quote": "The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1"
+          },
+          {
+            "name": "V-SA",
+            "quote": "The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1"
+          },
+          {
+            "name": "T-V-MNSP1",
+            "quote": "The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1"
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.",
+          "text": "the 3.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria. The spot price was significantly higher than forecast due to an unplanned network outage of the Lower Tumut to Wagga 330 kV line in New South Wales which was caused by bushfires in the area.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.",
+          "value": 6443
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000_MWh_-_30_December_2019_(Vic).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000%20MWh%20-%2030%20December%202019%20%28Vic%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 884,
+    "per_attempt": [
+      {
+        "completion_tokens": 884,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9639,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10523
+      }
+    ],
+    "prompt_tokens": 9639,
+    "reasoning_tokens": 0,
+    "total_tokens": 10523
+  }
+}

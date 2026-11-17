@@ -1,0 +1,177 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T01:02:28+00:00",
+  "failure": null,
+  "input_sha256": "3891667bc2427b4e87f11ccf36e04cc7b7cb0692d12140c1c1cb71d47fa4cd37",
+  "key": "fbb6156bdd9f0c9ae43081d627744de933a5282ab740d3fde80f7720f0aa400c",
+  "latency_s": 151.83,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-01-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2 pm trading interval\", \"quote\": \"The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.\"}, \"peak_price\": {\"value\": 9832, \"quote\": \"The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was up slightly on earlier forecasts and generator availability slightly lower.\"}, {\"label\": \"network_outage\", \"quote\": \"At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed. Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"South Australia being electrically isolated from the rest of the market.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The trade-off between energy and FCAS meant that not all cheaply priced generation in the region could be used to meet the demand for energy. This contributed to the amount of energy constrained as shown in Figure 2.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Within the 2 pm trading interval a small number of generation units experienced technical issues with their plant and adjusted the amount of generation available to the market. ... Overall while the amount of MW removed was only small (around 150 MW), it was a factor that contributed to the high price outcomes.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors.\"}, {\"name\": \"MurrayLink\", \"quote\": \"South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed. Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Overall rebidding from low to high prices did not contribute to the high priced trading interval in South Australia.\"}}, {\"event_date\": \"2020-01-31\", \"regions\": [\"VIC1\", \"NSW1\"], \"intervals\": {\"text\": \"3 pm to 7 pm trading intervals\", \"quote\": \"On 31 January 2020 the wholesale spot price for electricity exceeded $5000/MWh for the 2 pm trading interval in South Australia and multiple times in Victoria and New South Wales from 3 pm to 7 pm.\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"Spot price $14 700/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Victoria and New South Wales led to high demand in both regions.\"}, {\"label\": \"wind_output\", \"quote\": \"In Victoria there is around 1700 MW of installed semi-scheduled wind generation. For the 3 pm and 3.30 pm trading intervals around 285 MW of wind generation was dispatched, 350 MW lower than earlier forecast.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"AGL's Liddell unit 1 (450 MW) had been offline since the previous day due to a tube leak ... Snowy Hydro's Colongra power station experienced technical issues which saw its unit 2 (169 MW) fail to start after receiving a target to generate. ... AGL's Liddell unit 2 and Bayswater unit 4 plants also reduced their availability due to a plant failure and milling limits respectively.\"}, {\"label\": \"network_outage\", \"quote\": \"The outage resulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Victoria was not able to import any generation from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO invoked the Reliability and Emergency Reserve Trader (RERT) mechanism to ensure there was enough supply to meet demand.\"}], \"constraints_named\": [{\"id\": \"q>nil_mute_757\", \"quote\": \"Constraint management - q>nil_mute_757 sl\"}, {\"id\": \"v>>v_nil_3\", \"quote\": \"Constraint management - v>>v_nil_3 sl\"}, {\"id\": \"Vic- nsw 5min pd price separation\", \"quote\": \"Vic- nsw 5min pd price separation\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors.\"}, {\"name\": \"MurrayLink\", \"quote\": \"South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Table 5 shows the actual and four hour forecast flows on both the Heywood and Vic-NSW interconnectors.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The outage resulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh in any of the high priced trading intervals on the day.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was up slightly on earlier forecasts and generator availability slightly lower."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed. Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "South Australia being electrically isolated from the rest of the market."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The trade-off between energy and FCAS meant that not all cheaply priced generation in the region could be used to meet the demand for energy. This contributed to the amount of energy constrained as shown in Figure 2."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Within the 2 pm trading interval a small number of generation units experienced technical issues with their plant and adjusted the amount of generation available to the market. ... Overall while the amount of MW removed was only small (around 150 MW), it was a factor that contributed to the high price outcomes."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors."
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.",
+          "text": "2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed. Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.",
+          "value": 9832
+        },
+        "rebid_set_price": {
+          "quote": "Overall rebidding from low to high prices did not contribute to the high priced trading interval in South Australia.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Victoria and New South Wales led to high demand in both regions."
+          },
+          {
+            "label": "wind_output",
+            "quote": "In Victoria there is around 1700 MW of installed semi-scheduled wind generation. For the 3 pm and 3.30 pm trading intervals around 285 MW of wind generation was dispatched, 350 MW lower than earlier forecast."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "AGL's Liddell unit 1 (450 MW) had been offline since the previous day due to a tube leak ... Snowy Hydro's Colongra power station experienced technical issues which saw its unit 2 (169 MW) fail to start after receiving a target to generate. ... AGL's Liddell unit 2 and Bayswater unit 4 plants also reduced their availability due to a plant failure and milling limits respectively."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The outage resulted in no imports being available to Victoria from South Australia across Heywood during the high price periods."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Victoria was not able to import any generation from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO invoked the Reliability and Emergency Reserve Trader (RERT) mechanism to ensure there was enough supply to meet demand."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "q>nil_mute_757",
+            "quote": "Constraint management - q>nil_mute_757 sl"
+          },
+          {
+            "id": "v>>v_nil_3",
+            "quote": "Constraint management - v>>v_nil_3 sl"
+          },
+          {
+            "id": "Vic- nsw 5min pd price separation",
+            "quote": "Vic- nsw 5min pd price separation"
+          }
+        ],
+        "event_date": "2020-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors."
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "South Australia is electrically connected to Victoria by the Heywood and Murray Link interconnectors."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Table 5 shows the actual and four hour forecast flows on both the Heywood and Vic-NSW interconnectors."
+          }
+        ],
+        "intervals": {
+          "quote": "On 31 January 2020 the wholesale spot price for electricity exceeded $5000/MWh for the 2 pm trading interval in South Australia and multiple times in Victoria and New South Wales from 3 pm to 7 pm.",
+          "text": "3 pm to 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "The outage resulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $14 700/MWh",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh in any of the high priced trading intervals on the day.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/31%20Jan%20%245000%20Report%20SA%20Vic%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 9680,
+    "per_attempt": [
+      {
+        "completion_tokens": 9680,
+        "completion_tokens_details": {
+          "reasoning_tokens": 8289
+        },
+        "prompt_tokens": 46529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 56209
+      }
+    ],
+    "prompt_tokens": 46529,
+    "reasoning_tokens": 8289,
+    "total_tokens": 56209
+  }
+}

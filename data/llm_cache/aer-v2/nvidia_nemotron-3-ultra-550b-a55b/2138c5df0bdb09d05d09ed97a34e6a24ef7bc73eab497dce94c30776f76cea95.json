@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:24:59+00:00",
+  "failure": null,
+  "input_sha256": "74680391573dd9ea632060135fa13bb5b4169ceed7500a383201af174dbe8a06",
+  "key": "2138c5df0bdb09d05d09ed97a34e6a24ef7bc73eab497dce94c30776f76cea95",
+  "latency_s": 17.27,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"five consecutive half hourly trading intervals, from 5.30 - 7.30 pm inclusive\", \"quote\": \"On 8 February 2017, the spot price in South Australia exceeded $5000/MWh for five consecutive half hourly trading intervals, from 5.30 - 7.30 pm inclusive.\"}, \"peak_price\": {\"value\": 13440, \"quote\": \"Prices ranged between $9387/MWh and $13 440/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand in South Australia was around 300 MW higher than forecast for most of the trading intervals.\"}, {\"label\": \"demand\", \"quote\": \"Temperatures in Adelaide reached 42 degrees, the highest for the 2016 /17 summer until that day . This is around one degree higher than what had been forecast by the Bureau of Meteorology consistently in the preceding 48 hours. The hot weather resulted in high levels of demand.\"}, {\"label\": \"wind_output\", \"quote\": \"During the evening peak the output of wind generators in South Australia was up to 137 MW lower than what was forecast earlier in the day .\"}, {\"label\": \"wind_output\", \"quote\": \"For both semi -scheduled and non -scheduled wind generators, the actual wind generation started higher than forecast earlier in the day and dropped off at a faster rate than forecast later in the afternoon.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"By around 4.50 pm two other generators: Torrens Island and Port Lincoln reduced their available capacity by 40 and 55 MW respectively and after 5.15 pm Quarantine 4 reduced its available capacity by 20 MW, making a total of 11 5 MW withdrawn as a result of unexpected plant issues , some of which related to the high ambient temperatures, and issues in the transmission network.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Torrens Island unit A1 was offline due to a forced outage following a plant failure on 6 February 2017.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"355 MW was due to long term outages which were accounted for in the forecast systems\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,\"}, {\"label\": \"interconnector_limit\", \"quote\": \"From around 5.20 pm imports into South Australia began to exceed the import limit , thus putting the power system in an insecure state .\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"Under the National Electricity Rules, when load shedding occurs, prices ar e s et at the market price cap ($14 000/MWh).\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"The Market Price Cap (MPC) was applied to the South Australia region and the 5 minute price was set at $14 000/MWh for the 6.25 pm to 6.50 pm dispatch intervals.\"}], \"constraints_named\": [{\"id\": \"Murraylink import limit\", \"quote\": \"Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,\"}], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,\"}, {\"name\": \"Heywood\", \"quote\": \"Electricity was flowing into South Australia across the Heywood interconnector from Victoria at or close to its 600 MW maximum capability, as forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"issues in the transmission network. ... making a total of 11 5 MW withdrawn as a result of unexpected plant issues , some of which related to the high ambient temperatures, and issues in the transmission network.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"there was n o significant rebidding by generators of capacity from low to high prices , which contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand in South Australia was around 300 MW higher than forecast for most of the trading intervals."
+          },
+          {
+            "label": "demand",
+            "quote": "Temperatures in Adelaide reached 42 degrees, the highest for the 2016 /17 summer until that day . This is around one degree higher than what had been forecast by the Bureau of Meteorology consistently in the preceding 48 hours. The hot weather resulted in high levels of demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "During the evening peak the output of wind generators in South Australia was up to 137 MW lower than what was forecast earlier in the day ."
+          },
+          {
+            "label": "wind_output",
+            "quote": "For both semi -scheduled and non -scheduled wind generators, the actual wind generation started higher than forecast earlier in the day and dropped off at a faster rate than forecast later in the afternoon."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "By around 4.50 pm two other generators: Torrens Island and Port Lincoln reduced their available capacity by 40 and 55 MW respectively and after 5.15 pm Quarantine 4 reduced its available capacity by 20 MW, making a total of 11 5 MW withdrawn as a result of unexpected plant issues , some of which related to the high ambient temperatures, and issues in the transmission network."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Torrens Island unit A1 was offline due to a forced outage following a plant failure on 6 February 2017."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "355 MW was due to long term outages which were accounted for in the forecast systems"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "From around 5.20 pm imports into South Australia began to exceed the import limit , thus putting the power system in an insecure state ."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "Under the National Electricity Rules, when load shedding occurs, prices ar e s et at the market price cap ($14 000/MWh)."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "The Market Price Cap (MPC) was applied to the South Australia region and the 5 minute price was set at $14 000/MWh for the 6.25 pm to 6.50 pm dispatch intervals."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Murraylink import limit",
+            "quote": "Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,"
+          }
+        ],
+        "event_date": "2017-02-08",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Network constraints on the Murraylink interconnector limited imports from Victoria to South Australia to between 65 MW and 89 MW during the period 5.30 - 7.30 pm,"
+          },
+          {
+            "name": "Heywood",
+            "quote": "Electricity was flowing into South Australia across the Heywood interconnector from Victoria at or close to its 600 MW maximum capability, as forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On 8 February 2017, the spot price in South Australia exceeded $5000/MWh for five consecutive half hourly trading intervals, from 5.30 - 7.30 pm inclusive.",
+          "text": "five consecutive half hourly trading intervals, from 5.30 - 7.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "issues in the transmission network. ... making a total of 11 5 MW withdrawn as a result of unexpected plant issues , some of which related to the high ambient temperatures, and issues in the transmission network.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Prices ranged between $9387/MWh and $13 440/MWh.",
+          "value": 13440
+        },
+        "rebid_set_price": {
+          "quote": "there was n o significant rebidding by generators of capacity from low to high prices , which contributed to the high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_8_February_2017_(SA)_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%208%20February%202017%20%28SA%29_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1044,
+    "per_attempt": [
+      {
+        "completion_tokens": 1044,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 15390,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16434
+      }
+    ],
+    "prompt_tokens": 15390,
+    "reasoning_tokens": 0,
+    "total_tokens": 16434
+  }
+}

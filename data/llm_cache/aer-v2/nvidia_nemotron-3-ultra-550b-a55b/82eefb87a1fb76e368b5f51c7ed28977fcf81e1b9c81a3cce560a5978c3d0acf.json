@@ -1,0 +1,133 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:19:07+00:00",
+  "failure": null,
+  "input_sha256": "8d8b3a25ff9d754b990afc92a58019134312abd88173ca248a5bf576909b292b",
+  "key": "82eefb87a1fb76e368b5f51c7ed28977fcf81e1b9c81a3cce560a5978c3d0acf",
+  "latency_s": 19.01,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-02-04\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"12 pm trading interval\", \"quote\": \"On Thursday 4 February 2010, the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval.\"}, \"peak_price\": {\"value\": 5541, \"quote\": \"On Thursday 4 February 2010, the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The price was much higher than forecast largely as a result of network congestion.\"}, {\"label\": \"network_outage\", \"quote\": \"From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance.\"}, {\"label\": \"network_outage\", \"quote\": \"At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day.\"}, {\"label\": \"constraint_violation\", \"quote\": \"This altered flows on the remainder of the transmission network and flows exceeded allowable limits on the Mount Piper to Wallerawang 330 kV lines for three dispatch intervals (10.30 am to 10.40 am inclusive).\"}, {\"label\": \"rebids\", \"quote\": \"In response to the high prices there appeared to be a 540 MW reduction in New South Wales demand at around 11 am and a number of New South Wales generators rebid into negative prices.\"}, {\"label\": \"rebids\", \"quote\": \"At the same time New South Wales generators also rebid into higher prices.\"}, {\"label\": \"demand\", \"quote\": \"The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. The 'ramp down rate' on each unit was reduced from 5 MW/min down to the minimum allowable level of 3 MW/min.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 10.31 am, effective from 10.40 am, Snowy Hydro rebid the ramp rate of Tumut three from 200 MW/min down to the minimum allowable level of 3 MW/min.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 10.32 am, effective from 10.40 am, Macquarie Generation rebid the ramp rates across its Bayswater units. The ramp down rate was reduced from 4 MW/min down to the minimum allowable level of 3 MW/min for each unit.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"At 9.43 am, effective for the 10.30 am trading interval, Delta Electricity reduced the available capacity of Wallerawang unit seven by 280 MW (a majority of this capacity was priced below $90/MWh).\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"As has been the case in the New South Wales region several times over the 2009/10 summer, the \\\"system normal\\\" constraint N>>N-NIL__S was a factor in the high price event.\"}, {\"id\": \"N>>N-NIL__S\", \"quote\": \"The system normal constraint N>>N-NIL__S bound for most of the time from the dispatch interval ending 9.10 am to the dispatch interval ending at 12.30 pm.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Although the import limit across the QNI interconnector was forecast to be around 1050 MW into New South Wales for most of the day, from around 10 am the impact of the binding N>>N-NIL__S constraint forced flow into Queensland, by up to 446 MW.\"}, {\"name\": \"Vic-NSW\", \"quote\": \"Although the import limit across the Vic-NSW interconnector into New South Wales was forecast to be up to 1135 MW four hours ahead, the impact of the binding N>>N-NIL__S constraint forced flow into Victoria by up to 1301 MW at 12.30 pm.\"}, {\"name\": \"Terranora\", \"quote\": \"The capability of the Terranora interconnector was close to forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At the same time New South Wales generators also rebid into higher prices. The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The price was much higher than forecast largely as a result of network congestion."
+          },
+          {
+            "label": "network_outage",
+            "quote": "From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This altered flows on the remainder of the transmission network and flows exceeded allowable limits on the Mount Piper to Wallerawang 330 kV lines for three dispatch intervals (10.30 am to 10.40 am inclusive)."
+          },
+          {
+            "label": "rebids",
+            "quote": "In response to the high prices there appeared to be a 540 MW reduction in New South Wales demand at around 11 am and a number of New South Wales generators rebid into negative prices."
+          },
+          {
+            "label": "rebids",
+            "quote": "At the same time New South Wales generators also rebid into higher prices."
+          },
+          {
+            "label": "demand",
+            "quote": "The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. The 'ramp down rate' on each unit was reduced from 5 MW/min down to the minimum allowable level of 3 MW/min."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 10.31 am, effective from 10.40 am, Snowy Hydro rebid the ramp rate of Tumut three from 200 MW/min down to the minimum allowable level of 3 MW/min."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 10.32 am, effective from 10.40 am, Macquarie Generation rebid the ramp rates across its Bayswater units. The ramp down rate was reduced from 4 MW/min down to the minimum allowable level of 3 MW/min for each unit."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "At 9.43 am, effective for the 10.30 am trading interval, Delta Electricity reduced the available capacity of Wallerawang unit seven by 280 MW (a majority of this capacity was priced below $90/MWh)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "As has been the case in the New South Wales region several times over the 2009/10 summer, the \"system normal\" constraint N>>N-NIL__S was a factor in the high price event."
+          },
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "The system normal constraint N>>N-NIL__S bound for most of the time from the dispatch interval ending 9.10 am to the dispatch interval ending at 12.30 pm."
+          }
+        ],
+        "event_date": "2010-02-04",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Although the import limit across the QNI interconnector was forecast to be around 1050 MW into New South Wales for most of the day, from around 10 am the impact of the binding N>>N-NIL__S constraint forced flow into Queensland, by up to 446 MW."
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "Although the import limit across the Vic-NSW interconnector into New South Wales was forecast to be up to 1135 MW four hours ahead, the impact of the binding N>>N-NIL__S constraint forced flow into Victoria by up to 1301 MW at 12.30 pm."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The capability of the Terranora interconnector was close to forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 4 February 2010, the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval.",
+          "text": "12 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Thursday 4 February 2010, the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval.",
+          "value": 5541
+        },
+        "rebid_set_price": {
+          "quote": "At the same time New South Wales generators also rebid into higher prices. The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_4_February_2010_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_4%20February%202010%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1204,
+    "per_attempt": [
+      {
+        "completion_tokens": 1204,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8005,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9209
+      }
+    ],
+    "prompt_tokens": 8005,
+    "reasoning_tokens": 0,
+    "total_tokens": 9209
+  }
+}

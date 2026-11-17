@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:24:21+00:00",
+  "failure": null,
+  "input_sha256": "413782d9b4133f3b269df8c99166379b214624188d50e8b3f1c348b5b9be871c",
+  "key": "b78b82caa8da0fb1f8e2478c448a83c2af96f17e0141bddb17df70b86d65d637",
+  "latency_s": 8.02,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-07-21\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm and 6.30 pm trading intervals\", \"quote\": \"The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals, respectively.\"}, \"peak_price\": {\"value\": 6564, \"quote\": \"The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"demand reached 8,257 MW at the 6 pm dispatch interval. This is the highest winter demand on record exceeding the previous record of 8,197 MW set in 2008.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Almost 1,500 MW of this capacity was on unplanned outages that occurred at least 2 days prior, about half of which was the Callide C units that had yet to return to service from events on 25 May.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The remaining 900 MW of capacity was on planned outages.\"}, {\"label\": \"network_outage\", \"quote\": \"There were planned outages in New South Wales due to the upgrade of the QNI which limited access to cheap generation from New South Wales.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors for the duration of the outage to maintain local FCAS requirements in Queensland.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Co-optimisation between the Energy and FCAS markets.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding capacity to high prices and removing capacity contributed to the high prices.\"}, {\"label\": \"constraint_violation\", \"quote\": \"As this constraint could not be satisfied it violated and when this occurs a violation penalty applies. In this case it was twice the price cap ($15,100/MWh) and contributed to setting the price in energy and FCAS.\"}], \"constraints_named\": [{\"id\": \"NRM_QLD1_NSW1\", \"quote\": \"NRM_QLD1_NSW1 Negative residue management constraint $30,200 1.01 $30,502\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales.\"}, {\"name\": \"Terranora\", \"quote\": \"The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors for the duration of the outage to maintain local FCAS requirements in Queensland.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There were planned outages in New South Wales due to the upgrade of the QNI which limited access to cheap generation from New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding capacity to high prices and removing capacity contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "demand reached 8,257 MW at the 6 pm dispatch interval. This is the highest winter demand on record exceeding the previous record of 8,197 MW set in 2008."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Almost 1,500 MW of this capacity was on unplanned outages that occurred at least 2 days prior, about half of which was the Callide C units that had yet to return to service from events on 25 May."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The remaining 900 MW of capacity was on planned outages."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There were planned outages in New South Wales due to the upgrade of the QNI which limited access to cheap generation from New South Wales."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors for the duration of the outage to maintain local FCAS requirements in Queensland."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Co-optimisation between the Energy and FCAS markets."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding capacity to high prices and removing capacity contributed to the high prices."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "As this constraint could not be satisfied it violated and when this occurs a violation penalty applies. In this case it was twice the price cap ($15,100/MWh) and contributed to setting the price in energy and FCAS."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_QLD1_NSW1",
+            "quote": "NRM_QLD1_NSW1 Negative residue management constraint $30,200 1.01 $30,502"
+          }
+        ],
+        "event_date": "2021-07-21",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors for the duration of the outage to maintain local FCAS requirements in Queensland."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals, respectively.",
+          "text": "6 pm and 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "There were planned outages in New South Wales due to the upgrade of the QNI which limited access to cheap generation from New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals, respectively.",
+          "value": 6564
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding capacity to high prices and removing capacity contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210721_$5000_QLD_Report_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210721%20%245000%20QLD%20Report_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 785,
+    "per_attempt": [
+      {
+        "completion_tokens": 785,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 13194,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13979
+      }
+    ],
+    "prompt_tokens": 13194,
+    "reasoning_tokens": 0,
+    "total_tokens": 13979
+  }
+}

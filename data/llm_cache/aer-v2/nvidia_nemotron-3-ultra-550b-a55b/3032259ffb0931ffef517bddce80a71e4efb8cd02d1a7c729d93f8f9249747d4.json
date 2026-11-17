@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:16:58+00:00",
+  "failure": null,
+  "input_sha256": "9616441c7e91d740686e753f5a30af8bf788c6554b48ec7fd5a8d884d46b4796",
+  "key": "3032259ffb0931ffef517bddce80a71e4efb8cd02d1a7c729d93f8f9249747d4",
+  "latency_s": 6.36,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-01-03\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"trading interval ending 2.30pm\", \"quote\": \"The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"A 5-minute dispatch price of $10 000/MWh occurred at 2.20pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was almost 300 MW higher than forecast 4 hours to dispatch and 450 MW higher than forecasts made 12 hours to dispatch.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 2.15pm, unit 2 at Millmerran tripped from 400 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Available capacity was reduced by more than 400 MW throughout the morning. This included a reduction in availability at Gladstone and Townsville of nearly 120 MW, 237 MW at Callide C and 120 MW across both units at Millmerran around midday.\"}, {\"label\": \"rebids\", \"quote\": \"At 1.43pm, Enertrade rebid 160 MW of capacity at Oakey from prices of $260/MWh to more than $9000/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Flows across the New South Wales to Queensland (QNI) interconnector into Queensland were between 244 MW and 418 MW during the trading interval, peaking at 554 MW at 2.20pm following the loss of the generator at Millmerran.\"}, {\"name\": \"DirectLink\", \"quote\": \"Flows across DirectLink were between zero and 30 MW south - counter price. This was as a result of a direction by NEMMCO to an MNSP.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was almost 300 MW higher than forecast 4 hours to dispatch and 450 MW higher than forecasts made 12 hours to dispatch."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 2.15pm, unit 2 at Millmerran tripped from 400 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Available capacity was reduced by more than 400 MW throughout the morning. This included a reduction in availability at Gladstone and Townsville of nearly 120 MW, 237 MW at Callide C and 120 MW across both units at Millmerran around midday."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 1.43pm, Enertrade rebid 160 MW of capacity at Oakey from prices of $260/MWh to more than $9000/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-01-03",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Flows across the New South Wales to Queensland (QNI) interconnector into Queensland were between 244 MW and 418 MW during the trading interval, peaking at 554 MW at 2.20pm following the loss of the generator at Millmerran."
+          },
+          {
+            "name": "DirectLink",
+            "quote": "Flows across DirectLink were between zero and 30 MW south - counter price. This was as a result of a direction by NEMMCO to an MNSP."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.",
+          "text": "trading interval ending 2.30pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "A 5-minute dispatch price of $10 000/MWh occurred at 2.20pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_3_January_2006_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_3%20January%202006%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 523,
+    "per_attempt": [
+      {
+        "completion_tokens": 523,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4388,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4911
+      }
+    ],
+    "prompt_tokens": 4388,
+    "reasoning_tokens": 0,
+    "total_tokens": 4911
+  }
+}

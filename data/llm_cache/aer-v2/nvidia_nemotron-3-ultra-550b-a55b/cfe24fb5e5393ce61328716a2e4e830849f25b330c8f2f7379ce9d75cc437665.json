@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:14:31+00:00",
+  "failure": null,
+  "input_sha256": "8e43be6985417c4170dcee7b0258953bd4ed4cdabb6ccbe6bc51daa80d9ebe37",
+  "key": "cfe24fb5e5393ce61328716a2e4e830849f25b330c8f2f7379ce9d75cc437665",
+  "latency_s": 7.63,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-10-22\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"10 am trading interval (09:35-10:00 dispatch intervals)\", \"quote\": \"Monday 22 October - New South Wales 10 am Time Price ($/MWh) Participant Unit Service Offer price Marginal change Contribution ($/MWh) 09:35 $9,049.14 ... 10:00 $336.70 ... Spot price $7858.07/MWh\"}, \"peak_price\": {\"value\": 9700, \"quote\": \"09:40 $9,700.00 Delta Electricity MM4 Energy $9,700.00 1.00 $9,700.00\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The false indication of a need to constrain operation following the commencement of a planned network outage between Armidale and Coffs Harbour was the most significant factor in the price exceeding $5000/MWh on 22 October 2007.\"}, {\"label\": \"constraint_violation\", \"quote\": \"This constraint was violated between 8.05 am and 9.55 am.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On 22 October, this constraint reduced the limit into New South Wales across QNI to around 100 MW, almost 1000 MW lower than its nominal capability of 1078 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Munmorah unit three (300 MW) and Vales Point unit six (660 MW) were both offline for the day.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Eraring unit two (660 MW) was offline from midnight with a forced outage.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL_DF_1\", \"quote\": \"The constraint N>>N-NIL_DF_1, which had the most significant impact on dispatch, did not accurately represent the capability of the network, unnecessarily constraining operations.\"}, {\"id\": \"N^Q_NIL_B 1\", \"quote\": \"This was driven by a different system normal constraint (N^Q_NIL_B 1).\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limiting imports into New South Wales from Queensland across QNI and Terranora\"}, {\"name\": \"Terranora\", \"quote\": \"limiting imports into New South Wales from Queensland across QNI and Terranora\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The false indication of a need to constrain operation following the commencement of a planned network outage between Armidale and Coffs Harbour was the most significant factor in the price exceeding $5000/MWh on 22 October 2007.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"The forecast price after this rebid were not significantly affected, therefore this rebid was not a material driver to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The false indication of a need to constrain operation following the commencement of a planned network outage between Armidale and Coffs Harbour was the most significant factor in the price exceeding $5000/MWh on 22 October 2007."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This constraint was violated between 8.05 am and 9.55 am."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On 22 October, this constraint reduced the limit into New South Wales across QNI to around 100 MW, almost 1000 MW lower than its nominal capability of 1078 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Munmorah unit three (300 MW) and Vales Point unit six (660 MW) were both offline for the day."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Eraring unit two (660 MW) was offline from midnight with a forced outage."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL_DF_1",
+            "quote": "The constraint N>>N-NIL_DF_1, which had the most significant impact on dispatch, did not accurately represent the capability of the network, unnecessarily constraining operations."
+          },
+          {
+            "id": "N^Q_NIL_B 1",
+            "quote": "This was driven by a different system normal constraint (N^Q_NIL_B 1)."
+          }
+        ],
+        "event_date": "2007-10-22",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "limiting imports into New South Wales from Queensland across QNI and Terranora"
+          },
+          {
+            "name": "Terranora",
+            "quote": "limiting imports into New South Wales from Queensland across QNI and Terranora"
+          }
+        ],
+        "intervals": {
+          "quote": "Monday 22 October - New South Wales 10 am Time Price ($/MWh) Participant Unit Service Offer price Marginal change Contribution ($/MWh) 09:35 $9,049.14 ... 10:00 $336.70 ... Spot price $7858.07/MWh",
+          "text": "10 am trading interval (09:35-10:00 dispatch intervals)"
+        },
+        "network_outages": {
+          "quote": "The false indication of a need to constrain operation following the commencement of a planned network outage between Armidale and Coffs Harbour was the most significant factor in the price exceeding $5000/MWh on 22 October 2007.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "09:40 $9,700.00 Delta Electricity MM4 Energy $9,700.00 1.00 $9,700.00",
+          "value": 9700
+        },
+        "rebid_set_price": {
+          "quote": "The forecast price after this rebid were not significantly affected, therefore this rebid was not a material driver to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_22_October_2007_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_22%20October%202007%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 739,
+    "per_attempt": [
+      {
+        "completion_tokens": 739,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6283,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7022
+      }
+    ],
+    "prompt_tokens": 6283,
+    "reasoning_tokens": 0,
+    "total_tokens": 7022
+  }
+}

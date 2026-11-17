@@ -1,0 +1,91 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:21:34+00:00",
+  "failure": null,
+  "input_sha256": "f79f079c77abf84dcec3183a4d87add481459aa5bee20ea358a21f2c2df998e5",
+  "key": "b44a95012f08781b6fcf85e0e41a870bce05f81eb7f9b05ff20e876d23b14856",
+  "latency_s": 5.23,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-08-07\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"9 am, 10 am, 11 am, 5.30 pm and 6.30 pm trading intervals\", \"quote\": \"Initial forecasts at 12.30 pm the day before , showed prices of $10 000/MWh for the 9 am, 10 am, 11 am, 5.30 pm and 6.30 pm trading intervals.\"}, \"peak_price\": {\"value\": 12400, \"quote\": \"On three of those occasions the spot price reach ed $12 400/MWh, the highest spot prices ever recorded in the National Electricity Market (NEM)2.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"The central cause of the high prices on bot h days was day-ahead offers from Hydro Tasmania, which saw significant amounts of cap acity offered at high-prices on both days.\"}, {\"label\": \"solar_output\", \"quote\": \"Hydro Tasmania's non-scheduled generators (all small hydro generators) reduced output during the peak price times; and\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no other significant rebidding.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "The central cause of the high prices on bot h days was day-ahead offers from Hydro Tasmania, which saw significant amounts of cap acity offered at high-prices on both days."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Hydro Tasmania's non-scheduled generators (all small hydro generators) reduced output during the peak price times; and"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2010-08-07",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am."
+          }
+        ],
+        "intervals": {
+          "quote": "Initial forecasts at 12.30 pm the day before , showed prices of $10 000/MWh for the 9 am, 10 am, 11 am, 5.30 pm and 6.30 pm trading intervals.",
+          "text": "9 am, 10 am, 11 am, 5.30 pm and 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On three of those occasions the spot price reach ed $12 400/MWh, the highest spot prices ever recorded in the National Electricity Market (NEM)2.",
+          "value": 12400
+        },
+        "rebid_set_price": {
+          "quote": "There was no other significant rebidding.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_7_and_8_August_2010_-_Tas.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_7%20and%208%20August%202010%20-%20Tas.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1336,
+    "per_attempt": [
+      {
+        "completion_tokens": 951,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8107,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9058
+      },
+      {
+        "completion_tokens": 385,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8107,
+        "prompt_tokens_details": {
+          "cached_tokens": 4384
+        },
+        "total_tokens": 8492
+      }
+    ],
+    "prompt_tokens": 16214,
+    "reasoning_tokens": 0,
+    "total_tokens": 17550
+  }
+}

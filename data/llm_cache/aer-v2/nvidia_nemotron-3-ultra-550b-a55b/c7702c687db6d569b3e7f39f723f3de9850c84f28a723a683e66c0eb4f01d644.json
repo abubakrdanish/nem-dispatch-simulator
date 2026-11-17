@@ -1,0 +1,380 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:52:12+00:00",
+  "failure": null,
+  "input_sha256": "c5f7f92ad0d146f991f8e6ce44769d254590d343ad106ae63a9b76639f00668b",
+  "key": "c7702c687db6d569b3e7f39f723f3de9850c84f28a723a683e66c0eb4f01d644",
+  "latency_s": 24.77,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2025-07-02\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 pm to 11 pm, with the exception of 10 pm\", \"quote\": \"On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm.\"}, \"peak_price\": {\"value\": 11711, \"quote\": \"The prices ranged between $5,212 per MWh and $11,711 per MWh.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW. In addition, the Murraylink interconnector was on a planned outage.\"}, {\"label\": \"wind_output\", \"quote\": \"During the evening of high prices, average 30-minute wind generation in the region was 41 MW. During the same evening period across the week prior, the average wind generation was around 420 MW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"In addition, the Murraylink interconnector was on a planned outage.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There were planned network outages affecting both interconnectors into South Australia on 2 July. This limited South Australia's ability to access lower priced generation from Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).\"}}, {\"event_date\": \"2025-07-24\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"11.20 am, 11.25 am, 11.30 am, 11.35 am, 12.00 pm, 12.15 pm, 12.30 pm, 12.35 pm, 1 pm, 2.55 pm, 3 pm, 3.05 pm, 3.10 pm, 3.25 pm, 3.30 pm, 3.35 pm, 3.50 pm, 4 pm\", \"quote\": \"11.20 am (40 MW of high-priced capacity was needed) ... 11.25 am (7 MW of high-priced capacity was needed) ... 11.30 am (13 MW of high-priced capacity was needed) ... 11.35 am (1 MW of high-priced capacity was needed) ... 12.00 pm (46 MW of high-priced capacity was needed) ... 12.15 pm (10 MW of high-priced capacity was needed) ... 12.30 pm (33 MW of high-priced capacity was needed) ... 12.35 pm (35 MW of high-priced capacity was needed) ... 1 pm (15 MW of high-priced capacity was needed) ... 2.55 pm (44 MW of high-priced capacity was needed) ... 3 pm (45 MW of high-priced capacity was needed) ... 3.05 pm (36 MW of high-priced capacity was needed) ... 3.10 pm (10 MW of high-priced capacity was needed) ... 3.25 pm (45 MW of high-priced capacity was needed) ... 3.30 pm (34 MW of high-priced capacity was needed) ... 3.35 pm (36 MW of high-priced capacity was needed) ... 3.50 pm (2 MW of high-priced capacity was needed) ... 4 pm (10 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 13534, \"quote\": \"24 July 7 $6,767 - $13,534\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to technical and commercial reasons (Appendix B).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to technical and commercial reasons (Appendix B).\"}}, {\"event_date\": \"2025-07-27\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"12.50 pm, 1 pm, 1.05 pm, 1.15 pm, 1.45 pm, 1.50 pm, 2.25 to 3.05 pm, 3.30 pm\", \"quote\": \"12.50 pm (2 MW of high-priced capacity was needed) ... 1 pm (1 MW of high-priced capacity was needed) ... 1.05 pm (2 MW of high-priced capacity was needed) ... 1.15 pm (1 MW of high-priced capacity was needed) ... 1.45 pm (7 MW of high-priced capacity was needed) ... 1.50 pm (8 MW of high-priced capacity was needed) ... 2.25 to 3.05 pm, 3.30 pm (between 6 MW and 15 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 14961, \"quote\": \"27 July 6 $5,849 - $14,961\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to technical and commercial reasons (Appendix C).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to technical and commercial reasons (Appendix C).\"}}, {\"event_date\": \"2025-08-03\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"12.05 pm to 12.20 pm, 12.35 pm, 12.50 pm to 1.30 pm, 1.40 pm\", \"quote\": \"12.05 pm to 12.20 pm, 12.35 pm, 12.50pm to 1.30 pm, 1.40 pm on 3 August (Between 1 MW and 8 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 14432, \"quote\": \"3 August 9 $7,249 - $14,432\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix D).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix D).\"}}, {\"event_date\": \"2025-08-04\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.05 am to 6.30 am\", \"quote\": \"6.05 am to 6.30 am on 4 August (Between 1 MW and 6 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 14432, \"quote\": \"4 August 4 $11,577 - $14,432\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix D).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix D).\"}}, {\"event_date\": \"2025-08-07\", \"regions\": [\"SA1\"], \"intervals\": null, \"peak_price\": {\"value\": 6796, \"quote\": \"7 August 2 $6,583 - $6,796\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no rebidding that contributed to the high prices on this day.\"}}, {\"event_date\": \"2025-08-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4.55 pm, 5 pm, 5.05 pm\", \"quote\": \"4.55 pm on 8 August (10 MW of high-priced capacity was needed) ... 5 pm, 5.05 pm on 8 August (Between 3 MW and 10 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 13372, \"quote\": \"8 August 3 $6,605 - $13,372\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix E).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix E).\"}}, {\"event_date\": \"2025-08-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.55 am, 7.15 am\", \"quote\": \"6.55 am, 7.15 am on 9 August (Between 6 MW and 8 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 12855, \"quote\": \"9 August 2 $6,616 - $12,855\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix E).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to commercial reasons (Appendix E).\"}}, {\"event_date\": \"2025-08-16\", \"regions\": [\"SA1\"], \"intervals\": null, \"peak_price\": {\"value\": 19841, \"quote\": \"16 August 10 $6,783 - $19,841\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no rebidding that contributed to the high prices on this day.\"}}, {\"event_date\": \"2025-08-17\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"1 am, 1.05 am\", \"quote\": \"1 am, 1.05 am (Between 1 MW and 2 MW of high-priced capacity was needed)\"}, \"peak_price\": {\"value\": 19749, \"quote\": \"17 August 10 $6,816 - $19,749\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding occurred due to a technical reason (Appendix F).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding occurred due to a technical reason (Appendix F).\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW. In addition, the Murraylink interconnector was on a planned outage."
+          },
+          {
+            "label": "wind_output",
+            "quote": "During the evening of high prices, average 30-minute wind generation in the region was 41 MW. During the same evening period across the week prior, the average wind generation was around 420 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-07-02",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "In addition, the Murraylink interconnector was on a planned outage."
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm.",
+          "text": "7.30 pm to 11 pm, with the exception of 10 pm"
+        },
+        "network_outages": {
+          "quote": "There were planned network outages affecting both interconnectors into South Australia on 2 July. This limited South Australia's ability to access lower priced generation from Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The prices ranged between $5,212 per MWh and $11,711 per MWh.",
+          "value": 11711
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to technical and commercial reasons (Appendix B)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-07-24",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "11.20 am (40 MW of high-priced capacity was needed) ... 11.25 am (7 MW of high-priced capacity was needed) ... 11.30 am (13 MW of high-priced capacity was needed) ... 11.35 am (1 MW of high-priced capacity was needed) ... 12.00 pm (46 MW of high-priced capacity was needed) ... 12.15 pm (10 MW of high-priced capacity was needed) ... 12.30 pm (33 MW of high-priced capacity was needed) ... 12.35 pm (35 MW of high-priced capacity was needed) ... 1 pm (15 MW of high-priced capacity was needed) ... 2.55 pm (44 MW of high-priced capacity was needed) ... 3 pm (45 MW of high-priced capacity was needed) ... 3.05 pm (36 MW of high-priced capacity was needed) ... 3.10 pm (10 MW of high-priced capacity was needed) ... 3.25 pm (45 MW of high-priced capacity was needed) ... 3.30 pm (34 MW of high-priced capacity was needed) ... 3.35 pm (36 MW of high-priced capacity was needed) ... 3.50 pm (2 MW of high-priced capacity was needed) ... 4 pm (10 MW of high-priced capacity was needed)",
+          "text": "11.20 am, 11.25 am, 11.30 am, 11.35 am, 12.00 pm, 12.15 pm, 12.30 pm, 12.35 pm, 1 pm, 2.55 pm, 3 pm, 3.05 pm, 3.10 pm, 3.25 pm, 3.30 pm, 3.35 pm, 3.50 pm, 4 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "24 July 7 $6,767 - $13,534",
+          "value": 13534
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to technical and commercial reasons (Appendix B).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to technical and commercial reasons (Appendix C)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-07-27",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "12.50 pm (2 MW of high-priced capacity was needed) ... 1 pm (1 MW of high-priced capacity was needed) ... 1.05 pm (2 MW of high-priced capacity was needed) ... 1.15 pm (1 MW of high-priced capacity was needed) ... 1.45 pm (7 MW of high-priced capacity was needed) ... 1.50 pm (8 MW of high-priced capacity was needed) ... 2.25 to 3.05 pm, 3.30 pm (between 6 MW and 15 MW of high-priced capacity was needed)",
+          "text": "12.50 pm, 1 pm, 1.05 pm, 1.15 pm, 1.45 pm, 1.50 pm, 2.25 to 3.05 pm, 3.30 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "27 July 6 $5,849 - $14,961",
+          "value": 14961
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to technical and commercial reasons (Appendix C).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to commercial reasons (Appendix D)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-03",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "12.05 pm to 12.20 pm, 12.35 pm, 12.50pm to 1.30 pm, 1.40 pm on 3 August (Between 1 MW and 8 MW of high-priced capacity was needed)",
+          "text": "12.05 pm to 12.20 pm, 12.35 pm, 12.50 pm to 1.30 pm, 1.40 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "3 August 9 $7,249 - $14,432",
+          "value": 14432
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to commercial reasons (Appendix D).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to commercial reasons (Appendix D)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-04",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "6.05 am to 6.30 am on 4 August (Between 1 MW and 6 MW of high-priced capacity was needed)",
+          "text": "6.05 am to 6.30 am"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "4 August 4 $11,577 - $14,432",
+          "value": 14432
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to commercial reasons (Appendix D).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-07",
+        "interconnectors_named": [],
+        "intervals": null,
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "7 August 2 $6,583 - $6,796",
+          "value": 6796
+        },
+        "rebid_set_price": {
+          "quote": "There was no rebidding that contributed to the high prices on this day.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to commercial reasons (Appendix E)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-08",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "4.55 pm on 8 August (10 MW of high-priced capacity was needed) ... 5 pm, 5.05 pm on 8 August (Between 3 MW and 10 MW of high-priced capacity was needed)",
+          "text": "4.55 pm, 5 pm, 5.05 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "8 August 3 $6,605 - $13,372",
+          "value": 13372
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to commercial reasons (Appendix E).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to commercial reasons (Appendix E)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-09",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "6.55 am, 7.15 am on 9 August (Between 6 MW and 8 MW of high-priced capacity was needed)",
+          "text": "6.55 am, 7.15 am"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "9 August 2 $6,616 - $12,855",
+          "value": 12855
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to commercial reasons (Appendix E).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-16",
+        "interconnectors_named": [],
+        "intervals": null,
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "16 August 10 $6,783 - $19,841",
+          "value": 19841
+        },
+        "rebid_set_price": {
+          "quote": "There was no rebidding that contributed to the high prices on this day.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding occurred due to a technical reason (Appendix F)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-08-17",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "1 am, 1.05 am (Between 1 MW and 2 MW of high-priced capacity was needed)",
+          "text": "1 am, 1.05 am"
+        },
+        "network_outages": {
+          "quote": "The planned network outage of one Tailem Bend to Tungkillo line in South Australia contributed to all FCAS high prices this quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "17 August 10 $6,816 - $19,749",
+          "value": 19749
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding occurred due to a technical reason (Appendix F).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf",
+    "url": "https://www.aer.gov.au/system/files/2025-11/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20July%20to%20September%202025.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3583,
+    "per_attempt": [
+      {
+        "completion_tokens": 3583,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 17143,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20726
+      }
+    ],
+    "prompt_tokens": 17143,
+    "reasoning_tokens": 0,
+    "total_tokens": 20726
+  }
+}

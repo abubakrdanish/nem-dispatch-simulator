@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:52:31+00:00",
+  "failure": null,
+  "input_sha256": "dcee6c95fddad58c2b832ccc6ac565162ada84fb597cf7dc8729341316dbcc1a",
+  "key": "e0eade7563c7ae56d2cb9be527f89f4d5d469ac3162e06311e834ad5bedc30f9",
+  "latency_s": 18.41,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2025-11-25\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"12.30 pm (30-minute price); 12.15 pm and 12.20 pm (5-minute intervals with high-priced capacity needed)\", \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"peak_price\": {\"value\": 5984, \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 25 November at 12.30 pm, demand was 7,236 MW which was 1,538 MW more than the previous hour and 547 MW higher than forecast.\"}, {\"label\": \"solar_output\", \"quote\": \"Rooftop solar generation dropped from over 5,380 MW at 11.30 am to around 4,180 MW at 12.30 pm when the high prices occurred.\"}, {\"label\": \"network_outage\", \"quote\": \"The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of Terranora's three Directlink cables reduced flows to around 0 MW compared to its nominal capacity of 210 MW and contributed to the high price on 25 November.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Some units were unable to start or ramp up quickly enough to lower the price. For example, on 25 November, 1,700 MW of low-priced capacity was unable to be dispatched due to some units being limited by their offered ramp up rate.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding contributed to the high prices on 25 November. These rebids included participants withdrawing low-priced capacity or moving capacity from low to high prices for either technical or commercial reasons.\"}], \"constraints_named\": [{\"id\": \"Uralla to Tamworth line constraint\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}, {\"name\": \"Terranora (Directlink)\", \"quote\": \"A planned outage of Terranora's three Directlink cables reduced flows to around 0 MW compared to its nominal capacity of 210 MW and contributed to the high price on 25 November.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 12.13 pm, AGL Energy rebid 250 MW of capacity at Bayswater from $36 per MWh to the market price cap due to a change in forecast prices (commercial reason) and set the high price at 12.20 pm.\"}}], \"events\": [{\"event_date\": \"2025-11-26\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"11.30 am (30-minute price)\", \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"peak_price\": {\"value\": 10342, \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 26 November, demand was 9,400 MW at 11.30 am which was 2,004 MW more than the previous hour and 2,429 MW higher than forecast.\"}, {\"label\": \"solar_output\", \"quote\": \"Rooftop solar generation dropped from over 4,460 MW at 10.30 am to around 2,285 MW at 11.30 am when the high prices occurred.\"}, {\"label\": \"network_outage\", \"quote\": \"The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Some units were unable to start or ramp up quickly enough to lower the price. For example, on 26 November, units unable to start up quickly enough meant that up to 412 MW of low-priced capacity was unable to be dispatched while only around 312 MW of high-priced capacity was needed.\"}], \"constraints_named\": [{\"id\": \"Uralla to Tamworth line constraint\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}, {\"name\": \"Terranora (Directlink)\", \"quote\": \"limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no rebidding that contributed to the high prices on 26 November.\"}}], \"events\": [{\"event_date\": \"2025-12-19\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"2 pm (30-minute price)\", \"quote\": \"The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.\"}, \"peak_price\": {\"value\": 5773, \"quote\": \"The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"During the high prices demand was above 12,000 MW which was 1,237 MW more than the previous hour and 1,440 MW higher than forecast one hour prior.\"}, {\"label\": \"solar_output\", \"quote\": \"Rooftop solar generation dropped from over 4,390 MW at 1 pm to 2,985 MW at 2 pm when the high prices occurred.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"AGL Energy's Bayswater unit 1 and Origin Energy's Eraring unit 2 were already running but were unable to ramp up quickly enough to meet the sudden increase in demand to mitigate the high prices.\"}, {\"label\": \"ramp_rates\", \"quote\": \"If the relevant units' ramp up rates were near their maximum registered rates or were more aligned to the unit's technical ability, the high prices on 19 December would likely not have occurred.\"}], \"constraints_named\": [{\"id\": \"Bannaby to Sydney West line constraint\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"On 19 December, there were no network line outages, but system normal constraints contributed to the high price.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "During the high prices demand was above 12,000 MW which was 1,237 MW more than the previous hour and 1,440 MW higher than forecast one hour prior."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Rooftop solar generation dropped from over 4,390 MW at 1 pm to 2,985 MW at 2 pm when the high prices occurred."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "AGL Energy's Bayswater unit 1 and Origin Energy's Eraring unit 2 were already running but were unable to ramp up quickly enough to meet the sudden increase in demand to mitigate the high prices."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "If the relevant units' ramp up rates were near their maximum registered rates or were more aligned to the unit's technical ability, the high prices on 19 December would likely not have occurred."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bannaby to Sydney West line constraint",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "event_date": "2025-12-19",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.",
+          "text": "2 pm (30-minute price)"
+        },
+        "network_outages": {
+          "quote": "On 19 December, there were no network line outages, but system normal constraints contributed to the high price.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.",
+          "value": 5773
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-02/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20October%20to%20December%202025.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2441,
+    "per_attempt": [
+      {
+        "completion_tokens": 2441,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8883,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11324
+      }
+    ],
+    "prompt_tokens": 8883,
+    "reasoning_tokens": 0,
+    "total_tokens": 11324
+  }
+}

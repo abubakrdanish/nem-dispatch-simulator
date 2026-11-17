@@ -1,0 +1,122 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:15:56+00:00",
+  "failure": null,
+  "input_sha256": "6a884a6eb48864045e33fa880e23b903672db4bcad3e9fdfd61c2041b94150c6",
+  "key": "d1883c64be77e689e7600afa2b5c7d1b389e6e0ca2f5550bda23969a42b8b2b7",
+  "latency_s": 14.49,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-01-26\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm\", \"quote\": \"The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm\"}, \"peak_price\": {\"value\": 9683, \"quote\": \"Five-minute dispatch prices in South Australia rose to a high of $9683/MWh at 2.35 pm\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"combined demand across the two regions reached 10 265 MW at 4 pm. This extreme demand was the fifth highest for the summer to that time and was driven by temperatures in Melbourne and Adelaide of around 40 degrees\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems\"}, {\"label\": \"network_outage\", \"quote\": \"From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria. Those constraints reduced import capability from Snowy, limiting flows into Victoria from around 1600 MW to 1100 MW\"}, {\"label\": \"rebids\", \"quote\": \"A combination of temperature driven high demands in both Victoria and South Australia, rebidding by International Power and the reduced availability of typically low priced capacity at TRU Energy's Yallourn and NRG Flinders' Northern power stations contributed to the price exceeding $5000/MWh\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints classified as those related to the CSC/CSP trial were determining the limits for flows from Snowy into Victoria (and into New South Wales generally counter price) for all but 11 dispatch intervals throughout the afternoon\"}], \"constraints_named\": [{\"id\": \"CSC/CSP trial constraints\", \"quote\": \"Constraints classified as those related to the CSC/CSP trial were determining the limits for flows from Snowy into Victoria (and into New South Wales generally counter price) for all but 11 dispatch intervals throughout the afternoon\"}, {\"id\": \"discretionary constraints for flows into Victoria\", \"quote\": \"From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria\"}, {\"id\": \"constraints to manage negative residues\", \"quote\": \"At 3 pm a series of new constraints were implemented by NEMMCO to manage the accumulation of negative residues on flows from Snowy to Victoria\"}], \"interconnectors_named\": [{\"name\": \"Victoria to Snowy (VIC-NSW)\", \"quote\": \"flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions in the Snowy region\"}, {\"name\": \"Heywood (VIC-SA)\", \"quote\": \"Prices were aligned between Victoria and South Australia all day, with the Heywood interconnector at close to zero for the peak demand periods\"}, {\"name\": \"MurrayLink (VIC-SA)\", \"quote\": \"The limit across MurrayLink into South Australia was zero from 2.40 pm\"}, {\"name\": \"Snowy to New South Wales\", \"quote\": \"This saw the limit on flows into Victoria restored to around 1600 MW and, relieve the constraint on the interconnector. The re-orientation, however, resulted in significant counter-price flows on the Snowy to New South Wales interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria. Those constraints reduced import capability from Snowy, limiting flows into Victoria from around 1600 MW to 1100 MW\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A combination of temperature driven high demands in both Victoria and South Australia, rebidding by International Power and the reduced availability of typically low priced capacity at TRU Energy's Yallourn and NRG Flinders' Northern power stations contributed to the price exceeding $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "combined demand across the two regions reached 10 265 MW at 4 pm. This extreme demand was the fifth highest for the summer to that time and was driven by temperatures in Melbourne and Adelaide of around 40 degrees"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems"
+          },
+          {
+            "label": "network_outage",
+            "quote": "From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria. Those constraints reduced import capability from Snowy, limiting flows into Victoria from around 1600 MW to 1100 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "A combination of temperature driven high demands in both Victoria and South Australia, rebidding by International Power and the reduced availability of typically low priced capacity at TRU Energy's Yallourn and NRG Flinders' Northern power stations contributed to the price exceeding $5000/MWh"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constraints classified as those related to the CSC/CSP trial were determining the limits for flows from Snowy into Victoria (and into New South Wales generally counter price) for all but 11 dispatch intervals throughout the afternoon"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "CSC/CSP trial constraints",
+            "quote": "Constraints classified as those related to the CSC/CSP trial were determining the limits for flows from Snowy into Victoria (and into New South Wales generally counter price) for all but 11 dispatch intervals throughout the afternoon"
+          },
+          {
+            "id": "discretionary constraints for flows into Victoria",
+            "quote": "From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria"
+          },
+          {
+            "id": "constraints to manage negative residues",
+            "quote": "At 3 pm a series of new constraints were implemented by NEMMCO to manage the accumulation of negative residues on flows from Snowy to Victoria"
+          }
+        ],
+        "event_date": "2006-01-26",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to Snowy (VIC-NSW)",
+            "quote": "flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions in the Snowy region"
+          },
+          {
+            "name": "Heywood (VIC-SA)",
+            "quote": "Prices were aligned between Victoria and South Australia all day, with the Heywood interconnector at close to zero for the peak demand periods"
+          },
+          {
+            "name": "MurrayLink (VIC-SA)",
+            "quote": "The limit across MurrayLink into South Australia was zero from 2.40 pm"
+          },
+          {
+            "name": "Snowy to New South Wales",
+            "quote": "This saw the limit on flows into Victoria restored to around 1600 MW and, relieve the constraint on the interconnector. The re-orientation, however, resulted in significant counter-price flows on the Snowy to New South Wales interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm",
+          "text": "The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm"
+        },
+        "network_outages": {
+          "quote": "From 12.55 pm to 2.50 pm, NEMMCO invoked discretionary constraints to limit flows from Snowy into Victoria. Those constraints reduced import capability from Snowy, limiting flows into Victoria from around 1600 MW to 1100 MW",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Five-minute dispatch prices in South Australia rose to a high of $9683/MWh at 2.35 pm",
+          "value": 9683
+        },
+        "rebid_set_price": {
+          "quote": "A combination of temperature driven high demands in both Victoria and South Australia, rebidding by International Power and the reduced availability of typically low priced capacity at TRU Energy's Yallourn and NRG Flinders' Northern power stations contributed to the price exceeding $5000/MWh",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_26_January_2006_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_26%20January%202006%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1031,
+    "per_attempt": [
+      {
+        "completion_tokens": 1031,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6666,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7697
+      }
+    ],
+    "prompt_tokens": 6666,
+    "reasoning_tokens": 0,
+    "total_tokens": 7697
+  }
+}

@@ -1481,3 +1481,160 @@ On the 741,340 matched rows of the seventeen months, rung 4's price moved in 33,
 - **The ten-month result files** carry two small stale exclusions (August and June 2025's first intervals).
 - **The months outside the sample:** March 2021 to July 2024, 62% of the decade's spike value.
 - **Rebidding is not among them.** The final-offer tables are the bids in force at dispatch, rebids included.
+
+## 19. What the AER says caused each spike, and whether rung 4 follows it
+
+Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Model responses: `data/llm_cache/aer-v2/` (committed). Hand-coded sample: `data/aer_hand_coded.json`. Judgements of every model label on it: `data/aer_judgements.json`. Outputs (gitignored): `results/aer_labels.json`, `results/aer_accuracy.csv`, `results/aer_cause_test.csv`, `results/aer_decade_causes.csv`.
+
+### 19.1 The documents
+
+**What was collected.** Every report the AER published under clause 3.13.7 on an energy spot price above $5,000/MWh: one report per event before 2023, then quarterly, then from 2026 "significant electricity prices" under the AER's new principles-based criteria. Reports about FCAS prices, gas markets, consultations and errata are excluded.
+
+**How they were found** (measured, 2026-11-16 and 17):
+- **The AER's sitemap.** It lists 85,012 URLs. robots.txt disallows site search and faceted listings, so neither was used.
+- **Candidate pages.** 283 URLs name a high-price report. Each is a `/documents/` page and a `/publications/` page for the same report.
+- **Pages fetched: 143.** The other **140 were refused**: the AER's CDN answered with a bot challenge (a proof-of-work script, served with status 200), or the connection was reset. The challenges were not solved.
+- **Nothing lost to the refusals.** Every refused page's report was checked by date against the documents held, and every one is held through its paired page.
+- **User agent.** The AER's firewall drops any request whose user agent carries the project's parenthesised comment. The bare `nem-dispatch-simulator/0.1` gets through, so that is what was sent to this host.
+
+**What was read.**
+- **142 documents, 2005–2026, all readable** (`pypdf`; none was a scanned image). The PDF was taken where a page offered both PDF and DOCX.
+- **Extracted with a valid answer: 137.** 4 of the 5 failures are 2005–2008 reports naming the Snowy region, abolished in 2008 and not in the schema. The fifth is 13 January 2017 (Queensland): the model twice gave a constraint ID longer than the schema allows.
+- **Duplicates.** One is known: January–March 2025 exists as an original and a corrected (`_1`) version. Events are merged by date and region, so it does not double-count.
+
+### 19.2 Accuracy on the hand-coded sample
+
+**The sample.** 30 events from 17 documents, coded by reading each report before any model output for it existed.
+- **21 events from the 2020–2026 reports** that cover the seventeen scored months.
+- **9 from per-event reports published July 2016 to March 2023,** drawn at random (seed 20261117), one event each.
+
+**Coding rules.**
+- **A cause label** needs the AER to present the factor as contributing to this event's price or tight conditions. A report-level sentence counts only if it names the event's day or month.
+- **"A rebid set the price"** is yes only on an explicit statement that a rebid set the price.
+
+**Two checks.**
+1. **Verbatim (mechanical, every quote).** In the corpus, 2,700 of 2,942 quotes (91.8%) occur in the source ignoring whitespace only, and 573 of the sample's 678 strictly. Whitespace is ignored because PDF extraction inserts spaces inside words ("S ix", "f ailed"). That rule was adopted after the first sample run showed the artefact. Paraphrases and ellipsis-joined fragments still fail.
+2. **Support (human, the sample).** Every label the model gave with a verbatim quote was read against its document: does the quote support this label for this event and period? A label whose quote is real but does not support it is a **misattribution**.
+
+**Misattribution**, for each configuration on the same 30 events:
+
+| Configuration | Events matched | Verbatim labels | Misattributed | Rate | Tokens on the sample | Time |
+|---|---:|---:|---:|---:|---:|---:|
+| nemotron, reasoning off (**used for every result**) | 29 of 30 | 128 | 23 | **18.0%** | 357,490 | ≈ 7 min |
+| nemotron, reasoning on (comparison) | 30 of 30 | 128 | 5 | **3.9%** | 485,969 | ≈ 36 min |
+| mistral-large-4 (comparison, **2 of 17 documents**: stopped) | 3 of 30 | 17 | 0 | n/a | 125,000 on two documents | 5–10 min a document |
+
+- **The reasoning-off misattributions** fall into a few kinds: network elements filed as plant outages (Basslink, Directlink, transmission lines), system normal constraints filed as network outages, constraints that set the price filed as violations, FCAS-market rebids filed as energy rebids, and statements that rebidding did *not* contribute read as a rebid label.
+- **On the six labels kept, misattribution is 5 of 65 (7.7%).** Four of those five are `network_outage`. In three, the event does carry a network outage elsewhere in the report.
+- **Mistral could not run with reasoning off:** on this endpoint, 90–94% of its output tokens were reasoning whatever the setting.
+
+**Per label, reasoning off.** The reference is the blind hand codes plus 3 labels a model gave that the judge found supported. Kept if there are at least 3 positives, precision ≥ 0.80 and recall ≥ 0.60 (fixed in advance):
+
+| Label | Positives | Precision | Recall | Kept | Reasoning on: precision / recall |
+|---|---:|---:|---:|---|---|
+| wind output | 20 | 1.00 | 1.00 | yes | 1.00 / 0.95 |
+| demand | 19 | 1.00 | 0.63 | yes | 0.95 / 0.95 |
+| network outage | 19 | 0.94 | 0.79 | yes | 1.00 / 0.84 |
+| ramp rates and slow starts | 9 | 0.89 | 0.89 | yes | 1.00 / 1.00 |
+| FCAS co-optimisation | 8 | 1.00 | 0.62 | yes | 1.00 / 0.38 |
+| solar output | 4 | 1.00 | 0.75 | yes | 1.00 / 1.00 |
+| interconnector limit | 24 | 1.00 | 0.46 | no | 0.94 / 0.67 |
+| unscheduled plant outage | 17 | 0.77 | 0.59 | no | 1.00 / 0.47 |
+| rebids | 16 | 0.79 | 0.69 | no | 0.94 / 0.94 |
+| scheduled plant outage | 10 | 0.58 | 0.70 | no | 0.89 / 0.80 |
+| battery state of charge | 8 | 0.75 | 0.38 | no | 1.00 / 0.62 |
+| administered pricing or intervention | 3 | 0.75 | 1.00 | no | 0.50 / 0.33 |
+| constraint violation | 2 | 0.20 | 0.50 | no (too few positives) | 1.00 / 0.50 |
+
+**Statement fields, reasoning off.**
+- **Network outages** (hand, model): contributed/contributed 15, did-not/did-not 4, not-stated/not-stated 6, contributed/not-stated 3, not-stated/contributed 1, and one event the model did not return.
+- **"A rebid set the price":** the model said yes on 14 events, 3 of them right (precision 0.21). The field is dropped.
+- **Peak prices:** equal on all 29 matched events. They are not used in any result.
+
+### 19.3 The test: rung 4 and rung 2 by AER cause
+
+**Definitions**, fixed before any label was seen (`nemsim/aer/test.py`):
+- **Scored rows.** The published results on the seventeen months, on the rows all five rungs scored. No rung was re-scored.
+- **Join.** An AER event is a date and the regions it names, and it covers those regions' region-intervals whose start falls on that date.
+- **Population.** Actual price (DISPATCHPRICE.RRP) of $5,000/MWh or more. The AER's own threshold is the 30-minute price, so a reported day can carry 5-minute prices on either side.
+- **Coverage of the band.** Of the 8,398 region-intervals at $300 or more, 992 are at $5,000 or more: 11.8% of the band's intervals and 75.6% of its settled value.
+
+| $5,000+ region-intervals | n | Days | Rung 4 within $5 (95% day-block interval) | Rung 4 within 10% | Rung 4 within $5 by value | Rung 2 within $5 | Rung 2 within 10% |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| all | 992 | 73 | 18.6% (10.8–31.6) | 58.8% | 19.2% | 0.3% | 11.2% |
+| in an AER-reported day-region | 876 | 31 | 18.2% | 61.3% | 18.3% | 0.3% | 12.7% |
+| not in one | 116 | 48 | 22.4% | 39.7% | 25.3% | 0.0% | 0.0% |
+| **attributed to a network outage** | **364** | **24** | **37.4% (25.2–51.0)** | 67.0% | 32.4% | 0.0% | 0.0% |
+| **reported, not attributed to one** | **512** | **7** | **4.5% (1.2–11.1)** | 57.2% | 4.8% | 0.6% | 21.7% |
+| AER: outages contributed | 367 | 24 | 38.1% | 67.8% | 33.2% | 0.0% | 0.0% |
+| AER: outages did **not** contribute | 353 | 4 | 1.4% (0.0–3.7) | 62.9% | 2.8% | 0.8% | 30.3% |
+| AER: not stated | 156 | 3 | 9.0% | 42.3% | 6.9% | 0.0% | 2.6% |
+| cause: demand | 278 | 16 | 27.3% | 55.4% | 29.9% | 0.0% | 0.0% |
+| cause: solar output | 21 | 6 | 23.8% | 33.3% | 29.9% | 0.0% | 0.0% |
+| cause: wind output | 821 | 25 | 16.6% | 61.6% | 15.4% | 0.4% | 13.5% |
+| cause: ramp rates | 262 | 13 | 7.3% | 53.4% | 10.9% | 1.1% | 40.8% |
+| cause: FCAS co-optimisation | 244 | 8 | 6.6% | 54.5% | 9.3% | 1.2% | 43.9% |
+
+The "broad" network definition (adding interconnector limit and constraint violation) gives the same rows, because both labels were dropped.
+
+**Verdict on the rule fixed in advance: holds** (37.4% against 4.5%, intervals not overlapping).
+- **But the non-network side is 7 days, 349 of its 512 region-intervals on 11, 12 and 26 June 2025.**
+- **Without June 2025** that side is 4 days and 163 region-intervals at 11.7% (5.9–50.0). That overlaps the network side, so the verdict becomes "consistent, not shown".
+- **Rung 4 by day, on network-attributed days,** ranges from 0% (e.g. 13 and 28 May 2025, 12 January 2026) to 93–100% (6 and 22 August 2024).
+
+The same split on every $300+ region-interval in a labelled day-region:
+- **Network-attributed:** 40.1% (28.3–49.0) on 1,266 region-intervals.
+- **Not network-attributed:** 19.4% (15.6–23.5) on 1,815.
+- **Not in any AER report:** 5,317 region-intervals at 29.9%.
+
+### 19.4 What the AER attributes the decade's spikes to
+
+**Definitions** (`nemsim/aer/decade_causes.py`):
+- **Span.** FY2017–FY2026, from the decade price warehouse.
+- **Reportable day-region.** Some 30-minute price (the mean of six 5-minute prices) above $5,000.
+- **Value.** |RRP × TOTALDEMAND / 12| over the 5-minute intervals in those half-hours, in nominal dollars.
+
+| | Day-regions | Value ($m) | Share |
+|---|---:|---:|---:|
+| reportable | 216 | 15,897 | |
+| named in a collected report | 177 | 14,257 | 81.9% of day-regions, 89.7% of value |
+| AER events not in the reportable set (FCAS-only days, 2026 events below $5,000) | 19 | | |
+
+**Coverage by financial year** (share of reportable day-regions; share of value):
+- **FY2017:** 94%; 95%.
+- **FY2018:** 67%; 74%.
+- **FY2019–FY2021:** 100%; 100%.
+- **FY2022:** 61%; 70%.
+- **FY2023:** 44%; 37%.
+- **FY2024–FY2025:** 100%; 100%.
+- **FY2026:** 58%; 57%.
+
+**Why the gaps (inferred, not checked).** In FY2022 and FY2023 the AER covered some events in combined or special reports: the June 2022 market suspension, and a table of May–July 2022 events inside the August–September 2022 report that the extraction may not split by day. From 2026 the AER reports selected days, not every day over $5,000.
+
+**Attributions** among the 177 labelled day-regions (overlapping; precision and recall, reasoning off):
+
+| The AER attributed it to | Day-regions | Share | Value share | Precision | Recall |
+|---|---:|---:|---:|---:|---:|
+| demand | 100 | 56.5% | 57.3% | 1.00 | 0.63 |
+| wind output | 99 | 55.9% | 55.9% | 1.00 | 1.00 |
+| network outage | 87 | 49.2% | 43.5% | 0.94 | 0.79 |
+| ramp rates and slow starts | 43 | 24.3% | 21.9% | 0.89 | 0.89 |
+| FCAS co-optimisation | 28 | 15.8% | 19.4% | 1.00 | 0.62 |
+| solar output | 25 | 14.1% | 8.7% | 1.00 | 0.75 |
+| none of the six | 1 | 0.6% | 0.4% | | |
+
+**The AER's explicit network-outage statement:** contributed on 53.1% of labelled day-regions (45.8% of value), did not contribute on 9.6% (15.6%), not stated on 37.3% (38.6%).
+
+### 19.5 Tokens
+
+All of these are model calls recorded in the cache:
+
+| Run | Calls | Prompt | Completion (reasoning) | Total |
+|---|---:|---:|---:|---:|
+| aer-v1, abandoned: the schema's length limits failed 2 of 5 | 5 | 197,302 | 58,904 | 256,206 |
+| aer-v2, the corpus, reasoning off | 142 | 1,891,343 | 205,387 | 2,096,730 |
+| aer-v2, the sample, reasoning on | 17 | 314,886 | 171,083 (135,895) | 485,969 |
+| aer-v2, mistral: 6 documents by mistake (an empty selection fell through to the whole corpus; fixed, with a test), then 2 sample documents | 8 | 113,116 | 127,797 (113,021) | 240,913 |
+| **Total recorded** | | | | **3,079,818** |
+
+Not recorded: the first attempts of the two re-asked failures, and mistral's call in flight when it was stopped. That is probably 50,000–150,000 more.

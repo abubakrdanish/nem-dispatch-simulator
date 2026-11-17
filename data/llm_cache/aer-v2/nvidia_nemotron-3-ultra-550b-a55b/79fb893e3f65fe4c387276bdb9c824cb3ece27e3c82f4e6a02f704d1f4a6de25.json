@@ -1,0 +1,230 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:19:31+00:00",
+  "failure": null,
+  "input_sha256": "a0f155fa8d8c7735f5670887147161462d97bf68096a1ddd0105c09b4bd8dba8",
+  "key": "79fb893e3f65fe4c387276bdb9c824cb3ece27e3c82f4e6a02f704d1f4a6de25",
+  "latency_s": 24.26,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-01-04\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3 pm to 5 pm trading intervals inclusive\", \"quote\": \"Almost 90 per cent of capacity at AGL's Torrens Island power station was priced at close to the price cap of $10 000/MWh for the day, setting the price for the 3 pm to 5 pm trading intervals inclusive.\"}, \"peak_price\": {\"value\": 9950, \"quote\": \"Spot price $ 9950/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 4 January, temperatures reached 38 degrees in Adelaide driving demand to very high levels.\"}, {\"label\": \"rebids\", \"quote\": \"The first dispatch interval that the unit was not offered the five-minute dispatch price increased from $376/MWh to $9950/MWh after unit A3 was shut down.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The first dispatch interval that the unit was not offered the five-minute dispatch price increased from $376/MWh to $9950/MWh after unit A3 was shut down.\"}}, {\"event_date\": \"2008-01-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2.30 pm to 5.30 pm\", \"quote\": \"From 2.30 pm to 5.30 pm, AGL offered around 80 per cent of Torrens Island's capacity above $9000/MWh, the majority at close to the price cap, and set the price at around $10 000/MWh.\"}, \"peak_price\": {\"value\": 9999.72, \"quote\": \"Spot price $ 9999.72/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 10 January, temperatures reached 41 degrees leading to a record demand in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"A rebid at 3.54 pm the previous day saw unit B4 committed and unit A4 de-committed. A rebid at 9.53 am on 10 January saw unit A4 re-committed.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"constraints_named\": [{\"id\": \"S>>V_NIL_BRPA_MNWT\", \"quote\": \"The rebid reason given was \\\"Portfolio opt network constraint S>>V_NIL_BRPA_MNWT\\\"\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A rebid at 3.54 pm the previous day saw unit B4 committed and unit A4 de-committed. A rebid at 9.53 am on 10 January saw unit A4 re-committed.\"}}, {\"event_date\": \"2008-02-18\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"12.30 pm to 6.30 pm\", \"quote\": \"From 12.30 pm to 6.30 pm, AGL offered around 80 per cent of Torrens Island's capacity at close to the price cap, setting the price at around $10 000/MWh.\"}, \"peak_price\": {\"value\": 9999.72, \"quote\": \"Spot price $ 9999.72/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 18 February, temperatures reached 37 degrees with demand peaking just short of the record set on 10 January.\"}, {\"label\": \"rebids\", \"quote\": \"Unit A3 was committed through a rebid the previous day. The reason given was \\\"Market notice: market notice LOR\\\". At 11.44 am on 18 February, 600 MW was shifted from prices around $9000/MWh into higher prices. The reason given was \\\"Portfolio optimisation:Price/Volume trade off\\\".\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Unit A3 was committed through a rebid the previous day. The reason given was \\\"Market notice: market notice LOR\\\". At 11.44 am on 18 February, 600 MW was shifted from prices around $9000/MWh into higher prices. The reason given was \\\"Portfolio optimisation:Price/Volume trade off\\\".\"}}, {\"event_date\": \"2008-02-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2 pm and 6 pm trading intervals\", \"quote\": \"On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm.\"}, \"peak_price\": {\"value\": 6087.21, \"quote\": \"Spot price $ 6087.21/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 19 February, temperatures reached 38 degrees with demand again at near record levels.\"}, {\"label\": \"rebids\", \"quote\": \"On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Reductions in transfer limits on the Heywood inter-connector contributed to high prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Reductions in transfer limits on the Heywood inter-connector contributed to high prices.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 4 January, temperatures reached 38 degrees in Adelaide driving demand to very high levels."
+          },
+          {
+            "label": "rebids",
+            "quote": "The first dispatch interval that the unit was not offered the five-minute dispatch price increased from $376/MWh to $9950/MWh after unit A3 was shut down."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-01-04",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "Almost 90 per cent of capacity at AGL's Torrens Island power station was priced at close to the price cap of $10 000/MWh for the day, setting the price for the 3 pm to 5 pm trading intervals inclusive.",
+          "text": "3 pm to 5 pm trading intervals inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9950/MWh",
+          "value": 9950
+        },
+        "rebid_set_price": {
+          "quote": "The first dispatch interval that the unit was not offered the five-minute dispatch price increased from $376/MWh to $9950/MWh after unit A3 was shut down.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 10 January, temperatures reached 41 degrees leading to a record demand in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "A rebid at 3.54 pm the previous day saw unit B4 committed and unit A4 de-committed. A rebid at 9.53 am on 10 January saw unit A4 re-committed."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "S>>V_NIL_BRPA_MNWT",
+            "quote": "The rebid reason given was \"Portfolio opt network constraint S>>V_NIL_BRPA_MNWT\""
+          }
+        ],
+        "event_date": "2008-01-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "From 2.30 pm to 5.30 pm, AGL offered around 80 per cent of Torrens Island's capacity above $9000/MWh, the majority at close to the price cap, and set the price at around $10 000/MWh.",
+          "text": "2.30 pm to 5.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9999.72/MWh",
+          "value": 9999.72
+        },
+        "rebid_set_price": {
+          "quote": "A rebid at 3.54 pm the previous day saw unit B4 committed and unit A4 de-committed. A rebid at 9.53 am on 10 January saw unit A4 re-committed.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 18 February, temperatures reached 37 degrees with demand peaking just short of the record set on 10 January."
+          },
+          {
+            "label": "rebids",
+            "quote": "Unit A3 was committed through a rebid the previous day. The reason given was \"Market notice: market notice LOR\". At 11.44 am on 18 February, 600 MW was shifted from prices around $9000/MWh into higher prices. The reason given was \"Portfolio optimisation:Price/Volume trade off\"."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-02-18",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports from Victoria across the Heywood and Murraylink interconnectors were significantly lower than historic levels, with a combined limit of less than 400 MW, compared to maximum capability of close to 700 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "From 12.30 pm to 6.30 pm, AGL offered around 80 per cent of Torrens Island's capacity at close to the price cap, setting the price at around $10 000/MWh.",
+          "text": "12.30 pm to 6.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9999.72/MWh",
+          "value": 9999.72
+        },
+        "rebid_set_price": {
+          "quote": "Unit A3 was committed through a rebid the previous day. The reason given was \"Market notice: market notice LOR\". At 11.44 am on 18 February, 600 MW was shifted from prices around $9000/MWh into higher prices. The reason given was \"Portfolio optimisation:Price/Volume trade off\".",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 19 February, temperatures reached 38 degrees with demand again at near record levels."
+          },
+          {
+            "label": "rebids",
+            "quote": "On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Reductions in transfer limits on the Heywood inter-connector contributed to high prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-02-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Reductions in transfer limits on the Heywood inter-connector contributed to high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm.",
+          "text": "2 pm and 6 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 6087.21/MWh",
+          "value": 6087.21
+        },
+        "rebid_set_price": {
+          "quote": "On two occasions during the day, AGL rebid up to 75 per cent of capacity from prices of less than $200/MWh to $9000/MWh immediately prior to dispatch. These rebids saw the price in South Australia increase to $1573/MWh at 2 pm and $6087/MWh at 6 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_4_and_10_January_and_18_-_19_February_2008_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_4%20and%2010%20January%20and%2018%20-%2019%20February%202008%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2114,
+    "per_attempt": [
+      {
+        "completion_tokens": 2114,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 36018,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 38132
+      }
+    ],
+    "prompt_tokens": 36018,
+    "reasoning_tokens": 0,
+    "total_tokens": 38132
+  }
+}

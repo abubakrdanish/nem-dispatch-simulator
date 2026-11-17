@@ -1,0 +1,138 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:15:04+00:00",
+  "failure": null,
+  "input_sha256": "360226fc298727f3fcac71462446fc6b94a28436baddf113a8dddacda1cde5bc",
+  "key": "619ac727daf71efa2c185a415468829473a4077544aabeceb2ff3700b513cc32",
+  "latency_s": 11.4,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-07-23\", \"regions\": [\"NSW1\", \"QLD1\", \"SA1\", \"VIC1\"], \"intervals\": {\"text\": \"The spot price for each of the mainland regions exceeded $5000/MWh for the 6.30 pm trading interval.\", \"quote\": \"The spot price for each of the mainland regions exceeded $5000/MWh for the 6.30 pm trading interval.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"the five-minute dispatch price increased from $294/MWh to $10 000/MWh at 6 pm\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 5.24 pm the Hazelwood to Loy Yang No 3 500kV line tripped due to faulty protection equipment, leaving only one remaining line connecting Loy Yang and Tasmania to the rest of the market.\"}, {\"label\": \"network_outage\", \"quote\": \"At 5.24 pm the Hazelwood to Loy Yang No 3 500kV line tripped due to faulty protection equipment, leaving only one remaining line connecting Loy Yang and Tasmania to the rest of the market.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The combined outages restricted flow into Victoria across BassLink to zero and constrained generation at Loy Yang A and B by around 1000 MW.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The large increase in FCAS requirements led to some generators being reduced in the energy market in order to provide those services. This reduced the dispatch of low-priced generation for energy by more than 1000 MW.\"}, {\"label\": \"demand\", \"quote\": \"This event coincided with the highest demand across the mainland for the winter at that time.\"}], \"constraints_named\": [{\"id\": \"V-HWLY_2\", \"quote\": \"The constraint set \\\"V-HWLY_2\\\" was invoked to manage the outage, which limits generation at Loy Yang and Valley Power stations and restricts flow into Victoria from Tasmania.\"}, {\"id\": \"V-LY_2200\", \"quote\": \"The first constraint set \\\"V-LY_2200\\\", restricted the generation at Loy Yang A and B and Valley power stations plus northerly flows across BassLink, to be less than 2200 MW.\"}, {\"id\": \"F-I_TG_2000\", \"quote\": \"NEMMCO invoked the constraint set \\\"F-I_TG_2000\\\" to dispatch extra raise FCAS services.\"}], \"interconnectors_named\": [{\"name\": \"BassLink\", \"quote\": \"The combined outages restricted flow into Victoria across BassLink to zero and constrained generation at Loy Yang A and B by around 1000 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"As a result of these two unplanned network outages combined with the earlier outage the prices for contingency raise ancillary services exceeded $5000/MW for six trading intervals between 6.30 pm and 10 pm.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant rebidding in the energy market.\"}}, {\"event_date\": \"2008-07-23\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"raise ancillary service prices exceeded $5000/MW h following rebids of large amounts of capacity into high price bands by Hydro Tasmania.\", \"quote\": \"In Tasmania raise ancillary service prices exceeded $5000/MW h following rebids of large amounts of capacity into high price bands by Hydro Tasmania.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"This resulted in an increase in ancillary raise service prices in Tasmania from generally less than $1 to $10 000/MW at times between 7 pm and 10 pm.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"On a number of occasions, Hydro Tasmania rebid virtually all raise ancillary services capacity into the top price band. For instance at 7.07 pm more than 3400 MW of capacity across the three services was shifted into the top price band.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"In Tasmania, however, rebidding was a significant factor that contributed to market ancillary service prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 5.24 pm the Hazelwood to Loy Yang No 3 500kV line tripped due to faulty protection equipment, leaving only one remaining line connecting Loy Yang and Tasmania to the rest of the market."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 5.24 pm the Hazelwood to Loy Yang No 3 500kV line tripped due to faulty protection equipment, leaving only one remaining line connecting Loy Yang and Tasmania to the rest of the market."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The combined outages restricted flow into Victoria across BassLink to zero and constrained generation at Loy Yang A and B by around 1000 MW."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The large increase in FCAS requirements led to some generators being reduced in the energy market in order to provide those services. This reduced the dispatch of low-priced generation for energy by more than 1000 MW."
+          },
+          {
+            "label": "demand",
+            "quote": "This event coincided with the highest demand across the mainland for the winter at that time."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V-HWLY_2",
+            "quote": "The constraint set \"V-HWLY_2\" was invoked to manage the outage, which limits generation at Loy Yang and Valley Power stations and restricts flow into Victoria from Tasmania."
+          },
+          {
+            "id": "V-LY_2200",
+            "quote": "The first constraint set \"V-LY_2200\", restricted the generation at Loy Yang A and B and Valley power stations plus northerly flows across BassLink, to be less than 2200 MW."
+          },
+          {
+            "id": "F-I_TG_2000",
+            "quote": "NEMMCO invoked the constraint set \"F-I_TG_2000\" to dispatch extra raise FCAS services."
+          }
+        ],
+        "event_date": "2008-07-23",
+        "interconnectors_named": [
+          {
+            "name": "BassLink",
+            "quote": "The combined outages restricted flow into Victoria across BassLink to zero and constrained generation at Loy Yang A and B by around 1000 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price for each of the mainland regions exceeded $5000/MWh for the 6.30 pm trading interval.",
+          "text": "The spot price for each of the mainland regions exceeded $5000/MWh for the 6.30 pm trading interval."
+        },
+        "network_outages": {
+          "quote": "As a result of these two unplanned network outages combined with the earlier outage the prices for contingency raise ancillary services exceeded $5000/MW for six trading intervals between 6.30 pm and 10 pm.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the five-minute dispatch price increased from $294/MWh to $10 000/MWh at 6 pm",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding in the energy market.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1",
+          "SA1",
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "On a number of occasions, Hydro Tasmania rebid virtually all raise ancillary services capacity into the top price band. For instance at 7.07 pm more than 3400 MW of capacity across the three services was shifted into the top price band."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-07-23",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "In Tasmania raise ancillary service prices exceeded $5000/MW h following rebids of large amounts of capacity into high price bands by Hydro Tasmania.",
+          "text": "raise ancillary service prices exceeded $5000/MW h following rebids of large amounts of capacity into high price bands by Hydro Tasmania."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "This resulted in an increase in ancillary raise service prices in Tasmania from generally less than $1 to $10 000/MW at times between 7 pm and 10 pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "In Tasmania, however, rebidding was a significant factor that contributed to market ancillary service prices exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_July_2008_-_Mainland.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%20July%202008%20-%20Mainland.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1062,
+    "per_attempt": [
+      {
+        "completion_tokens": 1062,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11542,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12604
+      }
+    ],
+    "prompt_tokens": 11542,
+    "reasoning_tokens": 0,
+    "total_tokens": 12604
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:12:44+00:00",
+  "failure": null,
+  "input_sha256": "5e2c88096da99e2266c11028a7db4178cdbbef69b65f7f6b2fbaf1733e6def61",
+  "key": "1e0d0ecb4c125ee1245d34bd247e084a972aa832f0de2e628cdbfc5f3394093b",
+  "latency_s": 10.17,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"five trading intervals between 2 pm and 4 pm inclusive\", \"quote\": \"the spot price exceeded $5000/MWh for the 12.30 pm trading interval and was close to the price cap for five trading intervals between 2 pm and 4 pm inclusive\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $ 9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"high demand caused by extreme temperatures led to high-priced capacity being dispatched\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"all generation in South Australia was available apart from four units at Torrens Island and a partial reduction at Playford power station\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "high demand caused by extreme temperatures led to high-priced capacity being dispatched"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "all generation in South Australia was available apart from four units at Torrens Island and a partial reduction at Playford power station"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price exceeded $5000/MWh for the 12.30 pm trading interval and was close to the price cap for five trading intervals between 2 pm and 4 pm inclusive",
+          "text": "five trading intervals between 2 pm and 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_19_January_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_19%20January%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 444,
+    "per_attempt": [
+      {
+        "completion_tokens": 444,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8378,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8822
+      }
+    ],
+    "prompt_tokens": 8378,
+    "reasoning_tokens": 0,
+    "total_tokens": 8822
+  }
+}

@@ -120,3 +120,18 @@ That's about **11–12 documents**.
 - I found no complete index, so the count is an estimate: about 50–225 documents for 2016–2026. That's **about 0.2–4.5 MB** whole-report, or **up to about 45 MB** by event section, per prompt version.
 
 Each prompt version keeps its own entries unless old ones are deleted, so iterating on a prompt multiplies these figures.
+
+## First real use: the AER cause labels (2026-11-17)
+
+The prompt is `aer-v2` (`nemsim/aer/extract.py`), measured against 30 hand-coded events. The full tables are in section 19 of [the results](stage2_results.md).
+
+| Configuration | Misattributed labels | Tokens on the 17 sample documents | Time |
+|---|---:|---:|---:|
+| nemotron, reasoning off (run on the whole corpus) | 18.0% (23 of 128) | 357,490 | ≈ 7 min |
+| nemotron, reasoning on | **3.9%** (5 of 128) | 485,969 (136k reasoning) | ≈ 36 min, no timeouts |
+| mistral-large-4 | 0 of 17, on 2 documents only | 125,000 for those two | 5–10 min a document |
+
+- **Reasoning on was far more accurate here,** at 1.36 times the tokens. The layer stage's 282 s answer and 20-minute stall did not recur: the slowest document took 348 s.
+- **Mistral cannot have reasoning switched off on this endpoint.** `chat_template_kwargs: {"enable_thinking": false}` is accepted and ignored, and 90–94% of its output is reasoning. That makes it about ten times slower than nemotron with reasoning off, so it was stopped after two sample documents.
+- **aer-v1 was abandoned.** Its quote limit (700 characters) and interval-text limit (200) failed 2 of its first 5 documents, against an instruction to keep quotes under 600. aer-v2 allows 2,000 and 600.
+- **The run caps worked as intended.** Each process stopped at 250,000 tokens, and the corpus took 8 capped runs.

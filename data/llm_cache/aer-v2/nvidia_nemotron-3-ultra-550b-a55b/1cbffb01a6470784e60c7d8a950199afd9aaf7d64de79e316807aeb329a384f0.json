@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:27:49+00:00",
+  "failure": null,
+  "input_sha256": "b657667b2f538a0d836f7c78102c5d90c2d7ec78281be56ab56edfb04e8ab03e",
+  "key": "1cbffb01a6470784e60c7d8a950199afd9aaf7d64de79e316807aeb329a384f0",
+  "latency_s": 10.96,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-10-20\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"5.05 am and 5.30 am trading intervals\", \"quote\": \"The 30-minute price is the average of the 6 5-minute intervals. The prices that are in italics are capped at the price cap of $15,100/MWh when published by AEMO.\"}, \"peak_price\": {\"value\": 15100, \"quote\": \"price was at the cap of $15,100/MWh for both the 5.05 am and 5.30 am trading intervals\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"Over 2,000 MW of baseload capacity was unavailable on the day. Almost three quarters of this was planned i.e. set up the day prior or earlier.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"InterGen removed all 435 MW of available capacity, all priced below $13/MWh, at Millmerran unit 1 for the 5.30 am 30-minute period in a rebid made at 2.20 am. The reason was due to a tube leak.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"CS Energy had been returning Callide B unit 2 to service that morning, after it had tripped the day prior. It had initially offered 350 MW of capacity priced mostly below $37/MWh. Over 2 rebids at 4.48 am and 4.51 am, 100 MW of this capacity was removed from prices below $37/MWh due to technical issues.\"}, {\"label\": \"network_outage\", \"quote\": \"There were planned outages to network equipment in New South Wales due to the upgrade of the Queensland-New South Wales interconnector (QNI) which limited access to cheaper generation from New South Wales.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity to higher prices by CS Energy and Origin Energy contributed to the high 30-minute price.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Limited generator ability to ramp up or come on within 5 minutes meant there was around 700 MW of low-priced capacity unable to make it to market.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales Interconnector (QNI)\", \"quote\": \"Upgrades to the Queensland-New South Wales Interconnector (QNI) requiring network outages in New South Wales limited access to cheap generation into Queensland.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There were planned outages to network equipment in New South Wales due to the upgrade of the Queensland-New South Wales interconnector (QNI) which limited access to cheaper generation from New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity to higher prices by CS Energy and Origin Energy contributed to the high 30-minute price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Over 2,000 MW of baseload capacity was unavailable on the day. Almost three quarters of this was planned i.e. set up the day prior or earlier."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "InterGen removed all 435 MW of available capacity, all priced below $13/MWh, at Millmerran unit 1 for the 5.30 am 30-minute period in a rebid made at 2.20 am. The reason was due to a tube leak."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "CS Energy had been returning Callide B unit 2 to service that morning, after it had tripped the day prior. It had initially offered 350 MW of capacity priced mostly below $37/MWh. Over 2 rebids at 4.48 am and 4.51 am, 100 MW of this capacity was removed from prices below $37/MWh due to technical issues."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There were planned outages to network equipment in New South Wales due to the upgrade of the Queensland-New South Wales interconnector (QNI) which limited access to cheaper generation from New South Wales."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity to higher prices by CS Energy and Origin Energy contributed to the high 30-minute price."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Limited generator ability to ramp up or come on within 5 minutes meant there was around 700 MW of low-priced capacity unable to make it to market."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-10-20",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales Interconnector (QNI)",
+            "quote": "Upgrades to the Queensland-New South Wales Interconnector (QNI) requiring network outages in New South Wales limited access to cheap generation into Queensland."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price is the average of the 6 5-minute intervals. The prices that are in italics are capped at the price cap of $15,100/MWh when published by AEMO.",
+          "text": "5.05 am and 5.30 am trading intervals"
+        },
+        "network_outages": {
+          "quote": "There were planned outages to network equipment in New South Wales due to the upgrade of the Queensland-New South Wales interconnector (QNI) which limited access to cheaper generation from New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "price was at the cap of $15,100/MWh for both the 5.05 am and 5.30 am trading intervals",
+          "value": 15100
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices by CS Energy and Origin Energy contributed to the high 30-minute price.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000MWh_20_October_2021_(Qld).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000MWh%2020%20October%202021%20%28Qld%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 710,
+    "per_attempt": [
+      {
+        "completion_tokens": 710,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8959
+      }
+    ],
+    "prompt_tokens": 8249,
+    "reasoning_tokens": 0,
+    "total_tokens": 8959
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:40:56+00:00",
+  "failure": null,
+  "input_sha256": "b58c3f7b5e1696f6f840efdc2f33a1fde65fdf9459f924615868768feeb94ac6",
+  "key": "6b693f0dd1d855ac3dadd528a9b6585feda9f396f3a2ccb4f7204a3e8988375d",
+  "latency_s": 307.5,
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\n  \"events\": [\n    {\n      \"event_date\": \"2016-07-14\",\n      \"regions\": [\"SA1\"],\n      \"intervals\": {\n        \"text\": \"6.30 pm trading interval\",\n        \"quote\": \"On 14 July 2016 at 6.30 pm, the spot price for electricity reached $6918/MWh in South Australia.\"\n      },\n      \"peak_price\": {\n        \"value\": 6918,\n        \"quote\": \"On 14 July 2016 at 6.30 pm, the spot price for electricity reached $6918/MWh in South Australia.\"\n      },\n      \"causes\": [\n        {\n          \"label\": \"network_outage\",\n          \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity.\"\n        },\n        {\n          \"label\": \"scheduled_plant_outage\",\n          \"quote\": \"Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start -up issues which decreased the available capacity in South Australia.\"\n        },\n        {\n          \"label\": \"unscheduled_plant_outage\",\n          \"quote\": \"The return to service of 240 MW at Pelican Point, which has commenced at around 3 pm, was delayed and only 60 MW was available.\"\n        },\n        {\n          \"label\": \"wind_output\",\n          \"quote\": \"While there is in the order of 1600 MW of wind capacity installed in South Australia, on the day it was generating around 240 MW, as forecast.\"\n        },\n        {\n          \"label\": \"interconnector_limit\",\n          \"quote\": \"The MurrayLink interconnector was operating at its limit into South Australia around 190 MW (its nominal limit is 220 MW).\"\n        }\n      ],\n      \"constraints_named\": [\n        {\n          \"id\": \"V::S_TB_275kV_W_B1\",\n          \"quote\": \"The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of the Tailem Bend West bus.\"\n        },\n        {\n          \"id\": \"S-TB_275KV_W_BUS\",\n          \"quote\": \"The following constraint set is invoked for these outages S-TB_275KV_W_BUS\"\n        }\n      ],\n      \"interconnectors_named\": [\n        {\n          \"name\": \"Heywood Interconnector\",\n          \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity.\"\n        },\n        {\n          \"name\": \"Murraylink\",\n          \"quote\": \"Flows into South Australia on the Murraylink interconnector during the 6 .30 pm trading interval were close to the 190 MW limit in the first three dispatch intervals and at that limit during the high price period.\"\n        }\n      ],\n      \"network_outages\": {\n        \"value\": \"contributed\",\n        \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity.\"\n      },\n      \"rebid_set_price\": {\n        \"value\": \"no\",\n        \"quote\": \"Rebidding of capacity did n ot contribute to the price exceeding $5000/MWh.\"\n      }\n    }\n  ]\n}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start -up issues which decreased the available capacity in South Australia."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The return to service of 240 MW at Pelican Point, which has commenced at around 3 pm, was delayed and only 60 MW was available."
+          },
+          {
+            "label": "wind_output",
+            "quote": "While there is in the order of 1600 MW of wind capacity installed in South Australia, on the day it was generating around 240 MW, as forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The MurrayLink interconnector was operating at its limit into South Australia around 190 MW (its nominal limit is 220 MW)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V::S_TB_275kV_W_B1",
+            "quote": "The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of the Tailem Bend West bus."
+          },
+          {
+            "id": "S-TB_275KV_W_BUS",
+            "quote": "The following constraint set is invoked for these outages S-TB_275KV_W_BUS"
+          }
+        ],
+        "event_date": "2016-07-14",
+        "interconnectors_named": [
+          {
+            "name": "Heywood Interconnector",
+            "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Flows into South Australia on the Murraylink interconnector during the 6 .30 pm trading interval were close to the 190 MW limit in the first three dispatch intervals and at that limit during the high price period."
+          }
+        ],
+        "intervals": {
+          "quote": "On 14 July 2016 at 6.30 pm, the spot price for electricity reached $6918/MWh in South Australia.",
+          "text": "6.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 14 July 2016 at 6.30 pm, the spot price for electricity reached $6918/MWh in South Australia.",
+          "value": 6918
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity did n ot contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/20160714%20-%205000%20report%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 12502,
+    "per_attempt": [
+      {
+        "completion_tokens": 12502,
+        "completion_tokens_details": {
+          "reasoning_tokens": 11750
+        },
+        "prompt_tokens": 8610,
+        "prompt_tokens_details": {
+          "cached_tokens": 8576
+        },
+        "total_tokens": 21112
+      }
+    ],
+    "prompt_tokens": 8610,
+    "reasoning_tokens": 11750,
+    "total_tokens": 21112
+  }
+}

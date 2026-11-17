@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:11:50+00:00",
+  "failure": null,
+  "input_sha256": "7b1d2bef17eb38194c386d3868076e471efeadf38032f3c97fefffa104c3ccc0",
+  "key": "39d774d2d8b50a0087dc0170681b498b342d0ead3ae1c7faa7a67dfbcdc2691e",
+  "latency_s": 5.14,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-15\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 2 pm trading interval\", \"quote\": \"On 15 January 2009, the spot market price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.\"}, \"peak_price\": {\"value\": 5210, \"quote\": \"On 15 January the spot price in New South Wales reached $5210/MWh at 2 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The high temperature in the region resulted in a new summer demand record of 13 567 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The majority of this reduction was a result of unplanned outages and delays in returning generation plant to service.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Wallerawang Unit 7 100 Planned capacity reduction\"}, {\"label\": \"network_outage\", \"quote\": \"On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January.\"}, {\"label\": \"rebids\", \"quote\": \"Over several rebids from 8.30 am, Delta Electricity shifted 540 MW of capacity across its portfolio, from prices below $100/MWh to above $9000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Total import capability into New South Wales was around 290 MW lower than forecast four hours ahead.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Lower Tumut to Upper Tumut 64 line\", \"quote\": \"On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January.\"}, {\"name\": \"QNI\", \"quote\": \"The QNI import limit was close to forecast.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Outages of equipment associated with the Terranora interconnector reduced import capability below nominal levels, further tightening the supply-demand balance in the region.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At the time around 1170 MW, or 9 per cent of available capacity in New South Wales was priced above $5000/MWh, 890 MW of which was from rebidding by participants.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The high temperature in the region resulted in a new summer demand record of 13 567 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The majority of this reduction was a result of unplanned outages and delays in returning generation plant to service."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Wallerawang Unit 7 100 Planned capacity reduction"
+          },
+          {
+            "label": "network_outage",
+            "quote": "On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over several rebids from 8.30 am, Delta Electricity shifted 540 MW of capacity across its portfolio, from prices below $100/MWh to above $9000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Total import capability into New South Wales was around 290 MW lower than forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-15",
+        "interconnectors_named": [
+          {
+            "name": "Lower Tumut to Upper Tumut 64 line",
+            "quote": "On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January."
+          },
+          {
+            "name": "QNI",
+            "quote": "The QNI import limit was close to forecast."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "Outages of equipment associated with the Terranora interconnector reduced import capability below nominal levels, further tightening the supply-demand balance in the region."
+          }
+        ],
+        "intervals": {
+          "quote": "On 15 January 2009, the spot market price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.",
+          "text": "the 2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 15 January the spot price in New South Wales reached $5210/MWh at 2 pm.",
+          "value": 5210
+        },
+        "rebid_set_price": {
+          "quote": "At the time around 1170 MW, or 9 per cent of available capacity in New South Wales was priced above $5000/MWh, 890 MW of which was from rebidding by participants.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_15_January_2009_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_15%20January%202009%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 656,
+    "per_attempt": [
+      {
+        "completion_tokens": 656,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5771
+      }
+    ],
+    "prompt_tokens": 5115,
+    "reasoning_tokens": 0,
+    "total_tokens": 5771
+  }
+}

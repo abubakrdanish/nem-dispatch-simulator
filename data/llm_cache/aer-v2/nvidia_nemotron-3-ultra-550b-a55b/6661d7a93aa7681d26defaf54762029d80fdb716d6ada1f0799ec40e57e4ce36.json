@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:17:52+00:00",
+  "failure": null,
+  "input_sha256": "1ec3e961cac3fe5bb0436499e75e985ef7182addc4f091f4b41b91e37fd86cac",
+  "key": "6661d7a93aa7681d26defaf54762029d80fdb716d6ada1f0799ec40e57e4ce36",
+  "latency_s": 6.06,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-01-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"nine trading intervals from 2 pm to 6 pm\", \"quote\": \"On Monday 31 January, the spot price in South Australia exceeded $5000/MWh for nine trading intervals.\"}, \"peak_price\": {\"value\": 12200, \"quote\": \"Eight of these spot prices were around $12 000/MWh, with the maximum reaching $12 200/MWh at 3 pm, a record spot price for South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The third consecutive day of high temperatures, (reaching 43 degrees Celsius in Adelaide on this day), drove demand to a new record in South Australia of 3378 MW at 4.30 pm.\"}, {\"label\": \"wind_output\", \"quote\": \"Although average wind generation before the time of high prices was around 540 MW, during the time of high prices the output of low-priced wind generation in South Australia dropped to an average of only 100 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The only other significant rebid was by Alinta Energy at 11.38 am, which reduced the capacity of its Playford Power Station by 100 MW (all priced above $12 000/MWh). This unit was returned to service earlier in the morning. The reason given was \\\"1138P PPS failed fuel oil service pumps@11.38.\\\"\"}, {\"label\": \"rebids\", \"quote\": \"Alinta Energy priced around 70 per cent of capacity at Northern Power Station close to the price cap.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast. Import capability was up to 90 MW lower than forecast four hours ahead (407 MW compared to 497 MW for the 3.30 pm trading interval).\"}], \"constraints_named\": [{\"id\": \"V>> S_NIL_SETB_KHTB\", \"quote\": \"These constraints (V>> S_NIL_SETB_KHTB and V^^S_NIL_NPS_SE_ON) manage loading on the Keith to Tailem Bend line for the loss of a South East to Tailem Bend line, and voltage stability for the loss of a large generator in South Australia.\"}, {\"id\": \"V^^S_NIL_NPS_SE_ON\", \"quote\": \"These constraints (V>> S_NIL_SETB_KHTB and V^^S_NIL_NPS_SE_ON) manage loading on the Keith to Tailem Bend line for the loss of a South East to Tailem Bend line, and voltage stability for the loss of a large generator in South Australia.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast.\"}, {\"name\": \"Murraylink\", \"quote\": \"Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The third consecutive day of high temperatures, (reaching 43 degrees Celsius in Adelaide on this day), drove demand to a new record in South Australia of 3378 MW at 4.30 pm."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Although average wind generation before the time of high prices was around 540 MW, during the time of high prices the output of low-priced wind generation in South Australia dropped to an average of only 100 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The only other significant rebid was by Alinta Energy at 11.38 am, which reduced the capacity of its Playford Power Station by 100 MW (all priced above $12 000/MWh). This unit was returned to service earlier in the morning. The reason given was \"1138P PPS failed fuel oil service pumps@11.38.\""
+          },
+          {
+            "label": "rebids",
+            "quote": "Alinta Energy priced around 70 per cent of capacity at Northern Power Station close to the price cap."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast. Import capability was up to 90 MW lower than forecast four hours ahead (407 MW compared to 497 MW for the 3.30 pm trading interval)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>> S_NIL_SETB_KHTB",
+            "quote": "These constraints (V>> S_NIL_SETB_KHTB and V^^S_NIL_NPS_SE_ON) manage loading on the Keith to Tailem Bend line for the loss of a South East to Tailem Bend line, and voltage stability for the loss of a large generator in South Australia."
+          },
+          {
+            "id": "V^^S_NIL_NPS_SE_ON",
+            "quote": "These constraints (V>> S_NIL_SETB_KHTB and V^^S_NIL_NPS_SE_ON) manage loading on the Keith to Tailem Bend line for the loss of a South East to Tailem Bend line, and voltage stability for the loss of a large generator in South Australia."
+          }
+        ],
+        "event_date": "2011-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Combined import capability across the Heywood and Murraylink interconnectors into South Australia was generally lower than forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 31 January, the spot price in South Australia exceeded $5000/MWh for nine trading intervals.",
+          "text": "nine trading intervals from 2 pm to 6 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Eight of these spot prices were around $12 000/MWh, with the maximum reaching $12 200/MWh at 3 pm, a record spot price for South Australia.",
+          "value": 12200
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_January_2011_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20January%202011%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 781,
+    "per_attempt": [
+      {
+        "completion_tokens": 781,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9099,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9880
+      }
+    ],
+    "prompt_tokens": 9099,
+    "reasoning_tokens": 0,
+    "total_tokens": 9880
+  }
+}

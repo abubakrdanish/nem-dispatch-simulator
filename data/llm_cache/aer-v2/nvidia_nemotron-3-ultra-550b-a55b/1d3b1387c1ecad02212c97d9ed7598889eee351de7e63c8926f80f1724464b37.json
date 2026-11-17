@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:09:01+00:00",
+  "failure": null,
+  "input_sha256": "d5fbdf2f2ad2fb26809d3f6cb9af4ac4910cec9f19c949a6881d22cf2820a30d",
+  "key": "1d3b1387c1ecad02212c97d9ed7598889eee351de7e63c8926f80f1724464b37",
+  "latency_s": 13.05,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-11\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 4 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm)\", \"quote\": \"During the 4.00 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm) five minute dispatch prices were aligned with Victoria and Queensland at less than $600/MWh until 3.45 pm, when the transmission outage occurred.\"}, \"peak_price\": {\"value\": 9350, \"quote\": \"This saw step changes in prices from $527/MWh in New South Wales and $506/MWh in Queensland at 3.40 pm to $9350/MWh in New South Wales and $81/MWh in Queensland at 3.45 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in New South Wales reached 12 333 MW, which was 800 MW higher than forecast four hours ahead and 350 MW higher than forecast at the beginning of the trading interval.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Liddell unit 4 513 Unit tripped on 2 January and remained out of service on this day.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Munmorah unit 4 300 Shutdown on 11 December, returned to service on 27 January. Vales Point unit 6 660 Shutdown on 15 December, returned to service on 14 January.\"}, {\"label\": \"rebids\", \"quote\": \"In New South Wales 1490 MW (or 14 per cent) of capacity was priced above $5000/MWh. Of this capacity, up to 870 MW resulted from rebidding by Macquarie Generation from relatively low prices during the day.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred.\"}], \"constraints_named\": [{\"id\": \"Snowy CSC/CSP constraints\", \"quote\": \"The rebid reason given was \\\"Manage Snowy CSC/CSP constraints\\\".\"}, {\"id\": \"Snowy-NSW constraint\", \"quote\": \"The rebid reason given was \\\"Manage unexp Snowy- NSW constraint Band up\\\".\"}, {\"id\": \"Snow-Vic constraint\", \"quote\": \"The rebid reason given was \\\"Manage unexp Snow-Vic constraint bnd up\\\".\"}], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnectors\", \"quote\": \"At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred.\"}, {\"name\": \"Snowy and Queensland interconnectors\", \"quote\": \"Flows across the Snowy and Queensland interconnectors were unconstrained for all but one dispatch interval during the trading interval.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"a rebid into higher prices by Snowy Hydro, saw the prices across the regions realign at more than $4800/MWh for the remainder of the trading interval.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in New South Wales reached 12 333 MW, which was 800 MW higher than forecast four hours ahead and 350 MW higher than forecast at the beginning of the trading interval."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Liddell unit 4 513 Unit tripped on 2 January and remained out of service on this day."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Munmorah unit 4 300 Shutdown on 11 December, returned to service on 27 January. Vales Point unit 6 660 Shutdown on 15 December, returned to service on 14 January."
+          },
+          {
+            "label": "rebids",
+            "quote": "In New South Wales 1490 MW (or 14 per cent) of capacity was priced above $5000/MWh. Of this capacity, up to 870 MW resulted from rebidding by Macquarie Generation from relatively low prices during the day."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Snowy CSC/CSP constraints",
+            "quote": "The rebid reason given was \"Manage Snowy CSC/CSP constraints\"."
+          },
+          {
+            "id": "Snowy-NSW constraint",
+            "quote": "The rebid reason given was \"Manage unexp Snowy- NSW constraint Band up\"."
+          },
+          {
+            "id": "Snow-Vic constraint",
+            "quote": "The rebid reason given was \"Manage unexp Snow-Vic constraint bnd up\"."
+          }
+        ],
+        "event_date": "2007-01-11",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to New South Wales interconnectors",
+            "quote": "At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred."
+          },
+          {
+            "name": "Snowy and Queensland interconnectors",
+            "quote": "Flows across the Snowy and Queensland interconnectors were unconstrained for all but one dispatch interval during the trading interval."
+          }
+        ],
+        "intervals": {
+          "quote": "During the 4.00 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm) five minute dispatch prices were aligned with Victoria and Queensland at less than $600/MWh until 3.45 pm, when the transmission outage occurred.",
+          "text": "the 4 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm)"
+        },
+        "network_outages": {
+          "quote": "An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "This saw step changes in prices from $527/MWh in New South Wales and $506/MWh in Queensland at 3.40 pm to $9350/MWh in New South Wales and $81/MWh in Queensland at 3.45 pm.",
+          "value": 9350
+        },
+        "rebid_set_price": {
+          "quote": "a rebid into higher prices by Snowy Hydro, saw the prices across the regions realign at more than $4800/MWh for the remainder of the trading interval.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_11_January_2007_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_11%20January%202007%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 877,
+    "per_attempt": [
+      {
+        "completion_tokens": 877,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8645,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9522
+      }
+    ],
+    "prompt_tokens": 8645,
+    "reasoning_tokens": 0,
+    "total_tokens": 9522
+  }
+}

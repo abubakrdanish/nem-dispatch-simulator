@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:22:14+00:00",
+  "failure": null,
+  "input_sha256": "36c517ce1c47b8b6f808202d126944b847e14d33f071bf63fc0ac0ddef40bdec",
+  "key": "9b796be4ade2fd347efd4a0a18178959ecc6742eadf0b8d2504b3a67344b83e3",
+  "latency_s": 9.67,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-11-09\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 3.30 pm trading interval\", \"quote\": \"On 9 November, the spot price in New South Wales reached $6498/MWh for the 3.30 pm trading interval\"}, \"peak_price\": {\"value\": 6498, \"quote\": \"On 9 November, the spot price in New South Wales reached $6498/MWh for the 3.30 pm trading interval\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures in Sydney exceeded 30 degrees for the fourth consecutive day, which saw demand reach 11 519 MW at 3.30 pm. Actual demand was more than 500 MW higher than forecast.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Early in the afternoon, TRUenergy reduced the available capacity of one of its Mount Piper units by 400 MW due to technical issues.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the South Sydney to Dapto 330 kV line commenced in the early hours of the morning.\"}, {\"label\": \"rebids\", \"quote\": \"When Macquarie Generation rebid 500 MW of available capacity at Bayswater and Liddell close to the price cap, the dispatch price reached the price cap for two dispatch intervals, resulting in the spot price reaching $6498/MWh for the 3.30 pm trading interval.\"}], \"constraints_named\": [{\"id\": \"N>>N-DTSS_20\", \"quote\": \"a constraint used to manage the planned outage of the Dapto to Sydney South 330 kV line (which runs between the Snowy Hydro generators at the Tumut stations and Sydney) was limiting imports into New South Wales from Victoria and constraining off generation at Upper Tumut and Uranquinty.\"}, {\"id\": \"N>>N-DTSS_20_SL\", \"quote\": \"The reasons given were \\\"1445A Constraint Management N>>N-DTSS_20_SL\\\".\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"This caused the constraint managing the planned network outage to bind, reducing flows from Victoria and constraining off generation at Uranquinty and Upper Tumut.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the South Sydney to Dapto 330 kV line commenced in the early hours of the morning.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"When Macquarie Generation rebid 500 MW of available capacity at Bayswater and Liddell close to the price cap, the dispatch price reached the price cap for two dispatch intervals, resulting in the spot price reaching $6498/MWh for the 3.30 pm trading interval.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures in Sydney exceeded 30 degrees for the fourth consecutive day, which saw demand reach 11 519 MW at 3.30 pm. Actual demand was more than 500 MW higher than forecast."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Early in the afternoon, TRUenergy reduced the available capacity of one of its Mount Piper units by 400 MW due to technical issues."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the South Sydney to Dapto 330 kV line commenced in the early hours of the morning."
+          },
+          {
+            "label": "rebids",
+            "quote": "When Macquarie Generation rebid 500 MW of available capacity at Bayswater and Liddell close to the price cap, the dispatch price reached the price cap for two dispatch intervals, resulting in the spot price reaching $6498/MWh for the 3.30 pm trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-DTSS_20",
+            "quote": "a constraint used to manage the planned outage of the Dapto to Sydney South 330 kV line (which runs between the Snowy Hydro generators at the Tumut stations and Sydney) was limiting imports into New South Wales from Victoria and constraining off generation at Upper Tumut and Uranquinty."
+          },
+          {
+            "id": "N>>N-DTSS_20_SL",
+            "quote": "The reasons given were \"1445A Constraint Management N>>N-DTSS_20_SL\"."
+          }
+        ],
+        "event_date": "2011-11-09",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "This caused the constraint managing the planned network outage to bind, reducing flows from Victoria and constraining off generation at Uranquinty and Upper Tumut."
+          }
+        ],
+        "intervals": {
+          "quote": "On 9 November, the spot price in New South Wales reached $6498/MWh for the 3.30 pm trading interval",
+          "text": "the 3.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the South Sydney to Dapto 330 kV line commenced in the early hours of the morning.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 9 November, the spot price in New South Wales reached $6498/MWh for the 3.30 pm trading interval",
+          "value": 6498
+        },
+        "rebid_set_price": {
+          "quote": "When Macquarie Generation rebid 500 MW of available capacity at Bayswater and Liddell close to the price cap, the dispatch price reached the price cap for two dispatch intervals, resulting in the spot price reaching $6498/MWh for the 3.30 pm trading interval.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_9_November_2011_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_9%20November%202011%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 684,
+    "per_attempt": [
+      {
+        "completion_tokens": 684,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5134,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5818
+      }
+    ],
+    "prompt_tokens": 5134,
+    "reasoning_tokens": 0,
+    "total_tokens": 5818
+  }
+}

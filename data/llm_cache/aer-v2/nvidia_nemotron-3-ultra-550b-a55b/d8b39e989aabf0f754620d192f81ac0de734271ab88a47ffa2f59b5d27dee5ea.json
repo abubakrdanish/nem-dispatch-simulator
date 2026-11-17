@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:58:46+00:00",
+  "failure": null,
+  "input_sha256": "cb906e658cdfb935d836fc5145787ebf5c877ac235311a73462049645ff1558c",
+  "key": "d8b39e989aabf0f754620d192f81ac0de734271ab88a47ffa2f59b5d27dee5ea",
+  "latency_s": 6.23,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-01-29\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the spot price in Queensland exceeded $5000/MWh at 5 pm\", \"quote\": \"On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh.\"}, \"peak_price\": {\"value\": 6299, \"quote\": \"On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Higher than expected temperatures in Brisbane saw demand in Queensland reach 7809 MW at 5 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"the unplanned loss of two Braemar A units (300 MW in total) around midday\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"wet coal at some coal units (that affects fuel quality) and the late return to service of Gladstone unit 5\"}, {\"label\": \"rebids\", \"quote\": \"Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek.\"}], \"constraints_named\": [{\"id\": \"Kogan Creek constraint\", \"quote\": \"Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period\"}, {\"name\": \"Terranora\", \"quote\": \"On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two. The cables (which form part of the Terranora interconnector) did not return to service until 31 January.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two. The cables (which form part of the Terranora interconnector) did not return to service until 31 January.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Higher than expected temperatures in Brisbane saw demand in Queensland reach 7809 MW at 5 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "the unplanned loss of two Braemar A units (300 MW in total) around midday"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "wet coal at some coal units (that affects fuel quality) and the late return to service of Gladstone unit 5"
+          },
+          {
+            "label": "rebids",
+            "quote": "Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Kogan Creek constraint",
+            "quote": "Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek."
+          }
+        ],
+        "event_date": "2013-01-29",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period"
+          },
+          {
+            "name": "Terranora",
+            "quote": "On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two. The cables (which form part of the Terranora interconnector) did not return to service until 31 January."
+          }
+        ],
+        "intervals": {
+          "quote": "On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh.",
+          "text": "the spot price in Queensland exceeded $5000/MWh at 5 pm"
+        },
+        "network_outages": {
+          "quote": "On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two. The cables (which form part of the Terranora interconnector) did not return to service until 31 January.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh.",
+          "value": 6299
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20130129_-_QLD_-_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20130129%20-%20QLD%20-%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 600,
+    "per_attempt": [
+      {
+        "completion_tokens": 600,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5100,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5700
+      }
+    ],
+    "prompt_tokens": 5100,
+    "reasoning_tokens": 0,
+    "total_tokens": 5700
+  }
+}

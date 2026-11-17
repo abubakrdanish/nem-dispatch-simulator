@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:16:14+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[0]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "20c5592e8f59c06b54f0a2edc4e596f0c49819763498467f425a7078d839b7b0",
+  "key": "57c4e57632a6864b4d7a2659291005b0a58fb43d498194b67237b57f60db1fc9",
+  "latency_s": 8.98,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-01-26\", \"regions\": [\"SNOWY1\"], \"intervals\": {\"text\": \"three consecutive five-minute dispatch intervals at 12:40, 12:45, 12:50\", \"quote\": \"This resulted in three consecutive five-minute dispatch intervals at that price.\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"resulted in three consecutive five-minute dispatch intervals at that price.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A short notice planned outage of a Geelong to Keilor line, combined with the late return of the Anglesea Power Station and discrepancies in the modelling of the network, resulted in significantly higher than forecast dispatch from Snowy Hydro's Murray generator and flows from Snowy into the Victorian region.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Anglesea Power Station, which is located close to Geelong, was scheduled to return to service and to generate 150MW from 7 am. The return of this generator was delayed at around 7pm the previous evening.\"}, {\"label\": \"rebids\", \"quote\": \"At 12.33pm a second rebid by Snowy Hydro shifted 410 MW of capacity at Murray from $300/MWh to $9999/MWh. The rebid reason given was \\\"12.30: M SN-NSW & SN-V flow higher than forecast: Band shift up\\\" reflecting that flows on the New South Wales to Snowy and Snowy to Victoria interconnectors were higher than forecast and capacity was being repriced higher.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"With flows from New South Wales and Tumut across the Snowy region into Victoria at the limit, around 30 MW of capacity at Murray that was priced at $9999/MWh was dispatched.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The constraints to manage this outage were violated intermittently from 10.30 am and continuously from 12.10 pm.\"}], \"constraints_named\": [{\"id\": \"Keilor to Geelong outage constraints\", \"quote\": \"The network constraints used to manage this outage attempt to limit the flows from Keilor to Geelong in the event of the most critical contingency - loss of the 500 kV injection (in green) at Moorabool.\"}], \"interconnectors_named\": [{\"name\": \"Victoria to Snowy interconnector\", \"quote\": \"dispatch across the Victoria to Snowy interconnector changed from flows north of 270 MW at 7.25 am - when the outage constraints first began to affect dispatch - to around 1750 MW south into Victoria for the 1 pm trading interval.\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows from South Australia across Murraylink were limited to between 100 MW and 150 MW into Victoria by system normal constraints managing the 132 kV network in South Australia.\"}, {\"name\": \"New South Wales to Snowy interconnector\", \"quote\": \"flows on the New South Wales to Snowy and Snowy to Victoria interconnectors were higher than forecast\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A short notice planned outage of a Geelong to Keilor line, combined with the late return of the Anglesea Power Station and discrepancies in the modelling of the network, resulted in significantly higher than forecast dispatch from Snowy Hydro's Murray generator and flows from Snowy into the Victorian region.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"As a result Snowy Hydro rebid capacity over two steps into prices of $9999/MWh at Murray and set price in the Snowy region for three dispatch intervals.\"}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_26_January_2008_-_Snowy.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_26%20January%202008%20-%20Snowy.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 1722,
+    "per_attempt": [
+      {
+        "completion_tokens": 861,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4344,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5205
+      },
+      {
+        "completion_tokens": 861,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4344,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5205
+      }
+    ],
+    "prompt_tokens": 8688,
+    "reasoning_tokens": 0,
+    "total_tokens": 10410
+  }
+}

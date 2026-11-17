@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:29:45+00:00",
+  "failure": null,
+  "input_sha256": "2026bba0dfd9bc16623080516503eb10654e410cfac00a9ad257edc787171c04",
+  "key": "741765457c649ac076dbd54619c38b70a54449d69c65efa88897e152f81ca69b",
+  "latency_s": 7.9,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-01-14\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals\", \"quote\": \"the spot price for electricity in Queensland exceeded $5000/MWh for four 30 -minute trading intervals. The price reached $12 642/MWh, $8595/MWh, $9127/MWh and $10 417/MWh for the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals respectively.\"}, \"peak_price\": {\"value\": 12642, \"quote\": \"The price reached $12 642/MWh, $8595/MWh, $9127/MWh and $10 417/MWh for the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Maximum demand during the high -price periods was close to forecast and reached around 8664 MW at 5.30 pm, a record for weekend demand\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"In the four hours leading up to the high price period, around 150 MW of generation was rebid unavailable, primarily due to the impact of the high temperatures.\"}, {\"label\": \"rebids\", \"quote\": \"Over 200 MW of capacity was rebid from low to high prices for each high priced period, which contributed to the price outcomes.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Net imports into Queensland were limited to around 150 MW, 450-500 MW lower than the nominal limit of 600 MW, during the time of high prices and were close to forecast.\"}], \"constraints_named\": [{\"id\": \"QNI\", \"quote\": \"Constraints on the New South Wales interconnector (QNI) designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station), were limited to around 250 MW.\"}, {\"id\": \"Terranora\", \"quote\": \"Constraints on Terranora were forcing flow into New South Wales at around 100 MW for the duration of high prices.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Constraints on the New South Wales interconnector (QNI) designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station), were limited to around 250 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"Constraints on Terranora were forcing flow into New South Wales at around 100 MW for the duration of high prices.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"While the rebids did not set price, the removal of lower priced capacity meant that generation had to be met by higher priced capacity.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Maximum demand during the high -price periods was close to forecast and reached around 8664 MW at 5.30 pm, a record for weekend demand"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "In the four hours leading up to the high price period, around 150 MW of generation was rebid unavailable, primarily due to the impact of the high temperatures."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over 200 MW of capacity was rebid from low to high prices for each high priced period, which contributed to the price outcomes."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Net imports into Queensland were limited to around 150 MW, 450-500 MW lower than the nominal limit of 600 MW, during the time of high prices and were close to forecast."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI",
+            "quote": "Constraints on the New South Wales interconnector (QNI) designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station), were limited to around 250 MW."
+          },
+          {
+            "id": "Terranora",
+            "quote": "Constraints on Terranora were forcing flow into New South Wales at around 100 MW for the duration of high prices."
+          }
+        ],
+        "event_date": "2017-01-14",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Constraints on the New South Wales interconnector (QNI) designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station), were limited to around 250 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Constraints on Terranora were forcing flow into New South Wales at around 100 MW for the duration of high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price for electricity in Queensland exceeded $5000/MWh for four 30 -minute trading intervals. The price reached $12 642/MWh, $8595/MWh, $9127/MWh and $10 417/MWh for the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals respectively.",
+          "text": "the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The price reached $12 642/MWh, $8595/MWh, $9127/MWh and $10 417/MWh for the 4.30 pm, 5 pm, 5.30 pm and 7 pm trading intervals respectively.",
+          "value": 12642
+        },
+        "rebid_set_price": {
+          "quote": "While the rebids did not set price, the removal of lower priced capacity meant that generation had to be met by higher priced capacity.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_14_January_2017_(QLD)_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2014%20January%202017%20%28QLD%29_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 763,
+    "per_attempt": [
+      {
+        "completion_tokens": 763,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 15846,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16609
+      }
+    ],
+    "prompt_tokens": 15846,
+    "reasoning_tokens": 0,
+    "total_tokens": 16609
+  }
+}

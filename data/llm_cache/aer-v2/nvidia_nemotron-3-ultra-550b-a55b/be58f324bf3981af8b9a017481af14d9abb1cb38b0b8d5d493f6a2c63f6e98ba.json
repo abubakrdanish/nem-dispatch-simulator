@@ -1,0 +1,114 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:59:07+00:00",
+  "failure": null,
+  "input_sha256": "e4f31e4161ef087a7e0e0465b75d3f457ce1f42231b7e193ceb894fbae13a1b4",
+  "key": "be58f324bf3981af8b9a017481af14d9abb1cb38b0b8d5d493f6a2c63f6e98ba",
+  "latency_s": 5.57,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2014-01-15\", \"regions\": [\"SA1\", \"VIC1\"], \"intervals\": {\"text\": \"the 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive\", \"quote\": \"the 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive\"}, \"peak_price\": {\"value\": 6213, \"quote\": \"At 4 pm on Wednesday 15 January 2014, the spot price reached $6213/MWh and $5972/MWh in South Australia and Victoria respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand was lower than that which had been forecast by AEMO.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Plant failures on 14 January at AGL's Torrens Island B unit 3 (200 MW) in South Australia, Loy Yang A unit 3 (around 560 MW) in Victoria, and cooling limitations at Loy Yang B reduced the capacity of the B1 and B2 units by 99 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The capacity of Loy Yang A1 and A4 was also affected by the ambient temperature conditions, leading to a reduction of 120 MW.\"}, {\"label\": \"rebids\", \"quote\": \"At 3.21 pm GDF Suez rebid 110 MW of capacity at Loy Yang B from low prices to high prices and at 3.24 pm Snowy Hydro rebid 152 MW of capacity at Laverton North from low prices to high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"imports into Victoria from Tasmania across the Basslink interconnector reduced by around 70 MW\"}, {\"label\": \"ramp_rates\", \"quote\": \"Capacity priced at $12 000/MWh at Loy Yang B was dispatched, but because it was ramp rate limited it did not set the price.\"}], \"constraints_named\": [{\"id\": \"V>>SML_NIL_1/V>>SML_NIL_8\", \"quote\": \"manage violating constraint V>>SML_NIL_1/V>>SML_NIL_8\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"imports into Victoria from Tasmania across the Basslink interconnector reduced by around 70 MW\"}, {\"name\": \"Vic-NSW\", \"quote\": \"A small increase in imports (39 MW) into Victoria across the Vic-NSW interconnector\"}, {\"name\": \"Heywood\", \"quote\": \"The Heywood interconnector was unconstrained during the high price period and prices in South Australia and Victoria were closely aligned\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows across Murraylink were close to forecast but at low levels (importing into South Australia between zero and 60 MW)\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand was lower than that which had been forecast by AEMO."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Plant failures on 14 January at AGL's Torrens Island B unit 3 (200 MW) in South Australia, Loy Yang A unit 3 (around 560 MW) in Victoria, and cooling limitations at Loy Yang B reduced the capacity of the B1 and B2 units by 99 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The capacity of Loy Yang A1 and A4 was also affected by the ambient temperature conditions, leading to a reduction of 120 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 3.21 pm GDF Suez rebid 110 MW of capacity at Loy Yang B from low prices to high prices and at 3.24 pm Snowy Hydro rebid 152 MW of capacity at Laverton North from low prices to high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "imports into Victoria from Tasmania across the Basslink interconnector reduced by around 70 MW"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Capacity priced at $12 000/MWh at Loy Yang B was dispatched, but because it was ramp rate limited it did not set the price."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>SML_NIL_1/V>>SML_NIL_8",
+            "quote": "manage violating constraint V>>SML_NIL_1/V>>SML_NIL_8"
+          }
+        ],
+        "event_date": "2014-01-15",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "imports into Victoria from Tasmania across the Basslink interconnector reduced by around 70 MW"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "A small increase in imports (39 MW) into Victoria across the Vic-NSW interconnector"
+          },
+          {
+            "name": "Heywood",
+            "quote": "The Heywood interconnector was unconstrained during the high price period and prices in South Australia and Victoria were closely aligned"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Flows across Murraylink were close to forecast but at low levels (importing into South Australia between zero and 60 MW)"
+          }
+        ],
+        "intervals": {
+          "quote": "the 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive",
+          "text": "the 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "At 4 pm on Wednesday 15 January 2014, the spot price reached $6213/MWh and $5972/MWh in South Australia and Victoria respectively.",
+          "value": 6213
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1",
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20140115_sa_and_vic_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20140115%20sa%20and%20vic%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 720,
+    "per_attempt": [
+      {
+        "completion_tokens": 720,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11371,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12091
+      }
+    ],
+    "prompt_tokens": 11371,
+    "reasoning_tokens": 0,
+    "total_tokens": 12091
+  }
+}

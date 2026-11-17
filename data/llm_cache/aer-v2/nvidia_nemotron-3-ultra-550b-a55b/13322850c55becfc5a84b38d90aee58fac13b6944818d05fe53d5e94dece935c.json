@@ -1,0 +1,217 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:57:12+00:00",
+  "failure": null,
+  "input_sha256": "dcee6c95fddad58c2b832ccc6ac565162ada84fb597cf7dc8729341316dbcc1a",
+  "key": "13322850c55becfc5a84b38d90aee58fac13b6944818d05fe53d5e94dece935c",
+  "latency_s": 95.42,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2025-11-25\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"30-minute price at 12:30 pm; 5-minute intervals at 12:15 pm and 12:20 pm\", \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"peak_price\": {\"value\": 5984, \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The increase in demand for both days was mainly due to the sudden reduction in rooftop solar generation due to cloud cover from storms\"}, {\"label\": \"solar_output\", \"quote\": \"There was a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals.\"}, {\"label\": \"network_outage\", \"quote\": \"The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding contributed to the high prices on 25 November.\"}], \"constraints_named\": [{\"id\": \"Uralla to Tamworth line\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"a planned outage of all three Directlink cables on Terranora reduced flows to around 0 MW from Queensland into NSW compared to its nominal capacity of 210 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 12.13 pm, AGL Energy rebid 250 MW of capacity at Bayswater from $36 per MWh to the market price cap due to a change in forecast prices (commercial reason) and set the high price at 12.20 pm.\"}}, {\"event_date\": \"2025-11-26\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"30-minute price at 11:30 am\", \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"peak_price\": {\"value\": 10342, \"quote\": \"On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The increase in demand for both days was mainly due to the sudden reduction in rooftop solar generation due to cloud cover from storms\"}, {\"label\": \"solar_output\", \"quote\": \"There was a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals.\"}, {\"label\": \"network_outage\", \"quote\": \"The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}], \"constraints_named\": [{\"id\": \"Uralla to Tamworth line\", \"quote\": \"a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no rebidding that contributed to the high prices on 26 November.\"}}, {\"event_date\": \"2025-12-19\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"30-minute price at 2:00 pm\", \"quote\": \"The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.\"}, \"peak_price\": {\"value\": 5773, \"quote\": \"The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The increase in demand on this day was mainly due to the sudden reduction in rooftop solar generation due to cloud cover and, to a lesser extent, from storms\"}, {\"label\": \"solar_output\", \"quote\": \"there was also a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals on 19 December.\"}, {\"label\": \"ramp_rates\", \"quote\": \"AGL Energy's Bayswater unit 1 and Origin Energy's Eraring unit 2 were already running but were unable to ramp up quickly enough to meet the sudden increase in demand to mitigate the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}], \"constraints_named\": [{\"id\": \"Bannaby to Sydney West line\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"On 19 December, there were no network line outages, but system normal constraints contributed to the high price.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding contributed to the high prices on 25 November only.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The increase in demand for both days was mainly due to the sudden reduction in rooftop solar generation due to cloud cover from storms"
+          },
+          {
+            "label": "solar_output",
+            "quote": "There was a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding contributed to the high prices on 25 November."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Uralla to Tamworth line",
+            "quote": "a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "event_date": "2025-11-25",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "limited imports into NSW on the QNI to around 600 MW compared to its nominal capacity of 1,400 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "a planned outage of all three Directlink cables on Terranora reduced flows to around 0 MW from Queensland into NSW compared to its nominal capacity of 210 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.",
+          "text": "30-minute price at 12:30 pm; 5-minute intervals at 12:15 pm and 12:20 pm"
+        },
+        "network_outages": {
+          "quote": "The Canberra to Lower Tumut line outage started on 17 November and ended on 28 November and contributed to the high price on 25 November.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.",
+          "value": 5984
+        },
+        "rebid_set_price": {
+          "quote": "At 12.13 pm, AGL Energy rebid 250 MW of capacity at Bayswater from $36 per MWh to the market price cap due to a change in forecast prices (commercial reason) and set the high price at 12.20 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The increase in demand for both days was mainly due to the sudden reduction in rooftop solar generation due to cloud cover from storms"
+          },
+          {
+            "label": "solar_output",
+            "quote": "There was a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Uralla to Tamworth line",
+            "quote": "a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW."
+          }
+        ],
+        "event_date": "2025-11-26",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.",
+          "text": "30-minute price at 11:30 am"
+        },
+        "network_outages": {
+          "quote": "The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 25 and 26 November, the 30-minute price in NSW reached $5,984 per MWh at 12.30 pm and $10,342 per MWh at 11.30 am, respectively.",
+          "value": 10342
+        },
+        "rebid_set_price": {
+          "quote": "There was no rebidding that contributed to the high prices on 26 November.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The increase in demand on this day was mainly due to the sudden reduction in rooftop solar generation due to cloud cover and, to a lesser extent, from storms"
+          },
+          {
+            "label": "solar_output",
+            "quote": "there was also a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals on 19 December."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "AGL Energy's Bayswater unit 1 and Origin Energy's Eraring unit 2 were already running but were unable to ramp up quickly enough to meet the sudden increase in demand to mitigate the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bannaby to Sydney West line",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "event_date": "2025-12-19",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.",
+          "text": "30-minute price at 2:00 pm"
+        },
+        "network_outages": {
+          "quote": "On 19 December, there were no network line outages, but system normal constraints contributed to the high price.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "The 30-minute price in NSW reached $5,773 per MWh at 2 pm on 19 December.",
+          "value": 5773
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding contributed to the high prices on 25 November only.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-02/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20October%20to%20December%202025.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 8712,
+    "per_attempt": [
+      {
+        "completion_tokens": 8712,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6670
+        },
+        "prompt_tokens": 8883,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17595
+      }
+    ],
+    "prompt_tokens": 8883,
+    "reasoning_tokens": 6670,
+    "total_tokens": 17595
+  }
+}

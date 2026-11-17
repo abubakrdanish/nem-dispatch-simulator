@@ -1,0 +1,100 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:23:52+00:00",
+  "failure": null,
+  "input_sha256": "9d1c17821494e7d122bec8067c05abed7e688390246f5fa5351d4be15049428e",
+  "key": "d307089397240297f5af5230cfe0a2cc3060c3adbec6fb8f1969f22261131a8e",
+  "latency_s": 7.62,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-12-17\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"4 pm, 4.30 pm and 6 pm trading intervals\", \"quote\": \"On 17 December 2020, the spot price in New South Wales exceeded $5,000/MWh for the 4 pm, 4.30 pm and 6 pm trading intervals driven by at least two dispatch intervals at or close to the price cap in each trading interval.\"}, \"peak_price\": {\"value\": 10034, \"quote\": \"The spot price in New South Wales reached $7,685/MWh, $10,034/MWh and $5,033/MWh for the 4 pm, 4.30 pm and 6 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in New South Wales was relatively high at levels between 10,550 MW to 10,750 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Long-term planned outages for upgrades or maintenance experienced by black coal generators meant about 2,900 MW of capacity was unavailable, out of approximately 9,700 MW of black coal installed capacity.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A further 520 MW of capacity was removed by black coal generators from around 1.30 pm. This included a unit trip at Liddell 3 around 1.30 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"From around 3.30 pm, imports from Queensland into New South Wales over the QNI interconnector were limited due to lightning in the area. At the time of high prices the import limit into New South Wales was between 750 MW and 850 MW - down from its nominal limit of 1,000 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned outage of the Crookwell to Gullen Range 330 kV line, which had begun the previous day.\"}, {\"label\": \"rebids\", \"quote\": \"In addition to the removal of capacity at Liddell unit 3 and Eraring, a number of other rebids occurred which contributed to and possibly prolonged the high prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"From around 3.30 pm, imports from Queensland into New South Wales over the QNI interconnector were limited due to lightning in the area.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"To manage the outage, AEMO invoked constraints from 16 December (discussed in the next section) affecting generation in southern New South Wales and flows on the VIC-NSW interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages limited generation getting to load centres\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Due to the tight demand and supply conditions, rebidding of capacity from lower to higher prices and removal of capacity, even small volumes, contributed to the prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in New South Wales was relatively high at levels between 10,550 MW to 10,750 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Long-term planned outages for upgrades or maintenance experienced by black coal generators meant about 2,900 MW of capacity was unavailable, out of approximately 9,700 MW of black coal installed capacity."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A further 520 MW of capacity was removed by black coal generators from around 1.30 pm. This included a unit trip at Liddell 3 around 1.30 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "From around 3.30 pm, imports from Queensland into New South Wales over the QNI interconnector were limited due to lightning in the area. At the time of high prices the import limit into New South Wales was between 750 MW and 850 MW - down from its nominal limit of 1,000 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned outage of the Crookwell to Gullen Range 330 kV line, which had begun the previous day."
+          },
+          {
+            "label": "rebids",
+            "quote": "In addition to the removal of capacity at Liddell unit 3 and Eraring, a number of other rebids occurred which contributed to and possibly prolonged the high prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-12-17",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "From around 3.30 pm, imports from Queensland into New South Wales over the QNI interconnector were limited due to lightning in the area."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "To manage the outage, AEMO invoked constraints from 16 December (discussed in the next section) affecting generation in southern New South Wales and flows on the VIC-NSW interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 17 December 2020, the spot price in New South Wales exceeded $5,000/MWh for the 4 pm, 4.30 pm and 6 pm trading intervals driven by at least two dispatch intervals at or close to the price cap in each trading interval.",
+          "text": "4 pm, 4.30 pm and 6 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Planned network outages limited generation getting to load centres",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales reached $7,685/MWh, $10,034/MWh and $5,033/MWh for the 4 pm, 4.30 pm and 6 pm trading intervals respectively.",
+          "value": 10034
+        },
+        "rebid_set_price": {
+          "quote": "Due to the tight demand and supply conditions, rebidding of capacity from lower to higher prices and removal of capacity, even small volumes, contributed to the prices above $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20201217_NSW_$5000_report(11970439.1)_(2).pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020201217%20NSW%20%245000%20report%2811970439.1%29%20%282%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 748,
+    "per_attempt": [
+      {
+        "completion_tokens": 748,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11878,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12626
+      }
+    ],
+    "prompt_tokens": 11878,
+    "reasoning_tokens": 0,
+    "total_tokens": 12626
+  }
+}

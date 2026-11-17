@@ -1,0 +1,134 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:13:18+00:00",
+  "failure": null,
+  "input_sha256": "ecafeadb6d353186bf0a852bfb42a17e55200ed8388594514c04b85ff740d49d",
+  "key": "6d7827503ffe8fc1f2c0236531ea88840f025160ba2c45e7c6ea9312fe30e55e",
+  "latency_s": 10.28,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-02-02\", \"regions\": [\"NSW1\", \"QLD1\", \"SA1\"], \"intervals\": {\"text\": \"six trading intervals between 1.30 pm and 4 pm in New South Wales, for five of those trading intervals in Queensland and three intervals in the Snowy region\", \"quote\": \"Half-hour spot prices exceeded $5000/MWh for the six trading intervals between 1.30 pm and 4 pm in New South Wales, for five of those trading intervals in Queensland and three intervals in the Snowy region.\"}, \"peak_price\": {\"value\": 9739, \"quote\": \"3:30 pm 9739 1572 7440\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was as much as 650 MW higher than that forecast 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"At 1 pm, this 410 MW of capacity, plus a further 320 MW that was priced at $14/MWh, was shifted into prices of more than $8000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"limited imports from Victoria\"}], \"constraints_named\": [{\"id\": \"V-SN_RAMP_E_F\", \"quote\": \"Export constraint #V-SN_RAMP _E_F VH>V1KTTX VH>V1KTTX\"}, {\"id\": \"VH_0450\", \"quote\": \"Export constraint VH_0450 VH>V1KTTX VH>V1KTTX\"}, {\"id\": \"VH_0000\", \"quote\": \"Export constraint VH_0000 VH>V1KTTX VH>V1KTTX\"}, {\"id\": \"VH_0050\", \"quote\": \"Export constraint VH_0050 V>>H _NIL_2_R V::H_NILVD_BL_R\"}, {\"id\": \"V>>H_NIL_2_R\", \"quote\": \"Export constraint VH_0000 V>>H _NIL_2_R V::H_NILVD_BL_R\"}, {\"id\": \"V::H_NILVD_BL_R\", \"quote\": \"Export constraint VH_0050 V>>H _NIL_2_R V::H_NILVD_BL_R\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Figures 5-8 show the target flows and lim its on the New South Wales to Queensland (QNI)\"}, {\"name\": \"DirectLink\", \"quote\": \"New South Wales to Queensland (DirectLink)\"}, {\"name\": \"Snowy1\", \"quote\": \"Snowy to New South Wales (Snowy1)\"}, {\"name\": \"Vic-Snowy\", \"quote\": \"Victoria to Snowy (Vic-Snowy)\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was as much as 650 MW higher than that forecast 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 1 pm, this 410 MW of capacity, plus a further 320 MW that was priced at $14/MWh, was shifted into prices of more than $8000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "limited imports from Victoria"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V-SN_RAMP_E_F",
+            "quote": "Export constraint #V-SN_RAMP _E_F VH>V1KTTX VH>V1KTTX"
+          },
+          {
+            "id": "VH_0450",
+            "quote": "Export constraint VH_0450 VH>V1KTTX VH>V1KTTX"
+          },
+          {
+            "id": "VH_0000",
+            "quote": "Export constraint VH_0000 VH>V1KTTX VH>V1KTTX"
+          },
+          {
+            "id": "VH_0050",
+            "quote": "Export constraint VH_0050 V>>H _NIL_2_R V::H_NILVD_BL_R"
+          },
+          {
+            "id": "V>>H_NIL_2_R",
+            "quote": "Export constraint VH_0000 V>>H _NIL_2_R V::H_NILVD_BL_R"
+          },
+          {
+            "id": "V::H_NILVD_BL_R",
+            "quote": "Export constraint VH_0050 V>>H _NIL_2_R V::H_NILVD_BL_R"
+          }
+        ],
+        "event_date": "2006-02-02",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Figures 5-8 show the target flows and lim its on the New South Wales to Queensland (QNI)"
+          },
+          {
+            "name": "DirectLink",
+            "quote": "New South Wales to Queensland (DirectLink)"
+          },
+          {
+            "name": "Snowy1",
+            "quote": "Snowy to New South Wales (Snowy1)"
+          },
+          {
+            "name": "Vic-Snowy",
+            "quote": "Victoria to Snowy (Vic-Snowy)"
+          }
+        ],
+        "intervals": {
+          "quote": "Half-hour spot prices exceeded $5000/MWh for the six trading intervals between 1.30 pm and 4 pm in New South Wales, for five of those trading intervals in Queensland and three intervals in the Snowy region.",
+          "text": "six trading intervals between 1.30 pm and 4 pm in New South Wales, for five of those trading intervals in Queensland and three intervals in the Snowy region"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "3:30 pm 9739 1572 7440",
+          "value": 9739
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_2_February_2006_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_2%20February%202006%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1400,
+    "per_attempt": [
+      {
+        "completion_tokens": 697,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12906,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13603
+      },
+      {
+        "completion_tokens": 703,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12906,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 13609
+      }
+    ],
+    "prompt_tokens": 25812,
+    "reasoning_tokens": 0,
+    "total_tokens": 27212
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:21:08+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[2]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "024d2249cd37e6b52139e0b3229a62b4a04461b1bf10b425ec9a459a379bd06c",
+  "key": "b6d9b23712f9ba723b89641d8b12f1d79a0a3d991058a56f326d33ae62671c1a",
+  "latency_s": 26.17,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-12-07\", \"regions\": [\"NSW1\", \"QLD1\", \"SNOWY1\"], \"intervals\": {\"text\": \"Half-hour spot prices exceeded $5000/MWh on four occasions in New South Wales, three occasions in Queensland and on one occasion in the Snowy region.\", \"quote\": \"Half-hour spot prices exceeded $5000/MWh on four occasions in New South Wales, three occasions in Queensland and on one occasion in the Snowy region.\"}, \"peak_price\": {\"value\": 8754, \"quote\": \"The spot price was greater than $5000/MWh in New South Wales between 2.30pm and 4pm, peaking at $8754/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Wednesday 7 December high temperatures in New South Wales and Queensland, led to record coincident demand across the two regions, reaching 20 900 MW at 4pm.\"}, {\"label\": \"demand\", \"quote\": \"The temperature in Sydney on the day peaked at 38.7 degrees, around 4 degrees higher than forecast the previous day. Demand in New South Wales reached a new summer record and was within 200 MW of the highest ever.\"}, {\"label\": \"demand\", \"quote\": \"Conditions in Queensland at the time saw demand within 200 MW of the record set the previous day.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Delays in the return to service of Millmerran unit 1, which had been out of service since mid November and was initially expected to return around 8am, saw as much 250 MW less available capacity than expected at 1pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 1.50pm, effective 2pm, Callide Power Trading reduced the availability of Callide unit C3 by 50 MW. The rebid reason given was \\\"Mill trip\\\" and was effective until 3.05pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 1.39pm Callide B1 was rebid as fixed load. The rebid reason given was \\\"Callide B1 unit instability\\\".\"}, {\"label\": \"rebids\", \"quote\": \"At 2.16pm, effective from 2.25pm until 4pm, Eraring Energy rebid 100 MW of capacity from prices of less than $30/MWh to prices above $9 000/MWh. The rebid reason given was \\\"F:Increased likelihood of increased profit\\\".\"}, {\"label\": \"rebids\", \"quote\": \"At 9.08am, Macquarie Generation rebid as much as 400 MW of capacity from prices below $20/MWh to prices above $500/MWh. The reason given was \\\"RP/Volume tradeoff - load expected to vary from forecast\\\".\"}, {\"label\": \"rebids\", \"quote\": \"At 11.46am, CS Energy rebid around 60 MW of capacity across Callide B and Swanbank B and E, from prices of less than $20/MWh to prices above $400/MWh. The rebid reason given was \\\"Portfolio rear rangement based on late st P\\\".\"}, {\"label\": \"rebids\", \"quote\": \"At 1.19pm, around 400 MW was rebid from prices of zero and above to the market floor across Callide B. The rebid reason given was \\\"Callide B response to Central to south constraint\\\".\"}, {\"label\": \"rebids\", \"quote\": \"From midday, Enertrade rebid around 450 MW of capacity from across its portfolio from prices above $100/MWh, to prices below zero. The rebid reasons given included \\\"Inter/Intra connector constraint::Changed MW distrib\\\" and \\\"Material change in market conditions ::Changed MW distrib\\\".\"}, {\"label\": \"rebids\", \"quote\": \"Between 12.40pm and 2.50pm, Snowy Hydro rebid around 100 MW of capacity at Tumut 3 from prices above $7500/MWh to between $270/MWh and $760/MWh. The rebid reasons included, \\\"M: Change in NSW RRP 5/30 mngemnt: Bandshift down\\\" and \\\"M: m nge const maximise flow: Bandshift down\\\".\"}, {\"label\": \"rebids\", \"quote\": \"At 2.24pm, 1200 MW of capacity at Murray, was shifted from priced of $42/MWh and below, to zero. The rebid reason given was \\\"M: NEMMCO increase Vic-SN limit:Bandshift down\\\".\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows into New South Wales from Snowy were limited to around 2900 MW throughout this period while flows south from Queensland peaked during the 5pm trading interval at more than 800 MW, short of the limit by around 100 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints between central and south Queensland, which limit flows to around 1900 MW, saw at times as much as 150 MW of low priced capacity in central Queensland constrained off.\"}, {\"label\": \"network_outage\", \"quote\": \"From 11.25am to 8pm NEMMCO invoked discretionary constraints to limit flows from Victoria to Snowy. Those constraints were designed to limit the accumulation of negative settlement residues.\"}], \"constraints_named\": [{\"id\": \"discretionary constraints to limit flows from Victoria to Snowy\", \"quote\": \"From 11.25am to 8pm NEMMCO invoked discretionary constraints to limit flows from Victoria to Snowy. Those constraints were designed to limit the accumulation of negative settlement residues.\"}, {\"id\": \"central to south Queensland constraint\", \"quote\": \"Constraints between central and south Queensland, which limit flows to around 1900 MW, saw at times as much as 150 MW of low priced capacity in central Queensland constrained off.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}, {\"name\": \"Snowy1\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}, {\"name\": \"Vic-Snowy\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"From 11.25am to 8pm NEMMCO invoked discretionary constraints to limit flows from Victoria to Snowy. Those constraints were designed to limit the accumulation of negative settlement residues.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_7_December_2005_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_7%20December%202005%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 3125,
+    "per_attempt": [
+      {
+        "completion_tokens": 1438,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9570,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 11008
+      },
+      {
+        "completion_tokens": 1687,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9570,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 11257
+      }
+    ],
+    "prompt_tokens": 19140,
+    "reasoning_tokens": 0,
+    "total_tokens": 22265
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:55:18+00:00",
+  "failure": null,
+  "input_sha256": "e488dcaf98db02153658a0c60f23cf64de1801c8484889bd547127851cfaf275",
+  "key": "a465975a66ab2a5642c5d09911498f369de0242ebbdfcf7bc019592c14fa3963",
+  "latency_s": 7.99,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-01-24\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"11 trading intervals from 4 pm to 9 pm inclusive\", \"quote\": \"On 24 January 2019, the spot price for electricity exceeded $5000/MWh over 11 trading intervals from 4 pm to 9 pm inclusive in Victoria and South Australia.\"}, \"peak_price\": {\"value\": 14500, \"quote\": \"The spot price reached the market price cap (MPC) of $14 500/MWh in Victoria at 6.30 pm and 7 pm and in South Australia from 5.30 pm to 8.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Very high temperatures in Melbourne and Adelaide led to high demand in both regions.\"}, {\"label\": \"demand\", \"quote\": \"Combined demand for electricity reached a maximum of 12 203 MW at 6 pm. Demand for electricity across the combined region was up to 320 MW higher than forecast.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"AGL's Loy Yang A unit 3 experienced a tube leak removing a further 530 MW of potential available capacity in Victoria from the afternoon of 22 January to 26 January.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"several units in Victoria were operating at reduced capability, all due to technical reasons.\"}, {\"label\": \"wind_output\", \"quote\": \"Total semi-scheduled wind generation across Victoria and South Australia was between 39 MW and 331 MW lower than forecast four hours ahead.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO activated the Reliability Emergency Reserve Trader (RERT) from 4.05 pm to 10.30 pm with contracted reserves of 155 MW in Victoria and 210 MW in SA. As a result, AEMO invoked special intervention pricing arrangements, called 'what-if' pricing, for the trading intervals from 4.30 pm to 10.30 pm.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO instructed AUSNet Services to shed load to maintain power system security. This was effected by Alcoa (a large industrial load in Victoria) reducing production. As a result, special pricing arrangements were put in place setting the spot price for electricity in Victoria at or near the market price cap for several trading intervals.\"}], \"constraints_named\": [{\"id\": \"Generation deficit constraint\", \"quote\": \"Generation deficit constraint $2 175 000.00 1.00 $2 175 000.00\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink\"}, {\"name\": \"Murraylink\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink\"}, {\"name\": \"Vic-NSW\", \"quote\": \"Victoria is connected to New South Wales via the Victoria - New South Wales (Vic - NSW) interconnector\"}, {\"name\": \"Basslink\", \"quote\": \"and to Tasmania via Basslink.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Very high temperatures in Melbourne and Adelaide led to high demand in both regions."
+          },
+          {
+            "label": "demand",
+            "quote": "Combined demand for electricity reached a maximum of 12 203 MW at 6 pm. Demand for electricity across the combined region was up to 320 MW higher than forecast."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "AGL's Loy Yang A unit 3 experienced a tube leak removing a further 530 MW of potential available capacity in Victoria from the afternoon of 22 January to 26 January."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "several units in Victoria were operating at reduced capability, all due to technical reasons."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Total semi-scheduled wind generation across Victoria and South Australia was between 39 MW and 331 MW lower than forecast four hours ahead."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO activated the Reliability Emergency Reserve Trader (RERT) from 4.05 pm to 10.30 pm with contracted reserves of 155 MW in Victoria and 210 MW in SA. As a result, AEMO invoked special intervention pricing arrangements, called 'what-if' pricing, for the trading intervals from 4.30 pm to 10.30 pm."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO instructed AUSNet Services to shed load to maintain power system security. This was effected by Alcoa (a large industrial load in Victoria) reducing production. As a result, special pricing arrangements were put in place setting the spot price for electricity in Victoria at or near the market price cap for several trading intervals."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Generation deficit constraint",
+            "quote": "Generation deficit constraint $2 175 000.00 1.00 $2 175 000.00"
+          }
+        ],
+        "event_date": "2019-01-24",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "Victoria is connected to New South Wales via the Victoria - New South Wales (Vic - NSW) interconnector"
+          },
+          {
+            "name": "Basslink",
+            "quote": "and to Tasmania via Basslink."
+          }
+        ],
+        "intervals": {
+          "quote": "On 24 January 2019, the spot price for electricity exceeded $5000/MWh over 11 trading intervals from 4 pm to 9 pm inclusive in Victoria and South Australia.",
+          "text": "11 trading intervals from 4 pm to 9 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price reached the market price cap (MPC) of $14 500/MWh in Victoria at 6.30 pm and 7 pm and in South Australia from 5.30 pm to 8.30 pm.",
+          "value": 14500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2024%20January%202019%20%28Vic%20and%20SA%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 876,
+    "per_attempt": [
+      {
+        "completion_tokens": 876,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 32024,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 32900
+      }
+    ],
+    "prompt_tokens": 32024,
+    "reasoning_tokens": 0,
+    "total_tokens": 32900
+  }
+}

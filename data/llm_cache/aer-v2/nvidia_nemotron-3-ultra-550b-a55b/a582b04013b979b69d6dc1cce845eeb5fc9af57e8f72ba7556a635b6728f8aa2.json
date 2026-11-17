@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:12:34+00:00",
+  "failure": null,
+  "input_sha256": "ced840beb3ed96f15c8d4c7700b1052ab8f65e121962e045586d71a5c8383a3f",
+  "key": "a582b04013b979b69d6dc1cce845eeb5fc9af57e8f72ba7556a635b6728f8aa2",
+  "latency_s": 9.11,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-01-18\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"four trading intervals from 2.30 pm to 4 pm inclusive\", \"quote\": \"On Monday 18 January 2010, the spot price in Queensland exceeded $5000/MWh for four trading intervals from 2.30 pm to 4 pm inclusive.\"}, \"peak_price\": {\"value\": 9208, \"quote\": \"Monday 2:30 PM Actual 4 hr forecast 12 hr forecast Demand (MW) 8883 8580 8568 Spot Price ($MW/h) 9208 135 60\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature reached 36°C in Brisbane resulting in the Queensland demand reaching a record of 8902 MW at 3 pm. Demand was up to 330 MW higher than forecast four hours ahead.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of 750 MW of capacity from low prices to above $5000/MWh also contributed to the high prices.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 2000 MW of capacity was offered day-ahead at prices above $5000/MWh.\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"A system normal constraint (in this case it was the constraint required to protect against voltage collapse should the 750 MW Kogan Creek Power Station trip) was forcing flow across the Terranora interconnector into New South Wales at around 40 MW, 25 MW higher than forecast four hours ahead.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead.\"}, {\"name\": \"Terranora\", \"quote\": \"A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of 750 MW of capacity from low prices to above $5000/MWh also contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature reached 36°C in Brisbane resulting in the Queensland demand reaching a record of 8902 MW at 3 pm. Demand was up to 330 MW higher than forecast four hours ahead."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of 750 MW of capacity from low prices to above $5000/MWh also contributed to the high prices."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 2000 MW of capacity was offered day-ahead at prices above $5000/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "A system normal constraint (in this case it was the constraint required to protect against voltage collapse should the 750 MW Kogan Creek Power Station trip) was forcing flow across the Terranora interconnector into New South Wales at around 40 MW, 25 MW higher than forecast four hours ahead."
+          }
+        ],
+        "event_date": "2010-01-18",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead."
+          },
+          {
+            "name": "Terranora",
+            "quote": "A system normal constraint reduced the import capability from New South Wales across both the QNI and Terranora interconnectors to around 150 MW (nominal import limit into Queensland is around 580 MW), which was lower than forecast four hours ahead."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 18 January 2010, the spot price in Queensland exceeded $5000/MWh for four trading intervals from 2.30 pm to 4 pm inclusive.",
+          "text": "four trading intervals from 2.30 pm to 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Monday 2:30 PM Actual 4 hr forecast 12 hr forecast Demand (MW) 8883 8580 8568 Spot Price ($MW/h) 9208 135 60",
+          "value": 9208
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of 750 MW of capacity from low prices to above $5000/MWh also contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_18_January_2010_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_18%20January%202010%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 680,
+    "per_attempt": [
+      {
+        "completion_tokens": 680,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5592,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6272
+      }
+    ],
+    "prompt_tokens": 5592,
+    "reasoning_tokens": 0,
+    "total_tokens": 6272
+  }
+}

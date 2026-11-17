@@ -1,0 +1,178 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:18:21+00:00",
+  "failure": null,
+  "input_sha256": "63d372e602fa5ebd96d6dd617030a1f776c222991e64b153cf423c911e37d644",
+  "key": "e95abf0f6f3b8eadbfcea5f12ca33097424b6be06876be89e5f35662c25d454d",
+  "latency_s": 11.52,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-01-31\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"4 pm\", \"quote\": \"New South Wales - 4 pm 31 January\"}, \"peak_price\": {\"value\": 6020, \"quote\": \"Spot price $6020/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"For 31 January demand, price and available capacity were all close to forecast.\"}, {\"label\": \"rebids\", \"quote\": \"At 2.55 pm Macquarie Generation rebid 320 MW of available capacity at Bayswater from prices below $75/MWh to above $11 400/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"NSW-VIC\", \"quote\": \"The reason given was \\\"1450A unit trip in Vic - NSW to Vic i/c constraint sth\\\".\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}, {\"event_date\": \"2011-02-01\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"1.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm\", \"quote\": \"New South Wales - 1.30 pm 1 February ... New South Wales - 3 pm 1 February ... New South Wales - 3.30 pm 1 February ... New South Wales - 4 pm 1 February ... New South Wales - 4.30 pm 1 February\"}, \"peak_price\": {\"value\": 12136, \"quote\": \"Spot price $12 136/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"For 1 February demand was up to 505 MW greater than forecast 4 hours ahead and 631 MW greater than forecast 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"At 9.15 am Macquarie Generation rebid 335 MW of capacity across its portfolio from prices below $5000/MWh (the majority was priced below $80/MWh) to above $7100/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"At 12.41 am Eraring Energy rebid up to 200 MW of capacity across Eraring units one and four from prices below $35/MWh to above $12 200/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 3.33 pm, effective from 3.40 pm, Delta Electricity reduced the availability of Vales Point power station by 280 MW (all of which was priced above $12 200/MWh).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"NSW-VIC\", \"quote\": \"The reason given was \\\"1415A Vic to NSW flow > than PD and Vic demand < than PD\\\".\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}, {\"event_date\": \"2011-02-02\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"2 pm, 2.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm\", \"quote\": \"New South Wales - 2 pm 2 February ... New South Wales - 2.30 pm 2 February ... New South Wales -3 pm 2 February ... New South Wales - 3.30 pm 2 February ... New South Wales - 4 pm 2 February ... New South Wales - 4.30 pm 2 February\"}, \"peak_price\": {\"value\": 10417, \"quote\": \"Spot price $10 417/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"For 2 February demand was close to forecast 4 hours ahead but up to 436 MW greater than forecast 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"At 8.46 am Macquarie Generation rebid 480 MW of available capacity across its portfolio from prices below $270/MWh to above $7100/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"At 1.24 pm, for the 2 pm trading interval, Eraring Energy rebid 120 MW of available capacity at Eraring units one and four from prices below $25/MWh to above $12 200/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"NSW-VIC\", \"quote\": \"The reason given was \\\"0835A AEMO forecast@8:30>forecast yesterday\\\".\"}, {\"name\": \"NSW-VIC\", \"quote\": \"The reason given was \\\"1318A predispatch price higher than dispatch price 1320\\\".\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "For 31 January demand, price and available capacity were all close to forecast."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.55 pm Macquarie Generation rebid 320 MW of available capacity at Bayswater from prices below $75/MWh to above $11 400/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-01-31",
+        "interconnectors_named": [
+          {
+            "name": "NSW-VIC",
+            "quote": "The reason given was \"1450A unit trip in Vic - NSW to Vic i/c constraint sth\"."
+          }
+        ],
+        "intervals": {
+          "quote": "New South Wales - 4 pm 31 January",
+          "text": "4 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $6020/MWh",
+          "value": 6020
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "For 1 February demand was up to 505 MW greater than forecast 4 hours ahead and 631 MW greater than forecast 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 9.15 am Macquarie Generation rebid 335 MW of capacity across its portfolio from prices below $5000/MWh (the majority was priced below $80/MWh) to above $7100/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 12.41 am Eraring Energy rebid up to 200 MW of capacity across Eraring units one and four from prices below $35/MWh to above $12 200/MWh."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 3.33 pm, effective from 3.40 pm, Delta Electricity reduced the availability of Vales Point power station by 280 MW (all of which was priced above $12 200/MWh)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [
+          {
+            "name": "NSW-VIC",
+            "quote": "The reason given was \"1415A Vic to NSW flow > than PD and Vic demand < than PD\"."
+          }
+        ],
+        "intervals": {
+          "quote": "New South Wales - 1.30 pm 1 February ... New South Wales - 3 pm 1 February ... New South Wales - 3.30 pm 1 February ... New South Wales - 4 pm 1 February ... New South Wales - 4.30 pm 1 February",
+          "text": "1.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $12 136/MWh",
+          "value": 12136
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "For 2 February demand was close to forecast 4 hours ahead but up to 436 MW greater than forecast 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 8.46 am Macquarie Generation rebid 480 MW of available capacity across its portfolio from prices below $270/MWh to above $7100/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 1.24 pm, for the 2 pm trading interval, Eraring Energy rebid 120 MW of available capacity at Eraring units one and four from prices below $25/MWh to above $12 200/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-02-02",
+        "interconnectors_named": [
+          {
+            "name": "NSW-VIC",
+            "quote": "The reason given was \"0835A AEMO forecast@8:30>forecast yesterday\"."
+          },
+          {
+            "name": "NSW-VIC",
+            "quote": "The reason given was \"1318A predispatch price higher than dispatch price 1320\"."
+          }
+        ],
+        "intervals": {
+          "quote": "New South Wales - 2 pm 2 February ... New South Wales - 2.30 pm 2 February ... New South Wales -3 pm 2 February ... New South Wales - 3.30 pm 2 February ... New South Wales - 4 pm 2 February ... New South Wales - 4.30 pm 2 February",
+          "text": "2 pm, 2.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $10 417/MWh",
+          "value": 10417
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_January_to_2_February_2011_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20January%20to%202%20February%202011%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1336,
+    "per_attempt": [
+      {
+        "completion_tokens": 1336,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12015,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13351
+      }
+    ],
+    "prompt_tokens": 12015,
+    "reasoning_tokens": 0,
+    "total_tokens": 13351
+  }
+}

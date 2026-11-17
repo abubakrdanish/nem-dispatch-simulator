@@ -1,0 +1,153 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:15:31+00:00",
+  "failure": null,
+  "input_sha256": "a727b9b0aaa877907d2ca6458a6bf407acb0f42552635afd433142be97679e2d",
+  "key": "867e710487c0252aad4d7942e82554240e53a2ffd0baa83abbe4e668245c7f90",
+  "latency_s": 16.58,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-02-23\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3:30 pm\", \"quote\": \"23 February 2006 3:30 pm 6997\"}, \"peak_price\": {\"value\": 6997, \"quote\": \"23 February 2006 3:30 pm 6997\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures on both days in Victoria led to a new record demand on Friday. As a result of the extreme demand and limited import capability, the half-hour spot price exceeded $5000/MWh on four occasions, once on Thursday and three times on Friday.\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Actual flows were limited to around 300 MW when the spot price was above $5000/MWh. This compares to a nominal limit of around 1700 MW under normal conditions.\"}, {\"label\": \"rebids\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}], \"constraints_named\": [{\"id\": \"Wagga to Yanco constraints\", \"quote\": \"At 1.06 pm, effective immediately the constraints managing the outage of the Wagga to Yanco line in New South Wales were revoked from the market systems.\"}, {\"id\": \"Robertstown transformer constraints\", \"quote\": \"The constraints managing the Robertstown transformer outage in South Australia remained in the market systems until 2.04 pm.\"}], \"interconnectors_named\": [{\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}}, {\"event_date\": \"2006-02-24\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"11:00 am, 11:30 am, 12:00 pm\", \"quote\": \"24 February 2006 11:00 am 9134 24 February 2006 11:30 am 8834 24 February 2006 12:00 pm 6691\"}, \"peak_price\": {\"value\": 9134, \"quote\": \"24 February 2006 11:00 am 9134\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures on both days in Victoria led to a new record demand on Friday. As a result of the extreme demand and limited import capability, the half-hour spot price exceeded $5000/MWh on four occasions, once on Thursday and three times on Friday.\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Actual flows were limited to around 300 MW when the spot price was above $5000/MWh. This compares to a nominal limit of around 1700 MW under normal conditions.\"}, {\"label\": \"rebids\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}], \"constraints_named\": [{\"id\": \"Wagga to Yanco constraints\", \"quote\": \"At 1.06 pm, effective immediately the constraints managing the outage of the Wagga to Yanco line in New South Wales were revoked from the market systems.\"}, {\"id\": \"Robertstown transformer constraints\", \"quote\": \"The constraints managing the Robertstown transformer outage in South Australia remained in the market systems until 2.04 pm.\"}], \"interconnectors_named\": [{\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures on both days in Victoria led to a new record demand on Friday. As a result of the extreme demand and limited import capability, the half-hour spot price exceeded $5000/MWh on four occasions, once on Thursday and three times on Friday."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Actual flows were limited to around 300 MW when the spot price was above $5000/MWh. This compares to a nominal limit of around 1700 MW under normal conditions."
+          },
+          {
+            "label": "rebids",
+            "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Wagga to Yanco constraints",
+            "quote": "At 1.06 pm, effective immediately the constraints managing the outage of the Wagga to Yanco line in New South Wales were revoked from the market systems."
+          },
+          {
+            "id": "Robertstown transformer constraints",
+            "quote": "The constraints managing the Robertstown transformer outage in South Australia remained in the market systems until 2.04 pm."
+          }
+        ],
+        "event_date": "2006-02-23",
+        "interconnectors_named": [
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "23 February 2006 3:30 pm 6997",
+          "text": "3:30 pm"
+        },
+        "network_outages": {
+          "quote": "Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "23 February 2006 3:30 pm 6997",
+          "value": 6997
+        },
+        "rebid_set_price": {
+          "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures on both days in Victoria led to a new record demand on Friday. As a result of the extreme demand and limited import capability, the half-hour spot price exceeded $5000/MWh on four occasions, once on Thursday and three times on Friday."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Actual flows were limited to around 300 MW when the spot price was above $5000/MWh. This compares to a nominal limit of around 1700 MW under normal conditions."
+          },
+          {
+            "label": "rebids",
+            "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Wagga to Yanco constraints",
+            "quote": "At 1.06 pm, effective immediately the constraints managing the outage of the Wagga to Yanco line in New South Wales were revoked from the market systems."
+          },
+          {
+            "id": "Robertstown transformer constraints",
+            "quote": "The constraints managing the Robertstown transformer outage in South Australia remained in the market systems until 2.04 pm."
+          }
+        ],
+        "event_date": "2006-02-24",
+        "interconnectors_named": [
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "24 February 2006 11:00 am 9134 24 February 2006 11:30 am 8834 24 February 2006 12:00 pm 6691",
+          "text": "11:00 am, 11:30 am, 12:00 pm"
+        },
+        "network_outages": {
+          "quote": "Planned network outages of a 132kV transmission line between Wagga and Yanco in southern New South Wales and a transformer at Robertstown in South Australia were scheduled for both Thursday and Friday. The combination of constraints required to manage these outages led to a significant restriction on flows from Snowy into Victoria, which was far greater than forecast.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "24 February 2006 11:00 am 9134",
+          "value": 9134
+        },
+        "rebid_set_price": {
+          "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_24_February_2006_-_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%E2%80%9324%20February%202006%20-%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1423,
+    "per_attempt": [
+      {
+        "completion_tokens": 1423,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7774,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9197
+      }
+    ],
+    "prompt_tokens": 7774,
+    "reasoning_tokens": 0,
+    "total_tokens": 9197
+  }
+}

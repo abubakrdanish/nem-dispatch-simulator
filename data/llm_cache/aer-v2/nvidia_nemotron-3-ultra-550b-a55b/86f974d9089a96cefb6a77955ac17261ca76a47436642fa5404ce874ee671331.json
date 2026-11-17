@@ -1,0 +1,290 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:05:56+00:00",
+  "failure": null,
+  "input_sha256": "1ba63f1464e9cf2de7bba340534a2d45dab71bedc0b83c3ba809dd629cf41f5c",
+  "key": "86f974d9089a96cefb6a77955ac17261ca76a47436642fa5404ce874ee671331",
+  "latency_s": 23.43,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2026-04-20\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"30-minute period ending 5.30 pm\", \"quote\": \"In Queensland, the L1 sec price reached $2,634 per MW for the 30-minute period ending 5.30 pm on 20 April.\"}, \"peak_price\": {\"value\": 2634, \"quote\": \"In Queensland, the L1 sec price reached $2,634 per MW for the 30-minute period ending 5.30 pm on 20 April.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"From 14 to 24 April, a planned outage of the Armidale - Sapphire line south of QNI (Diagram 1) created a credible risk that Queensland could be synchronously separated from the NEM.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"Neoen's Western Downs Battery offered 122 MW of low-priced L1 sec capacity for 5.30 pm but it could not be enabled to provide this as it was dispatching 255.57 MW into the energy market.\"}, {\"label\": \"rebids\", \"quote\": \"Between 2.58 pm and 5.23 pm, AGL Energy moved a net total of 23 MW at its Wandoan Battery from low-price to $15,800 per MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Queensland is connected by two interconnectors, QNI and Terranora. Of these, only QNI can transfer FCAS.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"From 14 to 24 April, a planned outage of the Armidale - Sapphire line south of QNI (Diagram 1) created a credible risk that Queensland could be synchronously separated from the NEM.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This high-priced capacity was ultimately needed to meet the last 23 MW required for the 5.30 pm dispatch interval, which meant this unit set the price for this interval.\"}}, {\"event_date\": \"2026-05-31\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"30-minute period at 7 pm\", \"quote\": \"The local Raise 6 second (R6 sec) 30-minute price in Tasmania was $834 per MW at 7 pm, which was the highest 30-minute price in the month.\"}, \"peak_price\": {\"value\": 834, \"quote\": \"The local Raise 6 second (R6 sec) 30-minute price in Tasmania was $834 per MW at 7 pm, which was the highest 30-minute price in the month.\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"At 6.55 pm on this day, the metered flow on Basslink was 0 MW. This meant Basslink was in its \\\"No-Go\\\" zone and unable to transfer FCAS.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"On this occasion at 6.55 pm, AEMO's dispatch engine determined the cheapest outcome was to back off an offer of around -$1,000 per MWh from Hydro Tasmania's Liapootah, Catagunya, Wayatinah in energy, to provide more in raise services.\"}], \"constraints_named\": [{\"id\": \"AUFLS\", \"quote\": \"Hydro Tasmania's load unit that only provides ancillary services was restricted during the high-priced interval under the Adaptive Under Frequency Load Shedding (AUFLS) scheme.\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"At 6.55 pm on this day, the metered flow on Basslink was 0 MW. This meant Basslink was in its \\\"No-Go\\\" zone and unable to transfer FCAS.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There were no significant rebids in R6 sec service for this event.\"}}, {\"event_date\": \"2026-06-21\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"6 pm and 10 pm 30-minute periods\", \"quote\": \"In Tasmania, 30-minute prices were above $3,500 per MWh in energy and above $3,500 per MW in FCAS. The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm.\"}, \"peak_price\": {\"value\": 20300, \"quote\": \"Each 30-minute price was driven by a single 5-minute price spike at or near the market price cap (Table 2).\"}, \"causes\": [{\"label\": \"fcas_co_optimisation\", \"quote\": \"The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the \\\"No-Go\\\" zone and one minor rebid.\"}, {\"label\": \"network_outage\", \"quote\": \"system normal constraints invoked by AEMO to maintain system security caused the local FCAS requirement in Tasmania to reach up to 66 MW at 6 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Basslink in the \\\"No-Go\\\" zone\"}, {\"label\": \"rebids\", \"quote\": \"VIOTAS Australia removed 1 MW of low-priced capacity from its demand response unit, DRVIOT05, in a late rebid at 5.53 pm due to a change in plant conditions.\"}], \"constraints_named\": [{\"id\": \"AUFLS\", \"quote\": \"the AUFLS control scheme (Box 4) was in place at the time and restricted Hydro Tasmania's load unit during the high-priced intervals.\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"From 9.35 pm, Basslink was in the \\\"No-Go\\\" zone (Box 3) and Tasmania had to provide its own local FCAS.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"system normal constraints invoked by AEMO to maintain system security caused the local FCAS requirement in Tasmania to reach up to 66 MW at 6 pm.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the high price at the time.\"}}, {\"event_date\": \"2026-06-21\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"8 pm and 8.30 pm 30-minute periods\", \"quote\": \"Across 21 and 22 June, the 30-minute price for energy exceeded $3,000 per MWh on five occasions. The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).\"}, \"peak_price\": {\"value\": 20300, \"quote\": \"The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand.\"}, {\"label\": \"wind_output\", \"quote\": \"South Australia experienced a wind lull on 21 and 22 June, with wind output averaging 85 MW out of 2,766 MW of registered wind capacity.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"batteries removed capacity in the lead up to the high prices as they ran out of charge\"}, {\"label\": \"interconnector_limit\", \"quote\": \"South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria.\"}, {\"name\": \"Murraylink\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Neoen also removed 26 MW from $3,275 per MWh at Hornsdale Power Reserve citing state of energy approaching lower operational limit and set the price for 7.55 pm.\"}}, {\"event_date\": \"2026-06-22\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 am, 8 am and 8.30 am 30-minute periods\", \"quote\": \"Across 21 and 22 June, the 30-minute price for energy exceeded $3,000 per MWh on five occasions. The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).\"}, \"peak_price\": {\"value\": 20300, \"quote\": \"The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand.\"}, {\"label\": \"wind_output\", \"quote\": \"South Australia experienced a wind lull on 21 and 22 June, with wind output averaging 85 MW out of 2,766 MW of registered wind capacity.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"batteries removed capacity in the lead up to the high prices as they ran out of charge\"}, {\"label\": \"interconnector_limit\", \"quote\": \"South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria.\"}, {\"name\": \"Murraylink\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Neoen shifted 75 MW and 69 MW from low to high prices at Hornsdale Power Reserve at 6.17 am and 6.27 am and set the price for 7.05 am and 7.10 am.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "From 14 to 24 April, a planned outage of the Armidale - Sapphire line south of QNI (Diagram 1) created a credible risk that Queensland could be synchronously separated from the NEM."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "Neoen's Western Downs Battery offered 122 MW of low-priced L1 sec capacity for 5.30 pm but it could not be enabled to provide this as it was dispatching 255.57 MW into the energy market."
+          },
+          {
+            "label": "rebids",
+            "quote": "Between 2.58 pm and 5.23 pm, AGL Energy moved a net total of 23 MW at its Wandoan Battery from low-price to $15,800 per MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-04-20",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Queensland is connected by two interconnectors, QNI and Terranora. Of these, only QNI can transfer FCAS."
+          }
+        ],
+        "intervals": {
+          "quote": "In Queensland, the L1 sec price reached $2,634 per MW for the 30-minute period ending 5.30 pm on 20 April.",
+          "text": "30-minute period ending 5.30 pm"
+        },
+        "network_outages": {
+          "quote": "From 14 to 24 April, a planned outage of the Armidale - Sapphire line south of QNI (Diagram 1) created a credible risk that Queensland could be synchronously separated from the NEM.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "In Queensland, the L1 sec price reached $2,634 per MW for the 30-minute period ending 5.30 pm on 20 April.",
+          "value": 2634
+        },
+        "rebid_set_price": {
+          "quote": "This high-priced capacity was ultimately needed to meet the last 23 MW required for the 5.30 pm dispatch interval, which meant this unit set the price for this interval.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "At 6.55 pm on this day, the metered flow on Basslink was 0 MW. This meant Basslink was in its \"No-Go\" zone and unable to transfer FCAS."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "On this occasion at 6.55 pm, AEMO's dispatch engine determined the cheapest outcome was to back off an offer of around -$1,000 per MWh from Hydro Tasmania's Liapootah, Catagunya, Wayatinah in energy, to provide more in raise services."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "AUFLS",
+            "quote": "Hydro Tasmania's load unit that only provides ancillary services was restricted during the high-priced interval under the Adaptive Under Frequency Load Shedding (AUFLS) scheme."
+          }
+        ],
+        "event_date": "2026-05-31",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "At 6.55 pm on this day, the metered flow on Basslink was 0 MW. This meant Basslink was in its \"No-Go\" zone and unable to transfer FCAS."
+          }
+        ],
+        "intervals": {
+          "quote": "The local Raise 6 second (R6 sec) 30-minute price in Tasmania was $834 per MW at 7 pm, which was the highest 30-minute price in the month.",
+          "text": "30-minute period at 7 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The local Raise 6 second (R6 sec) 30-minute price in Tasmania was $834 per MW at 7 pm, which was the highest 30-minute price in the month.",
+          "value": 834
+        },
+        "rebid_set_price": {
+          "quote": "There were no significant rebids in R6 sec service for this event.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the \"No-Go\" zone and one minor rebid."
+          },
+          {
+            "label": "network_outage",
+            "quote": "system normal constraints invoked by AEMO to maintain system security caused the local FCAS requirement in Tasmania to reach up to 66 MW at 6 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Basslink in the \"No-Go\" zone"
+          },
+          {
+            "label": "rebids",
+            "quote": "VIOTAS Australia removed 1 MW of low-priced capacity from its demand response unit, DRVIOT05, in a late rebid at 5.53 pm due to a change in plant conditions."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "AUFLS",
+            "quote": "the AUFLS control scheme (Box 4) was in place at the time and restricted Hydro Tasmania's load unit during the high-priced intervals."
+          }
+        ],
+        "event_date": "2026-06-21",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "From 9.35 pm, Basslink was in the \"No-Go\" zone (Box 3) and Tasmania had to provide its own local FCAS."
+          }
+        ],
+        "intervals": {
+          "quote": "In Tasmania, 30-minute prices were above $3,500 per MWh in energy and above $3,500 per MW in FCAS. The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm.",
+          "text": "6 pm and 10 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": "system normal constraints invoked by AEMO to maintain system security caused the local FCAS requirement in Tasmania to reach up to 66 MW at 6 pm.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Each 30-minute price was driven by a single 5-minute price spike at or near the market price cap (Table 2).",
+          "value": 20300
+        },
+        "rebid_set_price": {
+          "quote": "This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the high price at the time.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "South Australia experienced a wind lull on 21 and 22 June, with wind output averaging 85 MW out of 2,766 MW of registered wind capacity."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "batteries removed capacity in the lead up to the high prices as they ran out of charge"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-06-21",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "Across 21 and 22 June, the 30-minute price for energy exceeded $3,000 per MWh on five occasions. The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).",
+          "text": "8 pm and 8.30 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).",
+          "value": 20300
+        },
+        "rebid_set_price": {
+          "quote": "Neoen also removed 26 MW from $3,275 per MWh at Hornsdale Power Reserve citing state of energy approaching lower operational limit and set the price for 7.55 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "South Australia experienced a wind lull on 21 and 22 June, with wind output averaging 85 MW out of 2,766 MW of registered wind capacity."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "batteries removed capacity in the lead up to the high prices as they ran out of charge"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-06-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price (i.e. when high-priced generation in one region is forced into a region with lower-priced generation) into Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "Across 21 and 22 June, the 30-minute price for energy exceeded $3,000 per MWh on five occasions. The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).",
+          "text": "7.30 am, 8 am and 8.30 am 30-minute periods"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $3,836 per MWh to $20,300 per MWh (Table 8).",
+          "value": 20300
+        },
+        "rebid_set_price": {
+          "quote": "Neoen shifted 75 MW and 69 MW from low to high prices at Hornsdale Power Reserve at 6.17 am and 6.27 am and set the price for 7.05 am and 7.10 am.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Significant_electricity_prices_for_April_to_June_2026.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-08/Significant%20electricity%20prices%20for%20April%20to%20June%202026.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2777,
+    "per_attempt": [
+      {
+        "completion_tokens": 2777,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 18963,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 21740
+      }
+    ],
+    "prompt_tokens": 18963,
+    "reasoning_tokens": 0,
+    "total_tokens": 21740
+  }
+}

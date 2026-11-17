@@ -8,6 +8,8 @@ license = "MIT"
 [project.optional-dependencies]
 # The local frontend (python -m nemsim.web). Kept out of requirements.lock so CI stays lean.
 frontend = ["fastapi>=0.110", "uvicorn>=0.29"]
+# Reading the AER's spike reports (python -m nemsim.aer). Raw PDFs are gitignored, so CI never needs it.
+aer = ["pypdf>=5.1"]
 
 [project.urls]
 Homepage = "https://github.com/abubakrdanish/nem-dispatch-simulator"
@@ -17,7 +19,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["nemsim", "nemsim.llm", "nemsim.rungs", "nemsim.web"]
+packages = ["nemsim", "nemsim.aer", "nemsim.llm", "nemsim.rungs", "nemsim.web"]
 
 [tool.setuptools.package-data]
 "nemsim.web" = ["static/*"]

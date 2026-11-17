@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:22:12+00:00",
+  "failure": null,
+  "input_sha256": "14e1d821b3db38e1871690c04a467bb2baef165c39f2da3da02dddd5e9019833",
+  "key": "fb24e5c7c32851b556c639fece7e416ef4df836011d03f0dd00022b0c5e67bf2",
+  "latency_s": 575.31,
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-12-20\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"Five-minute dispatch prices exceeded $5000/MWh eight times between 1.30 pm and 2.30 pm; spot price exceeded $5000/MWh only for the 1.30 pm trading interval.\", \"quote\": \"The five-minute dispatch price exceeded $5000/MWh eight times during this period , although the spot price (the price for the half -hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval.\"}, \"peak_price\": {\"value\": 7696, \"quote\": \"High temperatures across New South Wales (41 degrees at Olympic Park) on 20 December 2013 saw demand reach around 11 300 MW at 1.30 pm AEST and the spot price exceeded $5000/MWh at 1.30 pm, reaching $7696/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand for the 1.30 pm interval was 561 MW higher than forecast four hours ahead and 314 MW higher than that forecast 12 hours ahead.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A reduction in the available capacity in New South Wales by around 1200 MW due to physical reasons such as unplanned outages.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of around 1000 MW of capacity into high price bands in New South Wales.\"}, {\"label\": \"constraint_violation\", \"quote\": \"This step change in exports was not enough to satisfy the Ballarat to Bendigo constraint so it violated and contributed to setting the New South Wales price at $7192/MWh (The relationship between the dynamic line rating, constraint violation and price is shown in Figure 3).\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The actual import limit was forcing flow in the opposite direction, from New South Wales into Victoria at a maximum of 1109 MW with actual flow at 616 MW for the 1.30 pm trading interval.\"}], \"constraints_named\": [{\"id\": \"S>V_NIL_NIL_RBNW\", \"quote\": \"S>V_NIL_NIL_RBNW - a system normal constraint preventing the overload of the North West Bend to Robertson 132 kV line (North West Bend to Robertson constraint).\"}, {\"id\": \"V>>SML_NIL_8\", \"quote\": \"V>>SML_NIL_8 - a system normal constraint managing the overloading of the Ballarat to Bendigo 220 kV line for the loss of the Shepparton to Bendigo 220 kV line in Victoria (Ballarat to Bendigo constraint).\"}, {\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"NRM_NSW1_VIC1 - a financial constraint used to man age the accrual of negative residues across the VIC-NSW interconnector (negative residue constraint).\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"The counter price flows on the VIC - NSW interconnector during the high priced period accrued around $3 million worth of negative settlement residues.\"}, {\"name\": \"Murraylink\", \"quote\": \"At 10.55 am the North West Bend to Robertson constraint started to bind virtually fixing the flow from South Australia into Victoria across Murraylink at around 80 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of around 1000 MW of capacity into high price bands in New South Wales.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand for the 1.30 pm interval was 561 MW higher than forecast four hours ahead and 314 MW higher than that forecast 12 hours ahead."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A reduction in the available capacity in New South Wales by around 1200 MW due to physical reasons such as unplanned outages."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of around 1000 MW of capacity into high price bands in New South Wales."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This step change in exports was not enough to satisfy the Ballarat to Bendigo constraint so it violated and contributed to setting the New South Wales price at $7192/MWh (The relationship between the dynamic line rating, constraint violation and price is shown in Figure 3)."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The actual import limit was forcing flow in the opposite direction, from New South Wales into Victoria at a maximum of 1109 MW with actual flow at 616 MW for the 1.30 pm trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "S>V_NIL_NIL_RBNW",
+            "quote": "S>V_NIL_NIL_RBNW - a system normal constraint preventing the overload of the North West Bend to Robertson 132 kV line (North West Bend to Robertson constraint)."
+          },
+          {
+            "id": "V>>SML_NIL_8",
+            "quote": "V>>SML_NIL_8 - a system normal constraint managing the overloading of the Ballarat to Bendigo 220 kV line for the loss of the Shepparton to Bendigo 220 kV line in Victoria (Ballarat to Bendigo constraint)."
+          },
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "NRM_NSW1_VIC1 - a financial constraint used to man age the accrual of negative residues across the VIC-NSW interconnector (negative residue constraint)."
+          }
+        ],
+        "event_date": "2013-12-20",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "The counter price flows on the VIC - NSW interconnector during the high priced period accrued around $3 million worth of negative settlement residues."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "At 10.55 am the North West Bend to Robertson constraint started to bind virtually fixing the flow from South Australia into Victoria across Murraylink at around 80 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The five-minute dispatch price exceeded $5000/MWh eight times during this period , although the spot price (the price for the half -hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval.",
+          "text": "Five-minute dispatch prices exceeded $5000/MWh eight times between 1.30 pm and 2.30 pm; spot price exceeded $5000/MWh only for the 1.30 pm trading interval."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "High temperatures across New South Wales (41 degrees at Olympic Park) on 20 December 2013 saw demand reach around 11 300 MW at 1.30 pm AEST and the spot price exceeded $5000/MWh at 1.30 pm, reaching $7696/MWh.",
+          "value": 7696
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of around 1000 MW of capacity into high price bands in New South Wales.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20131220_NSW_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20131220%20NSW%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 12448,
+    "per_attempt": [
+      {
+        "completion_tokens": 12448,
+        "completion_tokens_details": {
+          "reasoning_tokens": 11646
+        },
+        "prompt_tokens": 6765,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 19213
+      }
+    ],
+    "prompt_tokens": 6765,
+    "reasoning_tokens": 11646,
+    "total_tokens": 19213
+  }
+}

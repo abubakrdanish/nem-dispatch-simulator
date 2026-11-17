@@ -1,0 +1,117 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:28:59+00:00",
+  "failure": null,
+  "input_sha256": "ef5b05fef29c7ad646ff0c3add96ab6cf30619297065c64cafd4a0189dd1328e",
+  "key": "f17c850904f889054a58b469fd7c91687549f2a1168bec9a7292f0efa5fa453a",
+  "latency_s": 13.86,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-12\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"11 dispatch intervals priced $13 000/MWh and above between 4.30 pm and 7.30 pm\", \"quote\": \"Prices were volatile on the day with 11 dispatch intervals priced $13 000/MWh and above between 4.30 pm and 7.30 pm\"}, \"peak_price\": {\"value\": 14000, \"quote\": \"5:10 pm $14 000 CS Energy W/HOE#1 Energy $14 000 0.71 $9940 Braemar Power Projects BRAEMAR1 Energy $14 000 0.08 $1120 Braemar Power Projects BRAEMAR2 Energy $14 000 0.08 $1120 Stanwell STAN-2 Energy $14 000 0.06 $840 Stanwell TARONG#1 Energy $14 000 0.08 $1120\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This led to record demand for electricity in Queensland.\"}, {\"label\": \"demand\", \"quote\": \"These extreme temperatures led to record \\\"total demand\\\" in Queensland , reaching 9369 MW at 5.30 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"almost 790 MW of supply from local generators was withdrawn within four hours of the 5.30 trading interval, all for technical plant reasons\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"a significant volume of low -price local Queensland supply became unavailable\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Net flows into Queensland across the QNI and Terranora interconnectors were limited to a round 40 MW during the 5.30 pm trading interval.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Interconnector net flows were at or close to their import limit, meaning the reduction in local Queensland supply could not be sourced from neighbouring regions.\"}, {\"label\": \"network_outage\", \"quote\": \"The long term planned outage of the Coffs Harbour to Koolkhan 132kV line was still in effect.\"}, {\"label\": \"network_outage\", \"quote\": \"To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line.\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"Electricity flows from New South Wales into Queensland on QNI were limited to around 170 MW, due to a \\\"system normal\\\" constraint designed to manage voltage stability in north eastern New South Wales.\"}, {\"id\": \"constraint to prevent the Armidale to Koolkhan line being overloaded\", \"quote\": \"To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Queensland is connected to the rest of the NEM via two interconnectors connected to New South Wales: the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}, {\"name\": \"Terranora\", \"quote\": \"Queensland is connected to the rest of the NEM via two interconnectors connected to New South Wales: the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The long term planned outage of the Coffs Harbour to Koolkhan 132kV line was still in effect. To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line. As a result , electricity was forced out of Queensland and into northern New South Wales across the Terranora interconnector by about 130 MW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high priced outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This led to record demand for electricity in Queensland."
+          },
+          {
+            "label": "demand",
+            "quote": "These extreme temperatures led to record \"total demand\" in Queensland , reaching 9369 MW at 5.30 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "almost 790 MW of supply from local generators was withdrawn within four hours of the 5.30 trading interval, all for technical plant reasons"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "a significant volume of low -price local Queensland supply became unavailable"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Net flows into Queensland across the QNI and Terranora interconnectors were limited to a round 40 MW during the 5.30 pm trading interval."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Interconnector net flows were at or close to their import limit, meaning the reduction in local Queensland supply could not be sourced from neighbouring regions."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The long term planned outage of the Coffs Harbour to Koolkhan 132kV line was still in effect."
+          },
+          {
+            "label": "network_outage",
+            "quote": "To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "Electricity flows from New South Wales into Queensland on QNI were limited to around 170 MW, due to a \"system normal\" constraint designed to manage voltage stability in north eastern New South Wales."
+          },
+          {
+            "id": "constraint to prevent the Armidale to Koolkhan line being overloaded",
+            "quote": "To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line."
+          }
+        ],
+        "event_date": "2017-02-12",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Queensland is connected to the rest of the NEM via two interconnectors connected to New South Wales: the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Queensland is connected to the rest of the NEM via two interconnectors connected to New South Wales: the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          }
+        ],
+        "intervals": {
+          "quote": "Prices were volatile on the day with 11 dispatch intervals priced $13 000/MWh and above between 4.30 pm and 7.30 pm",
+          "text": "11 dispatch intervals priced $13 000/MWh and above between 4.30 pm and 7.30 pm"
+        },
+        "network_outages": {
+          "quote": "The long term planned outage of the Coffs Harbour to Koolkhan 132kV line was still in effect. To manage this outage, AEMO invoked a constraint to prevent the Armidale to Koolkhan line being overloaded in the event of the failure of the Coffs Harbour to Lismore line. As a result , electricity was forced out of Queensland and into northern New South Wales across the Terranora interconnector by about 130 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "5:10 pm $14 000 CS Energy W/HOE#1 Energy $14 000 0.71 $9940 Braemar Power Projects BRAEMAR1 Energy $14 000 0.08 $1120 Braemar Power Projects BRAEMAR2 Energy $14 000 0.08 $1120 Stanwell STAN-2 Energy $14 000 0.06 $840 Stanwell TARONG#1 Energy $14 000 0.08 $1120",
+          "value": 14000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high priced outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_12_February_2017_(QLD).docx_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2012%20February%202017%20%28QLD%29.docx_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 998,
+    "per_attempt": [
+      {
+        "completion_tokens": 998,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10030,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11028
+      }
+    ],
+    "prompt_tokens": 10030,
+    "reasoning_tokens": 0,
+    "total_tokens": 11028
+  }
+}

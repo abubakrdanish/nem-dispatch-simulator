@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:23:20+00:00",
+  "failure": null,
+  "input_sha256": "d8758118821ec52463e0cc9c8e7377eef02c68ed227c95a6d3b952a6221db0f5",
+  "key": "581a789bd1004f4d9f25fa4a6fbe79e62b862507831682e8c0713b3ec0c83337",
+  "latency_s": 7.44,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-02-07\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"the 4 pm trading interval\", \"quote\": \"On 7 February 2018, the spot price for electricity for the 4 pm trading interval reached $6847/MWh and $8001/MWh in Victoria and in South Australia, respectively.\"}, \"peak_price\": {\"value\": 8001, \"quote\": \"On 7 February 2018, the spot price for electricity for the 4 pm trading interval reached $6847/MWh and $8001/MWh in Victoria and in South Australia, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures were high in both regions, exceeding 37oC in Melbourne and 40oC in Adelaide leading to higher than average demand.\"}, {\"label\": \"demand\", \"quote\": \"demand for electricity was around 290 MW higher than forecast.\"}, {\"label\": \"demand\", \"quote\": \"Demand was around 150 MW higher than forecast four hours prior.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Following the closure of the Hazelwood and Northern power stations, there has been a material reduction in available capacity.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"dispatch conditions on the day meant that this interconnector was constrained to a lower level and cheaper electricity from the other eastern states could not be delivered into the combined Victoria and South Australia region.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"flows from New South Wales into Victoria were at their limit (as forecast), which at 291 MW, was significantly lower than the nominal import limit of 1300 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"The Vic-NSW interconnector connects Victoria to New South Wales.\"}, {\"name\": \"Heywood\", \"quote\": \"Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector.\"}, {\"name\": \"Murraylink\", \"quote\": \"Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector.\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink was exporting electricity from Tasmania into Victoria at its maximum available capacity during the high price period, as forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Participants rebidding capacity from low to high prices did not contribute to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures were high in both regions, exceeding 37oC in Melbourne and 40oC in Adelaide leading to higher than average demand."
+          },
+          {
+            "label": "demand",
+            "quote": "demand for electricity was around 290 MW higher than forecast."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was around 150 MW higher than forecast four hours prior."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Following the closure of the Hazelwood and Northern power stations, there has been a material reduction in available capacity."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "dispatch conditions on the day meant that this interconnector was constrained to a lower level and cheaper electricity from the other eastern states could not be delivered into the combined Victoria and South Australia region."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "flows from New South Wales into Victoria were at their limit (as forecast), which at 291 MW, was significantly lower than the nominal import limit of 1300 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2018-02-07",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "The Vic-NSW interconnector connects Victoria to New South Wales."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink was exporting electricity from Tasmania into Victoria at its maximum available capacity during the high price period, as forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On 7 February 2018, the spot price for electricity for the 4 pm trading interval reached $6847/MWh and $8001/MWh in Victoria and in South Australia, respectively.",
+          "text": "the 4 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 7 February 2018, the spot price for electricity for the 4 pm trading interval reached $6847/MWh and $8001/MWh in Victoria and in South Australia, respectively.",
+          "value": 8001
+        },
+        "rebid_set_price": {
+          "quote": "Participants rebidding capacity from low to high prices did not contribute to the high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/D18-48817_Prices_above_$5000MWh_-_7_Feb_2018_(SA_Vic).PDF",
+    "url": "https://www.aer.gov.au/system/files/D18-48817%20Prices%20above%20%245000MWh%20-%207%20Feb%202018%20%28SA%20Vic%29.PDF"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 658,
+    "per_attempt": [
+      {
+        "completion_tokens": 658,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11423,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12081
+      }
+    ],
+    "prompt_tokens": 11423,
+    "reasoning_tokens": 0,
+    "total_tokens": 12081
+  }
+}

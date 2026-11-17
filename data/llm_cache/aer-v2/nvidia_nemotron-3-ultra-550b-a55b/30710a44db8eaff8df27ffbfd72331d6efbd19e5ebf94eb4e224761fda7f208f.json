@@ -1,0 +1,195 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:01:18+00:00",
+  "failure": null,
+  "input_sha256": "8ead7831763ca3e4adf17a7ad305ffae2234d7902f393f331904d28415ed6a3c",
+  "key": "30710a44db8eaff8df27ffbfd72331d6efbd19e5ebf94eb4e224761fda7f208f",
+  "latency_s": 32.0,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2023-08-01\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The 30-minute price at 6.30 pm was $5,856 per MWh and at 7 pm it was $7,061 per MWh\", \"quote\": \"The 30-minute price at 6.30 pm was $5,856 per MWh and at 7 pm it was $7,061 per MWh\"}, \"peak_price\": {\"value\": 7061, \"quote\": \"at 7 pm it was $7,061 per MWh\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"label\": \"wind_output\", \"quote\": \"Very low output from wind generation reduced the amount of low-priced capacity available.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity from low to high prices contributed to the higher prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"The Murraylink interconnector has a lower nominal limit of 220 MW. During the high price intervals, the Murraylink Interconnector was importing between 86 MW and 172 MW, with 172 MW being the maximum amount Murraylink was able to import into South Australia at the time to maintain system security.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage restricted imports over the Heywood Interconnector to between 16 MW and 79 MW across the high-priced-intervals, out of a nominal capacity of 600 MW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for commercial reasons from low to high prices contributed to all 6 of the high 5-minute prices.\"}}, {\"event_date\": \"2023-08-11\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The wholesale price of electricity exceeded $5,000 per MWh for six 30-minute periods during the evening of 11 August in South Australia\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for six 30-minute periods during the evening of 11 August in South Australia\"}, \"peak_price\": {\"value\": 11693, \"quote\": \"8 pm 11,693\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Extremely low output from wind generation which was also lower than forecast for almost all high-priced intervals resulted in limited amounts of low-priced capacity available.\"}, {\"label\": \"network_outage\", \"quote\": \"Network limitations on the Heywood and Murraylink interconnectors meant that South Australia had limited access to cheaper generation from Victoria.\"}, {\"label\": \"demand\", \"quote\": \"South Australia experienced multiple spikes in 5-minute demand, coinciding with high price intervals.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for technical and commercial reasons contributed to most of the high 30-minute prices.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Nexif's Snapper Point Power Station tripped at 8.25 pm, effectively withdrawing 150 MW of low-priced capacity.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"The Heywood interconnector was limited due to a planned 5-day network outage on the South East to Tailem Bend line which started that morning.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"The Murraylink interconnector was also limited as a constraint managing a line outage in Victoria restricted imports to around 0 MW for the 30-minutes ending at 5.30 pm, out of its nominal capacity of 220 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Heywood interconnector was limited due to a planned 5-day network outage on the South East to Tailem Bend line which started that morning.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity from low to high prices contributed to the high 30-minute prices between 7 pm to 8.30 pm.\"}}, {\"event_date\": \"2023-09-04\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"The wholesale price of electricity exceeded $5,000 per MWh for the 6 pm 30-minute period in Queensland and NSW\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for the 6 pm 30-minute period in Queensland and NSW\"}, \"peak_price\": {\"value\": 6020, \"quote\": \"The 30-minute price reached $5,349 per MWh in Queensland and $6,020 per MWh in NSW\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned network outage of the Lower Tumut-Canberra line limited the regions' access to cheaper generation from southern NSW and Victoria.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A Bayswater unit tripped at 2.53 pm removing 685 MW of mostly low-priced base load capacity. Vales Point and Millmerran also experienced technical issues removing a further 210 MW.\"}, {\"label\": \"demand\", \"quote\": \"Combined demand increased by 157 MW at 5.35 pm and 226 MW at 5.45 pm.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial as well as technical reasons contributed to the high prices.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Technical limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Victoria-NSW interconnector\", \"quote\": \"A planned network outage of the Canberra to Lower Tumut line impacted the Victoria-NSW interconnector, and reduced Queensland and NSW's access to cheaper generation from southern NSW and Victoria.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage of the Lower Tumut-Canberra line limited the regions' access to cheaper generation from southern NSW and Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price: At 5.09 pm, EnergyAustralia shifted 490 MW at Mt Piper from low prices to the price cap in response to a change in forecast prices which significantly impacted both high-priced dispatch intervals and contributed to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Very low output from wind generation reduced the amount of low-priced capacity available."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity from low to high prices contributed to the higher prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-08-01",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "The Murraylink interconnector has a lower nominal limit of 220 MW. During the high price intervals, the Murraylink Interconnector was importing between 86 MW and 172 MW, with 172 MW being the maximum amount Murraylink was able to import into South Australia at the time to maintain system security."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price at 6.30 pm was $5,856 per MWh and at 7 pm it was $7,061 per MWh",
+          "text": "The 30-minute price at 6.30 pm was $5,856 per MWh and at 7 pm it was $7,061 per MWh"
+        },
+        "network_outages": {
+          "quote": "A planned network outage restricted imports over the Heywood Interconnector to between 16 MW and 79 MW across the high-priced-intervals, out of a nominal capacity of 600 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "at 7 pm it was $7,061 per MWh",
+          "value": 7061
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for commercial reasons from low to high prices contributed to all 6 of the high 5-minute prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Extremely low output from wind generation which was also lower than forecast for almost all high-priced intervals resulted in limited amounts of low-priced capacity available."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network limitations on the Heywood and Murraylink interconnectors meant that South Australia had limited access to cheaper generation from Victoria."
+          },
+          {
+            "label": "demand",
+            "quote": "South Australia experienced multiple spikes in 5-minute demand, coinciding with high price intervals."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for technical and commercial reasons contributed to most of the high 30-minute prices."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Nexif's Snapper Point Power Station tripped at 8.25 pm, effectively withdrawing 150 MW of low-priced capacity."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-08-11",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "The Heywood interconnector was limited due to a planned 5-day network outage on the South East to Tailem Bend line which started that morning."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "The Murraylink interconnector was also limited as a constraint managing a line outage in Victoria restricted imports to around 0 MW for the 30-minutes ending at 5.30 pm, out of its nominal capacity of 220 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for six 30-minute periods during the evening of 11 August in South Australia",
+          "text": "The wholesale price of electricity exceeded $5,000 per MWh for six 30-minute periods during the evening of 11 August in South Australia"
+        },
+        "network_outages": {
+          "quote": "The Heywood interconnector was limited due to a planned 5-day network outage on the South East to Tailem Bend line which started that morning.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "8 pm 11,693",
+          "value": 11693
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices contributed to the high 30-minute prices between 7 pm to 8.30 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage of the Lower Tumut-Canberra line limited the regions' access to cheaper generation from southern NSW and Victoria."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A Bayswater unit tripped at 2.53 pm removing 685 MW of mostly low-priced base load capacity. Vales Point and Millmerran also experienced technical issues removing a further 210 MW."
+          },
+          {
+            "label": "demand",
+            "quote": "Combined demand increased by 157 MW at 5.35 pm and 226 MW at 5.45 pm."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial as well as technical reasons contributed to the high prices."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Technical limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-09-04",
+        "interconnectors_named": [
+          {
+            "name": "Victoria-NSW interconnector",
+            "quote": "A planned network outage of the Canberra to Lower Tumut line impacted the Victoria-NSW interconnector, and reduced Queensland and NSW's access to cheaper generation from southern NSW and Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for the 6 pm 30-minute period in Queensland and NSW",
+          "text": "The wholesale price of electricity exceeded $5,000 per MWh for the 6 pm 30-minute period in Queensland and NSW"
+        },
+        "network_outages": {
+          "quote": "A planned network outage of the Lower Tumut-Canberra line limited the regions' access to cheaper generation from southern NSW and Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 30-minute price reached $5,349 per MWh in Queensland and $6,020 per MWh in NSW",
+          "value": 6020
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price: At 5.09 pm, EnergyAustralia shifted 490 MW at Mt Piper from low prices to the price cap in response to a change in forecast prices which significantly impacted both high-priced dispatch intervals and contributed to the high price.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2023_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/2023-12/AER%20-%20Electricity%20prices%20above%20%245%2C000MWh%20-%20July%20to%20September%202023_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1627,
+    "per_attempt": [
+      {
+        "completion_tokens": 1627,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 19363,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20990
+      }
+    ],
+    "prompt_tokens": 19363,
+    "reasoning_tokens": 0,
+    "total_tokens": 20990
+  }
+}

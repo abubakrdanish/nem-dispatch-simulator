@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:13:33+00:00",
+  "failure": null,
+  "input_sha256": "2d5cea19d5fe9e895832ad33469fc872ceb19664f536a459b0d2c036cd15d972",
+  "key": "f9140f64b078aa1f909846195364d116955342f661624c339f2f63e486fc6bd3",
+  "latency_s": 6.33,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-07-20\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 6.30 pm trading interval\", \"quote\": \"resulted in a price of $5120/MWh in New South Wales during the 6.30 pm trading interval\"}, \"peak_price\": {\"value\": 5120.14, \"quote\": \"Spot price $5120.14/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"demand in New South Wales reached 13 078 MW at 6.30 pm. Demand was 600 MW higher than forecast 12 hours ahead and 150 MW higher than forecast 4 hours ahead\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Liddell unit 3 500 Shutdown on 7 July. This outage was to replace the both the HP and IP turbines. The generator returned to service on 21 September. Liddell unit 1 500 Shutdown on 26 May. The reason given was \\\"boiler pressure - water leak.\\\" The generator returned to service on 21 July following a number of attempts during 19-20 July. Delta Electricity Munmorah unit 4 300 Shutdown on 9 May, returning to service on 16 August. The reason given was \\\"taken out of service\\\"\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Macquarie Generation made a number of rebids throughout the day which reduced the available capacity of Liddell unit one as a result of delays in the generator's return to service following a shutdown on 26 May. The unit was initially forecast to return to service around midday, but did not return until around 6 am the following morning\"}, {\"label\": \"rebids\", \"quote\": \"At 4.47 pm Macquarie Generation rebid 800 MW of capacity at Bayswater from prices below $85/MWh to above $8100/MWh. The rebid was effective from 5 pm to 7.30 pm. At the same time, 90 MW of capacity at Liddell was rebid from prices below $200/MWh to above $4600/MWh, with 60 MW of this priced above $6500/MWh. The rebid was effective from 5 pm to 8.30 pm\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland interconnector\", \"quote\": \"Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities\"}, {\"name\": \"Snowy interconnector\", \"quote\": \"Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The significant factors that contributed to the spot price in New South Wales exceeding $5000/MWh at 6.30 pm on 20 July 2006 included near record demand and generator rebidding by Macquarie Generation\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "demand in New South Wales reached 13 078 MW at 6.30 pm. Demand was 600 MW higher than forecast 12 hours ahead and 150 MW higher than forecast 4 hours ahead"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Liddell unit 3 500 Shutdown on 7 July. This outage was to replace the both the HP and IP turbines. The generator returned to service on 21 September. Liddell unit 1 500 Shutdown on 26 May. The reason given was \"boiler pressure - water leak.\" The generator returned to service on 21 July following a number of attempts during 19-20 July. Delta Electricity Munmorah unit 4 300 Shutdown on 9 May, returning to service on 16 August. The reason given was \"taken out of service\""
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Macquarie Generation made a number of rebids throughout the day which reduced the available capacity of Liddell unit one as a result of delays in the generator's return to service following a shutdown on 26 May. The unit was initially forecast to return to service around midday, but did not return until around 6 am the following morning"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 4.47 pm Macquarie Generation rebid 800 MW of capacity at Bayswater from prices below $85/MWh to above $8100/MWh. The rebid was effective from 5 pm to 7.30 pm. At the same time, 90 MW of capacity at Liddell was rebid from prices below $200/MWh to above $4600/MWh, with 60 MW of this priced above $6500/MWh. The rebid was effective from 5 pm to 8.30 pm"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-07-20",
+        "interconnectors_named": [
+          {
+            "name": "Queensland interconnector",
+            "quote": "Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities"
+          },
+          {
+            "name": "Snowy interconnector",
+            "quote": "Flows across both the Queensland and Snowy interconnectors were approaching their maximum capabilities"
+          }
+        ],
+        "intervals": {
+          "quote": "resulted in a price of $5120/MWh in New South Wales during the 6.30 pm trading interval",
+          "text": "the 6.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $5120.14/MWh",
+          "value": 5120.14
+        },
+        "rebid_set_price": {
+          "quote": "The significant factors that contributed to the spot price in New South Wales exceeding $5000/MWh at 6.30 pm on 20 July 2006 included near record demand and generator rebidding by Macquarie Generation",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_20_July_2006_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_20%20July%202006%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 760,
+    "per_attempt": [
+      {
+        "completion_tokens": 760,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11552,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12312
+      }
+    ],
+    "prompt_tokens": 11552,
+    "reasoning_tokens": 0,
+    "total_tokens": 12312
+  }
+}

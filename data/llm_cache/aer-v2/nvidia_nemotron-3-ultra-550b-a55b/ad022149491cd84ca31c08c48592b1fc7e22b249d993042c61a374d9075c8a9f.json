@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:22:45+00:00",
+  "failure": null,
+  "input_sha256": "4b291140e035b40ab9776a085c138fa8d5d30c6db13a895eee3d995e0b2a1fb2",
+  "key": "ad022149491cd84ca31c08c48592b1fc7e22b249d993042c61a374d9075c8a9f",
+  "latency_s": 8.16,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2012-11-29\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"the three trading intervals 4 pm to 5 pm inclusive\", \"quote\": \"On 29 November 2012, the spot price in Victoria exceeded $5000/MWh for the three trading intervals 4 pm to 5 pm inclusive\"}, \"peak_price\": {\"value\": 9974, \"quote\": \"with the highest spot price of $9974/MWh occurring at 4.30 pm\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Higher than expected temperatures in Melbourne saw demand levels in Victoria reach 9378 MW at 4.30 pm (the highest since February 2011). Actual demand was more than 350 MW higher than forecast four hours ahead and 1100 MW higher than forecast 12 hours ahead.\"}, {\"label\": \"wind_output\", \"quote\": \"A contributing factor was lower than forecast wind farm output. AGL's Macarthur Wind Farm was forecast to generate around 109 MW during the time of high prices, four hours ahead. However its actual generation was 13 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Another contributing factor to the LOR1 reserve shortfall observed was that 1590 MW of generation (Yallourn Unit 2, Loy Yang Unit 2, Newport and Hazelwood Unit 3) was out of service on the day. None of this plant was available even given 24 hours notice (this is termed PASA availability).\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding contributed to reduced imports from New South Wales and price volatility. Between 3.15 pm and 4.55 pm the five-minute dispatch price exceeded $11 500/MWh 14 times.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Following these rebids import capability from New South Wales reduced (with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals). These constraints also resulted in the constraining off of the Murray generator.\"}], \"constraints_named\": [{\"id\": \"V>>V_NIL_3\", \"quote\": \"with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals\"}, {\"id\": \"V>>V_NIL_1B\", \"quote\": \"with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"The largest difference was 12 hours ahead on the New South Wales interconnector, primarily as a result of higher than forecast generation from the Murray generator.\"}, {\"name\": \"Heywood\", \"quote\": \"Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink).\"}, {\"name\": \"Murraylink\", \"quote\": \"Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink).\"}, {\"name\": \"Basslink\", \"quote\": \"Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink).\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"There were no significant planned or unplanned network outages that affected network availability during the relevant trading intervals.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding contributed to reduced imports from New South Wales and price volatility.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Higher than expected temperatures in Melbourne saw demand levels in Victoria reach 9378 MW at 4.30 pm (the highest since February 2011). Actual demand was more than 350 MW higher than forecast four hours ahead and 1100 MW higher than forecast 12 hours ahead."
+          },
+          {
+            "label": "wind_output",
+            "quote": "A contributing factor was lower than forecast wind farm output. AGL's Macarthur Wind Farm was forecast to generate around 109 MW during the time of high prices, four hours ahead. However its actual generation was 13 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Another contributing factor to the LOR1 reserve shortfall observed was that 1590 MW of generation (Yallourn Unit 2, Loy Yang Unit 2, Newport and Hazelwood Unit 3) was out of service on the day. None of this plant was available even given 24 hours notice (this is termed PASA availability)."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding contributed to reduced imports from New South Wales and price volatility. Between 3.15 pm and 4.55 pm the five-minute dispatch price exceeded $11 500/MWh 14 times."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Following these rebids import capability from New South Wales reduced (with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals). These constraints also resulted in the constraining off of the Murray generator."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>V_NIL_3",
+            "quote": "with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals"
+          },
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "with either of two constraints V>>V_NIL_3 and V>>V_NIL_1B binding for all of the high priced dispatch intervals"
+          }
+        ],
+        "event_date": "2012-11-29",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "The largest difference was 12 hours ahead on the New South Wales interconnector, primarily as a result of higher than forecast generation from the Murray generator."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink)."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink)."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Table 2 shows the difference between actual import limits and those forecast four hours and 12 hours ahead of dispatch for all interconnectors into Victoria (VIC-NSW, BassLink, Heywood and Murraylink)."
+          }
+        ],
+        "intervals": {
+          "quote": "On 29 November 2012, the spot price in Victoria exceeded $5000/MWh for the three trading intervals 4 pm to 5 pm inclusive",
+          "text": "the three trading intervals 4 pm to 5 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "There were no significant planned or unplanned network outages that affected network availability during the relevant trading intervals.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "with the highest spot price of $9974/MWh occurring at 4.30 pm",
+          "value": 9974
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding contributed to reduced imports from New South Wales and price volatility.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_$5000_Report_-_Victoria_29_November_2012.pdf",
+    "url": "https://www.aer.gov.au/system/files/AER%20%245000%20Report%20-%20Victoria%2029%20November%202012.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 908,
+    "per_attempt": [
+      {
+        "completion_tokens": 908,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7103
+      }
+    ],
+    "prompt_tokens": 6195,
+    "reasoning_tokens": 0,
+    "total_tokens": 7103
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:07:55+00:00",
+  "failure": null,
+  "input_sha256": "fadee2368f0d1106a4dcfe48024133391fd6101ea7bf8166ca79870c3b305752",
+  "key": "bb4219cfd89850b566f3c3db5163d177f579bc0cc1b37922c1c811602db56c19",
+  "latency_s": 14.37,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-02-01\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"3.30 pm, 4 pm, 4.30 pm\", \"quote\": \"On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.\"}, \"peak_price\": {\"value\": 7350, \"quote\": \"On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Conditions at the time saw demand higher than forecast, up to 124 MW above that four hours ahead, and up to 134 MW above that forecast twelve hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"On 1 February rebidding by CS Energy, Millmerran, Stanwell and Callide Power Trading saw around 1240 MW of available capacity shifted into prices above $9000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:\"}], \"constraints_named\": [{\"id\": \"QNI pd constraint pd_run_201102011\", \"quote\": \"The reasons given included \\\"change in Qld sensitivities - sl\\\", \\\"QNI p d constraint pd_run_201102011\\\" and \\\"Qld price above pd - sl\\\".\"}, {\"id\": \"N_MBTE1_B\", \"quote\": \"The reason given was \\\"transmission constraint-N_MBTE1_B\\\".\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}}, {\"event_date\": \"2011-02-02\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"2.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm\", \"quote\": \"On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.\"}, \"peak_price\": {\"value\": 9044, \"quote\": \"On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"On 2 February rebidding by CS Energy, Millmerran, Stanwell and Callide Power Trading saw around 770 MW of available capacity shifted into prices above $9000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The reasons given included \\\"CALL_B unit availability emissions sl\\\", \\\"1252P COLNSV_1 unit trip sl\\\", \\\"1006E COLNSV_5 correct error in previous bid sl\\\", \\\"KPP_1 ambient conditions sl\\\" and \\\"1217P SWAN_B_3 fabric filter maintenance sl\\\".\"}, {\"label\": \"network_outage\", \"quote\": \"The reason given was \\\"1411P chge in avail - shutdown of east Townsville substation sl\\\".\"}], \"constraints_named\": [{\"id\": \"QNI\", \"quote\": \"The reasons given were \\\"1605A CS Energy reviewed 30 min predispatch/QNI constrained SL\\\" and \\\"1401A SWAN_E price lower than 30min forecast sl\\\".\"}, {\"id\": \"QNI\", \"quote\": \"The reason given was \\\"1523A transmission constraint-QNI\\\".\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The reason given was \\\"1411P chge in avail - shutdown of east Townsville substation sl\\\".\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Conditions at the time saw demand higher than forecast, up to 124 MW above that four hours ahead, and up to 134 MW above that forecast twelve hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 1 February rebidding by CS Energy, Millmerran, Stanwell and Callide Power Trading saw around 1240 MW of available capacity shifted into prices above $9000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI pd constraint pd_run_201102011",
+            "quote": "The reasons given included \"change in Qld sensitivities - sl\", \"QNI p d constraint pd_run_201102011\" and \"Qld price above pd - sl\"."
+          },
+          {
+            "id": "N_MBTE1_B",
+            "quote": "The reason given was \"transmission constraint-N_MBTE1_B\"."
+          }
+        ],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:"
+          }
+        ],
+        "intervals": {
+          "quote": "On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.",
+          "text": "3.30 pm, 4 pm, 4.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.",
+          "value": 7350
+        },
+        "rebid_set_price": {
+          "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "On 2 February rebidding by CS Energy, Millmerran, Stanwell and Callide Power Trading saw around 770 MW of available capacity shifted into prices above $9000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The reasons given included \"CALL_B unit availability emissions sl\", \"1252P COLNSV_1 unit trip sl\", \"1006E COLNSV_5 correct error in previous bid sl\", \"KPP_1 ambient conditions sl\" and \"1217P SWAN_B_3 fabric filter maintenance sl\"."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The reason given was \"1411P chge in avail - shutdown of east Townsville substation sl\"."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI",
+            "quote": "The reasons given were \"1605A CS Energy reviewed 30 min predispatch/QNI constrained SL\" and \"1401A SWAN_E price lower than 30min forecast sl\"."
+          },
+          {
+            "id": "QNI",
+            "quote": "The reason given was \"1523A transmission constraint-QNI\"."
+          }
+        ],
+        "event_date": "2011-02-02",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding:"
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.",
+          "text": "2.30 pm, 3 pm, 3.30 pm, 4 pm, 4.30 pm"
+        },
+        "network_outages": {
+          "quote": "The reason given was \"1411P chge in avail - shutdown of east Townsville substation sl\".",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.",
+          "value": 9044
+        },
+        "rebid_set_price": {
+          "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_1_and_2_February_2011_-_Qld.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_1%20and%202%20February%202011%20-%20Qld.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1118,
+    "per_attempt": [
+      {
+        "completion_tokens": 1118,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11595,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12713
+      }
+    ],
+    "prompt_tokens": 11595,
+    "reasoning_tokens": 0,
+    "total_tokens": 12713
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:58:54+00:00",
+  "failure": null,
+  "input_sha256": "3dbd5a5c9df656cd9b9954a1241e51614602720818815bbf99da21cf5be2c20e",
+  "key": "5e56fc844e3119ff4325f3ef8b422ede8d04926285053924f0db4365b2ec31d0",
+  "latency_s": 7.33,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-12-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions.\", \"quote\": \"the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions.\"}, \"peak_price\": {\"value\": 10627, \"quote\": \"the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"One of the main contributors to the high prices was high demand due to extreme heat.\"}, {\"label\": \"wind_output\", \"quote\": \"The reduced output from wind generation exacerbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"A plant outage at Northern Power Station, lower than forecast contribution from wind and interconnector import flows also contributed to tight supply conditions.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap.\"}], \"constraints_named\": [{\"id\": \"Snuggery to Keith 132 kV line on the trip of the Penola West to Kincraig 132 kV or the South East to Tailem Bend No.1 275 kV lines\", \"quote\": \"Imports across Heywood were limited due to system normal transmission constraints that manage the potential overload of the Snuggery to Keith 132 kV line on the trip of the Penola West to Kincraig 132 kV or the South East to Tailem Bend No.1 275 kV lines.\"}, {\"id\": \"Ballart to Bendigo 220 kV line on the loss of the Shepparton to Bendigo 220 kV line\", \"quote\": \"and a system normal constraint managing the overload of the Ballart to Bendigo 220 kV line on the loss of the Shepparton to Bendigo 220 kV line.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}, {\"name\": \"Murraylink\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "One of the main contributors to the high prices was high demand due to extreme heat."
+          },
+          {
+            "label": "wind_output",
+            "quote": "The reduced output from wind generation exacerbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "A plant outage at Northern Power Station, lower than forecast contribution from wind and interconnector import flows also contributed to tight supply conditions."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Snuggery to Keith 132 kV line on the trip of the Penola West to Kincraig 132 kV or the South East to Tailem Bend No.1 275 kV lines",
+            "quote": "Imports across Heywood were limited due to system normal transmission constraints that manage the potential overload of the Snuggery to Keith 132 kV line on the trip of the Penola West to Kincraig 132 kV or the South East to Tailem Bend No.1 275 kV lines."
+          },
+          {
+            "id": "Ballart to Bendigo 220 kV line on the loss of the Shepparton to Bendigo 220 kV line",
+            "quote": "and a system normal constraint managing the overload of the Ballart to Bendigo 220 kV line on the loss of the Shepparton to Bendigo 220 kV line."
+          }
+        ],
+        "event_date": "2013-12-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions.",
+          "text": "the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions."
+        },
+        "network_outages": {
+          "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.",
+          "value": 10627
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20131219_SA_5000_report.PDF",
+    "url": "https://www.aer.gov.au/system/files/20131219%20SA%205000%20report.PDF"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 869,
+    "per_attempt": [
+      {
+        "completion_tokens": 869,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10837,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11706
+      }
+    ],
+    "prompt_tokens": 10837,
+    "reasoning_tokens": 0,
+    "total_tokens": 11706
+  }
+}

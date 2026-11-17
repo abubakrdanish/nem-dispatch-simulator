@@ -1,0 +1,317 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:55:10+00:00",
+  "failure": null,
+  "input_sha256": "1e0b47a9fb06bbeeaac9a127fbaea15b686642ffba84aeac38af98514237a8df",
+  "key": "bbacc16a297bb87f2ba2c34f3e7548dc15a585ffe8d28b6d159242e2b9f1cca2",
+  "latency_s": 38.68,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-02\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"5 pm and 5.30 pm trading intervals\", \"quote\": \"The spot price exceeded $5000/MWh, which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.\"}, \"peak_price\": {\"value\": 13400, \"quote\": \"The spot price exceeded $5000/MWh, which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The maximum temperature in Brisbane reached around 33 degrees as forecast. This was the fourth consecutive day of temperatures above 30 degrees. Maximum total demand for the day reached 8996 MW.\"}, {\"label\": \"demand\", \"quote\": \"Actual demand was lower than forecast (see section 3.1.2).\"}, {\"label\": \"demand\", \"quote\": \"Electricity demand, during the 5 pm trading interval was lower than forecast 12 hours ahead.\"}, {\"label\": \"demand\", \"quote\": \"As can be seen, actual total demand was significantly lower than forecast demand 4 hours ahead, leading to lower than forecast high prices.\"}, {\"label\": \"demand\", \"quote\": \"The figure shows that, with such a tight supply and demand curve, small increases in 5-minute demand coincided with increases in price.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The transfer of electricity across the QNI interconnector was limited by constraints to around 200 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints on Terranora were forcing around 100 MW of flow into New South Wales for the duration of trading intervals priced above $5000/MWh, slightly higher than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the time of the high prices, imports into Queensland on these interconnectors were limited to a maximum of around 100 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The ability to transfer electricity from neighbouring regions of the NEM was significantly constrained due to limitations in the network.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These limitations prevented other cheaper sources of electricity from competing with generation in Queensland and remaining local demand had to be met by local generation.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding reduced the amount of capacity priced between $500/MWh and $12 500/MWh such that, depending on circumstances, the price could change significantly in response to minor changes to demand or supply.\"}, {\"label\": \"rebids\", \"quote\": \"The high price of the 1.05 pm dispatch interval can be attributed to this behaviour, where Callide and Alinta rebid 364 MW of generation capacity to $13 400/MWh and above.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity from high to low priced bands in response to a high dispatch price - It is not unusual for generators to seek to increase revenue by rebidding capacity to low price bands to facilitate higher dispatch levels during the high priced trading interval, for example in the 1.30 pm trading interval.\"}, {\"label\": \"rebids\", \"quote\": \"At 4.50 pm the dispatch price reached $12 499/MWh following this price there was little capacity rebid from high to low prices by Queensland participants.\"}, {\"label\": \"rebids\", \"quote\": \"There was no significant rebidding of capacity from high to low prices by other participants.\"}, {\"label\": \"rebids\", \"quote\": \"For the 5.30 pm trading interval generators did not rebid their capacity to lower prices and the resulting price was close to the high forecast price.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.14 pm 1.25 pm RTA Yarwun Yarwun 155 -990 n/a GAS SUPPLY LIMITATIONS\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.16 pm 1.25 pm Origin Darling Downs 10 -1000 n/a 1315P CHANGE IN AVAIL - HIGH BACK PRESSURE SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.55 pm CS Energy Kogan Creek -10 14 N/A 1354P ambient conditions-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"2.04 pm Origin Energy Darling Downs -15 70 N/A 1403P change in avail - ambient conditions sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"2.41 pm CS Energy Callide B -20 17 N/A 1441P condenser vacuum limits-\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"2.47 pm Origin Energy Darling Downs -10 70 N/A 1445P change in avail - ambient conditions sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"3.12 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 15:12 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"3.17 pm CS Energy Kogan Creek -15 14 N/A 1517 P technical issues-id fan limits- sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"3.45 pm Origin Energy Darling Downs -10 70 N/A 1545P change in avail - ambient conditions SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.18 pm CS Energy Gladstone 100 14 000 <45 1617P portfolio rearrangement due to-callide restrictions-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.18 pm Origin Darling Downs 5 n/a 70 1615P CHANGE IN AVAIL - AMBIENT CONDITIONS SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.18 pm Origin Mt Stuart 92 12 499 -1000 1617A CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.05 pm Millmerran Energy Trader Millmerran -30 -1000 N/A 13:04 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.11 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 13:10 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.12 pm AGL Energy Yabulu -11 <150 N/A 1310~P~020 reduction in avail cap~206 unexp ambient temp effects\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.16 pm Origin Energy Darling Downs -10 70 N/A 1315P change in avail - high back pressure sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.47 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 13:43 p: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.49 pm Millmerran Energy Trader Millmerran -25 -1000 N/A 13:49 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.55 pm CS Energy Kogan Creek -10 14 N/A 1354P ambient conditions-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"1.59 pm CS Energy Gladstone 30 N/A -1000 1357P unit offline revised-updated unit ramp down schedule-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"2.04 pm Origin Energy Darling Downs -15 70 N/A 1403P change in avail - ambient conditions sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"2.47 pm Origin Energy Darling Downs -10 70 N/A 1445P change in avail - ambient conditions sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"3.03 pm Callide Power Trading Callide C 226 -1000 14 000 1503A Qld RRP P5 RUN 15:00 DI 15:30 VS P5 run 14:55 DI 15:30 SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.12 pm Callide Power Trading Callide C 100 -1000 14 000 1612A Qld RRP DS DI 16:15 104 vs P5 run 16:05 13400 sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.18 pm CS Energy Gladstone 100 14 000 <45 1617P portfolio rearrangement due to-callide restrictions-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.12 pm Callide Power Trading Callide C 126 14 000 -1000 1612A Qld RRP DS DI 16:15 104 VS P5 run 16:05 13400 sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.16 pm Millmerran Energy Trader Millmerran -40 -1000 N/A 16:16 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.19 pm Millmerran Energy Trader Millmerran -55 -1000 N/A 16:19 P: condensate polisher inlet temperature\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"4.54 pm 5.05 pm CS Energy Gladstone 180 <99 14 000 1653P portfolio rearrangement due to-gps2 ramp down to outage-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"5.06 pm 5.15 pm CS Energy Kogan Creek -20 14 N/A 1705P technical issues-id fan issues-sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.32 pm 6.40 pm CS Energy Gladstone 80 60 14 000 1831A DISPATCH PRICE $149 LOWER THAN 5MIN PD $1,405- SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.37 pm 6.45 pm Millmerran Millmerran 20 -1000 14 000 18:40 A QNI export limit ds di 18:40 value 122 vs pd run 18:30 ti 19:00 value 162 sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.37 pm 6.45 pm Callide Power Trading Callide C 26 -1000 14 000 1837A north limit QNI decrease not inp5min sl\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.46 pm 6.55 pm Stanwell Stanwell, Tarong 600 >13 400 -1000 1844A QLD RRP FOR DI1845 $12499.02 / QNI TRANSMISSON CONSTRAINT\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.47 pm 6.55 pm Callide Power Trading Callide C 80 14 000 -1000 1844A Q RRP DS DI 18:45 VS P5 RUN 18:35 DI 18:45 SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.50 pm 7 pm Origin Energy Darling Downs 10 N/A 70 1850P CHANGE IN AVAIL - AMBIENT CONDITIONS SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"6.52 pm 7 pm Origin Energy Mt Stuart 92 12 499 -1000 1852A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"7.12 pm 7.20 pm Origin Energy Darling Downs 92 12 499 -1000 1910A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"7.13 pm 7.20 pm Stanwell Stanwell, Tarong 660 >13 400 -1000 1913A QLD RRP FOR DI1915 @ $12441.92\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"7.15 pm 7.25 pm Callide Power Trading Callide C 80 14 000 -1000 1913A A QLD RRP DS DI 19:15 VS P5 RUN 19:05 DI 19:15 SL\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"7.20 pm 7.30 pm CS Energy Gladstone 160 14 000 -1000 1917A DISPATCH PRICE LOWER THAN 30MIN FORECAST-RRP $13.80 P30 $13399.95-SL\"}], \"constraints_named\": [{\"id\": \"N>>N- NIL__3_OPENED\", \"quote\": \"4.18 pm Origin Mt Stuart 92 12 499 -1000 1617A CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL\"}, {\"id\": \"N^^Q_NIL_B1\", \"quote\": \"6.52 pm 7 pm Origin Energy Mt Stuart 92 12 499 -1000 1852A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL\"}, {\"id\": \"N^^Q_NIL_B1\", \"quote\": \"7.12 pm 7.20 pm Origin Energy Darling Downs 92 12 499 -1000 1910A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The transfer of electricity across the QNI interconnector was limited by constraints to around 200 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"Constraints on Terranora were forcing around 100 MW of flow into New South Wales for the duration of trading intervals priced above $5000/MWh, slightly higher than forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The maximum temperature in Brisbane reached around 33 degrees as forecast. This was the fourth consecutive day of temperatures above 30 degrees. Maximum total demand for the day reached 8996 MW."
+          },
+          {
+            "label": "demand",
+            "quote": "Actual demand was lower than forecast (see section 3.1.2)."
+          },
+          {
+            "label": "demand",
+            "quote": "Electricity demand, during the 5 pm trading interval was lower than forecast 12 hours ahead."
+          },
+          {
+            "label": "demand",
+            "quote": "As can be seen, actual total demand was significantly lower than forecast demand 4 hours ahead, leading to lower than forecast high prices."
+          },
+          {
+            "label": "demand",
+            "quote": "The figure shows that, with such a tight supply and demand curve, small increases in 5-minute demand coincided with increases in price."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The transfer of electricity across the QNI interconnector was limited by constraints to around 200 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constraints on Terranora were forcing around 100 MW of flow into New South Wales for the duration of trading intervals priced above $5000/MWh, slightly higher than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the time of the high prices, imports into Queensland on these interconnectors were limited to a maximum of around 100 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The ability to transfer electricity from neighbouring regions of the NEM was significantly constrained due to limitations in the network."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These limitations prevented other cheaper sources of electricity from competing with generation in Queensland and remaining local demand had to be met by local generation."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding reduced the amount of capacity priced between $500/MWh and $12 500/MWh such that, depending on circumstances, the price could change significantly in response to minor changes to demand or supply."
+          },
+          {
+            "label": "rebids",
+            "quote": "The high price of the 1.05 pm dispatch interval can be attributed to this behaviour, where Callide and Alinta rebid 364 MW of generation capacity to $13 400/MWh and above."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity from high to low priced bands in response to a high dispatch price - It is not unusual for generators to seek to increase revenue by rebidding capacity to low price bands to facilitate higher dispatch levels during the high priced trading interval, for example in the 1.30 pm trading interval."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 4.50 pm the dispatch price reached $12 499/MWh following this price there was little capacity rebid from high to low prices by Queensland participants."
+          },
+          {
+            "label": "rebids",
+            "quote": "There was no significant rebidding of capacity from high to low prices by other participants."
+          },
+          {
+            "label": "rebids",
+            "quote": "For the 5.30 pm trading interval generators did not rebid their capacity to lower prices and the resulting price was close to the high forecast price."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.14 pm 1.25 pm RTA Yarwun Yarwun 155 -990 n/a GAS SUPPLY LIMITATIONS"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.16 pm 1.25 pm Origin Darling Downs 10 -1000 n/a 1315P CHANGE IN AVAIL - HIGH BACK PRESSURE SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.55 pm CS Energy Kogan Creek -10 14 N/A 1354P ambient conditions-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "2.04 pm Origin Energy Darling Downs -15 70 N/A 1403P change in avail - ambient conditions sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "2.41 pm CS Energy Callide B -20 17 N/A 1441P condenser vacuum limits-"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "2.47 pm Origin Energy Darling Downs -10 70 N/A 1445P change in avail - ambient conditions sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "3.12 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 15:12 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "3.17 pm CS Energy Kogan Creek -15 14 N/A 1517 P technical issues-id fan limits- sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "3.45 pm Origin Energy Darling Downs -10 70 N/A 1545P change in avail - ambient conditions SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.18 pm CS Energy Gladstone 100 14 000 <45 1617P portfolio rearrangement due to-callide restrictions-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.18 pm Origin Darling Downs 5 n/a 70 1615P CHANGE IN AVAIL - AMBIENT CONDITIONS SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.18 pm Origin Mt Stuart 92 12 499 -1000 1617A CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.05 pm Millmerran Energy Trader Millmerran -30 -1000 N/A 13:04 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.11 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 13:10 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.12 pm AGL Energy Yabulu -11 <150 N/A 1310~P~020 reduction in avail cap~206 unexp ambient temp effects"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.16 pm Origin Energy Darling Downs -10 70 N/A 1315P change in avail - high back pressure sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.47 pm Millmerran Energy Trader Millmerran -15 -1000 N/A 13:43 p: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.49 pm Millmerran Energy Trader Millmerran -25 -1000 N/A 13:49 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.55 pm CS Energy Kogan Creek -10 14 N/A 1354P ambient conditions-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "1.59 pm CS Energy Gladstone 30 N/A -1000 1357P unit offline revised-updated unit ramp down schedule-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "2.04 pm Origin Energy Darling Downs -15 70 N/A 1403P change in avail - ambient conditions sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "2.47 pm Origin Energy Darling Downs -10 70 N/A 1445P change in avail - ambient conditions sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "3.03 pm Callide Power Trading Callide C 226 -1000 14 000 1503A Qld RRP P5 RUN 15:00 DI 15:30 VS P5 run 14:55 DI 15:30 SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.12 pm Callide Power Trading Callide C 100 -1000 14 000 1612A Qld RRP DS DI 16:15 104 vs P5 run 16:05 13400 sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.18 pm CS Energy Gladstone 100 14 000 <45 1617P portfolio rearrangement due to-callide restrictions-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.12 pm Callide Power Trading Callide C 126 14 000 -1000 1612A Qld RRP DS DI 16:15 104 VS P5 run 16:05 13400 sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.16 pm Millmerran Energy Trader Millmerran -40 -1000 N/A 16:16 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.19 pm Millmerran Energy Trader Millmerran -55 -1000 N/A 16:19 P: condensate polisher inlet temperature"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "4.54 pm 5.05 pm CS Energy Gladstone 180 <99 14 000 1653P portfolio rearrangement due to-gps2 ramp down to outage-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "5.06 pm 5.15 pm CS Energy Kogan Creek -20 14 N/A 1705P technical issues-id fan issues-sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.32 pm 6.40 pm CS Energy Gladstone 80 60 14 000 1831A DISPATCH PRICE $149 LOWER THAN 5MIN PD $1,405- SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.37 pm 6.45 pm Millmerran Millmerran 20 -1000 14 000 18:40 A QNI export limit ds di 18:40 value 122 vs pd run 18:30 ti 19:00 value 162 sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.37 pm 6.45 pm Callide Power Trading Callide C 26 -1000 14 000 1837A north limit QNI decrease not inp5min sl"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.46 pm 6.55 pm Stanwell Stanwell, Tarong 600 >13 400 -1000 1844A QLD RRP FOR DI1845 $12499.02 / QNI TRANSMISSON CONSTRAINT"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.47 pm 6.55 pm Callide Power Trading Callide C 80 14 000 -1000 1844A Q RRP DS DI 18:45 VS P5 RUN 18:35 DI 18:45 SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.50 pm 7 pm Origin Energy Darling Downs 10 N/A 70 1850P CHANGE IN AVAIL - AMBIENT CONDITIONS SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "6.52 pm 7 pm Origin Energy Mt Stuart 92 12 499 -1000 1852A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "7.12 pm 7.20 pm Origin Energy Darling Downs 92 12 499 -1000 1910A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "7.13 pm 7.20 pm Stanwell Stanwell, Tarong 660 >13 400 -1000 1913A QLD RRP FOR DI1915 @ $12441.92"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "7.15 pm 7.25 pm Callide Power Trading Callide C 80 14 000 -1000 1913A A QLD RRP DS DI 19:15 VS P5 RUN 19:05 DI 19:15 SL"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "7.20 pm 7.30 pm CS Energy Gladstone 160 14 000 -1000 1917A DISPATCH PRICE LOWER THAN 30MIN FORECAST-RRP $13.80 P30 $13399.95-SL"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N- NIL__3_OPENED",
+            "quote": "4.18 pm Origin Mt Stuart 92 12 499 -1000 1617A CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL"
+          },
+          {
+            "id": "N^^Q_NIL_B1",
+            "quote": "6.52 pm 7 pm Origin Energy Mt Stuart 92 12 499 -1000 1852A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL"
+          },
+          {
+            "id": "N^^Q_NIL_B1",
+            "quote": "7.12 pm 7.20 pm Origin Energy Darling Downs 92 12 499 -1000 1910A CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL"
+          }
+        ],
+        "event_date": "2017-02-02",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The transfer of electricity across the QNI interconnector was limited by constraints to around 200 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Constraints on Terranora were forcing around 100 MW of flow into New South Wales for the duration of trading intervals priced above $5000/MWh, slightly higher than forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh, which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.",
+          "text": "5 pm and 5.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price exceeded $5000/MWh, which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.",
+          "value": 13400
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%202%20February%202017%20%28QLD%29_2.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3817,
+    "per_attempt": [
+      {
+        "completion_tokens": 3817,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 14733,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 18550
+      }
+    ],
+    "prompt_tokens": 14733,
+    "reasoning_tokens": 0,
+    "total_tokens": 18550
+  }
+}

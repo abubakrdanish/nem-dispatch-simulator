@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:21:41+00:00",
+  "failure": null,
+  "input_sha256": "f2444bd7f635848c1df3c0269199b0682c8e55ca040535a40499a2c5bdb14af9",
+  "key": "e7a6f62754e4b0b59a1b8c9b5f308faa82e3f744753942ae1a75b20ac511eac7",
+  "latency_s": 6.04,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-01-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"three trading intervals from 3.30 pm to 4.30 pm inclusive\", \"quote\": \"On Friday 8 January 2010, the spot price in South Australia exceeded $5000/MWh for three trading intervals from 3.30 pm to 4.30 pm inclusive.\"}, \"peak_price\": {\"value\": 9999.71, \"quote\": \"Spot price $9999.71/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature reached 41°C in Adelaide with demand reaching 2817 MW at 5.30 pm, which was close to that forecast four and 12 hours ahead.\"}, {\"label\": \"network_outage\", \"quote\": \"A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW and 'constrained-off' around 100 MW of low-priced generation in the south east of South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"Day-ahead bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh.\"}], \"constraints_named\": [{\"id\": \"Bungama to Para line constraint\", \"quote\": \"A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'.\"}, {\"id\": \"NSW Murraylink runback scheme constraint\", \"quote\": \"Murraylink was being limited to around 120 MW into South Australia as a result of the constraint used to manage the NSW Murraylink runback scheme.\"}, {\"id\": \"system normal constraints (Victorian border to Adelaide)\", \"quote\": \"A number of system normal constraints (that manage flows from the Victorian border to Adelaide) reduced imports into South Australia across the Heywood interconnector and generation in the south east of South Australia.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature reached 41°C in Adelaide with demand reaching 2817 MW at 5.30 pm, which was close to that forecast four and 12 hours ahead."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW and 'constrained-off' around 100 MW of low-priced generation in the south east of South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "Day-ahead bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bungama to Para line constraint",
+            "quote": "A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'."
+          },
+          {
+            "id": "NSW Murraylink runback scheme constraint",
+            "quote": "Murraylink was being limited to around 120 MW into South Australia as a result of the constraint used to manage the NSW Murraylink runback scheme."
+          },
+          {
+            "id": "system normal constraints (Victorian border to Adelaide)",
+            "quote": "A number of system normal constraints (that manage flows from the Victorian border to Adelaide) reduced imports into South Australia across the Heywood interconnector and generation in the south east of South Australia."
+          }
+        ],
+        "event_date": "2010-01-08",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On Friday 8 January 2010, the spot price in South Australia exceeded $5000/MWh for three trading intervals from 3.30 pm to 4.30 pm inclusive.",
+          "text": "three trading intervals from 3.30 pm to 4.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.71/MWh",
+          "value": 9999.71
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_8_January_2010_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_8%20January%202010%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 711,
+    "per_attempt": [
+      {
+        "completion_tokens": 711,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6804,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7515
+      }
+    ],
+    "prompt_tokens": 6804,
+    "reasoning_tokens": 0,
+    "total_tokens": 7515
+  }
+}

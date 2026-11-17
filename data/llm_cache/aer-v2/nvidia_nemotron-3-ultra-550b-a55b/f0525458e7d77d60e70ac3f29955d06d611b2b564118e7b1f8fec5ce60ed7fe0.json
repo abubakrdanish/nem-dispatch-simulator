@@ -1,0 +1,161 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:59:42+00:00",
+  "failure": null,
+  "input_sha256": "eb3212e44351e43b248d670cebbacec678c7f971567a256bde6ab751c1059fae",
+  "key": "f0525458e7d77d60e70ac3f29955d06d611b2b564118e7b1f8fec5ce60ed7fe0",
+  "latency_s": 9.55,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-05-25\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"Queensland: 4.30 pm to 6.30 pm trading intervals; NSW: 5.30 pm trading interval\", \"quote\": \"On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals and in NSW for the 5.30 pm trading interval.\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages.\"}, {\"label\": \"network_outage\", \"quote\": \"Multiple significant transmission lines around Callide tripped.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports into NSW across the Vic-NSW interconnector were limited to around 570 MW (nominally 1,400 MW) by planned outages around Canberra and South Morang in Victoria.\"}, {\"label\": \"solar_output\", \"quote\": \"Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland.\"}, {\"label\": \"wind_output\", \"quote\": \"Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland.\"}, {\"label\": \"rebids\", \"quote\": \"Arrow Energy at Braemar 2 and CleanCo at Wivenhoe rebid capacity to above $5,000/MWh for part of the 4.30 pm trading interval which contributed to a high price at 4.20 pm before Arrow Energy rebid capacity back down to the price floor.\"}], \"constraints_named\": [{\"id\": \"system strength constraints\", \"quote\": \"Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland.\"}], \"interconnectors_named\": [{\"name\": \"Queensland to NSW interconnector (QNI)\", \"quote\": \"There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Imports into NSW across the Vic-NSW interconnector were limited to around 570 MW (nominally 1,400 MW) by planned outages around Canberra and South Morang in Victoria.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Upgrades to QNI meant lines were out in NSW, limiting flows to Queensland to 700 MW (nominally 1,000 MW) while system normal constraints were limiting imports across the Terranora interconnector to around 60 MW (nominally 107 MW).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Multiple significant transmission lines around Callide tripped.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Arrow Energy at Braemar 2 and CleanCo at Wivenhoe rebid capacity to above $5,000/MWh for part of the 4.30 pm trading interval which contributed to a high price at 4.20 pm before Arrow Energy rebid capacity back down to the price floor.\"}}, {\"event_date\": \"2021-05-25\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"5.30 pm trading interval\", \"quote\": \"On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals and in NSW for the 5.30 pm trading interval.\"}, \"peak_price\": {\"value\": 6848, \"quote\": \"The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals, and between $2,542/MWh and $6,848/MWh in NSW for the 5 pm to 6 pm trading intervals.\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria. This meant NSW could not access any more low priced capacity from Victoria.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW interconnector\", \"quote\": \"Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria. This meant NSW could not access any more low priced capacity from Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Multiple significant transmission lines around Callide tripped."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports into NSW across the Vic-NSW interconnector were limited to around 570 MW (nominally 1,400 MW) by planned outages around Canberra and South Morang in Victoria."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland."
+          },
+          {
+            "label": "rebids",
+            "quote": "Arrow Energy at Braemar 2 and CleanCo at Wivenhoe rebid capacity to above $5,000/MWh for part of the 4.30 pm trading interval which contributed to a high price at 4.20 pm before Arrow Energy rebid capacity back down to the price floor."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system strength constraints",
+            "quote": "Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland."
+          }
+        ],
+        "event_date": "2021-05-25",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to NSW interconnector (QNI)",
+            "quote": "There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Imports into NSW across the Vic-NSW interconnector were limited to around 570 MW (nominally 1,400 MW) by planned outages around Canberra and South Morang in Victoria."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "Upgrades to QNI meant lines were out in NSW, limiting flows to Queensland to 700 MW (nominally 1,000 MW) while system normal constraints were limiting imports across the Terranora interconnector to around 60 MW (nominally 107 MW)."
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals and in NSW for the 5.30 pm trading interval.",
+          "text": "Queensland: 4.30 pm to 6.30 pm trading intervals; NSW: 5.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "Multiple significant transmission lines around Callide tripped.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Arrow Energy at Braemar 2 and CleanCo at Wivenhoe rebid capacity to above $5,000/MWh for part of the 4.30 pm trading interval which contributed to a high price at 4.20 pm before Arrow Energy rebid capacity back down to the price floor.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria. This meant NSW could not access any more low priced capacity from Victoria."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-05-25",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW interconnector",
+            "quote": "Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria. This meant NSW could not access any more low priced capacity from Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals and in NSW for the 5.30 pm trading interval.",
+          "text": "5.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals, and between $2,542/MWh and $6,848/MWh in NSW for the 5 pm to 6 pm trading intervals.",
+          "value": 6848
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20210525_$5000_Qld_and_NSW_Report_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/20210525%20%245000%20Qld%20and%20NSW%20Report_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1532,
+    "per_attempt": [
+      {
+        "completion_tokens": 1532,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 18386,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 19918
+      }
+    ],
+    "prompt_tokens": 18386,
+    "reasoning_tokens": 0,
+    "total_tokens": 19918
+  }
+}

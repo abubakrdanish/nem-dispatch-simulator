@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:32:22+00:00",
+  "failure": null,
+  "input_sha256": "d49a2038cbd9303c38ab86f8421d5bbcc7c626ff4e41a0a516c0e51c557e5924",
+  "key": "1fc3a89ccdb440c3a7a4e8c8d9ccdff77150f2f7dd847fc00dafb7c43ec3ce10",
+  "latency_s": 14.13,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-07-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"the 6.30 am trading interval\", \"quote\": \"the spot price in South Australia exceeded $5000/MWh only once, reaching $7068/MWh during the 6.30 am trading interval\"}, \"peak_price\": {\"value\": 7068, \"quote\": \"the spot price in South Australia exceeded $5000/MWh only once, reaching $7068/MWh during the 6.30 am trading interval\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"The major contributing factor to the high price was wind forecast error\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"two gas generators were unavailable on planned outages, Pelican Point (480 MW) and Torrens Island B3 (200 MW)\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity\"}, {\"label\": \"interconnector_limit\", \"quote\": \"MurrayLink was importing at its limit of around 220 MW\"}, {\"label\": \"ramp_rates\", \"quote\": \"all low priced generation either fully dispatched, ramp rate limited or limited by their Fast Start Inflexibility Profile (FSIP), taking more than five minutes to start\"}, {\"label\": \"demand\", \"quote\": \"Demand was close to forecast, at similar levels to previous days and to average demand levels for the same time the previous winter\"}], \"constraints_named\": [{\"id\": \"V::S_TB_275kV_W_B1\", \"quote\": \"The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of network equipment at Tailem Bend\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity\"}, {\"name\": \"Murraylink\", \"quote\": \"MurrayLink was importing at its limit of around 220 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity did not contribute to the price exceeding $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "The major contributing factor to the high price was wind forecast error"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "two gas generators were unavailable on planned outages, Pelican Point (480 MW) and Torrens Island B3 (200 MW)"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "MurrayLink was importing at its limit of around 220 MW"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "all low priced generation either fully dispatched, ramp rate limited or limited by their Fast Start Inflexibility Profile (FSIP), taking more than five minutes to start"
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was close to forecast, at similar levels to previous days and to average demand levels for the same time the previous winter"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V::S_TB_275kV_W_B1",
+            "quote": "The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of network equipment at Tailem Bend"
+          }
+        ],
+        "event_date": "2016-07-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "MurrayLink was importing at its limit of around 220 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in South Australia exceeded $5000/MWh only once, reaching $7068/MWh during the 6.30 am trading interval",
+          "text": "the 6.30 am trading interval"
+        },
+        "network_outages": {
+          "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in South Australia exceeded $5000/MWh only once, reaching $7068/MWh during the 6.30 am trading interval",
+          "value": 7068
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity did not contribute to the price exceeding $5000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_5000MWh_-_13_July_2016.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%205000MWh%20-%2013%20July%202016.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 607,
+    "per_attempt": [
+      {
+        "completion_tokens": 607,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7248,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7855
+      }
+    ],
+    "prompt_tokens": 7248,
+    "reasoning_tokens": 0,
+    "total_tokens": 7855
+  }
+}

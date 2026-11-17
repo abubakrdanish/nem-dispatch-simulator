@@ -1,0 +1,412 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:04:34+00:00",
+  "failure": null,
+  "input_sha256": "7c6958b16baa33b416b8426f1b850aeac893310eba40b99767c991ce8760e8b3",
+  "key": "ac167b50f74beb9b4b59edaaa21134aa7888d6a089b8945ac28bf9e07759300b",
+  "latency_s": 45.83,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2024-05-02\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"On 2 May, the 30-minute price reached $5,279 per MWh at 6 pm.\"}, \"peak_price\": {\"value\": 5279, \"quote\": \"On 2 May, the 30-minute price reached $5,279 per MWh at 6 pm.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage on the Collector to Yass line meant that over 378 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Terranora was flowing at around 80 MW due to a network outage on the Liddell to Tomago line (compared to its capacity of 210 MW). The QNI interconnector was binding at around 1,000 MW from Queensland, limited (below its capacity of 1,300 MW) to protect NSW system security.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Low-priced generation at Snowy Hydro's Colongra could not start fast enough to avoid the high price. Colongra offered 125 MW of low-priced capacity for all high-priced 5-minute intervals, none of which could not be dispatched in time.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix A).\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW Interconnector\", \"quote\": \"A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria.\"}, {\"name\": \"QNI\", \"quote\": \"The QNI interconnector was binding at around 1,000 MW from Queensland, limited (below its capacity of 1,300 MW) to protect NSW system security.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora was flowing at around 80 MW due to a network outage on the Liddell to Tomago line (compared to its capacity of 210 MW).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage on the Collector to Yass line meant that over 378 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix A).\"}}, {\"event_date\": \"2024-05-03\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"5.30 pm\", \"quote\": \"On 3 May, despite Bayswater unit 4 returning to service, the 30-minute price reached $5,036 per MWh at 5.30 pm.\"}, \"peak_price\": {\"value\": 5036, \"quote\": \"On 3 May, despite Bayswater unit 4 returning to service, the 30-minute price reached $5,036 per MWh at 5.30 pm.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage on the Collector to Yass line meant that over 600 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, {\"label\": \"interconnector_limit\", \"quote\": \"An outage on the Liddell to Tomago line limited flows from Queensland on the Terranora interconnector to 31 MW (compared to its capacity of 210 MW). The QNI interconnector was binding at around 1,020 MW from Queensland to protect NSW system security (compared to its capacity of 1,300 MW).\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix B).\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW Interconnector\", \"quote\": \"A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria.\"}, {\"name\": \"QNI\", \"quote\": \"The QNI interconnector was binding at around 1,020 MW from Queensland to protect NSW system security (compared to its capacity of 1,300 MW).\"}, {\"name\": \"Terranora\", \"quote\": \"An outage on the Liddell to Tomago line limited flows from Queensland on the Terranora interconnector to 31 MW (compared to its capacity of 210 MW).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage on the Collector to Yass line meant that over 600 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix B).\"}}, {\"event_date\": \"2024-05-07\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"5.30 pm, 6 pm and 6.30 pm\", \"quote\": \"On 7 May, 30-minute prices exceeded $5,000 per MWh 3 times, at 5.30 pm, 6 pm and 6.30 pm.\"}, \"peak_price\": {\"value\": 14523, \"quote\": \"The price ranged between $10,480 per MWh and $14,523 per MWh.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned outage on the Collector to Yass line meant that on average around 850 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Low-priced generation at Eraring could not ramp up quickly enough to avoid the high price. An average of around 80 MW of low-priced capacity could not be dispatched in time for the 5.30 pm period (Chapter 7.2).\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to higher prices (Appendix C).\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"This occurred for 4 of the high-priced 5-minute intervals on 7 May\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW Interconnector\", \"quote\": \"A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria.\"}, {\"name\": \"QNI\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.\"}, {\"name\": \"Terranora\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned outage on the Collector to Yass line meant that on average around 850 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to higher prices (Appendix C).\"}}, {\"event_date\": \"2024-05-08\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"7 am to 8 am and 4 pm to 8 pm\", \"quote\": \"On 8 May, 30-minute prices exceeded $5,000 per MWh 3 times in the morning (7 am to 8 am) and 9 times in the afternoon and evening (4 pm to 8 pm).\"}, \"peak_price\": {\"value\": 16600, \"quote\": \"AGL rebid between 330 MW and 610 MW of capacity at Bayswater from low to high prices for commercial reasons and contributed to all the morning high prices.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned network outage on the Collector to Yass line meant that on average around 1,000 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Early on 8 May, Vales Point unit 5 (660 MW) tripped, removing low-priced capacity from the market until 24 May.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Low-priced generation at Eraring, Bayswater, and Mt Piper could not ramp up quickly enough to avoid the high price. An average of around 54 MW of low-priced capacity could not be dispatched in time for the 4 pm period (Chapter 7.2).\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to higher prices (Appendix D).\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"for 12 intervals, or almost 20%, of the high-priced intervals on 8 May\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW Interconnector\", \"quote\": \"A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria.\"}, {\"name\": \"QNI\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.\"}, {\"name\": \"Terranora\", \"quote\": \"The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned network outage on the Collector to Yass line meant that on average around 1,000 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to higher prices (Appendix D).\"}}, {\"event_date\": \"2024-05-20\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"6.30 pm\", \"quote\": \"On 20 May, the 30-minute price reached $5,743 per MWh at 6.30 pm\"}, \"peak_price\": {\"value\": 5743, \"quote\": \"On 20 May, the 30-minute price reached $5,743 per MWh at 6.30 pm\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"The planned outage on the Collector to Yass line meant that on average around 550 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May and one unit remained out on 20 May.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial reasons contributed to higher prices (Appendix E).\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW Interconnector\", \"quote\": \"A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The planned outage on the Collector to Yass line meant that on average around 550 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to higher prices (Appendix E).\"}}, {\"event_date\": \"2024-06-25\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"2 pm\", \"quote\": \"On 25 June, the 30-minute price reached $5,644 per MWh at 2 pm\"}, \"peak_price\": {\"value\": 5644, \"quote\": \"On 25 June, the 30-minute price reached $5,644 per MWh at 2 pm\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"due to a technical error creating an apparent loss of inertia. This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it\"}, {\"label\": \"ramp_rates\", \"quote\": \"not enough could make it to market due to being ramp up limited\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"limited due to its offers in the FCAS market\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"due to a technical error creating an apparent loss of inertia. This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"rebidding did not contribute to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage on the Collector to Yass line meant that over 378 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3)."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Terranora was flowing at around 80 MW due to a network outage on the Liddell to Tomago line (compared to its capacity of 210 MW). The QNI interconnector was binding at around 1,000 MW from Queensland, limited (below its capacity of 1,300 MW) to protect NSW system security."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Low-priced generation at Snowy Hydro's Colongra could not start fast enough to avoid the high price. Colongra offered 125 MW of low-priced capacity for all high-priced 5-minute intervals, none of which could not be dispatched in time."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix A)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1"
+          }
+        ],
+        "event_date": "2024-05-02",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW Interconnector",
+            "quote": "A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria."
+          },
+          {
+            "name": "QNI",
+            "quote": "The QNI interconnector was binding at around 1,000 MW from Queensland, limited (below its capacity of 1,300 MW) to protect NSW system security."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora was flowing at around 80 MW due to a network outage on the Liddell to Tomago line (compared to its capacity of 210 MW)."
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 May, the 30-minute price reached $5,279 per MWh at 6 pm.",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage on the Collector to Yass line meant that over 378 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 2 May, the 30-minute price reached $5,279 per MWh at 6 pm.",
+          "value": 5279
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix A).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage on the Collector to Yass line meant that over 600 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3)."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "An outage on the Liddell to Tomago line limited flows from Queensland on the Terranora interconnector to 31 MW (compared to its capacity of 210 MW). The QNI interconnector was binding at around 1,020 MW from Queensland to protect NSW system security (compared to its capacity of 1,300 MW)."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial reasons contributed to the high price (Appendix B)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1"
+          }
+        ],
+        "event_date": "2024-05-03",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW Interconnector",
+            "quote": "A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria."
+          },
+          {
+            "name": "QNI",
+            "quote": "The QNI interconnector was binding at around 1,020 MW from Queensland to protect NSW system security (compared to its capacity of 1,300 MW)."
+          },
+          {
+            "name": "Terranora",
+            "quote": "An outage on the Liddell to Tomago line limited flows from Queensland on the Terranora interconnector to 31 MW (compared to its capacity of 210 MW)."
+          }
+        ],
+        "intervals": {
+          "quote": "On 3 May, despite Bayswater unit 4 returning to service, the 30-minute price reached $5,036 per MWh at 5.30 pm.",
+          "text": "5.30 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage on the Collector to Yass line meant that over 600 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 3 May, despite Bayswater unit 4 returning to service, the 30-minute price reached $5,036 per MWh at 5.30 pm.",
+          "value": 5036
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price (Appendix B).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned outage on the Collector to Yass line meant that on average around 850 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Low-priced generation at Eraring could not ramp up quickly enough to avoid the high price. An average of around 80 MW of low-priced capacity could not be dispatched in time for the 5.30 pm period (Chapter 7.2)."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to higher prices (Appendix C)."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "This occurred for 4 of the high-priced 5-minute intervals on 7 May"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1"
+          }
+        ],
+        "event_date": "2024-05-07",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW Interconnector",
+            "quote": "A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria."
+          },
+          {
+            "name": "QNI",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively."
+          }
+        ],
+        "intervals": {
+          "quote": "On 7 May, 30-minute prices exceeded $5,000 per MWh 3 times, at 5.30 pm, 6 pm and 6.30 pm.",
+          "text": "5.30 pm, 6 pm and 6.30 pm"
+        },
+        "network_outages": {
+          "quote": "The planned outage on the Collector to Yass line meant that on average around 850 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 580 MW and to 36 MW respectively.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The price ranged between $10,480 per MWh and $14,523 per MWh.",
+          "value": 14523
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to higher prices (Appendix C).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned network outage on the Collector to Yass line meant that on average around 1,000 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Early on 8 May, Vales Point unit 5 (660 MW) tripped, removing low-priced capacity from the market until 24 May."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Low-priced generation at Eraring, Bayswater, and Mt Piper could not ramp up quickly enough to avoid the high price. An average of around 54 MW of low-priced capacity could not be dispatched in time for the 4 pm period (Chapter 7.2)."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to higher prices (Appendix D)."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "for 12 intervals, or almost 20%, of the high-priced intervals on 8 May"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1"
+          }
+        ],
+        "event_date": "2024-05-08",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW Interconnector",
+            "quote": "A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria."
+          },
+          {
+            "name": "QNI",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively."
+          }
+        ],
+        "intervals": {
+          "quote": "On 8 May, 30-minute prices exceeded $5,000 per MWh 3 times in the morning (7 am to 8 am) and 9 times in the afternoon and evening (4 pm to 8 pm).",
+          "text": "7 am to 8 am and 4 pm to 8 pm"
+        },
+        "network_outages": {
+          "quote": "The planned network outage on the Collector to Yass line meant that on average around 1,000 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3). The planned outage on the Armidale to Tamworth line meant flows over QNI and Terranora interconnectors were reduced to 500 MW and to 35 MW respectively.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "AGL rebid between 330 MW and 610 MW of capacity at Bayswater from low to high prices for commercial reasons and contributed to all the morning high prices.",
+          "value": 16600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to higher prices (Appendix D).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "The planned outage on the Collector to Yass line meant that on average around 550 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3)."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On 2 May, the first of the high-priced days, 2 Eraring units tripped, removing up to 1,440 MW of generally low-priced capacity from the market. Both units were out during the high prices that occurred on 2, 3, 7 and 8 May and one unit remained out on 20 May."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Bayswater unit 4 (660 MW) entered a planned outage on 19 April with an expected return date of 4 May. While it started returning to service on 3 May, it did not permanently reach full capacity and was offering around 400 MW of its 660 MW registered capacity until 10 May due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial reasons contributed to higher prices (Appendix E)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "Unexpected/plant limits~Constraint management - NRM_NSW1_VIC1"
+          }
+        ],
+        "event_date": "2024-05-20",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW Interconnector",
+            "quote": "A constraint to manage the outage reduced flows over the Victoria to NSW Interconnector and significantly limited the amount of low-priced generation NSW could access from Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "On 20 May, the 30-minute price reached $5,743 per MWh at 6.30 pm",
+          "text": "6.30 pm"
+        },
+        "network_outages": {
+          "quote": "The planned outage on the Collector to Yass line meant that on average around 550 MW of low-priced generation in southern NSW was unable to make it to market (Figure 3.3).",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 20 May, the 30-minute price reached $5,743 per MWh at 6.30 pm",
+          "value": 5743
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to higher prices (Appendix E).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "due to a technical error creating an apparent loss of inertia. This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "not enough could make it to market due to being ramp up limited"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "limited due to its offers in the FCAS market"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-06-25",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it"
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 June, the 30-minute price reached $5,644 per MWh at 2 pm",
+          "text": "2 pm"
+        },
+        "network_outages": {
+          "quote": "due to a technical error creating an apparent loss of inertia. This limited flows into Tasmania across Basslink which then required Tasmanian generation to replace it",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 25 June, the 30-minute price reached $5,644 per MWh at 2 pm",
+          "value": 5644
+        },
+        "rebid_set_price": {
+          "quote": "rebidding did not contribute to the high price.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_April_to_June_2024.pdf",
+    "url": "https://www.aer.gov.au/system/files/2024-07/AER%20-%20Electricity%20prices%20above%20%245%2C000MWh%20-%20April%20to%20June%202024.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4408,
+    "per_attempt": [
+      {
+        "completion_tokens": 4408,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 18836,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 23244
+      }
+    ],
+    "prompt_tokens": 18836,
+    "reasoning_tokens": 0,
+    "total_tokens": 23244
+  }
+}

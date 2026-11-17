@@ -1,0 +1,418 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:23:13+00:00",
+  "failure": null,
+  "input_sha256": "3fbb5933ea570960884ff59c6d7741ca5757e0274ca4f9a1579a45ea9a897fac",
+  "key": "bd971a3bf61a87da2db3a75718cb5fa561a80d1158ecca60c678b013f4f2cd0b",
+  "latency_s": 27.42,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2023-01-31\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"Between 6.30 pm and 7 pm that evening, the average 30-minute price reached $5,674/MWh.\", \"quote\": \"Between 6.30 pm and 7 pm that evening, the average 30-minute price reached $5,674/MWh.\"}, \"peak_price\": {\"value\": 15500, \"quote\": \"at 6.40 pm, 36 MW of capacity priced at the cap was needed to meet demand and set the price\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures and high humidity drove high demand, greater than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints on the interconnectors between NSW and Queensland limited access to cheaper generation from NSW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by participants contributed to the high price.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 1,470 MW was unavailable due to ongoing generator outages at Gladstone, Callide B and 2 units at Callide C.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Around 100 MW of low-priced capacity was unavailable due to technical issues at various coal power stations which arose late that afternoon, in part due to the high temperatures.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-NSW Interconnector (QNI)\", \"quote\": \"During the 2 high-priced intervals, flows on Queensland-NSW Interconnector (QNI) were limited to around 500 MW, 200 MW less than its current nominal limit.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"The same outage forced flows of around 80 MW on the Terranora interconnector from Queensland to NSW, even though price was higher in Queensland.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This reduced limit was due to a network outage around Lismore in NSW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by participants contributed to the high price.\"}}, {\"event_date\": \"2023-02-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"9 Feb 7 pm 6,295\", \"quote\": \"9 Feb 7 pm 6,295\"}, \"peak_price\": {\"value\": 6295, \"quote\": \"9 Feb 7 pm 6,295\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February.\"}, {\"label\": \"wind_output\", \"quote\": \"Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"At times the flows on Murraylink into South Australia were around 20% of its nominal limit.\"}, {\"name\": \"Heywood\", \"quote\": \"Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.\"}}, {\"event_date\": \"2023-02-15\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"15 Feb 7 pm 5,318\", \"quote\": \"15 Feb 7 pm 5,318\"}, \"peak_price\": {\"value\": 5318, \"quote\": \"15 Feb 7 pm 5,318\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February.\"}, {\"label\": \"wind_output\", \"quote\": \"Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Withdrawal of some low-priced capacity contributed to the high price on 15 February.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"At times the flows on Murraylink into South Australia were around 20% of its nominal limit.\"}, {\"name\": \"Heywood\", \"quote\": \"Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.\"}}, {\"event_date\": \"2023-02-16\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"16 Feb 7.30 pm 8,885; 16 Feb 8 pm 5,281\", \"quote\": \"16 Feb 7.30 pm 8,885; 16 Feb 8 pm 5,281\"}, \"peak_price\": {\"value\": 8885, \"quote\": \"16 Feb 7.30 pm 8,885\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February.\"}, {\"label\": \"wind_output\", \"quote\": \"Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"At times the flows on Murraylink into South Australia were around 20% of its nominal limit.\"}, {\"name\": \"Heywood\", \"quote\": \"Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"However, rebidding did not significantly contribute to price outcomes on 16 February.\"}}, {\"event_date\": \"2023-03-01\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"averaging $5,229/MWh between 6 pm and 6.30 pm\", \"quote\": \"averaging $5,229/MWh between 6 pm and 6.30 pm\"}, \"peak_price\": {\"value\": 15003, \"quote\": \"6.15 pm 15,003\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"high demand due to hot weather\"}, {\"label\": \"interconnector_limit\", \"quote\": \"constraints on the interconnectors between NSW and Queensland limited access to cheaper generation from NSW\"}, {\"label\": \"wind_output\", \"quote\": \"wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated\"}, {\"label\": \"rebids\", \"quote\": \"rebidding of capacity from below $555/MWh to above $5,000/MWh\"}, {\"label\": \"ramp_rates\", \"quote\": \"technical limitations on certain generating units prevented capacity below $5,000/MWh being dispatched in time\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland to NSW interconnector (QNI)\", \"quote\": \"At the time of the high price, the Queensland to NSW interconnector (QNI) was importing around 390 MW, which was around half its nominal capacity.\"}, {\"name\": \"Terranora\", \"quote\": \"Across Terranora, 56 MW was forced from Queensland into NSW to manage an outage of the Lismore static VAR compensator and maintain system security.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This reduced limit was to avoid tripping lines around the Liddell power station.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebids contributed to the $15,000/MWh prices at 6.15 pm and 6.30 pm\"}}, {\"event_date\": \"2023-03-16\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"16 March 6.30 pm 10,995 9,805; 16 March 7 pm 6,054 5,363\", \"quote\": \"16 March 6.30 pm 10,995 9,805; 16 March 7 pm 6,054 5,363\"}, \"peak_price\": {\"value\": 15500, \"quote\": \"6.05 pm 15,500 12,465\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Very hot weather resulting in very high demand.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints in NSW impacted the interconnector between Victoria and NSW and limited access to cheaper generation from Victoria.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was around 3,300 MW of capacity unavailable due to generator outages, mostly planned.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Participants removed some low-priced capacity due to technical issues which added to already tight market conditions.\"}, {\"label\": \"rebids\", \"quote\": \"In addition, some participants rebid capacity from low to high prices.\"}], \"constraints_named\": [{\"id\": \"Cowra to Forbes line constraint\", \"quote\": \"On 16 March, a constraint to avoid overloading the Cowra to Forbes line in NSW limited imports from Victoria to as low as 14 MW.\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW interconnector\", \"quote\": \"On both days the Victoria to NSW interconnector had its flows into NSW limited and at times forced into Victoria but for different reasons.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding contributed to the high prices on 16 and 17 March\"}}, {\"event_date\": \"2023-03-17\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"17 March 6 pm 7,070 5,986\", \"quote\": \"17 March 6 pm 7,070 5,986\"}, \"peak_price\": {\"value\": 14500, \"quote\": \"5.45 pm 14,500 12,274\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Very hot weather resulting in very high demand.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints in NSW impacted the interconnector between Victoria and NSW and limited access to cheaper generation from Victoria.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was around 3,300 MW of capacity unavailable due to generator outages, mostly planned.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Participants removed some low-priced capacity due to technical issues which added to already tight market conditions.\"}, {\"label\": \"rebids\", \"quote\": \"In addition, some participants rebid capacity from low to high prices.\"}], \"constraints_named\": [{\"id\": \"Upper Tumut to Ravine outage constraint\", \"quote\": \"On 17 March, a constraint managing a planned network outage between Upper Tumut to Ravine in NSW limited imports from Victoria across the VIC-NSW interconnector\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW interconnector\", \"quote\": \"On both days the Victoria to NSW interconnector had its flows into NSW limited and at times forced into Victoria but for different reasons.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 17 March, a constraint managing a planned network outage between Upper Tumut to Ravine in NSW limited imports from Victoria across the VIC-NSW interconnector\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding contributed to the high prices on 16 and 17 March\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures and high humidity drove high demand, greater than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constraints on the interconnectors between NSW and Queensland limited access to cheaper generation from NSW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by participants contributed to the high price."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 1,470 MW was unavailable due to ongoing generator outages at Gladstone, Callide B and 2 units at Callide C."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Around 100 MW of low-priced capacity was unavailable due to technical issues at various coal power stations which arose late that afternoon, in part due to the high temperatures."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-NSW Interconnector (QNI)",
+            "quote": "During the 2 high-priced intervals, flows on Queensland-NSW Interconnector (QNI) were limited to around 500 MW, 200 MW less than its current nominal limit."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "The same outage forced flows of around 80 MW on the Terranora interconnector from Queensland to NSW, even though price was higher in Queensland."
+          }
+        ],
+        "intervals": {
+          "quote": "Between 6.30 pm and 7 pm that evening, the average 30-minute price reached $5,674/MWh.",
+          "text": "Between 6.30 pm and 7 pm that evening, the average 30-minute price reached $5,674/MWh."
+        },
+        "network_outages": {
+          "quote": "This reduced limit was due to a network outage around Lismore in NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "at 6.40 pm, 36 MW of capacity priced at the cap was needed to meet demand and set the price",
+          "value": 15500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by participants contributed to the high price.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-02-09",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "At times the flows on Murraylink into South Australia were around 20% of its nominal limit."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "9 Feb 7 pm 6,295",
+          "text": "9 Feb 7 pm 6,295"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "9 Feb 7 pm 6,295",
+          "value": 6295
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Withdrawal of some low-priced capacity contributed to the high price on 15 February."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-02-15",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "At times the flows on Murraylink into South Australia were around 20% of its nominal limit."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "15 Feb 7 pm 5,318",
+          "text": "15 Feb 7 pm 5,318"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "15 Feb 7 pm 5,318",
+          "value": 5318
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding capacity to higher prices, including from below to above $5,000/MWh contributed to the 9 and 15 February high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures of around 34°C drove high demand, resulting in greater than forecast demand on 9 and 15 February."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Extremely low output from wind generation reduced the amount of low-priced capacity available because wind is typically offered at negative prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network limitations, which impacted the interconnectors, meant that South Australia had limited access to cheaper generation from Victoria."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-02-16",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "At times the flows on Murraylink into South Australia were around 20% of its nominal limit."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Flows on Heywood were, at times, 50 MW lower than it's limit of 600 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "16 Feb 7.30 pm 8,885; 16 Feb 8 pm 5,281",
+          "text": "16 Feb 7.30 pm 8,885; 16 Feb 8 pm 5,281"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "16 Feb 7.30 pm 8,885",
+          "value": 8885
+        },
+        "rebid_set_price": {
+          "quote": "However, rebidding did not significantly contribute to price outcomes on 16 February.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "high demand due to hot weather"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "constraints on the interconnectors between NSW and Queensland limited access to cheaper generation from NSW"
+          },
+          {
+            "label": "wind_output",
+            "quote": "wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated"
+          },
+          {
+            "label": "rebids",
+            "quote": "rebidding of capacity from below $555/MWh to above $5,000/MWh"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "technical limitations on certain generating units prevented capacity below $5,000/MWh being dispatched in time"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2023-03-01",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to NSW interconnector (QNI)",
+            "quote": "At the time of the high price, the Queensland to NSW interconnector (QNI) was importing around 390 MW, which was around half its nominal capacity."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Across Terranora, 56 MW was forced from Queensland into NSW to manage an outage of the Lismore static VAR compensator and maintain system security."
+          }
+        ],
+        "intervals": {
+          "quote": "averaging $5,229/MWh between 6 pm and 6.30 pm",
+          "text": "averaging $5,229/MWh between 6 pm and 6.30 pm"
+        },
+        "network_outages": {
+          "quote": "This reduced limit was to avoid tripping lines around the Liddell power station.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "6.15 pm 15,003",
+          "value": 15003
+        },
+        "rebid_set_price": {
+          "quote": "Rebids contributed to the $15,000/MWh prices at 6.15 pm and 6.30 pm",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Very hot weather resulting in very high demand."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints in NSW impacted the interconnector between Victoria and NSW and limited access to cheaper generation from Victoria."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was around 3,300 MW of capacity unavailable due to generator outages, mostly planned."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Participants removed some low-priced capacity due to technical issues which added to already tight market conditions."
+          },
+          {
+            "label": "rebids",
+            "quote": "In addition, some participants rebid capacity from low to high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Cowra to Forbes line constraint",
+            "quote": "On 16 March, a constraint to avoid overloading the Cowra to Forbes line in NSW limited imports from Victoria to as low as 14 MW."
+          }
+        ],
+        "event_date": "2023-03-16",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW interconnector",
+            "quote": "On both days the Victoria to NSW interconnector had its flows into NSW limited and at times forced into Victoria but for different reasons."
+          }
+        ],
+        "intervals": {
+          "quote": "16 March 6.30 pm 10,995 9,805; 16 March 7 pm 6,054 5,363",
+          "text": "16 March 6.30 pm 10,995 9,805; 16 March 7 pm 6,054 5,363"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "6.05 pm 15,500 12,465",
+          "value": 15500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding contributed to the high prices on 16 and 17 March",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Very hot weather resulting in very high demand."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints in NSW impacted the interconnector between Victoria and NSW and limited access to cheaper generation from Victoria."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was around 3,300 MW of capacity unavailable due to generator outages, mostly planned."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Participants removed some low-priced capacity due to technical issues which added to already tight market conditions."
+          },
+          {
+            "label": "rebids",
+            "quote": "In addition, some participants rebid capacity from low to high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Upper Tumut to Ravine outage constraint",
+            "quote": "On 17 March, a constraint managing a planned network outage between Upper Tumut to Ravine in NSW limited imports from Victoria across the VIC-NSW interconnector"
+          }
+        ],
+        "event_date": "2023-03-17",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW interconnector",
+            "quote": "On both days the Victoria to NSW interconnector had its flows into NSW limited and at times forced into Victoria but for different reasons."
+          }
+        ],
+        "intervals": {
+          "quote": "17 March 6 pm 7,070 5,986",
+          "text": "17 March 6 pm 7,070 5,986"
+        },
+        "network_outages": {
+          "quote": "On 17 March, a constraint managing a planned network outage between Upper Tumut to Ravine in NSW limited imports from Victoria across the VIC-NSW interconnector",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "5.45 pm 14,500 12,274",
+          "value": 14500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding contributed to the high prices on 16 and 17 March",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2023_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20January%20to%20March%202023_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3215,
+    "per_attempt": [
+      {
+        "completion_tokens": 3215,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 19636,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 22851
+      }
+    ],
+    "prompt_tokens": 19636,
+    "reasoning_tokens": 0,
+    "total_tokens": 22851
+  }
+}

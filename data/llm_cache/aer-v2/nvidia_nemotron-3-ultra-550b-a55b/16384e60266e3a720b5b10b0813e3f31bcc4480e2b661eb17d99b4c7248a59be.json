@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:14:53+00:00",
+  "failure": null,
+  "input_sha256": "fcd044a5238ed4742ca83b11d11ebd3854da95a5d1a43851eb3caa2fe701fd8c",
+  "key": "16384e60266e3a720b5b10b0813e3f31bcc4480e2b661eb17d99b4c7248a59be",
+  "latency_s": 6.27,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-23\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"3 pm and 3.30 pm trading intervals\", \"quote\": \"On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.\"}, \"peak_price\": {\"value\": 7939, \"quote\": \"On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Tuesday 23 January demand reached near-record levels in Queensland.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 425 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 425 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"The Terranora interconnector was also flowing counter price during this period, with a system normal constraint forcing a flow of around 110 MW south from midday to 4.30 pm.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Tuesday 23 January demand reached near-record levels in Queensland."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 425 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2007-01-23",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 425 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The Terranora interconnector was also flowing counter price during this period, with a system normal constraint forcing a flow of around 110 MW south from midday to 4.30 pm."
+          }
+        ],
+        "intervals": {
+          "quote": "On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.",
+          "text": "3 pm and 3.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "A planned network outage at Tarong, combined with the unplanned loss of a 120 MW Swanbank generating unit, caused a system security issue for power flows from Tarong into Brisbane.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.",
+          "value": 7939
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_January_2007_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%20January%202007%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 568,
+    "per_attempt": [
+      {
+        "completion_tokens": 568,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6445,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7013
+      }
+    ],
+    "prompt_tokens": 6445,
+    "reasoning_tokens": 0,
+    "total_tokens": 7013
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:26:50+00:00",
+  "failure": null,
+  "input_sha256": "28d162caf65cd7e0e97faa1c5920d2f169d1f4e0282f74e0ce2e5ed6a2331752",
+  "key": "29a58cfe841db459b20699ccc86f9e7695382ae17c3c3fe96b3483228529d988",
+  "latency_s": 9.3,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-06-03\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm trading intervals\", \"quote\": \"On 3 June 2021 the spot price in Queensland exceeded $5,000/MWh for the 6.30 pm and 7 pm trading intervals.\"}, \"peak_price\": {\"value\": 6878, \"quote\": \"Spot Price $6,878/MWh\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"There was over 3,400 MW of baseload capacity unavailable due to planned and unplanned outages, including over 1,500 MW of capacity from the Callide incident on 25 May.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"There was over 3,400 MW of baseload capacity unavailable due to planned and unplanned outages, including over 1,500 MW of capacity from the Callide incident on 25 May.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The interactions between energy and FCAS markets kept prices high for the 6.30 pm and 7 pm trading intervals, even though capacity was rebid to lower prices after high prices at the start of the trading interval.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales.\"}], \"constraints_named\": [{\"id\": \"f_q++ldmu_r6\", \"quote\": \"constraint management - f_q++ldmu_r6 sl\"}, {\"id\": \"f_q++ldmu_r5\", \"quote\": \"constraint management - f_q++ldmu_r5 sl\"}, {\"id\": \"nrm_qld1_nsw1\", \"quote\": \"constraint management - nrm_qld1_nsw1 sl\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Queensland is electrically connected to New South Wales by QNI and the Terranora interconnector.\"}, {\"name\": \"Terranora\", \"quote\": \"Queensland is electrically connected to New South Wales by QNI and the Terranora interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was over 3,400 MW of baseload capacity unavailable due to planned and unplanned outages, including over 1,500 MW of capacity from the Callide incident on 25 May."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "There was over 3,400 MW of baseload capacity unavailable due to planned and unplanned outages, including over 1,500 MW of capacity from the Callide incident on 25 May."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The interactions between energy and FCAS markets kept prices high for the 6.30 pm and 7 pm trading intervals, even though capacity was rebid to lower prices after high prices at the start of the trading interval."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "f_q++ldmu_r6",
+            "quote": "constraint management - f_q++ldmu_r6 sl"
+          },
+          {
+            "id": "f_q++ldmu_r5",
+            "quote": "constraint management - f_q++ldmu_r5 sl"
+          },
+          {
+            "id": "nrm_qld1_nsw1",
+            "quote": "constraint management - nrm_qld1_nsw1 sl"
+          }
+        ],
+        "event_date": "2021-06-03",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Queensland is electrically connected to New South Wales by QNI and the Terranora interconnector."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Queensland is electrically connected to New South Wales by QNI and the Terranora interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 3 June 2021 the spot price in Queensland exceeded $5,000/MWh for the 6.30 pm and 7 pm trading intervals.",
+          "text": "6.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Liddell to Muswellbrook line in New South Wales, as part of upgrades to QNI, reduced Queensland's ability to access cheap generation from New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot Price $6,878/MWh",
+          "value": 6878
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_MWh_-_3_June_2021_(QLD)_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20MWh%20-%203%20June%202021%20%28QLD%29_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 696,
+    "per_attempt": [
+      {
+        "completion_tokens": 696,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 13349,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14045
+      }
+    ],
+    "prompt_tokens": 13349,
+    "reasoning_tokens": 0,
+    "total_tokens": 14045
+  }
+}

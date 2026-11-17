@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:07:34+00:00",
+  "failure": null,
+  "input_sha256": "1d5a69a1fce5f9f36bcf27489b95711210c8ef9b7620db810367c4cc6079e1d2",
+  "key": "3c9078e0db865815ab69c24714f44cc064964d887b3d4695a72c5ae562edebc0",
+  "latency_s": 11.31,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-11-04\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"12 midday and 12.30 pm trading intervals\", \"quote\": \"On Sunday 4 November, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5723/MWh at midda y and $6000/MWh at 12.30 pm.\"}, \"peak_price\": {\"value\": 6000, \"quote\": \"On Sunday 4 November, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5723/MWh at midda y and $6000/MWh at 12.30 pm.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned network outage of the Tarong to Braemar line reduced available supplies in the region, constraining off generati on in south west Queensland and forcing flows across the interconnector into New South Wales counter pri ce.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity into higher prices by Stanwell, combined with an unplanned outage of CS Energy's Swanbank unit E, drove the price in Queensland to exceed $5000/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Rebidding of capacity into higher prices by Stanwell, combined with an unplanned outage of CS Energy's Swanbank unit E, drove the price in Queensland to exceed $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of a Tarong to Braemar 275kV line between 5.25 am and 4.25 pm reduced the capability for flows into the Brisbane load centre from generation in south west Queensland (a total of around 2380 MW of ava ilable capacity) and from New South Wales across QNI (750 MW nominal capability).\"}], \"constraints_named\": [{\"id\": \"QNI counter price flow constraint\", \"quote\": \"From 5.25 am, when the outage commenced, a c onstraint was invoked th at saw QNI forced to flow into New South Wales at more than 900 MW.\"}, {\"id\": \"NEMMCO additional constraint for negative residue management\", \"quote\": \"At 5.45 am NEMMCO intervened with an additional constraint to reduce the counter price flows to 750 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"A planned outage of a Tarong to Braemar 275kV line between 5.25 am and 4.25 pm reduced the capability for flows into the Brisbane load centre from generation in south west Queensland (a total of around 2380 MW of ava ilable capacity) and from New South Wales across QNI (750 MW nominal capability).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage of the Tarong to Braemar line reduced available supplies in the region, constraining off generati on in south west Queensland and forcing flows across the interconnector into New South Wales counter pri ce.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The rebi dding, combined w ith an unplanned outage of CS Energy's Swanbank unit E, was th e primary driver of the high prices around midday. Spot prices would have been ar ound $100/MWh in the ab sence of Stanwell's rebidding.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage of the Tarong to Braemar line reduced available supplies in the region, constraining off generati on in south west Queensland and forcing flows across the interconnector into New South Wales counter pri ce."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity into higher prices by Stanwell, combined with an unplanned outage of CS Energy's Swanbank unit E, drove the price in Queensland to exceed $5000/MWh."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Rebidding of capacity into higher prices by Stanwell, combined with an unplanned outage of CS Energy's Swanbank unit E, drove the price in Queensland to exceed $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of a Tarong to Braemar 275kV line between 5.25 am and 4.25 pm reduced the capability for flows into the Brisbane load centre from generation in south west Queensland (a total of around 2380 MW of ava ilable capacity) and from New South Wales across QNI (750 MW nominal capability)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI counter price flow constraint",
+            "quote": "From 5.25 am, when the outage commenced, a c onstraint was invoked th at saw QNI forced to flow into New South Wales at more than 900 MW."
+          },
+          {
+            "id": "NEMMCO additional constraint for negative residue management",
+            "quote": "At 5.45 am NEMMCO intervened with an additional constraint to reduce the counter price flows to 750 MW."
+          }
+        ],
+        "event_date": "2007-11-04",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "A planned outage of a Tarong to Braemar 275kV line between 5.25 am and 4.25 pm reduced the capability for flows into the Brisbane load centre from generation in south west Queensland (a total of around 2380 MW of ava ilable capacity) and from New South Wales across QNI (750 MW nominal capability)."
+          }
+        ],
+        "intervals": {
+          "quote": "On Sunday 4 November, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5723/MWh at midda y and $6000/MWh at 12.30 pm.",
+          "text": "12 midday and 12.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "A planned network outage of the Tarong to Braemar line reduced available supplies in the region, constraining off generati on in south west Queensland and forcing flows across the interconnector into New South Wales counter pri ce.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Sunday 4 November, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5723/MWh at midda y and $6000/MWh at 12.30 pm.",
+          "value": 6000
+        },
+        "rebid_set_price": {
+          "quote": "The rebi dding, combined w ith an unplanned outage of CS Energy's Swanbank unit E, was th e primary driver of the high prices around midday. Spot prices would have been ar ound $100/MWh in the ab sence of Stanwell's rebidding.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_04_November_2007_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_04%20November%202007%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 822,
+    "per_attempt": [
+      {
+        "completion_tokens": 822,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7647,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8469
+      }
+    ],
+    "prompt_tokens": 7647,
+    "reasoning_tokens": 0,
+    "total_tokens": 8469
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:17:30+00:00",
+  "failure": null,
+  "input_sha256": "8f9d401f923becaf6e01cf4f65c1e69ae40f9e1bc0d3ebc57967fe505a77141b",
+  "key": "5dacf5843ac52be4c119ffa3a3fcd66742afe265603f44f57585cc82bcfe1368",
+  "latency_s": 12.2,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-01-30\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the 4.30 pm trading interval\", \"quote\": \"the spot price in Queensland reached $9921/MWh for the 4.30 pm trading interval\"}, \"peak_price\": {\"value\": 9921, \"quote\": \"the spot price in Queensland reached $9921/MWh for the 4.30 pm trading interval\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"lightning resulted in the reclassifications of the loss of the double circuit Tarong to Calvale lines and then the Tarong to Braemar lines as credible, from 3.35 pm and 3.55 pm respectively\"}, {\"label\": \"network_outage\", \"quote\": \"lightning in the vicinity of transmission lines between Tarong and Calvale led to the coincident loss of the double circuit 275 kV lines to be reclassified as a credible contingency\"}, {\"label\": \"network_outage\", \"quote\": \"the coincident loss of the double circuit Tarong to Braemar 275 kV lines was also reclassified as a result of lightning\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraint invoked to manage the reclassifications reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland and from New South Wales across QNI\"}, {\"label\": \"interconnector_limit\", \"quote\": \"This constraint reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland (around 2380 MW of capacity, 2260 MW bid available) and from New South Wales across QNI (700 MW nominal capability) to around 1050 MW\"}, {\"label\": \"rebids\", \"quote\": \"Tarong Energy had offered, through its day ahead bids, 1285 MW or 55 per cent of its capacity above $5000/MWh\"}, {\"label\": \"rebids\", \"quote\": \"Almost 1300 MW of the capacity offered by Tarong Energy was priced above $5000/MWh\"}], \"constraints_named\": [{\"id\": \"constraint managing reduced network capability\", \"quote\": \"A constraint was invoked to manage the reduced network capability, which restricted the ability of generators north of Tarong to supply the Brisbane load centre\"}, {\"id\": \"constraint managing reclassifications\", \"quote\": \"The constraint invoked to manage the reclassifications reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland and from New South Wales across QNI\"}, {\"id\": \"constraint setting limits on Terranora interconnector\", \"quote\": \"The constraint setting the limits was managing a system normal limit to prevent overloads on the 132 kV network in northern New South Wales in the event of the loss of the 330 kV line between Armidale and Coffs Harbour (the 87 line)\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"from New South Wales across QNI\"}, {\"name\": \"Terranora\", \"quote\": \"Flows across the Terranora interconnector were highly volatile, fluctuating from around 20 MW north to 100 MW south (counter-priced)\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"lightning resulted in the reclassifications of the loss of the double circuit Tarong to Calvale lines and then the Tarong to Braemar lines as credible, from 3.35 pm and 3.55 pm respectively\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"For the trading interval ending 4.30 pm on 30 January there were no significant rebids that caused prices to exceed $5000/MWh\"}}, {\"event_date\": \"2008-02-07\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the 4.30 pm trading interval\", \"quote\": \"the spot price in Queensland reached $6622/MWh for the 4.30 pm trading interval\"}, \"peak_price\": {\"value\": 6622, \"quote\": \"the spot price in Queensland reached $6622/MWh for the 4.30 pm trading interval\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"lightning led to the reclassification of the Calvale to Tarong lines\"}, {\"label\": \"network_outage\", \"quote\": \"lightning in the vicinity of transmission lines between Tarong and Calvale led to the coincident loss of the double circuit 275 kV lines to be reclassified as a credible contingency\"}, {\"label\": \"interconnector_limit\", \"quote\": \"different constraints were initially invoked on 7 February to manage the reduced network capability. This constrained off all generation in Queensland as well as limiting imports across both interconnectors from New South Wales\"}, {\"label\": \"rebids\", \"quote\": \"Tarong Energy had offered, through its day ahead bids, 1285 MW or 55 per cent of its capacity above $5000/MWh\"}], \"constraints_named\": [{\"id\": \"overly conservative constraints\", \"quote\": \"different constraints were initially invoked on 7 February to manage the reduced network capability. This constrained off all generation in Queensland as well as limiting imports across both interconnectors from New South Wales\"}, {\"id\": \"constraints used on 30 January\", \"quote\": \"At 4.35 pm NEMMCO replaced the constraints with the same constraints that were used on 30 January\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"limiting imports across both interconnectors from New South Wales\"}, {\"name\": \"Terranora\", \"quote\": \"limiting imports across both interconnectors from New South Wales\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"lightning led to the reclassification of the Calvale to Tarong lines\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"For the trading interval ending 4.30 pm on 7 February there were no significant rebids that caused prices to exceed $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "lightning resulted in the reclassifications of the loss of the double circuit Tarong to Calvale lines and then the Tarong to Braemar lines as credible, from 3.35 pm and 3.55 pm respectively"
+          },
+          {
+            "label": "network_outage",
+            "quote": "lightning in the vicinity of transmission lines between Tarong and Calvale led to the coincident loss of the double circuit 275 kV lines to be reclassified as a credible contingency"
+          },
+          {
+            "label": "network_outage",
+            "quote": "the coincident loss of the double circuit Tarong to Braemar 275 kV lines was also reclassified as a result of lightning"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraint invoked to manage the reclassifications reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland and from New South Wales across QNI"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "This constraint reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland (around 2380 MW of capacity, 2260 MW bid available) and from New South Wales across QNI (700 MW nominal capability) to around 1050 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "Tarong Energy had offered, through its day ahead bids, 1285 MW or 55 per cent of its capacity above $5000/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "Almost 1300 MW of the capacity offered by Tarong Energy was priced above $5000/MWh"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint managing reduced network capability",
+            "quote": "A constraint was invoked to manage the reduced network capability, which restricted the ability of generators north of Tarong to supply the Brisbane load centre"
+          },
+          {
+            "id": "constraint managing reclassifications",
+            "quote": "The constraint invoked to manage the reclassifications reduced the combined capability for flows into the Brisbane load centre from generation in south west Queensland and from New South Wales across QNI"
+          },
+          {
+            "id": "constraint setting limits on Terranora interconnector",
+            "quote": "The constraint setting the limits was managing a system normal limit to prevent overloads on the 132 kV network in northern New South Wales in the event of the loss of the 330 kV line between Armidale and Coffs Harbour (the 87 line)"
+          }
+        ],
+        "event_date": "2008-01-30",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "from New South Wales across QNI"
+          },
+          {
+            "name": "Terranora",
+            "quote": "Flows across the Terranora interconnector were highly volatile, fluctuating from around 20 MW north to 100 MW south (counter-priced)"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in Queensland reached $9921/MWh for the 4.30 pm trading interval",
+          "text": "the 4.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "lightning resulted in the reclassifications of the loss of the double circuit Tarong to Calvale lines and then the Tarong to Braemar lines as credible, from 3.35 pm and 3.55 pm respectively",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in Queensland reached $9921/MWh for the 4.30 pm trading interval",
+          "value": 9921
+        },
+        "rebid_set_price": {
+          "quote": "For the trading interval ending 4.30 pm on 30 January there were no significant rebids that caused prices to exceed $5000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "lightning led to the reclassification of the Calvale to Tarong lines"
+          },
+          {
+            "label": "network_outage",
+            "quote": "lightning in the vicinity of transmission lines between Tarong and Calvale led to the coincident loss of the double circuit 275 kV lines to be reclassified as a credible contingency"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "different constraints were initially invoked on 7 February to manage the reduced network capability. This constrained off all generation in Queensland as well as limiting imports across both interconnectors from New South Wales"
+          },
+          {
+            "label": "rebids",
+            "quote": "Tarong Energy had offered, through its day ahead bids, 1285 MW or 55 per cent of its capacity above $5000/MWh"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "overly conservative constraints",
+            "quote": "different constraints were initially invoked on 7 February to manage the reduced network capability. This constrained off all generation in Queensland as well as limiting imports across both interconnectors from New South Wales"
+          },
+          {
+            "id": "constraints used on 30 January",
+            "quote": "At 4.35 pm NEMMCO replaced the constraints with the same constraints that were used on 30 January"
+          }
+        ],
+        "event_date": "2008-02-07",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "limiting imports across both interconnectors from New South Wales"
+          },
+          {
+            "name": "Terranora",
+            "quote": "limiting imports across both interconnectors from New South Wales"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in Queensland reached $6622/MWh for the 4.30 pm trading interval",
+          "text": "the 4.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "lightning led to the reclassification of the Calvale to Tarong lines",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in Queensland reached $6622/MWh for the 4.30 pm trading interval",
+          "value": 6622
+        },
+        "rebid_set_price": {
+          "quote": "For the trading interval ending 4.30 pm on 7 February there were no significant rebids that caused prices to exceed $5000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_30_January_and_7_February_2008_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_30%20January%20and%207%20February%202008%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2832,
+    "per_attempt": [
+      {
+        "completion_tokens": 1438,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5700,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7138
+      },
+      {
+        "completion_tokens": 1394,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5700,
+        "prompt_tokens_details": {
+          "cached_tokens": 4384
+        },
+        "total_tokens": 7094
+      }
+    ],
+    "prompt_tokens": 11400,
+    "reasoning_tokens": 0,
+    "total_tokens": 14232
+  }
+}

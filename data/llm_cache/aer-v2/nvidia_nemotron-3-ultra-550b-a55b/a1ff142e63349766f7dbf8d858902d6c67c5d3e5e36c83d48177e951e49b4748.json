@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:31:58+00:00",
+  "failure": null,
+  "input_sha256": "4359f4b4e6b018891f0e6a629ef88d557cc213e82edbd1c4bb80a223cfbaf3d0",
+  "key": "a1ff142e63349766f7dbf8d858902d6c67c5d3e5e36c83d48177e951e49b4748",
+  "latency_s": 15.81,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2015-01-18\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"The spot price exceeded $5000/MWh during the 5 pm trading interval following dispatch prices at the market price cap ($13 500/MWh) at 4.35 pm, 4.45 pm and 4.55 pm.\", \"quote\": \"The spot price exceeded $5000/MWh during the 5 pm trading interval following dispatch prices at the market price cap ($13 500/MWh) at 4.35 pm, 4.45 pm and 4.55 pm.\"}, \"peak_price\": {\"value\": 13500, \"quote\": \"On Sunday 18 January 20 15, the dispatch price reached the market price cap of $13 500/MWh at 4.25 pm, 4.35 pm, 4.45 pm, 4.55 pm, 8 pm and 9 pm in Queensland.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval).\"}, {\"label\": \"rebids\", \"quote\": \"While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval).\"}, {\"label\": \"solar_output\", \"quote\": \"output at ERM Power's Oakey Power station was limited during the high price periods by a system normal constraint (Q>NIL_MRTA_A, designed to prevent the thermal overload of a Middle Ridge to Tangkam 110 kV line for the trip of the parallel line).\"}, {\"label\": \"ramp_rates\", \"quote\": \"Callide Power Trading's Callide C unit 3 was ramp up constrained.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"RTA Yarwun's Yarwun Power Station was generating lower than its offer.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across the Queensland to New South Wales interconnector (QNI) were limited to around 200 MW by a system normal constraint.\"}, {\"label\": \"network_outage\", \"quote\": \"Terranora has been partially out of service since August 2013 due to faulty cables, which has reduced its maximum import limit to around 30 MW.\"}], \"constraints_named\": [{\"id\": \"Q>NIL_MRTA_A\", \"quote\": \"output at ERM Power's Oakey Power station was limited during the high price periods by a system normal constraint (Q>NIL_MRTA_A, designed to prevent the thermal overload of a Middle Ridge to Tangkam 110 kV line for the trip of the parallel line).\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Imports across the Queensland to New South Wales interconnector (QNI) were limited to around 200 MW by a system normal constraint.\"}, {\"name\": \"Terranora\", \"quote\": \"Flows into Queensland across the Terranora interconnector were limited to 10 MW during the time of high prices.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Terranora has been partially out of service since August 2013 due to faulty cables, which has reduced its maximum import limit to around 30 MW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval).\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval)."
+          },
+          {
+            "label": "rebids",
+            "quote": "While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval)."
+          },
+          {
+            "label": "solar_output",
+            "quote": "output at ERM Power's Oakey Power station was limited during the high price periods by a system normal constraint (Q>NIL_MRTA_A, designed to prevent the thermal overload of a Middle Ridge to Tangkam 110 kV line for the trip of the parallel line)."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Callide Power Trading's Callide C unit 3 was ramp up constrained."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "RTA Yarwun's Yarwun Power Station was generating lower than its offer."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across the Queensland to New South Wales interconnector (QNI) were limited to around 200 MW by a system normal constraint."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Terranora has been partially out of service since August 2013 due to faulty cables, which has reduced its maximum import limit to around 30 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Q>NIL_MRTA_A",
+            "quote": "output at ERM Power's Oakey Power station was limited during the high price periods by a system normal constraint (Q>NIL_MRTA_A, designed to prevent the thermal overload of a Middle Ridge to Tangkam 110 kV line for the trip of the parallel line)."
+          }
+        ],
+        "event_date": "2015-01-18",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Imports across the Queensland to New South Wales interconnector (QNI) were limited to around 200 MW by a system normal constraint."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Flows into Queensland across the Terranora interconnector were limited to 10 MW during the time of high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh during the 5 pm trading interval following dispatch prices at the market price cap ($13 500/MWh) at 4.35 pm, 4.45 pm and 4.55 pm.",
+          "text": "The spot price exceeded $5000/MWh during the 5 pm trading interval following dispatch prices at the market price cap ($13 500/MWh) at 4.35 pm, 4.45 pm and 4.55 pm."
+        },
+        "network_outages": {
+          "quote": "Terranora has been partially out of service since August 2013 due to faulty cables, which has reduced its maximum import limit to around 30 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Sunday 18 January 20 15, the dispatch price reached the market price cap of $13 500/MWh at 4.25 pm, 4.35 pm, 4.45 pm, 4.55 pm, 8 pm and 9 pm in Queensland.",
+          "value": 13500
+        },
+        "rebid_set_price": {
+          "quote": "While high levels of demand contributed to the high prices, the key underlying driver was supply conditions brought about by participant rebidding (sometimes late in the trading interval).",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_5000_MWh__18_January_2015_(Qld)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%205000%20MWh%20%2018%20January%202015%20%28Qld%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 852,
+    "per_attempt": [
+      {
+        "completion_tokens": 852,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9999
+      }
+    ],
+    "prompt_tokens": 9147,
+    "reasoning_tokens": 0,
+    "total_tokens": 9999
+  }
+}

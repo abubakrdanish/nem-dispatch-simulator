@@ -1,0 +1,206 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:13:57+00:00",
+  "failure": null,
+  "input_sha256": "af66181bd774c8c4f48a8f764c7970c7ac8bd88facd73b7fb032a746e4000386",
+  "key": "e2eb74c1040abdc055e7c6b76d9dfde4ec310942efc6b797b59c44c31b8d773f",
+  "latency_s": 17.86,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-20\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"10 trading intervals in total\", \"quote\": \"On 20 November 2009, the spot price in New South Wales and Queensland exceeded $5000/MWh for 10 trading intervals in total\"}, \"peak_price\": {\"value\": 9284, \"quote\": \"reaching a maximum of $9284/MWh and $8388/MWh respectively\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in New South Wales reached a maximum for the day of 13 276 MW, 1400 MW greater than that forecast four and 12 hours ahead\"}, {\"label\": \"demand\", \"quote\": \"At around 9 am, AEMO increased the forecast demand for New South Wales by 800 MW which saw four hour ahead forecast prices increasing to the price cap for the 1 pm to 5 pm trading intervals inclusive\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages in New South Wales significantly reduced the capability for imports from Victoria\"}, {\"label\": \"network_outage\", \"quote\": \"The impact of these outages was not forecast, with import capability up to 900 MW lower than forecast four hours ahead\"}, {\"label\": \"network_outage\", \"quote\": \"An outage of the Mt Piper to Wallerawang 330kV line in New South Wales commenced at 6.05 am\"}, {\"label\": \"network_outage\", \"quote\": \"the Avon to Macarthur 330kV line, which had been out of service for planned maintenance since 15 November\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 9.05 am, effective from 9.15 am, Millmerran Energy Trader rebid 135 MW of capacity at Millmerran unit two from prices below $10/MWh to above $9500/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 9.45 am, effective from 9.55 am, Callide Power Trading rebid 69 MW of capacity at Callide C unit three from prices below $20/MWh to above $9200/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 10.36 am, for the 11 am and 11.30 am trading intervals, Delta Electricity reduced the available capacity at Wallerawang unit seven by 100 MW\"}, {\"label\": \"rebids\", \"quote\": \"At midday, effective from 12.10 pm, Macquarie Generation reduced the available capacity of Liddell unit two by up to 200 MW\"}, {\"label\": \"rebids\", \"quote\": \"At 2.07 pm, effective from 2.15 pm, Delta Electricity rebid 120 MW of available capacity at Colongra from prices below zero to above $9800/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 3.12 pm, effective from 3.20 pm, Delta rebid 200 MW of available capacity at Mount Piper from prices below zero to above $9500/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 3.11 pm, also effective from 3.20 pm, Delta reduced the available capacity of Colongra unit four by 175 MW\"}, {\"label\": \"rebids\", \"quote\": \"At 2.32 pm, effective from 2.40 pm, CS Energy rebid 55 MW of available capacity at Callide B two from prices below $25/MWh to above $9200/MWh\"}, {\"label\": \"rebids\", \"quote\": \"A further rebid at 2.47 pm, effective from 2.55 pm, shifted 101 MW of available capacity at Swanbank unit E from prices below zero to above $9800/MWh\"}, {\"label\": \"rebids\", \"quote\": \"At 2.34 pm, effective from 3.05 pm Millmerran Energy Trader rebid 135 MW of available capacity at Millmerran unit two from prices below $10/MWh to above $9500/MWh\"}, {\"label\": \"rebids\", \"quote\": \"A further rebid at 3.01 pm, effective from 3.10 pm, reduced the capacity of Millmerran unit one by 185 MW\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 3000 MW of New South Wales generation was not offered into the market on the day\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Delta Electricity Munmorah unit four 300 Planned - off since March\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Vales Point unit six 660 Planned - off since 6 November\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Macquarie Generation Liddell unit three 520 Planned - off since 24 October\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Eraring Energy Eraring unit four 660 Planned - off since 21 August\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Redbank Redbank 145 Planned - off since 13 November\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Eraring Energy Eraring unit two 660 Plant problems - shutdown on 19 November\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Planned network outages in New South Wales significantly reduced the capability for imports from Victoria\"}, {\"label\": \"interconnector_limit\", \"quote\": \"For the 11.30 am trading interval, actual capability into New South Wales from Victoria was 900 MW lower than that forecast four hours ahead\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows across all interconnectors into New South Wales exceeded the limit for the majority of the time between 9.45 am and 11.20 am\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The two New South Wales to Queensland interconnectors were unconstrained from midday to the end of the high priced period\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"At 10 am, in response to low reserves in New South Wales, AEMO issued a direction to Delta Electricity to bid Colongra unit one available\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"Intervention pricing was applied for the period from 10.10 am to 11.35 am\"}], \"constraints_named\": [{\"id\": \"QNI constraint\", \"quote\": \"At 9.45 am, effective from 9.55 am, Callide Power Trading rebid 69 MW of capacity at Callide C unit three from prices below $20/MWh to above $9200/MWh. The reason given was \\\"QNI constraint\\\"\"}], \"interconnectors_named\": [{\"name\": \"New South Wales to Queensland interconnectors\", \"quote\": \"The two New South Wales to Queensland interconnectors were unconstrained from midday to the end of the high priced period\"}, {\"name\": \"Victoria to New South Wales interconnector\", \"quote\": \"Planned network outages in New South Wales significantly reduced the capability for imports from Victoria\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages in New South Wales significantly reduced the capability for imports from Victoria. The impact of these outages was not forecast, with import capability up to 900 MW lower than forecast four hours ahead\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in New South Wales reached a maximum for the day of 13 276 MW, 1400 MW greater than that forecast four and 12 hours ahead"
+          },
+          {
+            "label": "demand",
+            "quote": "At around 9 am, AEMO increased the forecast demand for New South Wales by 800 MW which saw four hour ahead forecast prices increasing to the price cap for the 1 pm to 5 pm trading intervals inclusive"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages in New South Wales significantly reduced the capability for imports from Victoria"
+          },
+          {
+            "label": "network_outage",
+            "quote": "The impact of these outages was not forecast, with import capability up to 900 MW lower than forecast four hours ahead"
+          },
+          {
+            "label": "network_outage",
+            "quote": "An outage of the Mt Piper to Wallerawang 330kV line in New South Wales commenced at 6.05 am"
+          },
+          {
+            "label": "network_outage",
+            "quote": "the Avon to Macarthur 330kV line, which had been out of service for planned maintenance since 15 November"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 9.05 am, effective from 9.15 am, Millmerran Energy Trader rebid 135 MW of capacity at Millmerran unit two from prices below $10/MWh to above $9500/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 9.45 am, effective from 9.55 am, Callide Power Trading rebid 69 MW of capacity at Callide C unit three from prices below $20/MWh to above $9200/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 10.36 am, for the 11 am and 11.30 am trading intervals, Delta Electricity reduced the available capacity at Wallerawang unit seven by 100 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "At midday, effective from 12.10 pm, Macquarie Generation reduced the available capacity of Liddell unit two by up to 200 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.07 pm, effective from 2.15 pm, Delta Electricity rebid 120 MW of available capacity at Colongra from prices below zero to above $9800/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 3.12 pm, effective from 3.20 pm, Delta rebid 200 MW of available capacity at Mount Piper from prices below zero to above $9500/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 3.11 pm, also effective from 3.20 pm, Delta reduced the available capacity of Colongra unit four by 175 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.32 pm, effective from 2.40 pm, CS Energy rebid 55 MW of available capacity at Callide B two from prices below $25/MWh to above $9200/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "A further rebid at 2.47 pm, effective from 2.55 pm, shifted 101 MW of available capacity at Swanbank unit E from prices below zero to above $9800/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.34 pm, effective from 3.05 pm Millmerran Energy Trader rebid 135 MW of available capacity at Millmerran unit two from prices below $10/MWh to above $9500/MWh"
+          },
+          {
+            "label": "rebids",
+            "quote": "A further rebid at 3.01 pm, effective from 3.10 pm, reduced the capacity of Millmerran unit one by 185 MW"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 3000 MW of New South Wales generation was not offered into the market on the day"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Delta Electricity Munmorah unit four 300 Planned - off since March"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Vales Point unit six 660 Planned - off since 6 November"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Macquarie Generation Liddell unit three 520 Planned - off since 24 October"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Eraring Energy Eraring unit four 660 Planned - off since 21 August"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Redbank Redbank 145 Planned - off since 13 November"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Eraring Energy Eraring unit two 660 Plant problems - shutdown on 19 November"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Planned network outages in New South Wales significantly reduced the capability for imports from Victoria"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "For the 11.30 am trading interval, actual capability into New South Wales from Victoria was 900 MW lower than that forecast four hours ahead"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows across all interconnectors into New South Wales exceeded the limit for the majority of the time between 9.45 am and 11.20 am"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The two New South Wales to Queensland interconnectors were unconstrained from midday to the end of the high priced period"
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "At 10 am, in response to low reserves in New South Wales, AEMO issued a direction to Delta Electricity to bid Colongra unit one available"
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "Intervention pricing was applied for the period from 10.10 am to 11.35 am"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI constraint",
+            "quote": "At 9.45 am, effective from 9.55 am, Callide Power Trading rebid 69 MW of capacity at Callide C unit three from prices below $20/MWh to above $9200/MWh. The reason given was \"QNI constraint\""
+          }
+        ],
+        "event_date": "2009-11-20",
+        "interconnectors_named": [
+          {
+            "name": "New South Wales to Queensland interconnectors",
+            "quote": "The two New South Wales to Queensland interconnectors were unconstrained from midday to the end of the high priced period"
+          },
+          {
+            "name": "Victoria to New South Wales interconnector",
+            "quote": "Planned network outages in New South Wales significantly reduced the capability for imports from Victoria"
+          }
+        ],
+        "intervals": {
+          "quote": "On 20 November 2009, the spot price in New South Wales and Queensland exceeded $5000/MWh for 10 trading intervals in total",
+          "text": "10 trading intervals in total"
+        },
+        "network_outages": {
+          "quote": "Planned network outages in New South Wales significantly reduced the capability for imports from Victoria. The impact of these outages was not forecast, with import capability up to 900 MW lower than forecast four hours ahead",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "reaching a maximum of $9284/MWh and $8388/MWh respectively",
+          "value": 9284
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_20_November_2009_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_20%20November%202009%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1841,
+    "per_attempt": [
+      {
+        "completion_tokens": 1841,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 13221,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15062
+      }
+    ],
+    "prompt_tokens": 13221,
+    "reasoning_tokens": 0,
+    "total_tokens": 15062
+  }
+}

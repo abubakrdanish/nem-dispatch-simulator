@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:24:03+00:00",
+  "failure": null,
+  "input_sha256": "840b00daa8330d999fc3b4b43c86d1c084181c14463f433ecc41ab6e23d18b7f",
+  "key": "8903ac7dd240a4df2ec41e913d335bfa31185ac3c695b592272c5c7d806472ee",
+  "latency_s": 10.69,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-06-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"6 pm and 6.30 pm trading intervals\", \"quote\": \"On 10 June the spot price in New South Wales exceeded $5,000/MWh for the 6 pm and 6.30 pm trading intervals, and in Queensland for the 6 pm trading interval.\"}, \"peak_price\": {\"value\": 8022, \"quote\": \"The spot price in New South Wales was $8,022/MWh and $5,027/MWh for the 6 pm and 6.30 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was high during the evening peak, driven by extremely cold weather increasing heating requirements.\"}, {\"label\": \"demand\", \"quote\": \"New South Wales hit its highest winter peak demand since 2010 at around 13,000 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Almost 3,300 MW of that capacity was on planned outage, which was expected as generators generally undertake maintenance in autumn before returning to service for the winter peak from mid- to late-June.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The remaining 1,800 MW of capacity of unplanned outages was all in Queensland. Most of this capacity had been out since the significant failure of the Callide C 4 unit on 25 May 2021.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"AGL Energy removed 300 MW of capacity from Liddell at 12.28 pm due to coal quality issues and then a further 30 MW effective 6 pm due to milling limits.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"No further imports could be sourced from Victoria, as the VIC -NSW interconnector was already operating at or close to its nominal limit.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"requirements for mainland raise FCAS services reduced the effective amount of low- priced capacity available to meet demand in the energy market.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"This trade-off between the provision of FCAS and energy effectively reduced low priced capacity by up to 60 MW and contributed to high dispatch prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"No further imports could be sourced from Victoria, as the VIC -NSW interconnector was already operating at or close to its nominal limit.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was high during the evening peak, driven by extremely cold weather increasing heating requirements."
+          },
+          {
+            "label": "demand",
+            "quote": "New South Wales hit its highest winter peak demand since 2010 at around 13,000 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Almost 3,300 MW of that capacity was on planned outage, which was expected as generators generally undertake maintenance in autumn before returning to service for the winter peak from mid- to late-June."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The remaining 1,800 MW of capacity of unplanned outages was all in Queensland. Most of this capacity had been out since the significant failure of the Callide C 4 unit on 25 May 2021."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "AGL Energy removed 300 MW of capacity from Liddell at 12.28 pm due to coal quality issues and then a further 30 MW effective 6 pm due to milling limits."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "No further imports could be sourced from Victoria, as the VIC -NSW interconnector was already operating at or close to its nominal limit."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "requirements for mainland raise FCAS services reduced the effective amount of low- priced capacity available to meet demand in the energy market."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "This trade-off between the provision of FCAS and energy effectively reduced low priced capacity by up to 60 MW and contributed to high dispatch prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-06-10",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "No further imports could be sourced from Victoria, as the VIC -NSW interconnector was already operating at or close to its nominal limit."
+          }
+        ],
+        "intervals": {
+          "quote": "On 10 June the spot price in New South Wales exceeded $5,000/MWh for the 6 pm and 6.30 pm trading intervals, and in Queensland for the 6 pm trading interval.",
+          "text": "6 pm and 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales was $8,022/MWh and $5,027/MWh for the 6 pm and 6.30 pm trading intervals respectively.",
+          "value": 8022
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210610_$5000_QLD_NSW_Report.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210610%20%245000%20QLD%20NSW%20Report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 682,
+    "per_attempt": [
+      {
+        "completion_tokens": 682,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 15693,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16375
+      }
+    ],
+    "prompt_tokens": 15693,
+    "reasoning_tokens": 0,
+    "total_tokens": 16375
+  }
+}

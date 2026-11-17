@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:34:03+00:00",
+  "failure": {
+    "detail": "$.events[0].constraints_named[0].id: longer than 200",
+    "kind": "invalid"
+  },
+  "input_sha256": "30c9a3822952e3218ffb0c595136a1185f32cdeea1f43f15af103cd79bca6400",
+  "key": "bbfb18e8b5a7b138c42f1206a22fa28b600cc86625b2d53c1dcfb04a76a47977",
+  "latency_s": 46.37,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-01-13\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm\", \"quote\": \"the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm\"}, \"peak_price\": {\"value\": 13883, \"quote\": \"the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"While high demand contributed to the high prices, adequate capacity was available.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Plant limitations, some of which related to the high temperature, saw participants rebid, reducing generation capacity by around 600 MW.\"}, {\"label\": \"rebids\", \"quote\": \"Plant limitations, some of which related to the high temperature, saw participants rebid, reducing generation capacity by around 600 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI). These limits, which are in place at all times and are designed to manage the power system should the 750 MW Kogan Creek generator fail, reduced flows into Queensland to around 100 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"Other network limitations at times forced around 95 MW of flow from Queensland into New South Wales across the Terranora interconnector - counter to the prices in those regions.\"}], \"constraints_named\": [{\"id\": \"system normal constraints designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station)\", \"quote\": \"Imports on the Queensland to New South Wales interconnector (QNI) were limited to around 200 MW by system normal constraints designed to avoid the overload of the Liddell to Muswellbrook line and potential voltage collapse in northern New South Wales on the loss of the largest generator in Queensland (in this case Kogan Creek Power Station).\"}], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnector (QNI)\", \"quote\": \"Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI).\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Other network limitations at times forced around 95 MW of flow from Queensland into New South Wales across the Terranora interconnector - counter to the prices in those regions.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_13_January_2017_(QLD).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2013%20January%202017%20%28QLD%29.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 1352,
+    "per_attempt": [
+      {
+        "completion_tokens": 647,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8894,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 9541
+      },
+      {
+        "completion_tokens": 705,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8894,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 9599
+      }
+    ],
+    "prompt_tokens": 17788,
+    "reasoning_tokens": 0,
+    "total_tokens": 19140
+  }
+}

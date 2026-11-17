@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:15:42+00:00",
+  "failure": null,
+  "input_sha256": "ca041723c434c451de62ef1e7c1d69b5a9d68f7e02c5d145926a6e650203d1d7",
+  "key": "da12ae7dbeee6b7f40af025a02fe089d934910051999058e8b9884c1f8fde95c",
+  "latency_s": 10.59,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-24\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the 11 am trading interval\", \"quote\": \"the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am\"}, \"peak_price\": {\"value\": 6261, \"quote\": \"the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.\"}, {\"label\": \"network_outage\", \"quote\": \"Network equipment at Tarong substation was out of service on the day for planned upgrades associated with the commissioning of Kogan Creek.\"}, {\"label\": \"network_outage\", \"quote\": \"NEMMCO invoked network constraints which restricted the dispatch of generation in central and south west Queensland and reduced imports from New South Wales.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraint also forced flow south into New South Wales counter-priced at 10.15 am.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"NEMMCO invoked further constraints, to restrict the accumulation of negative residues on the interconnector, by limiting flows to zero.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Collinsville unit 4 37 Four day outage, commenced the previous night. Collinsville unit 5 37 Four day outage, commenced the previous night. Gladstone unit 2 80 The unit was returning from a long term outage. Millmerran unit 2 113 Returning from a two week outage\"}, {\"label\": \"rebids\", \"quote\": \"The network constraints within Queensland led to a series of rebids, which saw up to 440 MW of generation capacity shifted into lower prices.\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network equipment at Tarong substation was out of service on the day for planned upgrades associated with the commissioning of Kogan Creek."
+          },
+          {
+            "label": "network_outage",
+            "quote": "NEMMCO invoked network constraints which restricted the dispatch of generation in central and south west Queensland and reduced imports from New South Wales."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraint also forced flow south into New South Wales counter-priced at 10.15 am."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "NEMMCO invoked further constraints, to restrict the accumulation of negative residues on the interconnector, by limiting flows to zero."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Collinsville unit 4 37 Four day outage, commenced the previous night. Collinsville unit 5 37 Four day outage, commenced the previous night. Gladstone unit 2 80 The unit was returning from a long term outage. Millmerran unit 2 113 Returning from a two week outage"
+          },
+          {
+            "label": "rebids",
+            "quote": "The network constraints within Queensland led to a series of rebids, which saw up to 440 MW of generation capacity shifted into lower prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW."
+          }
+        ],
+        "event_date": "2007-01-24",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am",
+          "text": "the 11 am trading interval"
+        },
+        "network_outages": {
+          "quote": "A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am",
+          "value": 6261
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_24_January_2007_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_24%20January%202007%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 715,
+    "per_attempt": [
+      {
+        "completion_tokens": 715,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5331,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6046
+      }
+    ],
+    "prompt_tokens": 5331,
+    "reasoning_tokens": 0,
+    "total_tokens": 6046
+  }
+}

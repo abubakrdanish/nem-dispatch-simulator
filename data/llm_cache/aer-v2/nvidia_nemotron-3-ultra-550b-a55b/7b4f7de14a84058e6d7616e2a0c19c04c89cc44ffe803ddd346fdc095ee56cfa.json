@@ -1,0 +1,118 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:09:13+00:00",
+  "failure": null,
+  "input_sha256": "256290458a1bd57cb6900b5fa5a828f13bf4a9237c1f3daf0bc056b06c7b2672",
+  "key": "7b4f7de14a84058e6d7616e2a0c19c04c89cc44ffe803ddd346fdc095ee56cfa",
+  "latency_s": 11.94,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-01-11\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"Victoria: six trading intervals between 2.30 pm and 5.30 pm inclusive. South Australia: eight trading intervals between 1.30 pm and 5.30 pm inclusive.\", \"quote\": \"On Monday 11 January 2010, the spot price in Victoria exceeded $5000/MWh for six trading intervals between 2.30 pm and 5.30 pm inclusive. The spot price in South Australia exceeded $5000/MWh for eight trading intervals between 1.30 pm and 5.30 pm inclusive.\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Dispatch price $9999.77 AGL SA TORRA1 Energy $9999.77 0.12 $1176.47\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Melbourne (up to 42.8°C) and Adelaide (up to 41°C), saw demand in Victoria reaching a maximum of 9879 MW at 4 pm and in South Australia a maximum of 3089 MW at 4.30 pm.\"}, {\"label\": \"demand\", \"quote\": \"Actual demand in Victoria was up to 540 MW greater than forecast 4 hours ahead.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"Day-ahead bidding by LYMMCO saw around 650 MW priced at above $8700/MWh. This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.\"}, {\"label\": \"rebids\", \"quote\": \"Day-ahead bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh in South Australia.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The only low-cost generation that was not offered in on the day was 320 MW at AGL's Torrens Island Power Station in South Australia (120 MW at Torrens Island A unit 3 and 200 MW at Torrens Island B unit 1).\"}], \"constraints_named\": [{\"id\": \"constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line\", \"quote\": \"The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line.\"}, {\"id\": \"constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line\", \"quote\": \"it was the constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line.\"}], \"interconnectors_named\": [{\"name\": \"NSW-VIC\", \"quote\": \"Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead.\"}, {\"name\": \"Heywood\", \"quote\": \"The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line.\"}, {\"name\": \"Murraylink\", \"quote\": \"The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint.\"}, {\"name\": \"Basslink\", \"quote\": \"Import capability from Tasmania across Basslink was close to forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Melbourne (up to 42.8°C) and Adelaide (up to 41°C), saw demand in Victoria reaching a maximum of 9879 MW at 4 pm and in South Australia a maximum of 3089 MW at 4.30 pm."
+          },
+          {
+            "label": "demand",
+            "quote": "Actual demand in Victoria was up to 540 MW greater than forecast 4 hours ahead."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "Day-ahead bidding by LYMMCO saw around 650 MW priced at above $8700/MWh. This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria."
+          },
+          {
+            "label": "rebids",
+            "quote": "Day-ahead bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh in South Australia."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The only low-cost generation that was not offered in on the day was 320 MW at AGL's Torrens Island Power Station in South Australia (120 MW at Torrens Island A unit 3 and 200 MW at Torrens Island B unit 1)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line",
+            "quote": "The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line."
+          },
+          {
+            "id": "constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line",
+            "quote": "it was the constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line."
+          }
+        ],
+        "event_date": "2010-01-11",
+        "interconnectors_named": [
+          {
+            "name": "NSW-VIC",
+            "quote": "Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead."
+          },
+          {
+            "name": "Heywood",
+            "quote": "The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Import capability from Tasmania across Basslink was close to forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 11 January 2010, the spot price in Victoria exceeded $5000/MWh for six trading intervals between 2.30 pm and 5.30 pm inclusive. The spot price in South Australia exceeded $5000/MWh for eight trading intervals between 1.30 pm and 5.30 pm inclusive.",
+          "text": "Victoria: six trading intervals between 2.30 pm and 5.30 pm inclusive. South Australia: eight trading intervals between 1.30 pm and 5.30 pm inclusive."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Dispatch price $9999.77 AGL SA TORRA1 Energy $9999.77 0.12 $1176.47",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_11_January_2010_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_11%20January%202010%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 969,
+    "per_attempt": [
+      {
+        "completion_tokens": 969,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 19890,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20859
+      }
+    ],
+    "prompt_tokens": 19890,
+    "reasoning_tokens": 0,
+    "total_tokens": 20859
+  }
+}

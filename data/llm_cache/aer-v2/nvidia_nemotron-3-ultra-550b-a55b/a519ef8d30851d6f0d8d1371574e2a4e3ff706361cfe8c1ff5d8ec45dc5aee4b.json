@@ -1,0 +1,122 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:24:41+00:00",
+  "failure": null,
+  "input_sha256": "27fd05eb580b83687e6b78f7fe043aec1ca90ec36a9949abef96544c0a499840",
+  "key": "a519ef8d30851d6f0d8d1371574e2a4e3ff706361cfe8c1ff5d8ec45dc5aee4b",
+  "latency_s": 11.23,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-06\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"4.30 pm and 5 pm trading intervals\", \"quote\": \"Spot prices in New South Wales and Queensland were aligned and exceeded $5000/MWh for the 4.30 pm and 5 pm trading intervals.\"}, \"peak_price\": {\"value\": 11962, \"quote\": \"On 6 February 2017, wholesale electricity spot market prices for 4.30 pm and 5 pm reached $11 028/MWh and $6319/MWh respectively in Queensland, and $11 962/MWh and $6392/MWh in New South Wales.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"These hot conditions led to high demand for electricity in both states, with Queensland reaching near record levels.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Liddell unit 3 tripped at around 7.30 am reducing capacity by 480 MW, Liddell 2 reduced 100 MW due to a steam leak at around 1.15 pm, Liddell unit 4 reduced 130 MW at 4.30 pm due to a tube leak\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Unit 2 was not offered in initial offers (350 MW), minor reduction in capacity at unit 1 because of vacuum issues\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Unit 3 not offered in initial offers, unit 2 was offered at 140 MW (280 MW is its summer rating) in initial offers.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Substantially declared in their initial offer\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Substantially declared in their initial offer\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Rebid 160 MW unavailable due to lake temperature risk management at 3.53 pm\"}, {\"label\": \"rebids\", \"quote\": \"Snowy Hydro rebid Colongra power station unavailable at 4.22 pm, during the 4.30 pm trading interval, to \\\"avoid uneconomic dispatch\\\".\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A different system normal constraint actually bound for most of the period during which prices were greater than $5000/MWh and limited imports into New South Wales from Victoria to between 341 MW and 289 MW for the 4.30 pm and 5 pm trading intervals.\"}], \"constraints_named\": [{\"id\": \"N^^N_NIL_1\", \"quote\": \"N^^N_NIL_1 limits northerly flow across the Snowy Mountain region to maintain voltage stability.\"}, {\"id\": \"N>>N-NIL__B_15M\", \"quote\": \"N>>N-NIL__B_15M is designed to avoid overloading Upper Tumut to Canberra line on the loss of the Lower Tumut to Canberra line and uses 15 minute line ratings for greater accuracy of the lines limits.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"because the Queensland to New South Wales interconnector (QNI) was not constrained for all but two dispatch intervals and prices were aligned\"}, {\"name\": \"Vic-NSW\", \"quote\": \"the Victoria to New South Wales interconnector (Vic-NSW) is the critical link to the rest of the NEM\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "These hot conditions led to high demand for electricity in both states, with Queensland reaching near record levels."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Liddell unit 3 tripped at around 7.30 am reducing capacity by 480 MW, Liddell 2 reduced 100 MW due to a steam leak at around 1.15 pm, Liddell unit 4 reduced 130 MW at 4.30 pm due to a tube leak"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Unit 2 was not offered in initial offers (350 MW), minor reduction in capacity at unit 1 because of vacuum issues"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Unit 3 not offered in initial offers, unit 2 was offered at 140 MW (280 MW is its summer rating) in initial offers."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Substantially declared in their initial offer"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Substantially declared in their initial offer"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Rebid 160 MW unavailable due to lake temperature risk management at 3.53 pm"
+          },
+          {
+            "label": "rebids",
+            "quote": "Snowy Hydro rebid Colongra power station unavailable at 4.22 pm, during the 4.30 pm trading interval, to \"avoid uneconomic dispatch\"."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A different system normal constraint actually bound for most of the period during which prices were greater than $5000/MWh and limited imports into New South Wales from Victoria to between 341 MW and 289 MW for the 4.30 pm and 5 pm trading intervals."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N^^N_NIL_1",
+            "quote": "N^^N_NIL_1 limits northerly flow across the Snowy Mountain region to maintain voltage stability."
+          },
+          {
+            "id": "N>>N-NIL__B_15M",
+            "quote": "N>>N-NIL__B_15M is designed to avoid overloading Upper Tumut to Canberra line on the loss of the Lower Tumut to Canberra line and uses 15 minute line ratings for greater accuracy of the lines limits."
+          }
+        ],
+        "event_date": "2017-02-06",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "because the Queensland to New South Wales interconnector (QNI) was not constrained for all but two dispatch intervals and prices were aligned"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "the Victoria to New South Wales interconnector (Vic-NSW) is the critical link to the rest of the NEM"
+          }
+        ],
+        "intervals": {
+          "quote": "Spot prices in New South Wales and Queensland were aligned and exceeded $5000/MWh for the 4.30 pm and 5 pm trading intervals.",
+          "text": "4.30 pm and 5 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 6 February 2017, wholesale electricity spot market prices for 4.30 pm and 5 pm reached $11 028/MWh and $6319/MWh respectively in Queensland, and $11 962/MWh and $6392/MWh in New South Wales.",
+          "value": 11962
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_6_February_2017_(NSW_QLD)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%206%20February%202017%20%28NSW%20QLD%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 903,
+    "per_attempt": [
+      {
+        "completion_tokens": 903,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10969,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11872
+      }
+    ],
+    "prompt_tokens": 10969,
+    "reasoning_tokens": 0,
+    "total_tokens": 11872
+  }
+}

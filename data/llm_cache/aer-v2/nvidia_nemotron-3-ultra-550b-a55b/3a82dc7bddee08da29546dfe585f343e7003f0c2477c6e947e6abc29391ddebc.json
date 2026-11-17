@@ -1,0 +1,325 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:02:13+00:00",
+  "failure": null,
+  "input_sha256": "66eb7266013a10a8d84ebac2a285ccb5f14a3b0f33926f86cdbd5fa800d02ee6",
+  "key": "3a82dc7bddee08da29546dfe585f343e7003f0c2477c6e947e6abc29391ddebc",
+  "latency_s": 55.53,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2023-11-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The 30-minute price at 7 pm was $10,083 per MWh. The 5-minute prices were: 6.35 pm 346, 6.40 pm 450, 6.45 pm 16,600, 6.50 pm 16,600, 6.55 pm 16,600, 7 pm 9,900.\", \"quote\": \"The 30-minute price at 7 pm was $10,083 per MWh (Table 1.1).\"}, \"peak_price\": {\"value\": 16600, \"quote\": \"The 5-minute price was 16,600 at 6.45 pm, 6.50 pm and 6.55 pm.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"label\": \"wind_output\", \"quote\": \"Low output from wind generation in South Australia reduced the amount of low-priced capacity available.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for both technical and commercial reasons contributed to the high price.\"}, {\"label\": \"demand\", \"quote\": \"actual demand was higher (95 MW) than forecast\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints managing the outage limited imports over Heywood to around 45 MW during the high-priced intervals, out of its nominal capacity of 600 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line.\"}], \"constraints_named\": [{\"id\": \"South-East to Tailem Bend line constraint\", \"quote\": \"Constraints managing the outage limited imports over Heywood to around 45 MW during the high-priced intervals, out of its nominal capacity of 600 MW.\"}, {\"id\": \"Bendigo to Kerang line constraint\", \"quote\": \"Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for both technical and commercial reasons contributed to the high price.\"}}, {\"event_date\": \"2023-12-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Two 30-minute periods: 11.30 am ($5,393/MWh) and midday ($7,007/MWh). 5-minute prices: 11.05 am 450, 11.10 am 19, 11.15 am 101, 11.20 am 591, 11.25 am 15,600, 11.30 am 15,600, 11.35 am 15,600, 11.40 am 12,922, 11.45 am 12,922, 11.50 am 380, 11.55 am 118, midday 101.\", \"quote\": \"The 30-minute price was $5,393 per MWh at 11.30 am and $7,007 per MWh at midday (Table 2.1).\"}, \"peak_price\": {\"value\": 15600, \"quote\": \"The 5-minute price was 15,600 at 11.25 am, 11.30 am and 11.35 am.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network constraints to protect system security during the storms limited imports into South Australia over both the interconnectors and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation was also limited to protect system security. This and low solar generation due to overcast weather reduced the amount of low-priced capacity available.\"}, {\"label\": \"solar_output\", \"quote\": \"low solar generation due to overcast weather reduced the amount of low-priced capacity available.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows over Heywood were forecast to be 430 MW into South Australia an hour prior to the start of the 11.30 am period. Then at 10.50 am, constraints were invoked that limited imports into South Australia to 225 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Murraylink were also limited to 110 MW to keep the system secure.\"}], \"constraints_named\": [{\"id\": \"South East to Tailem Bend lines constraint\", \"quote\": \"Most relevant was the constraint on the South East to Tailem Bend lines, which limited flows over the Heywood interconnector.\"}, {\"id\": \"S^NIL_SA_NTH_N-2\", \"quote\": \"S^NIL_SA_NTH_N-2 was invoked to manage a possible voltage collapse in northern SA for the loss of Robertstown - Tungkillo 275kV line 1 and 2 and the Robertstown No.1 and No.2 synchronous condensers.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Network constraints to protect system security during the storms limited imports into South Australia over both the interconnectors and reduced South Australia's access to cheaper generation from Victoria.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink were also limited to 110 MW to keep the system secure.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity did not contribute to the high 30-minute prices.\"}}, {\"event_date\": \"2023-12-28\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"One 30-minute period at 7 pm with average price $5,835/MWh. 5-minute prices: 6.35 pm 14,928, 6.40 pm 3,041, 6.45 pm 4,010, 6.50 pm 8,888, 6.55 pm 3,423, 7.00 pm 721.\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for one 30-minute period on both 28 December and 29 December in Queensland (Table 3.1).\"}, \"peak_price\": {\"value\": 14928, \"quote\": \"The 5-minute price was 14,928 at 6.35 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures and high humidity drove high demand, greater than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints to maintain system security in NSW reduced Queensland's access to cheaper generation from NSW.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical reasons contributed to the high prices.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Ramp rate limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"On 28 December, CS Energy's Gladstone unit 2 went on a planned outage to rectify a tube leak which had been limiting its available capacity to 140 MW, half of its registered capacity.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 4.12 pm, Gladstone unit 1 tripped while attempting to come online after a month-long outage.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"Bouldercombe battery in Queensland shifted 20 MW of capacity from a low price to $10,389 per MWh, due to a change in its state of charge.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell lines constraint\", \"quote\": \"These reduced flows were mostly due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"id\": \"Lismore static VAR compensator outage constraint\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates.\"}], \"interconnectors_named\": [{\"name\": \"QNI (Queensland to NSW interconnector)\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 323 MW into Queensland on 28 December and an average of 449 MW on 29 December, out of a northbound capacity of 700 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was also an outage of network equipment in NSW that forced flows into NSW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical reasons contributed to the high prices.\"}}, {\"event_date\": \"2023-12-29\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"One 30-minute period at 6.30 pm with average price $7,919/MWh. 5-minute prices: 6.05 pm 550, 6.10 pm 14,928, 6.15 pm 550, 6.20 pm 1,632, 6.25 pm 14,928, 6.30 pm 14,928.\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for one 30-minute period on both 28 December and 29 December in Queensland (Table 3.1).\"}, \"peak_price\": {\"value\": 14928, \"quote\": \"The 5-minute price was 14,928 at 6.10 pm, 6.25 pm and 6.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Hot temperatures and high humidity drove high demand, greater than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints to maintain system security in NSW reduced Queensland's access to cheaper generation from NSW.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical reasons contributed to the high prices.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Ramp rate limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On 29 December, Stanwell's Tarong North unit had offered around 440 MW below $5,000 per MWh before it tripped around 3.30 pm.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Gladstone unit 2 went on a planned outage to rectify a tube leak which had been limiting its available capacity to 140 MW, half of its registered capacity.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell lines constraint\", \"quote\": \"These reduced flows were mostly due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"id\": \"Lismore static VAR compensator outage constraint\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates.\"}, {\"id\": \"Lismore to Dunoon power lines constraint\", \"quote\": \"On 29 December, the interconnector was further impacted by a constraint in NSW to avoid the possible overloading the Lismore to Dunoon power lines in the event one of them failed.\"}], \"interconnectors_named\": [{\"name\": \"QNI (Queensland to NSW interconnector)\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 323 MW into Queensland on 28 December and an average of 449 MW on 29 December, out of a northbound capacity of 700 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was also an outage of network equipment in NSW that forced flows into NSW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical reasons contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Low output from wind generation in South Australia reduced the amount of low-priced capacity available."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for both technical and commercial reasons contributed to the high price."
+          },
+          {
+            "label": "demand",
+            "quote": "actual demand was higher (95 MW) than forecast"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constraints managing the outage limited imports over Heywood to around 45 MW during the high-priced intervals, out of its nominal capacity of 600 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "South-East to Tailem Bend line constraint",
+            "quote": "Constraints managing the outage limited imports over Heywood to around 45 MW during the high-priced intervals, out of its nominal capacity of 600 MW."
+          },
+          {
+            "id": "Bendigo to Kerang line constraint",
+            "quote": "Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line."
+          }
+        ],
+        "event_date": "2023-11-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Flows over the Murraylink interconnector were limited between 6.35 pm and 7 pm by a system normal constraint to avoid a possible voltage collapse in the event of an outage on the Bendigo to Kerang line."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price at 7 pm was $10,083 per MWh (Table 1.1).",
+          "text": "The 30-minute price at 7 pm was $10,083 per MWh. The 5-minute prices were: 6.35 pm 346, 6.40 pm 450, 6.45 pm 16,600, 6.50 pm 16,600, 6.55 pm 16,600, 7 pm 9,900."
+        },
+        "network_outages": {
+          "quote": "A planned network outage impacted the Heywood interconnector and reduced South Australia's access to cheaper generation from Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price was 16,600 at 6.45 pm, 6.50 pm and 6.55 pm.",
+          "value": 16600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for both technical and commercial reasons contributed to the high price.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network constraints to protect system security during the storms limited imports into South Australia over both the interconnectors and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation was also limited to protect system security. This and low solar generation due to overcast weather reduced the amount of low-priced capacity available."
+          },
+          {
+            "label": "solar_output",
+            "quote": "low solar generation due to overcast weather reduced the amount of low-priced capacity available."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows over Heywood were forecast to be 430 MW into South Australia an hour prior to the start of the 11.30 am period. Then at 10.50 am, constraints were invoked that limited imports into South Australia to 225 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across Murraylink were also limited to 110 MW to keep the system secure."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "South East to Tailem Bend lines constraint",
+            "quote": "Most relevant was the constraint on the South East to Tailem Bend lines, which limited flows over the Heywood interconnector."
+          },
+          {
+            "id": "S^NIL_SA_NTH_N-2",
+            "quote": "S^NIL_SA_NTH_N-2 was invoked to manage a possible voltage collapse in northern SA for the loss of Robertstown - Tungkillo 275kV line 1 and 2 and the Robertstown No.1 and No.2 synchronous condensers."
+          }
+        ],
+        "event_date": "2023-12-08",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Network constraints to protect system security during the storms limited imports into South Australia over both the interconnectors and reduced South Australia's access to cheaper generation from Victoria."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports across Murraylink were also limited to 110 MW to keep the system secure."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price was $5,393 per MWh at 11.30 am and $7,007 per MWh at midday (Table 2.1).",
+          "text": "Two 30-minute periods: 11.30 am ($5,393/MWh) and midday ($7,007/MWh). 5-minute prices: 11.05 am 450, 11.10 am 19, 11.15 am 101, 11.20 am 591, 11.25 am 15,600, 11.30 am 15,600, 11.35 am 15,600, 11.40 am 12,922, 11.45 am 12,922, 11.50 am 380, 11.55 am 118, midday 101."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price was 15,600 at 11.25 am, 11.30 am and 11.35 am.",
+          "value": 15600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity did not contribute to the high 30-minute prices.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures and high humidity drove high demand, greater than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints to maintain system security in NSW reduced Queensland's access to cheaper generation from NSW."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical reasons contributed to the high prices."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Ramp rate limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "On 28 December, CS Energy's Gladstone unit 2 went on a planned outage to rectify a tube leak which had been limiting its available capacity to 140 MW, half of its registered capacity."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 4.12 pm, Gladstone unit 1 tripped while attempting to come online after a month-long outage."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "Bouldercombe battery in Queensland shifted 20 MW of capacity from a low price to $10,389 per MWh, due to a change in its state of charge."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell lines constraint",
+            "quote": "These reduced flows were mostly due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "id": "Lismore static VAR compensator outage constraint",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates."
+          }
+        ],
+        "event_date": "2023-12-28",
+        "interconnectors_named": [
+          {
+            "name": "QNI (Queensland to NSW interconnector)",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 323 MW into Queensland on 28 December and an average of 449 MW on 29 December, out of a northbound capacity of 700 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for one 30-minute period on both 28 December and 29 December in Queensland (Table 3.1).",
+          "text": "One 30-minute period at 7 pm with average price $5,835/MWh. 5-minute prices: 6.35 pm 14,928, 6.40 pm 3,041, 6.45 pm 4,010, 6.50 pm 8,888, 6.55 pm 3,423, 7.00 pm 721."
+        },
+        "network_outages": {
+          "quote": "There was also an outage of network equipment in NSW that forced flows into NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price was 14,928 at 6.35 pm.",
+          "value": 14928
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical reasons contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Hot temperatures and high humidity drove high demand, greater than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints to maintain system security in NSW reduced Queensland's access to cheaper generation from NSW."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation was low and lower than forecast, so less low-priced capacity was available than anticipated."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical reasons contributed to the high prices."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Ramp rate limitations on some generating units prevented capacity below $5,000 per MWh being dispatched in time."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On 29 December, Stanwell's Tarong North unit had offered around 440 MW below $5,000 per MWh before it tripped around 3.30 pm."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Gladstone unit 2 went on a planned outage to rectify a tube leak which had been limiting its available capacity to 140 MW, half of its registered capacity."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell lines constraint",
+            "quote": "These reduced flows were mostly due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "id": "Lismore static VAR compensator outage constraint",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates."
+          },
+          {
+            "id": "Lismore to Dunoon power lines constraint",
+            "quote": "On 29 December, the interconnector was further impacted by a constraint in NSW to avoid the possible overloading the Lismore to Dunoon power lines in the event one of them failed."
+          }
+        ],
+        "event_date": "2023-12-29",
+        "interconnectors_named": [
+          {
+            "name": "QNI (Queensland to NSW interconnector)",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 323 MW into Queensland on 28 December and an average of 449 MW on 29 December, out of a northbound capacity of 700 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW on both dates."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for one 30-minute period on both 28 December and 29 December in Queensland (Table 3.1).",
+          "text": "One 30-minute period at 6.30 pm with average price $7,919/MWh. 5-minute prices: 6.05 pm 550, 6.10 pm 14,928, 6.15 pm 550, 6.20 pm 1,632, 6.25 pm 14,928, 6.30 pm 14,928."
+        },
+        "network_outages": {
+          "quote": "There was also an outage of network equipment in NSW that forced flows into NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price was 14,928 at 6.10 pm, 6.25 pm and 6.30 pm.",
+          "value": 14928
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical reasons contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2023.pdf",
+    "url": "https://www.aer.gov.au/system/files/2024-02/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20October%20to%20December%202023.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3341,
+    "per_attempt": [
+      {
+        "completion_tokens": 3341,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9617,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12958
+      }
+    ],
+    "prompt_tokens": 9617,
+    "reasoning_tokens": 0,
+    "total_tokens": 12958
+  }
+}

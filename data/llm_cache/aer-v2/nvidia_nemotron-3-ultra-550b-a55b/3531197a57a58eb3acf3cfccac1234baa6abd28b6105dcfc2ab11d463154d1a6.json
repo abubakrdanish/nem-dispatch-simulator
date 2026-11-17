@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:59:01+00:00",
+  "failure": null,
+  "input_sha256": "14e1d821b3db38e1871690c04a467bb2baef165c39f2da3da02dddd5e9019833",
+  "key": "3531197a57a58eb3acf3cfccac1234baa6abd28b6105dcfc2ab11d463154d1a6",
+  "latency_s": 7.64,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-12-20\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"The five-minute dispatch price exceeded $5000/MWh eight times during this period, although the spot price (the price for the half-hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval.\", \"quote\": \"The five-minute dispatch price exceeded $5000/MWh eight times during this period, although the spot price (the price for the half-hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval.\"}, \"peak_price\": {\"value\": 12008, \"quote\": \"13:15 $12008.00 Mac Gen BW04 Energy $12008.00 1.00 $12008.00\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures driving high demand in New South Wales.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A reduction in the available capacity in New South Wales by around 1200 MW due to physical reasons such as unplanned outages.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of around 1000 MW of capacity into high price bands in New South Wales.\"}, {\"label\": \"network_outage\", \"quote\": \"Network congestion in Victoria (and the response of generators to that network congestion) forcing electricity to flow from New South Wales to Victoria, increasing prices in New South Wales.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The dynamic line rating of the Bendigo to Ballarat line decreased requiring an increase in exports to Victoria from 622 MW at 1 pm to 864 MW at 1.05 pm. This step change in exports was not enough to satisfy the Ballarat to Bendigo constraint so it violated and contributed to setting the New South Wales price at $7192/MWh\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The counter price flows on the VIC - NSW interconnector during the high priced period accrued around $3 million worth of negative settlement residues.\"}], \"constraints_named\": [{\"id\": \"S>V_NIL_NIL_RBNW\", \"quote\": \"S>V_NIL_NIL_RBNW - a system normal constraint preventing the overload of the North West Bend to Robertson 132 kV line (North West Bend to Robertson constraint).\"}, {\"id\": \"V>>SML_NIL_8\", \"quote\": \"V>>SML_NIL_8 - a system normal constraint managing the overloading of the Ballarat to Bendigo 220 kV line for the loss of the Shepparton to Bendigo 220 kV line in Victoria (Ballarat to Bendigo constraint).\"}, {\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"NRM_NSW1_VIC1 - a financial constraint used to manage the accrual of negative residues across the VIC-NSW interconnector (negative residue constraint).\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"Network congestion in Victoria (and the response of generators to that network congestion) forcing electricity to flow from New South Wales to Victoria, increasing prices in New South Wales.\"}, {\"name\": \"Murraylink\", \"quote\": \"Exports from Victoria to South Australia help relieve the constraint.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of around 1000 MW of capacity into high price bands in New South Wales.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures driving high demand in New South Wales."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A reduction in the available capacity in New South Wales by around 1200 MW due to physical reasons such as unplanned outages."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of around 1000 MW of capacity into high price bands in New South Wales."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network congestion in Victoria (and the response of generators to that network congestion) forcing electricity to flow from New South Wales to Victoria, increasing prices in New South Wales."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The dynamic line rating of the Bendigo to Ballarat line decreased requiring an increase in exports to Victoria from 622 MW at 1 pm to 864 MW at 1.05 pm. This step change in exports was not enough to satisfy the Ballarat to Bendigo constraint so it violated and contributed to setting the New South Wales price at $7192/MWh"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The counter price flows on the VIC - NSW interconnector during the high priced period accrued around $3 million worth of negative settlement residues."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "S>V_NIL_NIL_RBNW",
+            "quote": "S>V_NIL_NIL_RBNW - a system normal constraint preventing the overload of the North West Bend to Robertson 132 kV line (North West Bend to Robertson constraint)."
+          },
+          {
+            "id": "V>>SML_NIL_8",
+            "quote": "V>>SML_NIL_8 - a system normal constraint managing the overloading of the Ballarat to Bendigo 220 kV line for the loss of the Shepparton to Bendigo 220 kV line in Victoria (Ballarat to Bendigo constraint)."
+          },
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "NRM_NSW1_VIC1 - a financial constraint used to manage the accrual of negative residues across the VIC-NSW interconnector (negative residue constraint)."
+          }
+        ],
+        "event_date": "2013-12-20",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "Network congestion in Victoria (and the response of generators to that network congestion) forcing electricity to flow from New South Wales to Victoria, increasing prices in New South Wales."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Exports from Victoria to South Australia help relieve the constraint."
+          }
+        ],
+        "intervals": {
+          "quote": "The five-minute dispatch price exceeded $5000/MWh eight times during this period, although the spot price (the price for the half-hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval.",
+          "text": "The five-minute dispatch price exceeded $5000/MWh eight times during this period, although the spot price (the price for the half-hour trading interval) only exceeded $5000/MWh for the 1.30 pm trading interval."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "13:15 $12008.00 Mac Gen BW04 Energy $12008.00 1.00 $12008.00",
+          "value": 12008
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of around 1000 MW of capacity into high price bands in New South Wales.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20131220_NSW_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20131220%20NSW%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 844,
+    "per_attempt": [
+      {
+        "completion_tokens": 844,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7746,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8590
+      }
+    ],
+    "prompt_tokens": 7746,
+    "reasoning_tokens": 0,
+    "total_tokens": 8590
+  }
+}

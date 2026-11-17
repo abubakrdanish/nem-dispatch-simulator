@@ -1,0 +1,100 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:12:37+00:00",
+  "failure": null,
+  "input_sha256": "3dbd5a5c9df656cd9b9954a1241e51614602720818815bbf99da21cf5be2c20e",
+  "key": "1154685edf6e1b10d4d8fe7cf23d4f7b4ba3612928eb97718f527225670beb59",
+  "latency_s": 162.8,
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-12-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4:00 PM and 4:30 PM\", \"quote\": \"On Thursday 19 December 2013 the spot price in Sout h Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.\"}, \"peak_price\": {\"value\": 10627, \"quote\": \"On Thursday 19 December 2013 the spot price in Sout h Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"One of the main contributors to the high prices was high demand due to extreme heat.\"}, {\"label\": \"wind_output\", \"quote\": \"The reduced output from wind generation exac erbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Due to a boiler tube leak, Alinta Energy's 272 MW N orthern Power Station Unit 1 was withdrawn from service several days prior to the day of high price s.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Both the Heywood and Murraylink interconnectors wer e constrained at their import limits for much of the afternoon.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding during the afternoon, particularly b y AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap.\"}, {\"label\": \"network_outage\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"When the price was above $5000/MWh, the import limit into South Australia across Heywood was around 300 MW, lower than forecast four and twelve hours ahead.\"}, {\"name\": \"Murraylink\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Together the charts demonstrate that despite there being more low priced capacity available at dispatch than was forecast, the rebidding of capacity to high prices was sufficient to require the dispatch of high priced generation and set high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "One of the main contributors to the high prices was high demand due to extreme heat."
+          },
+          {
+            "label": "wind_output",
+            "quote": "The reduced output from wind generation exac erbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Due to a boiler tube leak, Alinta Energy's 272 MW N orthern Power Station Unit 1 was withdrawn from service several days prior to the day of high price s."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Both the Heywood and Murraylink interconnectors wer e constrained at their import limits for much of the afternoon."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding during the afternoon, particularly b y AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2013-12-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "When the price was above $5000/MWh, the import limit into South Australia across Heywood was around 300 MW, lower than forecast four and twelve hours ahead."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11"
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 19 December 2013 the spot price in Sout h Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.",
+          "text": "4:00 PM and 4:30 PM"
+        },
+        "network_outages": {
+          "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme 11",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Thursday 19 December 2013 the spot price in Sout h Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.",
+          "value": 10627
+        },
+        "rebid_set_price": {
+          "quote": "Together the charts demonstrate that despite there being more low priced capacity available at dispatch than was forecast, the rebidding of capacity to high prices was sufficient to require the dispatch of high priced generation and set high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20131219_SA_5000_report.PDF",
+    "url": "https://www.aer.gov.au/system/files/20131219%20SA%205000%20report.PDF"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 8831,
+    "per_attempt": [
+      {
+        "completion_tokens": 8831,
+        "completion_tokens_details": {
+          "reasoning_tokens": 8215
+        },
+        "prompt_tokens": 9038,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17869
+      }
+    ],
+    "prompt_tokens": 9038,
+    "reasoning_tokens": 8215,
+    "total_tokens": 17869
+  }
+}

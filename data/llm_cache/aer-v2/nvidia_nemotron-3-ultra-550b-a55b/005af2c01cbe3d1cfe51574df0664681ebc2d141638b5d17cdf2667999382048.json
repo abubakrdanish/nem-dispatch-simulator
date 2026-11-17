@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:59:13+00:00",
+  "failure": null,
+  "input_sha256": "ea7915274660d1c6e45a5b63236fe5d2161b1984ef153cd8c11dcf97fb4cdb09",
+  "key": "005af2c01cbe3d1cfe51574df0664681ebc2d141638b5d17cdf2667999382048",
+  "latency_s": 6.05,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-01-14\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 2 pm trading interval\", \"quote\": \"On Wednesday, 14 January 2016, the spot price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.\"}, \"peak_price\": {\"value\": 5023, \"quote\": \"Spot Price $5023/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The weather conditions led to near record demand for that time of year.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The situation was further exacerbated by the forced shutdown of Liddell unit 3.\"}, {\"label\": \"network_outage\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, {\"label\": \"rebids\", \"quote\": \"rebids that reduced unit ramp down rates prolonged its duration\"}, {\"label\": \"ramp_rates\", \"quote\": \"The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line\"}, {\"id\": \"N>>N-NIL_64\", \"quote\": \"N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line\"}, {\"id\": \"N>>N-NIL__B_15M\", \"quote\": \"N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line\"}, {\"id\": \"N^^N_NIL_1\", \"quote\": \"N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows.\"}, {\"id\": \"N_X_MBTE2_B\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead\"}, {\"name\": \"QNI\", \"quote\": \"QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively\"}, {\"name\": \"Terranora\", \"quote\": \"QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The weather conditions led to near record demand for that time of year."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The situation was further exacerbated by the forced shutdown of Liddell unit 3."
+          },
+          {
+            "label": "network_outage",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          },
+          {
+            "label": "rebids",
+            "quote": "rebids that reduced unit ramp down rates prolonged its duration"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line"
+          },
+          {
+            "id": "N>>N-NIL_64",
+            "quote": "N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line"
+          },
+          {
+            "id": "N>>N-NIL__B_15M",
+            "quote": "N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line"
+          },
+          {
+            "id": "N^^N_NIL_1",
+            "quote": "N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows."
+          },
+          {
+            "id": "N_X_MBTE2_B",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          }
+        ],
+        "event_date": "2016-01-14",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "imports into New South Wales on the Vic - NSW interconnector were around 1000 MW less than forecast four hours ahead"
+          },
+          {
+            "name": "QNI",
+            "quote": "QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively"
+          },
+          {
+            "name": "Terranora",
+            "quote": "QNI and Terranora were around 370 MW and 36 MW more than forecast four hours ahead respectively"
+          }
+        ],
+        "intervals": {
+          "quote": "On Wednesday, 14 January 2016, the spot price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.",
+          "text": "the 2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot Price $5023/MWh",
+          "value": 5023
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20150114_-_5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20150114%20-%205000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 805,
+    "per_attempt": [
+      {
+        "completion_tokens": 805,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10931,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11736
+      }
+    ],
+    "prompt_tokens": 10931,
+    "reasoning_tokens": 0,
+    "total_tokens": 11736
+  }
+}

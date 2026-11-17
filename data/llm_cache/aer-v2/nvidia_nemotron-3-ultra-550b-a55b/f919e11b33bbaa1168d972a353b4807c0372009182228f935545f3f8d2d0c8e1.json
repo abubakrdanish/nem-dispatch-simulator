@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:26:56+00:00",
+  "failure": null,
+  "input_sha256": "a1da5efa86bbe5e5c317e94f0f7f6ff273d48d9544e223f7659cd0b188d9cc39",
+  "key": "f919e11b33bbaa1168d972a353b4807c0372009182228f935545f3f8d2d0c8e1",
+  "latency_s": 6.23,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-01-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"12.30 pm 30-minute period\", \"quote\": \"The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.\"}, \"peak_price\": {\"value\": 11489, \"quote\": \"On 1 0 January 2022 the 30-minute wholesale electricity price in South Australia reached $11,489/MWh at 12.30 pm.\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"A constraint on the Heywood interconnector restricted imports from Victoria, which limited South Australia's access to low-priced capacity.\"}, {\"label\": \"demand\", \"quote\": \"Demand was higher than forecast due to a reduction in rooftop solar generation and high temperatures.\"}, {\"label\": \"solar_output\", \"quote\": \"Available capacity was lower than forecast, in part due to a fall in wind and solar generation.\"}, {\"label\": \"wind_output\", \"quote\": \"Available capacity was lower than forecast, in part due to a fall in wind and solar generation.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Gas and diesel generators could not start up and respond to these conditions instantly, creating a delayed market response.\"}], \"constraints_named\": [{\"id\": \"Heywood interconnector constraint\", \"quote\": \"AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"A constraint on the Heywood interconnector restricted imports from Victoria, which limited South Australia's access to low-priced capacity.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Market participants rebidding capacity did not contribute to this event.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "A constraint on the Heywood interconnector restricted imports from Victoria, which limited South Australia's access to low-priced capacity."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was higher than forecast due to a reduction in rooftop solar generation and high temperatures."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Available capacity was lower than forecast, in part due to a fall in wind and solar generation."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Available capacity was lower than forecast, in part due to a fall in wind and solar generation."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Gas and diesel generators could not start up and respond to these conditions instantly, creating a delayed market response."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Heywood interconnector constraint",
+            "quote": "AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector."
+          }
+        ],
+        "event_date": "2022-01-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "A constraint on the Heywood interconnector restricted imports from Victoria, which limited South Australia's access to low-priced capacity."
+          }
+        ],
+        "intervals": {
+          "quote": "The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.",
+          "text": "12.30 pm 30-minute period"
+        },
+        "network_outages": {
+          "quote": "AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 1 0 January 2022 the 30-minute wholesale electricity price in South Australia reached $11,489/MWh at 12.30 pm.",
+          "value": 11489
+        },
+        "rebid_set_price": {
+          "quote": "Market participants rebidding capacity did not contribute to this event.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_10_January_(South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%2010%20January%20%28South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 499,
+    "per_attempt": [
+      {
+        "completion_tokens": 499,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7984
+      }
+    ],
+    "prompt_tokens": 7485,
+    "reasoning_tokens": 0,
+    "total_tokens": 7984
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:30:41+00:00",
+  "failure": null,
+  "input_sha256": "8d69ae71a6b3b306325b321376e127e25a34e7ab785468a7dc643ae577155e30",
+  "key": "9df5adb0d510c815ba78978ab7f7c1ed50e3b6a4b8dbb4b5ebac3d54f3c3b3de",
+  "latency_s": 11.79,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2015-09-23\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm trading intervals\", \"quote\": \"On 23 September 2015, the spot price in New South Wales exceeded $5000/MWh for the 6.30 pm and 7 pm trading intervals.\"}, \"peak_price\": {\"value\": 13420, \"quote\": \"The spot price in New South Wales reached $13 420/MWh and $ 6717/MWh for the 6.30 pm and 7 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The difference between forecast and actual demand was a contributing factor to the high prices.\"}, {\"label\": \"network_outage\", \"quote\": \"Network outages contributed to the outcomes during the day.\"}, {\"label\": \"ramp_rates\", \"quote\": \"rebidding of generator ramp rates did prolong high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Together these network outages limited imports into New South Wales.\"}, {\"label\": \"constraint_violation\", \"quote\": \"This constraint forced flows, counter-price, out of New South Wales into Victoria by up to 512 MW.\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"18:41:A MANAGE CONSTRAINT: NRM_NSW1_VIC1\"}, {\"id\": \"N::V_CNUT_2 SL\", \"quote\": \"1847A CONSTRAINT MANAGEMENT - N::V_CNUT_2 SL\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"A planned outage on the Canberra to Upper Tumut line forced flows from New South Wales into Victoria across the Vic-NSW interconnector\"}, {\"name\": \"QNI\", \"quote\": \"a short notice outage was required on an Armidale to Bulli Creek transmission line limiting transfers into New South Wales from Queensland across the QNI\"}, {\"name\": \"Terranora\", \"quote\": \"The ongoing partial outage of the Terranora interconnector set its capability to around 100 MW of imports from Queensland to New South Wales.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages contributed to the outcomes during the day.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.\"}}, {\"event_date\": \"2015-11-24\", \"regions\": [\"QLD1\"], \"intervals\": null, \"peak_price\": null, \"causes\": [], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The difference between forecast and actual demand was a contributing factor to the high prices."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network outages contributed to the outcomes during the day."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "rebidding of generator ramp rates did prolong high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Together these network outages limited imports into New South Wales."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This constraint forced flows, counter-price, out of New South Wales into Victoria by up to 512 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "18:41:A MANAGE CONSTRAINT: NRM_NSW1_VIC1"
+          },
+          {
+            "id": "N::V_CNUT_2 SL",
+            "quote": "1847A CONSTRAINT MANAGEMENT - N::V_CNUT_2 SL"
+          }
+        ],
+        "event_date": "2015-09-23",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "A planned outage on the Canberra to Upper Tumut line forced flows from New South Wales into Victoria across the Vic-NSW interconnector"
+          },
+          {
+            "name": "QNI",
+            "quote": "a short notice outage was required on an Armidale to Bulli Creek transmission line limiting transfers into New South Wales from Queensland across the QNI"
+          },
+          {
+            "name": "Terranora",
+            "quote": "The ongoing partial outage of the Terranora interconnector set its capability to around 100 MW of imports from Queensland to New South Wales."
+          }
+        ],
+        "intervals": {
+          "quote": "On 23 September 2015, the spot price in New South Wales exceeded $5000/MWh for the 6.30 pm and 7 pm trading intervals.",
+          "text": "6.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Network outages contributed to the outcomes during the day.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales reached $13 420/MWh and $ 6717/MWh for the 6.30 pm and 7 pm trading intervals respectively.",
+          "value": 13420
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [],
+        "constraints_named": [],
+        "event_date": "2015-11-24",
+        "interconnectors_named": [],
+        "intervals": null,
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": null,
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_23_September_2015_(NSW).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2023%20September%202015%20%28NSW%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1744,
+    "per_attempt": [
+      {
+        "completion_tokens": 1048,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9550,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10598
+      },
+      {
+        "completion_tokens": 696,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9550,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 10246
+      }
+    ],
+    "prompt_tokens": 19100,
+    "reasoning_tokens": 0,
+    "total_tokens": 20844
+  }
+}

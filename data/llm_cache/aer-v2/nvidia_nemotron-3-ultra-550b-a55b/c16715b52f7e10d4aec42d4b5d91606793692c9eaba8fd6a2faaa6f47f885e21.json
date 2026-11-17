@@ -1,0 +1,258 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:02:46+00:00",
+  "failure": null,
+  "input_sha256": "4c1443c1da294f686f4911f2b4817a205f7095e818ad85bb9ecb49e9b33fc7b3",
+  "key": "c16715b52f7e10d4aec42d4b5d91606793692c9eaba8fd6a2faaa6f47f885e21",
+  "latency_s": 32.54,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2024-02-13\", \"regions\": [\"VIC1\", \"TAS1\"], \"intervals\": {\"text\": \"5 consecutive 30-minute periods in Victoria and 3 consecutive 30-minute periods in Tasmania\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for 5 consecutive 30-minute periods in Victoria and 3 consecutive 30-minute periods in Tasmania on 13 February 2024 (Table 1.1).\"}, \"peak_price\": {\"value\": 16600, \"quote\": \"The market price cap ($16,600 per MWh).\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Victoria drove higher than forecast demand with Melbourne's maximum temperature reaching 37°C.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Following the loss of the major transmission lines, several generation units tripped removing around 2,500 MW of low-priced generation in the region.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 1.10 pm, the Moorabool-Sydenham No.1 and No.2 500 kilovolt (kV) lines tripped with reports that the transmission towers were on the ground.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"All connecting regions were exporting into Victoria during the high price periods (excluding load shedding periods) although were limited due to network constraints.\"}, {\"label\": \"constraint_violation\", \"quote\": \"Not all these constraints could be satisfied, which led to them violating and being the major price setter for the 1.20 pm, 1.25 pm and 1.30 pm dispatch intervals.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"When involuntary customer load shedding occurs, the price is set at the price cap.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity due to plant limitations and outages contributed to some of the high price intervals.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Victoria-New South Wales (NSW) interconnector\", \"quote\": \"Victoria-New South Wales (NSW) interconnector were at an average of 657 MW.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"Heywood interconnector were at an average of 271 MW.\"}, {\"name\": \"Basslink interconnector\", \"quote\": \"Basslink interconnector were at an average of 356 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Extreme weather conditions caused the main transmission lines between South Australia and Victoria to fail leading to significant network stress.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity due to plant limitations and outages contributed to some of the high price intervals.\"}}, {\"event_date\": \"2024-02-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"5-minute intervals between 1.30 pm and 2.25 pm, inclusive for L6; dispatch intervals between 1.30 pm and 2.05 pm, inclusive for L60\", \"quote\": \"On 13 February 2024 the local price for Lower 6 seconds (L6) FCAS reached $16,600 per MW in South Australia for the 5-minute intervals between 1.30 pm and 2.25 pm, inclusive. The local price for Lower 60 seconds (L60) FCAS exceeded $5,000 per MW for dispatch intervals between 1.30 pm and 2.05 pm, inclusive.\"}, \"peak_price\": {\"value\": 16600, \"quote\": \"The local price for Lower 6 seconds (L6) FCAS reached $16,600 per MW in South Australia for the 5-minute intervals between 1.30 pm and 2.25 pm, inclusive.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network issues stemming from the loss of the major transmission lines in Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"As FCAS cannot be transferred across Murraylink, South Australia was required to source its FCAS locally.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity to prices greater than $5,000 per MW for some intervals.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"AEMO invoked constraints managing the risk of the loss of the Heywood interconnector and electrically islanding South Australia.\"}, {\"name\": \"Murraylink\", \"quote\": \"As FCAS cannot be transferred across Murraylink, South Australia was required to source its FCAS locally.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network issues stemming from the loss of the major transmission lines in Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity to prices greater than $5,000 per MW for some intervals.\"}}, {\"event_date\": \"2024-02-21\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm 30-minute periods\", \"quote\": \"Prices (30-minute) reached $15,697 per MWh at 6.30 pm and $11,294 per MWh at 7 pm, prices were not forecast 1 hour ahead.\"}, \"peak_price\": {\"value\": 15697, \"quote\": \"Prices (30-minute) reached $15,697 per MWh at 6.30 pm and $11,294 per MWh at 7 pm, prices were not forecast 1 hour ahead.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures of around 36 degrees was driving high demand.\"}, {\"label\": \"wind_output\", \"quote\": \"There was only around 275 MW of wind generation at the time of high prices out of around 2,800 MW installed in South Australia.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Reduced imports across both interconnectors into South Australia and at times forced flows into Victoria.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Most of the remaining capacity was due to Origin Energy's Quarantine unit 5 failing to start with 75 MW priced at the price floor.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"To keep the system secure flows were being forced out of South Australia and into Victoria across the Heywood interconnector.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"Imports into South Australia across the Murraylink interconnector were limited to, on average, 50 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the high prices.\"}}, {\"event_date\": \"2024-02-27\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 pm 30-minute interval\", \"quote\": \"The 30-minute price reached $6,222/MWh for the 6.30 pm interval, this was due to the 6.20 pm to 6.30 pm 5-minute intervals being above $8,900/MWh.\"}, \"peak_price\": {\"value\": 6222, \"quote\": \"The 30-minute price reached $6,222/MWh for the 6.30 pm interval, this was due to the 6.20 pm to 6.30 pm 5-minute intervals being above $8,900/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures of around 38 degrees was driving high demand.\"}, {\"label\": \"wind_output\", \"quote\": \"There was only around 155 MW of wind generation at the time of high prices out of around 2,800 MW installed in South Australia.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Reduced imports across both interconnectors into South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity to high prices due to plant limitations.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"To keep the system secure, flows into South Australia across the Heywood interconnector were being limited to 264 MW, just over half of what was forecast 1 hour earlier.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"Imports into South Australia across the Murraylink interconnector were limited to 75 MW which again was just over half of what was forecast 1 hour ahead.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Victoria drove higher than forecast demand with Melbourne's maximum temperature reaching 37°C."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Following the loss of the major transmission lines, several generation units tripped removing around 2,500 MW of low-priced generation in the region."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 1.10 pm, the Moorabool-Sydenham No.1 and No.2 500 kilovolt (kV) lines tripped with reports that the transmission towers were on the ground."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "All connecting regions were exporting into Victoria during the high price periods (excluding load shedding periods) although were limited due to network constraints."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "Not all these constraints could be satisfied, which led to them violating and being the major price setter for the 1.20 pm, 1.25 pm and 1.30 pm dispatch intervals."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "When involuntary customer load shedding occurs, the price is set at the price cap."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity due to plant limitations and outages contributed to some of the high price intervals."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-02-13",
+        "interconnectors_named": [
+          {
+            "name": "Victoria-New South Wales (NSW) interconnector",
+            "quote": "Victoria-New South Wales (NSW) interconnector were at an average of 657 MW."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "Heywood interconnector were at an average of 271 MW."
+          },
+          {
+            "name": "Basslink interconnector",
+            "quote": "Basslink interconnector were at an average of 356 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for 5 consecutive 30-minute periods in Victoria and 3 consecutive 30-minute periods in Tasmania on 13 February 2024 (Table 1.1).",
+          "text": "5 consecutive 30-minute periods in Victoria and 3 consecutive 30-minute periods in Tasmania"
+        },
+        "network_outages": {
+          "quote": "Extreme weather conditions caused the main transmission lines between South Australia and Victoria to fail leading to significant network stress.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The market price cap ($16,600 per MWh).",
+          "value": 16600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity due to plant limitations and outages contributed to some of the high price intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network issues stemming from the loss of the major transmission lines in Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "As FCAS cannot be transferred across Murraylink, South Australia was required to source its FCAS locally."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity to prices greater than $5,000 per MW for some intervals."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-02-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "AEMO invoked constraints managing the risk of the loss of the Heywood interconnector and electrically islanding South Australia."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "As FCAS cannot be transferred across Murraylink, South Australia was required to source its FCAS locally."
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 February 2024 the local price for Lower 6 seconds (L6) FCAS reached $16,600 per MW in South Australia for the 5-minute intervals between 1.30 pm and 2.25 pm, inclusive. The local price for Lower 60 seconds (L60) FCAS exceeded $5,000 per MW for dispatch intervals between 1.30 pm and 2.05 pm, inclusive.",
+          "text": "5-minute intervals between 1.30 pm and 2.25 pm, inclusive for L6; dispatch intervals between 1.30 pm and 2.05 pm, inclusive for L60"
+        },
+        "network_outages": {
+          "quote": "Network issues stemming from the loss of the major transmission lines in Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The local price for Lower 6 seconds (L6) FCAS reached $16,600 per MW in South Australia for the 5-minute intervals between 1.30 pm and 2.25 pm, inclusive.",
+          "value": 16600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to prices greater than $5,000 per MW for some intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures of around 36 degrees was driving high demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There was only around 275 MW of wind generation at the time of high prices out of around 2,800 MW installed in South Australia."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Reduced imports across both interconnectors into South Australia and at times forced flows into Victoria."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Most of the remaining capacity was due to Origin Energy's Quarantine unit 5 failing to start with 75 MW priced at the price floor."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-02-21",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "To keep the system secure flows were being forced out of South Australia and into Victoria across the Heywood interconnector."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "Imports into South Australia across the Murraylink interconnector were limited to, on average, 50 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "Prices (30-minute) reached $15,697 per MWh at 6.30 pm and $11,294 per MWh at 7 pm, prices were not forecast 1 hour ahead.",
+          "text": "6.30 pm and 7 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Prices (30-minute) reached $15,697 per MWh at 6.30 pm and $11,294 per MWh at 7 pm, prices were not forecast 1 hour ahead.",
+          "value": 15697
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures of around 38 degrees was driving high demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There was only around 155 MW of wind generation at the time of high prices out of around 2,800 MW installed in South Australia."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Reduced imports across both interconnectors into South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity to high prices due to plant limitations."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-02-27",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "To keep the system secure, flows into South Australia across the Heywood interconnector were being limited to 264 MW, just over half of what was forecast 1 hour earlier."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "Imports into South Australia across the Murraylink interconnector were limited to 75 MW which again was just over half of what was forecast 1 hour ahead."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price reached $6,222/MWh for the 6.30 pm interval, this was due to the 6.20 pm to 6.30 pm 5-minute intervals being above $8,900/MWh.",
+          "text": "6.30 pm 30-minute interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 30-minute price reached $6,222/MWh for the 6.30 pm interval, this was due to the 6.20 pm to 6.30 pm 5-minute intervals being above $8,900/MWh.",
+          "value": 6222
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Prices_above_$5,000_MWh_-_13,_21_and_27_February_2024_(Victoria,_Tasmania_and_South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/2024-04/AER%20-%20Prices%20above%20%245%2C000%20MWh%20-%2013%2C%2021%20and%2027%20February%202024%20%28Victoria%2C%20Tasmania%20and%20South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2130,
+    "per_attempt": [
+      {
+        "completion_tokens": 2130,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10141,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12271
+      }
+    ],
+    "prompt_tokens": 10141,
+    "reasoning_tokens": 0,
+    "total_tokens": 12271
+  }
+}

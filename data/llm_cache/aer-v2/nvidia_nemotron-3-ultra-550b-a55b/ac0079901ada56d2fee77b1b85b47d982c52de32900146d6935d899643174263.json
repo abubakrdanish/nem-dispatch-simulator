@@ -1,0 +1,117 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:12:51+00:00",
+  "failure": null,
+  "input_sha256": "fbfef00d18b895db361f2f2ab5c4d62029f0513ec4a7d88116cffa031c90464b",
+  "key": "ac0079901ada56d2fee77b1b85b47d982c52de32900146d6935d899643174263",
+  "latency_s": 6.92,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"eight trading intervals from 2.30 pm to 6 pm inclusive\", \"quote\": \"On Thursday 19 November 2009, the spot price in South Australia exceeded $5000/MWh for eight trading intervals from 2.30 pm to 6 pm inclusive.\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Dispatch of this capacity set the price at greater than $9997/MWh for 43 out of 48 dispatch intervals during this period.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"actual demand exceeded that forecast for the whole period\"}, {\"label\": \"demand\", \"quote\": \"The temperature reached 43°C in Adelaide, the hottest ever recorded in November. This saw demand reach 2992 MW at 5 pm.\"}, {\"label\": \"rebids\", \"quote\": \"Bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"AGL was the only participant with offers above $5000/MWh, with around two thirds of its available capacity at Torrens Island power station priced at close to the price cap.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was only 240 MW of lower cost generation that was not available on the day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria were lower than forecast throughout the whole period.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia during the high-priced period were at the limit but lower than that forecast four hours ahead.\"}, {\"label\": \"network_outage\", \"quote\": \"The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line.\"}], \"constraints_named\": [{\"id\": \"Ballarat to Moorabool No 1 220 kV line constraint\", \"quote\": \"The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line.\"}, {\"id\": \"Ballarat to Moorabool No 1 line constraint\", \"quote\": \"Between 4.50 pm and 6.40 pm, AEMO invoked a further network constraint, to manage the Ballarat to Moorabool No 1 line.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink).\"}, {\"name\": \"Murraylink\", \"quote\": \"The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "actual demand exceeded that forecast for the whole period"
+          },
+          {
+            "label": "demand",
+            "quote": "The temperature reached 43°C in Adelaide, the hottest ever recorded in November. This saw demand reach 2992 MW at 5 pm."
+          },
+          {
+            "label": "rebids",
+            "quote": "Bidding by AGL significantly contributed to the spot prices exceeding $5000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "AGL was the only participant with offers above $5000/MWh, with around two thirds of its available capacity at Torrens Island power station priced at close to the price cap."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was only 240 MW of lower cost generation that was not available on the day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria were lower than forecast throughout the whole period."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia during the high-priced period were at the limit but lower than that forecast four hours ahead."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Ballarat to Moorabool No 1 220 kV line constraint",
+            "quote": "The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line."
+          },
+          {
+            "id": "Ballarat to Moorabool No 1 line constraint",
+            "quote": "Between 4.50 pm and 6.40 pm, AEMO invoked a further network constraint, to manage the Ballarat to Moorabool No 1 line."
+          }
+        ],
+        "event_date": "2009-11-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink)."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink)."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 19 November 2009, the spot price in South Australia exceeded $5000/MWh for eight trading intervals from 2.30 pm to 6 pm inclusive.",
+          "text": "eight trading intervals from 2.30 pm to 6 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "The import limits were driven by the constraint used to manage the flows across the Ballarat to Moorabool No 1 220 kV line for the loss of the remaining line.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Dispatch of this capacity set the price at greater than $9997/MWh for 43 out of 48 dispatch intervals during this period.",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_19_November_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_19%20November%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 784,
+    "per_attempt": [
+      {
+        "completion_tokens": 784,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12844,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13628
+      }
+    ],
+    "prompt_tokens": 12844,
+    "reasoning_tokens": 0,
+    "total_tokens": 13628
+  }
+}

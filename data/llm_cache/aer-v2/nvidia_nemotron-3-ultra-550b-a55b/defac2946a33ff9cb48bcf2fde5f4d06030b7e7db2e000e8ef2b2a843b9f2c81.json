@@ -1,0 +1,117 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:11:59+00:00",
+  "failure": null,
+  "input_sha256": "fdea8bcd5ff66f42894c7f04433ed5ab2ef5b600cfb625ab6542008eebb5b8b6",
+  "key": "defac2946a33ff9cb48bcf2fde5f4d06030b7e7db2e000e8ef2b2a843b9f2c81",
+  "latency_s": 7.71,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-16\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"The trading intervals when the price exceeded $5000/MWh are highlighted. Three of these occurrences were prior to the disturbance at 3.02 pm.\", \"quote\": \"The trading intervals when the price exceeded $5000/MWh are highlighted. Three of these occurrences were prior to the disturbance at 3.02 pm.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"At 4.20 pm, NEMMCO overrode the spot price in Victoria setting the price to $10,000/MWh for the next two hours.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in Victoria peaked at a new record of 9012 MW and was close to record levels in South Australia.\"}, {\"label\": \"demand\", \"quote\": \"Peak demand in Victoria was also 600 MW higher than forecast four hours ahead and 500 MW higher than forecast twelve hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Up to 1100 MW of generator capacity, including 200 MW of Victorian hydro plant, 400 MW of coal plant at Yallourn and Morwell on maintenance, and 475 MW at Newport, was not offered into the market.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding the previous day by Loy Yang Management Co saw 335 MW of capacity at Loy Yang A repriced to above $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities.\"}, {\"label\": \"network_outage\", \"quote\": \"At 3.02 pm, bushfires in north east Victoria and in the vicinity of the fully loaded transmission lines from the Snowy region caused a number of those lines to automatically open, severing the connection to Melbourne.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"At 4.20 pm, NEMMCO overrode the spot price in Victoria setting the price to $10,000/MWh for the next two hours.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Snowy interconnector\", \"quote\": \"At 3.02 pm, bushfires in the vicinity of the Snowy interconnector caused it to automatically open\"}, {\"name\": \"South Australia to Victoria interconnector\", \"quote\": \"The disturbance also triggered a number of other transmission lines to automatically disconnect including the South Australia to Victoria interconnector\"}, {\"name\": \"Heywood\", \"quote\": \"Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities.\"}, {\"name\": \"Bass link\", \"quote\": \"Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities.\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was out of service.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 3.02 pm, bushfires in north east Victoria and in the vicinity of the fully loaded transmission lines from the Snowy region caused a number of those lines to automatically open, severing the connection to Melbourne.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in Victoria peaked at a new record of 9012 MW and was close to record levels in South Australia."
+          },
+          {
+            "label": "demand",
+            "quote": "Peak demand in Victoria was also 600 MW higher than forecast four hours ahead and 500 MW higher than forecast twelve hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Up to 1100 MW of generator capacity, including 200 MW of Victorian hydro plant, 400 MW of coal plant at Yallourn and Morwell on maintenance, and 475 MW at Newport, was not offered into the market."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding the previous day by Loy Yang Management Co saw 335 MW of capacity at Loy Yang A repriced to above $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 3.02 pm, bushfires in north east Victoria and in the vicinity of the fully loaded transmission lines from the Snowy region caused a number of those lines to automatically open, severing the connection to Melbourne."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "At 4.20 pm, NEMMCO overrode the spot price in Victoria setting the price to $10,000/MWh for the next two hours."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2007-01-16",
+        "interconnectors_named": [
+          {
+            "name": "Snowy interconnector",
+            "quote": "At 3.02 pm, bushfires in the vicinity of the Snowy interconnector caused it to automatically open"
+          },
+          {
+            "name": "South Australia to Victoria interconnector",
+            "quote": "The disturbance also triggered a number of other transmission lines to automatically disconnect including the South Australia to Victoria interconnector"
+          },
+          {
+            "name": "Heywood",
+            "quote": "Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities."
+          },
+          {
+            "name": "Bass link",
+            "quote": "Actual flows across all interconnectors into Victoria (across Snowy, Heywood and Bass link) were approaching their maximum capabilities."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was out of service."
+          }
+        ],
+        "intervals": {
+          "quote": "The trading intervals when the price exceeded $5000/MWh are highlighted. Three of these occurrences were prior to the disturbance at 3.02 pm.",
+          "text": "The trading intervals when the price exceeded $5000/MWh are highlighted. Three of these occurrences were prior to the disturbance at 3.02 pm."
+        },
+        "network_outages": {
+          "quote": "At 3.02 pm, bushfires in north east Victoria and in the vicinity of the fully loaded transmission lines from the Snowy region caused a number of those lines to automatically open, severing the connection to Melbourne.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "At 4.20 pm, NEMMCO overrode the spot price in Victoria setting the price to $10,000/MWh for the next two hours.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_16_January_2007_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_16%20January%202007%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 812,
+    "per_attempt": [
+      {
+        "completion_tokens": 812,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11934
+      }
+    ],
+    "prompt_tokens": 11122,
+    "reasoning_tokens": 0,
+    "total_tokens": 11934
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:54:18+00:00",
+  "failure": null,
+  "input_sha256": "dc5d3fb043a7a3fbac0ecb217d128d6e62516ccdacedb94769a11845ef08904e",
+  "key": "c8d349be023b7c49c5ca11e992def7e0e70dead4a73bbedd025db2ec19271359",
+  "latency_s": 10.69,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"5 pm, 5.30 pm and 6 pm trading intervals\", \"quote\": \"However, only the 5 pm, 5.30 pm and 6 pm trading intervals resulted in actual spot prices above $5000/MWh.\"}, \"peak_price\": {\"value\": 14000, \"quote\": \"At 5 pm on Friday 10 February 2017, the wholesale, or spot price for electricity reached $12 915/MWh in New South Wales and $12 221/MWh in Queensland. While the spot price fell significantly in Queensland by 5.30 pm, in New South Wales it increased, reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The day was characterised by high temperatures in both states, reaching a maximum of 38 degrees in Sydney and 33 degrees in Brisbane. Accordingly, as expected, demand for electricity was high in both states - prices were also expected to be high.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 4.20 pm Energy Australia's Tallawarra power station unexpectedly stopped generating due to technical problems (or \\\"tripped\\\"), resulting in the loss of 410 MW of low-priced supply.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"technical problems prevented Snowy Hydro's Colongra power station starting from around 4.30 pm\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Vales Point 60 Condenser back pressure limited\"}, {\"label\": \"interconnector_limit\", \"quote\": \"actual imports were at the import limit at 4 pm, but exceeded the import limit for the 4.30 and 5 pm trading intervals\"}, {\"label\": \"constraint_violation\", \"quote\": \"With actual imports exceeding the import limit, constraints on the interconnector, designed to manage system security, \\\"violated\\\".\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"In accordance with National Electricity Rule 3.9.2(e), when load shedding occurs AEMO must set the dispatch price in that state at the market price cap (currently $14 000/MWh).\"}], \"constraints_named\": [{\"id\": \"Vic-NSW interconnector import limit\", \"quote\": \"constraints on the interconnector, designed to manage system security, \\\"violated\\\".\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"Table 5 shows actual imports (the actual \\\"flow\\\") into New South Wales, across the Vic - NSW interconnector, were higher than predicted by AEMO from the 4 to 5 pm trading intervals.\"}, {\"name\": \"QNI and Terranora interconnectors\", \"quote\": \"Table 6 shows combined actual and forecast exports and export limits from Queensland to New South Wales across the QNI and Terranora interconnectors for the same trading intervals.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The day was characterised by high temperatures in both states, reaching a maximum of 38 degrees in Sydney and 33 degrees in Brisbane. Accordingly, as expected, demand for electricity was high in both states - prices were also expected to be high."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 4.20 pm Energy Australia's Tallawarra power station unexpectedly stopped generating due to technical problems (or \"tripped\"), resulting in the loss of 410 MW of low-priced supply."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "technical problems prevented Snowy Hydro's Colongra power station starting from around 4.30 pm"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Vales Point 60 Condenser back pressure limited"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "actual imports were at the import limit at 4 pm, but exceeded the import limit for the 4.30 and 5 pm trading intervals"
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "With actual imports exceeding the import limit, constraints on the interconnector, designed to manage system security, \"violated\"."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "In accordance with National Electricity Rule 3.9.2(e), when load shedding occurs AEMO must set the dispatch price in that state at the market price cap (currently $14 000/MWh)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Vic-NSW interconnector import limit",
+            "quote": "constraints on the interconnector, designed to manage system security, \"violated\"."
+          }
+        ],
+        "event_date": "2017-02-10",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Table 5 shows actual imports (the actual \"flow\") into New South Wales, across the Vic - NSW interconnector, were higher than predicted by AEMO from the 4 to 5 pm trading intervals."
+          },
+          {
+            "name": "QNI and Terranora interconnectors",
+            "quote": "Table 6 shows combined actual and forecast exports and export limits from Queensland to New South Wales across the QNI and Terranora interconnectors for the same trading intervals."
+          }
+        ],
+        "intervals": {
+          "quote": "However, only the 5 pm, 5.30 pm and 6 pm trading intervals resulted in actual spot prices above $5000/MWh.",
+          "text": "5 pm, 5.30 pm and 6 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "At 5 pm on Friday 10 February 2017, the wholesale, or spot price for electricity reached $12 915/MWh in New South Wales and $12 221/MWh in Queensland. While the spot price fell significantly in Queensland by 5.30 pm, in New South Wales it increased, reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.",
+          "value": 14000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%2010%20February%202017%20%28NSW%20and%20Qld%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 818,
+    "per_attempt": [
+      {
+        "completion_tokens": 818,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 19138,
+        "prompt_tokens_details": {
+          "cached_tokens": 17536
+        },
+        "total_tokens": 19956
+      }
+    ],
+    "prompt_tokens": 19138,
+    "reasoning_tokens": 0,
+    "total_tokens": 19956
+  }
+}

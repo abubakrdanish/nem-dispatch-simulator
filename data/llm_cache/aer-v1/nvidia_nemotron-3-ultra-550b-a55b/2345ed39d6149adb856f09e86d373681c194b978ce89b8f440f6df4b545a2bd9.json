@@ -1,0 +1,486 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:41:44+00:00",
+  "failure": null,
+  "input_sha256": "c7b2ecfabdd508da9487565fca8fd66e4799cd56ff12e727a3babea555748355",
+  "key": "2345ed39d6149adb856f09e86d373681c194b978ce89b8f440f6df4b545a2bd9",
+  "latency_s": 55.46,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "d562a11b3ec947a12c30df6c78371d0735fe6e5a1a1d76bc4ce4f919a34ce854",
+  "prompt_version": "aer-v1",
+  "raw_response": "{\"events\": [{\"event_date\": \"2024-07-18\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"8.30 am and 9 am\", \"quote\": \"On 18 July, the 30-minute price in South Australia exceeded $5,000 per MWh twice in the morning: $7,913 per MWh at 8.30 am and $8,906 per MWh at 9 am.\"}, \"peak_price\": {\"value\": 8906, \"quote\": \"On 18 July, the 30-minute price in South Australia exceeded $5,000 per MWh twice in the morning: $7,913 per MWh at 8.30 am and $8,906 per MWh at 9 am.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 163 MW out of around 2,763 MW of installed capacity during the high prices. This equates to around 6% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements. This meant that South Australia was unable to import sufficient low-priced capacity during the high prices.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix A).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements. This meant that South Australia was unable to import sufficient low-priced capacity during the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix A).\"}}, {\"event_date\": \"2024-07-28\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 pm to 7.30 pm and 8.30 pm to 9.30 pm\", \"quote\": \"On 28 July, 30-minute prices in South Australia exceeded $5,000 per MWh six times in the evening (6.30 pm to 7.30 pm and 8.30 pm to 9.30 pm).\"}, \"peak_price\": {\"value\": 11200, \"quote\": \"The price ranged between $5,536 per MWh and $11,200 per MWh.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging around 80 MW out of 2,763 MW installed capacity during the high prices. This equates to around 3% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink flows were also reduced due to system normal constraints in place to prevent voltage collapse.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix B).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink flows were also reduced due to system normal constraints in place to prevent voltage collapse.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix B).\"}}, {\"event_date\": \"2024-07-30\", \"regions\": [\"NSW1\", \"QLD1\", \"SA1\", \"TAS1\", \"VIC1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"On 30 July, 30-minute prices exceeded $5,000 per MWh in all regions at 6 pm.\"}, \"peak_price\": {\"value\": 9382, \"quote\": \"The price ranged between $5,006 per MWh in Tasmania and $9,382 per MWh in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"NEM-wide total demand peaked at around 32,000 MW. This was the seventh highest maximum demand day for the quarter driven by cool winter temperatures increasing the need for heating.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, with all regions averaging around 857 MW out of 13,689 MW of installed capacity during the high prices. This equates to 6% of installed capacity for the NEM.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix C).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix C).\"}}, {\"event_date\": \"2024-07-30\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 pm to 9 pm\", \"quote\": \"On 30 July, 30-minute prices exceeded $5,000 per MWh in South Australia four times in the evening (7.30 pm to 9 pm).\"}, \"peak_price\": {\"value\": 16235, \"quote\": \"The price ranged between $8,460 per MWh and $16,235 per MWh.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 280 MW out of around 2,763 MW of installed capacity during the high prices. This equates to around 10% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements, and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink was on a planned outage with flows reduced to 0 MW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix D).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was on a planned outage with flows reduced to 0 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements, and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink was on a planned outage with flows reduced to 0 MW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix D).\"}}, {\"event_date\": \"2024-08-05\", \"regions\": [\"NSW1\", \"QLD1\", \"SA1\", \"TAS1\", \"VIC1\"], \"intervals\": {\"text\": \"8 am to 9.30 am (morning) and 5.30 pm to 7 pm (evening)\", \"quote\": \"On 5 August, 30-minute prices exceeded $5,000 per MWh 15 times from 8 am to 9.30 am... On 5 August, 30-minute prices exceeded $5,000 per MWh 13 times from 5.30 pm to 7 pm.\"}, \"peak_price\": {\"value\": 15887, \"quote\": \"Prices were aligned across the relevant regions during the high prices and ranged between $6,092 per MWh and $15,887 per MWh.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast in all relevant regions for both the morning and evening high price periods. During the morning high price periods, average wind output for all regions (including Queensland) was 954 MW out of around 13,689 MW of installed capacity. This equates to around 7% of installed capacity in the NEM. During the evening high price periods, average wind output for all regions (including South Australia and Tasmania) was 865 MW out of around 13,689 MW of installed capacity. This equates to around 6% of installed capacity in the NEM.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Baseload outages meant that 920 MW of generally low-priced capacity was unavailable in Victoria on 5 August. EnergyAustralia's Yallourn unit 1 (which has a 360 MW baseload capacity ) had been offline since 2 August due to an unplanned outage. At 5.00 pm, EnergyAustralia's Loy Yang A unit 4 went offline due to an unplanned unit outage removing 560 MW of available baseload capacity.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix E).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales\", \"quote\": \"Flows on both the Queensland -New South Wales and Terranora interconnectors were at their respective export limits into NSW during the high prices.\"}, {\"name\": \"Terranora\", \"quote\": \"Flows on both the Queensland -New South Wales and Terranora interconnectors were at their respective export limits into NSW during the high prices.\"}, {\"name\": \"Heywood\", \"quote\": \"there was a reduced limit of 200 MW on Heywood into Victoria due to FCAS requirements and South Australia was unable to export its excess cheaper generation into Victoria during the high prices.\"}, {\"name\": \"Basslink\", \"quote\": \"In Tasmania, prices did not exceed $5,000 per MWh, with excess cheaper generation flowing to the mainland during the high prices with Basslink flows at its export limits.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix E).\"}}, {\"event_date\": \"2024-08-06\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7 pm and 7.30 pm\", \"quote\": \"On 6 August, the 30-minute price in South Australia reached $6,245 per MWh at 7 pm and $5,402 per MWh at 7.30 pm.\"}, \"peak_price\": {\"value\": 6245, \"quote\": \"On 6 August, the 30-minute price in South Australia reached $6,245 per MWh at 7 pm and $5,402 per MWh at 7.30 pm.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 187 MW out of around 2,763 MW installed during the high prices. This equates to around 7% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix F).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price (Appendix F).\"}}, {\"event_date\": \"2024-08-22\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"8 am\", \"quote\": \"On 22 August, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $5,623 per MWh at 8 am.\"}, \"peak_price\": {\"value\": 5623, \"quote\": \"On 22 August, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $5,623 per MWh at 8 am.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 200 MW out of 2,763 MW installed capacity during the high prices. This equates to around 7% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix G).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix G).\"}}, {\"event_date\": \"2024-09-06\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"10 am\", \"quote\": \"On 6 September, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $6,002 per MWh at 10 am.\"}, \"peak_price\": {\"value\": 6002, \"quote\": \"On 6 September, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $6,002 per MWh at 10 am.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output averaged 602 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 22% of installed capacity in South Australia.\"}, {\"label\": \"solar_output\", \"quote\": \"Average solar output was 191 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low which resulted in higher demand.\"}, {\"label\": \"network_outage\", \"quote\": \"system normal constraints on the Heywood interconnector capped wind, solar and battery generation in the south-east region. Murraylink was also on a planned outage with flows reduced to 0 MW which limited South Australia's ability to access cheaper generation to alleviate the high prices.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Engie's Pelican Point station (478 MW registered capacity) had been on a planned outage since 31 August\"}, {\"label\": \"ramp_rates\", \"quote\": \"Dry Creek unit 2 could not start fast enough to help lower the price. The Dry Creek unit had 35 MW priced at the floor (-$1,000 per MWh) for the 10 am 5-minute interval, none of which could be dispatched in time.\"}, {\"label\": \"rebids\", \"quote\": \"At 9.29 am, effective from 9.35 am, AGL shifted 50 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in demand and non-scheduled generation forecasts (Appendix H).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"system normal constraints on the Heywood interconnector capped wind, solar and battery generation in the south-east region\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was also on a planned outage with flows reduced to 0 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Murraylink was also on a planned outage with flows reduced to 0 MW which limited South Australia's ability to access cheaper generation to alleviate the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 9.29 am, effective from 9.35 am, AGL shifted 50 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in demand and non-scheduled generation forecasts (Appendix H).\"}}, {\"event_date\": \"2024-09-23\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 pm to 8.30 pm\", \"quote\": \"On 23 September, 30-minute prices exceeded $5,000 per MWh five times in the evening (6.30 pm to 8.30 pm).\"}, \"peak_price\": {\"value\": 15600, \"quote\": \"The price ranged between $7,095 per MWh and $15,600 per MWh.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 25 MW out of 2,763 MW of installed capacity during the high prices, which equates to around 1% of installed capacity in South Australia.\"}, {\"label\": \"network_outage\", \"quote\": \"Equipment maintenance led to a planned line outage on the Para to Parafield Gardens West 275 kV line. This resulted in three stations (Snapper Point, Pelican Point and Bolivar) that had 267 MW of low-priced capacity constrained, preventing low-priced capacity making it to market. Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding was only relevant for the 8.30 pm high price period where between 8 MW and 60 MW of high-priced capacity was needed to meet demand (Appendix I).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse.\"}, {\"name\": \"Heywood\", \"quote\": \"Despite Heywood importing around 600 MW of capacity into South Australia during the high-priced periods, the cheaper generation into South Australia was still not enough to alleviate the high prices.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Equipment maintenance led to a planned line outage on the Para to Parafield Gardens West 275 kV line. This resulted in three stations (Snapper Point, Pelican Point and Bolivar) that had 267 MW of low-priced capacity constrained, preventing low-priced capacity making it to market. Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding was only relevant for the 8.30 pm high price period where between 8 MW and 60 MW of high-priced capacity was needed to meet demand (Appendix I).\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 163 MW out of around 2,763 MW of installed capacity during the high prices. This equates to around 6% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements. This meant that South Australia was unable to import sufficient low-priced capacity during the high prices."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial reasons contributed to the high price (Appendix A)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-07-18",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements."
+          }
+        ],
+        "intervals": {
+          "quote": "On 18 July, the 30-minute price in South Australia exceeded $5,000 per MWh twice in the morning: $7,913 per MWh at 8.30 am and $8,906 per MWh at 9 am.",
+          "text": "8.30 am and 9 am"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Heywood to South East line meant flows into South Australia on the Heywood interconnector were reduced to 50 MW due to FCAS requirements. This meant that South Australia was unable to import sufficient low-priced capacity during the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 18 July, the 30-minute price in South Australia exceeded $5,000 per MWh twice in the morning: $7,913 per MWh at 8.30 am and $8,906 per MWh at 9 am.",
+          "value": 8906
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price (Appendix A).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging around 80 MW out of 2,763 MW installed capacity during the high prices. This equates to around 3% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink flows were also reduced due to system normal constraints in place to prevent voltage collapse."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial reasons contributed to the high price (Appendix B)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-07-28",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink flows were also reduced due to system normal constraints in place to prevent voltage collapse."
+          }
+        ],
+        "intervals": {
+          "quote": "On 28 July, 30-minute prices in South Australia exceeded $5,000 per MWh six times in the evening (6.30 pm to 7.30 pm and 8.30 pm to 9.30 pm).",
+          "text": "6.30 pm to 7.30 pm and 8.30 pm to 9.30 pm"
+        },
+        "network_outages": {
+          "quote": "There was a planned outage of the Heywood to South East line, originally scheduled to end at 5.30 pm on 28 July. However, at 11.42 am it was extended to 29 July. The outage meant flows on Heywood were reduced to 50 MW due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The price ranged between $5,536 per MWh and $11,200 per MWh.",
+          "value": 11200
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price (Appendix B).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "NEM-wide total demand peaked at around 32,000 MW. This was the seventh highest maximum demand day for the quarter driven by cool winter temperatures increasing the need for heating."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, with all regions averaging around 857 MW out of 13,689 MW of installed capacity during the high prices. This equates to 6% of installed capacity for the NEM."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix C)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-07-30",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On 30 July, 30-minute prices exceeded $5,000 per MWh in all regions at 6 pm.",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The price ranged between $5,006 per MWh in Tasmania and $9,382 per MWh in South Australia.",
+          "value": 9382
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix C).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1",
+          "SA1",
+          "TAS1",
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 280 MW out of around 2,763 MW of installed capacity during the high prices. This equates to around 10% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements, and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink was on a planned outage with flows reduced to 0 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix D)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-07-30",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was on a planned outage with flows reduced to 0 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 30 July, 30-minute prices exceeded $5,000 per MWh in South Australia four times in the evening (7.30 pm to 9 pm).",
+          "text": "7.30 pm to 9 pm"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Moorabool to Mortlake line meant that flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements, and South Australia was unable to import sufficient low-priced capacity during the high prices. Murraylink was on a planned outage with flows reduced to 0 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The price ranged between $8,460 per MWh and $16,235 per MWh.",
+          "value": 16235
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix D).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast in all relevant regions for both the morning and evening high price periods. During the morning high price periods, average wind output for all regions (including Queensland) was 954 MW out of around 13,689 MW of installed capacity. This equates to around 7% of installed capacity in the NEM. During the evening high price periods, average wind output for all regions (including South Australia and Tasmania) was 865 MW out of around 13,689 MW of installed capacity. This equates to around 6% of installed capacity in the NEM."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Baseload outages meant that 920 MW of generally low-priced capacity was unavailable in Victoria on 5 August. EnergyAustralia's Yallourn unit 1 (which has a 360 MW baseload capacity ) had been offline since 2 August due to an unplanned outage. At 5.00 pm, EnergyAustralia's Loy Yang A unit 4 went offline due to an unplanned unit outage removing 560 MW of available baseload capacity."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix E)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-08-05",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales",
+            "quote": "Flows on both the Queensland -New South Wales and Terranora interconnectors were at their respective export limits into NSW during the high prices."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Flows on both the Queensland -New South Wales and Terranora interconnectors were at their respective export limits into NSW during the high prices."
+          },
+          {
+            "name": "Heywood",
+            "quote": "there was a reduced limit of 200 MW on Heywood into Victoria due to FCAS requirements and South Australia was unable to export its excess cheaper generation into Victoria during the high prices."
+          },
+          {
+            "name": "Basslink",
+            "quote": "In Tasmania, prices did not exceed $5,000 per MWh, with excess cheaper generation flowing to the mainland during the high prices with Basslink flows at its export limits."
+          }
+        ],
+        "intervals": {
+          "quote": "On 5 August, 30-minute prices exceeded $5,000 per MWh 15 times from 8 am to 9.30 am... On 5 August, 30-minute prices exceeded $5,000 per MWh 13 times from 5.30 pm to 7 pm.",
+          "text": "8 am to 9.30 am (morning) and 5.30 pm to 7 pm (evening)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Prices were aligned across the relevant regions during the high prices and ranged between $6,092 per MWh and $15,887 per MWh.",
+          "value": 15887
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix E).",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1",
+          "SA1",
+          "TAS1",
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 187 MW out of around 2,763 MW installed during the high prices. This equates to around 7% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial reasons contributed to the high price (Appendix F)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-08-06",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements"
+          }
+        ],
+        "intervals": {
+          "quote": "On 6 August, the 30-minute price in South Australia reached $6,245 per MWh at 7 pm and $5,402 per MWh at 7.30 pm.",
+          "text": "7 pm and 7.30 pm"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Tailem Bend to Tungkillo line meant flows on Heywood were limited into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 6 August, the 30-minute price in South Australia reached $6,245 per MWh at 7 pm and $5,402 per MWh at 7.30 pm.",
+          "value": 6245
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price (Appendix F).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 200 MW out of 2,763 MW installed capacity during the high prices. This equates to around 7% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-08-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line."
+          }
+        ],
+        "intervals": {
+          "quote": "On 22 August, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $5,623 per MWh at 8 am.",
+          "text": "8 am"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 22 August, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $5,623 per MWh at 8 am.",
+          "value": 5623
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output averaged 602 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 22% of installed capacity in South Australia."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Average solar output was 191 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low which resulted in higher demand."
+          },
+          {
+            "label": "network_outage",
+            "quote": "system normal constraints on the Heywood interconnector capped wind, solar and battery generation in the south-east region. Murraylink was also on a planned outage with flows reduced to 0 MW which limited South Australia's ability to access cheaper generation to alleviate the high prices."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Engie's Pelican Point station (478 MW registered capacity) had been on a planned outage since 31 August"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Dry Creek unit 2 could not start fast enough to help lower the price. The Dry Creek unit had 35 MW priced at the floor (-$1,000 per MWh) for the 10 am 5-minute interval, none of which could be dispatched in time."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 9.29 am, effective from 9.35 am, AGL shifted 50 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in demand and non-scheduled generation forecasts (Appendix H)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-09-06",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "system normal constraints on the Heywood interconnector capped wind, solar and battery generation in the south-east region"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was also on a planned outage with flows reduced to 0 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On 6 September, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $6,002 per MWh at 10 am.",
+          "text": "10 am"
+        },
+        "network_outages": {
+          "quote": "Murraylink was also on a planned outage with flows reduced to 0 MW which limited South Australia's ability to access cheaper generation to alleviate the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 6 September, the 30-minute price in South Australia exceeded $5,000 per MWh once in the morning. The price reached $6,002 per MWh at 10 am.",
+          "value": 6002
+        },
+        "rebid_set_price": {
+          "quote": "At 9.29 am, effective from 9.35 am, AGL shifted 50 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in demand and non-scheduled generation forecasts (Appendix H).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 25 MW out of 2,763 MW of installed capacity during the high prices, which equates to around 1% of installed capacity in South Australia."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Equipment maintenance led to a planned line outage on the Para to Parafield Gardens West 275 kV line. This resulted in three stations (Snapper Point, Pelican Point and Bolivar) that had 267 MW of low-priced capacity constrained, preventing low-priced capacity making it to market. Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding was only relevant for the 8.30 pm high price period where between 8 MW and 60 MW of high-priced capacity was needed to meet demand (Appendix I)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-09-23",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Despite Heywood importing around 600 MW of capacity into South Australia during the high-priced periods, the cheaper generation into South Australia was still not enough to alleviate the high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "On 23 September, 30-minute prices exceeded $5,000 per MWh five times in the evening (6.30 pm to 8.30 pm).",
+          "text": "6.30 pm to 8.30 pm"
+        },
+        "network_outages": {
+          "quote": "Equipment maintenance led to a planned line outage on the Para to Parafield Gardens West 275 kV line. This resulted in three stations (Snapper Point, Pelican Point and Bolivar) that had 267 MW of low-priced capacity constrained, preventing low-priced capacity making it to market. Flows on Murraylink into South Australia was reduced to around 25 MW out of its 220 MW nominal capacity due to a planned line outage around the Balranald area in New South Wales to avoid voltage collapse.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The price ranged between $7,095 per MWh and $15,600 per MWh.",
+          "value": 15600
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding was only relevant for the 8.30 pm high price period where between 8 MW and 60 MW of high-priced capacity was needed to meet demand (Appendix I).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf",
+    "url": "https://www.aer.gov.au/system/files/2024-11/AER%20-%20Electricity%20prices%20above%20%245%2C000MWh%20-%20July%20to%20September%202024.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 10781,
+    "per_attempt": [
+      {
+        "completion_tokens": 5496,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 29248,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 34744
+      },
+      {
+        "completion_tokens": 5285,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 29248,
+        "prompt_tokens_details": {
+          "cached_tokens": 26304
+        },
+        "total_tokens": 34533
+      }
+    ],
+    "prompt_tokens": 58496,
+    "reasoning_tokens": 0,
+    "total_tokens": 69277
+  }
+}

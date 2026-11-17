@@ -1,0 +1,100 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:09:54+00:00",
+  "failure": null,
+  "input_sha256": "cb906e658cdfb935d836fc5145787ebf5c877ac235311a73462049645ff1558c",
+  "key": "3e513508ce117cc70adb95c60b74c456cce5179e41475fceb71c3a71b9dc86b8",
+  "latency_s": 384.57,
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-01-29\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"5 pm trading interval\", \"quote\": \"On 29 January 2013 the spot price in Queensland exc eeded $5000/MWh at 5 pm, reaching $6299/MWh.\"}, \"peak_price\": {\"value\": 6299, \"quote\": \"On 29 January 2013 the spot price in Queensland exc eeded $5000/MWh at 5 pm, reaching $6299/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand for the 5 pm interval was 287 MW high er than forecast four hours ahead but close to that forecast 12 hours ahead.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 12.10 pm, Alinta's Braemar A unit 2 trip ped and unit 3 tripped on start up-a combined total of 300 MW (all of which was priced c lose to the price floor).\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Another contributing facto r was that 1593 MW of generation (Callide units 3 and 4, Tarong North and Wivenhoe unit 1) was out of service on the day.\"}, {\"label\": \"rebids\", \"quote\": \"Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5, which had been out of service sin ce December.\"}, {\"label\": \"network_outage\", \"quote\": \"On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast.\"}, {\"name\": \"Terranora\", \"quote\": \"There were no imports available from New South Wale s across the Terranora interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand for the 5 pm interval was 287 MW high er than forecast four hours ahead but close to that forecast 12 hours ahead."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 12.10 pm, Alinta's Braemar A unit 2 trip ped and unit 3 tripped on start up-a combined total of 300 MW (all of which was priced c lose to the price floor)."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Another contributing facto r was that 1593 MW of generation (Callide units 3 and 4, Tarong North and Wivenhoe unit 1) was out of service on the day."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5, which had been out of service sin ce December."
+          },
+          {
+            "label": "network_outage",
+            "quote": "On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2013-01-29",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast."
+          },
+          {
+            "name": "Terranora",
+            "quote": "There were no imports available from New South Wale s across the Terranora interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 29 January 2013 the spot price in Queensland exc eeded $5000/MWh at 5 pm, reaching $6299/MWh.",
+          "text": "5 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "On 28 January, there was an unplanned outage of one of the Directlink cables, which coincided with the planned outage of the other two.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 29 January 2013 the spot price in Queensland exc eeded $5000/MWh at 5 pm, reaching $6299/MWh.",
+          "value": 6299
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20130129_-_QLD_-_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20130129%20-%20QLD%20-%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 9869,
+    "per_attempt": [
+      {
+        "completion_tokens": 9869,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9280
+        },
+        "prompt_tokens": 4527,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14396
+      }
+    ],
+    "prompt_tokens": 4527,
+    "reasoning_tokens": 9280,
+    "total_tokens": 14396
+  }
+}

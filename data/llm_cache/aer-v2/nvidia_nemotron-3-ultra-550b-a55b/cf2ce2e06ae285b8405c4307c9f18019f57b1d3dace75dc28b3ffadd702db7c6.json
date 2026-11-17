@@ -1,0 +1,361 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:53:04+00:00",
+  "failure": null,
+  "input_sha256": "f521bca75e494c9ccda2d7d89badf0a04d6efb43ec9955fdc3e4853a1c84b43b",
+  "key": "cf2ce2e06ae285b8405c4307c9f18019f57b1d3dace75dc28b3ffadd702db7c6",
+  "latency_s": 33.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2026-01-12\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"4.55 pm and 5 pm\", \"quote\": \"The high prices occurred for two 5-minute intervals only in energy and FCAS\"}, \"peak_price\": {\"value\": 6835, \"quote\": \"On 12 January, the energy price in Tasmania reached $6,835 per MWh at 5 pm\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS\"}, {\"label\": \"network_outage\", \"quote\": \"At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania\"}, {\"label\": \"ramp_rates\", \"quote\": \"Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Hydro Tasmania's Bell Bay Three Power Station unit 1 and 2 and Tamar Valley GT Open Cycle Gas Turbine (OCGT) were unable to start up quickly enough to meet demand and provide low-priced capacity that could have helped avoid the high prices\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The market operator's dispatch engine simultaneously optimises the FCAS and energy markets, for every dispatch interval, to determine the least cost outcome. This can lead to a trade-off between the FCAS and energy markets\"}, {\"label\": \"constraint_violation\", \"quote\": \"The 5-minute high energy price at 4.55 pm was set by a constraint in place to manage the balance between supply and demand in Tasmania\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"To rebalance supply and demand, Hydro Tasmania's load unit , ASTHYD1, was restricted during the high -priced intervals under the AUFLS scheme. This constraint limited the unit's low-priced capacity that was available for the R6 sec service. Around 13 MW of capacity offered for each interval was unable to be dispatched and contributed to the high prices\"}, {\"label\": \"rebids\", \"quote\": \"Removal of low -priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A)\"}], \"constraints_named\": [{\"id\": \"AUFLS scheme\", \"quote\": \"To rebalance supply and demand, Hydro Tasmania's load unit , ASTHYD1, was restricted during the high -priced intervals under the AUFLS scheme\"}, {\"id\": \"system security constraint\", \"quote\": \"The 5-minute high energy price at 4.55 pm was set by a constraint in place to manage the balance between supply and demand in Tasmania\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Removal of low -priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A)\"}}, {\"event_date\": \"2026-01-26\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 pm - 10.30 pm\", \"quote\": \"On 26 January, high prices occurred during the evening peak. High prices were forecast, and an actual lack of reserves (level 1) was declared by AEMO\"}, \"peak_price\": {\"value\": 20158, \"quote\": \"The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"South Australia experienced exceptionally high temperatures on 26 and 27 January with some sites across the region breaking historical record temperatures for January. On 26 January, parts of Adelaide recorded temperatures in excess of 44°C. During the evening peak, electricity demand in South Australia exceeded 3,100 MW\"}, {\"label\": \"wind_output\", \"quote\": \"At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia\"}, {\"label\": \"network_outage\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"During the high prices on 26 January, batteries in the region provided substantial generation (Figure 8). However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, {\"id\": \"Murraylink runback scheme constraint\", \"quote\": \"Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm. This was due to a constraint managing an outage of the New South Wales Murraylink runback scheme\"}, {\"id\": \"Heywood constraint\", \"quote\": \"Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint\"}], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm\"}, {\"name\": \"Heywood\", \"quote\": \"Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)\"}}, {\"event_date\": \"2026-01-27\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6.30 am and 8.30 am\", \"quote\": \"On 27 January, high prices occurred during the morning peak due to continuing conditions from the previous day\"}, \"peak_price\": {\"value\": 5388, \"quote\": \"The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures remained elevated throughout the evening of 26 January and continued into the morning of 27 January. Houses could not cool down overnight during the long run of heat and air conditioner usage remained high. At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW\"}, {\"label\": \"wind_output\", \"quote\": \"On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh\"}, {\"label\": \"network_outage\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, {\"id\": \"Murraylink counter-price constraint\", \"quote\": \"Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line\"}, {\"id\": \"Heywood constraint\", \"quote\": \"Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint\"}], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line\"}, {\"name\": \"Heywood\", \"quote\": \"Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)\"}}, {\"event_date\": \"2026-02-17\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"1 pm, 1.30 pm and 5.30 pm\", \"quote\": \"The highest priced day in February occurred on 17 February in Tasmania with high prices in the local R6 sec service at 1 pm, 1.30 pm and 5.30 pm\"}, \"peak_price\": {\"value\": 6843, \"quote\": \"The 30-minute prices ranged from $6,764 per MW at 1 pm to $6,843 per MW at 5.30 pm\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"Basslink has a control system which prevents it from transferring FCAS services when flows are within the \\\"No-Go\\\" zone range (i.e. when flows are between approximately -50 MW and +50 MW). If Basslink is unable to transfer FCAS, Tasmania ha s to provide its own FCAS locally\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Similar to 12 January (section 1.1.7), some units were unable to be enabled in FCAS due to the energy and FCAS trade-off\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"Like 12 January ( section 1.1.6), t o restore supply and demand balance, the load unit , ASTHYD1, was constrained under the AUFLS scheme during the high prices. This limited the low-priced effective capacity that was available for R6 sec services. Around 65 MW of low- priced capacity offered was constrained and unable to make it to market, contributing to the high prices\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by removal of low -priced capacity in R6 sec services for technical reasons contributed to the high prices at 1 pm and 1.30 pm on 17 February (Appendix D)\"}], \"constraints_named\": [{\"id\": \"Basslink No-Go zone constraint\", \"quote\": \"Basslink has a control system which prevents it from transferring FCAS services when flows are within the \\\"No-Go\\\" zone range\"}, {\"id\": \"contingency R6 sec constraint\", \"quote\": \"A contingency R6 sec constraint was in place to cover the loss of the largest generator in the region\"}, {\"id\": \"AUFLS scheme\", \"quote\": \"Like 12 January ( section 1.1.6), t o restore supply and demand balance, the load unit , ASTHYD1, was constrained under the AUFLS scheme during the high prices\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Basslink has a control system which prevents it from transferring FCAS services when flows are within the \\\"No-Go\\\" zone range\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"Though there was sufficient capacity offered below $5,000 per MW, the capacity effectively available was limited to around 5 5% due to the constraints, during the high-priced intervals\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by removal of low -priced capacity in R6 sec services for technical reasons contributed to the high prices at 1 pm and 1.30 pm on 17 February (Appendix D)\"}}, {\"event_date\": \"2026-03-03\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"5 pm (4.40 pm 5-minute interval)\", \"quote\": \"The local R6 sec 30- minute price in Tasmania was $3,382 per MW at 5 pm. During the 5 pm 30-minute period, there was one 5 -minute price of $20,290 per MW at 4.40 pm\"}, \"peak_price\": {\"value\": 3382, \"quote\": \"The local R6 sec 30- minute price in Tasmania was $3,382 per MW at 5 pm\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"As mentioned earlier, when Basslink is in the \\\"No-Go\\\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Similar to 17 February (section 1.3), Hydro Tasmania's Gordon hydro generator had 144 MW out of the total 576 MW of capacity registered for R6 sec services in Tasmania. At 4.40 pm, it was t he largest generator in the region and was generating at (or near) its capacity in the energy market to meet Tasmanian demand. However, this meant that Gordon could not be enabled in R6 sec service\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"Similar to 12 January and 17 February (sections 1.1.6 and 1.3.3), t o restore supply and demand balance, the load unit, ASTHYD1, was constrained under the AUFLS scheme, further limiting the low-priced effective capacity that was available for the R6 sec service during the high prices. Around 45 MW of low-priced capacity offered was constrained and unable to make it to market, contributing to the high prices\"}], \"constraints_named\": [{\"id\": \"Basslink No-Go zone constraint\", \"quote\": \"As mentioned earlier, when Basslink is in the \\\"No-Go\\\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)\"}, {\"id\": \"AUFLS scheme\", \"quote\": \"Similar to 12 January and 17 February (sections 1.1.6 and 1.3.3), t o restore supply and demand balance, the load unit, ASTHYD1, was constrained under the AUFLS scheme\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"As mentioned earlier, when Basslink is in the \\\"No-Go\\\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"There was enough low -priced capacity offered to meet demand (Figure 10), however the constraints meant that some low-priced capacity was unable to make it to market\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There were no significant rebids in R6 sec service for this event\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS"
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Hydro Tasmania's Bell Bay Three Power Station unit 1 and 2 and Tamar Valley GT Open Cycle Gas Turbine (OCGT) were unable to start up quickly enough to meet demand and provide low-priced capacity that could have helped avoid the high prices"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The market operator's dispatch engine simultaneously optimises the FCAS and energy markets, for every dispatch interval, to determine the least cost outcome. This can lead to a trade-off between the FCAS and energy markets"
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The 5-minute high energy price at 4.55 pm was set by a constraint in place to manage the balance between supply and demand in Tasmania"
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "To rebalance supply and demand, Hydro Tasmania's load unit , ASTHYD1, was restricted during the high -priced intervals under the AUFLS scheme. This constraint limited the unit's low-priced capacity that was available for the R6 sec service. Around 13 MW of capacity offered for each interval was unable to be dispatched and contributed to the high prices"
+          },
+          {
+            "label": "rebids",
+            "quote": "Removal of low -priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A)"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "AUFLS scheme",
+            "quote": "To rebalance supply and demand, Hydro Tasmania's load unit , ASTHYD1, was restricted during the high -priced intervals under the AUFLS scheme"
+          },
+          {
+            "id": "system security constraint",
+            "quote": "The 5-minute high energy price at 4.55 pm was set by a constraint in place to manage the balance between supply and demand in Tasmania"
+          }
+        ],
+        "event_date": "2026-01-12",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS"
+          }
+        ],
+        "intervals": {
+          "quote": "The high prices occurred for two 5-minute intervals only in energy and FCAS",
+          "text": "4.55 pm and 5 pm"
+        },
+        "network_outages": {
+          "quote": "At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 12 January, the energy price in Tasmania reached $6,835 per MWh at 5 pm",
+          "value": 6835
+        },
+        "rebid_set_price": {
+          "quote": "Removal of low -priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A)",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "South Australia experienced exceptionally high temperatures on 26 and 27 January with some sites across the region breaking historical record temperatures for January. On 26 January, parts of Adelaide recorded temperatures in excess of 44°C. During the evening peak, electricity demand in South Australia exceeded 3,100 MW"
+          },
+          {
+            "label": "wind_output",
+            "quote": "At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "During the high prices on 26 January, batteries in the region provided substantial generation (Figure 8). However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+          },
+          {
+            "id": "Murraylink runback scheme constraint",
+            "quote": "Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm. This was due to a constraint managing an outage of the New South Wales Murraylink runback scheme"
+          },
+          {
+            "id": "Heywood constraint",
+            "quote": "Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint"
+          }
+        ],
+        "event_date": "2026-01-26",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm"
+          },
+          {
+            "name": "Heywood",
+            "quote": "Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint"
+          }
+        ],
+        "intervals": {
+          "quote": "On 26 January, high prices occurred during the evening peak. High prices were forecast, and an actual lack of reserves (level 1) was declared by AEMO",
+          "text": "6.30 pm - 10.30 pm"
+        },
+        "network_outages": {
+          "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh",
+          "value": 20158
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures remained elevated throughout the evening of 26 January and continued into the morning of 27 January. Houses could not cool down overnight during the long run of heat and air conditioner usage remained high. At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW"
+          },
+          {
+            "label": "wind_output",
+            "quote": "On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+          },
+          {
+            "id": "Murraylink counter-price constraint",
+            "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line"
+          },
+          {
+            "id": "Heywood constraint",
+            "quote": "Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint"
+          }
+        ],
+        "event_date": "2026-01-27",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line"
+          },
+          {
+            "name": "Heywood",
+            "quote": "Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint"
+          }
+        ],
+        "intervals": {
+          "quote": "On 27 January, high prices occurred during the morning peak due to continuing conditions from the previous day",
+          "text": "6.30 am and 8.30 am"
+        },
+        "network_outages": {
+          "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh",
+          "value": 5388
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "Basslink has a control system which prevents it from transferring FCAS services when flows are within the \"No-Go\" zone range (i.e. when flows are between approximately -50 MW and +50 MW). If Basslink is unable to transfer FCAS, Tasmania ha s to provide its own FCAS locally"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Similar to 12 January (section 1.1.7), some units were unable to be enabled in FCAS due to the energy and FCAS trade-off"
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "Like 12 January ( section 1.1.6), t o restore supply and demand balance, the load unit , ASTHYD1, was constrained under the AUFLS scheme during the high prices. This limited the low-priced effective capacity that was available for R6 sec services. Around 65 MW of low- priced capacity offered was constrained and unable to make it to market, contributing to the high prices"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by removal of low -priced capacity in R6 sec services for technical reasons contributed to the high prices at 1 pm and 1.30 pm on 17 February (Appendix D)"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Basslink No-Go zone constraint",
+            "quote": "Basslink has a control system which prevents it from transferring FCAS services when flows are within the \"No-Go\" zone range"
+          },
+          {
+            "id": "contingency R6 sec constraint",
+            "quote": "A contingency R6 sec constraint was in place to cover the loss of the largest generator in the region"
+          },
+          {
+            "id": "AUFLS scheme",
+            "quote": "Like 12 January ( section 1.1.6), t o restore supply and demand balance, the load unit , ASTHYD1, was constrained under the AUFLS scheme during the high prices"
+          }
+        ],
+        "event_date": "2026-02-17",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Basslink has a control system which prevents it from transferring FCAS services when flows are within the \"No-Go\" zone range"
+          }
+        ],
+        "intervals": {
+          "quote": "The highest priced day in February occurred on 17 February in Tasmania with high prices in the local R6 sec service at 1 pm, 1.30 pm and 5.30 pm",
+          "text": "1 pm, 1.30 pm and 5.30 pm"
+        },
+        "network_outages": {
+          "quote": "Though there was sufficient capacity offered below $5,000 per MW, the capacity effectively available was limited to around 5 5% due to the constraints, during the high-priced intervals",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $6,764 per MW at 1 pm to $6,843 per MW at 5.30 pm",
+          "value": 6843
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by removal of low -priced capacity in R6 sec services for technical reasons contributed to the high prices at 1 pm and 1.30 pm on 17 February (Appendix D)",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "As mentioned earlier, when Basslink is in the \"No-Go\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Similar to 17 February (section 1.3), Hydro Tasmania's Gordon hydro generator had 144 MW out of the total 576 MW of capacity registered for R6 sec services in Tasmania. At 4.40 pm, it was t he largest generator in the region and was generating at (or near) its capacity in the energy market to meet Tasmanian demand. However, this meant that Gordon could not be enabled in R6 sec service"
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "Similar to 12 January and 17 February (sections 1.1.6 and 1.3.3), t o restore supply and demand balance, the load unit, ASTHYD1, was constrained under the AUFLS scheme, further limiting the low-priced effective capacity that was available for the R6 sec service during the high prices. Around 45 MW of low-priced capacity offered was constrained and unable to make it to market, contributing to the high prices"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Basslink No-Go zone constraint",
+            "quote": "As mentioned earlier, when Basslink is in the \"No-Go\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)"
+          },
+          {
+            "id": "AUFLS scheme",
+            "quote": "Similar to 12 January and 17 February (sections 1.1.6 and 1.3.3), t o restore supply and demand balance, the load unit, ASTHYD1, was constrained under the AUFLS scheme"
+          }
+        ],
+        "event_date": "2026-03-03",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "As mentioned earlier, when Basslink is in the \"No-Go\" zone, it is unable to transfer FCAS and Tasmania has to provide its own local FCAS (section 1.3.1)"
+          }
+        ],
+        "intervals": {
+          "quote": "The local R6 sec 30- minute price in Tasmania was $3,382 per MW at 5 pm. During the 5 pm 30-minute period, there was one 5 -minute price of $20,290 per MW at 4.40 pm",
+          "text": "5 pm (4.40 pm 5-minute interval)"
+        },
+        "network_outages": {
+          "quote": "There was enough low -priced capacity offered to meet demand (Figure 10), however the constraints meant that some low-priced capacity was unable to make it to market",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "The local R6 sec 30- minute price in Tasmania was $3,382 per MW at 5 pm",
+          "value": 3382
+        },
+        "rebid_set_price": {
+          "quote": "There were no significant rebids in R6 sec service for this event",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-05/Significant%20electricity%20prices%20for%20January%20to%20March%202026.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3936,
+    "per_attempt": [
+      {
+        "completion_tokens": 3936,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 17090,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 21026
+      }
+    ],
+    "prompt_tokens": 17090,
+    "reasoning_tokens": 0,
+    "total_tokens": 21026
+  }
+}

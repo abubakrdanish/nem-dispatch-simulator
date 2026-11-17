@@ -1,0 +1,1412 @@
+{
+ "judge": "Claude (Opus 5.5), reading each quote against its document and event, after the blind hand-coding",
+ "nemotron": {
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia, materially reduced its capacity."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "While there is in the order of 1600 MW of wind capacity installed in South Australia, on the day it was generating around 240 MW, as forecast."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start-up issues which decreased the available capacity in South Australia."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The return to service of 240 MW at Pelican Point, which has commenced at around 3 pm, was delayed and only 60 MW was available."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Flows into South Australia on the Murraylink interconnector during the 6.30 pm trading interval were close to the 190 MW limit in the first three dispatch intervals and at that limit during the high price period."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|ramp_rates": {
+   "supported": false,
+   "why": "Port Stanvac's start-up profile is cited as suppressing the price, not raising it",
+   "quote": "Port Stanvac's FSIP specifies that they can start-up and reach their minimum load within five minutes, then once they have reached their minimum load, they must remain at that level for 15 minutes before being able to be targeted down."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The figure shows that, with such a tight supply and demand curve, small increases in 5-minute demand coincided with increases in price."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "These limitations prevented other cheaper sources of electricity from competing with generation in Queensland and remaining local demand had to be met by local generation."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|rebids": {
+   "supported": false,
+   "why": "AER says rebidding to high prices did not contribute; quote says generators did not rebid down",
+   "quote": "For the 5.30 pm trading interval generators did not rebid their capacity to lower prices and the resulting price was close to the high forecast price."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|unscheduled_plant_outage": {
+   "supported": false,
+   "why": "quote is a rebid-table row (price lowered), not a plant outage",
+   "quote": "7.20 pm 7.30 pm CS Energy Gladstone 160 14 000 -1000 1917A DISPATCH PRICE LOWER THAN 30MIN FORECAST-RRP $13.80 P30 $13399.95-SL"
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf|2017-02-09|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf|2017-02-09|('SA1',)|administered_pricing_or_intervention": {
+   "supported": true,
+   "why": "",
+   "quote": "The high prices during the 5, 5.30 and 6.30 pm intervals resulted from these arrangements."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf|2017-02-09|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The day was characterised by high temperatures in both states, reaching a maximum of 38 degrees in Sydney and 33 degrees in Brisbane. Accordingly, as expected, demand for electricity was high in both states - prices were also expected to be high."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "At around 4.20 pm Energy Australia's Tallawarra power station unexpectedly stopped generating due to technical problems (or \"tripped\"), resulting in the loss of 410 MW of low-priced supply."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|scheduled_plant_outage": {
+   "supported": false,
+   "why": "a condenser back-pressure limit is a technical, unplanned limit",
+   "quote": "Vales Point 60 Condenser back pressure limited"
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "actual imports were at the import limit at 4 pm, but exceeded the import limit for the 4.30 and 5 pm trading intervals"
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|constraint_violation": {
+   "supported": true,
+   "why": "",
+   "quote": "With actual imports exceeding the import limit, constraints on the interconnector, designed to manage system security, \"violated\"."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|administered_pricing_or_intervention": {
+   "supported": true,
+   "why": "",
+   "quote": "In accordance with National Electricity Rule 3.9.2(e), when load shedding occurs AEMO must set the dispatch price in that state at the market price cap (currently $14 000/MWh)."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The temperature in Brisbane reached 37 degrees, as forecast by the Bureau of Meteorology. These hot conditions resulted in high forecast and actual demand for electricity."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Network outages in northern New South Wales contributed to the high prices."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "As the import limit was negative, flows (indicated by the red line) were forced from Queensland into New South Wales."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|scheduled_plant_outage": {
+   "supported": false,
+   "why": "the planned outage quoted is a transmission line, not plant",
+   "quote": "A planned outage on the Coffs Harbour to Koolkhan 132kV line was still in effect from the previous day"
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|unscheduled_plant_outage": {
+   "supported": false,
+   "why": "the unplanned outage quoted is a transmission line, not plant",
+   "quote": "An unplanned network outage occurred at 7.25 am on the Liddell to Muswellbrook 330 kV line in New South Wales."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria"
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "wind generation dropped to low levels during the high price period (grey shaded area)"
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia"
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|constraint_violation": {
+   "supported": false,
+   "why": "constraints limiting generation are not a violation",
+   "quote": "network or plant constraints limited the ability for cheaper priced generators to be dispatched, requiring higher priced generation to be dispatched to meet demand for electricity"
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Combined demand for electricity reached a maximum of 12 203 MW at 6 pm. Demand for electricity across the combined region was up to 320 MW higher than forecast."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "several units in Victoria were operating at reduced capability, all due to technical reasons."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Total semi-scheduled wind generation across Victoria and South Australia was between 39 MW and 331 MW lower than forecast four hours ahead."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|administered_pricing_or_intervention": {
+   "supported": true,
+   "why": "",
+   "quote": "AEMO activated the Reliability Emergency Reserve Trader (RERT) from 4.05 pm to 10.30 pm with contracted reserves of 155 MW in Victoria and 210 MW in SA. As a result, AEMO invoked special intervention pricing arrangements, called 'what-if' pricing, for the trading intervals from 4.30 pm to 10.30 pm."
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply. For the same reason, rooftop PV generation was also declining, so that meant some customers' supply of electricity generation shifted from rooftop PV to the grid, leading demand to increase further."
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|scheduled_plant_outage": {
+   "supported": false,
+   "why": "outages 'due to technical issues' are unplanned",
+   "quote": "Over 1,800 MW of baseload generation was offline on both days due to technical issues. These outages reduced the supply of generation in the region."
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices. A system normal constraint bound, limiting imports from NSW across both interconnectors. The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW. Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf|2022-08-26|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage on the Heywood interconnector meant imports were limited to 50 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf|2022-08-26|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Output from renewable wind generation was around 100 MW"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf|2022-08-26|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Cold temperatures drove high demand (~1,800 MW)"
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|constraint_violation": {
+   "supported": false,
+   "why": "constraints managing an outage are not a violation",
+   "quote": "cheaper priced generation was limited by the constraints used to manage the Heywood interconnector outage and a large increase in FCAS requirements."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "When there is an increase in local FCAS requirements, there will be a trade-off between the amount of energy and FCAS that some generation units can provide."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Within the 2 pm trading interval a small number of generation units experienced technical issues with their plant and adjusted the amount of generation available to the market."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "in Victoria , demand reached 9507 MW for the 5 pm trading interval which was the highest demand recorded for the 2019/20 summer."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "For the 3 pm and 3.3 0 pm trading intervals around 285 MW of wind generation was dispatched , 35 0 MW lower than earlier forecast."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "AGL's Liddell unit 1 (450 MW) had been offline since the previous day due to a tube leak while EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "These outages saw a combined 330 MW of generation capacity unavailable during the 3 pm and 3.30 pm trading intervals."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "the loss of cheaply priced imports from South Australia resulted in higher priced local generation from Victoria and New South Wales being dispatched to meet demand."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|rebids": {
+   "supported": false,
+   "why": "AER says rebidding did not contribute; quote is about residual high-priced capacity",
+   "quote": "at certain tim es across the afternoon high priced capacity above $5000/MWh was still required to meet demand and resulted in the spot price exceeding $5000/MWh a number of times."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|administered_pricing_or_intervention": {
+   "supported": false,
+   "why": "RERT activation quoted as a response, not as contributing to the price",
+   "quote": "AEMO activated the RERT contracts for both regions. RERT was activated from 3. 30 pm to 9.30 pm with contracted reserves of 185 MW in Victoria and 134 MW in New South Wales."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast in all relevant regions for both the morning and evening high price periods."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "At 5.00 pm, EnergyAustralia's Loy Yang A unit 4 went offline due to an unplanned unit outage removing 560 MW of available baseload capacity."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|scheduled_plant_outage": {
+   "supported": false,
+   "why": "the quoted Yallourn outage is unplanned",
+   "quote": "EnergyAustralia's Yallourn unit 1 (which has a 360 MW baseload capacity ) had been offline since 2 August due to an unplanned outage."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix E)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast, averaging 200 MW out of 2,763 MW installed capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-10-23|('SA1',)|network_outage": {
+   "supported": false,
+   "why": "quote is a system-security constraint, not an outage (the event's outage is elsewhere in the text)",
+   "quote": "To manage system security in the Victorian region, AEMO invoked a constraint which forced flows on Heywood from South Australia into Victoria while South Australia had high prices from 7.15 am."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-10-23|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast, averaging 104 MW out of 2,763 MW of installed capacity during the high prices. This equates to 4% of installed wind capacity in South Australia."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-10-23|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Demand during the high price periods was around 11,197 MW driven by mid-30 temperatures during a week of heatwave conditions in NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|network_outage": {
+   "supported": false,
+   "why": "quote is system normal constraints, which the AER says are not outages",
+   "quote": "Flows into NSW were limited from Queensland and Victoria due to system normal constraints invoked to prevent overloading and to maintain system security."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned baseload outages meant that 2,700 MW of generally low-priced capacity was unavailable in NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "In addition, three of Origin Energy's Uranquinty Power Station's gas units tripped around 4.40 pm (generating around 450 MW at the time)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind generation was around 253 MW out of around 2,762 MW at the time of high prices, which equates to around 9% of installed capacity in NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "125 MW of low-priced capacity at Snowy Hydro's Colongra Power Station could not start up fast enough to prevent high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical reasons contributed to the high price (Appendix D)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Demand at 2.30 pm was 2,101 MW compared to 1,530 MW forecast four hours prior. Demand was also higher than average with the 30-minute average for 2.30 pm for the quarter of 540 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output averaged 179 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 6% of installed capacity in South Australia."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Average solar output was 349 MW out of around 600 MW of maximum capacity due to cloudy conditions."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Up to 81 MW of low-priced capacity at Origin Energy's Osborne could not ramp up quickly enough to avoid high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix H)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Average demand during the high price periods was around 10,950 MW, compared to the quarterly average demand for this time of day of around 8,550 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices, wind output averaged 154 MW, which equates to only 7% of installed capacity in Queensland."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "One of six 280 MW units at Gladstone Power Station was on an unplanned outage since the morning of 20 January, and one 443 MW unit at Tarong North Power Station was on a planned outage since 19 January."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "One of six 280 MW units at Gladstone Power Station was on an unplanned outage since the morning of 20 January, and one 443 MW unit at Tarong North Power Station was on a planned outage since 19 January."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "Neoen shifted 192 MW of capacity from low to high prices at its Western Downs battery due to changes in its state of charge, setting the price from 6.05 pm to 6.15 pm and 7.25 pm to 7.30 pm."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|unscheduled_plant_outage": {
+   "supported": false,
+   "why": "Directlink cables are a network element, not plant",
+   "quote": "An unplanned outage of two of the three Directlink cables since 30 January limited flows into NSW on the Terranora interconnector to 100 MW out of its 210 MW nominal capacity during both high-priced dispatch intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "a system normal constraint managing transient stability on QNI for a trip of either lines from Armidale to Dumaresq or to Sapphire set the import limit on the interconnector during high-priced dispatch intervals, limiting flows into NSW to around 920 MW, compared to its nominal capacity of 1,300 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|constraint_violation": {
+   "supported": false,
+   "why": "backing off generation that sets the price is not a violation",
+   "quote": "One of these units being backed off set the price at the market price cap"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned outages of the Collector to Marulan and Canberra to Lower Tumut lines curtailed between 307 MW and 378 MW of low-priced capacity in southern NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the 30-minute period of high prices, combined NSW and Queensland wind generation was low, averaging 551 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage on the Collector to Yass line limited between 340 MW and 750 MW of low-priced capacity in southern NSW, contributing to the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high-priced periods, average wind generation was around 200 MW. During the same hour in the week prior, the average wind generation was around 900 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Origin Energy's Eraring unit 3 and EnergyAustralia's Mount Piper unit 1 were on planned outages."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "AGL's Bayswater unit 3 was on an unplanned outage due to unexpected plant limits that started on 2 May."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Snowy Hydro's Colongra Power Station could not start up quickly enough, which meant up to 125 MW of low-priced capacity could not make it to market, impacting two high-priced dispatch intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "a planned outage of Lower Tumut to Canberra line curtailed between 777 MW and 923 MW of low-priced capacity in southern NSW from making it to market"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind generation during the high-price period was at 544 MW. During the same period in the preceding week, average wind output was 1,175 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Snowy Hydro's Colongra Power Station could not start up quickly enough, which meant up to 125 MW of low-priced capacity could not make it to market, impacting all the high-priced intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "EnergyAustralia's Mount Piper unit 1 was on a planned outage since 1 April and attempted to return to service on 28 May."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "On this day, for two of the three high-priced 5-minute intervals, an offer of around $10,000 per MW in lower FCAS at 4.55 pm and 5 pm contributed to setting the energy price in NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices, wind generation across the NEM was around 1,400 MW. During the week preceding, at the same time of day, average wind generation was around 4,730 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Around 100 MW of low-priced capacity, most of which was at EnergyAustralia's Mount Piper Power Station, could not ramp up fast enough to prevent high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "Across all regions, up to 71 MW was unable to be dispatched due to technical parameters of generating units that provide energy and FCAS at the same time."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "As a result of calm conditions, wind output across the NEM was low. During the high-priced periods, total wind generation was around 900 MW. During the week prior, at the same time of day, wind generation was 4,574 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Between 41 MW and 95 MW of capacity at Vales Point was unable to be dispatched as it was being limited by its ramp-up rate."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "Across all regions, up to 77 MW of capacity was unable to be dispatched due to technical parameters of generating units that provide energy and FCAS at the same time."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for both technical and commercial reasons contributed to the high prices during intervals where amounts of high-price capacity required was low."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Due to calm conditions, wind output across the NEM was low at the time of the high-priced periods. The total wind generation was around 260 MW, compared to the average wind generation of 4,620 MW during the same time of day in the preceding week."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "While some of the rebidding from high to low prices, resulted in a smaller number of high-price periods that were originally forecast and actual prices being lower than forecast, it was not enough to alleviate all high prices. Capacity was rebid from low to high prices for both technical and commercial reasons and withdrawals of low-priced capacity for technical reasons which contributed to some of the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW. In addition, the Murraylink interconnector was on a planned outage."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the evening of high prices, average 30-minute wind generation in the region was 41 MW. During the same evening period across the week prior, the average wind generation was around 420 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices demand was above 12,000 MW which was 1,237 MW more than the previous hour and 1,440 MW higher than forecast one hour prior."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Rooftop solar generation dropped from over 4,390 MW at 1 pm to 2,985 MW at 2 pm when the high prices occurred."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "If the relevant units' ramp up rates were near their maximum registered rates or were more aligned to the unit's technical ability, the high prices on 19 December would likely not have occurred."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|unscheduled_plant_outage": {
+   "supported": false,
+   "why": "Basslink is an interconnector, not plant",
+   "quote": "The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|scheduled_plant_outage": {
+   "supported": false,
+   "why": "units slow to start are a start-up constraint, not a planned outage",
+   "quote": "Hydro Tasmania's Bell Bay Three Power Station unit 1 and 2 and Tamar Valley GT Open Cycle Gas Turbine (OCGT) were unable to start up quickly enough to meet demand and provide low-priced capacity that could have helped avoid the high prices"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "The market operator's dispatch engine simultaneously optimises the FCAS and energy markets, for every dispatch interval, to determine the least cost outcome. This can lead to a trade-off between the FCAS and energy markets"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|constraint_violation": {
+   "supported": false,
+   "why": "a constraint setting the price is not a violation",
+   "quote": "The 5-minute high energy price at 4.55 pm was set by a constraint in place to manage the balance between supply and demand in Tasmania"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|battery_state_of_charge": {
+   "supported": false,
+   "why": "ASTHYD1 is a load unit restricted under AUFLS, not a battery",
+   "quote": "To rebalance supply and demand, Hydro Tasmania's load unit , ASTHYD1, was restricted during the high -priced intervals under the AUFLS scheme. This constraint limited the unit's low-priced capacity that was available for the R6 sec service. Around 13 MW of capacity offered for each interval was unable to be dispatched and contributed to the high prices"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|rebids": {
+   "supported": false,
+   "why": "rebids in FCAS raise services; AER's driver table marks rebidding as not a driver",
+   "quote": "Removal of low -priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A)"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|network_outage": {
+   "supported": false,
+   "why": "quote is system normal constraints, not an outage",
+   "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices on 26 January, batteries in the region provided substantial generation (Figure 8). However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Temperatures remained elevated throughout the evening of 26 January and continued into the morning of 27 January. Houses could not cool down overnight during the long run of heat and air conditioner usage remained high. At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|network_outage": {
+   "supported": false,
+   "why": "quote is system normal constraints, not an outage",
+   "quote": "Interconnector f lows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas"
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C)"
+  }
+ },
+ "nemotron-reasoning": {
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "While there is in the order of 1600 MW of wind capacity installed in South Australia, on the day it was generating around 240 MW, as forecast.",
+   "reused": true
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start-up issues which decreased the available capacity in South Australia.",
+   "reused": true
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start-up issues which decreased the available capacity in South Australia."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Flows into South Australia on the Murraylink interconnector during the 6.30 pm trading interval were close to the 190 MW limit in the first three dispatch intervals and at that limit during the high price period.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "On the day, the maximum temperature in Brisbane reached 33 degrees, resulting in high demand for electricity."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf|2017-02-02|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The ability to transfer electricity from neighbouring regions of the NEM was significantly constrained due to limitations in the network."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf|2017-02-09|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "On 9 February the temperature in Adelaide reached a maximum of 41 degrees as had been forecast by the Bureau of Meteorology consistently for two days. This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf|2017-02-09|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Accordingly, as expected, demand for electricity was high in both states"
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf|2017-02-10|('NSW1', 'QLD1')|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "interconnectors operating beyond their limits led to high prices and intervention by the market operator."
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The temperature in Brisbane reached 37 degrees, as forecast by the Bureau of Meteorology. These hot conditions resulted in high forecast and actual demand for electricity.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Network outages in northern New South Wales contributed to the high prices.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf|2017-02-11|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "As the import limit was negative, flows (indicated by the red line) were forced from Queensland into New South Wales.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf|2018-07-09|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Demand for electricity across the combined region was up to 320 MW higher than forecast."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Total semi-scheduled wind generation across Victoria and South Australia was between 39 MW and 331 MW lower than forecast four hours ahead.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "AGL's Loy Yang A unit 3 experienced a tube leak removing a further 530 MW of potential available capacity in Victoria from the afternoon of 22 January to 26 January."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|administered_pricing_or_intervention": {
+   "supported": true,
+   "why": "",
+   "quote": "As a result, special pricing arrangements were put in place setting the spot price for electricity in Victoria at or near the market price cap for several trading intervals."
+  },
+  "data/raw/aer/docs/Prices_above_$5000MWh_-_24_January_2019_(Vic_and_SA)_0.pdf|2019-01-24|('SA1', 'VIC1')|constraint_violation": {
+   "supported": true,
+   "why": "",
+   "quote": "4.40 PM $14 500.00 Generation deficit constraint $2 175 000.00 1.00 $2 175 000.00"
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply. For the same reason, rooftop PV generation was also declining, so that meant some customers' supply of electricity generation shifted from rooftop PV to the grid, leading demand to increase further.",
+   "reused": true
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|scheduled_plant_outage": {
+   "supported": false,
+   "why": "outages 'due to technical issues' are unplanned",
+   "quote": "Over 1,800 MW of baseload generation was offline on both days due to technical issues. These outages reduced the supply of generation in the region.",
+   "reused": true
+  },
+  "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf|2022-01-31|('QLD1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices. A system normal constraint bound, limiting imports from NSW across both interconnectors. The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW. Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf|2022-08-26|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Cold temperatures drove high demand (~1,800 MW)",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf|2022-08-26|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "On 26 August, average output during the high price intervals was around 100 MW."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|demand": {
+   "supported": false,
+   "why": "'demand was up slightly' is not presented as contributing; the AER attributes SA to the constraints and FCAS",
+   "quote": "Demand was up slightly on earlier forecasts and generator availability slightly lower."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed. Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|interconnector_limit": {
+   "supported": false,
+   "why": "the AER says lost Heywood imports were more than offset by Murraylink, so imports were not the limit",
+   "quote": "South Australia being electrically isolated from the rest of the market."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('SA1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "The trade-off between energy and FCAS meant that not all cheaply priced generation in the region could be used to meet the demand for energy. This contributed to the amount of energy constrained as shown in Figure 2."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "High temperatures in Victoria and New South Wales led to high demand in both regions."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "In Victoria there is around 1700 MW of installed semi-scheduled wind generation. For the 3 pm and 3.30 pm trading intervals around 285 MW of wind generation was dispatched, 350 MW lower than earlier forecast."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The outage resulted in no imports being available to Victoria from South Australia across Heywood during the high price periods."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Victoria was not able to import any generation from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior."
+  },
+  "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf|2020-01-31|('NSW1', 'VIC1')|administered_pricing_or_intervention": {
+   "supported": false,
+   "why": "RERT activation quoted as a response, not as contributing to the price",
+   "quote": "AEMO invoked the Reliability and Emergency Reserve Trader (RERT) mechanism to ensure there was enough supply to meet demand."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "South Australia subsequently had a high price period at 7 pm when demand increased above its low-priced capacity."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast in all relevant regions for both the morning and evening high price periods. During the morning high price periods, average wind output for all regions (including Queensland) was 954 MW out of around 13,689 MW of installed capacity. This equates to around 7% of installed capacity in the NEM. During the evening high price periods, average wind output for all regions (including South Australia and Tasmania) was 865 MW out of around 13,689 MW of installed capacity. This equates to around 6% of installed capacity in the NEM."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix E).",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast, averaging 200 MW out of 2,763 MW installed capacity during the high prices. This equates to around 7% of installed capacity in South Australia."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices. Flows over the Murraylink interconnector was also limited to 22 MW due to planned network outage on the Kerang to Wemen line.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G).",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-10-23|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast, averaging 104 MW out of 2,763 MW of installed capacity during the high prices. This equates to 4% of installed wind capacity in South Australia.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-10-23|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Demand during the high price periods was around 11,197 MW driven by mid-30 temperatures during a week of heatwave conditions in NSW. The maximum daily demand peaked at 11,301 MW and was the seventh highest for the quarter."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned baseload outages meant that 2,700 MW of generally low-priced capacity was unavailable in NSW. This capacity was spread between Origin Energy's Eraring Power Station, AGL Energy's Bayswater Power Station and Delta Electricity's Vales Point Power Station."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "In addition, three of Origin Energy's Uranquinty Power Station's gas units tripped around 4.40 pm (generating around 450 MW at the time). This caused AEMO to declare a reserve shortfall for NSW from 4.30 pm until 8.15 pm."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind generation was around 253 MW out of around 2,762 MW at the time of high prices, which equates to around 9% of installed capacity in NSW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "125 MW of low-priced capacity at Snowy Hydro's Colongra Power Station could not start up fast enough to prevent high prices. For one high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-11-26|('NSW1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical reasons contributed to the high price (Appendix D). Over three rebids from 4.40 pm, Origin Energy removed 534 MW of capacity from the price floor (-$1,000 per MWh) at Uranquinty due to its gas turbine tripping during the high price periods."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Demand at 2.30 pm was 2,101 MW compared to 1,530 MW forecast four hours prior. Demand was also higher than average with the 30-minute average for 2.30 pm for the quarter of 540 MW. While demand was significantly impacted by a fall in rooftop solar generation, high temperatures in Adelaide of around 37°C meant that demand on the day was already high."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output averaged 179 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 6% of installed capacity in South Australia.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Average solar output was 349 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low. Rooftop solar output was 836 MW during the high prices which was 881 MW lower than the daily peak a few hours earlier. A drop in rooftop top solar means an increase in demand to be met by market generators (Figure 16)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Up to 81 MW of low-priced capacity at Origin Energy's Osborne could not ramp up quickly enough to avoid high prices. For all high-priced intervals, the amount of low-priced capacity that could not be dispatched was more than the high-priced capacity that was needed to meet demand. Up to 19 MW of low-priced capacity at Origin Energy's Quarantine could not start fast enough to avoid high prices. For only 1 high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity that was needed to meet demand."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf|2024-12-05|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix H). At 2.04 pm, effective from 2.10 pm, Engie shifted 25 MW of capacity at Pelican Point from $299 per MWh to $12,500 per MWh due to fuel management and contributed to setting price for two of the three high-priced intervals. For all high-priced intervals, AGL Energy rebid 72 MW of capacity to high prices across Torrens Island and Barker Inlet. This was mainly a result of AGL shifting 120 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh at 2.08 pm due to a change in forecast prices. There were other rebids where they shifted capacity to both low and high prices for changes in forecast prices. At 2.13 pm, effective from 2.20 pm, Neoen shifted 25 MW of capacity at Hornsdale Power Reserve from $3,911 per MWh to $9,932 per MWh due to a change in forecast prices and contributed to setting price for one of the three high-priced intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "Due to continuing high temperatures, demand was very high."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices, wind output averaged 154 MW, which equates to only 7% of installed capacity in Queensland.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Terranora was constrained by an ongoing planned outage of the Lismore SVC in NSW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "one 443 MW unit at Tarong North Power Station was on a planned outage since 19 January."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-01-22|('QLD1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "Neoen shifted 192 MW of capacity from low to high prices at its Western Downs battery due to changes in its state of charge, setting the price from 6.05 pm to 6.15 pm and 7.25 pm to 7.30 pm.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "An unplanned outage of two of the three Directlink cables since 30 January limited flows into NSW on the Terranora interconnector to 100 MW out of its 210 MW nominal capacity during both high-priced dispatch intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Two coal units were unavailable at the time of the high prices. One unit at Baywater Power Station and one unit at Eraring Power Station were on unplanned outages since 21 January and 3 February, respectively."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2025_1.pdf|2025-02-05|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "a system normal constraint managing transient stability on QNI for a trip of either lines from Armidale to Dumaresq or to Sapphire set the import limit on the interconnector during high-priced dispatch intervals, limiting flows into NSW to around 920 MW, compared to its nominal capacity of 1,300 MW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned outages of the Collector to Marulan and Canberra to Lower Tumut lines curtailed between 307 MW and 378 MW of low-priced capacity in southern NSW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the 30-minute period of high prices, combined NSW and Queensland wind generation was low, averaging 551 MW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Three of these were planned, the other five were unplanned as follows:"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Three of these were planned, the other five were unplanned as follows:"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-04-09|('NSW1', 'QLD1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical reasons contributed to the high prices (Appendix A)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage on the Collector to Yass line limited between 340 MW and 750 MW of low-priced capacity in southern NSW, contributing to the high prices.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high-priced periods, average wind generation was around 200 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Origin Energy's Eraring unit 3 and EnergyAustralia's Mount Piper unit 1 were on planned outages.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "AGL's Bayswater unit 3 was on an unplanned outage due to unexpected plant limits that started on 2 May.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Snowy Hydro's Colongra Power Station could not start up quickly enough, which meant up to 125 MW of low-priced capacity could not make it to market, impacting two high-priced dispatch intervals.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical reasons contributed to high prices (Appendix B)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-13|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "flows over QNI into NSW were limited to between 350 MW and 385 MW out of its 1,300 MW nominal capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "a planned outage of Lower Tumut to Canberra line curtailed between 777 MW and 923 MW of low-priced capacity in southern NSW from making it to market."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind generation during the high-price period was at 544 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Snowy Hydro's Colongra Power Station could not start up quickly enough, which meant up to 125 MW of low-priced capacity could not make it to market, impacting all the high-priced intervals.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "EnergyAustralia's Mount Piper unit 1 was on a planned outage since 1 April and attempted to return to service on 28 May.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "On this day, for two of the three high-priced 5-minute intervals, an offer of around $10,000 per MW in lower FCAS at 4.55 pm and 5 pm contributed to setting the energy price in NSW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical and commercial reasons such as an increase in forecast demand contributed to the high price (Appendix D)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-05-28|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage on the Liddell to Tamworth line in northern NSW limited flows on the QNI to around 850 MW, and to 25 MW on Terranora, compared to their nominal capacity of 1,300 MW and 210 MW, respectively."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The start of winter saw temperatures drop, increasing heating requirements and causing the highest average demand during the evening peak (5 pm to 8.30 pm) for June since 2021 (29,836 MW)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high prices, wind generation across the NEM was around 1,400 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A combination of planned and unplanned baseload outages across seven units meant that there was around 3,100 MW of generally low-priced capacity unavailable."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Around 100 MW of low-priced capacity, most of which was at EnergyAustralia's Mount Piper Power Station, could not ramp up fast enough to prevent high prices.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-11|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix E)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The start of winter saw temperatures drop, increasing heating requirements and causing the highest average demand during the evening peak (5 pm to 8.30 pm) for June since 2021 (29,836 MW)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "During the high-priced periods, total wind generation was around 900 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A combination of planned and unplanned baseload outages meant that there was around 3,100 MW of generally low-priced capacity unavailable (Table 3)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Between 41 MW and 95 MW of capacity at Vales Point was unable to be dispatched as it was being limited by its ramp-up rate.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-12|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for both technical and commercial reasons contributed to the high prices during intervals where amounts of high-price capacity required was low.",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The start of winter saw temperatures drop, increasing heating requirements and causing the highest average demand during the evening peak (5 pm to 8.30 pm) for June since 2021 (29,836 MW)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "The total wind generation was around 260 MW, compared to the average wind generation of 4,620 MW during the same time of day in the preceding week."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "Neoen in South Australia rebid its Blyth Battery capacity from both low to high and high to low prices due to a change in its state of charge, and effectively shifted a net capacity of 100 MW from low to high prices impacting the high price at 5.30pm."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_April_to_June_2025_0.pdf|2025-06-26|('NSW1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Capacity was rebid from low to high prices for both technical and commercial reasons and withdrawals of low-priced capacity for technical reasons which contributed to some of the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was low due to calm conditions in South Australia."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).",
+   "reused": true
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The combined outages on the two interconnectors limited South Australia's ability to import low-priced capacity by around 650 MW, while only up to 71 MW of high-priced capacity was needed to meet demand in the energy market."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf|2025-07-02|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "SA Water withdrew between 4 MW and 8 MW of low-priced capacity across multiple stations due to forecast state of charge, contributing to high prices at 8.15 pm, 9.30 pm, and 10.55 pm."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-11-26|('NSW1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The increase in demand for both days was mainly due to the sudden reduction in rooftop solar generation due to cloud cover from storms"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-11-26|('NSW1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "There was a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-11-26|('NSW1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The Avon to Marulan line outage started on 25 November and ended on 6 December and contributed to the high price on 26 November."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-11-26|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Generation units at Delta Electricity's Vales Point, Origin Energy's Eraring, AGL Energy's Bayswater, EnergyAustralia's Mt Piper and Tallawarra, and Snowy Hydro's Upper Tumut stations were ramp up rate limited."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-11-26|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "a system normal constraint, to avoid overloading of the Uralla to Tamworth line in northern NSW, limited imports into NSW on the QNI to around 780 MW and also limited Terranora to around 65 MW."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "The increase in demand on this day was mainly due to the sudden reduction in rooftop solar generation due to cloud cover and, to a lesser extent, from storms"
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|solar_output": {
+   "supported": true,
+   "why": "",
+   "quote": "there was also a significant reduction in low-priced renewable generation from rooftop solar and grid scale solar during the high price intervals on 19 December."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "AGL Energy's Bayswater unit 1 and Origin Energy's Eraring unit 2 were already running but were unable to ramp up quickly enough to meet the sudden increase in demand to mitigate the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2025.pdf|2025-12-19|('NSW1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "A system normal constraint used to avoid overloading the Bannaby to Sydney West line limited flows into NSW on the QNI to around 560 MW, compared to its nominal capacity of 1,400 MW.",
+   "reused": true
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The high prices occurred due to the Basslink interconnector (the only interconnector between Victoria and Tasmania) suddenly going on an unplanned outage."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|ramp_rates": {
+   "supported": true,
+   "why": "",
+   "quote": "Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "This is what occurred for the 5-minute high energy price at 5 pm, when the price was set by an offer of around $20,000 per MW in FCAS raise services."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-12|('TAS1',)|rebids": {
+   "supported": false,
+   "why": "rebids in FCAS raise services; AER's driver table marks rebidding as not a driver",
+   "quote": "These rebids contributed to the high prices at 4.55 pm and 5 pm."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "During the evening peak, electricity demand in South Australia exceeded 3,100 MW, which is within 300 MW of the record for South Australia and significantly higher than the previous week's average of around 1,900 MW during the same evening period."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm. This was due to a constraint managing an outage of the New South Wales Murraylink runback scheme."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "This contributed to the high prices at 6.10 pm, 6.15 pm, 6.30 pm and 6.35 pm."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge. State of charge refers to the amount of energy remaining in a battery, which limits how much electricity it can supply at any given time."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-26|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Interconnector flows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW. This was almost double the average demand of 1,300 MW recorded during the same morning period the previous week."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "This contributed to the high prices at 6.25 am, 8.15 am and 8.20 am."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas."
+  },
+  "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf|2026-01-27|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line."
+  }
+ },
+ "mistral": {
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Planned network outages, at Tailem Bend to complete augmentation works on the Heywood Interconnector between Victoria and South Australia , materially reduced its capacity."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|scheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "Two gas fired generators (Torrens Island B4, Dry Creek 3) were on planned outages and the return to service of Pelican Point power station was delayed by start -up issues which decreased the available capacity in South Australia."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "The return to service of 240 MW at Pelican Point, which has commenced at around 3 pm, was delayed and only 60 MW was available."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "While there is in the order of 1600 MW of wind capacity installed in South Australia, on the day it was generating around 240 MW, as forecast."
+  },
+  "data/raw/aer/docs/20160714_-_5000_report_-_SA.pdf|2016-07-14|('SA1',)|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "The MurrayLink interconnector was operating at its limit into South Australia around 190 MW (its nominal limit is 220 MW)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast in all relevant regions for both the morning and evening high price periods."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|demand": {
+   "supported": true,
+   "why": "",
+   "quote": "South Australia subsequently had a high price period at 7 pm when demand increased above its low-priced capacity."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "At 5.00 pm, EnergyAustralia's Loy Yang A unit 4 went offline due to an unplanned unit outage removing 560 MW of available baseload capacity."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|interconnector_limit": {
+   "supported": true,
+   "why": "",
+   "quote": "Flows on both the Queensland -New South Wales and Terranora interconnectors were at their respective export limits into NSW during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix E)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-05|('NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1')|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "In South Australia, prices did not exceed $5,000 per MWh for the first three 30-minute periods of the evening as there was a reduced limit of 200 MW on Heywood into Victoria due to FCAS requirements and South Australia was unable to export its excess cheaper generation into Victoria during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|wind_output": {
+   "supported": true,
+   "why": "",
+   "quote": "Wind output was lower than forecast, averaging 200 MW out of 2,763 MW installed capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|network_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|unscheduled_plant_outage": {
+   "supported": true,
+   "why": "",
+   "quote": "EnergyAustralia removed 35 MW of capacity from the price floor (-$1,000 per MWh) at Hallett due to its gas turbine tripping during the high price periods."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|rebids": {
+   "supported": true,
+   "why": "",
+   "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G)."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|fcas_co_optimisation": {
+   "supported": true,
+   "why": "",
+   "quote": "A planned outage of the Heywood to Mortlake line meant flows on Heywood were reduced to 50 MW into South Australia due to FCAS requirements and South Australia was unable to import sufficient low-priced capacity during the high prices."
+  },
+  "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000MWh_-_July_to_September_2024.pdf|2024-08-22|('SA1',)|battery_state_of_charge": {
+   "supported": true,
+   "why": "",
+   "quote": "Iberdrola was shifting 25 MW of capacity from high to low prices and back down again almost every 5 minutes in the lead up to the high price periods due to changes in its state of charge and forecast prices."
+  }
+ }
+}

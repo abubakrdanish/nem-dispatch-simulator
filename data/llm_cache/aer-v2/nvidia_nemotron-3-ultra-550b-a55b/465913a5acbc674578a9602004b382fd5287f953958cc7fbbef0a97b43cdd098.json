@@ -1,0 +1,113 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:26:01+00:00",
+  "failure": null,
+  "input_sha256": "209352c567e930afce8d984d63707d344b81d622c5786a40c9318279fdf87b25",
+  "key": "465913a5acbc674578a9602004b382fd5287f953958cc7fbbef0a97b43cdd098",
+  "latency_s": 8.62,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-03-12\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"6 times between 6 pm and midnight\", \"quote\": \"On 12 March 2021 the spot price in South Australia exceeded $5,000/MWh 6 times between 6 pm and midnight.\"}, \"peak_price\": {\"value\": 14348, \"quote\": \"The spot price in South Australia ranged between $509/MWh and $14,348/MWh from the 6 pm trading interval to midnight.\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"A planned outage of the Moorabool to Mortlake 500 kV line in Victoria was underway. This outage was to repair the line from severe wind damage in 2020. The outage limited imports into South Australia by around 350 MW across the Heywood interconnector.\"}, {\"label\": \"wind_output\", \"quote\": \"There was little wind generation, dropping to as low as 12 MW. Wind is generally offered in at negative prices.\"}, {\"label\": \"solar_output\", \"quote\": \"By 6 pm wind generation was forecast to fall to 161 MW, 4 hours prior, and solar output would be down to 0 MW by 7.30 pm.\"}, {\"label\": \"rebids\", \"quote\": \"At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The outage limited imports into South Australia by around 350 MW across the Heywood interconnector.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh.\"}], \"constraints_named\": [{\"id\": \"S_TIPSB_N-2\", \"quote\": \"unforecast network constraint: S_TIPSB_N-2 - portfolio redistribution - SL~~\"}, {\"id\": \"S_TIPSB_270\", \"quote\": \"unfcast network constraint~61 constr off out of merit order - s_tipsb_270~\"}, {\"id\": \"NIL_PL_max\", \"quote\": \"S^NIL_PL_max - PL constraint- SL~~\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"The outage limited imports into South Australia by around 350 MW across the Heywood interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "A planned outage of the Moorabool to Mortlake 500 kV line in Victoria was underway. This outage was to repair the line from severe wind damage in 2020. The outage limited imports into South Australia by around 350 MW across the Heywood interconnector."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There was little wind generation, dropping to as low as 12 MW. Wind is generally offered in at negative prices."
+          },
+          {
+            "label": "solar_output",
+            "quote": "By 6 pm wind generation was forecast to fall to 161 MW, 4 hours prior, and solar output would be down to 0 MW by 7.30 pm."
+          },
+          {
+            "label": "rebids",
+            "quote": "At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The outage limited imports into South Australia by around 350 MW across the Heywood interconnector."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "S_TIPSB_N-2",
+            "quote": "unforecast network constraint: S_TIPSB_N-2 - portfolio redistribution - SL~~"
+          },
+          {
+            "id": "S_TIPSB_270",
+            "quote": "unfcast network constraint~61 constr off out of merit order - s_tipsb_270~"
+          },
+          {
+            "id": "NIL_PL_max",
+            "quote": "S^NIL_PL_max - PL constraint- SL~~"
+          }
+        ],
+        "event_date": "2021-03-12",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "The outage limited imports into South Australia by around 350 MW across the Heywood interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 12 March 2021 the spot price in South Australia exceeded $5,000/MWh 6 times between 6 pm and midnight.",
+          "text": "6 times between 6 pm and midnight"
+        },
+        "network_outages": {
+          "quote": "At around 5.10 pm a fire in the Torrens Island switchyard caused Barker Inlet power station to trip, removing 193 MW of available capacity all priced below $61/MWh.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in South Australia ranged between $509/MWh and $14,348/MWh from the 6 pm trading interval to midnight.",
+          "value": 14348
+        },
+        "rebid_set_price": {
+          "quote": "At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_MWh_-_12_March_2021_(South_Australia)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20MWh%20-%2012%20March%202021%20%28South%20Australia%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 808,
+    "per_attempt": [
+      {
+        "completion_tokens": 808,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 14521,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15329
+      }
+    ],
+    "prompt_tokens": 14521,
+    "reasoning_tokens": 0,
+    "total_tokens": 15329
+  }
+}

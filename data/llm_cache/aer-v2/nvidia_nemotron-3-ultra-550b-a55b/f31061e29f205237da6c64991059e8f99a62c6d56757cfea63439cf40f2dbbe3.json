@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:28:18+00:00",
+  "failure": null,
+  "input_sha256": "b2d225b6851875d9048f3f85963302f9c3c94a6c4b09793e6b1075a9c07439c0",
+  "key": "f31061e29f205237da6c64991059e8f99a62c6d56757cfea63439cf40f2dbbe3",
+  "latency_s": 9.46,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-02-17\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"8.05 am, 8.10 am, 8.15 am, 8.20 am, 8.25 am, 8.30 am (5-minute intervals); 8.30 am 30-minute period\", \"quote\": \"Table 2: 5 minute prices and type of unit Time 5 minute price Type of unit setting price 8.05 am $15,100 Load 8.10 am $15,100 Load 8.15 am $15,100 Load 8.20 am $450 Generator 8.25 am $498 Generator 8.30 am $450 Generator 30-minute price $7,783\"}, \"peak_price\": {\"value\": 15100, \"quote\": \"The Tasmanian 30 -minute price for 8.30 am on 17 February 2022 reached $7,783/MWh.\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 700 MW of capacity was unavailable during the high-priced event. All this capacity was planned to be unavailable.\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraint forced around 1 60 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria\"}, {\"label\": \"ramp_rates\", \"quote\": \"On the morning of 17 February 2022, t here was around 4 80 MW of capacity priced below $5,000/MWh that was not dispatched due to generator ramp up rate limits during the times of the high prices\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The trade -off between the FCAS and energy markets also contributed to the reduction in capacity available. This is because a MW supplied in raise FCAS is a MW foregone in the energy market.\"}, {\"label\": \"demand\", \"quote\": \"Demand was slightly higher than forecast.\"}], \"constraints_named\": [{\"id\": \"constraint to manage the local FCAS requirements in Tasmania\", \"quote\": \"In response to the line outage, AEMO invoked a constraint to manage the local FCAS requirements in Tasmania.\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The constraint forced around 1 60 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022. In response to the line outage, AEMO invoked a constraint to manage the local FCAS requirements in Tasmania.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators or the Basslink interconnector did not contribute to high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 700 MW of capacity was unavailable during the high-priced event. All this capacity was planned to be unavailable."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraint forced around 1 60 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "On the morning of 17 February 2022, t here was around 4 80 MW of capacity priced below $5,000/MWh that was not dispatched due to generator ramp up rate limits during the times of the high prices"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The trade -off between the FCAS and energy markets also contributed to the reduction in capacity available. This is because a MW supplied in raise FCAS is a MW foregone in the energy market."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was slightly higher than forecast."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint to manage the local FCAS requirements in Tasmania",
+            "quote": "In response to the line outage, AEMO invoked a constraint to manage the local FCAS requirements in Tasmania."
+          }
+        ],
+        "event_date": "2022-02-17",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The constraint forced around 1 60 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria"
+          }
+        ],
+        "intervals": {
+          "quote": "Table 2: 5 minute prices and type of unit Time 5 minute price Type of unit setting price 8.05 am $15,100 Load 8.10 am $15,100 Load 8.15 am $15,100 Load 8.20 am $450 Generator 8.25 am $498 Generator 8.30 am $450 Generator 30-minute price $7,783",
+          "text": "8.05 am, 8.10 am, 8.15 am, 8.20 am, 8.25 am, 8.30 am (5-minute intervals); 8.30 am 30-minute period"
+        },
+        "network_outages": {
+          "quote": "There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022. In response to the line outage, AEMO invoked a constraint to manage the local FCAS requirements in Tasmania.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The Tasmanian 30 -minute price for 8.30 am on 17 February 2022 reached $7,783/MWh.",
+          "value": 15100
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators or the Basslink interconnector did not contribute to high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000_per_MWh_-_17_February_2022_(TAS).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000%20per%20MWh%20-%2017%20February%202022%20%28TAS%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 754,
+    "per_attempt": [
+      {
+        "completion_tokens": 754,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 5146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5900
+      }
+    ],
+    "prompt_tokens": 5146,
+    "reasoning_tokens": 0,
+    "total_tokens": 5900
+  }
+}

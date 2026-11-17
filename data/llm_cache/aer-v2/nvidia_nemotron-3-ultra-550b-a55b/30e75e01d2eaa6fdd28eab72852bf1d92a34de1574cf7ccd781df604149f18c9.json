@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:59:19+00:00",
+  "failure": null,
+  "input_sha256": "19ca64683d931d41eb50d4c431f58afc1ba7d5366d1db177f3c3e63e2ca5e1db",
+  "key": "30e75e01d2eaa6fdd28eab72852bf1d92a34de1574cf7ccd781df604149f18c9",
+  "latency_s": 6.04,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-12-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7 pm and 7.30 pm trading intervals\", \"quote\": \"On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Maximum temperatures in Adelaide exceeded 45°C, leading to close to record demand.\"}, {\"label\": \"wind_output\", \"quote\": \"Of the 1800 MW of semi-scheduled wind installed, only as much as 220 MW was available.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Murraylink however were close to zero when forecasts had it at or close to its nominal limit.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The only other significant unit not available was AGL's 120 MW Torrens Island A3 unit which was made unavailable two days earlier.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink however were close to zero when forecasts had it at or close to its nominal limit.\"}, {\"name\": \"Heywood\", \"quote\": \"During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Maximum temperatures in Adelaide exceeded 45°C, leading to close to record demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Of the 1800 MW of semi-scheduled wind installed, only as much as 220 MW was available."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across Murraylink however were close to zero when forecasts had it at or close to its nominal limit."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The only other significant unit not available was AGL's 120 MW Torrens Island A3 unit which was made unavailable two days earlier."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2019-12-19",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Imports across Murraylink however were close to zero when forecasts had it at or close to its nominal limit."
+          },
+          {
+            "name": "Heywood",
+            "quote": "During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit."
+          }
+        ],
+        "intervals": {
+          "quote": "On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.",
+          "text": "7 pm and 7.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20191219_$5000_SA_Report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20191219%20%245000%20SA%20Report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 468,
+    "per_attempt": [
+      {
+        "completion_tokens": 468,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10369,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10837
+      }
+    ],
+    "prompt_tokens": 10369,
+    "reasoning_tokens": 0,
+    "total_tokens": 10837
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:26:34+00:00",
+  "failure": null,
+  "input_sha256": "a9f1369bb6abac8d9d0ca2492adeaac87642b06447e2ebc04b44db56a263cdfa",
+  "key": "2f739bc88615b91d3c53f1ed10c4a2d2ee4a55954787d26972cdab5a1cbf07e4",
+  "latency_s": 6.97,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-05-21\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"5 pm and 5.30 pm trading intervals\", \"quote\": \"On 21 May 2021 the spot price in New South Wales exceeded $5,000/MWh for the 5 pm and 5.30 pm trading intervals.\"}, \"peak_price\": {\"value\": 7652, \"quote\": \"The spot price in New South Wales was $5,212/MWh and $7,652/MWh for the 5 pm and 5.30 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"About 1,800 MW of this capacity was undergoing planned maintenance, as expected during the lower demand periods of spring and autumn.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"This included limited capacity from AGL's Liddell unit 3 which experienced technical issues as it returned to service from an unplanned outage.\"}, {\"label\": \"solar_output\", \"quote\": \"grid solar had dropped off\"}, {\"label\": \"wind_output\", \"quote\": \"wind output was very low at around 230 MW (out of almost 2,000 MW installed in New South Wales)\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Line outages in the Canberra area prevented generation from Victoria or southern New South Wales getting to load centres around Sydney.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to 630 MW out of the 1,000 MW nominal limit.\"}, {\"label\": \"demand\", \"quote\": \"Demand was high during the evening peak, driven by cooler weather increasing heating requirements and rooftop solar tapering off as the sun went down.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW interconnector\", \"quote\": \"AEMO invoked constraints affecting generation in southern New South Wales and flows on the VIC - NSW interconnector.\"}, {\"name\": \"QNI interconnector\", \"quote\": \"imports from Queensland over the QNI interconnector were limited to below 630 MW out of the nominal 1,000 MW limit.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There were planned outages of the Capital to Kangaroo Valley 330 kV line, which began on 17 May. There was also a planned outage of the 330 kV line between Lower and Upper Tumut.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "About 1,800 MW of this capacity was undergoing planned maintenance, as expected during the lower demand periods of spring and autumn."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "This included limited capacity from AGL's Liddell unit 3 which experienced technical issues as it returned to service from an unplanned outage."
+          },
+          {
+            "label": "solar_output",
+            "quote": "grid solar had dropped off"
+          },
+          {
+            "label": "wind_output",
+            "quote": "wind output was very low at around 230 MW (out of almost 2,000 MW installed in New South Wales)"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Line outages in the Canberra area prevented generation from Victoria or southern New South Wales getting to load centres around Sydney."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to 630 MW out of the 1,000 MW nominal limit."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was high during the evening peak, driven by cooler weather increasing heating requirements and rooftop solar tapering off as the sun went down."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-05-21",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW interconnector",
+            "quote": "AEMO invoked constraints affecting generation in southern New South Wales and flows on the VIC - NSW interconnector."
+          },
+          {
+            "name": "QNI interconnector",
+            "quote": "imports from Queensland over the QNI interconnector were limited to below 630 MW out of the nominal 1,000 MW limit."
+          }
+        ],
+        "intervals": {
+          "quote": "On 21 May 2021 the spot price in New South Wales exceeded $5,000/MWh for the 5 pm and 5.30 pm trading intervals.",
+          "text": "5 pm and 5.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "There were planned outages of the Capital to Kangaroo Valley 330 kV line, which began on 17 May. There was also a planned outage of the 330 kV line between Lower and Upper Tumut.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales was $5,212/MWh and $7,652/MWh for the 5 pm and 5.30 pm trading intervals respectively.",
+          "value": 7652
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_MWh_-_21_May_2021_(NSW).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20MWh%20-%2021%20May%202021%20%28NSW%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 697,
+    "per_attempt": [
+      {
+        "completion_tokens": 697,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8359,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9056
+      }
+    ],
+    "prompt_tokens": 8359,
+    "reasoning_tokens": 0,
+    "total_tokens": 9056
+  }
+}

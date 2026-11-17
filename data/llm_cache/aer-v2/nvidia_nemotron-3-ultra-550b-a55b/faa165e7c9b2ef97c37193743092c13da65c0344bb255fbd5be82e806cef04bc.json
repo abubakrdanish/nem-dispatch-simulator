@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T01:05:51+00:00",
+  "failure": null,
+  "input_sha256": "dc5d3fb043a7a3fbac0ecb217d128d6e62516ccdacedb94769a11845ef08904e",
+  "key": "faa165e7c9b2ef97c37193743092c13da65c0344bb255fbd5be82e806cef04bc",
+  "latency_s": 51.09,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"5 pm, 5:30 pm, 6 pm\", \"quote\": \"At 5 pm on Friday 10 February 2017, the wholesale, or spot price for electricity reached $12 915/MWh in New South Wales and $12 221/MWh in Queensland. While the spot price fell significantly in Queensland by 5.30 pm, in New South Wales it increased, reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.\"}, \"peak_price\": {\"value\": 14000, \"quote\": \"reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Accordingly, as expected, demand for electricity was high in both states\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 4.20 pm Energy Australia's Tallawarra power station unexpectedly stopped generating due to technical problems (or 'tripped'), resulting in the loss of 410 MW of low-priced supply.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"interconnectors operating beyond their limits led to high prices and intervention by the market operator.\"}, {\"label\": \"constraint_violation\", \"quote\": \"constraints on the interconnector, designed to manage system security, 'violated'.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"In accordance with the Electricity Rules, the five-minute price of electricity was set at the market price cap of $14 000/MWh for the duration of the 'load shedding' period in New South Wales only.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Victoria - New South Wales (Vic - NSW) interconnector\", \"quote\": \"New South Wales is connected to Victoria via the Victoria - New South Wales (Vic - NSW) interconnector.\"}, {\"name\": \"Queensland - New South Wales Interconnector (QNI)\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}, {\"name\": \"Terranora\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Accordingly, as expected, demand for electricity was high in both states"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 4.20 pm Energy Australia's Tallawarra power station unexpectedly stopped generating due to technical problems (or 'tripped'), resulting in the loss of 410 MW of low-priced supply."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "interconnectors operating beyond their limits led to high prices and intervention by the market operator."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "constraints on the interconnector, designed to manage system security, 'violated'."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "In accordance with the Electricity Rules, the five-minute price of electricity was set at the market price cap of $14 000/MWh for the duration of the 'load shedding' period in New South Wales only."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2017-02-10",
+        "interconnectors_named": [
+          {
+            "name": "Victoria - New South Wales (Vic - NSW) interconnector",
+            "quote": "New South Wales is connected to Victoria via the Victoria - New South Wales (Vic - NSW) interconnector."
+          },
+          {
+            "name": "Queensland - New South Wales Interconnector (QNI)",
+            "quote": "Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          }
+        ],
+        "intervals": {
+          "quote": "At 5 pm on Friday 10 February 2017, the wholesale, or spot price for electricity reached $12 915/MWh in New South Wales and $12 221/MWh in Queensland. While the spot price fell significantly in Queensland by 5.30 pm, in New South Wales it increased, reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.",
+          "text": "5 pm, 5:30 pm, 6 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.",
+          "value": 14000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%2010%20February%202017%20%28NSW%20and%20Qld%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3855,
+    "per_attempt": [
+      {
+        "completion_tokens": 3855,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3171
+        },
+        "prompt_tokens": 19138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 22993
+      }
+    ],
+    "prompt_tokens": 19138,
+    "reasoning_tokens": 3171,
+    "total_tokens": 22993
+  }
+}

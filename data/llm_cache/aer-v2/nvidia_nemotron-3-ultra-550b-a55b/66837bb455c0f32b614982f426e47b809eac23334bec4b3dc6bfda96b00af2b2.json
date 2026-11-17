@@ -1,0 +1,129 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:18:39+00:00",
+  "failure": null,
+  "input_sha256": "6ad490d4f73e142114673f32ad5f3b6eb5c0242975db849ad2287ccca291ed55",
+  "key": "66837bb455c0f32b614982f426e47b809eac23334bec4b3dc6bfda96b00af2b2",
+  "latency_s": 11.58,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-10-31\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"five 30-minute trading intervals where the spot price was greater than $5,000/MWh, on Monday 31 October. These occurred at 10am, 10.30am, 11am, 2.30pm and 3pm\", \"quote\": \"There were five 30-minute trading intervals where the spot price was greater than $5,000/MWh, on Monday 31 October. These occurred at 10am, 10.30am, 11am, 2.30pm and 3pm.\"}, \"peak_price\": {\"value\": 6724, \"quote\": \"The spot price peaked at $6 724/MWh in New South Wales with five-minute prices driven to almost zero at times, in all other mainland regions.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A forced network outage on one of the major transmissions lines between Wallerawang and south Sydney on 30 October, and the need for a further network outage, to facilitate repairs, the following day, resulted in significant disruption to the market.\"}, {\"label\": \"network_outage\", \"quote\": \"The outages of the 77 line which commenced at around 9.30am and 2pm, led to step reductions of up to 1 000MW on transfers into New South Wales.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors.\"}, {\"label\": \"demand\", \"quote\": \"Demand was as much as 500MW higher than forecast four hours to dispatch.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Delays in the return to service of generators at Vales Point and Liddell resulted in around 400MW less capacity throughout the morning than that forecast 4 and 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"In response to the network outage at around 9.30am, almost 3 000 MW of capacity was rebid to prices below zero by Macquarie Generation and Delta Electricity.\"}], \"constraints_named\": [{\"id\": \"N>Q-NIL_1A\", \"quote\": \"QNI export capability Constraint ID -276 N>Q-NIL_1A -161 N>Q-NIL_1A -147 N>Q-NIL_1A\"}, {\"id\": \"N>>N-NIL_1N\", \"quote\": \"QNI import capability Constraint ID -174 N>>N-NIL_1N -1059 Q:N_NIL_BCK2L-G -1067 Q:N_NIL_BCK2L-G\"}, {\"id\": \"N>>N-NIL_28\", \"quote\": \"Snowy export capability Constraint ID 593 N>>N-NIL_28 1897 H>>H-64_B 1719 H>>H-64_B\"}, {\"id\": \"N>>N-WWSS+WWIG_E\", \"quote\": \"QNI import capability Constraint ID -945 N>>N-WWSS+WWIG_E -1070 Q:N_NIL_BCK2L-G -936 Q:N_NIL_N4\"}, {\"id\": \"Q:N_NIL_BCK2L-G\", \"quote\": \"QNI import capability Constraint ID -174 N>>N-NIL_1N -1059 Q:N_NIL_BCK2L-G -1067 Q:N_NIL_BCK2L-G\"}, {\"id\": \"Q:N_NIL_N4\", \"quote\": \"QNI import capability Constraint ID -429 N>>N-NIL_28 -1065 Q:N_NIL_BCK2L-G -1050 Q:N_NIL_N4\"}, {\"id\": \"H>>H-64_B\", \"quote\": \"Snowy export capability Constraint ID 593 N>>N-NIL_28 1897 H>>H-64_B 1719 H>>H-64_B\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors.\"}, {\"name\": \"Snowy\", \"quote\": \"As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A forced network outage on one of the major transmissions lines between Wallerawang and south Sydney on 30 October, and the need for a further network outage, to facilitate repairs, the following day, resulted in significant disruption to the market.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the spot price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A forced network outage on one of the major transmissions lines between Wallerawang and south Sydney on 30 October, and the need for a further network outage, to facilitate repairs, the following day, resulted in significant disruption to the market."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The outages of the 77 line which commenced at around 9.30am and 2pm, led to step reductions of up to 1 000MW on transfers into New South Wales."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was as much as 500MW higher than forecast four hours to dispatch."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Delays in the return to service of generators at Vales Point and Liddell resulted in around 400MW less capacity throughout the morning than that forecast 4 and 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "In response to the network outage at around 9.30am, almost 3 000 MW of capacity was rebid to prices below zero by Macquarie Generation and Delta Electricity."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>Q-NIL_1A",
+            "quote": "QNI export capability Constraint ID -276 N>Q-NIL_1A -161 N>Q-NIL_1A -147 N>Q-NIL_1A"
+          },
+          {
+            "id": "N>>N-NIL_1N",
+            "quote": "QNI import capability Constraint ID -174 N>>N-NIL_1N -1059 Q:N_NIL_BCK2L-G -1067 Q:N_NIL_BCK2L-G"
+          },
+          {
+            "id": "N>>N-NIL_28",
+            "quote": "Snowy export capability Constraint ID 593 N>>N-NIL_28 1897 H>>H-64_B 1719 H>>H-64_B"
+          },
+          {
+            "id": "N>>N-WWSS+WWIG_E",
+            "quote": "QNI import capability Constraint ID -945 N>>N-WWSS+WWIG_E -1070 Q:N_NIL_BCK2L-G -936 Q:N_NIL_N4"
+          },
+          {
+            "id": "Q:N_NIL_BCK2L-G",
+            "quote": "QNI import capability Constraint ID -174 N>>N-NIL_1N -1059 Q:N_NIL_BCK2L-G -1067 Q:N_NIL_BCK2L-G"
+          },
+          {
+            "id": "Q:N_NIL_N4",
+            "quote": "QNI import capability Constraint ID -429 N>>N-NIL_28 -1065 Q:N_NIL_BCK2L-G -1050 Q:N_NIL_N4"
+          },
+          {
+            "id": "H>>H-64_B",
+            "quote": "Snowy export capability Constraint ID 593 N>>N-NIL_28 1897 H>>H-64_B 1719 H>>H-64_B"
+          }
+        ],
+        "event_date": "2005-10-31",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors."
+          },
+          {
+            "name": "Snowy",
+            "quote": "As a result of the outage of the 77 line on Monday, network constraints drove a step reduction of up to 1 000MW on transfers into New South Wales across the QNI and Snowy interconnectors."
+          }
+        ],
+        "intervals": {
+          "quote": "There were five 30-minute trading intervals where the spot price was greater than $5,000/MWh, on Monday 31 October. These occurred at 10am, 10.30am, 11am, 2.30pm and 3pm.",
+          "text": "five 30-minute trading intervals where the spot price was greater than $5,000/MWh, on Monday 31 October. These occurred at 10am, 10.30am, 11am, 2.30pm and 3pm"
+        },
+        "network_outages": {
+          "quote": "A forced network outage on one of the major transmissions lines between Wallerawang and south Sydney on 30 October, and the need for a further network outage, to facilitate repairs, the following day, resulted in significant disruption to the market.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price peaked at $6 724/MWh in New South Wales with five-minute prices driven to almost zero at times, in all other mainland regions.",
+          "value": 6724
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the spot price exceeding $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_October_2005_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20October%202005%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1236,
+    "per_attempt": [
+      {
+        "completion_tokens": 1236,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10370,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11606
+      }
+    ],
+    "prompt_tokens": 10370,
+    "reasoning_tokens": 0,
+    "total_tokens": 11606
+  }
+}

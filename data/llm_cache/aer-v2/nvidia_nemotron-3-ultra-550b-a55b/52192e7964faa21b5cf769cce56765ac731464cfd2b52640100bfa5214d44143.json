@@ -1,0 +1,139 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:18:09+00:00",
+  "failure": null,
+  "input_sha256": "4c04ca79ccec965eab2ef643db1a9f79a80be90e9a47eb68a61cc22cd18d1f5f",
+  "key": "52192e7964faa21b5cf769cce56765ac731464cfd2b52640100bfa5214d44143",
+  "latency_s": 17.5,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-01-31\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3.30 pm\", \"quote\": \"On Monday the spot price reached $9597/MWh at 3.30 pm.\"}, \"peak_price\": {\"value\": 9597, \"quote\": \"On Monday the spot price reached $9597/MWh at 3.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On Monday, the trip of Newport Power Station at 2.50 pm caused a 510 MW reduction in available capacity.\"}, {\"label\": \"rebids\", \"quote\": \"At around 2.50 pm, Ecogen Energy's Newport Power Station tripped, reducing available capacity by 510 MW (all of which was priced below $45/MWh). As low-priced generation was ramp rate limited, high priced generation was dispatched in its place.\"}, {\"label\": \"ramp_rates\", \"quote\": \"As low-priced generation was ramp rate limited, high priced generation was dispatched in its place.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The high price at 2.55 pm, led to flows across the Vic-NSW interconnector changing from 300 MW north to 260 MW south.\"}, {\"label\": \"constraint_violation\", \"quote\": \"Constraints between Murray and Dedarang (see \\\"Changes to network availability\\\" section) led to a reduction in the dispatch target of Murray from 1475 MW for the dispatch interval ending 2.50 pm, to 1263 MW for the 2.55 pm dispatch interval (at its maximum ramp down rate).\"}], \"constraints_named\": [{\"id\": \"V>>V_NIL_1D\", \"quote\": \"On 31 January from 2.55 pm to 3.15 pm, thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one of the Dederang to Murray lines for the loss of the other) were limiting imports into Victoria across the Vic-NSW interconnector.\"}, {\"id\": \"V>>V_NIL_1B\", \"quote\": \"On 31 January from 2.55 pm to 3.15 pm, thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one of the Dederang to Murray lines for the loss of the other) were limiting imports into Victoria across the Vic-NSW interconnector.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"The high price at 2.55 pm, led to flows across the Vic-NSW interconnector changing from 300 MW north to 260 MW south.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2011-02-01\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"1.30 pm and 2 pm\", \"quote\": \"On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.\"}, \"peak_price\": {\"value\": 5333, \"quote\": \"On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Record demand and high prices in New South Wales and rebidding by International Power at Hazelwood and Loy Yang B contributed to the high prices on Tuesday.\"}, {\"label\": \"rebids\", \"quote\": \"Over two rebids, at 12.08 pm and 12.10 pm, International Power shifted a total of 155 MW of available capacity at its Loy Yang B and Hazelwood power stations from prices below $25/MWh to above $12 100/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On Monday, the trip of Newport Power Station at 2.50 pm caused a 510 MW reduction in available capacity."
+          },
+          {
+            "label": "rebids",
+            "quote": "At around 2.50 pm, Ecogen Energy's Newport Power Station tripped, reducing available capacity by 510 MW (all of which was priced below $45/MWh). As low-priced generation was ramp rate limited, high priced generation was dispatched in its place."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "As low-priced generation was ramp rate limited, high priced generation was dispatched in its place."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The high price at 2.55 pm, led to flows across the Vic-NSW interconnector changing from 300 MW north to 260 MW south."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "Constraints between Murray and Dedarang (see \"Changes to network availability\" section) led to a reduction in the dispatch target of Murray from 1475 MW for the dispatch interval ending 2.50 pm, to 1263 MW for the 2.55 pm dispatch interval (at its maximum ramp down rate)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>V_NIL_1D",
+            "quote": "On 31 January from 2.55 pm to 3.15 pm, thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one of the Dederang to Murray lines for the loss of the other) were limiting imports into Victoria across the Vic-NSW interconnector."
+          },
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "On 31 January from 2.55 pm to 3.15 pm, thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one of the Dederang to Murray lines for the loss of the other) were limiting imports into Victoria across the Vic-NSW interconnector."
+          }
+        ],
+        "event_date": "2011-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "The high price at 2.55 pm, led to flows across the Vic-NSW interconnector changing from 300 MW north to 260 MW south."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday the spot price reached $9597/MWh at 3.30 pm.",
+          "text": "3.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Monday the spot price reached $9597/MWh at 3.30 pm.",
+          "value": 9597
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Record demand and high prices in New South Wales and rebidding by International Power at Hazelwood and Loy Yang B contributed to the high prices on Tuesday."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over two rebids, at 12.08 pm and 12.10 pm, International Power shifted a total of 155 MW of available capacity at its Loy Yang B and Hazelwood power stations from prices below $25/MWh to above $12 100/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.",
+          "text": "1.30 pm and 2 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.",
+          "value": 5333
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_January_and_1_February_2011_-_Vic.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20January%20and%201%20February%202011%20-%20Vic.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1058,
+    "per_attempt": [
+      {
+        "completion_tokens": 1058,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6725,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7783
+      }
+    ],
+    "prompt_tokens": 6725,
+    "reasoning_tokens": 0,
+    "total_tokens": 7783
+  }
+}

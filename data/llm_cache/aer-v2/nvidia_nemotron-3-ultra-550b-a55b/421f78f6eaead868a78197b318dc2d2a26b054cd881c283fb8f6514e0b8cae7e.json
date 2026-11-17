@@ -1,0 +1,93 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:08:14+00:00",
+  "failure": null,
+  "input_sha256": "840dd3d332c01733c19587f609eab4f7b64aeb72d270bc9810644a5516d5a2b3",
+  "key": "421f78f6eaead868a78197b318dc2d2a26b054cd881c283fb8f6514e0b8cae7e",
+  "latency_s": 6.89,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4 pm, 4.30 pm, 5 pm\", \"quote\": \"The spot price exceeded $5000/MWh for 14 trading intervals between Tuesday 10 and Friday 13 November 2009 in South Australia, with 13 of these prices at the cap.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day.\"}, {\"label\": \"rebids\", \"quote\": \"Bidding behaviour by AGL significantly contributed to the high priced events. AGL was the only participant who offered significant amounts of capacity above $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval.\"}], \"constraints_named\": [{\"id\": \"NSW Murraylink runback scheme\", \"quote\": \"The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval. The average overestimate of import capability was 120 MW (24 MW across Heywood and 96 MW across Murraylink).\"}, {\"name\": \"Murraylink\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval. The average overestimate of import capability was 120 MW (24 MW across Heywood and 96 MW across Murraylink).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day."
+          },
+          {
+            "label": "rebids",
+            "quote": "Bidding behaviour by AGL significantly contributed to the high priced events. AGL was the only participant who offered significant amounts of capacity above $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NSW Murraylink runback scheme",
+            "quote": "The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme"
+          }
+        ],
+        "event_date": "2009-11-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval. The average overestimate of import capability was 120 MW (24 MW across Heywood and 96 MW across Murraylink)."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval. The average overestimate of import capability was 120 MW (24 MW across Heywood and 96 MW across Murraylink)."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh for 14 trading intervals between Tuesday 10 and Friday 13 November 2009 in South Australia, with 13 of these prices at the cap.",
+          "text": "4 pm, 4.30 pm, 5 pm"
+        },
+        "network_outages": {
+          "quote": "On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_10_to_13_November_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_10%20to%2013%20November%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 551,
+    "per_attempt": [
+      {
+        "completion_tokens": 551,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 21103,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 21654
+      }
+    ],
+    "prompt_tokens": 21103,
+    "reasoning_tokens": 0,
+    "total_tokens": 21654
+  }
+}

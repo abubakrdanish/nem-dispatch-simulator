@@ -1,0 +1,148 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:22:37+00:00",
+  "failure": null,
+  "input_sha256": "2b2bfe3c6ef773d7d4a9d90124206f18b8d6e6208355f6caa8fa3ee1591a2807",
+  "key": "c2bdd0b383e6ea32277e01e2fe51680609181c926a4e15a8c3906e7447f98aa6",
+  "latency_s": 22.88,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-11-09\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm\", \"quote\": \"Half-hour spot prices were above $5 000/MWh on four occasions on Wednesday and once on Thursday. Figure 1 identifies those trading intervals for which the price exceeded $5 000/MWh in New South Wales and the price for the trading interval.\"}, \"peak_price\": {\"value\": 9167, \"quote\": \"The spot price was above $5 000/MWh for two hours between 3pm and 4.30pm. ... The spot price peaking at $9 167/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Wednesday, demand peaked at 11 721MW at 4pm. This was the highest demand in New South Wales since August but still 1 100MW lower than the peak last summer. Peak demand for the day was around 1 700MW higher than for the previous day and 600MW higher than forecast four hours to dispatch.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 2 850MW of capacity across Eraring, Liddell, Munmorah, Blowering and Vales Point was unavailable.\"}, {\"label\": \"rebids\", \"quote\": \"From around midday, a series of rebids, by New South Wales generators, moved 1 000MW of capacity from prices of less than $30/MWh to above $5 000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnector\", \"quote\": \"Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW.\"}, {\"name\": \"Snowy to New South Wales interconnector\", \"quote\": \"Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"There were no significant changes to the availability of the transmission network throughout the day in New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh.\"}}, {\"event_date\": \"2005-11-10\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"4:00 pm\", \"quote\": \"There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.\"}, \"peak_price\": {\"value\": 8651, \"quote\": \"There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"A third rebid by Macquarie Generation at 2.59pm, effective 3.10pm, shifted 810MW of capacity from prices of less than $20/MWh to prices above $4 670/MWh. The rebid reason given was \\\"RP/Volume tradeoff - Management of constraints\\\". This third rebid coincided with the reduction from 2.55pm, of the Queensland to New South Wales interconnector capability.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At 2.55pm import capability from Queensland was reduced by around 650MW, as a result of lightning in the vicinity of the New South Wales to Queensland interconnector.\"}, {\"label\": \"network_outage\", \"quote\": \"Between 3pm and 6pm, the limit for flows into New South Wales from Queensland, was reduced due to lightning in the vicinity. Lightning increases the likelihood of the loss of multiple lines and the interconnector limit is reduced. Extra frequency control ancillary services are procured to maintain system security should a multiple contingency event occur. The reduction in the limit was not as a result of the removal of network elements from service.\"}], \"constraints_named\": [{\"id\": \"F_N+Q_ARDM_L5\", \"quote\": \"The constraint identified by F_N+Q_ARDM_L5 optimises exports from Queensland together with the extra frequency control ancillary services that are required to manage the credible loss of both circuits of QNI, as a result of lightning in the vicinity.\"}, {\"id\": \"Q:N_LS_VC1\", \"quote\": \"QNI import capability Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R\"}, {\"id\": \"V::H_NILQA_R\", \"quote\": \"QNI import capability Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R\"}], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnector (QNI)\", \"quote\": \"At 2.55pm import capability from Queensland was reduced by around 650MW, as a result of lightning in the vicinity of the New South Wales to Queensland interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Between 3pm and 6pm, the limit for flows into New South Wales from Queensland, was reduced due to lightning in the vicinity. Lightning increases the likelihood of the loss of multiple lines and the interconnector limit is reduced. Extra frequency control ancillary services are procured to maintain system security should a multiple contingency event occur. The reduction in the limit was not as a result of the removal of network elements from service.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Wednesday, demand peaked at 11 721MW at 4pm. This was the highest demand in New South Wales since August but still 1 100MW lower than the peak last summer. Peak demand for the day was around 1 700MW higher than for the previous day and 600MW higher than forecast four hours to dispatch."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 2 850MW of capacity across Eraring, Liddell, Munmorah, Blowering and Vales Point was unavailable."
+          },
+          {
+            "label": "rebids",
+            "quote": "From around midday, a series of rebids, by New South Wales generators, moved 1 000MW of capacity from prices of less than $30/MWh to above $5 000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2005-11-09",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to New South Wales interconnector",
+            "quote": "Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW."
+          },
+          {
+            "name": "Snowy to New South Wales interconnector",
+            "quote": "Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW."
+          }
+        ],
+        "intervals": {
+          "quote": "Half-hour spot prices were above $5 000/MWh on four occasions on Wednesday and once on Thursday. Figure 1 identifies those trading intervals for which the price exceeded $5 000/MWh in New South Wales and the price for the trading interval.",
+          "text": "3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm"
+        },
+        "network_outages": {
+          "quote": "There were no significant changes to the availability of the transmission network throughout the day in New South Wales.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "The spot price was above $5 000/MWh for two hours between 3pm and 4.30pm. ... The spot price peaking at $9 167/MWh.",
+          "value": 9167
+        },
+        "rebid_set_price": {
+          "quote": "A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "A third rebid by Macquarie Generation at 2.59pm, effective 3.10pm, shifted 810MW of capacity from prices of less than $20/MWh to prices above $4 670/MWh. The rebid reason given was \"RP/Volume tradeoff - Management of constraints\". This third rebid coincided with the reduction from 2.55pm, of the Queensland to New South Wales interconnector capability."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At 2.55pm import capability from Queensland was reduced by around 650MW, as a result of lightning in the vicinity of the New South Wales to Queensland interconnector."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Between 3pm and 6pm, the limit for flows into New South Wales from Queensland, was reduced due to lightning in the vicinity. Lightning increases the likelihood of the loss of multiple lines and the interconnector limit is reduced. Extra frequency control ancillary services are procured to maintain system security should a multiple contingency event occur. The reduction in the limit was not as a result of the removal of network elements from service."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F_N+Q_ARDM_L5",
+            "quote": "The constraint identified by F_N+Q_ARDM_L5 optimises exports from Queensland together with the extra frequency control ancillary services that are required to manage the credible loss of both circuits of QNI, as a result of lightning in the vicinity."
+          },
+          {
+            "id": "Q:N_LS_VC1",
+            "quote": "QNI import capability Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R"
+          },
+          {
+            "id": "V::H_NILQA_R",
+            "quote": "QNI import capability Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R"
+          }
+        ],
+        "event_date": "2005-11-10",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to New South Wales interconnector (QNI)",
+            "quote": "At 2.55pm import capability from Queensland was reduced by around 650MW, as a result of lightning in the vicinity of the New South Wales to Queensland interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.",
+          "text": "4:00 pm"
+        },
+        "network_outages": {
+          "quote": "Between 3pm and 6pm, the limit for flows into New South Wales from Queensland, was reduced due to lightning in the vicinity. Lightning increases the likelihood of the loss of multiple lines and the interconnector limit is reduced. Extra frequency control ancillary services are procured to maintain system security should a multiple contingency event occur. The reduction in the limit was not as a result of the removal of network elements from service.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.",
+          "value": 8651
+        },
+        "rebid_set_price": {
+          "quote": "A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_9-10_November_2005_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_9-10%20November%202005%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1439,
+    "per_attempt": [
+      {
+        "completion_tokens": 1439,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7105,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8544
+      }
+    ],
+    "prompt_tokens": 7105,
+    "reasoning_tokens": 0,
+    "total_tokens": 8544
+  }
+}

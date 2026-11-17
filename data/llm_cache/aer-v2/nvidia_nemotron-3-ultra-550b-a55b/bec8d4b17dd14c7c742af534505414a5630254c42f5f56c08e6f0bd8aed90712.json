@@ -1,0 +1,194 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:07:22+00:00",
+  "failure": null,
+  "input_sha256": "66e0f9fed4f6dcde23810c9048b659431eca1b48475b5fc2d596579c1d613c4f",
+  "key": "bec8d4b17dd14c7c742af534505414a5630254c42f5f56c08e6f0bd8aed90712",
+  "latency_s": 17.84,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-01-30\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm trading intervals\", \"quote\": \"On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.\"}, \"peak_price\": {\"value\": 12217, \"quote\": \"On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"First, demand across both regions was collectively up to 870 MW greater than forecast.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Second, a unit at Loy Yang A tripped, removing 560 MW of capacity priced at the floor from the market.\"}, {\"label\": \"wind_output\", \"quote\": \"Finally, with light wind conditions, the output of wind generation was around 3200 MW lower than what is installed across both regions and up to 122 MW lower than forecast earlier in the day.\"}], \"constraints_named\": [{\"id\": \"1732A constraint management - N^^N_Nil_1 Sl\", \"quote\": \"1732A constraint management - N^^N_Nil_1 Sl\"}, {\"id\": \"1735~A~040 chg in AEMO disp~40 demand decrease vs pd NSW $718.80 vs $2267.58\", \"quote\": \"1735~A~040 chg in AEMO disp~40 demand decrease vs pd NSW $718.80 vs $2267.58\"}, {\"id\": \"1805~p~020 reduction in avail cap~204 unit trip\", \"quote\": \"1805~p~020 reduction in avail cap~204 unit trip\"}, {\"id\": \"18:05:04 a VIC 5min actual price $11,083.10 higher than 5min pd 18:10@18:01 ($11,500.80)\", \"quote\": \"18:05:04 a VIC 5min actual price $11,083.10 higher than 5min pd 18:10@18:01 ($11,500.80)\"}, {\"id\": \"18:06:00 A VIC 5min pd price $11,283.24 higher than 5min pd 18:35@18:01 ($11,500.80)\", \"quote\": \"18:06:00 A VIC 5min pd price $11,283.24 higher than 5min pd 18:35@18:01 ($11,500.80)\"}, {\"id\": \"18:32:45 P update capability parameters for change to outage plan/plant conditions\", \"quote\": \"18:32:45 P update capability parameters for change to outage plan/plant conditions\"}, {\"id\": \"18:33:54 P update capability parameters for change to outage plan/plant conditions\", \"quote\": \"18:33:54 P update capability parameters for change to outage plan/plant conditions\"}, {\"id\": \"1830~F~optimise between energy/fcas markets sl~\", \"quote\": \"1830~F~optimise between energy/fcas markets sl~\"}, {\"id\": \"18:44:40 P update capability parameters for change to outage plan/plant conditions\", \"quote\": \"18:44:40 P update capability parameters for change to outage plan/plant conditions\"}, {\"id\": \"1440~A~respond to 5 min pd > $282.23~\", \"quote\": \"1440~A~respond to 5 min pd > $282.23~\"}, {\"id\": \"1515~A~chg SA net interchange in p30 fcsts 1630-2230 sl ~\", \"quote\": \"1515~A~chg SA net interchange in p30 fcsts 1630-2230 sl ~\"}, {\"id\": \"1510~A~respond to 5 min >$ 280.81~\", \"quote\": \"1510~A~respond to 5 min >$ 280.81~\"}, {\"id\": \"1515~A~respond to 5 min pd $ $289.67~\", \"quote\": \"1515~A~respond to 5 min pd $ $289.67~\"}, {\"id\": \"1555~A~respond to 5 min predispatch >$311.55~\", \"quote\": \"1555~A~respond to 5 min predispatch >$311.55~\"}, {\"id\": \"1650~A~respond to pr5 min pd > $ 11,876.64~\", \"quote\": \"1650~A~respond to pr5 min pd > $ 11,876.64~\"}, {\"id\": \"1700~A~respond to 5 min predispatch >$ 12,290.98~\", \"quote\": \"1700~A~respond to 5 min predispatch >$ 12,290.98~\"}, {\"id\": \"1720~A~respond to 5 min pd. >$ 14,467.79~\", \"quote\": \"1720~A~respond to 5 min pd. >$ 14,467.79~\"}, {\"id\": \"1735~A~respond to 5 min pd <$578.81~\", \"quote\": \"1735~A~respond to 5 min pd <$578.81~\"}, {\"id\": \"1805~a~out of mcl mode. bands adjusted based on availablility\", \"quote\": \"1805~a~out of mcl mode. bands adjusted based on availablility\"}, {\"id\": \"18:10:07 A VIC 5min actual price $10,893.22 higher than 5min pd 18:15@18:06 ($14,700.00)\", \"quote\": \"18:10:07 A VIC 5min actual price $10,893.22 higher than 5min pd 18:15@18:06 ($14,700.00)\"}, {\"id\": \"1805~A~mat chg VIC gen lya3 and VIC price 1810,1815,1820 and p5 fcst 1825-1915 sl~\", \"quote\": \"1805~A~mat chg VIC gen lya3 and VIC price 1810,1815,1820 and p5 fcst 1825-1915 sl~\"}, {\"id\": \"1549P change in avail - peaking enabled sl\", \"quote\": \"1549P change in avail - peaking enabled sl\"}, {\"id\": \"1827~P~soc/mw change (1828 scheduled update)\", \"quote\": \"1827~P~soc/mw change (1828 scheduled update)\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}, {\"name\": \"Murraylink\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}, {\"name\": \"Basslink\", \"quote\": \"Victoria is connected to Tasmania via Basslink and to New South Wales via the Vic-NSW interconnector.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Victoria is connected to Tasmania via Basslink and to New South Wales via the Vic-NSW interconnector.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Following the trip of the Loy Yang A unit 3, imports into Victoria, across the Vic-NSW interconnector, were up to 580 MW higher than forecast, four hours prior.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "First, demand across both regions was collectively up to 870 MW greater than forecast."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Second, a unit at Loy Yang A tripped, removing 560 MW of capacity priced at the floor from the market."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Finally, with light wind conditions, the output of wind generation was around 3200 MW lower than what is installed across both regions and up to 122 MW lower than forecast earlier in the day."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "1732A constraint management - N^^N_Nil_1 Sl",
+            "quote": "1732A constraint management - N^^N_Nil_1 Sl"
+          },
+          {
+            "id": "1735~A~040 chg in AEMO disp~40 demand decrease vs pd NSW $718.80 vs $2267.58",
+            "quote": "1735~A~040 chg in AEMO disp~40 demand decrease vs pd NSW $718.80 vs $2267.58"
+          },
+          {
+            "id": "1805~p~020 reduction in avail cap~204 unit trip",
+            "quote": "1805~p~020 reduction in avail cap~204 unit trip"
+          },
+          {
+            "id": "18:05:04 a VIC 5min actual price $11,083.10 higher than 5min pd 18:10@18:01 ($11,500.80)",
+            "quote": "18:05:04 a VIC 5min actual price $11,083.10 higher than 5min pd 18:10@18:01 ($11,500.80)"
+          },
+          {
+            "id": "18:06:00 A VIC 5min pd price $11,283.24 higher than 5min pd 18:35@18:01 ($11,500.80)",
+            "quote": "18:06:00 A VIC 5min pd price $11,283.24 higher than 5min pd 18:35@18:01 ($11,500.80)"
+          },
+          {
+            "id": "18:32:45 P update capability parameters for change to outage plan/plant conditions",
+            "quote": "18:32:45 P update capability parameters for change to outage plan/plant conditions"
+          },
+          {
+            "id": "18:33:54 P update capability parameters for change to outage plan/plant conditions",
+            "quote": "18:33:54 P update capability parameters for change to outage plan/plant conditions"
+          },
+          {
+            "id": "1830~F~optimise between energy/fcas markets sl~",
+            "quote": "1830~F~optimise between energy/fcas markets sl~"
+          },
+          {
+            "id": "18:44:40 P update capability parameters for change to outage plan/plant conditions",
+            "quote": "18:44:40 P update capability parameters for change to outage plan/plant conditions"
+          },
+          {
+            "id": "1440~A~respond to 5 min pd > $282.23~",
+            "quote": "1440~A~respond to 5 min pd > $282.23~"
+          },
+          {
+            "id": "1515~A~chg SA net interchange in p30 fcsts 1630-2230 sl ~",
+            "quote": "1515~A~chg SA net interchange in p30 fcsts 1630-2230 sl ~"
+          },
+          {
+            "id": "1510~A~respond to 5 min >$ 280.81~",
+            "quote": "1510~A~respond to 5 min >$ 280.81~"
+          },
+          {
+            "id": "1515~A~respond to 5 min pd $ $289.67~",
+            "quote": "1515~A~respond to 5 min pd $ $289.67~"
+          },
+          {
+            "id": "1555~A~respond to 5 min predispatch >$311.55~",
+            "quote": "1555~A~respond to 5 min predispatch >$311.55~"
+          },
+          {
+            "id": "1650~A~respond to pr5 min pd > $ 11,876.64~",
+            "quote": "1650~A~respond to pr5 min pd > $ 11,876.64~"
+          },
+          {
+            "id": "1700~A~respond to 5 min predispatch >$ 12,290.98~",
+            "quote": "1700~A~respond to 5 min predispatch >$ 12,290.98~"
+          },
+          {
+            "id": "1720~A~respond to 5 min pd. >$ 14,467.79~",
+            "quote": "1720~A~respond to 5 min pd. >$ 14,467.79~"
+          },
+          {
+            "id": "1735~A~respond to 5 min pd <$578.81~",
+            "quote": "1735~A~respond to 5 min pd <$578.81~"
+          },
+          {
+            "id": "1805~a~out of mcl mode. bands adjusted based on availablility",
+            "quote": "1805~a~out of mcl mode. bands adjusted based on availablility"
+          },
+          {
+            "id": "18:10:07 A VIC 5min actual price $10,893.22 higher than 5min pd 18:15@18:06 ($14,700.00)",
+            "quote": "18:10:07 A VIC 5min actual price $10,893.22 higher than 5min pd 18:15@18:06 ($14,700.00)"
+          },
+          {
+            "id": "1805~A~mat chg VIC gen lya3 and VIC price 1810,1815,1820 and p5 fcst 1825-1915 sl~",
+            "quote": "1805~A~mat chg VIC gen lya3 and VIC price 1810,1815,1820 and p5 fcst 1825-1915 sl~"
+          },
+          {
+            "id": "1549P change in avail - peaking enabled sl",
+            "quote": "1549P change in avail - peaking enabled sl"
+          },
+          {
+            "id": "1827~P~soc/mw change (1828 scheduled update)",
+            "quote": "1827~P~soc/mw change (1828 scheduled update)"
+          }
+        ],
+        "event_date": "2020-01-30",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Victoria is connected to Tasmania via Basslink and to New South Wales via the Vic-NSW interconnector."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Victoria is connected to Tasmania via Basslink and to New South Wales via the Vic-NSW interconnector."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Following the trip of the Loy Yang A unit 3, imports into Victoria, across the Vic-NSW interconnector, were up to 580 MW higher than forecast, four hours prior."
+          }
+        ],
+        "intervals": {
+          "quote": "On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.",
+          "text": "6.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.",
+          "value": 12217
+        },
+        "rebid_set_price": {
+          "quote": "Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/30_Jan_$5000_Report_Vic_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/30%20Jan%20%245000%20Report%20Vic%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2159,
+    "per_attempt": [
+      {
+        "completion_tokens": 2159,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 16110,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 18269
+      }
+    ],
+    "prompt_tokens": 16110,
+    "reasoning_tokens": 0,
+    "total_tokens": 18269
+  }
+}

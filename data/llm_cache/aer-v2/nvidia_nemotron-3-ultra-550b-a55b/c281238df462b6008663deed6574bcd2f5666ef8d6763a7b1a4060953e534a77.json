@@ -1,0 +1,316 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:20:09+00:00",
+  "failure": null,
+  "input_sha256": "436fbd20c21c3e40b282b1dbab3f9cfcd1ff4291fc259ec02182903c8b73eeae",
+  "key": "c281238df462b6008663deed6574bcd2f5666ef8d6763a7b1a4060953e534a77",
+  "latency_s": 38.06,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-03-05\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm, 5:30 pm\", \"quote\": \"Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27\"}, \"peak_price\": {\"value\": 9975, \"quote\": \"4:00 pm $9975 2679 $9950 0\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}, {\"event_date\": \"2008-03-06\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm\", \"quote\": \"Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76\"}, \"peak_price\": {\"value\": 9951, \"quote\": \"4:00 pm $9951 2740 $1560 130\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}, {\"event_date\": \"2008-03-07\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3:30 pm, 4:00 pm\", \"quote\": \"Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37\"}, \"peak_price\": {\"value\": 7004, \"quote\": \"4:00 pm $7004 2809 $6954 37\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}, {\"event_date\": \"2008-03-12\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4:30 pm, 5:00 pm, 5:30 pm, 6:00 pm\", \"quote\": \"Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"4:30 pm $10 000 2915 $10 000 10\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}, {\"label\": \"network_outage\", \"quote\": \"lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"unit B3 (200 MW) tripped. A rebid at 8.31 pm on 11 March saw the return of this unit delayed\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 9.22 am on 12 March unit A4 tripped from 100 MW\"}], \"constraints_named\": [{\"id\": \"MN20823\", \"quote\": \"The reason given was \\\"Interconnector Constraint: MN20823\\\"\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}, {\"event_date\": \"2008-03-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2:30 pm, 3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm, 5:30 pm\", \"quote\": \"Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"3:00 pm $10 000 2847 $968 116\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}, {\"event_date\": \"2008-03-17\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4:00 pm, 4:30 pm\", \"quote\": \"Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122\"}, \"peak_price\": {\"value\": 7894, \"quote\": \"4:30 pm $7894 3077 $362 122\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the import limit into South Australia from Victoria, contributed to the high priced events\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"AGL was effectively in a position to set the spot price for the majority of the high priced events.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-05",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27",
+          "text": "3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm, 5:30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4:00 pm $9975 2679 $9950 0",
+          "value": 9975
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-06",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76",
+          "text": "3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4:00 pm $9951 2740 $1560 130",
+          "value": 9951
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-07",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37",
+          "text": "3:30 pm, 4:00 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4:00 pm $7004 2809 $6954 37",
+          "value": 7004
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          },
+          {
+            "label": "network_outage",
+            "quote": "lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "unit B3 (200 MW) tripped. A rebid at 8.31 pm on 11 March saw the return of this unit delayed"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 9.22 am on 12 March unit A4 tripped from 100 MW"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "MN20823",
+            "quote": "The reason given was \"Interconnector Constraint: MN20823\""
+          }
+        ],
+        "event_date": "2008-03-12",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20",
+          "text": "4:30 pm, 5:00 pm, 5:30 pm, 6:00 pm"
+        },
+        "network_outages": {
+          "quote": "lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "4:30 pm $10 000 2915 $10 000 10",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87",
+          "text": "2:30 pm, 3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm, 5:00 pm, 5:30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "3:00 pm $10 000 2847 $968 116",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 5, 6, 7, 12 and 13 March, AGL was the only participant that offered significant amounts of capacity at over $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-17",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the import limit into South Australia from Victoria, contributed to the high priced events"
+          }
+        ],
+        "intervals": {
+          "quote": "Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122",
+          "text": "4:00 pm, 4:30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4:30 pm $7894 3077 $362 122",
+          "value": 7894
+        },
+        "rebid_set_price": {
+          "quote": "AGL was effectively in a position to set the spot price for the majority of the high priced events.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_5_to_17_March_2008_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_5%20to%2017%20March%202008%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2908,
+    "per_attempt": [
+      {
+        "completion_tokens": 2908,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 36539,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 39447
+      }
+    ],
+    "prompt_tokens": 36539,
+    "reasoning_tokens": 0,
+    "total_tokens": 39447
+  }
+}

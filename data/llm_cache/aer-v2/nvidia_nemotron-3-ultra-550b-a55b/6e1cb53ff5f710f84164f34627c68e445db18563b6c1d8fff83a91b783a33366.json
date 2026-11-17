@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:28:35+00:00",
+  "failure": null,
+  "input_sha256": "4f65a6521d6f8354f0b2044234efd6b0a6d9aa61d4072c3f69f73583b31f73de",
+  "key": "6e1cb53ff5f710f84164f34627c68e445db18563b6c1d8fff83a91b783a33366",
+  "latency_s": 10.03,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-12-01\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"16 dispatch intervals where the price was above $5000/MWh\", \"quote\": \"There were 16 dispatch intervals where the price was above $5000/MWh.\"}, \"peak_price\": {\"value\": 13767, \"quote\": \"On 1 December the spot price for electricity in South Australia reached $13 767/MWh at 2 am, $5066/MWh at 3 am and $6674/MWh at 3.30 am.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector. At 12.16 am a fault occurred on this line, tripping the interconnector and separating South Australia from the NEM.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"With only 90 MW of generation capacity in South Australia priced between $0/MWh and $10 000/MWh, the sudden loss of up to 250 MW of imports from Victoria across Heywood meant high priced generation was dispatched to meet demand.\"}, {\"label\": \"demand\", \"quote\": \"At 12.16 am the UFLS scheme shed around 190 MW of load in South Australia. A decrease in load is reflected as a decrease in demand in market systems. Another 40 MW reduction also occurred, not associated with the UFLS scheme.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO invoked constraints to manage the power system, resulting in the dispatch price rising sharply.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Immediately prior to the incident there were two planned network outages underway: Heywood No.2 500kV busbar, first notified to the market through the Network Outage Schedule (NOS) on 22 August and commenced 30 November 2016. Heywood - APD No.2 500kV line, first notified to the market through the NOS on 7 November and commenced 28 November 2016.\"}], \"constraints_named\": [{\"id\": \"F-I_HYSE\", \"quote\": \"The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS\"}, {\"id\": \"S-X_BC_CP\", \"quote\": \"The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS\"}, {\"id\": \"V-HYTX_M12\", \"quote\": \"The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS\"}, {\"id\": \"V-HY_500BUS\", \"quote\": \"The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS\"}, {\"id\": \"#TORRA1_OF\", \"quote\": \"The following constraints were invoked: #TORRA1_OF #TORRA1_PF\"}, {\"id\": \"#TORRA1_PF\", \"quote\": \"The following constraints were invoked: #TORRA1_OF #TORRA1_PF\"}, {\"id\": \"#PPCCGT_OE\", \"quote\": \"The following constraint was invoked: #PPCCGT_OE\"}], \"interconnectors_named\": [{\"name\": \"Heywood Interconnector\", \"quote\": \"Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector.\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink continued to operate at around 100 MW for a majority of the incident but it does not provide a synchronous connection to the rest of the NEM.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector. At 12.16 am a fault occurred on this line, tripping the interconnector and separating South Australia from the NEM.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the high prices in this event.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector. At 12.16 am a fault occurred on this line, tripping the interconnector and separating South Australia from the NEM."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "With only 90 MW of generation capacity in South Australia priced between $0/MWh and $10 000/MWh, the sudden loss of up to 250 MW of imports from Victoria across Heywood meant high priced generation was dispatched to meet demand."
+          },
+          {
+            "label": "demand",
+            "quote": "At 12.16 am the UFLS scheme shed around 190 MW of load in South Australia. A decrease in load is reflected as a decrease in demand in market systems. Another 40 MW reduction also occurred, not associated with the UFLS scheme."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO invoked constraints to manage the power system, resulting in the dispatch price rising sharply."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Immediately prior to the incident there were two planned network outages underway: Heywood No.2 500kV busbar, first notified to the market through the Network Outage Schedule (NOS) on 22 August and commenced 30 November 2016. Heywood - APD No.2 500kV line, first notified to the market through the NOS on 7 November and commenced 28 November 2016."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F-I_HYSE",
+            "quote": "The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS"
+          },
+          {
+            "id": "S-X_BC_CP",
+            "quote": "The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS"
+          },
+          {
+            "id": "V-HYTX_M12",
+            "quote": "The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS"
+          },
+          {
+            "id": "V-HY_500BUS",
+            "quote": "The following constraint sets have been invoked for this outage: F-I_HYSE (includes F-S_LREG_0035 and F-S_RREG_0035) S-X_BC_CP V-HYTX_M12 V-HY_500BUS"
+          },
+          {
+            "id": "#TORRA1_OF",
+            "quote": "The following constraints were invoked: #TORRA1_OF #TORRA1_PF"
+          },
+          {
+            "id": "#TORRA1_PF",
+            "quote": "The following constraints were invoked: #TORRA1_OF #TORRA1_PF"
+          },
+          {
+            "id": "#PPCCGT_OE",
+            "quote": "The following constraint was invoked: #PPCCGT_OE"
+          }
+        ],
+        "event_date": "2016-12-01",
+        "interconnectors_named": [
+          {
+            "name": "Heywood Interconnector",
+            "quote": "Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink continued to operate at around 100 MW for a majority of the incident but it does not provide a synchronous connection to the rest of the NEM."
+          }
+        ],
+        "intervals": {
+          "quote": "There were 16 dispatch intervals where the price was above $5000/MWh.",
+          "text": "16 dispatch intervals where the price was above $5000/MWh"
+        },
+        "network_outages": {
+          "quote": "Planned network outages in the south west of Victoria resulted in only one line connecting South Australia to Victoria via the Heywood Interconnector. At 12.16 am a fault occurred on this line, tripping the interconnector and separating South Australia from the NEM.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 1 December the spot price for electricity in South Australia reached $13 767/MWh at 2 am, $5066/MWh at 3 am and $6674/MWh at 3.30 am.",
+          "value": 13767
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the high prices in this event.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh__1_December__2016_12.16_am_event_(SA)_3.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20%201%20December%20%202016%2012.16%20am%20event%20%28SA%29_3.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1149,
+    "per_attempt": [
+      {
+        "completion_tokens": 1149,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 17492,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 18641
+      }
+    ],
+    "prompt_tokens": 17492,
+    "reasoning_tokens": 0,
+    "total_tokens": 18641
+  }
+}

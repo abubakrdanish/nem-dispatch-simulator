@@ -1,0 +1,121 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:15:14+00:00",
+  "failure": null,
+  "input_sha256": "7bd431bcca50c030427f1aa0f5d93c77824bda882b0238e7e9f1757c6ec9b1ec",
+  "key": "a25ef51869b6071f1da1a3b5d2e8d614ef2e2c766b96cafd18bf382fddfa9579",
+  "latency_s": 10.34,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-05-23\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"the 8 am trading interval\", \"quote\": \"On Tuesday 23 May, the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval.\"}, \"peak_price\": {\"value\": 6509, \"quote\": \"On Tuesday 23 May, the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand was 92 MW or six per cent higher than forecast four hours ahead.\"}, {\"label\": \"wind_output\", \"quote\": \"Taking into account non-scheduled generation, which was 80 MW higher than forecast, the demand was 172 MW or 10 per cent higher on the same basis.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"At 6.04 am, Hydro Tasmania reduced the available capacity at Reece unit one by 114 MW. The rebid reason given was \\\"Plant outage::Reece 1\\\".\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The interaction between the frequency and energy markets, and Basslink are explained in more detail in Appendix C.\"}, {\"label\": \"constraint_violation\", \"quote\": \"Six FCAS constraints were violated during the trading interval.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The no-go zone is not modelled in the 30 minute predispatch forecast system because it is a sub 5-minute issue. As a result, the limit on flow into Tasmania was forecast to be around 300 MW, both four and 12 hours ahead. During dispatch, however, the no-go zone and its interactions with the frequency markets kept flows north and counter-priced into Victoria for much of the trading interval.\"}], \"constraints_named\": [{\"id\": \"F_T++NIL_MG_R5\", \"quote\": \"RAISE 5M F_T++NIL_MG_R5 Yes 30,000\"}, {\"id\": \"F_T++RREG_0050\", \"quote\": \"RAISE REG F_T++RREG_0050 Yes 20,000\"}, {\"id\": \"F_T++NIL_MG_R6\", \"quote\": \"RAISE 6S F_T++NIL_MG_R6 Yes 50,000\"}, {\"id\": \"F_T+NIL_MG_R5\", \"quote\": \"RAISE 5M F_T+NIL_MG_R5 No 30,000\"}, {\"id\": \"F_T+NIL_MG_R6\", \"quote\": \"RAISE 6S F_T+NIL_MG_R6 No 50,000\"}, {\"id\": \"F_T+RREG_0050\", \"quote\": \"RAISE REG F_T+RREG_0050 No 20,000\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The interaction between the Basslink no-go zone and the Frequency Control Ancillary Service (FCAS) markets led to counter price flows into Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the high prices in the energy or frequency markets.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand was 92 MW or six per cent higher than forecast four hours ahead."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Taking into account non-scheduled generation, which was 80 MW higher than forecast, the demand was 172 MW or 10 per cent higher on the same basis."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "At 6.04 am, Hydro Tasmania reduced the available capacity at Reece unit one by 114 MW. The rebid reason given was \"Plant outage::Reece 1\"."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The interaction between the frequency and energy markets, and Basslink are explained in more detail in Appendix C."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "Six FCAS constraints were violated during the trading interval."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The no-go zone is not modelled in the 30 minute predispatch forecast system because it is a sub 5-minute issue. As a result, the limit on flow into Tasmania was forecast to be around 300 MW, both four and 12 hours ahead. During dispatch, however, the no-go zone and its interactions with the frequency markets kept flows north and counter-priced into Victoria for much of the trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F_T++NIL_MG_R5",
+            "quote": "RAISE 5M F_T++NIL_MG_R5 Yes 30,000"
+          },
+          {
+            "id": "F_T++RREG_0050",
+            "quote": "RAISE REG F_T++RREG_0050 Yes 20,000"
+          },
+          {
+            "id": "F_T++NIL_MG_R6",
+            "quote": "RAISE 6S F_T++NIL_MG_R6 Yes 50,000"
+          },
+          {
+            "id": "F_T+NIL_MG_R5",
+            "quote": "RAISE 5M F_T+NIL_MG_R5 No 30,000"
+          },
+          {
+            "id": "F_T+NIL_MG_R6",
+            "quote": "RAISE 6S F_T+NIL_MG_R6 No 50,000"
+          },
+          {
+            "id": "F_T+RREG_0050",
+            "quote": "RAISE REG F_T+RREG_0050 No 20,000"
+          }
+        ],
+        "event_date": "2006-05-23",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The interaction between the Basslink no-go zone and the Frequency Control Ancillary Service (FCAS) markets led to counter price flows into Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "On Tuesday 23 May, the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval.",
+          "text": "the 8 am trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Tuesday 23 May, the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval.",
+          "value": 6509
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the high prices in the energy or frequency markets.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_May_2006_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%20May%202006%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 798,
+    "per_attempt": [
+      {
+        "completion_tokens": 798,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9945
+      }
+    ],
+    "prompt_tokens": 9147,
+    "reasoning_tokens": 0,
+    "total_tokens": 9945
+  }
+}

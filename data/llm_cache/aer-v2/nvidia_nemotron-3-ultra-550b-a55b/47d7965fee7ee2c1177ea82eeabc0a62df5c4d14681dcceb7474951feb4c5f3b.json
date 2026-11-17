@@ -1,0 +1,106 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:23:25+00:00",
+  "failure": null,
+  "input_sha256": "7368ce1783059c41428b354b54b556b1427d36b09d631f7f69501f3555a7cc13",
+  "key": "47d7965fee7ee2c1177ea82eeabc0a62df5c4d14681dcceb7474951feb4c5f3b",
+  "latency_s": 5.4,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-03-01\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"4 pm, 4.30 pm and 5 pm trading intervals\", \"quote\": \"The spot price for electricity for the 4 pm, 4.30 pm and 5 pm trading intervals reached $6915/MWh, $12 635/MWh and $12 472/MWh respectively in Victoria, and $6765/MWh, $12 609/MWh and $12 067/MWh respectively in South Australia.\"}, \"peak_price\": {\"value\": 12635, \"quote\": \"The spot price for electricity for the 4 pm, 4.30 pm and 5 pm trading intervals reached $6915/MWh, $12 635/MWh and $12 472/MWh respectively in Victoria, and $6765/MWh, $12 609/MWh and $12 067/MWh respectively in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Very high temperatures in Melbourne and Adelaide led to high demand in both regions.\"}, {\"label\": \"wind_output\", \"quote\": \"The difference was primarily due to reduced availability of wind generation. During the high priced trading intervals semi-scheduled wind generation reached a maximum of 390 MW, as compared to an installed capacity of 2400 MW. Wind generation in both regions was 160 to 220 MW below forecast, reducing potential supply of low-priced electricity.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia.\"}], \"constraints_named\": [{\"id\": \"N^^V_NIL_1\", \"quote\": \"constraint management - N^^V_NIL_1 SL\"}, {\"id\": \"V:S_600_HY_TEST\", \"quote\": \"Manage constraint: V:S_600_HY_TEST~\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink\"}, {\"name\": \"Murraylink\", \"quote\": \"Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink\"}, {\"name\": \"VIC-NSW\", \"quote\": \"Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink, to New South Wales via the Victoria - New South Wales ( VIC - NSW) interconnector\"}, {\"name\": \"Basslink\", \"quote\": \"and to Tasmania via Basslink.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Very high temperatures in Melbourne and Adelaide led to high demand in both regions."
+          },
+          {
+            "label": "wind_output",
+            "quote": "The difference was primarily due to reduced availability of wind generation. During the high priced trading intervals semi-scheduled wind generation reached a maximum of 390 MW, as compared to an installed capacity of 2400 MW. Wind generation in both regions was 160 to 220 MW below forecast, reducing potential supply of low-priced electricity."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N^^V_NIL_1",
+            "quote": "constraint management - N^^V_NIL_1 SL"
+          },
+          {
+            "id": "V:S_600_HY_TEST",
+            "quote": "Manage constraint: V:S_600_HY_TEST~"
+          }
+        ],
+        "event_date": "2019-03-01",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink"
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "Victoria is connected to South Australia via two interconne ctors, Heywood and Murraylink, to New South Wales via the Victoria - New South Wales ( VIC - NSW) interconnector"
+          },
+          {
+            "name": "Basslink",
+            "quote": "and to Tasmania via Basslink."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price for electricity for the 4 pm, 4.30 pm and 5 pm trading intervals reached $6915/MWh, $12 635/MWh and $12 472/MWh respectively in Victoria, and $6765/MWh, $12 609/MWh and $12 067/MWh respectively in South Australia.",
+          "text": "4 pm, 4.30 pm and 5 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price for electricity for the 4 pm, 4.30 pm and 5 pm trading intervals reached $6915/MWh, $12 635/MWh and $12 472/MWh respectively in Victoria, and $6765/MWh, $12 609/MWh and $12 067/MWh respectively in South Australia.",
+          "value": 12635
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding into high price bands did not contribute to the high prices in Victoria and South Australia.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/D19-61067_20190301_$5000_SA_&_VIC_-_Report_(Final).pdf",
+    "url": "https://www.aer.gov.au/system/files/D19-61067%2020190301%20%245000%20SA%20%26%20VIC%20-%20Report%20%28Final%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 682,
+    "per_attempt": [
+      {
+        "completion_tokens": 682,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 14309,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14991
+      }
+    ],
+    "prompt_tokens": 14309,
+    "reasoning_tokens": 0,
+    "total_tokens": 14991
+  }
+}

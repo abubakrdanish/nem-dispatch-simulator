@@ -1,0 +1,523 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:03:48+00:00",
+  "failure": null,
+  "input_sha256": "be3a09f00c1fdee3fad2aa8471a7efb45a69c14f40400e4a25f6695ab01b7ab6",
+  "key": "6ca5f46eafcb99740b9ff9f44584eb798febacb6d443fe6dfb18458eab582aba",
+  "latency_s": 62.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2024-01-19\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.35 pm, 6.40 pm, 6.45 pm, 6.50 pm, 6.55 pm, 7 pm\", \"quote\": \"Date Time 5-minute price ($ per MWh) 19 January 6.35 pm 10,389 6.40 pm 14,936 6.45 pm 14,928 6.50 pm 7,449 6.55 pm 14,928 7 pm 388 Average 30-minute price 10,503\"}, \"peak_price\": {\"value\": 14936, \"quote\": \"Date Time 5-minute price ($ per MWh) 19 January 6.35 pm 10,389 6.40 pm 14,936 6.45 pm 14,928 6.50 pm 7,449 6.55 pm 14,928 7 pm 388 Average 30-minute price 10,503\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Queensland, with a maximum temperature of 34°C in Brisbane, drove high demand. Demand during the high price was 270 MW higher than forecast, and only 226 MW below the Queensland all-time record.\"}, {\"label\": \"network_outage\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW. To maintain system security, flows were forced into NSW, on average by 134 MW, during the high-priced period.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the high-priced period, the Queensland to NSW interconnector (QNI) was importing an average of 386 MW into Queensland, around half its import capability. These reduced flows were due to a system normal constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Including the units at Callide C, this increased the unavailable baseload capacity across Queensland to 1,210 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"An unplanned outage at Gladstone unit 2 removed 280 MW of available baseload capacity. In addition, 2 units at Millmerran experienced plant issues the day before and were not fully available. This removed 90 MW of available baseload capacity.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for technical and commercial reasons contributed to all five of the 5 minute high-price intervals.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"These reduced flows were due to a system normal constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora was limited by a system normal constraint in NSW to avoid the possible overloading of the Lismore to Dunoon power lines.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the high-priced period, the Queensland to NSW interconnector (QNI) was importing an average of 386 MW into Queensland, around half its import capability.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW. To maintain system security, flows were forced into NSW, on average by 134 MW, during the high-priced period.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for technical and commercial reasons contributed to all five of the 5 minute high-price intervals.\"}}, {\"event_date\": \"2024-01-21\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"6.30 pm (QLD1), 7 pm (QLD1 and NSW1)\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for two 30-minute periods on 21 January - in Queensland alone at 6.30 pm, and in both Queensland and NSW at 7 pm (Table 2.1).\"}, \"peak_price\": {\"value\": 12973, \"quote\": \"Date Time 30-minute Queensland price ($ per MWh) 30-minute NSW price ($ per MWh) 21 January 6.30 pm 12,973 Not a high price 7 pm 9,527 8,008\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in both regions, with a Brisbane maximum of 33.5°C and a Sydney maximum of 33.9°C, drove high demand, which was much higher than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network congestion in northern NSW reduced Queensland's ability to access lower-priced energy through NSW. While network congestion in the south of NSW reduced NSW's ability to access lower-priced energy from within the region as well as from Victoria.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Including the units at Callide C, this increased the amount of unavailable baseload capacity in Queensland to 1,050 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The day before the high price, Genuity withdrew 85 MW of capacity from its Millmerran station, and a further 40 MW on the day of the high price, due to a tube leak. On the day of the high price, Stanwell Corporation withdrew 85 MW of capacity from its Tarong station due to a tube leak.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for technical reasons contributed to the high prices.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"This was because flows were forced into NSW to manage a system normal constraint in NSW on the Bayswater to Liddell lines, to avoid a possible overload (section 1.3).\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora was limited by a system normal constraint in NSW to avoid the possible overloading of the Lismore to Dunoon power lines.\"}, {\"id\": \"Collector to Marulan\", \"quote\": \"Flows through southern NSW were limited by a constraint to avoid overloading the Collector to Marulan line.\"}, {\"id\": \"NRM constraint\", \"quote\": \"AEMO invoked a constraint that limited flows out of Queensland, and this contributed to the high price in NSW. This constraint was violated to keep the system secure and contributed to setting the high price for the 7 pm period in NSW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the 6.30 pm high price, the Queensland to NSW Interconnector (QNI) was exporting to NSW even though prices were lower in NSW.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was exporting only 4 MW into Queensland, compared to its nominal capacity of 107 MW.\"}, {\"name\": \"Victoria to NSW\", \"quote\": \"In NSW, the Victoria to NSW interconnector was importing an average of only 44 MW during the 7 pm high price, around 200 MW less than forecast, and substantially less than its nominal capacity of around 1,500 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for technical reasons contributed to the high prices.\"}}, {\"event_date\": \"2024-01-27\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.30 pm\", \"quote\": \"Date Time 30-minute price ($ per MWh) 27 January 6.30 pm 12,793\"}, \"peak_price\": {\"value\": 12793, \"quote\": \"Date Time 30-minute price ($ per MWh) 27 January 6.30 pm 12,793\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures on both days, with Brisbane maximums of 35°C and 31°C respectively, exacerbated by high humidity drove high demand. Demand on 27 January was particularly high, being one of the 3 days in the quarter that exceeded the previous all-time demand record for Queensland.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability. These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"label\": \"network_outage\", \"quote\": \"Flows were also constrained by the outage of network equipment in NSW on 27 January. The outage of the network equipment was the Lismore static VAR compensator.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Including the units at Callide C, this brought the total baseload outages across Queensland to 1,616 MW on the days of the high-priced events.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Genuity's Millmerran unit 1 and Stanwell Corporation's Tarong unit 2 went on planned outages on 23 and 24 January respectively, removing in total 776 MW of available baseload generation.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint limited flows into Queensland to prevent overloading the Bayswater to Liddell lines.\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Flows were also constrained by the outage of network equipment in NSW on 27 January. The outage of the network equipment was the Lismore static VAR compensator.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January.\"}}, {\"event_date\": \"2024-01-29\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm, 6.30 pm, 7 pm\", \"quote\": \"Date Time 30-minute price ($ per MWh) 29 January 6 pm 6,565 6.30 pm 8,562 7 pm 5,346\"}, \"peak_price\": {\"value\": 8562, \"quote\": \"Date Time 30-minute price ($ per MWh) 29 January 6 pm 6,565 6.30 pm 8,562 7 pm 5,346\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures on both days, with Brisbane maximums of 35°C and 31°C respectively, exacerbated by high humidity drove high demand. Demand on 27 January was particularly high, being one of the 3 days in the quarter that exceeded the previous all-time demand record for Queensland.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability. These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"label\": \"network_outage\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW. It was also impacted by the constraint on the Bayswater to Liddell lines and the outage of network equipment.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Including the units at Callide C, this brought the total baseload outages across Queensland to 1,616 MW on the days of the high-priced events.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Genuity's Millmerran unit 1 and Stanwell Corporation's Tarong unit 2 went on planned outages on 23 and 24 January respectively, removing in total 776 MW of available baseload generation.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"The rebid reasons provided was a change in its state of charge.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint limited flows into Queensland to prevent overloading the Bayswater to Liddell lines.\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"It was also impacted by the constraint on the Bayswater to Liddell lines and the outage of network equipment.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January.\"}}, {\"event_date\": \"2024-02-23\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.35 pm, 6.40 pm, 6.45 pm, 6.50 pm, 6.55 pm, 7.00 pm\", \"quote\": \"Date Time 5-minute price ($ per MWh) 23 February 6.35 pm 1,100 6.40 pm 1,100 6.45 pm 2,913 6.50 pm 14,898 6.55 pm 1,049 7.00 pm 11,677 Average 30-minute price 5,456\"}, \"peak_price\": {\"value\": 14898, \"quote\": \"Date Time 5-minute price ($ per MWh) 23 February 6.35 pm 1,100 6.40 pm 1,100 6.45 pm 2,913 6.50 pm 14,898 6.55 pm 1,049 7.00 pm 11,677 Average 30-minute price 5,456\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures, with Brisbane's maximum of 35°C drove high demand. Demand increased by 61 MW and 31 MW at 6.50 pm and 7 pm respectively.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the high-priced period, the Queensland to NSW interconnector (QNI) was forcing an average of 8 MW into NSW and thus preventing Queensland from potentially accessing up to 750 MW of cheaper generation from NSW. Flows were forced primarily due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW.\"}, {\"label\": \"network_outage\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW. An outage of the Lismore static VAR compensator in NSW.\"}, {\"label\": \"wind_output\", \"quote\": \"Average wind output during the high-priced period was 64 MW out of a total of over 1,000 MW of registered wind capacity in Queensland. Wind output was less than forecast an hour earlier by 83 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Including the units at Callide C, this brought the total baseload outages across Queensland to 1,120 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"An unplanned outage at a Gladstone unit contributed to tight market conditions. Gladstone unit 1 went on an unplanned outage from 18 February until 4 March due to a technical issue, removing 280 MW of available baseload generation.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for commercial as well as technical reasons contributed to the high prices.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"Flows were forced primarily due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint prevented flows into Queensland as a preventative measure, to avoid the possible overload of the two Bayswater to Liddell lines.\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the high-priced period, the Queensland to NSW interconnector (QNI) was forcing an average of 8 MW into NSW and thus preventing Queensland from potentially accessing up to 750 MW of cheaper generation from NSW.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW. An outage of the Lismore static VAR compensator in NSW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for commercial as well as technical reasons contributed to the high prices.\"}}, {\"event_date\": \"2024-02-26\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm, 6.30 pm\", \"quote\": \"Date Time 30-minute price ($ per MWh) 26 February 6 pm 7,785 6.30 pm 6,117\"}, \"peak_price\": {\"value\": 7785, \"quote\": \"Date Time 30-minute price ($ per MWh) 26 February 6 pm 7,785 6.30 pm 6,117\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Queensland, with a maximum temperature of 32°C in Brisbane, drove high demand. Average demand during the high prices was 132 MW and 42 MW higher than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limitations in NSW reduced Queensland's ability to access cheaper generation through NSW. During the 30-minutes to 6 pm, average flows over the Queensland to NSW interconnector (QNI) were forced, counter-price, into NSW at 38 MW. During the 30-minutes to 6.30 pm, average flows were from NSW into Queensland but averaged only 38 MW. As with the other high price events covered in this report, these reduced flows were due to a constraint to avoid overloading the Bayswater to Liddell lines.\"}, {\"label\": \"network_outage\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The ongoing outages at Gladstone unit 1 and Callide C brought the total baseload outages across Queensland to 1,120 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"There were also some intermediate units unavailable. Arrow Energy's Braemar unit 6 (153 MW) had been on an unplanned outage since 23 February. Origin Energy's Mt Stuart unit 2 (138 MW) had been out since 23 February. Around midday, Alinta Energy's Braemar unit 3 removed 171 MW due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity for technical and commercial reasons contributed to the high price intervals.\"}], \"constraints_named\": [{\"id\": \"Bayswater to Liddell\", \"quote\": \"As with the other high price events covered in this report, these reduced flows were due to a constraint to avoid overloading the Bayswater to Liddell lines.\"}, {\"id\": \"Lismore to Dunoon\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the 30-minutes to 6 pm, average flows over the Queensland to NSW interconnector (QNI) were forced, counter-price, into NSW at 38 MW. During the 30-minutes to 6.30 pm, average flows were from NSW into Queensland but averaged only 38 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity for technical and commercial reasons contributed to the high price intervals.\"}}, {\"event_date\": \"2024-02-29\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"4.30 pm (NSW1), 5 pm (NSW1), 6 pm (NSW1 and QLD1)\", \"quote\": \"The wholesale price of electricity exceeded $5,000 per MWh for four 30-minute periods on 29 February: 3 in NSW and 1 in Queensland (Table 6.1).\"}, \"peak_price\": {\"value\": 13326, \"quote\": \"Date Time 30-minute NSW price ($ per MWh) 30-minute Queensland price ($ per MWh) 29 February 4.30 pm 5,648 Not a high price 5 pm 13,326 Not a high price 6 pm 9,607 7,040\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in both regions, with a maximum temperature of 33°C in Sydney and 31°C in Brisbane, exacerbated by high humidity, drove very high demand which was higher than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Multiple network constraints to manage congestion and to prevent overloading the network contributed to the high prices because they reduced access to low-priced generation from Victoria and southern NSW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The ongoing outages at Gladstone unit 1 and Callide C brought the total baseload outages across Queensland to 1,120 MW and contributed to tight market conditions.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Network congestion led to AEMO capping wind and solar farm output in southern NSW at the time of the high prices which contributed to reduced availability in the region.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity contributed to the high prices. Up to 180 MW was needed to meet demand (Appendix F). These rebids were for commercial as well as for technical reasons.\"}], \"constraints_named\": [{\"id\": \"Collector to Marulan\", \"quote\": \"Flows through southern NSW were limited by a constraint to avoid overloading the Collector to Marulan line. This is a key line linking generation in the south, to load centres to the north, such as Sydney.\"}], \"interconnectors_named\": [{\"name\": \"Victoria to NSW\", \"quote\": \"During the high prices, the Victoria to NSW Interconnector allowed very little to flow into NSW or forced flows counter-price out of NSW. The interconnector's capacity for flows into NSW can be around 1,500 MW.\"}, {\"name\": \"QNI\", \"quote\": \"Prices were generally aligned across Queensland and NSW during the 6 pm high price, so our analysis treats these as one region.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity contributed to the high prices. Up to 180 MW was needed to meet demand (Appendix F). These rebids were for commercial as well as for technical reasons.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Queensland, with a maximum temperature of 34°C in Brisbane, drove high demand. Demand during the high price was 270 MW higher than forecast, and only 226 MW below the Queensland all-time record."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW. To maintain system security, flows were forced into NSW, on average by 134 MW, during the high-priced period."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the high-priced period, the Queensland to NSW interconnector (QNI) was importing an average of 386 MW into Queensland, around half its import capability. These reduced flows were due to a system normal constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Including the units at Callide C, this increased the unavailable baseload capacity across Queensland to 1,210 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "An unplanned outage at Gladstone unit 2 removed 280 MW of available baseload capacity. In addition, 2 units at Millmerran experienced plant issues the day before and were not fully available. This removed 90 MW of available baseload capacity."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for technical and commercial reasons contributed to all five of the 5 minute high-price intervals."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "These reduced flows were due to a system normal constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora was limited by a system normal constraint in NSW to avoid the possible overloading of the Lismore to Dunoon power lines."
+          }
+        ],
+        "event_date": "2024-01-19",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the high-priced period, the Queensland to NSW interconnector (QNI) was importing an average of 386 MW into Queensland, around half its import capability."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "Date Time 5-minute price ($ per MWh) 19 January 6.35 pm 10,389 6.40 pm 14,936 6.45 pm 14,928 6.50 pm 7,449 6.55 pm 14,928 7 pm 388 Average 30-minute price 10,503",
+          "text": "6.35 pm, 6.40 pm, 6.45 pm, 6.50 pm, 6.55 pm, 7 pm"
+        },
+        "network_outages": {
+          "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an ongoing outage of the Lismore static VAR compensator in NSW. To maintain system security, flows were forced into NSW, on average by 134 MW, during the high-priced period.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Date Time 5-minute price ($ per MWh) 19 January 6.35 pm 10,389 6.40 pm 14,936 6.45 pm 14,928 6.50 pm 7,449 6.55 pm 14,928 7 pm 388 Average 30-minute price 10,503",
+          "value": 14936
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for technical and commercial reasons contributed to all five of the 5 minute high-price intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in both regions, with a Brisbane maximum of 33.5°C and a Sydney maximum of 33.9°C, drove high demand, which was much higher than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network congestion in northern NSW reduced Queensland's ability to access lower-priced energy through NSW. While network congestion in the south of NSW reduced NSW's ability to access lower-priced energy from within the region as well as from Victoria."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Including the units at Callide C, this increased the amount of unavailable baseload capacity in Queensland to 1,050 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The day before the high price, Genuity withdrew 85 MW of capacity from its Millmerran station, and a further 40 MW on the day of the high price, due to a tube leak. On the day of the high price, Stanwell Corporation withdrew 85 MW of capacity from its Tarong station due to a tube leak."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for technical reasons contributed to the high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "This was because flows were forced into NSW to manage a system normal constraint in NSW on the Bayswater to Liddell lines, to avoid a possible overload (section 1.3)."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora was limited by a system normal constraint in NSW to avoid the possible overloading of the Lismore to Dunoon power lines."
+          },
+          {
+            "id": "Collector to Marulan",
+            "quote": "Flows through southern NSW were limited by a constraint to avoid overloading the Collector to Marulan line."
+          },
+          {
+            "id": "NRM constraint",
+            "quote": "AEMO invoked a constraint that limited flows out of Queensland, and this contributed to the high price in NSW. This constraint was violated to keep the system secure and contributed to setting the high price for the 7 pm period in NSW."
+          }
+        ],
+        "event_date": "2024-01-21",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the 6.30 pm high price, the Queensland to NSW Interconnector (QNI) was exporting to NSW even though prices were lower in NSW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was exporting only 4 MW into Queensland, compared to its nominal capacity of 107 MW."
+          },
+          {
+            "name": "Victoria to NSW",
+            "quote": "In NSW, the Victoria to NSW interconnector was importing an average of only 44 MW during the 7 pm high price, around 200 MW less than forecast, and substantially less than its nominal capacity of around 1,500 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for two 30-minute periods on 21 January - in Queensland alone at 6.30 pm, and in both Queensland and NSW at 7 pm (Table 2.1).",
+          "text": "6.30 pm (QLD1), 7 pm (QLD1 and NSW1)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Date Time 30-minute Queensland price ($ per MWh) 30-minute NSW price ($ per MWh) 21 January 6.30 pm 12,973 Not a high price 7 pm 9,527 8,008",
+          "value": 12973
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for technical reasons contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures on both days, with Brisbane maximums of 35°C and 31°C respectively, exacerbated by high humidity drove high demand. Demand on 27 January was particularly high, being one of the 3 days in the quarter that exceeded the previous all-time demand record for Queensland."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability. These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Flows were also constrained by the outage of network equipment in NSW on 27 January. The outage of the network equipment was the Lismore static VAR compensator."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Including the units at Callide C, this brought the total baseload outages across Queensland to 1,616 MW on the days of the high-priced events."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Genuity's Millmerran unit 1 and Stanwell Corporation's Tarong unit 2 went on planned outages on 23 and 24 January respectively, removing in total 776 MW of available baseload generation."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint limited flows into Queensland to prevent overloading the Bayswater to Liddell lines."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW."
+          }
+        ],
+        "event_date": "2024-01-27",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "Date Time 30-minute price ($ per MWh) 27 January 6.30 pm 12,793",
+          "text": "6.30 pm"
+        },
+        "network_outages": {
+          "quote": "Flows were also constrained by the outage of network equipment in NSW on 27 January. The outage of the network equipment was the Lismore static VAR compensator.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Date Time 30-minute price ($ per MWh) 27 January 6.30 pm 12,793",
+          "value": 12793
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures on both days, with Brisbane maximums of 35°C and 31°C respectively, exacerbated by high humidity drove high demand. Demand on 27 January was particularly high, being one of the 3 days in the quarter that exceeded the previous all-time demand record for Queensland."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability. These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW. It was also impacted by the constraint on the Bayswater to Liddell lines and the outage of network equipment."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Including the units at Callide C, this brought the total baseload outages across Queensland to 1,616 MW on the days of the high-priced events."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Genuity's Millmerran unit 1 and Stanwell Corporation's Tarong unit 2 went on planned outages on 23 and 24 January respectively, removing in total 776 MW of available baseload generation."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "The rebid reasons provided was a change in its state of charge."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "These reduced flows were due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint limited flows into Queensland to prevent overloading the Bayswater to Liddell lines."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW."
+          }
+        ],
+        "event_date": "2024-01-29",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the high-priced periods, the Queensland to NSW interconnector (QNI) was importing an average of 394 MW into Queensland on 27 January and up to 205 MW on 29 January, around half of its import capability."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was primarily affected by a constraint to avoid the possible overload of the Lismore to Dunoon power lines in NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "Date Time 30-minute price ($ per MWh) 29 January 6 pm 6,565 6.30 pm 8,562 7 pm 5,346",
+          "text": "6 pm, 6.30 pm, 7 pm"
+        },
+        "network_outages": {
+          "quote": "It was also impacted by the constraint on the Bayswater to Liddell lines and the outage of network equipment.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Date Time 30-minute price ($ per MWh) 29 January 6 pm 6,565 6.30 pm 8,562 7 pm 5,346",
+          "value": 8562
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for technical reasons contributed to the high prices on 29 January but did not contribute on 27 January.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures, with Brisbane's maximum of 35°C drove high demand. Demand increased by 61 MW and 31 MW at 6.50 pm and 7 pm respectively."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the high-priced period, the Queensland to NSW interconnector (QNI) was forcing an average of 8 MW into NSW and thus preventing Queensland from potentially accessing up to 750 MW of cheaper generation from NSW. Flows were forced primarily due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW. An outage of the Lismore static VAR compensator in NSW."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Average wind output during the high-priced period was 64 MW out of a total of over 1,000 MW of registered wind capacity in Queensland. Wind output was less than forecast an hour earlier by 83 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Including the units at Callide C, this brought the total baseload outages across Queensland to 1,120 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "An unplanned outage at a Gladstone unit contributed to tight market conditions. Gladstone unit 1 went on an unplanned outage from 18 February until 4 March due to a technical issue, removing 280 MW of available baseload generation."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for commercial as well as technical reasons contributed to the high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "Flows were forced primarily due to a constraint on the Bayswater to Liddell lines to maintain system security in NSW. The constraint prevented flows into Queensland as a preventative measure, to avoid the possible overload of the two Bayswater to Liddell lines."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW."
+          }
+        ],
+        "event_date": "2024-02-23",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the high-priced period, the Queensland to NSW interconnector (QNI) was forcing an average of 8 MW into NSW and thus preventing Queensland from potentially accessing up to 750 MW of cheaper generation from NSW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "Date Time 5-minute price ($ per MWh) 23 February 6.35 pm 1,100 6.40 pm 1,100 6.45 pm 2,913 6.50 pm 14,898 6.55 pm 1,049 7.00 pm 11,677 Average 30-minute price 5,456",
+          "text": "6.35 pm, 6.40 pm, 6.45 pm, 6.50 pm, 6.55 pm, 7.00 pm"
+        },
+        "network_outages": {
+          "quote": "Terranora, the other Queensland to NSW interconnector, was constrained by an outage of network equipment in NSW. An outage of the Lismore static VAR compensator in NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Date Time 5-minute price ($ per MWh) 23 February 6.35 pm 1,100 6.40 pm 1,100 6.45 pm 2,913 6.50 pm 14,898 6.55 pm 1,049 7.00 pm 11,677 Average 30-minute price 5,456",
+          "value": 14898
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for commercial as well as technical reasons contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Queensland, with a maximum temperature of 32°C in Brisbane, drove high demand. Average demand during the high prices was 132 MW and 42 MW higher than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network limitations in NSW reduced Queensland's ability to access cheaper generation through NSW. During the 30-minutes to 6 pm, average flows over the Queensland to NSW interconnector (QNI) were forced, counter-price, into NSW at 38 MW. During the 30-minutes to 6.30 pm, average flows were from NSW into Queensland but averaged only 38 MW. As with the other high price events covered in this report, these reduced flows were due to a constraint to avoid overloading the Bayswater to Liddell lines."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The ongoing outages at Gladstone unit 1 and Callide C brought the total baseload outages across Queensland to 1,120 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "There were also some intermediate units unavailable. Arrow Energy's Braemar unit 6 (153 MW) had been on an unplanned outage since 23 February. Origin Energy's Mt Stuart unit 2 (138 MW) had been out since 23 February. Around midday, Alinta Energy's Braemar unit 3 removed 171 MW due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity for technical and commercial reasons contributed to the high price intervals."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Bayswater to Liddell",
+            "quote": "As with the other high price events covered in this report, these reduced flows were due to a constraint to avoid overloading the Bayswater to Liddell lines."
+          },
+          {
+            "id": "Lismore to Dunoon",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland."
+          }
+        ],
+        "event_date": "2024-02-26",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the 30-minutes to 6 pm, average flows over the Queensland to NSW interconnector (QNI) were forced, counter-price, into NSW at 38 MW. During the 30-minutes to 6.30 pm, average flows were from NSW into Queensland but averaged only 38 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora, the other Queensland to NSW interconnector, was impacted by a constraint to avoid overloading the Lismore to Dunoon lines in NSW, forcing average flows of around 20 MW out of Queensland."
+          }
+        ],
+        "intervals": {
+          "quote": "Date Time 30-minute price ($ per MWh) 26 February 6 pm 7,785 6.30 pm 6,117",
+          "text": "6 pm, 6.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Date Time 30-minute price ($ per MWh) 26 February 6 pm 7,785 6.30 pm 6,117",
+          "value": 7785
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity for technical and commercial reasons contributed to the high price intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in both regions, with a maximum temperature of 33°C in Sydney and 31°C in Brisbane, exacerbated by high humidity, drove very high demand which was higher than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Multiple network constraints to manage congestion and to prevent overloading the network contributed to the high prices because they reduced access to low-priced generation from Victoria and southern NSW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The ongoing outages at Gladstone unit 1 and Callide C brought the total baseload outages across Queensland to 1,120 MW and contributed to tight market conditions."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Network congestion led to AEMO capping wind and solar farm output in southern NSW at the time of the high prices which contributed to reduced availability in the region."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity contributed to the high prices. Up to 180 MW was needed to meet demand (Appendix F). These rebids were for commercial as well as for technical reasons."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Collector to Marulan",
+            "quote": "Flows through southern NSW were limited by a constraint to avoid overloading the Collector to Marulan line. This is a key line linking generation in the south, to load centres to the north, such as Sydney."
+          }
+        ],
+        "event_date": "2024-02-29",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to NSW",
+            "quote": "During the high prices, the Victoria to NSW Interconnector allowed very little to flow into NSW or forced flows counter-price out of NSW. The interconnector's capacity for flows into NSW can be around 1,500 MW."
+          },
+          {
+            "name": "QNI",
+            "quote": "Prices were generally aligned across Queensland and NSW during the 6 pm high price, so our analysis treats these as one region."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000 per MWh for four 30-minute periods on 29 February: 3 in NSW and 1 in Queensland (Table 6.1).",
+          "text": "4.30 pm (NSW1), 5 pm (NSW1), 6 pm (NSW1 and QLD1)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Date Time 30-minute NSW price ($ per MWh) 30-minute Queensland price ($ per MWh) 29 February 4.30 pm 5,648 Not a high price 5 pm 13,326 Not a high price 6 pm 9,607 7,040",
+          "value": 13326
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity contributed to the high prices. Up to 180 MW was needed to meet demand (Appendix F). These rebids were for commercial as well as for technical reasons.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_January_to_March_2024_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/2024-05/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20January%20to%20March%202024_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6292,
+    "per_attempt": [
+      {
+        "completion_tokens": 6292,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 23929,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 30221
+      }
+    ],
+    "prompt_tokens": 23929,
+    "reasoning_tokens": 0,
+    "total_tokens": 30221
+  }
+}

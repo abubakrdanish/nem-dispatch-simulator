@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:55:28+00:00",
+  "failure": null,
+  "input_sha256": "8b4e43885e9db0e91a4dcdb8ff20c912bbb1838848c50d353990159a948b4722",
+  "key": "af6154fbbdc423adeaa9baee2850b915f033fcefb7c018882a96a3f7d4a21f4b",
+  "latency_s": 10.73,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-07-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"the 12.30 pm trading interval\", \"quote\": \"the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval\"}, \"peak_price\": {\"value\": 8824, \"quote\": \"the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria\"}, {\"label\": \"rebids\", \"quote\": \"participants shifted their offers to supply electricity from high to low prices, seeking to increase their output during the high priced trading interval\"}, {\"label\": \"wind_output\", \"quote\": \"wind generation dropped to low levels during the high price period (grey shaded area)\"}, {\"label\": \"demand\", \"quote\": \"demand for electricity was 1599 MW, around 160 MW higher than forecast four hours prior\"}, {\"label\": \"interconnector_limit\", \"quote\": \"constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia\"}, {\"label\": \"constraint_violation\", \"quote\": \"network or plant constraints limited the ability for cheaper priced generators to be dispatched, requiring higher priced generation to be dispatched to meet demand for electricity\"}], \"constraints_named\": [{\"id\": \"V::S_ SETB_TBSE_2\", \"quote\": \"AEMO invoked the V::S_ SETB_TBSE_2 constraint to manage the outage of the Tailem Bend to Tungkillo 275 kV line\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector\"}, {\"name\": \"MurrayLink\", \"quote\": \"constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria"
+          },
+          {
+            "label": "rebids",
+            "quote": "participants shifted their offers to supply electricity from high to low prices, seeking to increase their output during the high priced trading interval"
+          },
+          {
+            "label": "wind_output",
+            "quote": "wind generation dropped to low levels during the high price period (grey shaded area)"
+          },
+          {
+            "label": "demand",
+            "quote": "demand for electricity was 1599 MW, around 160 MW higher than forecast four hours prior"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia"
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "network or plant constraints limited the ability for cheaper priced generators to be dispatched, requiring higher priced generation to be dispatched to meet demand for electricity"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V::S_ SETB_TBSE_2",
+            "quote": "AEMO invoked the V::S_ SETB_TBSE_2 constraint to manage the outage of the Tailem Bend to Tungkillo 275 kV line"
+          }
+        ],
+        "event_date": "2018-07-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector"
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia"
+          }
+        ],
+        "intervals": {
+          "quote": "the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval",
+          "text": "the 12.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval",
+          "value": 8824
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%209%20July%202018_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 646,
+    "per_attempt": [
+      {
+        "completion_tokens": 646,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 10715,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11361
+      }
+    ],
+    "prompt_tokens": 10715,
+    "reasoning_tokens": 0,
+    "total_tokens": 11361
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:29:21+00:00",
+  "failure": null,
+  "input_sha256": "f6a4fe6ea7d1f2db7571c7b3e94fe32f28076694ac41e5b4a5ec03cd5750bc8e",
+  "key": "0f39f05a371b29f8273df9266e3c600bb92ed9914d306946125480bfbbb98882",
+  "latency_s": 22.43,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-01-13\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"3.30 pm and 4 pm trading intervals in Victoria; 4 pm trading interval in South Australia\", \"quote\": \"On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 10760, \"quote\": \"The dispatch price in South Australia reached $10 760/MWh between 3.35 pm and 3.45 pm, inclusive, resulting in a spot price of $5173/MWh for the 4 pm trading interval.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes.\"}, {\"label\": \"rebids\", \"quote\": \"Some Victorian generators rebid capacity from low to high prices and a number, that were directly affected by the constraint managing the possible line losses, rebid to reduce their ramp down rates.\"}, {\"label\": \"rebids\", \"quote\": \"The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.\"}, {\"label\": \"ramp_rates\", \"quote\": \"These reduced ramp rates prolonged the high price period.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia.\"}, {\"label\": \"demand\", \"quote\": \"In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices.\"}], \"constraints_named\": [{\"id\": \"V-DDGN_N-2\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked.\"}, {\"id\": \"V-DDGN_N-2\", \"quote\": \"Constraint Set V-DDGN_N-2 revoked.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia.\"}, {\"name\": \"Murraylink\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}, {\"name\": \"Heywood\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}, {\"name\": \"Basslink\", \"quote\": \"The ongoing outage of Basslink since December meant that no support was available from Tasmania\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.\"}}, {\"event_date\": \"2016-01-13\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3.30 pm and 4 pm trading intervals\", \"quote\": \"On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 9137, \"quote\": \"The Victorian dispatch price exceeded $8536/MWh between 3.15 pm and 3.50 pm, inclusive, resulting in the spot prices of $9137/MWh and $7477/MWh for the 3.30 pm and 4 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes.\"}, {\"label\": \"rebids\", \"quote\": \"Some Victorian generators rebid capacity from low to high prices and a number, that were directly affected by the constraint managing the possible line losses, rebid to reduce their ramp down rates.\"}, {\"label\": \"ramp_rates\", \"quote\": \"These reduced ramp rates prolonged the high price period.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia.\"}, {\"label\": \"demand\", \"quote\": \"In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices.\"}], \"constraints_named\": [{\"id\": \"V-DDGN_N-2\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked.\"}, {\"id\": \"V-DDGN_N-2\", \"quote\": \"Constraint Set V-DDGN_N-2 revoked.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia.\"}, {\"name\": \"Murraylink\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}, {\"name\": \"Heywood\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}, {\"name\": \"Basslink\", \"quote\": \"The ongoing outage of Basslink since December meant that no support was available from Tasmania\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2016-01-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4 pm trading interval\", \"quote\": \"On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 10760, \"quote\": \"The dispatch price in South Australia reached $10 760/MWh between 3.35 pm and 3.45 pm, inclusive, resulting in a spot price of $5173/MWh for the 4 pm trading interval.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}, {\"name\": \"Murraylink\", \"quote\": \"Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes."
+          },
+          {
+            "label": "rebids",
+            "quote": "Some Victorian generators rebid capacity from low to high prices and a number, that were directly affected by the constraint managing the possible line losses, rebid to reduce their ramp down rates."
+          },
+          {
+            "label": "rebids",
+            "quote": "The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "These reduced ramp rates prolonged the high price period."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia."
+          },
+          {
+            "label": "demand",
+            "quote": "In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V-DDGN_N-2",
+            "quote": "Constraint Set V-DDGN_N-2 invoked."
+          },
+          {
+            "id": "V-DDGN_N-2",
+            "quote": "Constraint Set V-DDGN_N-2 revoked."
+          }
+        ],
+        "event_date": "2016-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          },
+          {
+            "name": "Basslink",
+            "quote": "The ongoing outage of Basslink since December meant that no support was available from Tasmania"
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.",
+          "text": "3.30 pm and 4 pm trading intervals in Victoria; 4 pm trading interval in South Australia"
+        },
+        "network_outages": {
+          "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The dispatch price in South Australia reached $10 760/MWh between 3.35 pm and 3.45 pm, inclusive, resulting in a spot price of $5173/MWh for the 4 pm trading interval.",
+          "value": 10760
+        },
+        "rebid_set_price": {
+          "quote": "The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes."
+          },
+          {
+            "label": "rebids",
+            "quote": "Some Victorian generators rebid capacity from low to high prices and a number, that were directly affected by the constraint managing the possible line losses, rebid to reduce their ramp down rates."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "These reduced ramp rates prolonged the high price period."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia."
+          },
+          {
+            "label": "demand",
+            "quote": "In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V-DDGN_N-2",
+            "quote": "Constraint Set V-DDGN_N-2 invoked."
+          },
+          {
+            "id": "V-DDGN_N-2",
+            "quote": "Constraint Set V-DDGN_N-2 revoked."
+          }
+        ],
+        "event_date": "2016-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "These constraints forced counter-price flows, from Victoria (high priced region) into New South Wales (low priced region), across the Vic-NSW interconnector, constrained down low-priced generation in Victoria and forced flows into Victoria from South Australia."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          },
+          {
+            "name": "Basslink",
+            "quote": "The ongoing outage of Basslink since December meant that no support was available from Tasmania"
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.",
+          "text": "3.30 pm and 4 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The Victorian dispatch price exceeded $8536/MWh between 3.15 pm and 3.50 pm, inclusive, resulting in the spot prices of $9137/MWh and $7477/MWh for the 3.30 pm and 4 pm trading intervals respectively.",
+          "value": 9137
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2016-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits."
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 January 2016 at 3.30 pm and 4 pm in Victoria and at 4 pm in South Australia, the spot price for energy exceeded $5000/MWh.",
+          "text": "4 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The dispatch price in South Australia reached $10 760/MWh between 3.35 pm and 3.45 pm, inclusive, resulting in a spot price of $5173/MWh for the 4 pm trading interval.",
+          "value": 10760
+        },
+        "rebid_set_price": {
+          "quote": "The main contributing factor for the high prices in South Australia was rebidding of capacity at Torrens Island by AGL from low to high prices, at the time when the network was constrained, setting the price.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_13_January_2016_(SA_Vic).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2013%20January%202016%20%28SA%20Vic%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1836,
+    "per_attempt": [
+      {
+        "completion_tokens": 1836,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 25487,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 27323
+      }
+    ],
+    "prompt_tokens": 25487,
+    "reasoning_tokens": 0,
+    "total_tokens": 27323
+  }
+}

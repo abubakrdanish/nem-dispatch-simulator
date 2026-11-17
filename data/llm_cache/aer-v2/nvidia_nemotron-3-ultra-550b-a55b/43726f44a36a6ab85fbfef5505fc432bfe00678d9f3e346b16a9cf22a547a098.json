@@ -1,0 +1,87 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:25:52+00:00",
+  "failure": null,
+  "input_sha256": "2b4af29f399480263cb8120b0ea0a1bd2409e436f71b129d35108aac48245591",
+  "key": "43726f44a36a6ab85fbfef5505fc432bfe00678d9f3e346b16a9cf22a547a098",
+  "latency_s": 53.5,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-09\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 5 pm trading interval\", \"quote\": \"On 9 February 2017, the spot price in New South Wales exceeded $5000/MWh for the 5 pm trading interval, reaching $7822/MWh.\"}, \"peak_price\": {\"value\": 7822, \"quote\": \"On 9 February 2017, the spot price in New South Wales exceeded $5000/MWh for the 5 pm trading interval, reaching $7822/MWh.\"}, \"causes\": [{\"label\": \"administered_pricing_or_intervention\", \"quote\": \"Pricing outcomes in New South Wales were directly related to intervention by the market operator (AEMO) for events in South Australia.\"}, {\"label\": \"demand\", \"quote\": \"For the 5 pm trading interval, New South Wales forecasts, four and twelve hours ahead, under-estimated demand by around 800 MW\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"generator availability was around 560 MW lower than forecast four hours ahead\"}, {\"label\": \"rebids\", \"quote\": \"The decrease in the top green section during the 5 pm trading interval coincides with a rebid by Snowy Hydro removing 667 MW of supply from its Colongra Power Station.\"}, {\"label\": \"rebids\", \"quote\": \"Origin Energy also removed 270 MW of supply in a rebid for its Eraring Power Station during the 5 pm trading interval which had been priced at less than $300/ MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "Pricing outcomes in New South Wales were directly related to intervention by the market operator (AEMO) for events in South Australia."
+          },
+          {
+            "label": "demand",
+            "quote": "For the 5 pm trading interval, New South Wales forecasts, four and twelve hours ahead, under-estimated demand by around 800 MW"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "generator availability was around 560 MW lower than forecast four hours ahead"
+          },
+          {
+            "label": "rebids",
+            "quote": "The decrease in the top green section during the 5 pm trading interval coincides with a rebid by Snowy Hydro removing 667 MW of supply from its Colongra Power Station."
+          },
+          {
+            "label": "rebids",
+            "quote": "Origin Energy also removed 270 MW of supply in a rebid for its Eraring Power Station during the 5 pm trading interval which had been priced at less than $300/ MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2017-02-09",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On 9 February 2017, the spot price in New South Wales exceeded $5000/MWh for the 5 pm trading interval, reaching $7822/MWh.",
+          "text": "the 5 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 9 February 2017, the spot price in New South Wales exceeded $5000/MWh for the 5 pm trading interval, reaching $7822/MWh.",
+          "value": 7822
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(NSW)_2.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%209%20February%202017%20%28NSW%29_2.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 434,
+    "per_attempt": [
+      {
+        "completion_tokens": 434,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9468
+      }
+    ],
+    "prompt_tokens": 9034,
+    "reasoning_tokens": 0,
+    "total_tokens": 9468
+  }
+}

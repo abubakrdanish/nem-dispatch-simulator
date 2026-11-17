@@ -1,0 +1,116 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:24:13+00:00",
+  "failure": null,
+  "input_sha256": "0ec7319142484e19151086ab4127eee6a66dcc41b26b3e9d8745138438354d1f",
+  "key": "f18d8e14d8608f5127a6395209de04cb3a29a144c758dd92c9b9dbdf0d3d31f6",
+  "latency_s": 10.08,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-07-14\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 9 am trading interval\", \"quote\": \"On 14 July 2021 the spot price in New South Wales reached $5,177/MWh for the 9 am trading interval.\"}, \"peak_price\": {\"value\": 15100, \"quote\": \"the price in New South Wales was set at the cap of $15,100/MWh\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"Eraring unit 2 had been on a planned outage since 8 July\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Bayswater unit 2 suffered technical issues coming back from a planned outage and was unavailable by 8.40 am\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The remaining MW were from units that were online but rebid reduced capacity due to coal or plant issues\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned outage in southern New South Wales around Canberra which limited access to cheap generation from Victoria and southern New South Wales\"}, {\"label\": \"network_outage\", \"quote\": \"There were also planned outages in northern New South Wales due to the upgrade of the QNI which limited access to cheap generation from Queensland\"}, {\"label\": \"demand\", \"quote\": \"Demand was 500 MW higher than forecast 4 hours prior for the 9 am trading interval\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The dispatch price for energy in New South Wales was co-optimised by the FCAS and energy markets in Queensland, resulting in 2 dispatch intervals set at the cap\"}, {\"label\": \"ramp_rates\", \"quote\": \"This high priced capacity was ramp up limited and unable to set price\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"AEMO invoked constraints affecting generation in southern New South Wales and flows on the VIC-NSW interconnector\"}, {\"name\": \"QNI\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"rebidding capacity from low to high prices did not contribute to prices above $5,000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Eraring unit 2 had been on a planned outage since 8 July"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Bayswater unit 2 suffered technical issues coming back from a planned outage and was unavailable by 8.40 am"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The remaining MW were from units that were online but rebid reduced capacity due to coal or plant issues"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland"
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned outage in southern New South Wales around Canberra which limited access to cheap generation from Victoria and southern New South Wales"
+          },
+          {
+            "label": "network_outage",
+            "quote": "There were also planned outages in northern New South Wales due to the upgrade of the QNI which limited access to cheap generation from Queensland"
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was 500 MW higher than forecast 4 hours prior for the 9 am trading interval"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The dispatch price for energy in New South Wales was co-optimised by the FCAS and energy markets in Queensland, resulting in 2 dispatch intervals set at the cap"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "This high priced capacity was ramp up limited and unable to set price"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-07-14",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "AEMO invoked constraints affecting generation in southern New South Wales and flows on the VIC-NSW interconnector"
+          },
+          {
+            "name": "QNI",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit"
+          }
+        ],
+        "intervals": {
+          "quote": "On 14 July 2021 the spot price in New South Wales reached $5,177/MWh for the 9 am trading interval.",
+          "text": "the 9 am trading interval"
+        },
+        "network_outages": {
+          "quote": "Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the price in New South Wales was set at the cap of $15,100/MWh",
+          "value": 15100
+        },
+        "rebid_set_price": {
+          "quote": "rebidding capacity from low to high prices did not contribute to prices above $5,000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210714_$5000_NSW_Report_(1).pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210714%20%245000%20NSW%20Report%20%281%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 704,
+    "per_attempt": [
+      {
+        "completion_tokens": 704,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 9070,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9774
+      }
+    ],
+    "prompt_tokens": 9070,
+    "reasoning_tokens": 0,
+    "total_tokens": 9774
+  }
+}

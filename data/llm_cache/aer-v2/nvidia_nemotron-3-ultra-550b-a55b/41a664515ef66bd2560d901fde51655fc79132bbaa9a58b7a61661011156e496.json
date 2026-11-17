@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:08:07+00:00",
+  "failure": null,
+  "input_sha256": "aa08d7877001d40610f0326b86b6a3e219c5cac1b2fdde2d9bee30503777f17f",
+  "key": "41a664515ef66bd2560d901fde51655fc79132bbaa9a58b7a61661011156e496",
+  "latency_s": 12.25,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-08-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"8.30 am and 9 am trading intervals; 5-minute price reached $12,500/MWh at 8.20 am and remained at that level until 8.40 am\", \"quote\": \"The spot price in New South Wales reached $6267/MWh at 8.30 am and $5739/MWh at 9 am. ... The 5-minute price reached $12 500/MWh at 8.20 am and remained at that level until 8.40 am.\"}, \"peak_price\": {\"value\": 12500, \"quote\": \"The 5-minute price reached $12 500/MWh at 8.20 am and remained at that level until 8.40 am.\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"Over a number of rebids, Delta Electricity delayed the return to service of the Wallerawang unit seven from midnight on 9 August to 8.35 am on 10 August. The other Wallerawang unit (unit eight) was also offline.\"}, {\"label\": \"network_outage\", \"quote\": \"On the day there was a planned outage of the Mt Piper to Marulan line. The outage, which commenced four days earlier on 6 August was completed on 15 August.\"}, {\"label\": \"rebids\", \"quote\": \"Over a number of rebids, Delta Electricity delayed the return to service of the Wallerawang unit seven from midnight on 9 August to 8.35 am on 10 August.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The lower capability took effect from 8.20 am, which caused a combined 7000 MW step change in the limit for flows across all New South Wales interconnectors, as shown in Figure 4. This resulted in the New South Wales region changing from importing to exporting electricity.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The N>>N-MNMP_ONE_1 outage constraint and the N>>N-NIL_PRE36__S system normal constraint violated from 8.20 am to 8.35 am.\"}], \"constraints_named\": [{\"id\": \"N>>N-MNMP_ONE_1\", \"quote\": \"The constraint equation N>>N-MNMP_ONE_1 was invoked to managed the flows across the Mt Piper to Wallerawang lines as a result of the outage.\"}, {\"id\": \"N>>N-NIL_PRE36__S\", \"quote\": \"The N>>N-MNMP_ONE_1 outage constraint and the N>>N-NIL_PRE36__S system normal constraint violated from 8.20 am to 8.35 am.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The congestion on the Mt Piper to Wallerawang lines led to prices at the price cap in New South Wales and forced exports into Queensland and Victoria counter-price. The forced exports into Queensland caused negative prices in Queensland (at the price floor of $-1000/MWh).\"}, {\"name\": \"Vic-NSW\", \"quote\": \"The congestion on the Mt Piper to Wallerawang lines led to prices at the price cap in New South Wales and forced exports into Queensland and Victoria counter-price.\"}, {\"name\": \"Terranora\", \"quote\": \"Figure 3 compares combined (30 minute average) import limits into New South Wales across the Terranora, QNI and the Vic-NSW interconnectors with that forecast 4 and 12 hours ahead.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On the day there was a planned outage of the Mt Piper to Marulan line. The outage, which commenced four days earlier on 6 August was completed on 15 August. The constraint equation N>>N-MNMP_ONE_1 was invoked to managed the flows across the Mt Piper to Wallerawang lines as a result of the outage.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 8.15 am, following the reduction in rating of the Mt Piper to Wallerawang line (discussed further in the \\\"Transmission constraints\\\" section) the 5-minute forecast price for the New South Wales region increased from less than $35/MWh to the price cap for the period from 8.20 am onwards.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Over a number of rebids, Delta Electricity delayed the return to service of the Wallerawang unit seven from midnight on 9 August to 8.35 am on 10 August. The other Wallerawang unit (unit eight) was also offline."
+          },
+          {
+            "label": "network_outage",
+            "quote": "On the day there was a planned outage of the Mt Piper to Marulan line. The outage, which commenced four days earlier on 6 August was completed on 15 August."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over a number of rebids, Delta Electricity delayed the return to service of the Wallerawang unit seven from midnight on 9 August to 8.35 am on 10 August."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The lower capability took effect from 8.20 am, which caused a combined 7000 MW step change in the limit for flows across all New South Wales interconnectors, as shown in Figure 4. This resulted in the New South Wales region changing from importing to exporting electricity."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The N>>N-MNMP_ONE_1 outage constraint and the N>>N-NIL_PRE36__S system normal constraint violated from 8.20 am to 8.35 am."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-MNMP_ONE_1",
+            "quote": "The constraint equation N>>N-MNMP_ONE_1 was invoked to managed the flows across the Mt Piper to Wallerawang lines as a result of the outage."
+          },
+          {
+            "id": "N>>N-NIL_PRE36__S",
+            "quote": "The N>>N-MNMP_ONE_1 outage constraint and the N>>N-NIL_PRE36__S system normal constraint violated from 8.20 am to 8.35 am."
+          }
+        ],
+        "event_date": "2010-08-10",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The congestion on the Mt Piper to Wallerawang lines led to prices at the price cap in New South Wales and forced exports into Queensland and Victoria counter-price. The forced exports into Queensland caused negative prices in Queensland (at the price floor of $-1000/MWh)."
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "The congestion on the Mt Piper to Wallerawang lines led to prices at the price cap in New South Wales and forced exports into Queensland and Victoria counter-price."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Figure 3 compares combined (30 minute average) import limits into New South Wales across the Terranora, QNI and the Vic-NSW interconnectors with that forecast 4 and 12 hours ahead."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in New South Wales reached $6267/MWh at 8.30 am and $5739/MWh at 9 am. ... The 5-minute price reached $12 500/MWh at 8.20 am and remained at that level until 8.40 am.",
+          "text": "8.30 am and 9 am trading intervals; 5-minute price reached $12,500/MWh at 8.20 am and remained at that level until 8.40 am"
+        },
+        "network_outages": {
+          "quote": "On the day there was a planned outage of the Mt Piper to Marulan line. The outage, which commenced four days earlier on 6 August was completed on 15 August. The constraint equation N>>N-MNMP_ONE_1 was invoked to managed the flows across the Mt Piper to Wallerawang lines as a result of the outage.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price reached $12 500/MWh at 8.20 am and remained at that level until 8.40 am.",
+          "value": 12500
+        },
+        "rebid_set_price": {
+          "quote": "At 8.15 am, following the reduction in rating of the Mt Piper to Wallerawang line (discussed further in the \"Transmission constraints\" section) the 5-minute forecast price for the New South Wales region increased from less than $35/MWh to the price cap for the period from 8.20 am onwards.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_10_Aug_2010_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_10%20Aug%202010%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1022,
+    "per_attempt": [
+      {
+        "completion_tokens": 1022,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6823,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7845
+      }
+    ],
+    "prompt_tokens": 6823,
+    "reasoning_tokens": 0,
+    "total_tokens": 7845
+  }
+}

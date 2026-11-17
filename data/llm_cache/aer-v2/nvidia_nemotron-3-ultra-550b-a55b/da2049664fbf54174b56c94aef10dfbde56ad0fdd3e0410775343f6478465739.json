@@ -1,0 +1,119 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:16:52+00:00",
+  "failure": null,
+  "input_sha256": "5d5e7bfa21ecd2b335ca09d420aabb5f2d04497b3175d3da3c1637f7875fdbac",
+  "key": "da2049664fbf54174b56c94aef10dfbde56ad0fdd3e0410775343f6478465739",
+  "latency_s": 9.33,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-29\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"7 pm trading interval\", \"quote\": \"On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh.\"}, \"peak_price\": {\"value\": 6778, \"quote\": \"Spot price $ 6778/MWh\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"Over several rebids from 12.23 pm Hydro Tasmania shifted 698 MW of available capacity across its portfolio from prices below $1600/MWh to above $8000/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Flows across Basslink out of Tasmania were greater than forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was an unplanned outage of Basslink from around 2 pm for less than one hour.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh.\"}}, {\"event_date\": \"2009-01-30\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"10 am and 11 am trading intervals\", \"quote\": \"On 30 January at 10 am and 11 am spot prices of $6880/MWh and $5443/MWh respectively occurred in Tasmania as a result of a tight supplies in Southern Australia combined with high-priced generation capacity in Tasmania.\"}, \"peak_price\": {\"value\": 6880, \"quote\": \"Spot price $ 6880/MWh\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"On 30 January at 10 am and 11 am spot prices of $6880/MWh and $5443/MWh respectively occurred in Tasmania as a result of a tight supplies in Southern Australia combined with high-priced generation capacity in Tasmania.\"}, {\"label\": \"rebids\", \"quote\": \"There was around 550 MW of available capacity priced above $5000/MWh set up in day ahead offers by Hydro Tasmania. This was reduced to around 300 MW through rebidding at 9.24 am which saw 243 MW of available capacity rebid from prices above $8000/MWh to below zero.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Limits and flows across Basslink out of Tasmania were close to forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over several rebids from 12.23 pm Hydro Tasmania shifted 698 MW of available capacity across its portfolio from prices below $1600/MWh to above $8000/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-29",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Flows across Basslink out of Tasmania were greater than forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh.",
+          "text": "7 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "There was an unplanned outage of Basslink from around 2 pm for less than one hour.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 6778/MWh",
+          "value": 6778
+        },
+        "rebid_set_price": {
+          "quote": "On 29 January at 7 pm a $6770/MWh spot price occurred in Tasmania as a result of Hydro Tasmania rebidding around 700 MW of available capacity from below $1600/MWh into prices exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "On 30 January at 10 am and 11 am spot prices of $6880/MWh and $5443/MWh respectively occurred in Tasmania as a result of a tight supplies in Southern Australia combined with high-priced generation capacity in Tasmania."
+          },
+          {
+            "label": "rebids",
+            "quote": "There was around 550 MW of available capacity priced above $5000/MWh set up in day ahead offers by Hydro Tasmania. This was reduced to around 300 MW through rebidding at 9.24 am which saw 243 MW of available capacity rebid from prices above $8000/MWh to below zero."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-30",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Limits and flows across Basslink out of Tasmania were close to forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On 30 January at 10 am and 11 am spot prices of $6880/MWh and $5443/MWh respectively occurred in Tasmania as a result of a tight supplies in Southern Australia combined with high-priced generation capacity in Tasmania.",
+          "text": "10 am and 11 am trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 6880/MWh",
+          "value": 6880
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_29_and_30_January_2009_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_29%20and%2030%20January%202009%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 808,
+    "per_attempt": [
+      {
+        "completion_tokens": 808,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4672,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5480
+      }
+    ],
+    "prompt_tokens": 4672,
+    "reasoning_tokens": 0,
+    "total_tokens": 5480
+  }
+}

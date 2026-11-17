@@ -1,0 +1,93 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:27:38+00:00",
+  "failure": null,
+  "input_sha256": "f54721811ce34bcbfe0a84ceb4f7546776e0ab85dab1d5263d3a2693fde32841",
+  "key": "ed308c992fc96caf94bdced9707726701d826d481f75b178ba1689f729b50a25",
+  "latency_s": 7.24,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-09\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm 30-minute periods\", \"quote\": \"On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.\"}, \"peak_price\": {\"value\": 11538, \"quote\": \"On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand, which peaked at 8,477 MW- the highest up to that point this summer.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Nearly 3,000 MW of baseload capacity was unavailable on the evening of the 9 December. This included about 1,400 MW of outages, while a further 1,600 MW was unavailable due to generators offering less than their registered capacity.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Milmerran unit 1 removed 115 MW of capacity from 5.35 am. 30 MW was removed within 4 hours pre-dispatch.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint limited access to cheap imports from NSW to around 160 MW. The nominal capacity of QNI is 300 to 600 MW.\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"A system normal constraint limited access to cheap imports from NSW at the time of the high price event in Queensland.\"}], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales Interconnector (QNI)\", \"quote\": \"A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"System normal constraints reflect network limits when there are no outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand, which peaked at 8,477 MW- the highest up to that point this summer."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Nearly 3,000 MW of baseload capacity was unavailable on the evening of the 9 December. This included about 1,400 MW of outages, while a further 1,600 MW was unavailable due to generators offering less than their registered capacity."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Milmerran unit 1 removed 115 MW of capacity from 5.35 am. 30 MW was removed within 4 hours pre-dispatch."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint limited access to cheap imports from NSW to around 160 MW. The nominal capacity of QNI is 300 to 600 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "A system normal constraint limited access to cheap imports from NSW at the time of the high price event in Queensland."
+          }
+        ],
+        "event_date": "2021-12-09",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales Interconnector (QNI)",
+            "quote": "A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation."
+          }
+        ],
+        "intervals": {
+          "quote": "On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.",
+          "text": "6.30 pm and 7 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": "System normal constraints reflect network limits when there are no outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.",
+          "value": 11538
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000MWh_-_9_December_2021_(Queensland).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000MWh%20-%209%20December%202021%20%28Queensland%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 589,
+    "per_attempt": [
+      {
+        "completion_tokens": 589,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6888,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7477
+      }
+    ],
+    "prompt_tokens": 6888,
+    "reasoning_tokens": 0,
+    "total_tokens": 7477
+  }
+}

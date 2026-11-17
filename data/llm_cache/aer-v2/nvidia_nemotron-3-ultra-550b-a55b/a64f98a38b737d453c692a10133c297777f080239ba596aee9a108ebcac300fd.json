@@ -1,0 +1,93 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:54:30+00:00",
+  "failure": null,
+  "input_sha256": "cb363266a5ee361bc3e938dc3e5251ef8565e6b2023ffaaf29fab6885a937f5b",
+  "key": "a64f98a38b737d453c692a10133c297777f080239ba596aee9a108ebcac300fd",
+  "latency_s": 4.57,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"5, 5.30 and 6.30 pm trading intervals\", \"quote\": \"The spot price in South Australia exceeded $5000/MWh, on 9 February 2017, for the 5, 5.30 and 6.30 pm trading intervals.\"}, \"peak_price\": {\"value\": 9510, \"quote\": \"Prices in these trading intervals ranged from $6755/MWh to $9510/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"The high prices during the 5, 5.30 and 6.30 pm intervals resulted from these arrangements.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead.\"}], \"constraints_named\": [{\"id\": \"v:s_600_hy_test\", \"quote\": \"Origin Energy Quarantine 92 >13 160 <80 1707A constraint management - v:s_600_hy_test sl\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead.\"}, {\"name\": \"Murraylink\", \"quote\": \"At the time of the high prices, up to 89 MW of flow across Murraylink were at times being forced from South Australia into Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to spot prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "The high prices during the 5, 5.30 and 6.30 pm intervals resulted from these arrangements."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "v:s_600_hy_test",
+            "quote": "Origin Energy Quarantine 92 >13 160 <80 1707A constraint management - v:s_600_hy_test sl"
+          }
+        ],
+        "event_date": "2017-02-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "At the time of the high prices, up to 89 MW of flow across Murraylink were at times being forced from South Australia into Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in South Australia exceeded $5000/MWh, on 9 February 2017, for the 5, 5.30 and 6.30 pm trading intervals.",
+          "text": "5, 5.30 and 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Prices in these trading intervals ranged from $6755/MWh to $9510/MWh.",
+          "value": 9510
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to spot prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%209%20February%202017%20%28SA%29_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 511,
+    "per_attempt": [
+      {
+        "completion_tokens": 511,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 14574,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15085
+      }
+    ],
+    "prompt_tokens": 14574,
+    "reasoning_tokens": 0,
+    "total_tokens": 15085
+  }
+}

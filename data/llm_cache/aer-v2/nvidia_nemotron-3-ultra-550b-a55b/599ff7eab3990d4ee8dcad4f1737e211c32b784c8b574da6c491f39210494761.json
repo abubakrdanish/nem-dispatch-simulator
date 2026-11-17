@@ -1,0 +1,204 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-16T23:53:31+00:00",
+  "failure": null,
+  "input_sha256": "3891667bc2427b4e87f11ccf36e04cc7b7cb0692d12140c1c1cb71d47fa4cd37",
+  "key": "599ff7eab3990d4ee8dcad4f1737e211c32b784c8b574da6c491f39210494761",
+  "latency_s": 26.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-01-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2 pm trading interval\", \"quote\": \"The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.\"}, \"peak_price\": {\"value\": 9832, \"quote\": \"The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed.\"}, {\"label\": \"network_outage\", \"quote\": \"Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market.\"}, {\"label\": \"constraint_violation\", \"quote\": \"To manage this, the market operator (AEMO) invoked constraints which limited the output of several generators and resulted in the price reaching $9832/MWh for the 2 pm trading interval in South Australia.\"}, {\"label\": \"constraint_violation\", \"quote\": \"cheaper priced generation was limited by the constraints used to manage the Heywood interconnector outage and a large increase in FCAS requirements.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"cheaper priced generation was limited by the constraints used to manage the Heywood interconnector outage and a large increase in FCAS requirements.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"When there is an increase in local FCAS requirements, there will be a trade-off between the amount of energy and FCAS that some generation units can provide.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Within the 2 pm trading interval a small number of generation units experienced technical issues with their plant and adjusted the amount of generation available to the market.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"there was a decrease in capacity priced less than $5000/MWh within the trading interval which was a result of the technical issues experienced by some generation plant.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed.\"}, {\"name\": \"MurrayLink interconnector\", \"quote\": \"This saw a decrease of 35 MW of imports from Victoria across the Heywood interconnector, however this was more than offset by an increase of 84 MW of imports across the MurrayLink interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Overall rebidding from low to high prices did not contribute to the high priced trading interval in South Australia.\"}}, {\"event_date\": \"2020-01-31\", \"regions\": [\"VIC1\", \"NSW1\"], \"intervals\": {\"text\": \"3 pm to 7 pm trading intervals\", \"quote\": \"The spot price for the multiple trading intervals between 3 pm to 7 pm exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"Spot price $14 700/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Victoria and New South Wales led to high demand in both regions.\"}, {\"label\": \"demand\", \"quote\": \"Demand reached 13 144 MW in New South Wales for the 3.30 pm trading interval , this was around 500 MW less than the highest demand recorded for the 2019/20 summer.\"}, {\"label\": \"demand\", \"quote\": \"in Victoria , demand reached 9507 MW for the 5 pm trading interval which was the highest demand recorded for the 2019/20 summer.\"}, {\"label\": \"wind_output\", \"quote\": \"Availability in these trading intervals was around 700 MW lower than forecast four hour prior, mainly due to plant issues in New South Wales and lower than forecast wind generation in Victoria.\"}, {\"label\": \"wind_output\", \"quote\": \"For the 3 pm and 3.3 0 pm trading intervals around 285 MW of wind generation was dispatched , 35 0 MW lower than earlier forecast.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Liddell unit 1 (450 MW) had been offline since the previous day due to a tube leak while EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Snowy Hydro's Colongra power station experienced technical issues which saw its unit 2 (169 MW) fail to start after receiving a target to generate.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"AGL's Liddell unit 2 and Bayswater unit 4 plants also reduced their availability due to a plant failure and milling limits respectively.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"These outages saw a combined 330 MW of generation capacity unavailable during the 3 pm and 3.30 pm trading intervals.\"}, {\"label\": \"network_outage\", \"quote\": \"The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Victoria was not able to import any gene ration from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the loss of cheaply priced imports from South Australia resulted in higher priced local generation from Victoria and New South Wales being dispatched to meet demand.\"}, {\"label\": \"rebids\", \"quote\": \"generators in both regions regularly rebid capacity from high to low prices in the lead up to the start of, and during, trading intervals.\"}, {\"label\": \"rebids\", \"quote\": \"at certain tim es across the afternoon high priced capacity above $5000/MWh was still required to meet demand and resulted in the spot price exceeding $5000/MWh a number of times.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO activated the RERT contracts for both regions. RERT was activated from 3. 30 pm to 9.30 pm with contracted reserves of 185 MW in Victoria and 134 MW in New South Wales.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Victoria was not able to import any gene ration from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh in any of the high priced trading intervals on the day.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Six high voltage transmission towers in between Lismore and Moorabool in Victoria collapsed resulting in South Australia being electrically isolated from the rest of the market."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "To manage this, the market operator (AEMO) invoked constraints which limited the output of several generators and resulted in the price reaching $9832/MWh for the 2 pm trading interval in South Australia."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "cheaper priced generation was limited by the constraints used to manage the Heywood interconnector outage and a large increase in FCAS requirements."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "cheaper priced generation was limited by the constraints used to manage the Heywood interconnector outage and a large increase in FCAS requirements."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "When there is an increase in local FCAS requirements, there will be a trade-off between the amount of energy and FCAS that some generation units can provide."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Within the 2 pm trading interval a small number of generation units experienced technical issues with their plant and adjusted the amount of generation available to the market."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "there was a decrease in capacity priced less than $5000/MWh within the trading interval which was a result of the technical issues experienced by some generation plant."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed."
+          },
+          {
+            "name": "MurrayLink interconnector",
+            "quote": "This saw a decrease of 35 MW of imports from Victoria across the Heywood interconnector, however this was more than offset by an increase of 84 MW of imports across the MurrayLink interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.",
+          "text": "2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "At 1.24 pm, due to extreme localised storm conditions, the Heywood interconnector which links Victoria and South Australia failed.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price for the 2 pm trading interval in South Australia reached $9832/MWh.",
+          "value": 9832
+        },
+        "rebid_set_price": {
+          "quote": "Overall rebidding from low to high prices did not contribute to the high priced trading interval in South Australia.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Victoria and New South Wales led to high demand in both regions."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand reached 13 144 MW in New South Wales for the 3.30 pm trading interval , this was around 500 MW less than the highest demand recorded for the 2019/20 summer."
+          },
+          {
+            "label": "demand",
+            "quote": "in Victoria , demand reached 9507 MW for the 5 pm trading interval which was the highest demand recorded for the 2019/20 summer."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Availability in these trading intervals was around 700 MW lower than forecast four hour prior, mainly due to plant issues in New South Wales and lower than forecast wind generation in Victoria."
+          },
+          {
+            "label": "wind_output",
+            "quote": "For the 3 pm and 3.3 0 pm trading intervals around 285 MW of wind generation was dispatched , 35 0 MW lower than earlier forecast."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Liddell unit 1 (450 MW) had been offline since the previous day due to a tube leak while EnergyAustralia's Mount Piper unit 2 (650 MW) had been offline since 23 January for a planned outage."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Snowy Hydro's Colongra power station experienced technical issues which saw its unit 2 (169 MW) fail to start after receiving a target to generate."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "AGL's Liddell unit 2 and Bayswater unit 4 plants also reduced their availability due to a plant failure and milling limits respectively."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "These outages saw a combined 330 MW of generation capacity unavailable during the 3 pm and 3.30 pm trading intervals."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Victoria was not able to import any gene ration from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the loss of cheaply priced imports from South Australia resulted in higher priced local generation from Victoria and New South Wales being dispatched to meet demand."
+          },
+          {
+            "label": "rebids",
+            "quote": "generators in both regions regularly rebid capacity from high to low prices in the lead up to the start of, and during, trading intervals."
+          },
+          {
+            "label": "rebids",
+            "quote": "at certain tim es across the afternoon high priced capacity above $5000/MWh was still required to meet demand and resulted in the spot price exceeding $5000/MWh a number of times."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO activated the RERT contracts for both regions. RERT was activated from 3. 30 pm to 9.30 pm with contracted reserves of 185 MW in Victoria and 134 MW in New South Wales."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Victoria was not able to import any gene ration from South Australia and it required imports from New South Wales to meet demand, opposite from what was forecast four hours prior."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price for the multiple trading intervals between 3 pm to 7 pm exceeded $5000/MWh.",
+          "text": "3 pm to 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "The outage r esulted in no imports being available to Victoria from South Australia across Heywood during the high price periods.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $14 700/MWh",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh in any of the high priced trading intervals on the day.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/31_Jan_$5000_Report_SA_Vic_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/31%20Jan%20%245000%20Report%20SA%20Vic%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1765,
+    "per_attempt": [
+      {
+        "completion_tokens": 1765,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 46529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 48294
+      }
+    ],
+    "prompt_tokens": 46529,
+    "reasoning_tokens": 0,
+    "total_tokens": 48294
+  }
+}

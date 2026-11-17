@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:27:30+00:00",
+  "failure": null,
+  "input_sha256": "3a758bdc3e51b4ab99e24affd8712ba051deeafb15f09c558bdad904ac5ea03e",
+  "key": "e0aecea80e6bae077369952ba9a2d7d172f5283928bf634daa7068179573e024",
+  "latency_s": 6.38,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-18\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"1 am 30-minute period (comprising 5-minute intervals at 12.50 am and 12.55 am)\", \"quote\": \"The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.\"}, \"peak_price\": {\"value\": 15098, \"quote\": \"This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"This was largely due to an unexpected fall in wind output which began at 11.30 pm on 17 December.\"}, {\"label\": \"network_outage\", \"quote\": \"There was an unplanned outage to the Murraylink interconnector between 2 and 20 December. This reduced South Australia's access to cheap generation from Victoria by 220 MW, Murraylink's nominal limit.\"}, {\"label\": \"rebids\", \"quote\": \"These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Subsequently, fast-start' units received a signal to come on but required 10 to 15 minutes before they could begin generating.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"There was an unplanned outage to the Murraylink interconnector between 2 and 20 December.\"}, {\"name\": \"Heywood\", \"quote\": \"The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was an unplanned outage to the Murraylink interconnector between 2 and 20 December. This reduced South Australia's access to cheap generation from Victoria by 220 MW, Murraylink's nominal limit.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "This was largely due to an unexpected fall in wind output which began at 11.30 pm on 17 December."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was an unplanned outage to the Murraylink interconnector between 2 and 20 December. This reduced South Australia's access to cheap generation from Victoria by 220 MW, Murraylink's nominal limit."
+          },
+          {
+            "label": "rebids",
+            "quote": "These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Subsequently, fast-start' units received a signal to come on but required 10 to 15 minutes before they could begin generating."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-18",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "There was an unplanned outage to the Murraylink interconnector between 2 and 20 December."
+          },
+          {
+            "name": "Heywood",
+            "quote": "The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.",
+          "text": "1 am 30-minute period (comprising 5-minute intervals at 12.50 am and 12.55 am)"
+        },
+        "network_outages": {
+          "quote": "There was an unplanned outage to the Murraylink interconnector between 2 and 20 December. This reduced South Australia's access to cheap generation from Victoria by 220 MW, Murraylink's nominal limit.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.",
+          "value": 15098
+        },
+        "rebid_set_price": {
+          "quote": "These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_9_December_2021_(South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%209%20December%202021%20%28South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 659,
+    "per_attempt": [
+      {
+        "completion_tokens": 659,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8395,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9054
+      }
+    ],
+    "prompt_tokens": 8395,
+    "reasoning_tokens": 0,
+    "total_tokens": 9054
+  }
+}

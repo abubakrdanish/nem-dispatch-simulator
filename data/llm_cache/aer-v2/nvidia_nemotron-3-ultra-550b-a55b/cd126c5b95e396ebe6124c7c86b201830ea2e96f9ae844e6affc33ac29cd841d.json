@@ -1,0 +1,151 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:14:46+00:00",
+  "failure": null,
+  "input_sha256": "189be2047969acb7f7039889dca7e27af7ab0bbd569b899a70325644aaeb01a3",
+  "key": "cd126c5b95e396ebe6124c7c86b201830ea2e96f9ae844e6affc33ac29cd841d",
+  "latency_s": 15.69,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-02-22\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"seven trading intervals between 1 pm and 4 pm inclusive\", \"quote\": \"The spot price exceeded $5000/MWh for the seven trading intervals between 1 pm and 4 pm inclusive\"}, \"peak_price\": {\"value\": 9561, \"quote\": \"peaking at $9561/MWh and $9153/MWh respectively\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"temperatures reached 33 degrees in Brisbane driving demand to around 8100 MW, which was the highest for the summer and within 500 MW of the highest-ever\"}, {\"label\": \"rebids\", \"quote\": \"Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"A further 1314 MW or 12 per cent of capacity was not presented to the market\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Rebids reduced the available capacity at Kogan Creek and Collinsville by up to 220 MW, with half of this priced at less than $30/MWh. The reasons given included \\\"SCC limitations\\\", \\\"Lost B mill\\\" and \\\"Colnsv availability\\\"\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On both days, imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}, {\"name\": \"Terranora\", \"quote\": \"imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 22 February, an unplanned outage of network equipment at Lismore in New South Wales reduced the capability of QNI by a further 40 MW\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices\"}}, {\"event_date\": \"2008-02-23\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"seven trading intervals between 12.30 pm and 3.30 pm inclusive\", \"quote\": \"The spot price exceeded $5000/MWh for the seven trading intervals between 12.30 pm and 3.30 pm inclusive\"}, \"peak_price\": {\"value\": 9153, \"quote\": \"peaking at $9561/MWh and $9153/MWh respectively\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"temperatures reached 39 degrees in Brisbane driving demand to around 8000 MW, the highest weekend demand ever\"}, {\"label\": \"rebids\", \"quote\": \"Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"A further 1314 MW or 12 per cent of capacity was not presented to the market\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Additional rebids from 8.17 am reduced the available capacity of the portfolio by 270 MW, with 105 MW priced below $30/MWh. These reductions occurred at Collinsville, Callide B, Swanbank B and Kogan Creek. The reasons given included \\\"Extend outage\\\", \\\"Swan B1 70 MW mill PF leak\\\", \\\"Call B2 max availability\\\", \\\"SCC limitations\\\" and \\\"Call B1 vac limit\\\"\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On both days, imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}, {\"name\": \"Terranora\", \"quote\": \"imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 23 February a planned outage of the Alstonville to Ballina 66 kV line in northern New South Wales occurred between 5 am and 6.40 pm. Country Energy gave three days notice of the need to take the outage. The outage resulted in forced flows from Queensland into northern New South Wales across the Terranora interconnector by up to 50 MW\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "temperatures reached 33 degrees in Brisbane driving demand to around 8100 MW, which was the highest for the summer and within 500 MW of the highest-ever"
+          },
+          {
+            "label": "rebids",
+            "quote": "Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "A further 1314 MW or 12 per cent of capacity was not presented to the market"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Rebids reduced the available capacity at Kogan Creek and Collinsville by up to 220 MW, with half of this priced at less than $30/MWh. The reasons given included \"SCC limitations\", \"Lost B mill\" and \"Colnsv availability\""
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On both days, imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-02-22",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          },
+          {
+            "name": "Terranora",
+            "quote": "imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh for the seven trading intervals between 1 pm and 4 pm inclusive",
+          "text": "seven trading intervals between 1 pm and 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "On 22 February, an unplanned outage of network equipment at Lismore in New South Wales reduced the capability of QNI by a further 40 MW",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "peaking at $9561/MWh and $9153/MWh respectively",
+          "value": 9561
+        },
+        "rebid_set_price": {
+          "quote": "Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "temperatures reached 39 degrees in Brisbane driving demand to around 8000 MW, the highest weekend demand ever"
+          },
+          {
+            "label": "rebids",
+            "quote": "Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "A further 1314 MW or 12 per cent of capacity was not presented to the market"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Additional rebids from 8.17 am reduced the available capacity of the portfolio by 270 MW, with 105 MW priced below $30/MWh. These reductions occurred at Collinsville, Callide B, Swanbank B and Kogan Creek. The reasons given included \"Extend outage\", \"Swan B1 70 MW mill PF leak\", \"Call B2 max availability\", \"SCC limitations\" and \"Call B1 vac limit\""
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On both days, imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-02-23",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          },
+          {
+            "name": "Terranora",
+            "quote": "imports into Queensland across the Queensland to New South Wales (QNI) and Terranora interconnectors were restricted to a combined total of less than 200 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh for the seven trading intervals between 12.30 pm and 3.30 pm inclusive",
+          "text": "seven trading intervals between 12.30 pm and 3.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "On 23 February a planned outage of the Alstonville to Ballina 66 kV line in northern New South Wales occurred between 5 am and 6.40 pm. Country Energy gave three days notice of the need to take the outage. The outage resulted in forced flows from Queensland into northern New South Wales across the Terranora interconnector by up to 50 MW",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "peaking at $9561/MWh and $9153/MWh respectively",
+          "value": 9153
+        },
+        "rebid_set_price": {
+          "quote": "Significantly higher than forecast demand combined with rebidding by Stanwell and CS Energy that shifted as much as 770 MW of capacity into high prices led to higher than forecast prices",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_22_and_23_February_2008_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_22%20and%2023%20February%202008%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1305,
+    "per_attempt": [
+      {
+        "completion_tokens": 1305,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 13170,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14475
+      }
+    ],
+    "prompt_tokens": 13170,
+    "reasoning_tokens": 0,
+    "total_tokens": 14475
+  }
+}

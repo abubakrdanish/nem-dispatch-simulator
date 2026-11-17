@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T01:11:54+00:00",
+  "failure": null,
+  "input_sha256": "8b4e43885e9db0e91a4dcdb8ff20c912bbb1838848c50d353990159a948b4722",
+  "key": "7083e4c94bbaa7584cbbd23ff6df6c5e181d596a29b1f689d59499d34172c94b",
+  "latency_s": 60.83,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-07-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The combination of the following factors saw the dispatch (or 5-minute) price exceed $10,000/MWh from 12.05 pm to 12.20 pm inclusive.\", \"quote\": \"The combination of the following factors saw the dispatch (or 5-minute) price exceed $10,000/MWh from 12.05 pm to 12.20 pm inclusive.\"}, \"peak_price\": {\"value\": 8824, \"quote\": \"On 9 July 2018, the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand for electricity was higher than expected for most high priced trading intervals. For the 12.30 pm trading interval, demand for electricity was 1599 MW, around 160 MW higher than forecast four hours prior.\"}, {\"label\": \"wind_output\", \"quote\": \"Low-priced wind generation in South Australia was relatively low, as forecast.\"}, {\"label\": \"network_outage\", \"quote\": \"Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia.\"}], \"constraints_named\": [{\"id\": \"V::S_ SETB_TBSE_2\", \"quote\": \"AEMO invoked the V::S_ SETB_TBSE_2 constraint to manage the outage of the Tailem Bend to Tungkillo 275 kV line.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"South Australia is connected to Victoria by the Heywood and MurrayLink interconnectors.\"}, {\"name\": \"MurrayLink\", \"quote\": \"South Australia is connected to Victoria by the Heywood and MurrayLink interconnectors.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand for electricity was higher than expected for most high priced trading intervals. For the 12.30 pm trading interval, demand for electricity was 1599 MW, around 160 MW higher than forecast four hours prior."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Low-priced wind generation in South Australia was relatively low, as forecast."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraints to manage the outage on the Tailem Bend to Tungkillo line limited the flow of electricity across the Heywood interconnector while the constraints managing the Ararat to Horsham line outage limited flows across the MurrayLink interconnector, from Victoria into South Australia."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V::S_ SETB_TBSE_2",
+            "quote": "AEMO invoked the V::S_ SETB_TBSE_2 constraint to manage the outage of the Tailem Bend to Tungkillo 275 kV line."
+          }
+        ],
+        "event_date": "2018-07-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "South Australia is connected to Victoria by the Heywood and MurrayLink interconnectors."
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "South Australia is connected to Victoria by the Heywood and MurrayLink interconnectors."
+          }
+        ],
+        "intervals": {
+          "quote": "The combination of the following factors saw the dispatch (or 5-minute) price exceed $10,000/MWh from 12.05 pm to 12.20 pm inclusive.",
+          "text": "The combination of the following factors saw the dispatch (or 5-minute) price exceed $10,000/MWh from 12.05 pm to 12.20 pm inclusive."
+        },
+        "network_outages": {
+          "quote": "Network outages in South Australia and Victoria, advised to the market over a week in advance, reduced the ability for low-priced electricity to flow into South Australia from Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 9 July 2018, the maximum spot price for electricity in South Australia reached $8824/MWh for the 12.30 pm trading interval.",
+          "value": 8824
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_9_July_2018_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%209%20July%202018_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4729,
+    "per_attempt": [
+      {
+        "completion_tokens": 4729,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4094
+        },
+        "prompt_tokens": 10715,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15444
+      }
+    ],
+    "prompt_tokens": 10715,
+    "reasoning_tokens": 4094,
+    "total_tokens": 15444
+  }
+}

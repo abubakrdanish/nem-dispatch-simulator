@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:11:45+00:00",
+  "failure": null,
+  "input_sha256": "b7813dee3fc61ca4d71be0bd73487216fb74a5eccd63b251e428a3763f74ab28",
+  "key": "16aae5c48f1ca21124750df5390057e09d3fdcb90bfec7bcb8376640e542a786",
+  "latency_s": 8.59,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"eight occasions from 2 pm to 5.30 pm\", \"quote\": \"On 13 January 2009, spot market prices in South Australia exceeded $7500/MWh on eight occasions from 2 pm to 5.30 pm.\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"Spot price $ 9999/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature on the day reached 41 degrees, driving high demand.\"}, {\"label\": \"rebids\", \"quote\": \"The major contributing factor to high prices on the day was AGL's bidding behaviour and high demand which resulted in initial high price forecasts.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined import limits into South Australia were up to 130 MW less than forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Heywood were being limited to around 280 MW by a system normal constraint.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Murraylink were 100 MW lower than forecast, at around 90 MW.\"}], \"constraints_named\": [{\"id\": \"system normal constraint\", \"quote\": \"Imports across Heywood were being limited to around 280 MW by a system normal constraint.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Imports across Heywood were being limited to around 280 MW by a system normal constraint.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink were 100 MW lower than forecast, at around 90 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to spot prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature on the day reached 41 degrees, driving high demand."
+          },
+          {
+            "label": "rebids",
+            "quote": "The major contributing factor to high prices on the day was AGL's bidding behaviour and high demand which resulted in initial high price forecasts."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined import limits into South Australia were up to 130 MW less than forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across Heywood were being limited to around 280 MW by a system normal constraint."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across Murraylink were 100 MW lower than forecast, at around 90 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "system normal constraint",
+            "quote": "Imports across Heywood were being limited to around 280 MW by a system normal constraint."
+          }
+        ],
+        "event_date": "2009-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Imports across Heywood were being limited to around 280 MW by a system normal constraint."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports across Murraylink were 100 MW lower than forecast, at around 90 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 January 2009, spot market prices in South Australia exceeded $7500/MWh on eight occasions from 2 pm to 5.30 pm.",
+          "text": "eight occasions from 2 pm to 5.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9999/MWh",
+          "value": 9999
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to spot prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_13_January_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_13%20January%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 469,
+    "per_attempt": [
+      {
+        "completion_tokens": 469,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8057,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8526
+      }
+    ],
+    "prompt_tokens": 8057,
+    "reasoning_tokens": 0,
+    "total_tokens": 8526
+  }
+}

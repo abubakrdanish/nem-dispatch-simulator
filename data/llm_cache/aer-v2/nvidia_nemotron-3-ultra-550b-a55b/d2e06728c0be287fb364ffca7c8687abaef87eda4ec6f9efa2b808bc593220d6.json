@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:14:07+00:00",
+  "failure": null,
+  "input_sha256": "ccd91234ed2df58b3cd8ccad09887355e7c13d06d78e4a13da41a4d089ff0e7a",
+  "key": "d2e06728c0be287fb364ffca7c8687abaef87eda4ec6f9efa2b808bc593220d6",
+  "latency_s": 10.03,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-04-22\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"seven trading intervals from 12.30 pm to 4 pm inclusive\", \"quote\": \"On Thursday 22 April 2010, the spot price in Victoria exceeded $5000/MWh over seven trading intervals from 12.30 pm to 4 pm inclusive, reaching close to the price cap.\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"Spot price $9999/MWh\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages restricted imports in to Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.\"}, {\"label\": \"rebids\", \"quote\": \"Day ahead bidding by International Power saw significant capacity at Hazelwood and Loy Yang B priced at close to the price cap.\"}, {\"label\": \"rebids\", \"quote\": \"In response to forecast prices of around $500/ MWh for the afternoon, Snowy Hydro rebid to commit the Valley Power Gas turbines. This saw the forecast price fall to below $40/MWh. Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.\"}, {\"label\": \"rebids\", \"quote\": \"Further rebids by Snowy Hydro shifted cap acity into negative prices at Murray 2.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The constraint was binding from 12.05 pm, and was violated for the majority of the time.\"}, {\"label\": \"constraint_violation\", \"quote\": \"This constraint bound from 12.50 pm, and also violated for most of the period, until being revoked at 4.10 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At the times of high prices, imports into Vi ctoria across the Heywood interconnector were limited to around 200 MW.\"}], \"constraints_named\": [{\"id\": \"N>>V-X_DDH2_DDSM_2\", \"quote\": \"The constraint 7 used to manage this outage (N>>V-X_DDH2_DDSM_2) bound8 for the entire high priced period.\"}, {\"id\": \"#VIC1-NSW1_E_E\", \"quote\": \"At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settle ment residues accruing across the Vic-NSW interconnector.\"}, {\"id\": \"#SA1_E_20100422\", \"quote\": \"At 12.50 pm, AEMO invoked the constrai nt #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia.\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The Basslink interconnector tripped on 17 April as a result of the failure of a valve cooling pipe component in the valve hall causing a leak of demineralised wate r.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"On 22 April there was a planned outage of a Heywood to Moorabool 500 kV line that reduced the capacity for flows between Victor ia and South Australi a across the Heywood interconnector.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Two hours ahead of dispatch, flows across the Vi c-NSW interconnector were forecast to be around 20 MW, counter price into New South Wales.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"The 11 am rebids by Snowy Hydro for Murray resulted in counter price flows of up to 700 MW into New South Wales. Although Murraylink was flowing into Victoria until 12.15 pm, after that time, as described above, the constraint combined with the S nowy Hydro rebids forced flows into South Australia, reaching a maximum of 220 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages restricted imports in to Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages restricted imports in to Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April."
+          },
+          {
+            "label": "rebids",
+            "quote": "Day ahead bidding by International Power saw significant capacity at Hazelwood and Loy Yang B priced at close to the price cap."
+          },
+          {
+            "label": "rebids",
+            "quote": "In response to forecast prices of around $500/ MWh for the afternoon, Snowy Hydro rebid to commit the Valley Power Gas turbines. This saw the forecast price fall to below $40/MWh. Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap."
+          },
+          {
+            "label": "rebids",
+            "quote": "Further rebids by Snowy Hydro shifted cap acity into negative prices at Murray 2."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The constraint was binding from 12.05 pm, and was violated for the majority of the time."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This constraint bound from 12.50 pm, and also violated for most of the period, until being revoked at 4.10 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At the times of high prices, imports into Vi ctoria across the Heywood interconnector were limited to around 200 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>V-X_DDH2_DDSM_2",
+            "quote": "The constraint 7 used to manage this outage (N>>V-X_DDH2_DDSM_2) bound8 for the entire high priced period."
+          },
+          {
+            "id": "#VIC1-NSW1_E_E",
+            "quote": "At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settle ment residues accruing across the Vic-NSW interconnector."
+          },
+          {
+            "id": "#SA1_E_20100422",
+            "quote": "At 12.50 pm, AEMO invoked the constrai nt #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia."
+          }
+        ],
+        "event_date": "2010-04-22",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The Basslink interconnector tripped on 17 April as a result of the failure of a valve cooling pipe component in the valve hall causing a leak of demineralised wate r."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "On 22 April there was a planned outage of a Heywood to Moorabool 500 kV line that reduced the capacity for flows between Victor ia and South Australi a across the Heywood interconnector."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Two hours ahead of dispatch, flows across the Vi c-NSW interconnector were forecast to be around 20 MW, counter price into New South Wales."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "The 11 am rebids by Snowy Hydro for Murray resulted in counter price flows of up to 700 MW into New South Wales. Although Murraylink was flowing into Victoria until 12.15 pm, after that time, as described above, the constraint combined with the S nowy Hydro rebids forced flows into South Australia, reaching a maximum of 220 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 22 April 2010, the spot price in Victoria exceeded $5000/MWh over seven trading intervals from 12.30 pm to 4 pm inclusive, reaching close to the price cap.",
+          "text": "seven trading intervals from 12.30 pm to 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "Planned network outages restricted imports in to Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999/MWh",
+          "value": 9999
+        },
+        "rebid_set_price": {
+          "quote": "Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_22_April_2010_-_VIC_.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_22%20April%202010%20-%20VIC%20.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1060,
+    "per_attempt": [
+      {
+        "completion_tokens": 1060,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 8074,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9134
+      }
+    ],
+    "prompt_tokens": 8074,
+    "reasoning_tokens": 0,
+    "total_tokens": 9134
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:07:05+00:00",
+  "failure": null,
+  "input_sha256": "d1448469819daf49519152f93671c202cede03ad1632081ded64570b7c434d6d",
+  "key": "7a013b9b6b182f137d319a0d62275f4651c2dabf97dfc247eaad5278fb79af3e",
+  "latency_s": 18.41,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-30\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 pm and 8 pm 30-minute periods\", \"quote\": \"On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.\"}, \"peak_price\": {\"value\": 8456, \"quote\": \"On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures drive a high demand for electricity through air conditioners.\"}, {\"label\": \"demand\", \"quote\": \"As the sun set, customers with rooftop solar shifted their demand to the grid\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"wind_output\", \"quote\": \"very still conditions on both evenings meant there was only around 50 MW of wind farm generation available\"}, {\"label\": \"wind_output\", \"quote\": \"On average, actual wind generation was around 65 MW lower than the one hour forecast expected.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}, {\"label\": \"network_outage\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}, \"event_date\": \"2021-12-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7 pm 30-minute period\", \"quote\": \"On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.\"}, \"peak_price\": {\"value\": 6368, \"quote\": \"On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures drive a high demand for electricity through air conditioners.\"}, {\"label\": \"demand\", \"quote\": \"As the sun set, customers with rooftop solar shifted their demand to the grid\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"wind_output\", \"quote\": \"very still conditions on both evenings meant there was only around 50 MW of wind farm generation available\"}, {\"label\": \"wind_output\", \"quote\": \"On average, actual wind generation was around 65 MW lower than the one hour forecast expected.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}, {\"label\": \"network_outage\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures drive a high demand for electricity through air conditioners."
+          },
+          {
+            "label": "demand",
+            "quote": "As the sun set, customers with rooftop solar shifted their demand to the grid"
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply."
+          },
+          {
+            "label": "wind_output",
+            "quote": "very still conditions on both evenings meant there was only around 50 MW of wind farm generation available"
+          },
+          {
+            "label": "wind_output",
+            "quote": "On average, actual wind generation was around 65 MW lower than the one hour forecast expected."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped."
+          },
+          {
+            "label": "network_outage",
+            "quote": "constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-31",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Imports across Murraylink into South Australia were around 50 MW during the time of the high prices on both days even though its nominal capacity is 220 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.",
+          "text": "7 pm 30-minute period"
+        },
+        "network_outages": {
+          "quote": "constraints reduced imports into South Australia to avoid a voltage collapse at the Red Cliffs substation if lines in NSW tripped.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.",
+          "value": 6368
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/30_&_31_December_2021_$5000_Energy_-_Report_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/30%20%26%2031%20December%202021%20%245000%20Energy%20-%20Report%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 1176,
+    "per_attempt": [
+      {
+        "completion_tokens": 1176,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 7798,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8974
+      }
+    ],
+    "prompt_tokens": 7798,
+    "reasoning_tokens": 0,
+    "total_tokens": 8974
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:30:14+00:00",
+  "failure": null,
+  "input_sha256": "9fdb9f34ea53ca5074701185a2feb761f68aaf0792403bddd005d03b30128adb",
+  "key": "68c8bac280acec0ad2287df697bd20012094e90b0b188ac08cbb6e52d32df1c8",
+  "latency_s": 14.8,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-01-19\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"Victoria: 2.30 pm; South Australia: 2.30 pm, 3 pm, 5 pm, 6 pm\", \"quote\": \"In South Australia the spot price reached $11 864/MWh at 2.30 pm, $13 408/MWh at 3 pm, $5413/MWh at 5 pm and $5332/MWh at 6 pm. The spot price exceeded $5000/MWh only once in Victoria, reaching $10 152/MWh at 2.30 pm.\"}, \"peak_price\": {\"value\": 13408, \"quote\": \"In South Australia the spot price reached $11 864/MWh at 2.30 pm, $13 408/MWh at 3 pm, $5413/MWh at 5 pm and $5332/MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 19 January maximum temperatures in Melbourne and Adelaide exceeded 40°C, leading to high forecast demand for electricity.\"}, {\"label\": \"demand\", \"quote\": \"While demand for electricity was high in both regions, it has been much higher in the past.\"}, {\"label\": \"wind_output\", \"quote\": \"This was mainly due to lower than forecast semi-scheduled wind generation.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"However, it is worth noting the closure of two power stations in recent times: Alinta's 540 MW Northern Power Station in South Australia in May 2016, and Engie's 1600 MW Hazelwood Power Station in Victoria in March 2017.\"}, {\"label\": \"rebids\", \"quote\": \"Generators rebid further capacity into low price bands throughout the day, such that for each trading interval from 2 pm to 6 pm, on average approximately 97 per cent of capacity was priced below $500/MWh, with the remaining three percent priced above $9000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"As was the case in Victoria, generators rebid further capacity into low price bands such that for each trading interval from 2 pm to 6 pm, on average approximately 82 per cent of capacity was priced below $2000MWh with the remaining 18 per cent priced above $10 000/MWh.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"When AEMO activates RERT contracts, prices for all regions across the NEM are determined using \\\"what-if\\\" pricing.\"}], \"constraints_named\": [{\"id\": \"v>>v_nil_3 sl\", \"quote\": \"1034A constraint management - v>>v_nil_3 sl\"}, {\"id\": \"vs_250\", \"quote\": \"1645~A~respond to constraint vs_250~\"}], \"interconnectors_named\": [{\"name\": \"Vic-SA\", \"quote\": \"band adj due to material change in vic-sa net ic ~ vic import duration extended @1430 sl~\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the high price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 19 January maximum temperatures in Melbourne and Adelaide exceeded 40°C, leading to high forecast demand for electricity."
+          },
+          {
+            "label": "demand",
+            "quote": "While demand for electricity was high in both regions, it has been much higher in the past."
+          },
+          {
+            "label": "wind_output",
+            "quote": "This was mainly due to lower than forecast semi-scheduled wind generation."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "However, it is worth noting the closure of two power stations in recent times: Alinta's 540 MW Northern Power Station in South Australia in May 2016, and Engie's 1600 MW Hazelwood Power Station in Victoria in March 2017."
+          },
+          {
+            "label": "rebids",
+            "quote": "Generators rebid further capacity into low price bands throughout the day, such that for each trading interval from 2 pm to 6 pm, on average approximately 97 per cent of capacity was priced below $500/MWh, with the remaining three percent priced above $9000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "As was the case in Victoria, generators rebid further capacity into low price bands such that for each trading interval from 2 pm to 6 pm, on average approximately 82 per cent of capacity was priced below $2000MWh with the remaining 18 per cent priced above $10 000/MWh."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "When AEMO activates RERT contracts, prices for all regions across the NEM are determined using \"what-if\" pricing."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "v>>v_nil_3 sl",
+            "quote": "1034A constraint management - v>>v_nil_3 sl"
+          },
+          {
+            "id": "vs_250",
+            "quote": "1645~A~respond to constraint vs_250~"
+          }
+        ],
+        "event_date": "2019-01-19",
+        "interconnectors_named": [
+          {
+            "name": "Vic-SA",
+            "quote": "band adj due to material change in vic-sa net ic ~ vic import duration extended @1430 sl~"
+          }
+        ],
+        "intervals": {
+          "quote": "In South Australia the spot price reached $11 864/MWh at 2.30 pm, $13 408/MWh at 3 pm, $5413/MWh at 5 pm and $5332/MWh at 6 pm. The spot price exceeded $5000/MWh only once in Victoria, reaching $10 152/MWh at 2.30 pm.",
+          "text": "Victoria: 2.30 pm; South Australia: 2.30 pm, 3 pm, 5 pm, 6 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "In South Australia the spot price reached $11 864/MWh at 2.30 pm, $13 408/MWh at 3 pm, $5413/MWh at 5 pm and $5332/MWh at 6 pm.",
+          "value": 13408
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the high price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_19_January_2018_(Vic_SA).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2019%20January%202018%20%28Vic%20SA%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 803,
+    "per_attempt": [
+      {
+        "completion_tokens": 803,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 19630,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20433
+      }
+    ],
+    "prompt_tokens": 19630,
+    "reasoning_tokens": 0,
+    "total_tokens": 20433
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:30:00+00:00",
+  "failure": null,
+  "input_sha256": "8af3bccf9627fbf529951dc65ec3e892401edba704e4cbfecd73debe7a25064f",
+  "key": "12a47cd212759014dd179bacb9a85efdf645bb24c2bb64c4926cad1fbc28c962",
+  "latency_s": 8.12,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-01-18\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"4.30 pm to 6 pm trading intervals inclusive\", \"quote\": \"On 18 January 2018, the spot price for electricity in Victoria and in South Australia exceeded $5000/MWh for the 4.30 pm to 6 pm trading intervals inclusive\"}, \"peak_price\": {\"value\": 14167, \"quote\": \"Spot Price $ 14 167/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures were high in both regions, reaching a maximum of 40oC in Melbourne and 43oC in Adelaide\"}, {\"label\": \"demand\", \"quote\": \"actual demand for electricity was up to 638 MW higher than forecast by AEMO\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Loy Yang B unit 1 tripped (stopped generating unexpectedly) at 3.35 pm, resulting in an immediate reduction of 530 MW of low-priced capacity\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)\"}, {\"label\": \"interconnector_limit\", \"quote\": \"flows from NSW into Victoria were at their limit (as forecast), which at 168 MW, was significantly lower than the nominal import limit of 1300 MW\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The Basslink interconnector was providing electricity to Victoria from Tasmania at its full level of capability\"}, {\"name\": \"Vic-NSW\", \"quote\": \"the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)\"}, {\"name\": \"Heywood\", \"quote\": \"As the Heywood interconnector was unconstrained for the duration of the high prices, for analysis purposes we treat Victoria and South Australia as one region\"}, {\"name\": \"Murraylink\", \"quote\": \"Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Participants rebidding capacity from low to high prices did not contribute to the high prices\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures were high in both regions, reaching a maximum of 40oC in Melbourne and 43oC in Adelaide"
+          },
+          {
+            "label": "demand",
+            "quote": "actual demand for electricity was up to 638 MW higher than forecast by AEMO"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Loy Yang B unit 1 tripped (stopped generating unexpectedly) at 3.35 pm, resulting in an immediate reduction of 530 MW of low-priced capacity"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "flows from NSW into Victoria were at their limit (as forecast), which at 168 MW, was significantly lower than the nominal import limit of 1300 MW"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2018-01-18",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The Basslink interconnector was providing electricity to Victoria from Tasmania at its full level of capability"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)"
+          },
+          {
+            "name": "Heywood",
+            "quote": "As the Heywood interconnector was unconstrained for the duration of the high prices, for analysis purposes we treat Victoria and South Australia as one region"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "On 18 January 2018, the spot price for electricity in Victoria and in South Australia exceeded $5000/MWh for the 4.30 pm to 6 pm trading intervals inclusive",
+          "text": "4.30 pm to 6 pm trading intervals inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot Price $ 14 167/MWh",
+          "value": 14167
+        },
+        "rebid_set_price": {
+          "quote": "Participants rebidding capacity from low to high prices did not contribute to the high prices",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_18_January_2018_(Vic_SA)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2018%20January%202018%20%28Vic%20SA%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 583,
+    "per_attempt": [
+      {
+        "completion_tokens": 583,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 23375,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 23958
+      }
+    ],
+    "prompt_tokens": 23375,
+    "reasoning_tokens": 0,
+    "total_tokens": 23958
+  }
+}

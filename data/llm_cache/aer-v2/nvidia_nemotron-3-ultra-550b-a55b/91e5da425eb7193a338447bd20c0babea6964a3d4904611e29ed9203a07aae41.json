@@ -1,0 +1,98 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:16:27+00:00",
+  "failure": null,
+  "input_sha256": "d84695ed8fb499ee95dfc4ff82b3f226c25ddc0edf30a82bf03a1b135cc3733b",
+  "key": "91e5da425eb7193a338447bd20c0babea6964a3d4904611e29ed9203a07aae41",
+  "latency_s": 12.59,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-27\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"3.30 pm and 4 pm trading intervals in New South Wales; 3.30 pm trading interval in Queensland\", \"quote\": \"On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval.\"}, \"peak_price\": {\"value\": 8933, \"quote\": \"Spot price $8933/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was higher than forecast four hours ahead in both regions, by up to 700 MW in total across the two regions.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Wallerawang to Sydney South 330kV line restricted imports, although this restriction was not forecast.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Total import capability into New South Wales from Victoria was lower than forecast for the whole period.\"}, {\"label\": \"rebids\", \"quote\": \"Over several rebids from 8.05 am Millmerran Energy Trader shifted 193 MW at Millmerran from prices below $10/MWh to above $9500/MWh.\"}], \"constraints_named\": [{\"id\": \"QNI constraint\", \"quote\": \"A:Swan_E manage QNI constraint\"}, {\"id\": \"VIC-NSW limit\", \"quote\": \"Forecast interconnector VIC-NSW limit::Band shift\"}], \"interconnectors_named\": [{\"name\": \"Victoria to New South Wales interconnector\", \"quote\": \"Total import capability into New South Wales from Victoria was lower than forecast for the whole period.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Wallerawang to Sydney South 330kV line restricted imports, although this restriction was not forecast.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was higher than forecast four hours ahead in both regions, by up to 700 MW in total across the two regions."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Wallerawang to Sydney South 330kV line restricted imports, although this restriction was not forecast."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Total import capability into New South Wales from Victoria was lower than forecast for the whole period."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over several rebids from 8.05 am Millmerran Energy Trader shifted 193 MW at Millmerran from prices below $10/MWh to above $9500/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI constraint",
+            "quote": "A:Swan_E manage QNI constraint"
+          },
+          {
+            "id": "VIC-NSW limit",
+            "quote": "Forecast interconnector VIC-NSW limit::Band shift"
+          }
+        ],
+        "event_date": "2009-11-27",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to New South Wales interconnector",
+            "quote": "Total import capability into New South Wales from Victoria was lower than forecast for the whole period."
+          }
+        ],
+        "intervals": {
+          "quote": "On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval.",
+          "text": "3.30 pm and 4 pm trading intervals in New South Wales; 3.30 pm trading interval in Queensland"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Wallerawang to Sydney South 330kV line restricted imports, although this restriction was not forecast.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $8933/MWh",
+          "value": 8933
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_27_November_2009_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_27%20November%202009%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 516,
+    "per_attempt": [
+      {
+        "completion_tokens": 516,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6845,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7361
+      }
+    ],
+    "prompt_tokens": 6845,
+    "reasoning_tokens": 0,
+    "total_tokens": 7361
+  }
+}

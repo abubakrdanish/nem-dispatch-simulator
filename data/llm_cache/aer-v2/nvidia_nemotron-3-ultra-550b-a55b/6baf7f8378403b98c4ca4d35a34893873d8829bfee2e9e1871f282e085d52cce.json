@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T00:23:35+00:00",
+  "failure": null,
+  "input_sha256": "b91e11018629c5560eca5656ff55cc1e86802c86003db3bb032ae1eb5d837313",
+  "key": "6baf7f8378403b98c4ca4d35a34893873d8829bfee2e9e1871f282e085d52cce",
+  "latency_s": 8.55,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "2fb3c45985784d069da7fea369c1adca423ab7a79b0f920eba6e6711c0c7a439",
+  "prompt_version": "aer-v2",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-11-16\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"1.30 pm trading interval; dispatch intervals at 1.10 pm, 1.15 pm, 1.20 pm\", \"quote\": \"The spot price in New South Wales reached $7,496/MWh for the 1.30 pm trading interval. The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.\"}, \"causes\": [{\"label\": \"scheduled_plant_outage\", \"quote\": \"Long-term planned outages, for upgrades or maintenance, and technical issues experienced by black coal generators meant that there was around 3,100 MW of capacity unavailable for dispatch, out of approximately 9,700 MW of black coal installed capacity.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Technical issues experienced by a number of generators including a delay in the return to service of Bayswater unit 4 reduced the amount of capacity priced below $5,000/MWh by up to 1,300 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales. At the time of high prices the import limit into New South Wales was around 450 MW - around half of its nominal limit.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines.\"}, {\"label\": \"demand\", \"quote\": \"Demand was 295 MW greater than forecast, 4 hours ahead.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"To manage the outage, at 1.10 pm AEMO invoked constraints (discussed in the next section) affecting generation in southern New South Wales and flows on the VIC-NSW interconnector.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Unplanned network outages limited generation getting to load centres\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from prices below to above $5,000/MWh did not contribute to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Long-term planned outages, for upgrades or maintenance, and technical issues experienced by black coal generators meant that there was around 3,100 MW of capacity unavailable for dispatch, out of approximately 9,700 MW of black coal installed capacity."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Technical issues experienced by a number of generators including a delay in the return to service of Bayswater unit 4 reduced the amount of capacity priced below $5,000/MWh by up to 1,300 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales. At the time of high prices the import limit into New South Wales was around 450 MW - around half of its nominal limit."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was 295 MW greater than forecast, 4 hours ahead."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-11-16",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "To manage the outage, at 1.10 pm AEMO invoked constraints (discussed in the next section) affecting generation in southern New South Wales and flows on the VIC-NSW interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in New South Wales reached $7,496/MWh for the 1.30 pm trading interval. The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.",
+          "text": "1.30 pm trading interval; dispatch intervals at 1.10 pm, 1.15 pm, 1.20 pm"
+        },
+        "network_outages": {
+          "quote": "Unplanned network outages limited generation getting to load centres",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from prices below to above $5,000/MWh did not contribute to the high price.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20201116_NSW_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020201116%20NSW%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 705,
+    "per_attempt": [
+      {
+        "completion_tokens": 705,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 6567,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7272
+      }
+    ],
+    "prompt_tokens": 6567,
+    "reasoning_tokens": 0,
+    "total_tokens": 7272
+  }
+}
