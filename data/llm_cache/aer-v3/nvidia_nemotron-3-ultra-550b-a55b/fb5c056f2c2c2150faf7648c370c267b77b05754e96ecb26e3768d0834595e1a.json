@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:38:18+00:00",
+  "failure": null,
+  "input_sha256": "c4eff1a6866651dc62f80ebe6d23529883cb08d64e0308bd3419fb23acc5bf93",
+  "key": "fb5c056f2c2c2150faf7648c370c267b77b05754e96ecb26e3768d0834595e1a",
+  "latency_s": 77.58,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-12-07\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"six out of eight trading intervals between 12 pm and 3.30 pm inclusive\", \"quote\": \"On Monday 7 December 2009, the spot price in New South Wales exceeded $5000/MWh for six out of eight trading intervals between 12 pm and 3.30 pm inclusive.\"}, \"peak_price\": {\"value\": 9176, \"quote\": \"Spot price $9176/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Conditions during the high-priced period saw demand up to 450 MW higher than forecast.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 11.50 am, Origin's Energy's Uranquinty unit three tripped.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned transmission network outage between Sydney West and Yass exacerbated the impact of the system normal constraint until midday, when the line was returned to service earlier than forecast.\"}, {\"label\": \"rebids\", \"quote\": \"The market impact of this constraint was made significantly worse following rebidding by Delta Electricity⎯initially by shifting capacity into higher prices and then reducing its generator ramp rates and maximum availability.\"}, {\"label\": \"ramp_rates\", \"quote\": \"The reduction in the 'ramp down rate' at Mount Piper and the reduction in availability at Wallerawang had a significant impact on constraint management in the vicinity of these stations, and led to a significant change in dispatch and price outcomes.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"For the 12 pm to 3 pm trading intervals, combined import capability into New South Wales was up to 2200 MW lower than forecast twelve hours ahead and up to 1900 MW lower than forecast four hours ahead.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"The system normal constraint N>>N-NIL__S bound for much of 7 December.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Flows across the Terranora and QNI interconnectors also decreased from 349 MW at 11 am (into New South Wales) to 244 MW into Queensland at 11.30 am.\"}, {\"name\": \"Terranora\", \"quote\": \"Flows across the Terranora and QNI interconnectors also decreased from 349 MW at 11 am (into New South Wales) to 244 MW into Queensland at 11.30 am.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"Flows across Victoria to New South Wales interconnector decreased from 900 MW at 11 am (into New South Wales) to 175 MW into Victoria at 12 pm.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned transmission network outage between Sydney West and Yass exacerbated the impact of the system normal constraint until midday, when the line was returned to service earlier than forecast.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The market impact of this constraint was made significantly worse following rebidding by Delta Electricity⎯initially by shifting capacity into higher prices and then reducing its generator ramp rates and maximum availability.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Conditions during the high-priced period saw demand up to 450 MW higher than forecast."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 11.50 am, Origin's Energy's Uranquinty unit three tripped."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned transmission network outage between Sydney West and Yass exacerbated the impact of the system normal constraint until midday, when the line was returned to service earlier than forecast."
+          },
+          {
+            "label": "rebids",
+            "quote": "The market impact of this constraint was made significantly worse following rebidding by Delta Electricity⎯initially by shifting capacity into higher prices and then reducing its generator ramp rates and maximum availability."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "The reduction in the 'ramp down rate' at Mount Piper and the reduction in availability at Wallerawang had a significant impact on constraint management in the vicinity of these stations, and led to a significant change in dispatch and price outcomes."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "For the 12 pm to 3 pm trading intervals, combined import capability into New South Wales was up to 2200 MW lower than forecast twelve hours ahead and up to 1900 MW lower than forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "The system normal constraint N>>N-NIL__S bound for much of 7 December."
+          }
+        ],
+        "event_date": "2009-12-07",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Flows across the Terranora and QNI interconnectors also decreased from 349 MW at 11 am (into New South Wales) to 244 MW into Queensland at 11.30 am."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Flows across the Terranora and QNI interconnectors also decreased from 349 MW at 11 am (into New South Wales) to 244 MW into Queensland at 11.30 am."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "Flows across Victoria to New South Wales interconnector decreased from 900 MW at 11 am (into New South Wales) to 175 MW into Victoria at 12 pm."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 7 December 2009, the spot price in New South Wales exceeded $5000/MWh for six out of eight trading intervals between 12 pm and 3.30 pm inclusive.",
+          "text": "six out of eight trading intervals between 12 pm and 3.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "A planned transmission network outage between Sydney West and Yass exacerbated the impact of the system normal constraint until midday, when the line was returned to service earlier than forecast.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9176/MWh",
+          "value": 9176
+        },
+        "rebid_set_price": {
+          "quote": "The market impact of this constraint was made significantly worse following rebidding by Delta Electricity⎯initially by shifting capacity into higher prices and then reducing its generator ramp rates and maximum availability.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_7_December_2009_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_7%20December%202009%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3207,
+    "per_attempt": [
+      {
+        "completion_tokens": 3207,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2425
+        },
+        "prompt_tokens": 10787,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13994
+      }
+    ],
+    "prompt_tokens": 10787,
+    "reasoning_tokens": 2425,
+    "total_tokens": 13994
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:23:56+00:00",
+  "failure": null,
+  "input_sha256": "f00e4574895a1c7d442471e7c25e13f7a56f8642eb3f968f5ea0c2f3206d78a1",
+  "key": "5bc74049efdb001f45a8a0f64172ce892a1e48ec306d055707359e54cddca51e",
+  "latency_s": 68.91,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-12-17\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"11 am, 3 pm, 4 pm\", \"quote\": \"On 17 December 2009, the spot price in New South Wales exceeded $5000/MWh for three trading intervals: 11 am, 3 pm and 4 pm.\"}, \"peak_price\": {\"value\": 8703, \"quote\": \"Spot price $8703/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures in western Sydney reached 40°C driving demand to 13 485 MW at 4 pm. During the time of high prices demand was up to 920 MW higher than that forecast four hours ahead.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 6.32 am Delta Electricity rebid the ramp rates of Mount Piper units one and two. The rebid took effect from 10.05 am and reduced the 'ramp down rate' on each unit from 5 MW/min, to the minimum allowable level of 3 MW/min.\"}, {\"label\": \"rebids\", \"quote\": \"The market impact of this constraint was made worse following rebidding by Delta Electricity ―initially by reducing its generator ramp rates, then by shifting capacity into higher prices and then reducing maximum availability.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding from low prices increased the capacity priced at above $9000/MWh to up to 1180 MW, which also contributed to the price exceeding $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"The system normal constraint N>>N-NIL__S bound for much of 17 December.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity.\"}, {\"name\": \"Terranora\", \"quote\": \"During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding from low prices increased the capacity priced at above $9000/MWh to up to 1180 MW, which also contributed to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures in western Sydney reached 40°C driving demand to 13 485 MW at 4 pm. During the time of high prices demand was up to 920 MW higher than that forecast four hours ahead."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 6.32 am Delta Electricity rebid the ramp rates of Mount Piper units one and two. The rebid took effect from 10.05 am and reduced the 'ramp down rate' on each unit from 5 MW/min, to the minimum allowable level of 3 MW/min."
+          },
+          {
+            "label": "rebids",
+            "quote": "The market impact of this constraint was made worse following rebidding by Delta Electricity ―initially by reducing its generator ramp rates, then by shifting capacity into higher prices and then reducing maximum availability."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding from low prices increased the capacity priced at above $9000/MWh to up to 1180 MW, which also contributed to the price exceeding $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "The system normal constraint N>>N-NIL__S bound for much of 17 December."
+          }
+        ],
+        "event_date": "2009-12-17",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity."
+          },
+          {
+            "name": "Terranora",
+            "quote": "During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "During the period of high prices, flows into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) were at their limits but at much lower levels than the nominal capacity."
+          }
+        ],
+        "intervals": {
+          "quote": "On 17 December 2009, the spot price in New South Wales exceeded $5000/MWh for three trading intervals: 11 am, 3 pm and 4 pm.",
+          "text": "11 am, 3 pm, 4 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $8703/MWh",
+          "value": 8703
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low prices increased the capacity priced at above $9000/MWh to up to 1180 MW, which also contributed to the price exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_17_December_2009_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_17%20December%202009%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4763,
+    "per_attempt": [
+      {
+        "completion_tokens": 4763,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3970
+        },
+        "prompt_tokens": 8988,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13751
+      }
+    ],
+    "prompt_tokens": 8988,
+    "reasoning_tokens": 3970,
+    "total_tokens": 13751
+  }
+}

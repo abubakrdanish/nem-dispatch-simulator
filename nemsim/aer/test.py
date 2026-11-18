@@ -28,21 +28,25 @@ import numpy as np
 import pandas as pd
 
 from nemsim.aer.accuracy import usable_labels
+from nemsim.aer.extract import PRIMARY, labels_file
 from nemsim.config import ROOT
 from nemsim.ladder import SAMPLES, frame
 from nemsim.spike_sample import boot
 
-LABELS_FILE = ROOT / "results" / "aer_labels.json"
 OUT = ROOT / "results" / "aer_cause_test.csv"
 NETWORK = {"network_outage"}
 NETWORK_BROAD = {"network_outage", "interconnector_limit", "constraint_violation"}
 REPORT_THRESHOLD = 5000.0
 
 
-def event_rows() -> pd.DataFrame:
+def out_file(config: str = PRIMARY):
+    return OUT if config == PRIMARY else OUT.with_name(f"aer_cause_test__{config}.csv")
+
+
+def event_rows(config: str = PRIMARY) -> pd.DataFrame:
     """One row per (date, region) with the union of usable cause labels from every event naming it."""
-    ev = json.loads(LABELS_FILE.read_text())["events"]
-    keep = usable_labels()
+    ev = json.loads(labels_file(config).read_text())["events"]
+    keep = usable_labels(config)
     rows = []
     for e in ev:
         causes = {c["label"] for c in e["causes"]} & keep
@@ -82,14 +86,19 @@ def measures(g: pd.DataFrame) -> dict:
     return out
 
 
-def run() -> pd.DataFrame:
+def run(config: str = PRIMARY) -> pd.DataFrame:
+    """The test on one configuration's labels. The June 2025 rows were added after the first run showed that the
+    three June 2025 days carried most of the non-network side (2026-11-17); they are a robustness check on the
+    pre-registered rule, which is applied to the full population only."""
     x = scored()
-    ev = event_rows()
+    ev = event_rows(config)
     x = x.merge(ev, how="left", on=["date", "region"])
     x["labelled"] = x.urls.notna()
     x["causes"] = x.causes.apply(lambda c: c if isinstance(c, set) else set())
     rows = []
-    for pop, sel in (("$5,000+", x.rrp >= REPORT_THRESHOLD), ("$300+", x.price_class == "d. $300+")):
+    june25 = x.date.str.startswith("2025-06")
+    for pop, sel in (("$5,000+", x.rrp >= REPORT_THRESHOLD), ("$5,000+ without June 2025", (x.rrp >= REPORT_THRESHOLD) & ~june25),
+                     ("$300+", x.price_class == "d. $300+")):
         p = x[sel]
         rows.append({"population": pop, "group": "all", **measures(p)})
         rows.append({"population": pop, "group": "in an AER-reported day-region", **measures(p[p.labelled])})
@@ -105,8 +114,8 @@ def run() -> pd.DataFrame:
         for v in ("contributed", "did_not_contribute", "not_stated"):
             rows.append({"population": pop, "group": f"AER statement on network outages: {v}",
                          **measures(lab[lab.network_statement == v])})
-    out = pd.DataFrame(rows)
-    out.to_csv(OUT, index=False)
+    out = pd.DataFrame(rows).assign(config=config)
+    out.to_csv(out_file(config), index=False)
     with pd.option_context("display.width", 250, "display.max_columns", 30, "display.max_rows", 200):
         cols = ["population", "group", "region_intervals", "day_regions", "days", "r4 within $5", "r4 ci_lo", "r4 ci_hi",
                 "r4 within 10%", "r4 within $5 by $", "r2 within $5", "r2 within 10%", "r2 within $5 by $"]
@@ -123,6 +132,8 @@ def verdict(out: pd.DataFrame, pop: str = "$5,000+", name: str = "network") -> s
 
 
 if __name__ == "__main__":
-    o = run()
-    for name in ("network", "network, broad"):
-        print(name, "prediction:", verdict(o, name=name))
+    for cfg in ([sys.argv[1]] if len(sys.argv) > 1 else [PRIMARY]):
+        o = run(cfg)
+        for pop in ("$5,000+", "$5,000+ without June 2025"):
+            for name in ("network", "network, broad"):
+                print(cfg, pop, name, "prediction:", verdict(o, pop=pop, name=name))

@@ -1,0 +1,88 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:53:02+00:00",
+  "failure": null,
+  "input_sha256": "f54721811ce34bcbfe0a84ceb4f7546776e0ab85dab1d5263d3a2693fde32841",
+  "key": "dafc21f3b7c39fc66276b227405c58c054f6d7ce6efe191cca6689a704472462",
+  "latency_s": 47.26,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-09\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm 30-minute periods\", \"quote\": \"The Queensland 30-minute price for 6.30 pm and 7 pm on 9 December 2021 reached $7,118/MWh and $11,538/MWh respectively.\"}, \"peak_price\": {\"value\": 11538, \"quote\": \"On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand, which peaked at 8,477 MW- the highest up to that point this summer.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Nearly 3,000 MW of baseload capacity was unavailable on the evening of the 9 December. This included about 1,400 MW of outages, while a further 1,600 MW was unavailable due to generators offering less than their registered capacity. Most of the reduced capacity was planned, that is set up prior.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"For example: • Milmerran unit 1 removed 115 MW of capacity from 5.35 am. 30 MW was removed within 4 hours pre-dispatch. • CS Energy's Callide B unit 1 removed 170 MW of capacity at 4.35 pm due to 'technical issues - flame stability'. Unit 2 removed 10 MW at about the same time due to 'Emissions limit'. • Stanwell Corporation's Stanwell units 1 and 3 between them removed 50 MW of capacity in the 4 hours pre-dispatch due to 'reduced coal quality'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales Interconnector (QNI)\", \"quote\": \"A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"System normal constraints reflect network limits when there are no outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand, which peaked at 8,477 MW- the highest up to that point this summer."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Nearly 3,000 MW of baseload capacity was unavailable on the evening of the 9 December. This included about 1,400 MW of outages, while a further 1,600 MW was unavailable due to generators offering less than their registered capacity. Most of the reduced capacity was planned, that is set up prior."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "For example: • Milmerran unit 1 removed 115 MW of capacity from 5.35 am. 30 MW was removed within 4 hours pre-dispatch. • CS Energy's Callide B unit 1 removed 170 MW of capacity at 4.35 pm due to 'technical issues - flame stability'. Unit 2 removed 10 MW at about the same time due to 'Emissions limit'. • Stanwell Corporation's Stanwell units 1 and 3 between them removed 50 MW of capacity in the 4 hours pre-dispatch due to 'reduced coal quality'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-09",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales Interconnector (QNI)",
+            "quote": "A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation."
+          }
+        ],
+        "intervals": {
+          "quote": "The Queensland 30-minute price for 6.30 pm and 7 pm on 9 December 2021 reached $7,118/MWh and $11,538/MWh respectively.",
+          "text": "6.30 pm and 7 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": "System normal constraints reflect network limits when there are no outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "On 9 December 2021 the wholesale price of electricity in Queensland reached $7,118/MWh and $11,538/MWh for the 6.30 and 7 pm 30-minute periods, respectively.",
+          "value": 11538
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high price.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000MWh_-_9_December_2021_(Queensland).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000MWh%20-%209%20December%202021%20%28Queensland%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3464,
+    "per_attempt": [
+      {
+        "completion_tokens": 3464,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2817
+        },
+        "prompt_tokens": 6888,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10352
+      }
+    ],
+    "prompt_tokens": 6888,
+    "reasoning_tokens": 2817,
+    "total_tokens": 10352
+  }
+}

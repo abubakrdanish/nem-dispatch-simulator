@@ -1,0 +1,121 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:52:58+00:00",
+  "failure": null,
+  "input_sha256": "52ea00dace6980115932d2b2941b02bf9dc10db3aa4a786d50bba192d5b0578d",
+  "key": "15cedefe517f91e158cae14aaf742b180315b092c4340785c7eb0b7e6c442e69",
+  "latency_s": 108.82,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-12-01\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"10:00 am and 10:30 am trading intervals (and two other trading intervals associated with the same event)\", \"quote\": \"The spot price in South Australia exceeded $5000/MWh for the 10.30 am trading interval (in bold) and two other trading intervals associated with the same event.\"}, \"peak_price\": {\"value\": 14000, \"quote\": \"the price cap of $14 000/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand during the 10.30 am trading interval, in which the high price occurred, was around 60 MW more than forecast.\"}, {\"label\": \"wind_output\", \"quote\": \"Availability was 137 MW less than forecast, due to lower than forecast wind and the physical withholding of capacity from Mintaro and Port Lincoln.\"}, {\"label\": \"network_outage\", \"quote\": \"As a result of the unplanned outage, AEMO invoked a network constraint to manage the resulting voltage imbalances in the network.\"}, {\"label\": \"rebids\", \"quote\": \"rebidding capacity for Origin Energy's Mortlake Power Station in Victoria from high to low prices was the dominant trigger for high prices in South Australia.\"}, {\"label\": \"ramp_rates\", \"quote\": \"the local generation in South Australia could only provide an extra 285 MW due to ramp up constraints.\"}, {\"label\": \"constraint_violation\", \"quote\": \"the constraint violated and the dispatch price went to the price cap.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"This constraint reduces the Heywood interconnector's import limit into South Australia if either of the two Mortlake units are generating.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Between 10.05 am and 10.15 am inclusive and at 10.35 am the price was being set by the co-optimisation of the energy and FCAS markets.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO has issued a direction to a participant in the Victoria region. The direction was necessary to re-establish the power system to a secure operating state.\"}], \"constraints_named\": [{\"id\": \"V_HYML1_4\", \"quote\": \"AEMO invoked the V_HYML1_4 constraint to manage voltage imbalances in the Victorian network close to the South Australian border.\"}, {\"id\": \"NC-S_AGLHAL\", \"quote\": \"Constraint: NC-S_AGLHAL\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"the Heywood interconnector's import limit into South Australia\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was limited to importing between 190 MW and 220 MW (its nominal limit) into South Australia\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"As a result of the unplanned outage, AEMO invoked a network constraint to manage the resulting voltage imbalances in the network.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"rebidding capacity for Origin Energy's Mortlake Power Station in Victoria from high to low prices was the dominant trigger for high prices in South Australia.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand during the 10.30 am trading interval, in which the high price occurred, was around 60 MW more than forecast."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Availability was 137 MW less than forecast, due to lower than forecast wind and the physical withholding of capacity from Mintaro and Port Lincoln."
+          },
+          {
+            "label": "network_outage",
+            "quote": "As a result of the unplanned outage, AEMO invoked a network constraint to manage the resulting voltage imbalances in the network."
+          },
+          {
+            "label": "rebids",
+            "quote": "rebidding capacity for Origin Energy's Mortlake Power Station in Victoria from high to low prices was the dominant trigger for high prices in South Australia."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "the local generation in South Australia could only provide an extra 285 MW due to ramp up constraints."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "the constraint violated and the dispatch price went to the price cap."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "This constraint reduces the Heywood interconnector's import limit into South Australia if either of the two Mortlake units are generating."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Between 10.05 am and 10.15 am inclusive and at 10.35 am the price was being set by the co-optimisation of the energy and FCAS markets."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO has issued a direction to a participant in the Victoria region. The direction was necessary to re-establish the power system to a secure operating state."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V_HYML1_4",
+            "quote": "AEMO invoked the V_HYML1_4 constraint to manage voltage imbalances in the Victorian network close to the South Australian border."
+          },
+          {
+            "id": "NC-S_AGLHAL",
+            "quote": "Constraint: NC-S_AGLHAL"
+          }
+        ],
+        "event_date": "2016-12-01",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "the Heywood interconnector's import limit into South Australia"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was limited to importing between 190 MW and 220 MW (its nominal limit) into South Australia"
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in South Australia exceeded $5000/MWh for the 10.30 am trading interval (in bold) and two other trading intervals associated with the same event.",
+          "text": "10:00 am and 10:30 am trading intervals (and two other trading intervals associated with the same event)"
+        },
+        "network_outages": {
+          "quote": "As a result of the unplanned outage, AEMO invoked a network constraint to manage the resulting voltage imbalances in the network.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the price cap of $14 000/MWh",
+          "value": 14000
+        },
+        "rebid_set_price": {
+          "quote": "rebidding capacity for Origin Energy's Mortlake Power Station in Victoria from high to low prices was the dominant trigger for high prices in South Australia.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_1_December_2016,_10.30_am_(SA)_2.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%201%20December%202016%2C%2010.30%20am%20%28SA%29_2.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5448,
+    "per_attempt": [
+      {
+        "completion_tokens": 5448,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4665
+        },
+        "prompt_tokens": 14004,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 19452
+      }
+    ],
+    "prompt_tokens": 14004,
+    "reasoning_tokens": 4665,
+    "total_tokens": 19452
+  }
+}

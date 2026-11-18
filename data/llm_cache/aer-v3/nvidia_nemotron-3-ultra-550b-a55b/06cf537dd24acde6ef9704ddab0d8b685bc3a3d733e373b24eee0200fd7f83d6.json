@@ -1,0 +1,565 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T05:22:37+00:00",
+  "failure": null,
+  "input_sha256": "566544243056b80c149d1788f10fc779a6e1b789529e13536008de85918702a6",
+  "key": "06cf537dd24acde6ef9704ddab0d8b685bc3a3d733e373b24eee0200fd7f83d6",
+  "latency_s": 257.71,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2024-10-22\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm.\", \"quote\": \"On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm.\"}, \"peak_price\": {\"value\": 5910, \"quote\": \"On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand at 3 pm was 798 MW. Demand was also higher than average with the 30-minute average for the quarter at 3 pm of 584 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind output averaged 263 MW during the high prices out of around 2,763 MW installed, which equates to around 10% of installed capacity in South Australia.\"}, {\"label\": \"solar_output\", \"quote\": \"Average solar output was 134 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low. Rooftop solar output was 855 MW during the high prices which was 381 MW lower than the daily peak a few hours earlier.\"}, {\"label\": \"rebids\", \"quote\": \"At 2.49 pm, effective from 2.55 pm, AGL Energy shifted 176 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in forecast price and contributed to setting the price at 2.55 pm and 3 pm.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 2.49 pm, effective from 2.55 pm, AGL Energy shifted 176 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in forecast price and contributed to setting the price at 2.55 pm and 3 pm.\"}}, {\"event_date\": \"2024-10-23\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am.\", \"quote\": \"On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am.\"}, \"peak_price\": {\"value\": 5096, \"quote\": \"On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"To manage system security in the Victorian region, AEMO invoked a constraint which forced flows on Heywood from South Australia into Victoria while South Australia had high prices from 7.15 am. Flows went from 185 MW into South Australia at 7.05 am to flows out of South Australia at 245 MW by 7.30 am.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind output was lower than forecast, averaging 104 MW out of 2,763 MW of installed capacity during the high prices. This equates to 4% of installed wind capacity in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"To manage system security in the Victorian region, AEMO invoked a constraint which forced flows on Heywood from South Australia into Victoria while South Australia had high prices from 7.15 am.\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial reasons contributed to the high price ... At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices.\"}}, {\"event_date\": \"2024-11-07\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"On 7 November, the 30-minute prices exceeded $5,000 per MWh six times in NSW and five times in Queensland from 5 pm to 7.30 pm.\", \"quote\": \"On 7 November, the 30-minute prices exceeded $5,000 per MWh six times in NSW and five times in Queensland (Figure 10) from 5 pm to 7.30 pm.\"}, \"peak_price\": {\"value\": 15637, \"quote\": \"The prices ranged from $5,915 per MWh to $15,637 per MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand during the high price periods in NSW was 8,937 MW and 9,192 MW for Queensland at its peak. While demand in NSW was not remarkably high compared to the highest maximum daily demand for the quarter (12,611 MW), Queensland still recorded the fourth highest maximum daily demand for the quarter on this day at 9,192 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney. This meant NSW was unable to access low-priced capacity from southern NSW or Victoria to alleviate the high prices.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 4,700 MW capacity of baseload units were on mostly planned outages in NSW and Queensland.\"}, {\"label\": \"wind_output\", \"quote\": \"In Queensland, wind output averaged 205 MW out of around 2,117 MW installed capacity during the high prices, which equates to around 10% of installed capacity in Queensland.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices. Between 7 MW and 490 MW of capacity above $5,000 per MWh was dispatched during high-priced dispatch intervals.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices.\"}}, {\"event_date\": \"2024-11-26\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm.\", \"quote\": \"On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm.\"}, \"peak_price\": {\"value\": 6448, \"quote\": \"On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand during the high price periods was around 11,197 MW driven by mid-30 temperatures during a week of heatwave conditions in NSW. The maximum daily demand peaked at 11,301 MW and was the seventh highest for the quarter.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows into NSW were limited from Queensland and Victoria due to system normal constraints invoked to prevent overloading and to maintain system security. Flows into NSW across QNI were around 1,300 MW, which is its nominal limit, while Terranora was at around 120 MW, out of its 210 MW nominal limit. VNI was flowing at around 1,189 MW into NSW out of its nominal limit of 1,700 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Planned baseload outages meant that 2,700 MW of generally low-priced capacity was unavailable in NSW. This capacity was spread between Origin Energy's Eraring Power Station, AGL Energy's Bayswater Power Station and Delta Electricity's Vales Point Power Station.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"In addition, three of Origin Energy's Uranquinty Power Station's gas units tripped around 4.40 pm (generating around 450 MW at the time). This caused AEMO to declare a reserve shortfall for NSW from 4.30 pm until 8.15 pm.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation was around 253 MW out of around 2,762 MW at the time of high prices, which equates to around 9% of installed capacity in NSW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"125 MW of low-priced capacity at Snowy Hydro's Colongra Power Station could not start up fast enough to prevent high prices. For one high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical reasons contributed to the high price (Appendix D). Over three rebids from 4.40 pm, Origin Energy removed 534 MW of capacity from the price floor (-$1,000 per MWh) at Uranquinty due to its gas turbine tripping during the high price periods.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Flows into NSW across QNI were around 1,300 MW, which is its nominal limit\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora was at around 120 MW, out of its 210 MW nominal limit\"}, {\"name\": \"VNI\", \"quote\": \"VNI was flowing at around 1,189 MW into NSW out of its nominal limit of 1,700 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical reasons contributed to the high price ... Origin Energy removed 534 MW of capacity from the price floor (-$1,000 per MWh) at Uranquinty due to its gas turbine tripping during the high price periods.\"}}, {\"event_date\": \"2024-11-27\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"On 27 November, the 30-minute price in NSW exceeded $5,000 per MWh twice in the afternoon. The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm.\", \"quote\": \"On 27 November, the 30-minute price in NSW exceeded $5,000 per MWh twice in the afternoon. The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm.\"}, \"peak_price\": {\"value\": 17500, \"quote\": \"The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand during the high price periods reached around 11,325 MW driven by heatwave conditions. The maximum daily demand was 11,325 MW which was the fifth highest for the quarter.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows into NSW were limited from Queensland and Victoria due to system normal constraints invoked to prevent overloading and to maintain system security. Terranora was flowing around 10 MW on average into NSW compared to its nominal capacity of 210 MW. QNI was flowing around 867 MW on average into NSW, limited below is capacity of 1,300 MW. Flows on the VNI averaged around 68 MW and subsequently reduced to 0 MW shortly before 3.30 pm. This was well below its nominal capacity of up to 1,700 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Like the previous day on 26 November, around 2,700 MW of generally low-priced baseload capacity was unavailable in NSW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical reasons partly contributed to some of high price intervals (Appendix E). The most significant rebids during the high-priced periods were from Origin Energy. At 1.01 pm, Origin Energy removed 120 MW of capacity at Shoalhaven from the price floor (-$1,000 per MWh) due to plant issues leaving 40 MW of capacity available. Over two rebids at 2.17 pm and 2.24 pm, effective for 2.25 pm and 2.30 pm, respectively, Origin Energy's Eraring unit 1 removed a total of 40 MW of capacity from $1 per MWh due to a fan limitation.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora\", \"quote\": \"Terranora was flowing around 10 MW on average into NSW compared to its nominal capacity of 210 MW\"}, {\"name\": \"QNI\", \"quote\": \"QNI was flowing around 867 MW on average into NSW, limited below is capacity of 1,300 MW\"}, {\"name\": \"VNI\", \"quote\": \"Flows on the VNI averaged around 68 MW and subsequently reduced to 0 MW shortly before 3.30 pm. This was well below its nominal capacity of up to 1,700 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical reasons partly contributed to some of high price intervals ... Origin Energy removed 120 MW of capacity at Shoalhaven from the price floor (-$1,000 per MWh) due to plant issues ... Eraring unit 1 removed a total of 40 MW of capacity from $1 per MWh due to a fan limitation.\"}}, {\"event_date\": \"2024-12-02\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"On 2 December, the 30-minute prices in NSW and Queensland exceeded $5,000 per MWh twice in the evening. The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland.\", \"quote\": \"On 2 December, the 30-minute prices in NSW and Queensland exceeded $5,000 per MWh twice in the evening (Figure 13). The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland.\"}, \"peak_price\": {\"value\": 13502, \"quote\": \"The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Due to continuing warm temperatures, demand during the high price periods for NSW was 11,466 MW which was the maximum daily demand in NSW and the third highest for Q4 2024. Queensland's demand during the high prices reached 9,160 MW and was the fifth highest for the quarter.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"System normal constraints to avoid overloading on the Upper Tumut to Stockdill and Wagga to Lower Tumut lines limited flows from southern NSW and Victoria. Flows on VNI were averaging 592 MW into NSW out of its nominal capacity of between 400 MW and 1,700 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Four units were offline due to planned outages while two units were offline due to unplanned outages. Around 3,020 MW of baseload capacity was unavailable.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Four units were offline due to planned outages while two units were offline due to unplanned outages. Around 3,020 MW of baseload capacity was unavailable.\"}, {\"label\": \"wind_output\", \"quote\": \"Calm conditions saw very low levels of wind output in both regions. In NSW, wind output averaged 314 MW out of around 2,762 MW installed capacity during the high prices, which equates to around 11% of installed capacity in NSW. In Queensland, wind output averaged 220 MW out of around 2,117 MW installed capacity during the high prices, which equates to around 10% of installed capacity in Queensland.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 6.05 pm, 110 MW of low-priced capacity at Alinta's Braemar Power Station could not start up quickly enough to prevent high prices. For one interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand. At 6.10 pm, 60 MW of low-priced capacity at Braemar Power Station could not ramp up quickly enough to prevent high prices. For one interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix F). In the four hours leading up to the event, participants shifted a combined total of between 1,341 MW to 2,128 MW of high-priced capacity to low prices but this was not enough to meet demand for 6 pm and 6.30 pm. Some participants rebid capacity from low to high prices for commercial reasons or withdrew low-priced capacity for technical reasons. The biggest being Snowy Hydro which moved a total of 160 MW from below $500 per MWh to the price cap due to a change in forecast prices/sensitivities.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VNI\", \"quote\": \"Flows on VNI were averaging 592 MW into NSW out of its nominal capacity of between 400 MW and 1,700 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price ... Snowy Hydro which moved a total of 160 MW from below $500 per MWh to the price cap due to a change in forecast prices/sensitivities.\"}}, {\"event_date\": \"2024-12-03\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm.\", \"quote\": \"On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm.\"}, \"peak_price\": {\"value\": 9371, \"quote\": \"On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand at 12 pm was 9,457 MW and was 632 MW higher than forecast one hour prior. Demand was also higher than average with the 30-minute average for 12 pm for the quarter of 6,211 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned network outage on the Collector to Marulan line in southern NSW resulted in between around 180 MW and 1,020 MW of low-priced capacity unable to reach key load centres including Sydney. There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity.\"}, {\"label\": \"solar_output\", \"quote\": \"There was a significant reduction in rooftop solar generation during the high price periods due to cloudy conditions. Between 11.30 am and 12 pm, rooftop solar output was 2,484 MW. This is almost half the output generated the day prior of 4,837 MW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Up to 270 MW at Snowy Hydro's Colongra Power Station could not start up quickly enough to prevent high prices. The amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand for two high priced intervals. Up to 173 MW at Delta Electricity's Vales Point Power Station could not ramp up quickly enough to prevent high prices. The amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand for two high priced intervals.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"On this day, for two of the four high-priced 5-minute intervals at 11.40 am and 11.55 am, offers of around $10,000 per MW in lower FCAS contributed to setting the energy price in NSW.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix G). Delta Electricity withdrew a total of 225 MW of low-priced capacity at Vales Point during the high-priced periods due to technical issues including milling limits and fabric filter limits. At 10.53 am, AGL Energy removed 45 MW of low-priced capacity at Bayswater due to unexpected plant limits. At 11.24 am, AGL Energy shifted 65 MW of capacity at Bayswater from $36 per MWh to the price cap due to a change in forecast prices. At 11.36 am, effective for 11.45 am and 11.50 am, it offered 20 MW of capacity, 5 MW was low-priced while 15 MW was high priced, as the plant limit had been lifted. The combined effect of the three rebids by AGL Energy contributed to the high-priced periods at 11.45 am and 11.50 am.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity\"}, {\"name\": \"Terranora\", \"quote\": \"Terranora to be limited to around 17 MW out of its 210 MW nominal capacity\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage on the Collector to Marulan line in southern NSW resulted in between around 180 MW and 1,020 MW of low-priced capacity unable to reach key load centres including Sydney. There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price ... The combined effect of the three rebids by AGL Energy contributed to the high-priced periods at 11.45 am and 11.50 am.\"}}, {\"event_date\": \"2024-12-05\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm.\", \"quote\": \"On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm.\"}, \"peak_price\": {\"value\": 6096, \"quote\": \"On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand at 2.30 pm was 2,101 MW compared to 1,530 MW forecast four hours prior. Demand was also higher than average with the 30-minute average for 2.30 pm for the quarter of 540 MW. While demand was significantly impacted by a fall in rooftop solar generation, high temperatures in Adelaide of around 37°C meant that demand on the day was already high.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind output averaged 179 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 6% of installed capacity in South Australia.\"}, {\"label\": \"solar_output\", \"quote\": \"Average solar output was 349 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low. Rooftop solar output was 836 MW during the high prices which was 881 MW lower than the daily peak a few hours earlier.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Up to 81 MW of low-priced capacity at Origin Energy's Osborne could not ramp up quickly enough to avoid high prices. For all high-priced intervals, the amount of low-priced capacity that could not be dispatched was more than the high-priced capacity that was needed to meet demand. Up to 19 MW of low-priced capacity at Origin Energy's Quarantine could not start fast enough to avoid high prices. For only 1 high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity that was needed to meet demand.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price (Appendix H). At 2.04 pm, effective from 2.10 pm, Engie shifted 25 MW of capacity at Pelican Point from $299 per MWh to $12,500 per MWh due to fuel management and contributed to setting price for two of the three high-priced intervals. For all high-priced intervals, AGL Energy rebid 72 MW of capacity to high prices across Torrens Island and Barker Inlet. This was mainly a result of AGL shifting 120 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh at 2.08 pm due to a change in forecast prices. At 2.13 pm, effective from 2.20 pm, Neoen shifted 25 MW of capacity at Hornsdale Power Reserve from $3,911 per MWh to $9,932 per MWh due to a change in forecast prices and contributed to setting price for one of the three high-priced intervals.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to the high price ... Engie shifted 25 MW of capacity at Pelican Point from $299 per MWh to $12,500 per MWh due to fuel management and contributed to setting price for two of the three high-priced intervals.\"}}, {\"event_date\": \"2024-12-06\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm.\", \"quote\": \"On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm.\"}, \"peak_price\": {\"value\": 8044, \"quote\": \"On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand at 3 pm was 11,377 MW. Demand was also higher than average with the 30-minute average for 3 pm for the quarter of 6,959 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the Collector to Marulan line limited flows from southern NSW and Victoria from reaching the load centre in Sydney, with between 344 MW and 719 MW of low-priced capacity being unable to make it to market.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows on the VNI was limited to an average of 481 MW out of its nominal limit of 1,700 MW. The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind output averaged around 182 MW out of 2,762 MW installed capacity during the high prices, which equates to around 7% of installed capacity in NSW.\"}, {\"label\": \"solar_output\", \"quote\": \"From 2.30 pm to 3 pm, cloudy conditions caused grid scale solar generation to drop by 550 MW, with the average output at 2,013 MW. The cloudy conditions also meant rooftop solar output dropped 860 MW which resulted in higher demand.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Up to 238 MW at Snowy Hydro's Colongra Power Station could not start up quickly enough to prevent the high prices. For one high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the amount of high-priced capacity needed to meet demand.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VNI\", \"quote\": \"Flows on the VNI was limited to an average of 481 MW out of its nominal limit of 1,700 MW\"}, {\"name\": \"QNI\", \"quote\": \"The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints\"}, {\"name\": \"Terranora\", \"quote\": \"The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the Collector to Marulan line limited flows from southern NSW and Victoria from reaching the load centre in Sydney, with between 344 MW and 719 MW of low-priced capacity being unable to make it to market.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand at 3 pm was 798 MW. Demand was also higher than average with the 30-minute average for the quarter at 3 pm of 584 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind output averaged 263 MW during the high prices out of around 2,763 MW installed, which equates to around 10% of installed capacity in South Australia."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Average solar output was 134 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low. Rooftop solar output was 855 MW during the high prices which was 381 MW lower than the daily peak a few hours earlier."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.49 pm, effective from 2.55 pm, AGL Energy shifted 176 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in forecast price and contributed to setting the price at 2.55 pm and 3 pm."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-10-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm.",
+          "text": "On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm."
+        },
+        "network_outages": {
+          "quote": "A planned outage of network equipment near Moorabool meant flows on Heywood were limited to 58 MW into South Australia and South Australia was unable to import more low-priced capacity during the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 22 October, the 30-minute price in South Australia reached $5,910 per MWh at 3 pm.",
+          "value": 5910
+        },
+        "rebid_set_price": {
+          "quote": "At 2.49 pm, effective from 2.55 pm, AGL Energy shifted 176 MW of capacity at Barker Inlet from $561 per MWh to $17,500 per MWh due to a change in forecast price and contributed to setting the price at 2.55 pm and 3 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "To manage system security in the Victorian region, AEMO invoked a constraint which forced flows on Heywood from South Australia into Victoria while South Australia had high prices from 7.15 am. Flows went from 185 MW into South Australia at 7.05 am to flows out of South Australia at 245 MW by 7.30 am."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind output was lower than forecast, averaging 104 MW out of 2,763 MW of installed capacity during the high prices. This equates to 4% of installed wind capacity in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-10-23",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "To manage system security in the Victorian region, AEMO invoked a constraint which forced flows on Heywood from South Australia into Victoria while South Australia had high prices from 7.15 am."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods."
+          }
+        ],
+        "intervals": {
+          "quote": "On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am.",
+          "text": "On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am."
+        },
+        "network_outages": {
+          "quote": "Murraylink was impacted by a planned outage on the Bendigo to Shepparton line in Victoria, with flows into South Australia reduced to an average of 123 MW during the high price periods.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 23 October, the 30-minute price in South Australia reached $5,096 per MWh at 7.30 am.",
+          "value": 5096
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial reasons contributed to the high price ... At 7.18 am, effective from 7.25 am, AGL Energy shifted 56 MW of capacity at Barker Inlet and 30 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh due to a change in forecast prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand during the high price periods in NSW was 8,937 MW and 9,192 MW for Queensland at its peak. While demand in NSW was not remarkably high compared to the highest maximum daily demand for the quarter (12,611 MW), Queensland still recorded the fourth highest maximum daily demand for the quarter on this day at 9,192 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney. This meant NSW was unable to access low-priced capacity from southern NSW or Victoria to alleviate the high prices."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 4,700 MW capacity of baseload units were on mostly planned outages in NSW and Queensland."
+          },
+          {
+            "label": "wind_output",
+            "quote": "In Queensland, wind output averaged 205 MW out of around 2,117 MW installed capacity during the high prices, which equates to around 10% of installed capacity in Queensland."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices. Between 7 MW and 490 MW of capacity above $5,000 per MWh was dispatched during high-priced dispatch intervals."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-11-07",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On 7 November, the 30-minute prices exceeded $5,000 per MWh six times in NSW and five times in Queensland (Figure 10) from 5 pm to 7.30 pm.",
+          "text": "On 7 November, the 30-minute prices exceeded $5,000 per MWh six times in NSW and five times in Queensland from 5 pm to 7.30 pm."
+        },
+        "network_outages": {
+          "quote": "A planned network outage on the Marulan to Yass line meant low-priced capacity from Victoria and southern NSW was unable to reach key load centres including Sydney.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The prices ranged from $5,915 per MWh to $15,637 per MWh.",
+          "value": 15637
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand during the high price periods was around 11,197 MW driven by mid-30 temperatures during a week of heatwave conditions in NSW. The maximum daily demand peaked at 11,301 MW and was the seventh highest for the quarter."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows into NSW were limited from Queensland and Victoria due to system normal constraints invoked to prevent overloading and to maintain system security. Flows into NSW across QNI were around 1,300 MW, which is its nominal limit, while Terranora was at around 120 MW, out of its 210 MW nominal limit. VNI was flowing at around 1,189 MW into NSW out of its nominal limit of 1,700 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Planned baseload outages meant that 2,700 MW of generally low-priced capacity was unavailable in NSW. This capacity was spread between Origin Energy's Eraring Power Station, AGL Energy's Bayswater Power Station and Delta Electricity's Vales Point Power Station."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "In addition, three of Origin Energy's Uranquinty Power Station's gas units tripped around 4.40 pm (generating around 450 MW at the time). This caused AEMO to declare a reserve shortfall for NSW from 4.30 pm until 8.15 pm."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation was around 253 MW out of around 2,762 MW at the time of high prices, which equates to around 9% of installed capacity in NSW."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "125 MW of low-priced capacity at Snowy Hydro's Colongra Power Station could not start up fast enough to prevent high prices. For one high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical reasons contributed to the high price (Appendix D). Over three rebids from 4.40 pm, Origin Energy removed 534 MW of capacity from the price floor (-$1,000 per MWh) at Uranquinty due to its gas turbine tripping during the high price periods."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-11-26",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Flows into NSW across QNI were around 1,300 MW, which is its nominal limit"
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora was at around 120 MW, out of its 210 MW nominal limit"
+          },
+          {
+            "name": "VNI",
+            "quote": "VNI was flowing at around 1,189 MW into NSW out of its nominal limit of 1,700 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm.",
+          "text": "On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 26 November, the 30-minute price in NSW reached $6,448 per MWh at 6 pm.",
+          "value": 6448
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical reasons contributed to the high price ... Origin Energy removed 534 MW of capacity from the price floor (-$1,000 per MWh) at Uranquinty due to its gas turbine tripping during the high price periods.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand during the high price periods reached around 11,325 MW driven by heatwave conditions. The maximum daily demand was 11,325 MW which was the fifth highest for the quarter."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows into NSW were limited from Queensland and Victoria due to system normal constraints invoked to prevent overloading and to maintain system security. Terranora was flowing around 10 MW on average into NSW compared to its nominal capacity of 210 MW. QNI was flowing around 867 MW on average into NSW, limited below is capacity of 1,300 MW. Flows on the VNI averaged around 68 MW and subsequently reduced to 0 MW shortly before 3.30 pm. This was well below its nominal capacity of up to 1,700 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Like the previous day on 26 November, around 2,700 MW of generally low-priced baseload capacity was unavailable in NSW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical reasons partly contributed to some of high price intervals (Appendix E). The most significant rebids during the high-priced periods were from Origin Energy. At 1.01 pm, Origin Energy removed 120 MW of capacity at Shoalhaven from the price floor (-$1,000 per MWh) due to plant issues leaving 40 MW of capacity available. Over two rebids at 2.17 pm and 2.24 pm, effective for 2.25 pm and 2.30 pm, respectively, Origin Energy's Eraring unit 1 removed a total of 40 MW of capacity from $1 per MWh due to a fan limitation."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-11-27",
+        "interconnectors_named": [
+          {
+            "name": "Terranora",
+            "quote": "Terranora was flowing around 10 MW on average into NSW compared to its nominal capacity of 210 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "QNI was flowing around 867 MW on average into NSW, limited below is capacity of 1,300 MW"
+          },
+          {
+            "name": "VNI",
+            "quote": "Flows on the VNI averaged around 68 MW and subsequently reduced to 0 MW shortly before 3.30 pm. This was well below its nominal capacity of up to 1,700 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On 27 November, the 30-minute price in NSW exceeded $5,000 per MWh twice in the afternoon. The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm.",
+          "text": "On 27 November, the 30-minute price in NSW exceeded $5,000 per MWh twice in the afternoon. The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The price reached $17,250 per MWh at 3 pm and $17,500 per MWh at 3.30 pm.",
+          "value": 17500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical reasons partly contributed to some of high price intervals ... Origin Energy removed 120 MW of capacity at Shoalhaven from the price floor (-$1,000 per MWh) due to plant issues ... Eraring unit 1 removed a total of 40 MW of capacity from $1 per MWh due to a fan limitation.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Due to continuing warm temperatures, demand during the high price periods for NSW was 11,466 MW which was the maximum daily demand in NSW and the third highest for Q4 2024. Queensland's demand during the high prices reached 9,160 MW and was the fifth highest for the quarter."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "System normal constraints to avoid overloading on the Upper Tumut to Stockdill and Wagga to Lower Tumut lines limited flows from southern NSW and Victoria. Flows on VNI were averaging 592 MW into NSW out of its nominal capacity of between 400 MW and 1,700 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Four units were offline due to planned outages while two units were offline due to unplanned outages. Around 3,020 MW of baseload capacity was unavailable."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Four units were offline due to planned outages while two units were offline due to unplanned outages. Around 3,020 MW of baseload capacity was unavailable."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Calm conditions saw very low levels of wind output in both regions. In NSW, wind output averaged 314 MW out of around 2,762 MW installed capacity during the high prices, which equates to around 11% of installed capacity in NSW. In Queensland, wind output averaged 220 MW out of around 2,117 MW installed capacity during the high prices, which equates to around 10% of installed capacity in Queensland."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 6.05 pm, 110 MW of low-priced capacity at Alinta's Braemar Power Station could not start up quickly enough to prevent high prices. For one interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand. At 6.10 pm, 60 MW of low-priced capacity at Braemar Power Station could not ramp up quickly enough to prevent high prices. For one interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix F). In the four hours leading up to the event, participants shifted a combined total of between 1,341 MW to 2,128 MW of high-priced capacity to low prices but this was not enough to meet demand for 6 pm and 6.30 pm. Some participants rebid capacity from low to high prices for commercial reasons or withdrew low-priced capacity for technical reasons. The biggest being Snowy Hydro which moved a total of 160 MW from below $500 per MWh to the price cap due to a change in forecast prices/sensitivities."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-12-02",
+        "interconnectors_named": [
+          {
+            "name": "VNI",
+            "quote": "Flows on VNI were averaging 592 MW into NSW out of its nominal capacity of between 400 MW and 1,700 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 December, the 30-minute prices in NSW and Queensland exceeded $5,000 per MWh twice in the evening (Figure 13). The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland.",
+          "text": "On 2 December, the 30-minute prices in NSW and Queensland exceeded $5,000 per MWh twice in the evening. The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The price reached $8,903 per MWh at 6 pm and $13,502 per MWh at 6.30 pm in NSW and $8,261 per MWh at 6 pm and $12,360 per MWh at 6.30 pm in Queensland.",
+          "value": 13502
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price ... Snowy Hydro which moved a total of 160 MW from below $500 per MWh to the price cap due to a change in forecast prices/sensitivities.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand at 12 pm was 9,457 MW and was 632 MW higher than forecast one hour prior. Demand was also higher than average with the 30-minute average for 12 pm for the quarter of 6,211 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage on the Collector to Marulan line in southern NSW resulted in between around 180 MW and 1,020 MW of low-priced capacity unable to reach key load centres including Sydney. There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity."
+          },
+          {
+            "label": "solar_output",
+            "quote": "There was a significant reduction in rooftop solar generation during the high price periods due to cloudy conditions. Between 11.30 am and 12 pm, rooftop solar output was 2,484 MW. This is almost half the output generated the day prior of 4,837 MW."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Up to 270 MW at Snowy Hydro's Colongra Power Station could not start up quickly enough to prevent high prices. The amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand for two high priced intervals. Up to 173 MW at Delta Electricity's Vales Point Power Station could not ramp up quickly enough to prevent high prices. The amount of low-priced capacity unable to be dispatched was more than the high-priced capacity needed to meet demand for two high priced intervals."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "On this day, for two of the four high-priced 5-minute intervals at 11.40 am and 11.55 am, offers of around $10,000 per MW in lower FCAS contributed to setting the energy price in NSW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix G). Delta Electricity withdrew a total of 225 MW of low-priced capacity at Vales Point during the high-priced periods due to technical issues including milling limits and fabric filter limits. At 10.53 am, AGL Energy removed 45 MW of low-priced capacity at Bayswater due to unexpected plant limits. At 11.24 am, AGL Energy shifted 65 MW of capacity at Bayswater from $36 per MWh to the price cap due to a change in forecast prices. At 11.36 am, effective for 11.45 am and 11.50 am, it offered 20 MW of capacity, 5 MW was low-priced while 15 MW was high priced, as the plant limit had been lifted. The combined effect of the three rebids by AGL Energy contributed to the high-priced periods at 11.45 am and 11.50 am."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-12-03",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity"
+          },
+          {
+            "name": "Terranora",
+            "quote": "Terranora to be limited to around 17 MW out of its 210 MW nominal capacity"
+          }
+        ],
+        "intervals": {
+          "quote": "On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm.",
+          "text": "On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm."
+        },
+        "network_outages": {
+          "quote": "A planned network outage on the Collector to Marulan line in southern NSW resulted in between around 180 MW and 1,020 MW of low-priced capacity unable to reach key load centres including Sydney. There was also a short term planned outage on the Liddell to Muswellbrook line which caused flows on the QNI to be limited to around 570 MW out of its 1,300 MW nominal capacity, and Terranora to be limited to around 17 MW out of its 210 MW nominal capacity.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 3 December 2024, the 30-minute price in NSW reached $9,371 per MWh at 12 pm.",
+          "value": 9371
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price ... The combined effect of the three rebids by AGL Energy contributed to the high-priced periods at 11.45 am and 11.50 am.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand at 2.30 pm was 2,101 MW compared to 1,530 MW forecast four hours prior. Demand was also higher than average with the 30-minute average for 2.30 pm for the quarter of 540 MW. While demand was significantly impacted by a fall in rooftop solar generation, high temperatures in Adelaide of around 37°C meant that demand on the day was already high."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind output averaged 179 MW out of around 2,763 MW installed capacity during the high prices, which equates to around 6% of installed capacity in South Australia."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Average solar output was 349 MW out of around 600 MW of maximum capacity due to cloudy conditions. The cloudy conditions also meant rooftop solar output was low. Rooftop solar output was 836 MW during the high prices which was 881 MW lower than the daily peak a few hours earlier."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Up to 81 MW of low-priced capacity at Origin Energy's Osborne could not ramp up quickly enough to avoid high prices. For all high-priced intervals, the amount of low-priced capacity that could not be dispatched was more than the high-priced capacity that was needed to meet demand. Up to 19 MW of low-priced capacity at Origin Energy's Quarantine could not start fast enough to avoid high prices. For only 1 high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the high-priced capacity that was needed to meet demand."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to the high price (Appendix H). At 2.04 pm, effective from 2.10 pm, Engie shifted 25 MW of capacity at Pelican Point from $299 per MWh to $12,500 per MWh due to fuel management and contributed to setting price for two of the three high-priced intervals. For all high-priced intervals, AGL Energy rebid 72 MW of capacity to high prices across Torrens Island and Barker Inlet. This was mainly a result of AGL shifting 120 MW of capacity at Torrens Island from $138 per MWh to $17,500 per MWh at 2.08 pm due to a change in forecast prices. At 2.13 pm, effective from 2.20 pm, Neoen shifted 25 MW of capacity at Hornsdale Power Reserve from $3,911 per MWh to $9,932 per MWh due to a change in forecast prices and contributed to setting price for one of the three high-priced intervals."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-12-05",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm.",
+          "text": "On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm."
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Bundey to Buronga line meant constraints managing the outage limited flows on Heywood and South Australia was unable to import more low-priced capacity during the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 5 December, the 30-minute price in South Australia reached $6,096 per MWh at 2.30 pm.",
+          "value": 6096
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to the high price ... Engie shifted 25 MW of capacity at Pelican Point from $299 per MWh to $12,500 per MWh due to fuel management and contributed to setting price for two of the three high-priced intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand at 3 pm was 11,377 MW. Demand was also higher than average with the 30-minute average for 3 pm for the quarter of 6,959 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the Collector to Marulan line limited flows from southern NSW and Victoria from reaching the load centre in Sydney, with between 344 MW and 719 MW of low-priced capacity being unable to make it to market."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows on the VNI was limited to an average of 481 MW out of its nominal limit of 1,700 MW. The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind output averaged around 182 MW out of 2,762 MW installed capacity during the high prices, which equates to around 7% of installed capacity in NSW."
+          },
+          {
+            "label": "solar_output",
+            "quote": "From 2.30 pm to 3 pm, cloudy conditions caused grid scale solar generation to drop by 550 MW, with the average output at 2,013 MW. The cloudy conditions also meant rooftop solar output dropped 860 MW which resulted in higher demand."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Up to 238 MW at Snowy Hydro's Colongra Power Station could not start up quickly enough to prevent the high prices. For one high-priced interval, the amount of low-priced capacity unable to be dispatched was more than the amount of high-priced capacity needed to meet demand."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2024-12-06",
+        "interconnectors_named": [
+          {
+            "name": "VNI",
+            "quote": "Flows on the VNI was limited to an average of 481 MW out of its nominal limit of 1,700 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints"
+          },
+          {
+            "name": "Terranora",
+            "quote": "The QNI and Terranora had flows of around 1,000 MW of their combined nominal capacity (1,510 MW), due to system normal constraints"
+          }
+        ],
+        "intervals": {
+          "quote": "On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm.",
+          "text": "On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm."
+        },
+        "network_outages": {
+          "quote": "A planned outage of the Collector to Marulan line limited flows from southern NSW and Victoria from reaching the load centre in Sydney, with between 344 MW and 719 MW of low-priced capacity being unable to make it to market.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 6 December, the 30-minute price in NSW reached $8,044 per MWh at 3 pm.",
+          "value": 8044
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_October_to_December_2024.pdf",
+    "url": "https://www.aer.gov.au/system/files/2025-02/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20October%20to%20December%202024.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 20005,
+    "per_attempt": [
+      {
+        "completion_tokens": 20005,
+        "completion_tokens_details": {
+          "reasoning_tokens": 11709
+        },
+        "prompt_tokens": 24713,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 44718
+      }
+    ],
+    "prompt_tokens": 24713,
+    "reasoning_tokens": 11709,
+    "total_tokens": 44718
+  }
+}

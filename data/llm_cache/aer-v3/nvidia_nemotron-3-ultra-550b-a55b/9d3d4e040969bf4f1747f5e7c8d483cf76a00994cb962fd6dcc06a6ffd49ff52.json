@@ -1,0 +1,144 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:42:01+00:00",
+  "failure": null,
+  "input_sha256": "2b2bfe3c6ef773d7d4a9d90124206f18b8d6e6208355f6caa8fa3ee1591a2807",
+  "key": "9d3d4e040969bf4f1747f5e7c8d483cf76a00994cb962fd6dcc06a6ffd49ff52",
+  "latency_s": 104.89,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-11-09\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh.\", \"quote\": \"There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh.\"}, \"peak_price\": {\"value\": 9167, \"quote\": \"There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was as much as 600MW, or five per cent, higher than forecast four hours to dispatch.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 2 850MW of capacity across Eraring, Liddell, Munmorah, Blowering and Vales Point was unavailable.\"}, {\"label\": \"rebids\", \"quote\": \"A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW.\"}, {\"name\": \"Snowy\", \"quote\": \"Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"There were no significant changes to the availability of the transmission network throughout the day in New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh.\"}}, {\"event_date\": \"2005-11-10\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.\", \"quote\": \"There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.\"}, \"peak_price\": {\"value\": 8651, \"quote\": \"There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"Delta Electricity reduced the availability of Wallerawang unit 8 by as much as 60MW at 2.19pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The limit on flows into New South Wales across the New South Wales to Queensland interconnector was around 660MW lower than forecast four hours to dispatch.\"}, {\"label\": \"rebids\", \"quote\": \"A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh.\"}], \"constraints_named\": [{\"id\": \"F_N+Q_ARDM_L5\", \"quote\": \"Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R\"}, {\"id\": \"Q:N_LS_VC1\", \"quote\": \"Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R\"}, {\"id\": \"V::H_NILQA_R\", \"quote\": \"Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The limit on flows into New South Wales across the New South Wales to Queensland interconnector was around 660MW lower than forecast four hours to dispatch.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"The reduction in the limit was not as a result of the removal of network elements from service.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was as much as 600MW, or five per cent, higher than forecast four hours to dispatch."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 2 850MW of capacity across Eraring, Liddell, Munmorah, Blowering and Vales Point was unavailable."
+          },
+          {
+            "label": "rebids",
+            "quote": "A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2005-11-09",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW."
+          },
+          {
+            "name": "Snowy",
+            "quote": "Combined imports into New South Wales from Queensland and Snowy were at times close to 4 000MW."
+          }
+        ],
+        "intervals": {
+          "quote": "There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh.",
+          "text": "There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh."
+        },
+        "network_outages": {
+          "quote": "There were no significant changes to the availability of the transmission network throughout the day in New South Wales.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "There were four 30 minute trading intervals where the spot price was greater than $5 000/MWh in New South Wales on Wednesday 9 November. These occurred between 3pm and 4.30pm with the spot price peaking at $9 167/MWh.",
+          "value": 9167
+        },
+        "rebid_set_price": {
+          "quote": "A combination of rebidding and demand forecast errors contributed to the spot price exceeding $5 000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Delta Electricity reduced the availability of Wallerawang unit 8 by as much as 60MW at 2.19pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The limit on flows into New South Wales across the New South Wales to Queensland interconnector was around 660MW lower than forecast four hours to dispatch."
+          },
+          {
+            "label": "rebids",
+            "quote": "A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F_N+Q_ARDM_L5",
+            "quote": "Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R"
+          },
+          {
+            "id": "Q:N_LS_VC1",
+            "quote": "Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R"
+          },
+          {
+            "id": "V::H_NILQA_R",
+            "quote": "Constraint ID -325 F_N+Q_ARDM_L5 -985 Q:N_LS_VC1 -861 V::H_NILQA_R"
+          }
+        ],
+        "event_date": "2005-11-10",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The limit on flows into New South Wales across the New South Wales to Queensland interconnector was around 660MW lower than forecast four hours to dispatch."
+          }
+        ],
+        "intervals": {
+          "quote": "There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.",
+          "text": "There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh."
+        },
+        "network_outages": {
+          "quote": "The reduction in the limit was not as a result of the removal of network elements from service.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "There was one occasion at 4pm on Thursday 10 November where the spot price exceeded $5 000/MWh, reaching $8 651/MWh.",
+          "value": 8651
+        },
+        "rebid_set_price": {
+          "quote": "A combination of network capability and rebidding contributed to the spot price exceeding $5 000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_9-10_November_2005_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_9-10%20November%202005%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5494,
+    "per_attempt": [
+      {
+        "completion_tokens": 5494,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4341
+        },
+        "prompt_tokens": 7105,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12599
+      }
+    ],
+    "prompt_tokens": 7105,
+    "reasoning_tokens": 4341,
+    "total_tokens": 12599
+  }
+}

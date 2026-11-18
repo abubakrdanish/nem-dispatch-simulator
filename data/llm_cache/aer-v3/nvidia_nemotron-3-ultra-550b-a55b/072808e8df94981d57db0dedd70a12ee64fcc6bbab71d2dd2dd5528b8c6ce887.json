@@ -1,0 +1,366 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:55:29+00:00",
+  "failure": null,
+  "input_sha256": "6560620cbbc0538767cfa19d7867c5f5edc80f3d437b88285df95174282d30cf",
+  "key": "072808e8df94981d57db0dedd70a12ee64fcc6bbab71d2dd2dd5528b8c6ce887",
+  "latency_s": 291.58,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-02-08\", \"regions\": [\"SA1\", \"VIC1\"], \"intervals\": {\"text\": \"4 pm and 4:30 pm\", \"quote\": \"On Monday 8 February, the spot price exceeded $5000/MWh in both South Australia and Victoria for two trading intervals, reaching a maximum of $8431/MWh and $6482/MWh respectively, at 4 pm.\"}, \"peak_price\": {\"value\": 8431, \"quote\": \"On Monday 8 February, the spot price exceeded $5000/MWh in both South Australia and Victoria for two trading intervals, reaching a maximum of $8431/MWh and $6482/MWh respectively, at 4 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On the day, the temperature in Adelaide reached a maximum of 38.1 °C. This drove high demand in South Australia, reaching a maximum for the day of 2980 MW at 4.30 pm. Conditions at the time saw demand up to 84 MW greater than forecast four hours ahead and around 260 MW greater than forecast 12 hours ahead.\"}, {\"label\": \"demand\", \"quote\": \"The maximum temperature in Melbourne exceeded 35 °C, driving a maximum demand for the day of 9506 MW at 4 pm. Conditions at the time saw demand around 450 MW greater than forecast four hours ahead and around 730 MW greater than forecast 12 hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There were reductions in available capacity of 510 MW as a result of technical issues on 8 February.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 10.50 am, AETV Power's Bairnsdale unit two tripped (from 44 MW). The reason provided was '1045 P unit OOS et 7 hrs - SL'. The unit was out of service from 10 am and returned to service from 5.30 pm the same day.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Ecogen Energy reduced the available capacity at Newport power station, Jeeralang Units A and B by a total of 583 MW. These reductions were effective for varying periods, with some effective from 1.30 pm, lasting until 4 pm. The most significant reduction was for the entire 510 MW at Newport power station, with 200 MW of this capacity priced below $25/MWh.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 4.30 pm, following the reclassification of transmission lines in Victoria, which forced flows out of South Australia, reserves fell below the size of the largest unit and a Lack of Reserve Level 2 condition (LOR2) was declared in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"There was no significant rebidding in South Australia on 8 February.\"}, {\"label\": \"rebids\", \"quote\": \"At 2.56 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:32:A being constrained off at Murray in 5mpd 15:00@14:30'.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 2.56 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:32:A being constrained off at Murray in 5mpd 15:00@14:30'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Twelve hours prior to the high prices, import limits into South Australia across the Heywood interconnector were forecast at a minimum of 350 MW. This was revised up to around 450 MW 4 hours prior to dispatch. However, during the time of high prices, actual imports into South Australia were between 300 MW and 350 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Twelve hours prior to the high prices the import limit into South Australia across the Murraylink interconnector was forecast to be 150 MW. This was revised down to around 80 MW 4 hours prior to dispatch. The actual import capability into South Australia during this time was limited to below 50 MW due to the system normal constraint V>>V_NIL_1B.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The import limit into Victoria across the NSW-Vic interconnector was forecast to be between 440 MW and 540 MW for the afternoon. However, the V>>V_NIL_1B constraint limited actual imports into Victoria to around 200 MW.\"}], \"constraints_named\": [{\"id\": \"V>>V_NIL_1B\", \"quote\": \"The actual import capability into South Australia during this time was limited to below 50 MW due to the system normal constraint V>>V_NIL_1B.\"}, {\"id\": \"V>>V_NIL_1B\", \"quote\": \"At this time, the system normal constraint, V>>V_NIL_1B, which limits generation from the Murray Power station, was binding.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"import limits into South Australia across the Heywood interconnector were forecast at a minimum of 350 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"import limit into South Australia across the Murraylink interconnector was forecast to be 150 MW\"}, {\"name\": \"NSW-Vic\", \"quote\": \"import limit into Victoria across the NSW-Vic interconnector was forecast to be between 440 MW and 540 MW\"}, {\"name\": \"Basslink\", \"quote\": \"Actual flows into Victoria across the Bass link were close to forecast throughout the afternoon at 500 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At around 4.30 pm, following the reclassification of transmission lines in Victoria, which forced flows out of South Australia, reserves fell below the size of the largest unit and a Lack of Reserve Level 2 condition (LOR2) was declared in South Australia.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": \"There was no significant rebidding in South Australia on 8 February.\"}}, {\"event_date\": \"2010-02-09\", \"regions\": [\"SA1\", \"VIC1\"], \"intervals\": {\"text\": \"1:30 pm to 5:30 pm (SA), 4 pm and 4:30 pm (VIC)\", \"quote\": \"On Tuesday 9 February, spot prices reached the price cap for five trading intervals in South Australia and exceeded $5000/MWh for another four trading intervals. The spot price in Victoria exceeded $5000/MWh for two trading intervals, reaching $6247/MWh at 4 pm and $7847/MWh at 4.30 pm.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"On Tuesday 9 February, spot prices reached the price cap for five trading intervals in South Australia and exceeded $5000/MWh for another four trading intervals. The spot price in Victoria exceeded $5000/MWh for two trading intervals, reaching $6247/MWh at 4 pm and $7847/MWh at 4.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Tuesday 9 February, high temperatures continued in Adelaide, reaching a maximum of 39°C.\"}, {\"label\": \"demand\", \"quote\": \"The temperature in Melbourne reached a maximum for the day of 32.1 °C. Conditions at the time saw demand up to 200 MW greater that forecast four hours ahead and 270 MW greater than forecast 12 hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"On 9 and 10 February, 200 MW of lower cost Victorian generation was unavailable as a result of technical issues.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Over several rebids International Power reduced the available capacity of Hazelwood Power Station unit 4 by up to 215 MW. These rebids were first effective from 9.45 am. The reasons given were '0937F boiler leak', '1150P Boiler leak', '1229P Boiler leak', '1245P Boiler leak', '1319P Boiler Leak', '1343P unit outage - tube leak'.\"}, {\"label\": \"network_outage\", \"quote\": \"This constraint was invoked at 4.10 pm in response to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.\"}, {\"label\": \"rebids\", \"quote\": \"In South Australia, over several rebids first effective from 1.15 pm, AGL rebid up to 80 MW at Torrens Island from prices below $35/MWh to the price cap. The reason given was '12:31A chg in AEMO forecasts :: SA decr price $3K+'.\"}, {\"label\": \"rebids\", \"quote\": \"Further rebids (shifting capacity into higher price bands and reducing low-priced available capacity) combined with lower than forecast imports saw increases in the actual spot prices compared to forecast.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 2.16 pm, effective from 2.25 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:16:A being constrained off at Murray'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Twelve hours prior to dispatch the import limit into South Australia across the Heywood interconnector was forecast to be between 350 MW and 380 MW. This was revised to 425 MW four hours prior to dispatch. Actual imports were limited to under 350 MW during the period of high prices, with the import limit falling to approximately 180 MW at 4.30 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Twelve hours prior to dispatch, the import limit across Murraylink into South Australia was forecast to be between 50 MW and 150 MW during the period of high prices. Four hours prior to dispatch this was forecast to be around 150 MW. However, actual import capability into South Australia between 1.30 pm and 4 pm was between 40 MW and 62 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"From 2.10 pm until 3.30 pm, a system normal constraint restricted flows into Victoria from New South Wales across the Vic-NSW interconnector.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The constraint V>>SML_DDGN violated at 4.15 pm, and continued to bind through the remainder of the high-priced period.\"}], \"constraints_named\": [{\"id\": \"V^^S_NIL_NPS_SE_OFF\", \"quote\": \"The system normal constraint, V^^S_NIL_NPS_SE_OFF (which limits flows on the Heywood interconnector to prevent its overload should there be a loss of one unit at Northern Power Station) was binding for most of the period.\"}, {\"id\": \"V>>SML_DDGN\", \"quote\": \"The constraint V>>SML_DDGN violated at 4.15 pm, and continued to bind through the remainder of the high-priced period.\"}, {\"id\": \"V>>V_NIL_1B\", \"quote\": \"At this time, the system normal constraint, V>>V_NIL_1B was binding.\"}, {\"id\": \"CA constraint\", \"quote\": \"In addition, a quick (CA or Contingency Analysis) constraint was invoked from 3.30 pm to 7.40 pm placed further restrictions on imports into Victoria across the Murraylink and Vic-NSW interconnectors.\"}, {\"id\": \"#VIC1-NSW1_E\", \"quote\": \"From 4.50 pm, the constraint set #VIC1-NSW1_E was invoked to minimise the negative settlement residues that had begun to accrue.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"import limit into South Australia across the Heywood interconnector was forecast to be between 350 MW and 380 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"import limit across Murraylink into South Australia was forecast to be between 50 MW and 150 MW\"}, {\"name\": \"Vic-NSW\", \"quote\": \"flows into Victoria from New South Wales across the Vic-NSW interconnector\"}, {\"name\": \"Vic-Snowy\", \"quote\": \"Heywood, Murraylink and Vic-Snowy interconnectors\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This constraint was invoked at 4.10 pm in response to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Further rebids (shifting capacity into higher price bands and reducing low-priced available capacity) combined with lower than forecast imports saw increases in the actual spot prices compared to forecast.\"}}, {\"event_date\": \"2010-02-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2:30 pm and 3 pm\", \"quote\": \"On Wednesday 10 February, South Australia experienced further high temperatures driving high demand. Spot prices exceeded $5000/MWh twice, reaching $8824/MWh at 2.30 pm and $6787/MWh at 3 pm.\"}, \"peak_price\": {\"value\": 8824, \"quote\": \"On Wednesday 10 February, South Australia experienced further high temperatures driving high demand. Spot prices exceeded $5000/MWh twice, reaching $8824/MWh at 2.30 pm and $6787/MWh at 3 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Wednesday 10 February, South Australia experienced further high temperatures driving high demand.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"On 9 and 10 February, 200 MW of lower cost Victorian generation was unavailable as a result of technical issues.\"}, {\"label\": \"network_outage\", \"quote\": \"At 2.50 pm, AEMO reclassified the loss of the Para to Robertstown and Robertstown to Tungkillo 275 kV lines as a credible contingency event due to a lightning storm in the vicinity.\"}, {\"label\": \"network_outage\", \"quote\": \"the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.\"}, {\"label\": \"rebids\", \"quote\": \"On Tuesday (the day ahead) at around 6 pm, AGL rebid 240 MW from prices below $50/MWh to above $9000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"At 2.50 pm a network constraint required the output from the station to reduce by 50 MW. With the fogging system in service on all 11 Gas Turbines, TRUenergy rebid capacity into negative price bands with a ramp down rate of 3 MW/min to try to avoid the reduction in output.\"}, {\"label\": \"ramp_rates\", \"quote\": \"As a result the unit was bid with a 0 MW/min ramp down rate from 3.10 pm. The reason given was '1500A adjust ramp rate to 0MW- dispatch below MinGen - SL'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The import limit across the Heywood interconnector 4 and 12 hours prior to dispatch was forecast to be between 370 MW and 420 MW. Between 2.30 pm and 3.30 pm, actual imports were limited to between 130 MW and 280 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The import limit into South Australia across the Murraylink interconnector was forecast to be approximately 50 MW 12 hours ahead and 100 MW 4 hours ahead. However, actual limits during the high price period forced flows counter-price by up to 70 MW.\"}, {\"label\": \"constraint_violation\", \"quote\": \"the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.\"}], \"constraints_named\": [{\"id\": \"V^^S_NIL_NPS_SE_OFF\", \"quote\": \"The system normal constraint, V^^S_NIL_NPS_SE_OFF, bound for three dispatch intervals during the high price period.\"}, {\"id\": \"V>>SML_DDGN\", \"quote\": \"In addition, the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.\"}, {\"id\": \"S>V_NIL_NIL_RBNW\", \"quote\": \"An additional system normal constraint, S>V_NIL_NIL_RBNW, was binding during the times of maximum counter-price flows.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"import limit across the Heywood interconnector 4 and 12 hours prior to dispatch was forecast to be between 370 MW and 420 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"import limit into South Australia across the Murraylink interconnector was forecast to be approximately 50 MW 12 hours ahead and 100 MW 4 hours ahead\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 2.50 pm, AEMO reclassified the loss of the Para to Robertstown and Robertstown to Tungkillo 275 kV lines as a credible contingency event due to a lightning storm in the vicinity.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The fluctuation between the actual price and what was forecast 4 and 12 hours ahead was due to a combination of network constraints and resultant rebidding.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On the day, the temperature in Adelaide reached a maximum of 38.1 °C. This drove high demand in South Australia, reaching a maximum for the day of 2980 MW at 4.30 pm. Conditions at the time saw demand up to 84 MW greater than forecast four hours ahead and around 260 MW greater than forecast 12 hours ahead."
+          },
+          {
+            "label": "demand",
+            "quote": "The maximum temperature in Melbourne exceeded 35 °C, driving a maximum demand for the day of 9506 MW at 4 pm. Conditions at the time saw demand around 450 MW greater than forecast four hours ahead and around 730 MW greater than forecast 12 hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There were reductions in available capacity of 510 MW as a result of technical issues on 8 February."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 10.50 am, AETV Power's Bairnsdale unit two tripped (from 44 MW). The reason provided was '1045 P unit OOS et 7 hrs - SL'. The unit was out of service from 10 am and returned to service from 5.30 pm the same day."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Ecogen Energy reduced the available capacity at Newport power station, Jeeralang Units A and B by a total of 583 MW. These reductions were effective for varying periods, with some effective from 1.30 pm, lasting until 4 pm. The most significant reduction was for the entire 510 MW at Newport power station, with 200 MW of this capacity priced below $25/MWh."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 4.30 pm, following the reclassification of transmission lines in Victoria, which forced flows out of South Australia, reserves fell below the size of the largest unit and a Lack of Reserve Level 2 condition (LOR2) was declared in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "There was no significant rebidding in South Australia on 8 February."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.56 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:32:A being constrained off at Murray in 5mpd 15:00@14:30'."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 2.56 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:32:A being constrained off at Murray in 5mpd 15:00@14:30'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Twelve hours prior to the high prices, import limits into South Australia across the Heywood interconnector were forecast at a minimum of 350 MW. This was revised up to around 450 MW 4 hours prior to dispatch. However, during the time of high prices, actual imports into South Australia were between 300 MW and 350 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Twelve hours prior to the high prices the import limit into South Australia across the Murraylink interconnector was forecast to be 150 MW. This was revised down to around 80 MW 4 hours prior to dispatch. The actual import capability into South Australia during this time was limited to below 50 MW due to the system normal constraint V>>V_NIL_1B."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The import limit into Victoria across the NSW-Vic interconnector was forecast to be between 440 MW and 540 MW for the afternoon. However, the V>>V_NIL_1B constraint limited actual imports into Victoria to around 200 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "The actual import capability into South Australia during this time was limited to below 50 MW due to the system normal constraint V>>V_NIL_1B."
+          },
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "At this time, the system normal constraint, V>>V_NIL_1B, which limits generation from the Murray Power station, was binding."
+          }
+        ],
+        "event_date": "2010-02-08",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "import limits into South Australia across the Heywood interconnector were forecast at a minimum of 350 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "import limit into South Australia across the Murraylink interconnector was forecast to be 150 MW"
+          },
+          {
+            "name": "NSW-Vic",
+            "quote": "import limit into Victoria across the NSW-Vic interconnector was forecast to be between 440 MW and 540 MW"
+          },
+          {
+            "name": "Basslink",
+            "quote": "Actual flows into Victoria across the Bass link were close to forecast throughout the afternoon at 500 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 8 February, the spot price exceeded $5000/MWh in both South Australia and Victoria for two trading intervals, reaching a maximum of $8431/MWh and $6482/MWh respectively, at 4 pm.",
+          "text": "4 pm and 4:30 pm"
+        },
+        "network_outages": {
+          "quote": "At around 4.30 pm, following the reclassification of transmission lines in Victoria, which forced flows out of South Australia, reserves fell below the size of the largest unit and a Lack of Reserve Level 2 condition (LOR2) was declared in South Australia.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Monday 8 February, the spot price exceeded $5000/MWh in both South Australia and Victoria for two trading intervals, reaching a maximum of $8431/MWh and $6482/MWh respectively, at 4 pm.",
+          "value": 8431
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding in South Australia on 8 February.",
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1",
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Tuesday 9 February, high temperatures continued in Adelaide, reaching a maximum of 39°C."
+          },
+          {
+            "label": "demand",
+            "quote": "The temperature in Melbourne reached a maximum for the day of 32.1 °C. Conditions at the time saw demand up to 200 MW greater that forecast four hours ahead and 270 MW greater than forecast 12 hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "On 9 and 10 February, 200 MW of lower cost Victorian generation was unavailable as a result of technical issues."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Over several rebids International Power reduced the available capacity of Hazelwood Power Station unit 4 by up to 215 MW. These rebids were first effective from 9.45 am. The reasons given were '0937F boiler leak', '1150P Boiler leak', '1229P Boiler leak', '1245P Boiler leak', '1319P Boiler Leak', '1343P unit outage - tube leak'."
+          },
+          {
+            "label": "network_outage",
+            "quote": "This constraint was invoked at 4.10 pm in response to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity."
+          },
+          {
+            "label": "rebids",
+            "quote": "In South Australia, over several rebids first effective from 1.15 pm, AGL rebid up to 80 MW at Torrens Island from prices below $35/MWh to the price cap. The reason given was '12:31A chg in AEMO forecasts :: SA decr price $3K+'."
+          },
+          {
+            "label": "rebids",
+            "quote": "Further rebids (shifting capacity into higher price bands and reducing low-priced available capacity) combined with lower than forecast imports saw increases in the actual spot prices compared to forecast."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 2.16 pm, effective from 2.25 pm, Snowy Hydro rebid Murray Power Station's ramp down rate from 200MW/min down to the minimum allowable level of 3MW/min. The reason given was '14:16:A being constrained off at Murray'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Twelve hours prior to dispatch the import limit into South Australia across the Heywood interconnector was forecast to be between 350 MW and 380 MW. This was revised to 425 MW four hours prior to dispatch. Actual imports were limited to under 350 MW during the period of high prices, with the import limit falling to approximately 180 MW at 4.30 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Twelve hours prior to dispatch, the import limit across Murraylink into South Australia was forecast to be between 50 MW and 150 MW during the period of high prices. Four hours prior to dispatch this was forecast to be around 150 MW. However, actual import capability into South Australia between 1.30 pm and 4 pm was between 40 MW and 62 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "From 2.10 pm until 3.30 pm, a system normal constraint restricted flows into Victoria from New South Wales across the Vic-NSW interconnector."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The constraint V>>SML_DDGN violated at 4.15 pm, and continued to bind through the remainder of the high-priced period."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V^^S_NIL_NPS_SE_OFF",
+            "quote": "The system normal constraint, V^^S_NIL_NPS_SE_OFF (which limits flows on the Heywood interconnector to prevent its overload should there be a loss of one unit at Northern Power Station) was binding for most of the period."
+          },
+          {
+            "id": "V>>SML_DDGN",
+            "quote": "The constraint V>>SML_DDGN violated at 4.15 pm, and continued to bind through the remainder of the high-priced period."
+          },
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "At this time, the system normal constraint, V>>V_NIL_1B was binding."
+          },
+          {
+            "id": "CA constraint",
+            "quote": "In addition, a quick (CA or Contingency Analysis) constraint was invoked from 3.30 pm to 7.40 pm placed further restrictions on imports into Victoria across the Murraylink and Vic-NSW interconnectors."
+          },
+          {
+            "id": "#VIC1-NSW1_E",
+            "quote": "From 4.50 pm, the constraint set #VIC1-NSW1_E was invoked to minimise the negative settlement residues that had begun to accrue."
+          }
+        ],
+        "event_date": "2010-02-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "import limit into South Australia across the Heywood interconnector was forecast to be between 350 MW and 380 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "import limit across Murraylink into South Australia was forecast to be between 50 MW and 150 MW"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "flows into Victoria from New South Wales across the Vic-NSW interconnector"
+          },
+          {
+            "name": "Vic-Snowy",
+            "quote": "Heywood, Murraylink and Vic-Snowy interconnectors"
+          }
+        ],
+        "intervals": {
+          "quote": "On Tuesday 9 February, spot prices reached the price cap for five trading intervals in South Australia and exceeded $5000/MWh for another four trading intervals. The spot price in Victoria exceeded $5000/MWh for two trading intervals, reaching $6247/MWh at 4 pm and $7847/MWh at 4.30 pm.",
+          "text": "1:30 pm to 5:30 pm (SA), 4 pm and 4:30 pm (VIC)"
+        },
+        "network_outages": {
+          "quote": "This constraint was invoked at 4.10 pm in response to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Tuesday 9 February, spot prices reached the price cap for five trading intervals in South Australia and exceeded $5000/MWh for another four trading intervals. The spot price in Victoria exceeded $5000/MWh for two trading intervals, reaching $6247/MWh at 4 pm and $7847/MWh at 4.30 pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "Further rebids (shifting capacity into higher price bands and reducing low-priced available capacity) combined with lower than forecast imports saw increases in the actual spot prices compared to forecast.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1",
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Wednesday 10 February, South Australia experienced further high temperatures driving high demand."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "AGL's Torrens Island Power Station (TIPS) units A1, A3 and B2 were not in service for all three days, but were available with 24 hours notice."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "On 9 and 10 February, 200 MW of lower cost Victorian generation was unavailable as a result of technical issues."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 2.50 pm, AEMO reclassified the loss of the Para to Robertstown and Robertstown to Tungkillo 275 kV lines as a credible contingency event due to a lightning storm in the vicinity."
+          },
+          {
+            "label": "network_outage",
+            "quote": "the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity."
+          },
+          {
+            "label": "rebids",
+            "quote": "On Tuesday (the day ahead) at around 6 pm, AGL rebid 240 MW from prices below $50/MWh to above $9000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.50 pm a network constraint required the output from the station to reduce by 50 MW. With the fogging system in service on all 11 Gas Turbines, TRUenergy rebid capacity into negative price bands with a ramp down rate of 3 MW/min to try to avoid the reduction in output."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "As a result the unit was bid with a 0 MW/min ramp down rate from 3.10 pm. The reason given was '1500A adjust ramp rate to 0MW- dispatch below MinGen - SL'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The import limit across the Heywood interconnector 4 and 12 hours prior to dispatch was forecast to be between 370 MW and 420 MW. Between 2.30 pm and 3.30 pm, actual imports were limited to between 130 MW and 280 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The import limit into South Australia across the Murraylink interconnector was forecast to be approximately 50 MW 12 hours ahead and 100 MW 4 hours ahead. However, actual limits during the high price period forced flows counter-price by up to 70 MW."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V^^S_NIL_NPS_SE_OFF",
+            "quote": "The system normal constraint, V^^S_NIL_NPS_SE_OFF, bound for three dispatch intervals during the high price period."
+          },
+          {
+            "id": "V>>SML_DDGN",
+            "quote": "In addition, the constraint V>>SML_DDGN was invoked at 1.55 pm due to the reclassification of a non-credible contingency event on the Dederang to Glenrowan lines as a result of lightning in the vicinity."
+          },
+          {
+            "id": "S>V_NIL_NIL_RBNW",
+            "quote": "An additional system normal constraint, S>V_NIL_NIL_RBNW, was binding during the times of maximum counter-price flows."
+          }
+        ],
+        "event_date": "2010-02-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "import limit across the Heywood interconnector 4 and 12 hours prior to dispatch was forecast to be between 370 MW and 420 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "import limit into South Australia across the Murraylink interconnector was forecast to be approximately 50 MW 12 hours ahead and 100 MW 4 hours ahead"
+          }
+        ],
+        "intervals": {
+          "quote": "On Wednesday 10 February, South Australia experienced further high temperatures driving high demand. Spot prices exceeded $5000/MWh twice, reaching $8824/MWh at 2.30 pm and $6787/MWh at 3 pm.",
+          "text": "2:30 pm and 3 pm"
+        },
+        "network_outages": {
+          "quote": "At 2.50 pm, AEMO reclassified the loss of the Para to Robertstown and Robertstown to Tungkillo 275 kV lines as a credible contingency event due to a lightning storm in the vicinity.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Wednesday 10 February, South Australia experienced further high temperatures driving high demand. Spot prices exceeded $5000/MWh twice, reaching $8824/MWh at 2.30 pm and $6787/MWh at 3 pm.",
+          "value": 8824
+        },
+        "rebid_set_price": {
+          "quote": "The fluctuation between the actual price and what was forecast 4 and 12 hours ahead was due to a combination of network constraints and resultant rebidding.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_8,9,10_February_-_SA_8,9_February_2010_-_Vic.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_8%2C9%2C10%20February%20-%20SA%208%2C9%20February%202010%20-%20Vic.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 37156,
+    "per_attempt": [
+      {
+        "completion_tokens": 18869,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13482
+        },
+        "prompt_tokens": 28109,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 46978
+      },
+      {
+        "completion_tokens": 18287,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13794
+        },
+        "prompt_tokens": 28109,
+        "prompt_tokens_details": {
+          "cached_tokens": 26304
+        },
+        "total_tokens": 46396
+      }
+    ],
+    "prompt_tokens": 56218,
+    "reasoning_tokens": 27276,
+    "total_tokens": 93374
+  }
+}

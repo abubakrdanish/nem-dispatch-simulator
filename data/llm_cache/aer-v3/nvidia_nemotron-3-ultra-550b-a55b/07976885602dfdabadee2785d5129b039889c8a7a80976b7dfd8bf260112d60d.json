@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:37:01+00:00",
+  "failure": null,
+  "input_sha256": "8d8b3a25ff9d754b990afc92a58019134312abd88173ca248a5bf576909b292b",
+  "key": "07976885602dfdabadee2785d5129b039889c8a7a80976b7dfd8bf260112d60d",
+  "latency_s": 134.5,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-02-04\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"High 5-minute dispatch prices from 10:30 to 10:40 and 11:30 to 11:45; spot price $5541/MWh at 12 pm trading interval\", \"quote\": \"The 5-minute price reached $10,000/MWh at 10.30 am and remained at that level until the end of the 10.40 am dispatch interval. ... by 11.30 am the 5-minute price had again risen to $9900/MWh, reaching $10,000/MWh at 11.35 am, and $9900/MWh at 11.40 am and 11.45 am before falling to significantly lower prices from 11.55 am onwards. The sustained high 5-minute prices were sufficient to see the spot price reach $5541/MWh for the midday trading interval.\"}, \"peak_price\": {\"value\": 5541, \"quote\": \"the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance. At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 9.43 am, effective for the 10.30 am trading interval, Delta Electricity reduced the available capacity of Wallerawang unit seven by 280 MW (a majority of this capacity was priced below $90/MWh). The reason given was '0942P Dust Burden - ET1hrs::capacity reduced'.\"}, {\"label\": \"rebids\", \"quote\": \"At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. ... At 11.02 am, effective from 11.10 am, Snowy Hydro rebid 400 MW of negatively priced capacity to $10,000/MWh at Tumut unit three. ... Over two rebids at 11.11 am and 11.19 am, effective from 11.20 am and 11.30 pm respectively, Eraring Energy rebid 240 MW of available capacity across Eraring units two, three and four from prices below $20/MWh to above $9700/MWh.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. The 'ramp down rate' on each unit was reduced from 5 MW/min down to the minimum allowable level of 3 MW/min. ... At 10.31 am, effective from 10.40 am, Snowy Hydro rebid the ramp rate of Tumut three from 200 MW/min down to the minimum allowable level of 3 MW/min. ... At 10.32 am, effective from 10.40 am, Macquarie Generation rebid the ramp rates across its Bayswater units. The ramp down rate was reduced from 4 MW/min down to the minimum allowable level of 3 MW/min for each unit.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Immediately following the outage of the Kemps Creek to Sydney South 330 kV line, import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity. For the 12 pm trading interval flows were being forced out of New South Wales at 1272 MW and the combined import limit of 1272 MW was 2973 MW lower than the 1701 MW forecast four hours ahead.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"The system normal constraint N>>N-NIL__S bound for most of the time from the dispatch interval ending 9.10 am to the dispatch interval ending at 12.30 pm.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity\"}, {\"name\": \"Terranora\", \"quote\": \"import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity\"}, {\"name\": \"VIC-NSW\", \"quote\": \"import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance. At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At the same time New South Wales generators also rebid into higher prices. The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance. At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 9.43 am, effective for the 10.30 am trading interval, Delta Electricity reduced the available capacity of Wallerawang unit seven by 280 MW (a majority of this capacity was priced below $90/MWh). The reason given was '0942P Dust Burden - ET1hrs::capacity reduced'."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. ... At 11.02 am, effective from 11.10 am, Snowy Hydro rebid 400 MW of negatively priced capacity to $10,000/MWh at Tumut unit three. ... Over two rebids at 11.11 am and 11.19 am, effective from 11.20 am and 11.30 pm respectively, Eraring Energy rebid 240 MW of available capacity across Eraring units two, three and four from prices below $20/MWh to above $9700/MWh."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 9.31 am, effective from 9.40 am, Delta Electricity rebid the ramp rates of Mount Piper units one and two. The 'ramp down rate' on each unit was reduced from 5 MW/min down to the minimum allowable level of 3 MW/min. ... At 10.31 am, effective from 10.40 am, Snowy Hydro rebid the ramp rate of Tumut three from 200 MW/min down to the minimum allowable level of 3 MW/min. ... At 10.32 am, effective from 10.40 am, Macquarie Generation rebid the ramp rates across its Bayswater units. The ramp down rate was reduced from 4 MW/min down to the minimum allowable level of 3 MW/min for each unit."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Immediately following the outage of the Kemps Creek to Sydney South 330 kV line, import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity. For the 12 pm trading interval flows were being forced out of New South Wales at 1272 MW and the combined import limit of 1272 MW was 2973 MW lower than the 1701 MW forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "The system normal constraint N>>N-NIL__S bound for most of the time from the dispatch interval ending 9.10 am to the dispatch interval ending at 12.30 pm."
+          }
+        ],
+        "event_date": "2010-02-04",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity"
+          },
+          {
+            "name": "Terranora",
+            "quote": "import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity"
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "import limits into New South Wales from Queensland (across the QNI and Terranora interconnectors) and Victoria (across the VIC-NSW interconnector) fell to much lower levels than the nominal capacity"
+          }
+        ],
+        "intervals": {
+          "quote": "The 5-minute price reached $10,000/MWh at 10.30 am and remained at that level until the end of the 10.40 am dispatch interval. ... by 11.30 am the 5-minute price had again risen to $9900/MWh, reaching $10,000/MWh at 11.35 am, and $9900/MWh at 11.40 am and 11.45 am before falling to significantly lower prices from 11.55 am onwards. The sustained high 5-minute prices were sufficient to see the spot price reach $5541/MWh for the midday trading interval.",
+          "text": "High 5-minute dispatch prices from 10:30 to 10:40 and 11:30 to 11:45; spot price $5541/MWh at 12 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "From early in the day network equipment in the Energy Australia network supplying the Sydney Central Business District (CBD) was out of service for planned maintenance. At 10.25 am the Kemps Creek to Sydney South 330 kV transmission line was taken out of service by TransGrid to remedy the potential overloads on the 330 kV cables for the remainder of the day.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the spot price in New South Wales reached $5541/MWh for the 12 pm trading interval",
+          "value": 5541
+        },
+        "rebid_set_price": {
+          "quote": "At the same time New South Wales generators also rebid into higher prices. The increase in demand combined with a reduction in low-priced capacity set the dispatch price close to the cap for four dispatch intervals from 11.30 am.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_4_February_2010_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_4%20February%202010%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6488,
+    "per_attempt": [
+      {
+        "completion_tokens": 6488,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5071
+        },
+        "prompt_tokens": 8005,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14493
+      }
+    ],
+    "prompt_tokens": 8005,
+    "reasoning_tokens": 5071,
+    "total_tokens": 14493
+  }
+}

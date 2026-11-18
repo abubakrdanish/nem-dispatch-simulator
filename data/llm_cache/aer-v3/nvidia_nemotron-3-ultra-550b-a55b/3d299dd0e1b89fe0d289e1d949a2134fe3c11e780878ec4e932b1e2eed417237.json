@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:04:31+00:00",
+  "failure": null,
+  "input_sha256": "cb363266a5ee361bc3e938dc3e5251ef8565e6b2023ffaaf29fab6885a937f5b",
+  "key": "3d299dd0e1b89fe0d289e1d949a2134fe3c11e780878ec4e932b1e2eed417237",
+  "latency_s": 64.1,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-09\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"5 pm, 5:30 pm, 6:30 pm trading intervals\", \"quote\": \"The spot price in South Australia exceeded $5000/MWh, on 9 February 2017, for the 5, 5.30 and 6.30 pm trading intervals.\"}, \"peak_price\": {\"value\": 9510, \"quote\": \"Prices in these trading intervals ranged from $6755/MWh to $9510/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 9 February the temperature in Adelaide reached a maximum of 41 degrees as had been forecast by the Bureau of Meteorology consistently for two days. This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Only half of Pelican Point power station has been in service since April 2015 but the plant could be made fully available under special arrangements with AEMO given enough prior notice.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO intervened, based on predicted shortfalls in spare capacity from local generators and from neighbouring regions across the interconnectors, to maintain system security if an unplanned failure were to occur. Special pricing arrangements apply following an intervention to maintain the market price signal by determining prices as if no action had been taken. AEMO's direction to Pelican Point Power Station, triggered these arrangements.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Table 2 shows the combined actual and forecast imports and import limit into South Australia on the Heywood and Murraylink interconnectors.\"}, {\"name\": \"Murraylink\", \"quote\": \"Table 2 shows the combined actual and forecast imports and import limit into South Australia on the Heywood and Murraylink interconnectors.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to spot prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 9 February the temperature in Adelaide reached a maximum of 41 degrees as had been forecast by the Bureau of Meteorology consistently for two days. This was the second successive day that the temperature exceeded 40 degrees and resulted in high levels of electricity demand."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Only half of Pelican Point power station has been in service since April 2015 but the plant could be made fully available under special arrangements with AEMO given enough prior notice."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The Heywood interconnector was importing into South Australia at around 600 MW, which is at its nominal limit, up to 90 MW higher than forecast four hours ahead."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO intervened, based on predicted shortfalls in spare capacity from local generators and from neighbouring regions across the interconnectors, to maintain system security if an unplanned failure were to occur. Special pricing arrangements apply following an intervention to maintain the market price signal by determining prices as if no action had been taken. AEMO's direction to Pelican Point Power Station, triggered these arrangements."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2017-02-09",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Table 2 shows the combined actual and forecast imports and import limit into South Australia on the Heywood and Murraylink interconnectors."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Table 2 shows the combined actual and forecast imports and import limit into South Australia on the Heywood and Murraylink interconnectors."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in South Australia exceeded $5000/MWh, on 9 February 2017, for the 5, 5.30 and 6.30 pm trading intervals.",
+          "text": "5 pm, 5:30 pm, 6:30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Prices in these trading intervals ranged from $6755/MWh to $9510/MWh.",
+          "value": 9510
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to spot prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_9_February_2017_(SA)_1.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%209%20February%202017%20%28SA%29_1.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2932,
+    "per_attempt": [
+      {
+        "completion_tokens": 2932,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2352
+        },
+        "prompt_tokens": 14574,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17506
+      }
+    ],
+    "prompt_tokens": 14574,
+    "reasoning_tokens": 2352,
+    "total_tokens": 17506
+  }
+}

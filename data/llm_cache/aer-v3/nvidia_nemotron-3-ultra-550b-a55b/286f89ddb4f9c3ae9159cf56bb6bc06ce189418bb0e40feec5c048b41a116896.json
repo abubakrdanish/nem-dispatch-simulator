@@ -1,0 +1,88 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:30:40+00:00",
+  "failure": null,
+  "input_sha256": "ca041723c434c451de62ef1e7c1d69b5a9d68f7e02c5d145926a6e650203d1d7",
+  "key": "286f89ddb4f9c3ae9159cf56bb6bc06ce189418bb0e40feec5c048b41a116896",
+  "latency_s": 85.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-24\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am\", \"quote\": \"On Wednesday 24 January, the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am.\"}, \"peak_price\": {\"value\": 6261, \"quote\": \"On Wednesday 24 January, the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Wednesday 24 January demand reached a new record in Queensland.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW.\"}, {\"name\": \"Terranora\", \"quote\": \"From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Wednesday 24 January demand reached a new record in Queensland."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2007-01-24",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The constraints invoked by NEMMCO restricted flows from New South Wales by a further 400 MW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "From 10.15 am a system normal constraint forced flow south on the Terranora interconnector at around 110 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On Wednesday 24 January, the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am.",
+          "text": "the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am"
+        },
+        "network_outages": {
+          "quote": "A planned network outage at Tarong resulted in flows between Tarong and Brisbane approaching secure limits.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Wednesday 24 January, the spot price in Queensland exceeded $5000/MWh for one trading interval, reaching $6261/MWh at 11 am.",
+          "value": 6261
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_24_January_2007_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_24%20January%202007%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4710,
+    "per_attempt": [
+      {
+        "completion_tokens": 4710,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4266
+        },
+        "prompt_tokens": 5331,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10041
+      }
+    ],
+    "prompt_tokens": 5331,
+    "reasoning_tokens": 4266,
+    "total_tokens": 10041
+  }
+}

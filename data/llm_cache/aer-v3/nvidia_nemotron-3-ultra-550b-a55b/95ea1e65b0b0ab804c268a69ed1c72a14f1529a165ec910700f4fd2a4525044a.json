@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:29:10+00:00",
+  "failure": null,
+  "input_sha256": "c23545543308e2bf5d1c1c272cde1d08c21a77b5f9c289ba54d8f82cd695ba3f",
+  "key": "95ea1e65b0b0ab804c268a69ed1c72a14f1529a165ec910700f4fd2a4525044a",
+  "latency_s": 41.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-11-30\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"eight 5-minute dispatch interval prices of $5,000/MWh between 3.25pm and 4pm. The half-hour spot price at 4pm was also $5,000/MWh.\", \"quote\": \"This combination of reduced imports and the step change in offer prices led to eight 5-minute dispatch interval prices of $5,000/MWh between 3.25pm and 4pm. The half-hour spot price at 4pm was also $5,000/MWh.\"}, \"peak_price\": {\"value\": 5000, \"quote\": \"The spot price reached $5,000/MWh in South Australia on Wednesday 30 November at 4pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Conditions at the time saw demand around 100 MW higher than forecast four hours to dispatch.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW. This was in preparation for an outage of the South East to Tailem Bend line, in South Australia, which was out of service from around 3.45pm to 4.05pm. No notice was given for the outage.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW.\"}], \"constraints_named\": [{\"id\": \"V>S_SETB\", \"quote\": \"Constraint ID 184 V>S_SETB 460 VS_460 460 VS_460\"}, {\"id\": \"VS_460\", \"quote\": \"Constraint ID 184 V>S_SETB 460 VS_460 460 VS_460\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"From 3.05pm, import capability across the Heywood interconnector was ramped down from 460MW to 200MW over the next half hour.\"}, {\"name\": \"MurrayLink interconnector\", \"quote\": \"Flows across the MurrayLink interconnector were as forecast.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW. This was in preparation for an outage of the South East to Tailem Bend line, in South Australia, which was out of service from around 3.45pm to 4.05pm. No notice was given for the outage.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the spot price reaching $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Conditions at the time saw demand around 100 MW higher than forecast four hours to dispatch."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW. This was in preparation for an outage of the South East to Tailem Bend line, in South Australia, which was out of service from around 3.45pm to 4.05pm. No notice was given for the outage."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>S_SETB",
+            "quote": "Constraint ID 184 V>S_SETB 460 VS_460 460 VS_460"
+          },
+          {
+            "id": "VS_460",
+            "quote": "Constraint ID 184 V>S_SETB 460 VS_460 460 VS_460"
+          }
+        ],
+        "event_date": "2005-11-30",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "From 3.05pm, import capability across the Heywood interconnector was ramped down from 460MW to 200MW over the next half hour."
+          },
+          {
+            "name": "MurrayLink interconnector",
+            "quote": "Flows across the MurrayLink interconnector were as forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "This combination of reduced imports and the step change in offer prices led to eight 5-minute dispatch interval prices of $5,000/MWh between 3.25pm and 4pm. The half-hour spot price at 4pm was also $5,000/MWh.",
+          "text": "eight 5-minute dispatch interval prices of $5,000/MWh between 3.25pm and 4pm. The half-hour spot price at 4pm was also $5,000/MWh."
+        },
+        "network_outages": {
+          "quote": "At around 3pm, constraints were invoked, effective immediately, to ramp down the import capability across the Heywood interconnector from 460MW to 200MW. This was in preparation for an outage of the South East to Tailem Bend line, in South Australia, which was out of service from around 3.45pm to 4.05pm. No notice was given for the outage.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price reached $5,000/MWh in South Australia on Wednesday 30 November at 4pm.",
+          "value": 5000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the spot price reaching $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_30_November_2005_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_30%20November%202005%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3929,
+    "per_attempt": [
+      {
+        "completion_tokens": 3929,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3201
+        },
+        "prompt_tokens": 4285,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8214
+      }
+    ],
+    "prompt_tokens": 4285,
+    "reasoning_tokens": 3201,
+    "total_tokens": 8214
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:40:21+00:00",
+  "failure": null,
+  "input_sha256": "56663f19765252028d39902bca05afdd5989259355b2d173c777b77acfdb249b",
+  "key": "bc6ab8e5449edb616ca3b67f8a04d0ec56057700a86119950f3ac3fb8fbfeb04",
+  "latency_s": 113.07,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-10-31\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"seven trading intervals between midday and 3.30 pm\", \"quote\": \"The higher than forecast demand and lower than forecast supplies resulted in the spot price exceeding $5000/MWh for seven trading intervals between midday and 3.30 pm.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"Spot price $10 000/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand was higher than forecast for the whole period of high prices-up to 338 MW greater than that forecast four hours ahead of dispatch.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"From mid morning on 28 October a 660 MW Vales Point unit (Delta Electricity) shut down due to a boiler tube leak. From mid morning on 30 October a 660 MW Eraring unit (Eraring Energy) shut down due to a boiler tube leak. On 30 October at 11.13 am the availability of a 500 MW Wallerawang unit (Delta Electricity) was reduced to 400 MW and further reduced to 350 MW at 3.16 pm, also as a result of a boiler tube leak. At 7.15 am on 31 October the Wallerawang unit was shut down altogether.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Almost one third of the total capacity of installed generation in New South Wales-around 4300 MW-was unavailable during the high-priced period.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Queensland and Victoria at the time were significantly lower than forecast and were constrained by a conservative system normal limit.\"}, {\"label\": \"constraint_violation\", \"quote\": \"network constraints were violated for 28 five-minute dispatch intervals between 11.35 pm and 3.15 pm and imports exceeded the combined import limits by up to 800 MW.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL_E\", \"quote\": \"The N>>N-NIL_E constraint is a \\\"system normal\\\" constraint that is designed to avoid overloading the Mt Piper to Wallerawang line if the Bayswater to Wallerawang line fails unexpectedly.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"the QNI, Directlink and the Vic-NSW interconnectors combined\"}, {\"name\": \"Directlink\", \"quote\": \"the QNI, Directlink and the Vic-NSW interconnectors combined\"}, {\"name\": \"Vic-NSW\", \"quote\": \"the QNI, Directlink and the Vic-NSW interconnectors combined\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the spot price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand was higher than forecast for the whole period of high prices-up to 338 MW greater than that forecast four hours ahead of dispatch."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "From mid morning on 28 October a 660 MW Vales Point unit (Delta Electricity) shut down due to a boiler tube leak. From mid morning on 30 October a 660 MW Eraring unit (Eraring Energy) shut down due to a boiler tube leak. On 30 October at 11.13 am the availability of a 500 MW Wallerawang unit (Delta Electricity) was reduced to 400 MW and further reduced to 350 MW at 3.16 pm, also as a result of a boiler tube leak. At 7.15 am on 31 October the Wallerawang unit was shut down altogether."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Almost one third of the total capacity of installed generation in New South Wales-around 4300 MW-was unavailable during the high-priced period."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Queensland and Victoria at the time were significantly lower than forecast and were constrained by a conservative system normal limit."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "network constraints were violated for 28 five-minute dispatch intervals between 11.35 pm and 3.15 pm and imports exceeded the combined import limits by up to 800 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL_E",
+            "quote": "The N>>N-NIL_E constraint is a \"system normal\" constraint that is designed to avoid overloading the Mt Piper to Wallerawang line if the Bayswater to Wallerawang line fails unexpectedly."
+          }
+        ],
+        "event_date": "2008-10-31",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "the QNI, Directlink and the Vic-NSW interconnectors combined"
+          },
+          {
+            "name": "Directlink",
+            "quote": "the QNI, Directlink and the Vic-NSW interconnectors combined"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "the QNI, Directlink and the Vic-NSW interconnectors combined"
+          }
+        ],
+        "intervals": {
+          "quote": "The higher than forecast demand and lower than forecast supplies resulted in the spot price exceeding $5000/MWh for seven trading intervals between midday and 3.30 pm.",
+          "text": "seven trading intervals between midday and 3.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $10 000/MWh",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the spot price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_October_2008_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20October%202008%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5777,
+    "per_attempt": [
+      {
+        "completion_tokens": 5777,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5081
+        },
+        "prompt_tokens": 16121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 21898
+      }
+    ],
+    "prompt_tokens": 16121,
+    "reasoning_tokens": 5081,
+    "total_tokens": 21898
+  }
+}

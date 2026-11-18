@@ -1,0 +1,84 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:15:36+00:00",
+  "failure": null,
+  "input_sha256": "b7813dee3fc61ca4d71be0bd73487216fb74a5eccd63b251e428a3763f74ab28",
+  "key": "4b2df861cd93ca286a7d0ced1691a6cbc78016013b4538842cad1ef95cbd2bb1",
+  "latency_s": 110.15,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2:00 PM to 5:30 PM (eight half-hour intervals)\", \"quote\": \"On 13 January 2009, spot market prices in South Australia exceeded $7500/MWh on eight occasions from 2 pm to 5.30 pm.\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"Tuesday 4:00 PM Actual 4 hr forecast 12 hr forecast Demand (MW) 2697 2754 2634 Import capability into SA 356 481 485 Spot Price 9999\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature on the day reached 41 degrees, driving high demand.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined import limits into South Australia were up to 130 MW less than forecast.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Imports across Heywood were being limited to around 280 MW by a system normal constraint.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports across Murraylink were 100 MW lower than forecast, at around 90 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to spot prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature on the day reached 41 degrees, driving high demand."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined import limits into South Australia were up to 130 MW less than forecast."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Imports across Heywood were being limited to around 280 MW by a system normal constraint."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports across Murraylink were 100 MW lower than forecast, at around 90 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 13 January 2009, spot market prices in South Australia exceeded $7500/MWh on eight occasions from 2 pm to 5.30 pm.",
+          "text": "2:00 PM to 5:30 PM (eight half-hour intervals)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Tuesday 4:00 PM Actual 4 hr forecast 12 hr forecast Demand (MW) 2697 2754 2634 Import capability into SA 356 481 485 Spot Price 9999",
+          "value": 9999
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to spot prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_13_January_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_13%20January%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5843,
+    "per_attempt": [
+      {
+        "completion_tokens": 5843,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5463
+        },
+        "prompt_tokens": 8057,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13900
+      }
+    ],
+    "prompt_tokens": 8057,
+    "reasoning_tokens": 5463,
+    "total_tokens": 13900
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:51:09+00:00",
+  "failure": null,
+  "input_sha256": "0883933c606e3f61f9fadc1e337302d0bd0f54af8bba29adc7436669c6fe3b4d",
+  "key": "cda53739c186571024cdd8b5a6c4cc2bd7616b39e77b2f2b92b4ac1273621d6b",
+  "latency_s": 44.41,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-12-30\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.\", \"quote\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.\"}, \"peak_price\": {\"value\": 6443, \"quote\": \"The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"At 2.47 pm there was an unplanned outage of the Lower Tumut to Wagga 330 kV line which was caused by bushfires in the area.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The effect of these constraints, which were in place from the 3.05 pm dispatch interval, saw the flows on the Vic-NSW interconnector reverse from imports in to Victoria to forced exports in to New South Wales. This was around a 570 MW change.\"}, {\"label\": \"demand\", \"quote\": \"High temperatures in Melbourne led to high demand in Victoria. The temperature exceeded 40°C in Melbourne and demand reached 8204 MW at 3.30 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On the day there was two large generators offline in Victoria, AGL's Loy Yang A2 (530 MW) and Alinta Energy's Loy Yang B1 (490 MW). The A2 unit had been offline since 27 December due to a plant failure while the B1 unit had been offline since 29 December due to a tube leak.\"}, {\"label\": \"wind_output\", \"quote\": \"Generator availability was around 100 MW lower than forecast due to plant issues at Macarthur wind farm\"}], \"constraints_named\": [{\"id\": \"N-LTWG_RADIAL\", \"quote\": \"The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L\"}, {\"id\": \"V-DBUSS_L\", \"quote\": \"The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L\"}], \"interconnectors_named\": [{\"name\": \"VIC1-NSW1\", \"quote\": \"The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 2.47 pm there was an unplanned outage of the Lower Tumut to Wagga 330 kV line which was caused by bushfires in the area.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "At 2.47 pm there was an unplanned outage of the Lower Tumut to Wagga 330 kV line which was caused by bushfires in the area."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The effect of these constraints, which were in place from the 3.05 pm dispatch interval, saw the flows on the Vic-NSW interconnector reverse from imports in to Victoria to forced exports in to New South Wales. This was around a 570 MW change."
+          },
+          {
+            "label": "demand",
+            "quote": "High temperatures in Melbourne led to high demand in Victoria. The temperature exceeded 40°C in Melbourne and demand reached 8204 MW at 3.30 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On the day there was two large generators offline in Victoria, AGL's Loy Yang A2 (530 MW) and Alinta Energy's Loy Yang B1 (490 MW). The A2 unit had been offline since 27 December due to a plant failure while the B1 unit had been offline since 29 December due to a tube leak."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Generator availability was around 100 MW lower than forecast due to plant issues at Macarthur wind farm"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N-LTWG_RADIAL",
+            "quote": "The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L"
+          },
+          {
+            "id": "V-DBUSS_L",
+            "quote": "The following Constraint sets were invoked at 1500 hrs until further notice. N-LTWG_RADIAL V-DBUSS_L V-DBUSS_L"
+          }
+        ],
+        "event_date": "2019-12-30",
+        "interconnectors_named": [
+          {
+            "name": "VIC1-NSW1",
+            "quote": "The constraint set contains equations with the following interconnectors on the LHS VIC1-NSW1 V-S-MNSP1 V-SA T-V-MNSP1 NSW1-QLD1"
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.",
+          "text": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria."
+        },
+        "network_outages": {
+          "quote": "At 2.47 pm there was an unplanned outage of the Lower Tumut to Wagga 330 kV line which was caused by bushfires in the area.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The wholesale spot price for electricity reached $6443/MWh for the 3.30 pm trading interval on 30 December 2019 in Victoria.",
+          "value": 6443
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000_MWh_-_30_December_2019_(Vic).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000%20MWh%20-%2030%20December%202019%20%28Vic%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3242,
+    "per_attempt": [
+      {
+        "completion_tokens": 3242,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2482
+        },
+        "prompt_tokens": 9639,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12881
+      }
+    ],
+    "prompt_tokens": 9639,
+    "reasoning_tokens": 2482,
+    "total_tokens": 12881
+  }
+}

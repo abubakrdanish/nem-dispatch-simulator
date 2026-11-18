@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:29:43+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[0]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "20c5592e8f59c06b54f0a2edc4e596f0c49819763498467f425a7078d839b7b0",
+  "key": "651a60e0cdd4c7432f3130568e9b96c9da58d2a67e9c1f1abc58c62cc0ac04c2",
+  "latency_s": 78.43,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-01-26\", \"regions\": [\"SNOWY1\"], \"intervals\": {\"text\": \"three consecutive five-minute dispatch intervals at 12:40, 12:45, 12:50\", \"quote\": \"This resulted in three consecutive five-minute dispatch intervals at that price.\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"Rebidding by Snowy Hydro, to reallocate generation between its stations, resulted in three 5-minute dispatch prices of $9999/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"actual demand in northern Victoria was significantly higher than that modelled, which contributed to the market forecast errors.\"}, {\"label\": \"network_outage\", \"quote\": \"Between 6.15 am and 1.30 pm, a planned network outage in Victoria forced very large flows from Snowy into Victoria.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Anglesea Power Station, which is located close to Geelong, was scheduled to return to service and to generate 150MW from 7 am. The return of this generator was delayed at around 7pm the previous evening.\"}, {\"label\": \"rebids\", \"quote\": \"At 12.33pm a second rebid by Snowy Hydro shifted 410 MW of capacity at Murray from $300/MWh to $9999/MWh.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The constraints to manage this outage were violated intermittently from 10.30 am and continuously from 12.10 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"With flows from New South Wales and Tumut across the Snowy region into Victoria at the limit, around 30 MW of capacity at Murray that was priced at $9999/MWh was dispatched.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"New South Wales to Snowy\", \"quote\": \"flows on the New South Wales to Snowy and Snowy to Victoria interconnectors were higher than forecast\"}, {\"name\": \"Snowy to Victoria\", \"quote\": \"flows on the New South Wales to Snowy and Snowy to Victoria interconnectors were higher than forecast\"}, {\"name\": \"Victoria to Snowy\", \"quote\": \"dispatch across the Victoria to Snowy interconnector changed from flows north of 270 MW at 7.25 am - when the outage constraints first began to affect dispatch - to around 1750 MW south into Victoria for the 1 pm trading interval\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows from South Australia across Murraylink were limited to between 100 MW and 150 MW into Victoria by system normal constraints managing the 132 kV network in South Australia\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Between 6.15 am and 1.30 pm, a planned network outage in Victoria forced very large flows from Snowy into Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Snowy Hydro, to reallocate generation between its stations, resulted in three 5-minute dispatch prices of $9999/MWh.\"}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_26_January_2008_-_Snowy.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_26%20January%202008%20-%20Snowy.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 9144,
+    "per_attempt": [
+      {
+        "completion_tokens": 4713,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3901
+        },
+        "prompt_tokens": 4344,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9057
+      },
+      {
+        "completion_tokens": 4431,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3681
+        },
+        "prompt_tokens": 4344,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8775
+      }
+    ],
+    "prompt_tokens": 8688,
+    "reasoning_tokens": 7582,
+    "total_tokens": 17832
+  }
+}

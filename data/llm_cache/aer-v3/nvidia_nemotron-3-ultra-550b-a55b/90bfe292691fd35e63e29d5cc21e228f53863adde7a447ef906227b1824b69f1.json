@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:05:33+00:00",
+  "failure": null,
+  "input_sha256": "8422344af7568a9d7dd29e6c59d968a0b5cff93e5e15292813dfe7a35279f80c",
+  "key": "90bfe292691fd35e63e29d5cc21e228f53863adde7a447ef906227b1824b69f1",
+  "latency_s": 61.63,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-01-22\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4 am trading interval, driven by 2 dispatch intervals priced at the price cap\", \"quote\": \"On 22 January 2021 the spot price in South Australia reached $5,031/MWh for the 4 am trading interval, driven by 2 dispatch intervals priced at the price cap.\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"3:45 am $15,000 Snowy Hydro LONSDALE Energy $15,000 $1 $15,000\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 3.45 am Pelican Point power station tripped, meaning around 240 MW of capacity, priced below $100/MWh, was no longer available.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Following the trip at Pelican Point, imports from Victoria were reduced by 240 MW. Imports were reduced to protect the power system in South Australia, in case the Heywood interconnector also tripped.\"}, {\"label\": \"wind_output\", \"quote\": \"Of the 1,750 MW of semi-scheduled wind installed, less than 200 MW was available due to calm weather conditions.\"}, {\"label\": \"solar_output\", \"quote\": \"along with low wind conditions and no solar, as the event was before dawn.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Capacity that could not get dispatched during the high prices due to technical or ramp constraints has been removed from the stack.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"During the high priced trading interval both the Heywood and Murraylink interconnectors were importing into South Australia at their limit.\"}, {\"name\": \"Murraylink\", \"quote\": \"During the high priced trading interval both the Heywood and Murraylink interconnectors were importing into South Australia at their limit.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Generator rebidding from prices below to above $5,000/MWh did not contribute to the 4 am price outcome.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 3.45 am Pelican Point power station tripped, meaning around 240 MW of capacity, priced below $100/MWh, was no longer available."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Following the trip at Pelican Point, imports from Victoria were reduced by 240 MW. Imports were reduced to protect the power system in South Australia, in case the Heywood interconnector also tripped."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Of the 1,750 MW of semi-scheduled wind installed, less than 200 MW was available due to calm weather conditions."
+          },
+          {
+            "label": "solar_output",
+            "quote": "along with low wind conditions and no solar, as the event was before dawn."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Capacity that could not get dispatched during the high prices due to technical or ramp constraints has been removed from the stack."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-01-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "During the high priced trading interval both the Heywood and Murraylink interconnectors were importing into South Australia at their limit."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "During the high priced trading interval both the Heywood and Murraylink interconnectors were importing into South Australia at their limit."
+          }
+        ],
+        "intervals": {
+          "quote": "On 22 January 2021 the spot price in South Australia reached $5,031/MWh for the 4 am trading interval, driven by 2 dispatch intervals priced at the price cap.",
+          "text": "4 am trading interval, driven by 2 dispatch intervals priced at the price cap"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "3:45 am $15,000 Snowy Hydro LONSDALE Energy $15,000 $1 $15,000",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Generator rebidding from prices below to above $5,000/MWh did not contribute to the 4 am price outcome.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_MWh_-_22_January_2021_(South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20MWh%20-%2022%20January%202021%20%28South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4594,
+    "per_attempt": [
+      {
+        "completion_tokens": 4594,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4052
+        },
+        "prompt_tokens": 6976,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11570
+      }
+    ],
+    "prompt_tokens": 6976,
+    "reasoning_tokens": 4052,
+    "total_tokens": 11570
+  }
+}

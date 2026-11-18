@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:48:27+00:00",
+  "failure": null,
+  "input_sha256": "209352c567e930afce8d984d63707d344b81d622c5786a40c9318279fdf87b25",
+  "key": "a241af6332c14238dae5a872d57a16d742710aba3c02de694f83179e0b7ad557",
+  "latency_s": 145.47,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-03-12\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7:30 pm, 8 pm, 8:30 pm, 11 pm, 11:30 pm, midnight\", \"quote\": \"On 12 March 2021 the spot price in South Australia exceeded $5,000/MWh 6 times between 6 pm and midnight.\"}, \"peak_price\": {\"value\": 14348, \"quote\": \"Spot Price $14,348/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Then from 11.35 pm demand picked up due to hot water load and prices exceeded $5,000/MWh as forecast.\"}, {\"label\": \"wind_output\", \"quote\": \"There was little wind generation, dropping to as low as 12 MW. Wind is generally offered in at negative prices.\"}, {\"label\": \"solar_output\", \"quote\": \"By 6 pm wind generation was forecast to fall to 161 MW, 4 hours prior, and solar output would be down to 0 MW by 7.30 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 5.10 pm a fire in the Torrens Island power station (TIPS) switchyard saw the Barker Inlet power station disconnected reducing capacity by around 200 MW, all of which was priced below $61/MWh. The fire also limited output from TIPS B to close to minimum generation levels by AEMO to keep the system secure. This effectively removed 540 MW of capacity priced below $250/MWh.\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned outage of lines in Victoria for major repairs from severe wind damage in 2020 which limited South Australia's ability to import cheaper generation from Victoria.\"}, {\"label\": \"rebids\", \"quote\": \"At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The outage limited imports into South Australia by around 350 MW across the Heywood interconnector.\"}], \"constraints_named\": [{\"id\": \"S_TIPSB_N-2\", \"quote\": \"unforecast network constraint: S_TIPSB_N-2\"}, {\"id\": \"s_tipsb_270\", \"quote\": \"constr off out of merit order - s_tipsb_270\"}, {\"id\": \"S^NIL_PL_max\", \"quote\": \"S^NIL_PL_max - PL constraint\"}, {\"id\": \"PL constraint\", \"quote\": \"S^NIL_PL_max - PL constraint\"}, {\"id\": \"5mpd\", \"quote\": \"respond to 5mpd- $13044.44- sl~~\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"The outage limited imports into South Australia by around 350 MW across the Heywood interconnector.\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink T-V- MNSP1,VIC1\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At around 5.10 pm a fire in the Torrens Island power station (TIPS) switchyard saw the Barker Inlet power station disconnected reducing capacity by around 200 MW, all of which was priced below $61/MWh. The fire also limited output from TIPS B to close to minimum generation levels by AEMO to keep the system secure. This effectively removed 540 MW of capacity priced below $250/MWh. There was a planned outage of lines in Victoria for major repairs from severe wind damage in 2020 which limited South Australia's ability to import cheaper generation from Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Then from 11.35 pm demand picked up due to hot water load and prices exceeded $5,000/MWh as forecast."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There was little wind generation, dropping to as low as 12 MW. Wind is generally offered in at negative prices."
+          },
+          {
+            "label": "solar_output",
+            "quote": "By 6 pm wind generation was forecast to fall to 161 MW, 4 hours prior, and solar output would be down to 0 MW by 7.30 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 5.10 pm a fire in the Torrens Island power station (TIPS) switchyard saw the Barker Inlet power station disconnected reducing capacity by around 200 MW, all of which was priced below $61/MWh. The fire also limited output from TIPS B to close to minimum generation levels by AEMO to keep the system secure. This effectively removed 540 MW of capacity priced below $250/MWh."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned outage of lines in Victoria for major repairs from severe wind damage in 2020 which limited South Australia's ability to import cheaper generation from Victoria."
+          },
+          {
+            "label": "rebids",
+            "quote": "At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The outage limited imports into South Australia by around 350 MW across the Heywood interconnector."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "S_TIPSB_N-2",
+            "quote": "unforecast network constraint: S_TIPSB_N-2"
+          },
+          {
+            "id": "s_tipsb_270",
+            "quote": "constr off out of merit order - s_tipsb_270"
+          },
+          {
+            "id": "S^NIL_PL_max",
+            "quote": "S^NIL_PL_max - PL constraint"
+          },
+          {
+            "id": "PL constraint",
+            "quote": "S^NIL_PL_max - PL constraint"
+          },
+          {
+            "id": "5mpd",
+            "quote": "respond to 5mpd- $13044.44- sl~~"
+          }
+        ],
+        "event_date": "2021-03-12",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "The outage limited imports into South Australia by around 350 MW across the Heywood interconnector."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink T-V- MNSP1,VIC1"
+          }
+        ],
+        "intervals": {
+          "quote": "On 12 March 2021 the spot price in South Australia exceeded $5,000/MWh 6 times between 6 pm and midnight.",
+          "text": "7:30 pm, 8 pm, 8:30 pm, 11 pm, 11:30 pm, midnight"
+        },
+        "network_outages": {
+          "quote": "At around 5.10 pm a fire in the Torrens Island power station (TIPS) switchyard saw the Barker Inlet power station disconnected reducing capacity by around 200 MW, all of which was priced below $61/MWh. The fire also limited output from TIPS B to close to minimum generation levels by AEMO to keep the system secure. This effectively removed 540 MW of capacity priced below $250/MWh. There was a planned outage of lines in Victoria for major repairs from severe wind damage in 2020 which limited South Australia's ability to import cheaper generation from Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot Price $14,348/MWh",
+          "value": 14348
+        },
+        "rebid_set_price": {
+          "quote": "At times there was as little as 2 MW of high priced capacity needed to meet demand so minor rebidding of capacity from low to high prices contributed to the price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_MWh_-_12_March_2021_(South_Australia)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20MWh%20-%2012%20March%202021%20%28South%20Australia%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5609,
+    "per_attempt": [
+      {
+        "completion_tokens": 5609,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4643
+        },
+        "prompt_tokens": 14521,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20130
+      }
+    ],
+    "prompt_tokens": 14521,
+    "reasoning_tokens": 4643,
+    "total_tokens": 20130
+  }
+}

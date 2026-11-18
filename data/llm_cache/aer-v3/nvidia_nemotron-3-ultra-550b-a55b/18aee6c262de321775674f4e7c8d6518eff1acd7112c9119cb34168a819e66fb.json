@@ -1,0 +1,199 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T05:51:47+00:00",
+  "failure": null,
+  "input_sha256": "1ba63f1464e9cf2de7bba340534a2d45dab71bedc0b83c3ba809dd629cf41f5c",
+  "key": "18aee6c262de321775674f4e7c8d6518eff1acd7112c9119cb34168a819e66fb",
+  "latency_s": 238.68,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2026-06-21\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm.\", \"quote\": \"The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm.\"}, \"peak_price\": {\"value\": 20300, \"quote\": \"The 5-minute price in energy spiked to $20,300 per MWh at 6 pm\"}, \"causes\": [{\"label\": \"fcas_co_optimisation\", \"quote\": \"The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid.\"}, {\"label\": \"rebids\", \"quote\": \"This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the price at the time.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the price at the time.\"}}, {\"event_date\": \"2026-06-21\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"21 June 8 pm 8,689 8.30 pm 4,323\", \"quote\": \"21 June 8 pm 8,689 8.30 pm 4,323\"}, \"peak_price\": {\"value\": 8689, \"quote\": \"21 June 8 pm 8,689\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand.\"}, {\"label\": \"wind_output\", \"quote\": \"On 21 June, average wind generation was around 54 MW from 8 pm to 8.30 pm when the energy price reached $8,689 per MWh and $4,323 per MWh, respectively.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"batteries removed capacity in the lead up to the high prices as they ran out of charge.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors. Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria.\"}, {\"name\": \"Murraylink\", \"quote\": \"Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}}, {\"event_date\": \"2026-06-22\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"22 June 7.30 am 12,713 8 am 20,300 8.30 am 3,836\", \"quote\": \"22 June 7.30 am 12,713 8 am 20,300 8.30 am 3,836\"}, \"peak_price\": {\"value\": 20300, \"quote\": \"22 June 8 am 20,300\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 22 June during the morning peak, energy price reached the market cap, and it was the highest price of the month and the quarter. High prices occurred due to continuing conditions from the previous day. Drivers included high demand due to very cold morning, low wind generation, network limitations and some rebidding.\"}, {\"label\": \"wind_output\", \"quote\": \"On 22 June, average wind generation was around 66 MW from 7.30 am to 8.30 am when the energy price varied from $3,836 per MWh to $20,300 per MWh.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"When the high prices occurred at 7.30 am and 8 am on 22 June, total offers from batteries dropped sharply from 326 MW to 1 MW and eventually there was no capacity offered at 8.05 am and 8.10 am.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}], \"constraints_named\": [{\"id\": \"CA_SYDS_59488 2A3_1 SL\", \"quote\": \"Constraint management - CA_SYDS_59488 2A3_1 SL\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am.\"}, {\"name\": \"Murraylink\", \"quote\": \"On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid."
+          },
+          {
+            "label": "rebids",
+            "quote": "This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the price at the time."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-06-21",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The main drivers were the trade-off between energy and FCAS markets, system normal constraints including an emergency frequency control scheme, Basslink in the 'No-Go' zone and one minor rebid."
+          }
+        ],
+        "intervals": {
+          "quote": "The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm.",
+          "text": "The affected FCAS markets were Raise Regulation (RReg) and Raise 60 second (R60 sec) at 6 pm and R6 sec at 10 pm."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 5-minute price in energy spiked to $20,300 per MWh at 6 pm",
+          "value": 20300
+        },
+        "rebid_set_price": {
+          "quote": "This rebid contributed to the high price in R60 sec at 6 pm as only 1 MW of high-priced capacity was needed to meet the R60 sec requirement. DRVIOT05 also set the price at the time.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "South Australia experienced colder temperatures ranging from 4°C to 15°C on 21 and 22 June, resulting in higher than usual electricity demand."
+          },
+          {
+            "label": "wind_output",
+            "quote": "On 21 June, average wind generation was around 54 MW from 8 pm to 8.30 pm when the energy price reached $8,689 per MWh and $4,323 per MWh, respectively."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "batteries removed capacity in the lead up to the high prices as they ran out of charge."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "South Australia had limited access to imports during the high-priced periods due to system normal constraints affecting both interconnectors. Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-06-21",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Heywood imports into South Australia were restricted, while Murraylink flows were forced counter-price into Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "21 June 8 pm 8,689 8.30 pm 4,323",
+          "text": "21 June 8 pm 8,689 8.30 pm 4,323"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "21 June 8 pm 8,689",
+          "value": 8689
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 22 June during the morning peak, energy price reached the market cap, and it was the highest price of the month and the quarter. High prices occurred due to continuing conditions from the previous day. Drivers included high demand due to very cold morning, low wind generation, network limitations and some rebidding."
+          },
+          {
+            "label": "wind_output",
+            "quote": "On 22 June, average wind generation was around 66 MW from 7.30 am to 8.30 am when the energy price varied from $3,836 per MWh to $20,300 per MWh."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "When the high prices occurred at 7.30 am and 8 am on 22 June, total offers from batteries dropped sharply from 326 MW to 1 MW and eventually there was no capacity offered at 8.05 am and 8.10 am."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "CA_SYDS_59488 2A3_1 SL",
+            "quote": "Constraint management - CA_SYDS_59488 2A3_1 SL"
+          }
+        ],
+        "event_date": "2026-06-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "On 22 June: Heywood's flows were around 139 MW and 328 MW at 7.30 am and 8 am, respectively. At 8.05 am, system normal constraints were still in place, and imports were limited to 397 MW at the time of the high price. Murraylink's flows continued to be forced counter-price into Victoria during the high prices of 7.30 am and 8 am."
+          }
+        ],
+        "intervals": {
+          "quote": "22 June 7.30 am 12,713 8 am 20,300 8.30 am 3,836",
+          "text": "22 June 7.30 am 12,713 8 am 20,300 8.30 am 3,836"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "22 June 8 am 20,300",
+          "value": 20300
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some high prices on 21 and 22 June.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Significant_electricity_prices_for_April_to_June_2026.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-08/Significant%20electricity%20prices%20for%20April%20to%20June%202026.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 13202,
+    "per_attempt": [
+      {
+        "completion_tokens": 13202,
+        "completion_tokens_details": {
+          "reasoning_tokens": 11342
+        },
+        "prompt_tokens": 18963,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 32165
+      }
+    ],
+    "prompt_tokens": 18963,
+    "reasoning_tokens": 11342,
+    "total_tokens": 32165
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:05:04+00:00",
+  "failure": null,
+  "input_sha256": "66e0f9fed4f6dcde23810c9048b659431eca1b48475b5fc2d596579c1d613c4f",
+  "key": "0af57f26c257904e960d04c7bf9e98944ddad8ea200e71013b24f5036ad3a061",
+  "latency_s": 106.64,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-01-30\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm trading intervals\", \"quote\": \"On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.\"}, \"peak_price\": {\"value\": 12217, \"quote\": \"and $12 217/MWh in South Australia respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"demand across both regions was collectively up to 870 MW greater than forecast.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"a unit at Loy Yang A tripped, removing 560 MW of capacity priced at the floor from the market.\"}, {\"label\": \"wind_output\", \"quote\": \"with light wind conditions, the output of wind generation was around 3200 MW lower than what is installed across both regions and up to 122 MW lower than forecast earlier in the day.\"}], \"constraints_named\": [{\"id\": \"1732A\", \"quote\": \"1732A constraint management - N^^N_Nil_1 Sl\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}, {\"name\": \"Murraylink\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}, {\"name\": \"Basslink\", \"quote\": \"Victoria is connected to Tasmania via Basslink\"}, {\"name\": \"Vic-NSW\", \"quote\": \"and to New South Wales via the Vic-NSW interconnector.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "demand across both regions was collectively up to 870 MW greater than forecast."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "a unit at Loy Yang A tripped, removing 560 MW of capacity priced at the floor from the market."
+          },
+          {
+            "label": "wind_output",
+            "quote": "with light wind conditions, the output of wind generation was around 3200 MW lower than what is installed across both regions and up to 122 MW lower than forecast earlier in the day."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "1732A",
+            "quote": "1732A constraint management - N^^N_Nil_1 Sl"
+          }
+        ],
+        "event_date": "2020-01-30",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Victoria is connected to Tasmania via Basslink"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "and to New South Wales via the Vic-NSW interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 30 January 2020, the spot price for electricity for the 6.30 pm and 7 pm trading intervals reached $11 096/MWh and $11 948/MWh in Victoria, and $11 204/MWh and $12 217/MWh in South Australia respectively.",
+          "text": "6.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "and $12 217/MWh in South Australia respectively.",
+          "value": 12217
+        },
+        "rebid_set_price": {
+          "quote": "Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/30_Jan_$5000_Report_Vic_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/30%20Jan%20%245000%20Report%20Vic%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4568,
+    "per_attempt": [
+      {
+        "completion_tokens": 4568,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4048
+        },
+        "prompt_tokens": 16110,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20678
+      }
+    ],
+    "prompt_tokens": 16110,
+    "reasoning_tokens": 4048,
+    "total_tokens": 20678
+  }
+}

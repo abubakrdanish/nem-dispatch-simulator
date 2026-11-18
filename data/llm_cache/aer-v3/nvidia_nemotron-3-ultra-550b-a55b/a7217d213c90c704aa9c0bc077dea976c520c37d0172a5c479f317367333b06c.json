@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:20:09+00:00",
+  "failure": null,
+  "input_sha256": "c1f03ef94935555b1d21753fa69900c22f2a7001e6d369e43fd5a7a63f6b6643",
+  "key": "a7217d213c90c704aa9c0bc077dea976c520c37d0172a5c479f317367333b06c",
+  "latency_s": 91.46,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-02\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2 pm trading interval\", \"quote\": \"On Monday 2 November the spot price in South Australia reached $9999.74/MWh for the 2 pm trading interval.\"}, \"peak_price\": {\"value\": 9999.74, \"quote\": \"Spot price $9999.74/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This was primarily due to significantly higher demand than that forecast.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 1000 MW of low cost generation was not available on the day.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Flinders Power's Northern Power Station unit one was forecast to be available for 90 MW on 2 November after an extended outage. The return to service of this unit was delayed during the morning.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports into South Australia across both interconnectors were also lower than forecast.\"}], \"constraints_named\": [{\"id\": \"Murraylink runback scheme constraint\", \"quote\": \"driven by the constraint used to manage the NSW Murraylink runback scheme\"}, {\"id\": \"Murraylink voltage collapse constraint\", \"quote\": \"This constraint limits flows across Murraylink to avoid voltage collapse for the loss of Darlington Point to Buronga 220kV line.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Combined imports into South Australia across the Heywood and Murraylink interconnectors were 150 MW lower than that forecast four hours ahead.\"}, {\"name\": \"Murraylink\", \"quote\": \"Combined imports into South Australia across the Heywood and Murraylink interconnectors were 150 MW lower than that forecast four hours ahead.\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"The limitation was not the result of any network outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This was primarily due to significantly higher demand than that forecast."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 1000 MW of low cost generation was not available on the day."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Flinders Power's Northern Power Station unit one was forecast to be available for 90 MW on 2 November after an extended outage. The return to service of this unit was delayed during the morning."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports into South Australia across both interconnectors were also lower than forecast."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Murraylink runback scheme constraint",
+            "quote": "driven by the constraint used to manage the NSW Murraylink runback scheme"
+          },
+          {
+            "id": "Murraylink voltage collapse constraint",
+            "quote": "This constraint limits flows across Murraylink to avoid voltage collapse for the loss of Darlington Point to Buronga 220kV line."
+          }
+        ],
+        "event_date": "2009-11-02",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Combined imports into South Australia across the Heywood and Murraylink interconnectors were 150 MW lower than that forecast four hours ahead."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Combined imports into South Australia across the Heywood and Murraylink interconnectors were 150 MW lower than that forecast four hours ahead."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday 2 November the spot price in South Australia reached $9999.74/MWh for the 2 pm trading interval.",
+          "text": "2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "The limitation was not the result of any network outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.74/MWh",
+          "value": 9999.74
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_2_November_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_2%20November%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4312,
+    "per_attempt": [
+      {
+        "completion_tokens": 4312,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3815
+        },
+        "prompt_tokens": 4297,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8609
+      }
+    ],
+    "prompt_tokens": 4297,
+    "reasoning_tokens": 3815,
+    "total_tokens": 8609
+  }
+}

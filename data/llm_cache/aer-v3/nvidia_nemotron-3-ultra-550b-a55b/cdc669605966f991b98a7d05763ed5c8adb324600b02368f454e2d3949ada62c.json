@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:48:53+00:00",
+  "failure": null,
+  "input_sha256": "57bd02cfb35d18423e920dc7d0ede8286cc74e692668b12d0f27277e4acf1002",
+  "key": "cdc669605966f991b98a7d05763ed5c8adb324600b02368f454e2d3949ada62c",
+  "latency_s": 81.17,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-01-31\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"6 pm 30-minute period\", \"quote\": \"On 31 January 2022 the wholesale price of electricity reached $14,149/MWh in Victoria and $14,239/MWh in South Australia for the 6 pm 30-minute period.\"}, \"peak_price\": {\"value\": 14239, \"quote\": \"On 31 January 2022 the wholesale price of electricity reached $14,149/MWh in Victoria and $14,239/MWh in South Australia for the 6 pm 30-minute period.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand was driven by hot weather, which leads to the increased use of air conditioners, with the temperature reaching 34°C in Melbourne and 35°C in Adelaide.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation in South Australia at 6 pm was just 47 MW, well below the hour ahead forecast of 148 MW.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"EnergyAustralia's Yallourn units 1 and 2 had been experiencing outages due to tube-leaks (since 30 and 25 January, respectively). Each of these units has a registered capacity of 360 MW, so the outages collectively reduced availability by 720 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"EnergyAustralia's Jeeralang B unit 3, in Victoria, removed 84 MW of capacity priced at the floor at 5.16 pm due to a unit trip.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"EnergyAustralia's Newport unit, also in Victoria, removed 30 MW of capacity priced at the floor at 3.04 pm due to a pressure limit.\"}, {\"label\": \"rebids\", \"quote\": \"In South Australia, AGL's Torrens Island Power station, units 2, 3 and 4 collectively moved 30 MW of capacity from $150/MWh to $12,999/MWh at 5.19 pm, due to a change in forecast prices.\"}, {\"label\": \"ramp_rates\", \"quote\": \"The lower ramp rate meant that when the constraint bound, Murray could only be targeted to reduce its output slowly.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The network constraint invoked by AEMO limited the sum of output from Murray power station and imports into Victoria to 1100 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"The Heywood interconnector was unconstrained so our analysis will consider Victoria and South Australia as one region.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Murray is located in Victoria close to the Vic-NSW interconnector, so when Murray's output is high it can cause congestion on the interconnector.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand was driven by hot weather, which leads to the increased use of air conditioners, with the temperature reaching 34°C in Melbourne and 35°C in Adelaide."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation in South Australia at 6 pm was just 47 MW, well below the hour ahead forecast of 148 MW."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "EnergyAustralia's Yallourn units 1 and 2 had been experiencing outages due to tube-leaks (since 30 and 25 January, respectively). Each of these units has a registered capacity of 360 MW, so the outages collectively reduced availability by 720 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "EnergyAustralia's Jeeralang B unit 3, in Victoria, removed 84 MW of capacity priced at the floor at 5.16 pm due to a unit trip."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "EnergyAustralia's Newport unit, also in Victoria, removed 30 MW of capacity priced at the floor at 3.04 pm due to a pressure limit."
+          },
+          {
+            "label": "rebids",
+            "quote": "In South Australia, AGL's Torrens Island Power station, units 2, 3 and 4 collectively moved 30 MW of capacity from $150/MWh to $12,999/MWh at 5.19 pm, due to a change in forecast prices."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "The lower ramp rate meant that when the constraint bound, Murray could only be targeted to reduce its output slowly."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The network constraint invoked by AEMO limited the sum of output from Murray power station and imports into Victoria to 1100 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "The Heywood interconnector was unconstrained so our analysis will consider Victoria and South Australia as one region."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Murray is located in Victoria close to the Vic-NSW interconnector, so when Murray's output is high it can cause congestion on the interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On 31 January 2022 the wholesale price of electricity reached $14,149/MWh in Victoria and $14,239/MWh in South Australia for the 6 pm 30-minute period.",
+          "text": "6 pm 30-minute period"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 31 January 2022 the wholesale price of electricity reached $14,149/MWh in Victoria and $14,239/MWh in South Australia for the 6 pm 30-minute period.",
+          "value": 14239
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_31_January_(South_Australia_&_Victoria).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%2031%20January%20%28South%20Australia%20%26%20Victoria%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5976,
+    "per_attempt": [
+      {
+        "completion_tokens": 5976,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5222
+        },
+        "prompt_tokens": 6237,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12213
+      }
+    ],
+    "prompt_tokens": 6237,
+    "reasoning_tokens": 5222,
+    "total_tokens": 12213
+  }
+}

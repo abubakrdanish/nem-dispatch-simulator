@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:52:15+00:00",
+  "failure": null,
+  "input_sha256": "a1da5efa86bbe5e5c317e94f0f7f6ff273d48d9544e223f7659cd0b188d9cc39",
+  "key": "8ea5771f7a4e542f2eb43e930f34d17f6c056bfaec2b198ef12f7cd875168bf7",
+  "latency_s": 111.62,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-01-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"30-minute interval at 12:30 pm (comprising six 5-minute intervals from 12:05 to 12:30)\", \"quote\": \"The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.\"}, \"peak_price\": {\"value\": 11489, \"quote\": \"The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was 159 MW higher than the forecast 1 hour prior, due to a decline in rooftop solar generation and high temperatures.\"}, {\"label\": \"wind_output\", \"quote\": \"Availability was 162 MW lower than the forecast 1 hour prior, due to a decline in solar and wind generation.\"}, {\"label\": \"solar_output\", \"quote\": \"Available generation in South Australia was 162 MW lower than the forecast 1 hour prior, which was in part due to solar and wind output dropping off.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"South Australia's net import limit fell significantly throughout the morning on 10 January and was restricted to 146 MW during the high-price period. This was caused by a constraint on the Heywood interconnector which curtailed imports into South Australia\"}, {\"label\": \"network_outage\", \"quote\": \"AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Gas and diesel generators could not start up and respond to these conditions instantly, creating a delayed market response.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"This was caused by a constraint on the Heywood interconnector which curtailed imports into South Australia\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Market participants rebidding capacity did not contribute to this event.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was 159 MW higher than the forecast 1 hour prior, due to a decline in rooftop solar generation and high temperatures."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Availability was 162 MW lower than the forecast 1 hour prior, due to a decline in solar and wind generation."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Available generation in South Australia was 162 MW lower than the forecast 1 hour prior, which was in part due to solar and wind output dropping off."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "South Australia's net import limit fell significantly throughout the morning on 10 January and was restricted to 146 MW during the high-price period. This was caused by a constraint on the Heywood interconnector which curtailed imports into South Australia"
+          },
+          {
+            "label": "network_outage",
+            "quote": "AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Gas and diesel generators could not start up and respond to these conditions instantly, creating a delayed market response."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-01-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "This was caused by a constraint on the Heywood interconnector which curtailed imports into South Australia"
+          }
+        ],
+        "intervals": {
+          "quote": "The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.",
+          "text": "30-minute interval at 12:30 pm (comprising six 5-minute intervals from 12:05 to 12:30)"
+        },
+        "network_outages": {
+          "quote": "AEMO invoked the constraint after there were equipment outages on substations connected to the Heywood interconnector.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The South Australia 30-minute wholesale electricity price was $11,489/MWh at 12.30 pm on 10 January 2022.",
+          "value": 11489
+        },
+        "rebid_set_price": {
+          "quote": "Market participants rebidding capacity did not contribute to this event.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_10_January_(South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%2010%20January%20%28South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5478,
+    "per_attempt": [
+      {
+        "completion_tokens": 5478,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4911
+        },
+        "prompt_tokens": 7485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12963
+      }
+    ],
+    "prompt_tokens": 7485,
+    "reasoning_tokens": 4911,
+    "total_tokens": 12963
+  }
+}

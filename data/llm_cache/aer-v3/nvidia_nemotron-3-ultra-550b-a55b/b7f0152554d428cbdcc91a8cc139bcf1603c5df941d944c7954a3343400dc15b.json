@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:45:37+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[2]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "024d2249cd37e6b52139e0b3229a62b4a04461b1bf10b425ec9a459a379bd06c",
+  "key": "b7f0152554d428cbdcc91a8cc139bcf1603c5df941d944c7954a3343400dc15b",
+  "latency_s": 135.01,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2005-12-07\", \"regions\": [\"NSW1\", \"QLD1\", \"SNOWY1\"], \"intervals\": {\"text\": \"Trading interval ending NSW spot price ($/MWh) Queensland spot price ($/MWh) Snowy spot price ($/MWh) 2:30 pm 5332 4937 42 3:00 pm 7798 7090 2058 3:30 pm 8371 7867 4881 4:00 pm 8754 7824 6113\", \"quote\": \"Trading interval ending NSW spot price ($/MWh) Queensland spot price ($/MWh) Snowy spot price ($/MWh) 2:30 pm 5332 4937 42 3:00 pm 7798 7090 2058 3:30 pm 8371 7867 4881 4:00 pm 8754 7824 6113\"}, \"peak_price\": {\"value\": 8754, \"quote\": \"The spot price was greater than $5000/MWh in New South Wales between 2.30pm and 4pm, peaking at $8754/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"high temperatures in New South Wales and Queensland, led to record coincident demand across the two regions, reaching 20 900 MW at 4pm.\"}, {\"label\": \"demand\", \"quote\": \"demand forecasts produced 12 hours to dispatch were 600 MW to 1000 MW lower than actual.\"}, {\"label\": \"rebids\", \"quote\": \"A combination of near record demand in Queensland and New South Wales, demand forecast errors, particularly in New South Wales and rebidding contributed to the price exceeding $5000/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Callide Power Trading reduced the availability of Callide unit C3 by 50 MW. The rebid reason given was 'Mill trip' and was effective until 3.05pm.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Delays in the return to service of Millmerran unit 1, which had been out of service since mid November and was initially expected to return around 8am, saw as much 250 MW less available capacity than expected at 1pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows into New South Wales from Snowy were limited to around 2900 MW throughout this period while flows south from Queensland peaked during the 5pm trading interval at more than 800 MW, short of the limit by around 100 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}, {\"name\": \"Snowy1\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}, {\"name\": \"Vic-Snowy\", \"quote\": \"Figures 5-7 show the target flows and limits on the New South Wales to Queensland (QNI), Snowy to New South Wales (Snowy1) and Victoria to Snowy interconnectors respectively between 12pm and 8pm on Wednesday 7 December.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_7_December_2005_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_7%20December%202005%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 12418,
+    "per_attempt": [
+      {
+        "completion_tokens": 6003,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5119
+        },
+        "prompt_tokens": 9570,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15573
+      },
+      {
+        "completion_tokens": 6415,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5484
+        },
+        "prompt_tokens": 9570,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 15985
+      }
+    ],
+    "prompt_tokens": 19140,
+    "reasoning_tokens": 10603,
+    "total_tokens": 31558
+  }
+}

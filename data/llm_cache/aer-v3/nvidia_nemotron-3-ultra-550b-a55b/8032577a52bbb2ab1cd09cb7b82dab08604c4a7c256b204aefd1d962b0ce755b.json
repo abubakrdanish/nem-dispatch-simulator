@@ -1,0 +1,117 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:26:49+00:00",
+  "failure": null,
+  "input_sha256": "7bd431bcca50c030427f1aa0f5d93c77824bda882b0238e7e9f1757c6ec9b1ec",
+  "key": "8032577a52bbb2ab1cd09cb7b82dab08604c4a7c256b204aefd1d962b0ce755b",
+  "latency_s": 156.97,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-05-23\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval. This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am.\", \"quote\": \"the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval. This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Actual demand was 92 MW or six per cent higher than forecast four hours ahead. Taking into account non-scheduled generation, which was 80 MW higher than forecast, the demand was 172 MW or 10 per cent higher on the same basis.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 6.04 am, Hydro Tasmania reduced the available capacity at Reece unit one by 114 MW. The rebid reason given was \\\"Plant outage::Reece 1\\\".\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Generating units in Tasmania were at or near full capacity during the morning. A number of units were either stranded or trapped in the ancillary service markets and could not supply FCAS and/or energy market services to Tasmania. This led to insufficient raise 5 minute, raise 6 second and raise regulation services in Tasmania.\"}, {\"label\": \"constraint_violation\", \"quote\": \"Six FCAS constraints were violated during the trading interval.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The no-go zone is not modelled in the 30 minute predispatch forecast system because it is a sub 5-minute issue. As a result, the limit on flow into Tasmania was forecast to be around 300 MW, both four and 12 hours ahead. During dispatch, however, the no-go zone and its interactions with the frequency markets kept flows north and counter-priced into Victoria for much of the trading interval.\"}], \"constraints_named\": [{\"id\": \"F_T++NIL_MG_R5\", \"quote\": \"07:25 $9972/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000\"}, {\"id\": \"F_T++RREG_0050\", \"quote\": \"07:25 $9972/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000 RAISE REG F_T++RREG_0050 Yes 20,000\"}, {\"id\": \"F_T++NIL_MG_R6\", \"quote\": \"07:35 $9971/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000 RAISE 6S F_T++NIL_MG_R6 Yes 50,000 RAISE REG F_T++RREG_0050 Yes 20,000\"}, {\"id\": \"F_T+NIL_MG_R5\", \"quote\": \"07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000\"}, {\"id\": \"F_T+NIL_MG_R6\", \"quote\": \"07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000\"}, {\"id\": \"F_T+RREG_0050\", \"quote\": \"07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"The Basslink interconnector is technically incapable of transitioning from northward to southward flows (or vice-versa) instantly.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the high prices in the energy or frequency markets.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Actual demand was 92 MW or six per cent higher than forecast four hours ahead. Taking into account non-scheduled generation, which was 80 MW higher than forecast, the demand was 172 MW or 10 per cent higher on the same basis."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 6.04 am, Hydro Tasmania reduced the available capacity at Reece unit one by 114 MW. The rebid reason given was \"Plant outage::Reece 1\"."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Generating units in Tasmania were at or near full capacity during the morning. A number of units were either stranded or trapped in the ancillary service markets and could not supply FCAS and/or energy market services to Tasmania. This led to insufficient raise 5 minute, raise 6 second and raise regulation services in Tasmania."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "Six FCAS constraints were violated during the trading interval."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The no-go zone is not modelled in the 30 minute predispatch forecast system because it is a sub 5-minute issue. As a result, the limit on flow into Tasmania was forecast to be around 300 MW, both four and 12 hours ahead. During dispatch, however, the no-go zone and its interactions with the frequency markets kept flows north and counter-priced into Victoria for much of the trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F_T++NIL_MG_R5",
+            "quote": "07:25 $9972/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000"
+          },
+          {
+            "id": "F_T++RREG_0050",
+            "quote": "07:25 $9972/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000 RAISE REG F_T++RREG_0050 Yes 20,000"
+          },
+          {
+            "id": "F_T++NIL_MG_R6",
+            "quote": "07:35 $9971/MWh RAISE 5M F_T++NIL_MG_R5 Yes 30,000 RAISE 6S F_T++NIL_MG_R6 Yes 50,000 RAISE REG F_T++RREG_0050 Yes 20,000"
+          },
+          {
+            "id": "F_T+NIL_MG_R5",
+            "quote": "07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000"
+          },
+          {
+            "id": "F_T+NIL_MG_R6",
+            "quote": "07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000"
+          },
+          {
+            "id": "F_T+RREG_0050",
+            "quote": "07:50 $7962/MWh RAISE 5M F_T+NIL_MG_R5 No 30,000 RAISE 6S F_T+NIL_MG_R6 No 50,000 RAISE REG F_T+RREG_0050 No 20,000"
+          }
+        ],
+        "event_date": "2006-05-23",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "The Basslink interconnector is technically incapable of transitioning from northward to southward flows (or vice-versa) instantly."
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval. This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am.",
+          "text": "the spot price for energy in Tasmania reached $6509/MWh for the 8 am trading interval. This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "This resulted from a number of 5-minute dispatch prices of $10 000/MWh from 7.25 am.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the high prices in the energy or frequency markets.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_May_2006_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%20May%202006%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4714,
+    "per_attempt": [
+      {
+        "completion_tokens": 4714,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3548
+        },
+        "prompt_tokens": 9147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13861
+      }
+    ],
+    "prompt_tokens": 9147,
+    "reasoning_tokens": 3548,
+    "total_tokens": 13861
+  }
+}

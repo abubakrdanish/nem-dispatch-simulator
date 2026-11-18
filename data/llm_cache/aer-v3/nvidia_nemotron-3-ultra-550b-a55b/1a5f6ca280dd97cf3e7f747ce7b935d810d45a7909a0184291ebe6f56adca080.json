@@ -1,0 +1,80 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:21:27+00:00",
+  "failure": null,
+  "input_sha256": "2f7681d3a0eb8ff2cc689129e3af011b5d73e39be2c35c75294ff884c605c6be",
+  "key": "1a5f6ca280dd97cf3e7f747ce7b935d810d45a7909a0184291ebe6f56adca080",
+  "latency_s": 46.89,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-11-19\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"7 am trading interval (06:30-07:00) comprising six dispatch intervals from 06:35 to 07:00\", \"quote\": \"The 30-minute spot price is the time weighted average of the six dispatch interval prices. Friday 19 November - 7 am\"}, \"peak_price\": {\"value\": 12400, \"quote\": \"the spot price in Tasmania reached $12 400/MWh for the 7 am trading interval\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Conditions on the day saw demand around 100 MW higher than forecast 12 hours ahead and 80 MW higher than forecast four hours ahead. The output from Hydro Tasmania's non-scheduled generators was also reduced during this period, which effectively increases demand.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across BassLink and other Tasmania generation was insufficient to meet demand.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"BassLink\", \"quote\": \"Imports across BassLink and other Tasmania generation was insufficient to meet demand.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no other significant rebidding.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Conditions on the day saw demand around 100 MW higher than forecast 12 hours ahead and 80 MW higher than forecast four hours ahead. The output from Hydro Tasmania's non-scheduled generators was also reduced during this period, which effectively increases demand."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across BassLink and other Tasmania generation was insufficient to meet demand."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2010-11-19",
+        "interconnectors_named": [
+          {
+            "name": "BassLink",
+            "quote": "Imports across BassLink and other Tasmania generation was insufficient to meet demand."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute spot price is the time weighted average of the six dispatch interval prices. Friday 19 November - 7 am",
+          "text": "7 am trading interval (06:30-07:00) comprising six dispatch intervals from 06:35 to 07:00"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "the spot price in Tasmania reached $12 400/MWh for the 7 am trading interval",
+          "value": 12400
+        },
+        "rebid_set_price": {
+          "quote": "There was no other significant rebidding.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_19_November_2010_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_19%20November%202010%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3124,
+    "per_attempt": [
+      {
+        "completion_tokens": 3124,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2788
+        },
+        "prompt_tokens": 3381,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6505
+      }
+    ],
+    "prompt_tokens": 3381,
+    "reasoning_tokens": 2788,
+    "total_tokens": 6505
+  }
+}

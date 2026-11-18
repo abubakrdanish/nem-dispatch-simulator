@@ -1,0 +1,121 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T04:45:56+00:00",
+  "failure": null,
+  "input_sha256": "ded47b0fc0e6514be7ed68249ec118e84fcc85a2a4fb389c9ffa4ad8e15299af",
+  "key": "870ea3455540dc5d866d3ca22489162da3319feb5de232890c2092540c2897f0",
+  "latency_s": 69.52,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-03-02\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"2 pm and 2.30 pm trading intervals\", \"quote\": \"On 2 March 2020 the spot price in South Australia for electricity reached $5063 /MWh and $7027/MWh for the 2 pm and 2.30 pm trading intervals respectively.\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"These rebids further reduced the available supply of low priced electricity and contributed to the dispatch price reaching $14 700/MWh for five dispatch intervals.\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"At midday, the Heywood interconnector, which connects South Australia to Victoria, tripped due to equipment failure at the Heywood substation in south west Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the five dispatch intervals when the price was at the cap these constraints reduced imports across Murraylink to 0 MW and curtailed local generation.\"}, {\"label\": \"wind_output\", \"quote\": \"low wind conditions meant less than 200 MW was available.\"}, {\"label\": \"rebids\", \"quote\": \"participants rebid over 550 MW of wind generation from prices between the floor and $300/MWh to the market price cap.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"some participants were providing FCAS instead of energy, reducing the available supply of low priced generation further\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO invoked constraints and issued directions to generators to maintain power system security in South Australia.\"}], \"constraints_named\": [{\"id\": \"F-ESTN_ISLE\", \"quote\": \"The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE\"}, {\"id\": \"F-SA_ESTN_ISLE_REG\", \"quote\": \"The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE\"}, {\"id\": \"F-SA_MOPS_ISLE\", \"quote\": \"The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE\"}, {\"id\": \"SA_ESTN_ISLE\", \"quote\": \"The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE\"}, {\"id\": \"F-ESTN_TL_0600\", \"quote\": \"The following Constraint sets were revoked at 2020 hrs F-ESTN_ISLE F-ESTN_TL_0600 F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}, {\"name\": \"Murraylink\", \"quote\": \"South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At midday, the Heywood interconnector, which connects South Australia to Victoria, tripped due to equipment failure at the Heywood substation in south west Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"These rebids further reduced the available supply of low priced electricity and contributed to the dispatch price reaching $14 700/MWh for five dispatch intervals.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "At midday, the Heywood interconnector, which connects South Australia to Victoria, tripped due to equipment failure at the Heywood substation in south west Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the five dispatch intervals when the price was at the cap these constraints reduced imports across Murraylink to 0 MW and curtailed local generation."
+          },
+          {
+            "label": "wind_output",
+            "quote": "low wind conditions meant less than 200 MW was available."
+          },
+          {
+            "label": "rebids",
+            "quote": "participants rebid over 550 MW of wind generation from prices between the floor and $300/MWh to the market price cap."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "some participants were providing FCAS instead of energy, reducing the available supply of low priced generation further"
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO invoked constraints and issued directions to generators to maintain power system security in South Australia."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "F-ESTN_ISLE",
+            "quote": "The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE"
+          },
+          {
+            "id": "F-SA_ESTN_ISLE_REG",
+            "quote": "The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE"
+          },
+          {
+            "id": "F-SA_MOPS_ISLE",
+            "quote": "The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE"
+          },
+          {
+            "id": "SA_ESTN_ISLE",
+            "quote": "The following Constraint sets were invoked to manage the situation from 1215 hrs F-ESTN_ISLE F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE"
+          },
+          {
+            "id": "F-ESTN_TL_0600",
+            "quote": "The following Constraint sets were revoked at 2020 hrs F-ESTN_ISLE F-ESTN_TL_0600 F-SA_ESTN_ISLE_REG F-SA_MOPS_ISLE SA_ESTN_ISLE"
+          }
+        ],
+        "event_date": "2020-03-02",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "South Australia is connected to Victoria via two interconnectors, Heywood and Murraylink."
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 March 2020 the spot price in South Australia for electricity reached $5063 /MWh and $7027/MWh for the 2 pm and 2.30 pm trading intervals respectively.",
+          "text": "2 pm and 2.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "At midday, the Heywood interconnector, which connects South Australia to Victoria, tripped due to equipment failure at the Heywood substation in south west Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "These rebids further reduced the available supply of low priced electricity and contributed to the dispatch price reaching $14 700/MWh for five dispatch intervals.",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "These rebids further reduced the available supply of low priced electricity and contributed to the dispatch price reaching $14 700/MWh for five dispatch intervals.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20200302_$5000_SA_Report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20200302%20%245000%20SA%20Report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3843,
+    "per_attempt": [
+      {
+        "completion_tokens": 3843,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2939
+        },
+        "prompt_tokens": 10949,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14792
+      }
+    ],
+    "prompt_tokens": 10949,
+    "reasoning_tokens": 2939,
+    "total_tokens": 14792
+  }
+}

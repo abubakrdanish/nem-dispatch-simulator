@@ -1484,7 +1484,9 @@ On the 741,340 matched rows of the seventeen months, rung 4's price moved in 33,
 
 ## 19. What the AER says caused each spike, and whether rung 4 follows it
 
-Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Model responses: `data/llm_cache/aer-v2/` (committed). Hand-coded sample: `data/aer_hand_coded.json`. Judgements of every model label on it: `data/aer_judgements.json`. Outputs (gitignored): `results/aer_labels.json`, `results/aer_accuracy.csv`, `results/aer_cause_test.csv`, `results/aer_decade_causes.csv`.
+**Read 19.6 first.** Sections 19.2–19.5 describe the first corpus run, with reasoning off (2026-11-17). The corpus was re-run with reasoning on (2026-11-18); those labels are now the published ones, and 19.6 gives every figure for them beside the reasoning-off ones. The re-run changed the verdict of 19.3 from "holds" to "consistent, not shown".
+
+Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Model responses: `data/llm_cache/aer-v2/` (reasoning off, and the sample comparisons) and `data/llm_cache/aer-v3/` (reasoning on, the published labels), both committed. Hand-coded sample: `data/aer_hand_coded.json`. Judgements of every model label on it: `data/aer_judgements.json`. Outputs (gitignored): `results/aer_labels.json`, `results/aer_accuracy.csv`, `results/aer_cause_test.csv`, `results/aer_decade_causes.csv` (reasoning on), and the same names with `__nemotron` for reasoning off.
 
 ### 19.1 The documents
 
@@ -1502,7 +1504,7 @@ Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Mod
 - **Extracted with a valid answer: 137.** 4 of the 5 failures are 2005–2008 reports naming the Snowy region, abolished in 2008 and not in the schema. The fifth is 13 January 2017 (Queensland): the model twice gave a constraint ID longer than the schema allows.
 - **Duplicates.** One is known: January–March 2025 exists as an original and a corrected (`_1`) version. Events are merged by date and region, so it does not double-count.
 
-### 19.2 Accuracy on the hand-coded sample
+### 19.2 Accuracy on the hand-coded sample (first run, reasoning off)
 
 **The sample.** 30 events from 17 documents, coded by reading each report before any model output for it existed.
 - **21 events from the 2020–2026 reports** that cover the seventeen scored months.
@@ -1520,7 +1522,7 @@ Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Mod
 
 | Configuration | Events matched | Verbatim labels | Misattributed | Rate | Tokens on the sample | Time |
 |---|---:|---:|---:|---:|---:|---:|
-| nemotron, reasoning off (**used for every result**) | 29 of 30 | 128 | 23 | **18.0%** | 357,490 | ≈ 7 min |
+| nemotron, reasoning off (used for every result in 19.2–19.4) | 29 of 30 | 128 | 23 | **18.0%** | 357,490 | ≈ 7 min |
 | nemotron, reasoning on (comparison) | 30 of 30 | 128 | 5 | **3.9%** | 485,969 | ≈ 36 min |
 | mistral-large-4 (comparison, **2 of 17 documents**: stopped) | 3 of 30 | 17 | 0 | n/a | 125,000 on two documents | 5–10 min a document |
 
@@ -1551,7 +1553,7 @@ Code: `nemsim/aer/` (collect, text, extract, accuracy, test, decade_causes). Mod
 - **"A rebid set the price":** the model said yes on 14 events, 3 of them right (precision 0.21). The field is dropped.
 - **Peak prices:** equal on all 29 matched events. They are not used in any result.
 
-### 19.3 The test: rung 4 and rung 2 by AER cause
+### 19.3 The test: rung 4 and rung 2 by AER cause (reasoning-off labels; superseded by 19.6)
 
 **Definitions**, fixed before any label was seen (`nemsim/aer/test.py`):
 - **Scored rows.** The published results on the seventeen months, on the rows all five rungs scored. No rung was re-scored.
@@ -1587,7 +1589,7 @@ The same split on every $300+ region-interval in a labelled day-region:
 - **Not network-attributed:** 19.4% (15.6–23.5) on 1,815.
 - **Not in any AER report:** 5,317 region-intervals at 29.9%.
 
-### 19.4 What the AER attributes the decade's spikes to
+### 19.4 What the AER attributes the decade's spikes to (reasoning-off labels; superseded by 19.6)
 
 **Definitions** (`nemsim/aer/decade_causes.py`):
 - **Span.** FY2017–FY2026, from the decade price warehouse.
@@ -1625,7 +1627,7 @@ The same split on every $300+ region-interval in a labelled day-region:
 
 **The AER's explicit network-outage statement:** contributed on 53.1% of labelled day-regions (45.8% of value), did not contribute on 9.6% (15.6%), not stated on 37.3% (38.6%).
 
-### 19.5 Tokens
+### 19.5 Tokens (first run)
 
 All of these are model calls recorded in the cache:
 
@@ -1638,3 +1640,133 @@ All of these are model calls recorded in the cache:
 | **Total recorded** | | | | **3,079,818** |
 
 Not recorded: the first attempts of the two re-asked failures, and mistral's call in flight when it was stopped. That is probably 50,000–150,000 more.
+
+### 19.6 The re-run with reasoning on (2026-11-18): the published labels
+
+**Why.** The first run used reasoning off because the brief said so, before the accuracy difference was known. On the sample, reasoning on misattributed 3.9% of labels against 18.0%, and four of reasoning off's five misattributions among kept labels were on `network_outage`, the label the test rests on.
+
+**What was run.** The same model (`nvidia/nemotron-3-ultra-550b-a55b`), prompt text, schema and 142 documents, with reasoning on, under prompt version `aer-v3` so the reasoning-off entries (`aer-v2`) stay cached and committed beside it. The 17 sample documents were run again inside it, so the sample has two independent reasoning-on runs.
+
+**Tokens** (measured from the cache; the estimate before starting was 2.72 million central and 3.44 million worst case, against a user stop line of 3.5 million):
+
+| | Calls | Prompt | Completion (reasoning) | Total |
+|---|---:|---:|---:|---:|
+| aer-v3, the corpus, reasoning on | 150 attempts on 142 documents | 1,898,038 | 988,821 (791,857) | **2,886,859** |
+| charged, not cached: one call that failed with a network error (retried and cached later) | 1 | | | 73,972 (worst case; the real figure is unknown) |
+| **Against the stage cap** | | | | **2,960,831** |
+
+- **Not counted:** the call in flight when the first worker process ended with its Claude session (about 06:13 UTC). It left no cache entry; at most one document's generation, typically 20,000–40,000 tokens. Switching to four workers lost nothing: the old process was stopped right after a cache write.
+- **The hard cap.** `run(stage_cap=...)` checks, under a file lock, that the tokens cached under `aer-v3`, plus every in-flight worker's reserved worst case, plus this document's worst case (two attempts, each the full prompt at one token per 3 characters plus the 65,536-token completion allowance), stay within 3.5 million, and halts otherwise. It never triggered.
+- **Time:** 4.8 hours of generation (0.6 with reasoning off); the slowest document took 589 s. No generation hit the 1,200 s cap, and the trial accepted four concurrent requests without a refusal.
+- **Whole stage, both runs and the comparisons:** 3,079,818 (19.5) + 2,960,831 = **about 6.04 million tokens**.
+
+**Documents.** 137 of 142 extracted, as before, but not the same 137. The four Snowy-region reports that failed with reasoning off fail again, and so does 2 February 2006, for the same reason (`SNOWY1` is not in the schema). 13 January 2017, which failed twice with reasoning off, now extracts. 254 events.
+
+**Accuracy on the same 30 hand-coded events.** The hand coding did not change. New labels were judged as before: 72 of the 128 had the same event, label and quote as a label already judged and reuse that judgement; 56 were read against the documents (5 unsupported). Reasoning on added no new labels to the adjudicated reference (still 3), so every reasoning-off figure is unchanged.
+
+| | Reasoning on, corpus run (published) | Reasoning on, first sample run | Reasoning off |
+|---|---:|---:|---:|
+| Events matched | 30 of 30 | 30 of 30 | 29 of 30 |
+| **Misattributed labels** | **6 of 128 (4.7%)** | 5 of 128 (3.9%) | 23 of 128 (18.0%) |
+| on its own kept labels | 5 of 119 (4.2%) | 4 of 114 (3.5%) | 5 of 65 (7.7%) |
+| on reasoning off's six kept labels | 2 of 69 | 1 of 70 | 5 of 65 |
+| on `network_outage` | **0 of 15** | 0 of 16 | 4 of 16 |
+| Verbatim quotes, corpus, whitespace ignored (strict) | 2,533 of 2,847, 89.0% (1,935, 68.0%) | | 2,700 of 2,942, 91.8% (2,090, 71.0%) |
+
+The six reasoning-on misattributions: a footnote about Pelican Point's long-term withdrawal as a planned outage (9 February 2017); outages "due to technical issues" as planned (31 January 2022); a constraint capping solar and wind in islanded SA as low solar output (31 January 2020); "demand was up slightly" as a contributing cause (same event, reused judgement); "no rebidding … contributed" as a rebid (26 November 2025); FCAS-market rebids as a rebid (12 January 2026).
+
+**Per label** (thresholds unchanged, fixed before any comparison: at least 3 positives, precision ≥ 0.80, recall ≥ 0.60):
+
+| Label | Positives | Reasoning on: P / R | Kept | Reasoning off: P / R | Kept |
+|---|---:|---:|---|---:|---|
+| wind output | 20 | 1.00 / 0.95 | yes | 1.00 / 1.00 | yes |
+| demand | 19 | 0.94 / 0.89 | yes | 1.00 / 0.63 | yes |
+| network outage | 19 | 1.00 / 0.79 | yes | 0.94 / 0.79 | yes |
+| ramp rates and slow starts | 9 | 1.00 / 1.00 | yes | 0.89 / 0.89 | yes |
+| interconnector limit | 24 | 1.00 / 0.71 | **rescued** | 1.00 / 0.46 | no |
+| unscheduled plant outage | 17 | 1.00 / 0.71 | **rescued** | 0.77 / 0.59 | no |
+| rebids | 16 | 0.85 / 0.69 | **rescued** | 0.79 / 0.69 | no |
+| scheduled plant outage | 10 | 0.82 / 0.90 | **rescued** | 0.58 / 0.70 | no |
+| battery state of charge | 8 | 1.00 / 0.62 | **rescued** | 0.75 / 0.38 | no |
+| FCAS co-optimisation | 8 | 1.00 / 0.50 | **lost** | 1.00 / 0.62 | yes |
+| solar output | 4 | 0.75 / 0.75 | **lost** | 1.00 / 0.75 | yes |
+| administered pricing or intervention | 3 | 1.00 / 0.33 | no | 0.75 / 1.00 | no |
+| constraint violation | 2 | none given / 0.00 | no | 0.20 / 0.50 | no |
+
+- **Run to run.** Between the two reasoning-on runs over the sample, solar output (precision 1.00 against 0.75, on 4 positives) and unscheduled plant outage (recall 0.47 against 0.71) cross a threshold. Labels this close to a threshold on so few positives should be read as marginal either way.
+- **Statements.** Network outages contributed: the model says so on 16 sample events, all 16 right, of 19 (P 1.00, R 0.84). Did not contribute: 4 of 4. "A rebid set the price": yes on 11, 2 right, against 3 in the hand codes; still dropped.
+
+**The test on the reasoning-on labels** ($5,000+ region-intervals; same definitions as 19.3):
+
+| $5,000+ region-intervals | n | Days | Rung 4 within $5 (95% day-block interval) | Rung 4 within 10% | Rung 4 within $5 by value | Rung 2 within $5 | Rung 2 within 10% |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| all | 992 | 73 | 18.6% (10.8–31.6) | 58.8% | 19.2% | 0.3% | 11.2% |
+| in an AER-reported day-region | 882 | 33 | 18.1% | 61.0% | 18.3% | 0.3% | 12.6% |
+| not in one | 110 | 46 | 22.7% | 40.9% | 26.5% | 0.0% | 0.0% |
+| **attributed to a network outage** | **236** | **18** | **31.4% (18.5–47.4)** | 58.9% | 25.2% | 0.0% | 0.0% |
+| **reported, not attributed to one** | **646** | **15** | **13.3% (5.2–34.0)** | 61.8% | 14.8% | 0.5% | 17.2% |
+| network, broad (adds interconnector limit) | 311 | 26 | 32.8% (22.2–46.7) | 59.5% | 29.9% | 0.0% | 0.0% |
+| not network, broad | 571 | 7 | 10.2% (2.0–29.5) | 61.8% | 7.9% | 0.5% | 19.4% |
+| AER: outages contributed | 239 | 19 | 31.0% | 58.6% | 25.1% | 0.0% | 0.0% |
+| AER: outages did **not** contribute | 353 | 4 | 1.4% (0.0–3.7) | 62.9% | 2.8% | 0.8% | 30.3% |
+| AER: not stated | 290 | 10 | 27.9% | 60.7% | 26.6% | 0.0% | 1.4% |
+| cause: interconnector limit | 271 | 21 | 28.4% | 58.3% | 29.9% | 0.0% | 0.0% |
+| cause: rebids | 570 | 22 | 20.7% | 62.6% | 21.4% | 0.5% | 19.5% |
+| cause: scheduled plant outage | 360 | 10 | 17.2% | 63.1% | 24.2% | 0.8% | 29.7% |
+| cause: wind output | 842 | 25 | 16.9% | 61.3% | 15.8% | 0.4% | 13.2% |
+| cause: demand | 578 | 21 | 10.7% | 56.7% | 15.7% | 0.5% | 18.5% |
+| cause: ramp rates | 274 | 16 | 8.0% | 53.6% | 11.3% | 1.1% | 39.1% |
+| cause: unscheduled plant outage | 585 | 12 | 7.0% | 56.8% | 9.4% | 0.5% | 19.0% |
+| cause: battery state of charge | 380 | 6 | 3.9% | 64.2% | 7.2% | 0.8% | 28.2% |
+
+**Verdict on the rule fixed in advance: consistent, not shown** (31.4% against 13.3%, intervals overlapping). On the broad definition, also consistent, not shown.
+
+| Verdict | Reasoning on | Reasoning off |
+|---|---|---|
+| All $5,000+ | consistent, not shown: 31.4% (18.5–47.4) vs 13.3% (5.2–34.0) | **holds**: 37.4% (25.2–51.0) vs 4.5% (1.2–11.1) |
+| Without June 2025 | consistent, not shown: 31.4% (18.5–47.4) vs 27.6% (14.1–51.9), 297 region-intervals on 12 days | consistent, not shown: 37.4% vs 11.7% (5.9–50.0), 163 on 4 days |
+
+The "without June 2025" rows were added after the first run showed those three days carried most of the non-network side; they are a robustness check, not part of the pre-registered rule.
+
+**Why the verdict changed.** Eleven day-regions changed network attribution between the runs (146 of the $5,000+ region-intervals on which both runs have an event):
+- **Six reasoning-off misattributions, corrected** (78 region-intervals, rung 4 within $5 on 58%): system normal constraints or constraints to avoid overloading a line, which the AER does not call outages. NSW 26 and 27 November 2024 and 2 December 2024, QLD 2 December 2024, SA 1 February 2025, SA 26 January 2026.
+- **Four reasoning-on misses** (62 region-intervals, 35%): NSW 4 January 2020 (bushfire outages on Snowy transmission), SA 2 July 2025 (South East–Tailem Bend planned outage), TAS 12 January 2026 (Basslink unplanned outage), SA 27 January 2026 (Rowville–South Morang). The last three are hand-coded events with a network outage; reasoning on still records the AER's "contributed" statement on 27 January.
+- **One addition:** SA 12 February 2025, an outage of the NSW Murraylink runback scheme (6 region-intervals).
+- **Sensitivity (my own reading, not a measured label set):** reasoning-off labels with the six system-normal day-regions removed give 31.8% (20.3–45.6) on 286 region-intervals and 19 days against 11.5% (4.1–32.9) on 590 and 12; without June 2025, 31.8% against 26.6% (12.8–59.4). Overlapping either way.
+
+So the reasoning-off "holds" depended on misattributed system-normal days, on which rung 4 does well, being counted as network outages. With them in the right bucket rung 4 still does better on outage days, but the sample cannot show it. Rung 4 does about as well on interconnector limits (28.4%) as on outages, consistent with a gain from network constraints generally rather than outages in particular (inferred from the cells, not tested).
+
+The same split on every $300+ region-interval in a labelled day-region: network-attributed 38.9% (22.3–54.1) on 702; not network-attributed 24.9% (19.0–34.5) on 2,389; not in any AER report 29.8% on 5,307.
+
+**The decade cut on the reasoning-on labels** (same definitions as 19.4):
+
+| | Day-regions | Value ($m) | Share |
+|---|---:|---:|---:|
+| reportable | 216 | 15,897 | |
+| named in a collected report | 191 | 14,845 | 88.4% of day-regions, 93.4% of value (reasoning off: 81.9%, 89.7%) |
+| AER events not in the reportable set | 1 | | (reasoning off: 19) |
+
+- **Coverage by financial year:** 100% in every year except FY2022 (63%; 71% of value), FY2023 (74%; 72%) and FY2026 (75%; 70%). Reasoning off was below 100% in FY2017, FY2018, FY2022, FY2023 and FY2026, and as low as 44% in FY2023.
+- **Dates.** Reasoning off placed 19 day-regions on 18 dates with no 30-minute price above $5,000, most from the 2025–26 quarterly reports; reasoning on places 1 (21 June 2026). Its dates match the price record better.
+
+| The AER attributed it to | Day-regions | Share of labelled | Value share | Precision | Recall | Reasoning off: share (value share) |
+|---|---:|---:|---:|---:|---:|---:|
+| interconnector limit | 129 | 67.5% | 61.3% | 1.00 | 0.71 | dropped |
+| demand | 123 | 64.4% | 67.8% | 0.94 | 0.89 | 56.5% (57.3%) |
+| wind output | 111 | 58.1% | 59.2% | 1.00 | 0.95 | 55.9% (55.9%) |
+| rebids | 107 | 56.0% | 55.9% | 0.85 | 0.69 | dropped |
+| unscheduled plant outage | 106 | 55.5% | 69.5% | 1.00 | 0.71 | dropped |
+| network outage | 97 | 50.8% | 39.6% | 1.00 | 0.79 | 49.2% (43.5%) |
+| scheduled plant outage | 86 | 45.0% | 55.6% | 0.82 | 0.90 | dropped |
+| ramp rates and slow starts | 48 | 25.1% | 22.4% | 1.00 | 1.00 | 24.3% (21.9%) |
+| battery state of charge | 27 | 14.1% | 17.2% | 1.00 | 0.62 | dropped |
+| FCAS co-optimisation | | | | | | 15.8% (19.4%); dropped now |
+| solar output | | | | | | 14.1% (8.7%); dropped now |
+
+**The AER's explicit network-outage statement:** contributed on 51.8% of labelled day-regions (39.6% of value), did not contribute on 8.4% (14.1%), not stated on 39.8% (46.3%).
+
+**Did any conclusion change?**
+- **The cause-conditional test: yes.** "Holds" became "consistent, not shown". Rung 4 still does better on network-attributed spikes in every cut, but no cut separates the intervals, and without June 2025 the gap is under 4 points.
+- **June 2025: the collapse is now total.** Without it, network-attributed and the rest are 31.4% against 27.6%.
+- **The decade cut: not materially for the labels both runs kept** (1–8 points; network outage 50.8% against 49.2% of day-regions). Coverage rose from 82% to 88%, and five more causes are now measured well enough to report, which changes the picture of the decade: interconnector limits on two thirds of reportable spikes, unplanned plant outages on over half and carrying 69.5% of the value.
+

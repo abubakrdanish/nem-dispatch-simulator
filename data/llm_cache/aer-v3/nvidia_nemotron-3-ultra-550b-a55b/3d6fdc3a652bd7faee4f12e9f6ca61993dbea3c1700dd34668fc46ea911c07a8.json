@@ -1,0 +1,52 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:20:40+00:00",
+  "failure": {
+    "detail": "$.events[0].regions[1]: 'SNOWY1' not one of ['NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']",
+    "kind": "invalid"
+  },
+  "input_sha256": "0492982541db647083d3d0762796cb95b391f64860d58f7d02e03f20957e7789",
+  "key": "3d6fdc3a652bd7faee4f12e9f6ca61993dbea3c1700dd34668fc46ea911c07a8",
+  "latency_s": 106.61,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-03-17\", \"regions\": [\"VIC1\", \"SNOWY1\"], \"intervals\": {\"text\": \"two trading intervals at 4 pm and 4.30 pm\", \"quote\": \"On 17 March the spot price in Victoria and Snowy exceeded $5000/MWh for two trading intervals at 4 pm and 4.30 pm.\"}, \"peak_price\": {\"value\": 7910, \"quote\": \"Spot price $7910/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Victoria led to a record demand of 9776 MW, which is 764 MW above the previous record.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 2.51 pm International Power's Hazelwood unit four tripped reducing its available capacity by 220 MW.\"}], \"constraints_named\": [{\"id\": \"Upper Tumut to Murray (65) line for the loss of the Lower Tumut to Wagga line (51)\", \"quote\": \"These flows were close to forecast and were caused by a system normal constraint that manages the load across the Upper Tumut to Murray (65) line for the loss of the Lower Tumut to Wagga line (51).\"}], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant generator rebidding.\"}}]}",
+  "result": null,
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_17_March_2008_-_VIC_and_Snowy.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_17%20March%202008%20-%20VIC%20and%20Snowy.pdf"
+  },
+  "status": "failed",
+  "usage": {
+    "completion_tokens": 10028,
+    "per_attempt": [
+      {
+        "completion_tokens": 5514,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4846
+        },
+        "prompt_tokens": 7350,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12864
+      },
+      {
+        "completion_tokens": 4514,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4152
+        },
+        "prompt_tokens": 7350,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11864
+      }
+    ],
+    "prompt_tokens": 14700,
+    "reasoning_tokens": 8998,
+    "total_tokens": 24728
+  }
+}

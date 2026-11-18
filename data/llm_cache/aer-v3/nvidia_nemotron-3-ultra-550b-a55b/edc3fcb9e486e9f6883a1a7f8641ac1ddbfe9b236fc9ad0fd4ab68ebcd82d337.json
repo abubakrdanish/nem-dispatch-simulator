@@ -1,0 +1,143 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:27:00+00:00",
+  "failure": null,
+  "input_sha256": "a727b9b0aaa877907d2ca6458a6bf407acb0f42552635afd433142be97679e2d",
+  "key": "edc3fcb9e486e9f6883a1a7f8641ac1ddbfe9b236fc9ad0fd4ab68ebcd82d337",
+  "latency_s": 133.88,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-02-23\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3:30 pm\", \"quote\": \"23 February 2006 3:30 pm 6997\"}, \"peak_price\": {\"value\": 7021.49, \"quote\": \"Spot price $7,021.49/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"network_outage\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"rebids\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"Figure 4: Snowy to Victoria interconnector actual and forecast flows and limits\"}, {\"name\": \"Snowy-Victoria interconnector\", \"quote\": \"the capability of the Snowy-Victoria interconnector to be between 600 MW and 900 MW higher than actual capability.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}}, {\"event_date\": \"2006-02-24\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"11:00 am, 11:30 am, 12:00 pm\", \"quote\": \"24 February 2006 11:00 am 9134\\n24 February 2006 11:30 am 8834\\n24 February 2006 12:00 pm 6691\"}, \"peak_price\": {\"value\": 9134.14, \"quote\": \"Spot price $9134.14/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"network_outage\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, {\"label\": \"rebids\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"Figure 4: Snowy to Victoria interconnector actual and forecast flows and limits\"}, {\"name\": \"Snowy-Victoria interconnector\", \"quote\": \"the capability of the Snowy-Victoria interconnector to be between 600 MW and 900 MW higher than actual capability.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "network_outage",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "rebids",
+            "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-02-23",
+        "interconnectors_named": [
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "Figure 4: Snowy to Victoria interconnector actual and forecast flows and limits"
+          },
+          {
+            "name": "Snowy-Victoria interconnector",
+            "quote": "the capability of the Snowy-Victoria interconnector to be between 600 MW and 900 MW higher than actual capability."
+          }
+        ],
+        "intervals": {
+          "quote": "23 February 2006 3:30 pm 6997",
+          "text": "3:30 pm"
+        },
+        "network_outages": {
+          "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $7,021.49/MWh",
+          "value": 7021.49
+        },
+        "rebid_set_price": {
+          "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "network_outage",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February."
+          },
+          {
+            "label": "rebids",
+            "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-02-24",
+        "interconnectors_named": [
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "Figure 4: Snowy to Victoria interconnector actual and forecast flows and limits"
+          },
+          {
+            "name": "Snowy-Victoria interconnector",
+            "quote": "the capability of the Snowy-Victoria interconnector to be between 600 MW and 900 MW higher than actual capability."
+          }
+        ],
+        "intervals": {
+          "quote": "24 February 2006 11:00 am 9134\n24 February 2006 11:30 am 8834\n24 February 2006 12:00 pm 6691",
+          "text": "11:00 am, 11:30 am, 12:00 pm"
+        },
+        "network_outages": {
+          "quote": "High demand in Victoria, combined with the reduction in flows from Snowy into Victoria as a result of planned network outages in New South Wales and South Australia, led to four trading interval prices above $5000/MWh on Thursday 23 and Friday 24 February.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9134.14/MWh",
+          "value": 9134.14
+        },
+        "rebid_set_price": {
+          "quote": "Whilst there was rebidding pursuant to clause 3.8.22 that did contribute to the price exceeding $5000/MWh, its impacts were minor when compared to the network outage.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_24_February_2006_-_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%E2%80%9324%20February%202006%20-%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 8296,
+    "per_attempt": [
+      {
+        "completion_tokens": 8296,
+        "completion_tokens_details": {
+          "reasoning_tokens": 7016
+        },
+        "prompt_tokens": 7774,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16070
+      }
+    ],
+    "prompt_tokens": 7774,
+    "reasoning_tokens": 7016,
+    "total_tokens": 16070
+  }
+}

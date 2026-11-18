@@ -1,0 +1,114 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:52:56+00:00",
+  "failure": null,
+  "input_sha256": "f6a4fe6ea7d1f2db7571c7b3e94fe32f28076694ac41e5b4a5ec03cd5750bc8e",
+  "key": "23aa9e26490ae8e4aed9b925f0f93b80934d32bf01a1021a783b670d4e24011b",
+  "latency_s": 78.69,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-01-13\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"3.30 pm and 4 pm trading intervals in Victoria; 4 pm trading interval in South Australia\", \"quote\": \"the spot price in Victoria exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals and in South Australia for the 4 pm trading interval\"}, \"peak_price\": {\"value\": 9137, \"quote\": \"resulting in the spot prices of $9137/MWh and $7477/MWh for the 3.30 pm and 4 pm trading intervals respectively\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The ongoing outage of Basslink since December meant that no support was available from Tasmania and both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits\"}, {\"label\": \"rebids\", \"quote\": \"There was rebidding of capacity from low to high prices and rebidding of ramp down rates to the minimum allowed without a technical reason that contributed to the high priced outcomes\"}, {\"label\": \"ramp_rates\", \"quote\": \"Snowy Hydro rebid the ramp down rates of Laverton North, Murray and Valley Power to the minimum allowable level of 3MW/min... The reduction in offered ramp rates prolonged the effect of the constraint and extended the period of high prices in Victoria\"}, {\"label\": \"demand\", \"quote\": \"In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices\"}, {\"label\": \"constraint_violation\", \"quote\": \"This constraint immediately violated, the dispatch price went to the price cap in Victoria\"}], \"constraints_named\": [{\"id\": \"V-DDGN_N-2\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked\"}], \"interconnectors_named\": [{\"name\": \"VIC1-NSW1\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1\"}, {\"name\": \"V-S-MNSP1\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1\"}, {\"name\": \"V-SA\", \"quote\": \"Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1\"}, {\"name\": \"Basslink\", \"quote\": \"The ongoing outage of Basslink since December meant that no support was available from Tasmania\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages were the dominant contributing factor to the Victorian price outcomes\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This rebid set the price at $10,760/MWh for three dispatch intervals from 3.35 pm as shown by the grey line\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The ongoing outage of Basslink since December meant that no support was available from Tasmania and both the Murraylink and Heywood interconnectors were exporting into Victoria at their limits"
+          },
+          {
+            "label": "rebids",
+            "quote": "There was rebidding of capacity from low to high prices and rebidding of ramp down rates to the minimum allowed without a technical reason that contributed to the high priced outcomes"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Snowy Hydro rebid the ramp down rates of Laverton North, Murray and Valley Power to the minimum allowable level of 3MW/min... The reduction in offered ramp rates prolonged the effect of the constraint and extended the period of high prices in Victoria"
+          },
+          {
+            "label": "demand",
+            "quote": "In Victoria demand was slightly higher than forecast four hours ahead and up to 520 MW higher than forecast 12 hours ahead. However this was only a minor contributor to the high prices"
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "This constraint immediately violated, the dispatch price went to the price cap in Victoria"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V-DDGN_N-2",
+            "quote": "Constraint Set V-DDGN_N-2 invoked"
+          }
+        ],
+        "event_date": "2016-01-13",
+        "interconnectors_named": [
+          {
+            "name": "VIC1-NSW1",
+            "quote": "Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1"
+          },
+          {
+            "name": "V-S-MNSP1",
+            "quote": "Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1"
+          },
+          {
+            "name": "V-SA",
+            "quote": "Constraint Set V-DDGN_N-2 invoked. This Constraint Set contains equations with the following interconnectors on the LHS: V-S-MNSP1 V-SA VIC1-NSW1"
+          },
+          {
+            "name": "Basslink",
+            "quote": "The ongoing outage of Basslink since December meant that no support was available from Tasmania"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in Victoria exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals and in South Australia for the 4 pm trading interval",
+          "text": "3.30 pm and 4 pm trading intervals in Victoria; 4 pm trading interval in South Australia"
+        },
+        "network_outages": {
+          "quote": "Network outages were the dominant contributing factor to the Victorian price outcomes",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "resulting in the spot prices of $9137/MWh and $7477/MWh for the 3.30 pm and 4 pm trading intervals respectively",
+          "value": 9137
+        },
+        "rebid_set_price": {
+          "quote": "This rebid set the price at $10,760/MWh for three dispatch intervals from 3.35 pm as shown by the grey line",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_13_January_2016_(SA_Vic).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2013%20January%202016%20%28SA%20Vic%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4905,
+    "per_attempt": [
+      {
+        "completion_tokens": 4905,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4143
+        },
+        "prompt_tokens": 25487,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 30392
+      }
+    ],
+    "prompt_tokens": 25487,
+    "reasoning_tokens": 4143,
+    "total_tokens": 30392
+  }
+}

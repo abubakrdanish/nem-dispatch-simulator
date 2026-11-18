@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:03:27+00:00",
+  "failure": null,
+  "input_sha256": "cbf1e969d021376f3048ccd337b824e258496ff3114338c7aca351f06a1dcc68",
+  "key": "e7ac03e0cd6d59d323137a1d21478aae3e531cba0d998b524bdf2cc0fce2c6e7",
+  "latency_s": 87.68,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-11\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"4.30 to 5.30 pm trading intervals\", \"quote\": \"Wholesale electricity spot prices on the afternoon of 11 February 2017 in Queensland, reached $7628/MWh, $8569/MWh and $8372/MWh for the 4.30 to 5.30 pm trading intervals.\"}, \"peak_price\": {\"value\": 8569, \"quote\": \"Wholesale electricity spot prices on the afternoon of 11 February 2017 in Queensland, reached $7628/MWh, $8569/MWh and $8372/MWh for the 4.30 to 5.30 pm trading intervals.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"These hot conditions resulted in high forecast and actual demand for electricity.\"}, {\"label\": \"network_outage\", \"quote\": \"Network outages in northern New South Wales contributed to the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"As the import limit was negative, flows (indicated by the red line) were forced from Queensland into New South Wales.\"}], \"constraints_named\": [{\"id\": \"NRM_QLD1_NSW1/liddell-to-muswellbrook line outage\", \"quote\": \"manage qni constraints - NRM_QLD1_NSW1/liddell-to-muswellbrook line outage\"}, {\"id\": \"NRM_QLD1_NSW1\", \"quote\": \"manage QNI constraints - NRM_QLD1_NSW1\"}], \"interconnectors_named\": [{\"name\": \"Queensland - New South Wales Interconnector (QNI)\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors: the Queensland - New South Wales Interconnector (QNI) and a DC link through Terranora.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors: the Queensland - New South Wales Interconnector (QNI) and a DC link through Terranora.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages in northern New South Wales contributed to the high prices.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the high price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "These hot conditions resulted in high forecast and actual demand for electricity."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network outages in northern New South Wales contributed to the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "As the import limit was negative, flows (indicated by the red line) were forced from Queensland into New South Wales."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_QLD1_NSW1/liddell-to-muswellbrook line outage",
+            "quote": "manage qni constraints - NRM_QLD1_NSW1/liddell-to-muswellbrook line outage"
+          },
+          {
+            "id": "NRM_QLD1_NSW1",
+            "quote": "manage QNI constraints - NRM_QLD1_NSW1"
+          }
+        ],
+        "event_date": "2017-02-11",
+        "interconnectors_named": [
+          {
+            "name": "Queensland - New South Wales Interconnector (QNI)",
+            "quote": "Queensland is connected to New South Wales via two interconnectors: the Queensland - New South Wales Interconnector (QNI) and a DC link through Terranora."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "Queensland is connected to New South Wales via two interconnectors: the Queensland - New South Wales Interconnector (QNI) and a DC link through Terranora."
+          }
+        ],
+        "intervals": {
+          "quote": "Wholesale electricity spot prices on the afternoon of 11 February 2017 in Queensland, reached $7628/MWh, $8569/MWh and $8372/MWh for the 4.30 to 5.30 pm trading intervals.",
+          "text": "4.30 to 5.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Network outages in northern New South Wales contributed to the high prices.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Wholesale electricity spot prices on the afternoon of 11 February 2017 in Queensland, reached $7628/MWh, $8569/MWh and $8372/MWh for the 4.30 to 5.30 pm trading intervals.",
+          "value": 8569
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the high price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_11_February_2017_(Qld).pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%2011%20February%202017%20%28Qld%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3909,
+    "per_attempt": [
+      {
+        "completion_tokens": 3909,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3324
+        },
+        "prompt_tokens": 12127,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16036
+      }
+    ],
+    "prompt_tokens": 12127,
+    "reasoning_tokens": 3324,
+    "total_tokens": 16036
+  }
+}

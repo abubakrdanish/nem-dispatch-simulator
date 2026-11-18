@@ -1,0 +1,114 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:15:00+00:00",
+  "failure": null,
+  "input_sha256": "2443acb08d5c8a398538f99670c9c807ead0013f8464506e95cb43e6936d5883",
+  "key": "f6f762224f89f91d90b8e6c6c9ffa8c520fb946d63ef6a1a619ca4847cb2a37c",
+  "latency_s": 115.59,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-01-25\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"11 am and 11.30 am trading intervals in Victoria, and 11.30 am trading interval in South Australia\", \"quote\": \"Spot prices exceeded $5000/MWh for the 11 am and 11.30 am trading intervals in Victoria, and in the 11.30 am trading interval in South Australia.\"}, \"peak_price\": {\"value\": 14500, \"quote\": \"reaching $7433/MWh at 11 am and $14 500/MWh at 11.30 am in Victoria and $11 340/MWh at 11.30 am in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Victoria experienced its second day of extreme heat, with temperatures reaching 43oC in Melbourne. This drove high demand (1100 MW below the 2009 record level) for electricity in Victoria.\"}, {\"label\": \"wind_output\", \"quote\": \"Wind generation in both regions was below forecast, reducing potential supply of electricity in both regions.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Energy Australia's Yallourn unit 3 experienced a boiler tube leak at about 1.30 am on 25 January and reduced available capacity in Victoria by a further 355 MW.\"}, {\"label\": \"constraint_violation\", \"quote\": \"Generation deficit constraint VIC1,ENOF $2 175 000.00 1.00 $2 175 000.00\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO activated the Reliability Emergency Reserve Trader (RERT) at around 9 am until 4.30 pm and so 'what-if' pricing applied for this period.\"}], \"constraints_named\": [{\"id\": \"Generation deficit constraint VIC1,ENOF\", \"quote\": \"Generation deficit constraint VIC1,ENOF $2 175 000.00 1.00 $2 175 000.00\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink.\"}, {\"name\": \"Murraylink\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink.\"}, {\"name\": \"Basslink\", \"quote\": \"Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to high price outcomes. In fact, generators rebid capacity from high to low prices throughout the day.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Victoria experienced its second day of extreme heat, with temperatures reaching 43oC in Melbourne. This drove high demand (1100 MW below the 2009 record level) for electricity in Victoria."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Wind generation in both regions was below forecast, reducing potential supply of electricity in both regions."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Energy Australia advised AEMO that it would be taking its 355 MW Yallourn unit 4 out of service for planned maintenance from 19 January for a period of seven days."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Energy Australia's Yallourn unit 3 experienced a boiler tube leak at about 1.30 am on 25 January and reduced available capacity in Victoria by a further 355 MW."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "Generation deficit constraint VIC1,ENOF $2 175 000.00 1.00 $2 175 000.00"
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO activated the Reliability Emergency Reserve Trader (RERT) at around 9 am until 4.30 pm and so 'what-if' pricing applied for this period."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Generation deficit constraint VIC1,ENOF",
+            "quote": "Generation deficit constraint VIC1,ENOF $2 175 000.00 1.00 $2 175 000.00"
+          }
+        ],
+        "event_date": "2019-01-25",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Victoria is connected to South Australia via two interconnectors - Heywood and Murraylink, while Victoria is connected to New South Wales via the Victoria - New South Wales (VIC - NSW) interconnector, and to Tasmania via Basslink."
+          }
+        ],
+        "intervals": {
+          "quote": "Spot prices exceeded $5000/MWh for the 11 am and 11.30 am trading intervals in Victoria, and in the 11.30 am trading interval in South Australia.",
+          "text": "11 am and 11.30 am trading intervals in Victoria, and 11.30 am trading interval in South Australia"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $7433/MWh at 11 am and $14 500/MWh at 11.30 am in Victoria and $11 340/MWh at 11.30 am in South Australia.",
+          "value": 14500
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to high price outcomes. In fact, generators rebid capacity from high to low prices throughout the day.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_25_January_2019_(Vic_and_SA).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2025%20January%202019%20%28Vic%20and%20SA%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 7578,
+    "per_attempt": [
+      {
+        "completion_tokens": 7578,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6670
+        },
+        "prompt_tokens": 18772,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 26350
+      }
+    ],
+    "prompt_tokens": 18772,
+    "reasoning_tokens": 6670,
+    "total_tokens": 26350
+  }
+}

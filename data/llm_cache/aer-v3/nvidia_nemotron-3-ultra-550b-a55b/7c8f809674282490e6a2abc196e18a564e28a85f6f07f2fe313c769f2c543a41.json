@@ -1,0 +1,135 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:38:28+00:00",
+  "failure": null,
+  "input_sha256": "4c04ca79ccec965eab2ef643db1a9f79a80be90e9a47eb68a61cc22cd18d1f5f",
+  "key": "7c8f809674282490e6a2abc196e18a564e28a85f6f07f2fe313c769f2c543a41",
+  "latency_s": 142.91,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-01-31\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3:30 pm trading interval\", \"quote\": \"On Monday the spot price reached $9597/MWh at 3.30 pm.\"}, \"peak_price\": {\"value\": 9597, \"quote\": \"On Monday the spot price reached $9597/MWh at 3.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday 2 .\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On Monday, the trip of Newport Power Station at 2.5 0 pm caused a 510 MW reduction in available capacity.\"}, {\"label\": \"rebids\", \"quote\": \"At 2.52 pm, effective from 3 pm, Snowy Hydro rebid 1530 MW (out of 1575 MW) of avail able capacity at Murray from prices above $30/MWh to close to the price floor.\"}, {\"label\": \"ramp_rates\", \"quote\": \"As low-priced generation was ramp rate limited, high priced generation was d ispatched in its place.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector.\"}], \"constraints_named\": [{\"id\": \"V>>V_NIL_1D\", \"quote\": \"thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector.\"}, {\"id\": \"V>>V_NIL_1B\", \"quote\": \"thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2011-02-01\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"1:30 pm and 2:00 pm trading intervals\", \"quote\": \"On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.\"}, \"peak_price\": {\"value\": 5333, \"quote\": \"On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday 2 .\"}, {\"label\": \"rebids\", \"quote\": \"Record demand and high prices in New South Wales an d rebidding by International Power at Hazelwood and Loy Yang B contributed to the high pr ices on Tuesday.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Record demand and high prices in New South Wales an d rebidding by International Power at Hazelwood and Loy Yang B contributed to the high pr ices on Tuesday.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday 2 ."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On Monday, the trip of Newport Power Station at 2.5 0 pm caused a 510 MW reduction in available capacity."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 2.52 pm, effective from 3 pm, Snowy Hydro rebid 1530 MW (out of 1575 MW) of avail able capacity at Murray from prices above $30/MWh to close to the price floor."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "As low-priced generation was ramp rate limited, high priced generation was d ispatched in its place."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>V_NIL_1D",
+            "quote": "thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector."
+          },
+          {
+            "id": "V>>V_NIL_1B",
+            "quote": "thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector."
+          }
+        ],
+        "event_date": "2011-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "thermal transmission constraints (V>>V_NIL_1D and V>>V_NIL_1B, which manage the overload of one o f the Dederang to Murray lines for the loss of the other) were limiting imports into V ictoria across the Vic-NSW interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "On Monday the spot price reached $9597/MWh at 3.30 pm.",
+          "text": "3:30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Monday the spot price reached $9597/MWh at 3.30 pm.",
+          "value": 9597
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures saw demand reach its highest level in Victoria this summer, peaking at 8924 MW on Monday and 9585 MW on Tuesday 2 ."
+          },
+          {
+            "label": "rebids",
+            "quote": "Record demand and high prices in New South Wales an d rebidding by International Power at Hazelwood and Loy Yang B contributed to the high pr ices on Tuesday."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.",
+          "text": "1:30 pm and 2:00 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Tuesday the spot price reached $5333/MWh at 1.30 pm and $5078/MWh at 2 pm.",
+          "value": 5333
+        },
+        "rebid_set_price": {
+          "quote": "Record demand and high prices in New South Wales an d rebidding by International Power at Hazelwood and Loy Yang B contributed to the high pr ices on Tuesday.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_January_and_1_February_2011_-_Vic.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20January%20and%201%20February%202011%20-%20Vic.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 7767,
+    "per_attempt": [
+      {
+        "completion_tokens": 7767,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6764
+        },
+        "prompt_tokens": 6725,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14492
+      }
+    ],
+    "prompt_tokens": 6725,
+    "reasoning_tokens": 6764,
+    "total_tokens": 14492
+  }
+}

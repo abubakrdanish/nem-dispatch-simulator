@@ -94,3 +94,47 @@ def test_run_with_an_empty_list_extracts_nothing(monkeypatch):
     monkeypatch.setattr(extract, "extract", lambda *a, **k: called.append(1))
     out = extract.run([])
     assert called == [] and out["results"] == {}
+
+
+def test_stage_cap_halts_before_a_call_that_could_cross_it(monkeypatch, tmp_path):
+    """The reasoning-on corpus run halts rather than spend past the cap the user set (2026-11-17)."""
+    monkeypatch.setattr(extract, "RESERVATIONS", tmp_path / "res.json")
+    monkeypatch.setattr(extract, "LEDGER", tmp_path / "ledger.json")
+    monkeypatch.setattr(extract, "documents", lambda: {"a": {"file": "a.pdf", "chars": 10}, "b": {"file": "b.pdf", "chars": 10}})
+    monkeypatch.setattr(extract, "text", lambda p: "x" * 3000)
+    monkeypatch.setattr(extract, "is_cached", lambda *a: False)
+    monkeypatch.setattr(extract, "default_client", lambda: None)
+    called = []
+    monkeypatch.setattr(extract, "extract", lambda *a, **k: called.append(1))
+    wc = extract.worst_case(extract.SPEC_V3, "x" * 3000)
+    monkeypatch.setattr(extract, "stage_spent", lambda *a: {"total": 1_000_000 - wc + 1})
+    out = extract.run(spec=extract.SPEC_V3, stage_cap=1_000_000)
+    assert called == [] and out["results"] == {}
+    monkeypatch.setattr(extract, "stage_spent", lambda *a: {"total": 1_000_000 - wc})     # exactly fits: the call is made
+    with pytest.raises(AttributeError):        # the stub returns None, so the run fails after the call, proving it was made
+        extract.run(["a"], spec=extract.SPEC_V3, stage_cap=1_000_000)
+    assert called == [1]
+
+
+def test_worst_case_covers_a_retry_and_the_full_completion_allowance():
+    assert extract.worst_case(extract.SPEC_V3, "") >= 2 * extract.SPEC_V3.max_tokens
+
+
+def test_a_parallel_workers_reservation_counts_toward_the_cap(monkeypatch, tmp_path):
+    import os
+    monkeypatch.setattr(extract, "RESERVATIONS", tmp_path / "res.json")
+    monkeypatch.setattr(extract, "documents", lambda: {"a": {"file": "a.pdf", "chars": 10}})
+    monkeypatch.setattr(extract, "text", lambda p: "x" * 3000)
+    monkeypatch.setattr(extract, "is_cached", lambda *a: False)
+    monkeypatch.setattr(extract, "default_client", lambda: None)
+    called = []
+    monkeypatch.setattr(extract, "extract", lambda *a, **k: called.append(1))
+    wc = extract.worst_case(extract.SPEC_V3, "x" * 3000)
+    monkeypatch.setattr(extract, "stage_spent", lambda *a: {"total": 1_000_000 - wc})     # would fit on its own
+    extract._save_reservations([{"pid": os.getppid(), "url": "other", "tokens": 1}])     # a live worker holds 1 token
+    extract.run(spec=extract.SPEC_V3, stage_cap=1_000_000)
+    assert called == []
+    extract._save_reservations([{"pid": 2 ** 22 + 12345, "url": "other", "tokens": 1}])  # a dead worker's is dropped
+    with pytest.raises(AttributeError):
+        extract.run(spec=extract.SPEC_V3, stage_cap=1_000_000)
+    assert called == [1] and extract._reservations() == []

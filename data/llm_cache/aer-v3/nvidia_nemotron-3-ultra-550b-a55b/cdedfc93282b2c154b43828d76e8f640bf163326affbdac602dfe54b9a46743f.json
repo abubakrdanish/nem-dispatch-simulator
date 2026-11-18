@@ -1,0 +1,133 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T04:42:16+00:00",
+  "failure": null,
+  "input_sha256": "ea7915274660d1c6e45a5b63236fe5d2161b1984ef153cd8c11dcf97fb4cdb09",
+  "key": "cdedfc93282b2c154b43828d76e8f640bf163326affbdac602dfe54b9a46743f",
+  "latency_s": 105.78,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-01-14\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"2 pm trading interval; 1.35 pm and 1.40 pm dispatch intervals\", \"quote\": \"On 14 January 2016 at 2 pm, the spot price for energy in New South Wales exceeded $5000/MWh. The dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.\"}, \"peak_price\": {\"value\": 13594.71, \"quote\": \"13:40 $13 594.71 Delta Electricity VP5 Energy $13 400.0 0 1.00 $13 400.00\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Energy demand was higher than normal but spot prices in the region, for the majority of the day, varied between $50/MWh and $140/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The situation was further exacerbated by the forced shutdown of Liddell unit 3.\"}, {\"label\": \"network_outage\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding that did affect the high prices was the rebidding of ramp down rates to the minimum allowed without a technical reason to minimise the impacts of the network constraints.\"}, {\"label\": \"ramp_rates\", \"quote\": \"The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"13:40 $13 594.71 Delta Electricity VP5 Energy $13 400.0 0 1.00 $13 400.00 Delta Electricity VP6 Raise reg $300.00 0.24 $72.00\"}, {\"label\": \"interconnector_limit\", \"quote\": \"imports into New South Wales on the Vic-NSW interconnector were around 1000 MW less than forecast four hours ahead.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL__S\", \"quote\": \"N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line 10 411 VIC-NSW QNI Terranora\"}, {\"id\": \"N>>N-NIL_64\", \"quote\": \"N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line 15 335 VIC-NSW QNI Terranora\"}, {\"id\": \"N>>N-NIL__B_15M\", \"quote\": \"N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line 3960 VIC-NSW\"}, {\"id\": \"N^^N_NIL_1\", \"quote\": \"N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows. 2936 VIC-NSW\"}, {\"id\": \"N_X_MBTE2_B\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, {\"id\": \"V>>V_NIL_2A-R\", \"quote\": \"V>>V_NIL_2A-R\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"imports into New South Wales on the Vic-NSW interconnector were around 1000 MW less than forecast four hours ahead.\"}, {\"name\": \"QNI\", \"quote\": \"New South Wales was importing around 800 MW from Queensland over QNI at the time of the high price.\"}, {\"name\": \"Terranora\", \"quote\": \"Imports into New South Wales from Victoria over the VIC-NSW interconnector were around 250 MW. The figure shows the reduction in imports over the duration of the event.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Energy demand was higher than normal but spot prices in the region, for the majority of the day, varied between $50/MWh and $140/MWh."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The situation was further exacerbated by the forced shutdown of Liddell unit 3."
+          },
+          {
+            "label": "network_outage",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding that did affect the high prices was the rebidding of ramp down rates to the minimum allowed without a technical reason to minimise the impacts of the network constraints."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "The reduction in offered ramp rates prolonged the effect of the constraint by taking longer to ramp the units down to the point where the constraint is relieved and prices reduce."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "13:40 $13 594.71 Delta Electricity VP5 Energy $13 400.0 0 1.00 $13 400.00 Delta Electricity VP6 Raise reg $300.00 0.24 $72.00"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "imports into New South Wales on the Vic-NSW interconnector were around 1000 MW less than forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL__S",
+            "quote": "N>>N-NIL__S No Outages - avoid overload on Mt Piper to Wallerawang on trip of parallel Mt Piper to Wallerawang line 10 411 VIC-NSW QNI Terranora"
+          },
+          {
+            "id": "N>>N-NIL_64",
+            "quote": "N>>N-NIL_64 No Outages - avoid overload on Bannaby to Sydney West on trip of Dapto to Sydney South line 15 335 VIC-NSW QNI Terranora"
+          },
+          {
+            "id": "N>>N-NIL__B_15M",
+            "quote": "N>>N-NIL__B_15M No Outages - avoid Overload of Upper Tumut to Canberra using 15 mins rating on trip of parallel Lower Tumut to Canberra line 3960 VIC-NSW"
+          },
+          {
+            "id": "N^^N_NIL_1",
+            "quote": "N^^N_NIL_1 No Outages - manage voltage stability - manages flows on lines between Sydney and Murray limiting northerly flows. 2936 VIC-NSW"
+          },
+          {
+            "id": "N_X_MBTE2_B",
+            "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora"
+          },
+          {
+            "id": "V>>V_NIL_2A-R",
+            "quote": "V>>V_NIL_2A-R"
+          }
+        ],
+        "event_date": "2016-01-14",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "imports into New South Wales on the Vic-NSW interconnector were around 1000 MW less than forecast four hours ahead."
+          },
+          {
+            "name": "QNI",
+            "quote": "New South Wales was importing around 800 MW from Queensland over QNI at the time of the high price."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Imports into New South Wales from Victoria over the VIC-NSW interconnector were around 250 MW. The figure shows the reduction in imports over the duration of the event."
+          }
+        ],
+        "intervals": {
+          "quote": "On 14 January 2016 at 2 pm, the spot price for energy in New South Wales exceeded $5000/MWh. The dispatch price for the 1.35 pm and 1.40 pm dispatch intervals exceeded $13 000/MWh leading to a 2 pm spot price of $5022/MWh.",
+          "text": "2 pm trading interval; 1.35 pm and 1.40 pm dispatch intervals"
+        },
+        "network_outages": {
+          "quote": "N_X_MBTE2_B Outage of two Directlink cables, limits flows on Terranora from Qld to NSW - Terranora",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "13:40 $13 594.71 Delta Electricity VP5 Energy $13 400.0 0 1.00 $13 400.00",
+          "value": 13594.71
+        },
+        "rebid_set_price": {
+          "quote": "There was no significant rebidding of capacity from low to high prices that contributed to the high priced outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20150114_-_5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20150114%20-%205000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5732,
+    "per_attempt": [
+      {
+        "completion_tokens": 5732,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4594
+        },
+        "prompt_tokens": 10931,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16663
+      }
+    ],
+    "prompt_tokens": 10931,
+    "reasoning_tokens": 4594,
+    "total_tokens": 16663
+  }
+}

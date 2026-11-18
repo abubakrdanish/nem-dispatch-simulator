@@ -1,0 +1,143 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:42:47+00:00",
+  "failure": null,
+  "input_sha256": "8cfc190342aaac56b7afa71219e79dace21f9096e1a12a30dfc95391700a132f",
+  "key": "4495037758310cfb9bc07781b01482e28163977c60234f23ce12a6f9ec1b3d2f",
+  "latency_s": 155.12,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-08-26\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Four 30-minute intervals on 26 August\", \"quote\": \"The wholesale price of electricity exceeded $5,000/MWh over four 30-minute intervals on 26 August and over two 30-min intervals on 8 September in South Australia.\"}, \"peak_price\": {\"value\": 13351, \"quote\": \"8.30 am 13,351\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Cold temperatures drove high demand (~1,800 MW)\"}, {\"label\": \"wind_output\", \"quote\": \"On 26 August, average output during the high price intervals was around 100 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage on the Heywood interconnector meant imports were limited to 50 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage on the Heywood interconnector meant imports were limited to 50 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"A planned outage on the Heywood interconnector meant imports were limited to 50 MW.\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink was not affect by the outage and was able to transfer around 170 MW of capacity from Victoria into South Australia.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage on the Heywood interconnector meant imports were limited to 50 MW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not significantly contribute to high prices on either day.\"}}, {\"event_date\": \"2022-09-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Two 30-minute intervals on 8 September\", \"quote\": \"The wholesale price of electricity exceeded $5,000/MWh over four 30-minute intervals on 26 August and over two 30-min intervals on 8 September in South Australia.\"}, \"peak_price\": {\"value\": 9887, \"quote\": \"Midnight 9,887\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW.\"}, {\"label\": \"wind_output\", \"quote\": \"actual output was around 370 MW lower than expected one hour prior (600 MW).\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"South Australia's largest generator was on a planned outage, materially reducing the availability of low-priced generation in the region.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"MurrayLink\", \"quote\": \"A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW.\"}, {\"name\": \"Heywood\", \"quote\": \"Heywood was able to transfer around 560 MW from Victoria into South Australia during this time.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not significantly contribute to high prices on either day.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Cold temperatures drove high demand (~1,800 MW)"
+          },
+          {
+            "label": "wind_output",
+            "quote": "On 26 August, average output during the high price intervals was around 100 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage on the Heywood interconnector meant imports were limited to 50 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage on the Heywood interconnector meant imports were limited to 50 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-08-26",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "A planned outage on the Heywood interconnector meant imports were limited to 50 MW."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink was not affect by the outage and was able to transfer around 170 MW of capacity from Victoria into South Australia."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000/MWh over four 30-minute intervals on 26 August and over two 30-min intervals on 8 September in South Australia.",
+          "text": "Four 30-minute intervals on 26 August"
+        },
+        "network_outages": {
+          "quote": "A planned outage on the Heywood interconnector meant imports were limited to 50 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "8.30 am 13,351",
+          "value": 13351
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not significantly contribute to high prices on either day.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW."
+          },
+          {
+            "label": "wind_output",
+            "quote": "actual output was around 370 MW lower than expected one hour prior (600 MW)."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "South Australia's largest generator was on a planned outage, materially reducing the availability of low-priced generation in the region."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-09-08",
+        "interconnectors_named": [
+          {
+            "name": "MurrayLink",
+            "quote": "A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Heywood was able to transfer around 560 MW from Victoria into South Australia during this time."
+          }
+        ],
+        "intervals": {
+          "quote": "The wholesale price of electricity exceeded $5,000/MWh over four 30-minute intervals on 26 August and over two 30-min intervals on 8 September in South Australia.",
+          "text": "Two 30-minute intervals on 8 September"
+        },
+        "network_outages": {
+          "quote": "A planned outage of the MurrayLink interconnector meant imports were limited to 0 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Midnight 9,887",
+          "value": 9887
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not significantly contribute to high prices on either day.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_in_SA_-_August_and_September_2022.pdf",
+    "url": "https://www.aer.gov.au/system/files/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20in%20SA%20-%20August%20and%20September%202022.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 7304,
+    "per_attempt": [
+      {
+        "completion_tokens": 7304,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6457
+        },
+        "prompt_tokens": 4729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12033
+      }
+    ],
+    "prompt_tokens": 4729,
+    "reasoning_tokens": 6457,
+    "total_tokens": 12033
+  }
+}

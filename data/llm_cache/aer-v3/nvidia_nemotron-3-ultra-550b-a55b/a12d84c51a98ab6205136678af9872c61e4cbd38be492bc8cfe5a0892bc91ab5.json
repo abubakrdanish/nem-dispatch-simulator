@@ -1,0 +1,178 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:34:46+00:00",
+  "failure": null,
+  "input_sha256": "63d372e602fa5ebd96d6dd617030a1f776c222991e64b153cf423c911e37d644",
+  "key": "a12d84c51a98ab6205136678af9872c61e4cbd38be492bc8cfe5a0892bc91ab5",
+  "latency_s": 336.02,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-01-31\", \"regions\": [\"NSW1\"], \"intervals\": null, \"peak_price\": {\"value\": 6020, \"quote\": \"Spot price $6020/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On all three days demand was very high due to high temperatures, reaching a new record on Tuesday. Demand was generally greater than forecast.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'.\"}], \"constraints_named\": [{\"id\": \"1450A\", \"quote\": \"The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'.\"}], \"interconnectors_named\": [{\"name\": \"NSW-VIC interconnector\", \"quote\": \"The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}, {\"event_date\": \"2011-02-01\", \"regions\": [\"NSW1\", \"VIC1\", \"QLD1\"], \"intervals\": null, \"peak_price\": {\"value\": 12136, \"quote\": \"Spot price $12 136/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"For 1 February demand was up to 505 MW greater than forecast 4 hours ahead and 631 MW greater than forecast 12 hours ahead. Available capacity was lower than forecast by up to 437 MW 4 hours ahead and 482 MW 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 3.33 pm, effective from 3.40 pm, Delta Electricity reduced the availability of Vales Point power station by 280 MW (all of which was priced above $12 200/MWh). The reason given was '1530P lake temperature management - ET 4hrs::capacity limit'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'.\"}], \"constraints_named\": [{\"id\": \"1415A\", \"quote\": \"A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'.\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink T-V-MNSP1,VIC1 Energy $0.01 0.40 $0.00\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}, {\"event_date\": \"2011-02-02\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": null, \"peak_price\": {\"value\": 10417, \"quote\": \"Spot price $10 417/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"For 2 February demand was close to forecast 4 hours ahead but up to 436 MW greater than forecast 12 hours ahead. Available capacity was close to forecast 4 hours ahead but up to 232 MW lower than forecast 12 hours ahead. Prices were generally close to forecast 4 hours ahead but significantly higher than forecast 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Basslink T-V-MNSP1,VIC1 Energy $0.01 0.40 $0.00\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding by Macquarie Generation and Eraring contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On all three days demand was very high due to high temperatures, reaching a new record on Tuesday. Demand was generally greater than forecast."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "1450A",
+            "quote": "The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'."
+          }
+        ],
+        "event_date": "2011-01-31",
+        "interconnectors_named": [
+          {
+            "name": "NSW-VIC interconnector",
+            "quote": "The reason given was '1450A unit trip in Vic - NSW to Vic i/c constraint sth'."
+          }
+        ],
+        "intervals": null,
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $6020/MWh",
+          "value": 6020
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "For 1 February demand was up to 505 MW greater than forecast 4 hours ahead and 631 MW greater than forecast 12 hours ahead. Available capacity was lower than forecast by up to 437 MW 4 hours ahead and 482 MW 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 3.33 pm, effective from 3.40 pm, Delta Electricity reduced the availability of Vales Point power station by 280 MW (all of which was priced above $12 200/MWh). The reason given was '1530P lake temperature management - ET 4hrs::capacity limit'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "1415A",
+            "quote": "A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'."
+          }
+        ],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "A further rebid at 2.17 pm shifted 190 MW of capacity from below $5000/MWh to above $11 000/MWh. The reason given was '1415A Vic to NSW flow > than PD and Vic demand < than PD'."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink T-V-MNSP1,VIC1 Energy $0.01 0.40 $0.00"
+          }
+        ],
+        "intervals": null,
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $12 136/MWh",
+          "value": 12136
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "VIC1",
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "For 2 February demand was close to forecast 4 hours ahead but up to 436 MW greater than forecast 12 hours ahead. Available capacity was close to forecast 4 hours ahead but up to 232 MW lower than forecast 12 hours ahead. Prices were generally close to forecast 4 hours ahead but significantly higher than forecast 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2011-02-02",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Basslink T-V-MNSP1,VIC1 Energy $0.01 0.40 $0.00"
+          }
+        ],
+        "intervals": null,
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $10 417/MWh",
+          "value": 10417
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by Macquarie Generation and Eraring contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_January_to_2_February_2011_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20January%20to%202%20February%202011%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 16810,
+    "per_attempt": [
+      {
+        "completion_tokens": 16810,
+        "completion_tokens_details": {
+          "reasoning_tokens": 15559
+        },
+        "prompt_tokens": 12015,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 28825
+      }
+    ],
+    "prompt_tokens": 12015,
+    "reasoning_tokens": 15559,
+    "total_tokens": 28825
+  }
+}

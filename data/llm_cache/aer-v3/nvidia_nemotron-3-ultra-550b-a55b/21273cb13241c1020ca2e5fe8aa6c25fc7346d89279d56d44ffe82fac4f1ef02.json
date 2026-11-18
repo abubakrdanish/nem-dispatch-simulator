@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-17T12:33:56+00:00",
+  "failure": null,
+  "input_sha256": "cb906e658cdfb935d836fc5145787ebf5c877ac235311a73462049645ff1558c",
+  "key": "21273cb13241c1020ca2e5fe8aa6c25fc7346d89279d56d44ffe82fac4f1ef02",
+  "latency_s": 109.6,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-01-29\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"5 pm trading interval; five-minute dispatch prices exceeded $7200/MWh 11 times between 2 pm and 7:30 pm\", \"quote\": \"On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh. As well as analysing the 5 pm high spot price, the report includes analysis of other high spot prices (although under $5000/MWh) between 2 pm and 7.30 pm. The five-minute dispatch price exceeded $7200/MWh 11 times during this period.\"}, \"peak_price\": {\"value\": 6299, \"quote\": \"Spot Price $6299/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Higher than expected temperatures in Brisbane saw demand in Queensland reach 7809 MW at 5 pm. Actual demand for the 5 pm interval was 287 MW higher than forecast four hours ahead but close to that forecast 12 hours ahead.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 12.10 pm, Alinta's Braemar A unit 2 tripped and unit 3 tripped on start up-a combined total of 300 MW (all of which was priced close to the price floor).\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"This reduction in available capacity included the unplanned loss of two Braemar A units (300 MW in total) around midday, wet coal at some coal units (that affects fuel quality) and the late return to service of Gladstone unit 5.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Another contributing factor was that 1593 MW of generation (Callide units 3 and 4, Tarong North and Wivenhoe unit 1) was out of service on the day.\"}, {\"label\": \"rebids\", \"quote\": \"Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5, which had been out of service since December.\"}, {\"label\": \"network_outage\", \"quote\": \"As a result, on 29 January, flows across Terranora were forced into New South Wales at low levels to meet local load, ranging from 50 MW to 70 MW across the day. There were no imports available from New South Wales across the Terranora interconnector.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast. Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast.\"}, {\"name\": \"Terranora\", \"quote\": \"The cables (which form part of the Terranora interconnector) did not return to service until 31 January.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"As a result, on 29 January, flows across Terranora were forced into New South Wales at low levels to meet local load, ranging from 50 MW to 70 MW across the day. There were no imports available from New South Wales across the Terranora interconnector.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Higher than expected temperatures in Brisbane saw demand in Queensland reach 7809 MW at 5 pm. Actual demand for the 5 pm interval was 287 MW higher than forecast four hours ahead but close to that forecast 12 hours ahead."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 12.10 pm, Alinta's Braemar A unit 2 tripped and unit 3 tripped on start up-a combined total of 300 MW (all of which was priced close to the price floor)."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "This reduction in available capacity included the unplanned loss of two Braemar A units (300 MW in total) around midday, wet coal at some coal units (that affects fuel quality) and the late return to service of Gladstone unit 5."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Another contributing factor was that 1593 MW of generation (Callide units 3 and 4, Tarong North and Wivenhoe unit 1) was out of service on the day."
+          },
+          {
+            "label": "rebids",
+            "quote": "Over a number of rebids throughout the morning, CS Energy delayed the return to service of Gladstone unit 5, which had been out of service since December."
+          },
+          {
+            "label": "network_outage",
+            "quote": "As a result, on 29 January, flows across Terranora were forced into New South Wales at low levels to meet local load, ranging from 50 MW to 70 MW across the day. There were no imports available from New South Wales across the Terranora interconnector."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast. Imports were limited due to a transmission constraint that manages the potential loss of Kogan Creek."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2013-01-29",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Import limits into Queensland across the Queensland to New South Wales (QNI) interconnector were around 250 MW during the relevant period, slightly higher than forecast."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The cables (which form part of the Terranora interconnector) did not return to service until 31 January."
+          }
+        ],
+        "intervals": {
+          "quote": "On 29 January 2013 the spot price in Queensland exceeded $5000/MWh at 5 pm, reaching $6299/MWh. As well as analysing the 5 pm high spot price, the report includes analysis of other high spot prices (although under $5000/MWh) between 2 pm and 7.30 pm. The five-minute dispatch price exceeded $7200/MWh 11 times during this period.",
+          "text": "5 pm trading interval; five-minute dispatch prices exceeded $7200/MWh 11 times between 2 pm and 7:30 pm"
+        },
+        "network_outages": {
+          "quote": "As a result, on 29 January, flows across Terranora were forced into New South Wales at low levels to meet local load, ranging from 50 MW to 70 MW across the day. There were no imports available from New South Wales across the Terranora interconnector.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot Price $6299/MWh",
+          "value": 6299
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20130129_-_QLD_-_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20130129%20-%20QLD%20-%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6967,
+    "per_attempt": [
+      {
+        "completion_tokens": 6967,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6104
+        },
+        "prompt_tokens": 5100,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12067
+      }
+    ],
+    "prompt_tokens": 5100,
+    "reasoning_tokens": 6104,
+    "total_tokens": 12067
+  }
+}

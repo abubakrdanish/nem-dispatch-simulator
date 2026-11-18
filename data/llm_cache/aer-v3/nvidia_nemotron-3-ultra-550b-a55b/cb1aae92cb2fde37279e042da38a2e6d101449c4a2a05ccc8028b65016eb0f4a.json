@@ -1,0 +1,84 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:39:15+00:00",
+  "failure": null,
+  "input_sha256": "f2444bd7f635848c1df3c0269199b0682c8e55ca040535a40499a2c5bdb14af9",
+  "key": "cb1aae92cb2fde37279e042da38a2e6d101449c4a2a05ccc8028b65016eb0f4a",
+  "latency_s": 93.25,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-01-08\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"three trading intervals from 3.30 pm to 4.30 pm inclusive\", \"quote\": \"On Friday 8 January 2010, the spot price in South Australia exceeded $5000/MWh for three trading intervals from 3.30 pm to 4.30 pm inclusive.\"}, \"peak_price\": {\"value\": 9999.71, \"quote\": \"Spot price $9999.71/MWh\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW and 'constrained-off' around 100 MW of low-priced generation in the south east of South Australia.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"To manage a short notice outage of the Bungama to Para line, a constraint was invoked at 1.30 pm to commence from 2.35 pm.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "A constraint used to manage a short notice outage of the Bungama to Para line resulted in around 240 MW of low-priced generation in northern South Australia being 'constrained-off'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW and 'constrained-off' around 100 MW of low-priced generation in the south east of South Australia."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2010-01-08",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "System normal constraints reduced the import capability from Victoria across both the Heywood and Murraylink interconnectors by more than 200 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "On Friday 8 January 2010, the spot price in South Australia exceeded $5000/MWh for three trading intervals from 3.30 pm to 4.30 pm inclusive.",
+          "text": "three trading intervals from 3.30 pm to 4.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "To manage a short notice outage of the Bungama to Para line, a constraint was invoked at 1.30 pm to commence from 2.35 pm.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.71/MWh",
+          "value": 9999.71
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_8_January_2010_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_8%20January%202010%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4166,
+    "per_attempt": [
+      {
+        "completion_tokens": 4166,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3715
+        },
+        "prompt_tokens": 6804,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10970
+      }
+    ],
+    "prompt_tokens": 6804,
+    "reasoning_tokens": 3715,
+    "total_tokens": 10970
+  }
+}

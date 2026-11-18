@@ -1,0 +1,202 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T05:47:48+00:00",
+  "failure": null,
+  "input_sha256": "f521bca75e494c9ccda2d7d89badf0a04d6efb43ec9955fdc3e4853a1c84b43b",
+  "key": "3dd91d5c614a2f8234e99d08e1cba694ead95e34b88c63b7af7ca1786990e507",
+  "latency_s": 202.08,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2026-01-12\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"The high prices occurred for two 5-minute intervals only in energy and FCAS.\", \"quote\": \"The high prices occurred for two 5-minute intervals only in energy and FCAS.\"}, \"peak_price\": {\"value\": 6835, \"quote\": \"On 12 January, the energy price in Tasmania reached $6,835 per MWh at 5 pm\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania... The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"energy and FCAS was unable to be transferred from the mainland and Tasmania needed to provide its own energy and FCAS during this period.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The market operator's dispatch engine simultaneously optimises the FCAS and energy markets, for every dispatch interval, to determine the least cost outcome. This can lead to a trade-off between the FCAS and energy markets... This is what occurred for the 5-minute high energy price at 5 pm, when the price was set by an offer of around $20,000 per MW in FCAS raise services.\"}, {\"label\": \"rebids\", \"quote\": \"Removal of low-priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A). With multiple rebids between 3.08 pm and 4.08 pm, VIOTAS Australia removed a net of 15 MW of low-priced capacity from its demand response unit, DRVIOT05, across three of the four raise services due to a change in plant conditions. These rebids contributed to the high prices at 4.55 pm and 5 pm.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Basslink interconnector (the only interconnector between Victoria and Tasmania) suddenly going on an unplanned outage.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania... The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Removal of low-priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm... These rebids contributed to the high prices at 4.55 pm and 5 pm.\"}}, {\"event_date\": \"2026-01-26\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"High prices on 26 January were forecast from the day prior and AEMO forecast a low-level reserve in South Australia for 6.30 pm to 9 pm, with an actual shortfall occurring from 8.30 pm to 9.45 pm on 26 January.\", \"quote\": \"High prices on 26 January were forecast from the day prior and AEMO forecast a low-level reserve in South Australia for 6.30 pm to 9 pm, with an actual shortfall occurring from 8.30 pm to 9.45 pm on 26 January.\"}, \"peak_price\": {\"value\": 20158, \"quote\": \"The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"South Australia experienced exceptionally high temperatures on 26 and 27 January... During the evening peak, electricity demand in South Australia exceeded 3,100 MW, which is within 300 MW of the record for South Australia and significantly higher than the previous week's average of around 1,900 MW during the same evening period.\"}, {\"label\": \"wind_output\", \"quote\": \"At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"During the high prices on 26 January, batteries in the region provided substantial generation... However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge... By 8.55 pm, battery offers were less than 100 MW, falling from an average of 839 MW offered at the beginning of the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Interconnector flows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security... Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm. This was due to a constraint managing an outage of the New South Wales Murraylink runback scheme. Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C). In the two hours before the high prices, Neoen shifted between 130 MW and 200 MW of capacity from low to high prices at Blyth battery due to a change in forecast state of charge. This contributed to the high prices at 6.10 pm, 6.15 pm, 6.30 pm and 6.35 pm. At 7.18 pm, Vena Energy removed 40 MW of low-priced capacity at Tailem Bend battery due to a change in forecast prices. This contributed to high prices at 8.15 pm.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm.\"}, {\"name\": \"Heywood\", \"quote\": \"Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C).\"}}, {\"event_date\": \"2026-01-27\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh.\", \"quote\": \"On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh.\"}, \"peak_price\": {\"value\": 5388, \"quote\": \"The price for this 30-minute period was $5,388 per MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures remained elevated throughout the evening of 26 January and continued into the morning of 27 January. Houses could not cool down overnight during the long run of heat and air conditioner usage remained high. At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW. This was almost double the average demand of 1,300 MW recorded during the same morning period the previous week.\"}, {\"label\": \"wind_output\", \"quote\": \"On 27 January at 6.30 am, wind generation averaged around 820 MW... Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On 27 January: • Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line. At 8.30 am, flows into South Australia on Murraylink were limited to 44 MW by a system normal constraint. • Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C). Across multiple rebids between 6.08 am and 8.13 am, Epic Energy removed up to 100 MW of low-price capacity at Mannum battery due to state of charge management. This contributed to the high prices at 6.25 am, 8.15 am and 8.20 am. At 7.12 am, Neoen shifted 59 MW from above $3,000 per MWh... to below $1,000 per MWh at Hornsdale battery... Across multiple rebids, most in the late rebidding period at 8.02 am and 8.07 am, this 59 MW of low-priced capacity was then withdrawn due to the unit's state of energy approaching lower operational limits. This contributed to the high prices at 8.15 am and 8.20 am. At 8.01 am, AGL shifted up to 60 MW from low to high prices across three units at Torrens Island station due to a change in forecast prices. This contributed to the high prices at 6.25 am, 8.15 am and 8.20 am.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line. At 8.30 am, flows into South Australia on Murraylink were limited to 44 MW by a system normal constraint.\"}, {\"name\": \"Heywood\", \"quote\": \"Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C).\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania... The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "energy and FCAS was unable to be transferred from the mainland and Tasmania needed to provide its own energy and FCAS during this period."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Hydro Tasmania's stations were ramp up rate limited. AEMO can only ramp up units at their offered ramp rates (Table 2), which during the high prices was not enough to provide additional low-priced capacity that could have helped avoid the high prices."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The market operator's dispatch engine simultaneously optimises the FCAS and energy markets, for every dispatch interval, to determine the least cost outcome. This can lead to a trade-off between the FCAS and energy markets... This is what occurred for the 5-minute high energy price at 5 pm, when the price was set by an offer of around $20,000 per MW in FCAS raise services."
+          },
+          {
+            "label": "rebids",
+            "quote": "Removal of low-priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm (Appendix A). With multiple rebids between 3.08 pm and 4.08 pm, VIOTAS Australia removed a net of 15 MW of low-priced capacity from its demand response unit, DRVIOT05, across three of the four raise services due to a change in plant conditions. These rebids contributed to the high prices at 4.55 pm and 5 pm."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-01-12",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Basslink interconnector (the only interconnector between Victoria and Tasmania) suddenly going on an unplanned outage."
+          }
+        ],
+        "intervals": {
+          "quote": "The high prices occurred for two 5-minute intervals only in energy and FCAS.",
+          "text": "The high prices occurred for two 5-minute intervals only in energy and FCAS."
+        },
+        "network_outages": {
+          "quote": "At 4.51 pm, the Basslink interconnector was taken offline for an unplanned outage when it was importing around 180 MW into Tasmania... The sudden loss of Basslink meant Tasmania had to provide its own energy and FCAS.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 12 January, the energy price in Tasmania reached $6,835 per MWh at 5 pm",
+          "value": 6835
+        },
+        "rebid_set_price": {
+          "quote": "Removal of low-priced capacity in the raise services for commercial and technical reasons contributed to the high prices at 4.55 pm and 5 pm... These rebids contributed to the high prices at 4.55 pm and 5 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "South Australia experienced exceptionally high temperatures on 26 and 27 January... During the evening peak, electricity demand in South Australia exceeded 3,100 MW, which is within 300 MW of the record for South Australia and significantly higher than the previous week's average of around 1,900 MW during the same evening period."
+          },
+          {
+            "label": "wind_output",
+            "quote": "At the time of the high prices on 26 January, wind output was very low due to calm conditions in South Australia. Wind averaged around 337 MW (Figure 7) out of 2,766 MW registered capacity, which equates to around 12% of the installed capacity in South Australia."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "During the high prices on 26 January, batteries in the region provided substantial generation... However, battery offers started to be removed from around 7.50 pm with participants generally citing state of charge... By 8.55 pm, battery offers were less than 100 MW, falling from an average of 839 MW offered at the beginning of the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Interconnector flows into South Australia from Victoria were limited due to system normal constraints that were invoked to maintain system security... Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm. This was due to a constraint managing an outage of the New South Wales Murraylink runback scheme. Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C). In the two hours before the high prices, Neoen shifted between 130 MW and 200 MW of capacity from low to high prices at Blyth battery due to a change in forecast state of charge. This contributed to the high prices at 6.10 pm, 6.15 pm, 6.30 pm and 6.35 pm. At 7.18 pm, Vena Energy removed 40 MW of low-priced capacity at Tailem Bend battery due to a change in forecast prices. This contributed to high prices at 8.15 pm."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-01-26",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink's flows were reduced to 0 MW out of its 220 MW nominal capacity for the duration of the high prices until 9.40 pm."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Heywood flows were around 500 MW out of its 650 MW nominal capacity due to a system normal constraint."
+          }
+        ],
+        "intervals": {
+          "quote": "High prices on 26 January were forecast from the day prior and AEMO forecast a low-level reserve in South Australia for 6.30 pm to 9 pm, with an actual shortfall occurring from 8.30 pm to 9.45 pm on 26 January.",
+          "text": "High prices on 26 January were forecast from the day prior and AEMO forecast a low-level reserve in South Australia for 6.30 pm to 9 pm, with an actual shortfall occurring from 8.30 pm to 9.45 pm on 26 January."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The 30-minute prices ranged from $3,704 per MWh to $20,158 per MWh",
+          "value": 20158
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures remained elevated throughout the evening of 26 January and continued into the morning of 27 January. Houses could not cool down overnight during the long run of heat and air conditioner usage remained high. At 8.30 am, when the price was $5,388 per MWh demand exceeded 2,500 MW. This was almost double the average demand of 1,300 MW recorded during the same morning period the previous week."
+          },
+          {
+            "label": "wind_output",
+            "quote": "On 27 January at 6.30 am, wind generation averaged around 820 MW... Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "When the high prices occurred at 6.30 am and 8.30 am the following morning on 27 January, there was very little battery capacity offered. This limited battery availability during these periods with increased reliance on more expensive generation such as gas."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On 27 January: • Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line. At 8.30 am, flows into South Australia on Murraylink were limited to 44 MW by a system normal constraint. • Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C). Across multiple rebids between 6.08 am and 8.13 am, Epic Energy removed up to 100 MW of low-price capacity at Mannum battery due to state of charge management. This contributed to the high prices at 6.25 am, 8.15 am and 8.20 am. At 7.12 am, Neoen shifted 59 MW from above $3,000 per MWh... to below $1,000 per MWh at Hornsdale battery... Across multiple rebids, most in the late rebidding period at 8.02 am and 8.07 am, this 59 MW of low-priced capacity was then withdrawn due to the unit's state of energy approaching lower operational limits. This contributed to the high prices at 8.15 am and 8.20 am. At 8.01 am, AGL shifted up to 60 MW from low to high prices across three units at Torrens Island station due to a change in forecast prices. This contributed to the high prices at 6.25 am, 8.15 am and 8.20 am."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2026-01-27",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line. At 8.30 am, flows into South Australia on Murraylink were limited to 44 MW by a system normal constraint."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Heywood flows were around 580 MW for both the 6.30 am and 8.30 am high-priced periods and were also limited by a system normal constraint."
+          }
+        ],
+        "intervals": {
+          "quote": "On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh.",
+          "text": "On 27 January at 6.30 am, wind generation averaged around 820 MW and the price was $3,704 per MWh. Later that morning, at 8.30 am wind generation dropped to around 600 MW from around 880 MW one hour prior. The price for this 30-minute period was $5,388 per MWh."
+        },
+        "network_outages": {
+          "quote": "Murraylink flows were forced counter-price at around 70 MW from South Australia into Victoria at 6.30 am due to a planned outage of the Rowville to South Morang line.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The price for this 30-minute period was $5,388 per MWh.",
+          "value": 5388
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for commercial and technical reasons contributed to some of the high prices on 26 January and 27 January (Appendix B and Appendix C).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Significant_electricity_prices_for_January_to_March_2026.pdf",
+    "url": "https://www.aer.gov.au/system/files/2026-05/Significant%20electricity%20prices%20for%20January%20to%20March%202026.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 11881,
+    "per_attempt": [
+      {
+        "completion_tokens": 11881,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9006
+        },
+        "prompt_tokens": 17090,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 28971
+      }
+    ],
+    "prompt_tokens": 17090,
+    "reasoning_tokens": 9006,
+    "total_tokens": 28971
+  }
+}

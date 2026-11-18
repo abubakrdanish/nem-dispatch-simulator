@@ -1,0 +1,112 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:43:51+00:00",
+  "failure": null,
+  "input_sha256": "16685c4de3807356b48a1833f59a08f84fda963f4109dc52a7fdc2b2f63d2641",
+  "key": "76c94cfbad380c0e6ade95252d02fbb5d898663b32125a19fe9e5ef8540b63ea",
+  "latency_s": 63.92,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-11-20\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals.\", \"quote\": \"The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals.\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was 730 MW higher than forecast 4 hours ahead and 400 MW higher than forecast half an hour ahead.\"}, {\"label\": \"solar_output\", \"quote\": \"The forecasting error was due to warmer than forecast temperatures in western Sydney, an over-forecasting of rooftop PV generation (which reduces demand from the grid), as well as some underlying under-forecasting in the demand forecast model.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was around 2,400 MW of baseload generation on both planned and unplanned long-term outages, a majority of which is usually offered below $5,000/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"There was around 2,400 MW of baseload generation on both planned and unplanned long-term outages, a majority of which is usually offered below $5,000/MWh.\"}, {\"label\": \"network_outage\", \"quote\": \"There was a planned outage (market notified 16 November 2020) of the Yass to Marulan 5 330 kV line in New South Wales. Line outages for the upgrade of QNI also limited exports from Queensland into New South Wales.\"}, {\"label\": \"rebids\", \"quote\": \"Origin rebid 570 MW of capacity at Eraring power station to the price cap. This rebid was placed in error and contributed to the price exceeding $5,000/MWh.\"}, {\"label\": \"ramp_rates\", \"quote\": \"There was no capacity offered between $300/MWh and $14,998/MWh, and the capacity offered below $300/MWh was either ramp limited, at maximum availability or inflexible so could not set price.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There were network constraints that limited flows into New South Wales on each of the three interconnectors connecting New South Wales to Victoria and Queensland.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"flows on the Vic-NSW interconnector\"}, {\"name\": \"QNI\", \"quote\": \"upgrades on the Queensland to New South Wales interconnector (QNI)\"}, {\"name\": \"Terranora\", \"quote\": \"combined limits and flows into New South Wales from Queensland were around 600 MW lower than their nominal limits on QNI and Terranora\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was a planned outage (market notified 16 November 2020) of the Yass to Marulan 5 330 kV line in New South Wales. Line outages for the upgrade of QNI also limited exports from Queensland into New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Origin rebid 570 MW of capacity at Eraring power station to the price cap. This rebid was placed in error and contributed to the price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was 730 MW higher than forecast 4 hours ahead and 400 MW higher than forecast half an hour ahead."
+          },
+          {
+            "label": "solar_output",
+            "quote": "The forecasting error was due to warmer than forecast temperatures in western Sydney, an over-forecasting of rooftop PV generation (which reduces demand from the grid), as well as some underlying under-forecasting in the demand forecast model."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was around 2,400 MW of baseload generation on both planned and unplanned long-term outages, a majority of which is usually offered below $5,000/MWh."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "There was around 2,400 MW of baseload generation on both planned and unplanned long-term outages, a majority of which is usually offered below $5,000/MWh."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There was a planned outage (market notified 16 November 2020) of the Yass to Marulan 5 330 kV line in New South Wales. Line outages for the upgrade of QNI also limited exports from Queensland into New South Wales."
+          },
+          {
+            "label": "rebids",
+            "quote": "Origin rebid 570 MW of capacity at Eraring power station to the price cap. This rebid was placed in error and contributed to the price exceeding $5,000/MWh."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "There was no capacity offered between $300/MWh and $14,998/MWh, and the capacity offered below $300/MWh was either ramp limited, at maximum availability or inflexible so could not set price."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There were network constraints that limited flows into New South Wales on each of the three interconnectors connecting New South Wales to Victoria and Queensland."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-11-20",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "flows on the Vic-NSW interconnector"
+          },
+          {
+            "name": "QNI",
+            "quote": "upgrades on the Queensland to New South Wales interconnector (QNI)"
+          },
+          {
+            "name": "Terranora",
+            "quote": "combined limits and flows into New South Wales from Queensland were around 600 MW lower than their nominal limits on QNI and Terranora"
+          }
+        ],
+        "intervals": {
+          "quote": "The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals.",
+          "text": "The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals."
+        },
+        "network_outages": {
+          "quote": "There was a planned outage (market notified 16 November 2020) of the Yass to Marulan 5 330 kV line in New South Wales. Line outages for the upgrade of QNI also limited exports from Queensland into New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The dispatch price was close to or at the market cap price of $15,000/MWh for the 2.15 pm, 2.20 pm and 2.25 pm dispatch intervals.",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Origin rebid 570 MW of capacity at Eraring power station to the price cap. This rebid was placed in error and contributed to the price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20201120_NSW_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020201120%20NSW%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4650,
+    "per_attempt": [
+      {
+        "completion_tokens": 4650,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3735
+        },
+        "prompt_tokens": 6874,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11524
+      }
+    ],
+    "prompt_tokens": 6874,
+    "reasoning_tokens": 3735,
+    "total_tokens": 11524
+  }
+}

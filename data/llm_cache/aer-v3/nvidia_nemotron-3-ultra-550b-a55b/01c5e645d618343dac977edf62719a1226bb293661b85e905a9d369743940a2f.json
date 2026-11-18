@@ -1,0 +1,170 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:43:57+00:00",
+  "failure": null,
+  "input_sha256": "840b00daa8330d999fc3b4b43c86d1c084181c14463f433ecc41ab6e23d18b7f",
+  "key": "01c5e645d618343dac977edf62719a1226bb293661b85e905a9d369743940a2f",
+  "latency_s": 114.86,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-06-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"6 pm and 6.30 pm trading intervals in NSW; 6 pm trading interval in QLD\", \"quote\": \"On 10 June the spot price in New South Wales exceeded $5,000/MWh for the 6 pm and 6.30 pm trading intervals, and in Queensland for the 6 pm trading interval.\"}, \"peak_price\": {\"value\": 8022, \"quote\": \"The spot price in New South Wales was $8,022/MWh and $5,027/MWh for the 6 pm and 6.30 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was high during the evening peak, driven by extremely cold weather increasing heating requirements.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Almost 3,300 MW of that capacity was on planned outage, which was expected as generators generally undertake maintenance in autumn before returning to service for the winter peak from mid- to late-June.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The remaining 1,800 MW of capacity of unplanned outages was all in Queensland. Most of this capacity had been out since the significant failure of the Callide C 4 unit on 25 May 2021\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Another 700 MW was unavailable due to technical issues - mostly at Liddell and Gladstone power stations.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"This trade-off between the provision of FCAS and energy effectively reduced low priced capacity by up to 60 MW and contributed to high dispatch prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"No further imports could be sourced from Victoria, as the VIC-NSW interconnector was already operating at or close to its nominal limit.\"}], \"constraints_named\": [{\"id\": \"N>>N- NIL__B_15M\", \"quote\": \"1710A constraint management - N>>N- NIL__B_15M sl\"}, {\"id\": \"1623A\", \"quote\": \"1623A qld1 di 10-06- 2021 16:25:00 rrp $100.73 vs p5 rrp $85.95 @ p5 run 10-06- 2021 16:20:00 - rrp change of $14.78-sl\"}, {\"id\": \"1731A\", \"quote\": \"1731A qld1 di 10-06- 2021 17:35:00 demand 7699.21mw vs p5 demand 7577.18 @ p5 run 10-06-2021 17:30:00 change of 122.03mw-sl\"}, {\"id\": \"1730A\", \"quote\": \"1730A qld price higher than forecast sl\"}, {\"id\": \"1736A\", \"quote\": \"1736A change qld 5 min pd rrp-sl\"}, {\"id\": \"1530A\", \"quote\": \"1530A inc nsw dem 5pd 12502mw > 30pd 11646mw @hhe1630 sl\"}, {\"id\": \"1511A\", \"quote\": \"1511A INC NSW dem 5pd 11830 mw > 30pd 11318mw @hhe1600 sl\"}, {\"id\": \"1640~P~030\", \"quote\": \"1640~P~030 increase in avail cap~301 plant limit lifted - oil firing~\"}, {\"id\": \"1700~A~NSW price\", \"quote\": \"1700~A~NSW price dp@1710 for 1710 13991 higher than 5pd@1705 sl~~\"}, {\"id\": \"1705~P~030\", \"quote\": \"1705~P~030 increase in avail cap~301 plant limit lifted - oil firing~\"}, {\"id\": \"1753~P~010\", \"quote\": \"1753~P~010 unexpected/plant limits~101 milling limits~\"}, {\"id\": \"1140~P~010\", \"quote\": \"1140~P~010 unexpected/plant limits~106 aux/plant failure~\"}, {\"id\": \"12:15~P~020\", \"quote\": \"12:15~P~020 reduction in avail cap~202 coal quality issues\"}, {\"id\": \"1615~P~010\", \"quote\": \"1615~P~010 unexpected/plant limits~101 milling limits~\"}, {\"id\": \"1640~A~NSW price\", \"quote\": \"1640~A~NSW price 5pd@1700 for 1710 14324 lower than 5pd@1655 sl~~\"}, {\"id\": \"17:45:05 A NSW 5min actual price\", \"quote\": \"17:45:05 A NSW 5min actual price $2,566.83 higher than 5min pd 17:50@17:41 ($2,566.83) sl\"}, {\"id\": \"1800~P~010\", \"quote\": \"1800~P~010 unexpected/plant limits~101 milling limits~\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"No further imports could be sourced from Victoria, as the VIC-NSW interconnector was already operating at or close to its nominal limit.\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink T-V- MNSP1,VIC1 Energy $0.01 6.14 $0.06\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was high during the evening peak, driven by extremely cold weather increasing heating requirements."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Almost 3,300 MW of that capacity was on planned outage, which was expected as generators generally undertake maintenance in autumn before returning to service for the winter peak from mid- to late-June."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The remaining 1,800 MW of capacity of unplanned outages was all in Queensland. Most of this capacity had been out since the significant failure of the Callide C 4 unit on 25 May 2021"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Another 700 MW was unavailable due to technical issues - mostly at Liddell and Gladstone power stations."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "This trade-off between the provision of FCAS and energy effectively reduced low priced capacity by up to 60 MW and contributed to high dispatch prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "No further imports could be sourced from Victoria, as the VIC-NSW interconnector was already operating at or close to its nominal limit."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N- NIL__B_15M",
+            "quote": "1710A constraint management - N>>N- NIL__B_15M sl"
+          },
+          {
+            "id": "1623A",
+            "quote": "1623A qld1 di 10-06- 2021 16:25:00 rrp $100.73 vs p5 rrp $85.95 @ p5 run 10-06- 2021 16:20:00 - rrp change of $14.78-sl"
+          },
+          {
+            "id": "1731A",
+            "quote": "1731A qld1 di 10-06- 2021 17:35:00 demand 7699.21mw vs p5 demand 7577.18 @ p5 run 10-06-2021 17:30:00 change of 122.03mw-sl"
+          },
+          {
+            "id": "1730A",
+            "quote": "1730A qld price higher than forecast sl"
+          },
+          {
+            "id": "1736A",
+            "quote": "1736A change qld 5 min pd rrp-sl"
+          },
+          {
+            "id": "1530A",
+            "quote": "1530A inc nsw dem 5pd 12502mw > 30pd 11646mw @hhe1630 sl"
+          },
+          {
+            "id": "1511A",
+            "quote": "1511A INC NSW dem 5pd 11830 mw > 30pd 11318mw @hhe1600 sl"
+          },
+          {
+            "id": "1640~P~030",
+            "quote": "1640~P~030 increase in avail cap~301 plant limit lifted - oil firing~"
+          },
+          {
+            "id": "1700~A~NSW price",
+            "quote": "1700~A~NSW price dp@1710 for 1710 13991 higher than 5pd@1705 sl~~"
+          },
+          {
+            "id": "1705~P~030",
+            "quote": "1705~P~030 increase in avail cap~301 plant limit lifted - oil firing~"
+          },
+          {
+            "id": "1753~P~010",
+            "quote": "1753~P~010 unexpected/plant limits~101 milling limits~"
+          },
+          {
+            "id": "1140~P~010",
+            "quote": "1140~P~010 unexpected/plant limits~106 aux/plant failure~"
+          },
+          {
+            "id": "12:15~P~020",
+            "quote": "12:15~P~020 reduction in avail cap~202 coal quality issues"
+          },
+          {
+            "id": "1615~P~010",
+            "quote": "1615~P~010 unexpected/plant limits~101 milling limits~"
+          },
+          {
+            "id": "1640~A~NSW price",
+            "quote": "1640~A~NSW price 5pd@1700 for 1710 14324 lower than 5pd@1655 sl~~"
+          },
+          {
+            "id": "17:45:05 A NSW 5min actual price",
+            "quote": "17:45:05 A NSW 5min actual price $2,566.83 higher than 5min pd 17:50@17:41 ($2,566.83) sl"
+          },
+          {
+            "id": "1800~P~010",
+            "quote": "1800~P~010 unexpected/plant limits~101 milling limits~"
+          }
+        ],
+        "event_date": "2021-06-10",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "No further imports could be sourced from Victoria, as the VIC-NSW interconnector was already operating at or close to its nominal limit."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink T-V- MNSP1,VIC1 Energy $0.01 6.14 $0.06"
+          }
+        ],
+        "intervals": {
+          "quote": "On 10 June the spot price in New South Wales exceeded $5,000/MWh for the 6 pm and 6.30 pm trading intervals, and in Queensland for the 6 pm trading interval.",
+          "text": "6 pm and 6.30 pm trading intervals in NSW; 6 pm trading interval in QLD"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales was $8,022/MWh and $5,027/MWh for the 6 pm and 6.30 pm trading intervals respectively.",
+          "value": 8022
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to prices above $5,000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210610_$5000_QLD_NSW_Report.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210610%20%245000%20QLD%20NSW%20Report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 8253,
+    "per_attempt": [
+      {
+        "completion_tokens": 8253,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6701
+        },
+        "prompt_tokens": 15693,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 23946
+      }
+    ],
+    "prompt_tokens": 15693,
+    "reasoning_tokens": 6701,
+    "total_tokens": 23946
+  }
+}

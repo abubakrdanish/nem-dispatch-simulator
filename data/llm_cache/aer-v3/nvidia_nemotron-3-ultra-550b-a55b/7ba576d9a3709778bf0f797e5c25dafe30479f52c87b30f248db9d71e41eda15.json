@@ -1,0 +1,156 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T04:48:09+00:00",
+  "failure": null,
+  "input_sha256": "eb3212e44351e43b248d670cebbacec678c7f971567a256bde6ab751c1059fae",
+  "key": "7ba576d9a3709778bf0f797e5c25dafe30479f52c87b30f248db9d71e41eda15",
+  "latency_s": 133.88,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-05-25\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"4.30 pm to 6.30 pm trading intervals\", \"quote\": \"On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced\"}, {\"label\": \"network_outage\", \"quote\": \"Multiple significant transmission lines around Callide tripped\"}, {\"label\": \"solar_output\", \"quote\": \"Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland. This reduced solar capacity which was forecast to be there for 4.30 pm and 5 pm by 190 MW and 81 MW respectively\"}, {\"label\": \"wind_output\", \"quote\": \"Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland. This reduced solar capacity which was forecast to be there for 4.30 pm and 5 pm by 190 MW and 81 MW respectively\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of capacity from low to high prices did not significantly contribute to the price exceeding $5,000/MWh, except for in one dispatch interval in the 4.30 pm trading interval in Queensland\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland to NSW interconnector (QNI)\", \"quote\": \"There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"system normal constraints were limiting imports across the Terranora interconnector to around 60 MW (nominally 107 MW)\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Multiple significant transmission lines around Callide tripped\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of capacity from low to high prices did not significantly contribute to the price exceeding $5,000/MWh, except for in one dispatch interval in the 4.30 pm trading interval in Queensland\"}}, {\"event_date\": \"2021-05-25\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"5.30 pm trading interval\", \"quote\": \"and in NSW for the 5.30 pm trading interval\"}, \"peak_price\": {\"value\": 6848, \"quote\": \"Spot Price $6,848/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"As demand continued to increase over the evening peak, it was cheaper for capacity in Queensland to set the price in NSW rather than dispatching local higher priced generation\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria\"}, {\"label\": \"network_outage\", \"quote\": \"Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria\"}], \"constraints_named\": [{\"id\": \"V>>V_DDSM_1\", \"quote\": \"constraint management - V>>V_DDSM_1 SL\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW interconnector\", \"quote\": \"Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"due to planned network outages in NSW and Victoria\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 2 pm a catastrophic failure of Callide C unit 4 reduced the amount of low priced capacity available to the market Callide B, Callide C, Stanwell and Gladstone Power Stations either went offline or had their output reduced"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Multiple significant transmission lines around Callide tripped"
+          },
+          {
+            "label": "solar_output",
+            "quote": "Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland. This reduced solar capacity which was forecast to be there for 4.30 pm and 5 pm by 190 MW and 81 MW respectively"
+          },
+          {
+            "label": "wind_output",
+            "quote": "Due to the low amount of thermal capacity on in Queensland after the Callide incident, at around 2.15 pm constraints used to manage system strength reduced the output of solar and wind farms in Queensland. This reduced solar capacity which was forecast to be there for 4.30 pm and 5 pm by 190 MW and 81 MW respectively"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of capacity from low to high prices did not significantly contribute to the price exceeding $5,000/MWh, except for in one dispatch interval in the 4.30 pm trading interval in Queensland"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-05-25",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to NSW interconnector (QNI)",
+            "quote": "There was a planned outage of lines in NSW for the upgrade of the Queensland to NSW interconnector (QNI) which limited Queensland's ability to import cheaper generation from NSW"
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "system normal constraints were limiting imports across the Terranora interconnector to around 60 MW (nominally 107 MW)"
+          }
+        ],
+        "intervals": {
+          "quote": "On 25 May 2021 the spot price in Queensland exceeded $5,000/MWh for the 4.30 pm to 6.30 pm trading intervals",
+          "text": "4.30 pm to 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Multiple significant transmission lines around Callide tripped",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland ranged between $4,988/MWh and $15,000/MWh for the 4.30 pm to 7 pm trading intervals",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not significantly contribute to the price exceeding $5,000/MWh, except for in one dispatch interval in the 4.30 pm trading interval in Queensland",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "As demand continued to increase over the evening peak, it was cheaper for capacity in Queensland to set the price in NSW rather than dispatching local higher priced generation"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "There was already over 2,300 MW of baseload generation in Queensland and 2,600 MW in NSW unavailable, mainly due to planned outages"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>V_DDSM_1",
+            "quote": "constraint management - V>>V_DDSM_1 SL"
+          }
+        ],
+        "event_date": "2021-05-25",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW interconnector",
+            "quote": "Imports from Victoria over the VIC-NSW interconnector were around 570 MW, about a third of its nominal limit, due to planned network outages in NSW and Victoria"
+          }
+        ],
+        "intervals": {
+          "quote": "and in NSW for the 5.30 pm trading interval",
+          "text": "5.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "due to planned network outages in NSW and Victoria",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot Price $6,848/MWh",
+          "value": 6848
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20210525_$5000_Qld_and_NSW_Report_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/20210525%20%245000%20Qld%20and%20NSW%20Report_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6526,
+    "per_attempt": [
+      {
+        "completion_tokens": 6526,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5291
+        },
+        "prompt_tokens": 18386,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 24912
+      }
+    ],
+    "prompt_tokens": 18386,
+    "reasoning_tokens": 5291,
+    "total_tokens": 24912
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:23:44+00:00",
+  "failure": null,
+  "input_sha256": "1b800fc9ba9b6b1416e46015978a72bafe39afbf3e12e401b94006d0c116718c",
+  "key": "1e61318691ab38ffc4e3cad3db6c68593104874dd89335cc456b3ce04335ed51",
+  "latency_s": 71.6,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-05-22\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"Trading interval ending 6:30 pm; 5-minute dispatch intervals from 5:55 pm to 6:20 pm\", \"quote\": \"Dispatch of the high-priced capacity saw the 5- minute dispatch price increase from $80/MWh at 5.45 pm to $9995/MWh from 5.55 pm to 6.20 pm before falling to $260/MWh at 6.25 pm.\"}, \"peak_price\": {\"value\": 9995, \"quote\": \"Dispatch of the high-priced capacity saw the 5- minute dispatch price increase from $80/MWh at 5.45 pm to $9995/MWh from 5.55 pm to 6.20 pm before falling to $260/MWh at 6.25 pm.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"At 4.50 pm, Hydro Tasmania rebid 965 MW of capacity across its portfolio from prices below $270/MWh to above $9400/MWh. The reason given was \\\"1635A Tas demand > forecast, P5 Vic prices < Forecast SL\\\".\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Late on Saturday afternoon, however, Hydro Tasmania rebid 965 MW of low-priced capacity into prices above $9400/MWh for this period. This resulted in around half of available generation in Tasmania priced below $270/MWh and half priced above $9000/MWh during the time of high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "At 4.50 pm, Hydro Tasmania rebid 965 MW of capacity across its portfolio from prices below $270/MWh to above $9400/MWh. The reason given was \"1635A Tas demand > forecast, P5 Vic prices < Forecast SL\"."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2010-05-22",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "Dispatch of the high-priced capacity saw the 5- minute dispatch price increase from $80/MWh at 5.45 pm to $9995/MWh from 5.55 pm to 6.20 pm before falling to $260/MWh at 6.25 pm.",
+          "text": "Trading interval ending 6:30 pm; 5-minute dispatch intervals from 5:55 pm to 6:20 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Dispatch of the high-priced capacity saw the 5- minute dispatch price increase from $80/MWh at 5.45 pm to $9995/MWh from 5.55 pm to 6.20 pm before falling to $260/MWh at 6.25 pm.",
+          "value": 9995
+        },
+        "rebid_set_price": {
+          "quote": "Late on Saturday afternoon, however, Hydro Tasmania rebid 965 MW of low-priced capacity into prices above $9400/MWh for this period. This resulted in around half of available generation in Tasmania priced below $270/MWh and half priced above $9000/MWh during the time of high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_22_May_2010_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_22%20May%202010%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3555,
+    "per_attempt": [
+      {
+        "completion_tokens": 3555,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3120
+        },
+        "prompt_tokens": 3694,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7249
+      }
+    ],
+    "prompt_tokens": 3694,
+    "reasoning_tokens": 3120,
+    "total_tokens": 7249
+  }
+}

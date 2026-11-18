@@ -1,0 +1,84 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:10:54+00:00",
+  "failure": null,
+  "input_sha256": "0cb985e7bdb3e744796b550dc79a69fdd1d9ae588d32a493518eaf9f19350fcc",
+  "key": "d13d216491c1ce9eea6a51dc48266a4aa5d2097a1df703af2c3daa4a64db20f7",
+  "latency_s": 61.92,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-06-01\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"10 am trading interval\", \"quote\": \"On 1 June 2009, the spot market price in Tasmania reached $9159/MWh for the 10 am trading interval.\"}, \"peak_price\": {\"value\": 9159, \"quote\": \"On 1 June 2009, the spot market price in Tasmania reached $9159/MWh for the 10 am trading interval.\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"The high spot price was primarily a result of Hydro Tasmania rebidding around 960 MW of capacity from prices below $300/MWh to prices above $9000/MWh.\"}, {\"label\": \"network_outage\", \"quote\": \"At 8.49 am NEMMCO invoked a constraint to manage an unplanned outage of the Chapel Street - New Norfolk 110kV line. This constraint reduced dispatch of generation at Lake Echo, Meadowbank, Tarraleah and Tungatinah down from forecasts of 192 MW four hours ahead to 130 MW for the 10 am trading interval.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports along Basslink into Tasmania were 300 MW higher than forecast four hours ahead. At the time of the high price, flow from Victoria to Tasmania was at the 375 MW limit set by Tasmania's Frequency Control System Protection Scheme.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Imports along Basslink into Tasmania were 300 MW higher than forecast four hours ahead. At the time of the high price, flow from Victoria to Tasmania was at the 375 MW limit set by Tasmania's Frequency Control System Protection Scheme.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At 8.49 am NEMMCO invoked a constraint to manage an unplanned outage of the Chapel Street - New Norfolk 110kV line. This constraint reduced dispatch of generation at Lake Echo, Meadowbank, Tarraleah and Tungatinah down from forecasts of 192 MW four hours ahead to 130 MW for the 10 am trading interval.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The high spot price was primarily a result of Hydro Tasmania rebidding around 960 MW of capacity from prices below $300/MWh to prices above $9000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "The high spot price was primarily a result of Hydro Tasmania rebidding around 960 MW of capacity from prices below $300/MWh to prices above $9000/MWh."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At 8.49 am NEMMCO invoked a constraint to manage an unplanned outage of the Chapel Street - New Norfolk 110kV line. This constraint reduced dispatch of generation at Lake Echo, Meadowbank, Tarraleah and Tungatinah down from forecasts of 192 MW four hours ahead to 130 MW for the 10 am trading interval."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports along Basslink into Tasmania were 300 MW higher than forecast four hours ahead. At the time of the high price, flow from Victoria to Tasmania was at the 375 MW limit set by Tasmania's Frequency Control System Protection Scheme."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-06-01",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Imports along Basslink into Tasmania were 300 MW higher than forecast four hours ahead. At the time of the high price, flow from Victoria to Tasmania was at the 375 MW limit set by Tasmania's Frequency Control System Protection Scheme."
+          }
+        ],
+        "intervals": {
+          "quote": "On 1 June 2009, the spot market price in Tasmania reached $9159/MWh for the 10 am trading interval.",
+          "text": "10 am trading interval"
+        },
+        "network_outages": {
+          "quote": "At 8.49 am NEMMCO invoked a constraint to manage an unplanned outage of the Chapel Street - New Norfolk 110kV line. This constraint reduced dispatch of generation at Lake Echo, Meadowbank, Tarraleah and Tungatinah down from forecasts of 192 MW four hours ahead to 130 MW for the 10 am trading interval.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 1 June 2009, the spot market price in Tasmania reached $9159/MWh for the 10 am trading interval.",
+          "value": 9159
+        },
+        "rebid_set_price": {
+          "quote": "The high spot price was primarily a result of Hydro Tasmania rebidding around 960 MW of capacity from prices below $300/MWh to prices above $9000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_1_June_2009_-_TAS.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_1%20June%202009%20-%20TAS.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2332,
+    "per_attempt": [
+      {
+        "completion_tokens": 2332,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1735
+        },
+        "prompt_tokens": 2405,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4737
+      }
+    ],
+    "prompt_tokens": 2405,
+    "reasoning_tokens": 1735,
+    "total_tokens": 4737
+  }
+}

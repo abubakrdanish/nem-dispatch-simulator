@@ -1,0 +1,151 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:09:28+00:00",
+  "failure": null,
+  "input_sha256": "97c237ed2e26bd78a0a7e4570804e9dd42a1e4ed3106033b27cef5b37df12da0",
+  "key": "65d1d4d2bf7a8ab2eb5a738e71e34cde411157640f30da9bd018ebb202d65785",
+  "latency_s": 92.39,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-01-31\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"30-minute periods between 6 pm and 7 pm\", \"quote\": \"On 31 January 2022, the wholesale price for electricity in Queensland was between $6,798/MWh and $12,179/MWh for the 30-minute periods between 6 pm and 7 pm.\"}, \"peak_price\": {\"value\": 12179, \"quote\": \"On 31 January 2022, the wholesale price for electricity in Queensland was between $6,798/MWh and $12,179/MWh for the 30-minute periods between 6 pm and 7 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The high priced intervals coincided with the times of high demand, meaning more expensive generation was needed at these times.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Over 1,800 MW of baseload generation was offline on both days due to technical issues.\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-NSW interconnector (QNI)\", \"quote\": \"The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW.\"}, {\"name\": \"Terranora DC interconnector\", \"quote\": \"Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}}, {\"event_date\": \"2022-02-01\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"30-minute periods between 5.30 pm and 7 pm\", \"quote\": \"On 1 February the 30-minute price was between $13,429/MWh and $14,682/MWh for the 30-minute periods between 5.30 pm and 7 pm.\"}, \"peak_price\": {\"value\": 14682, \"quote\": \"On 1 February the 30-minute price was between $13,429/MWh and $14,682/MWh for the 30-minute periods between 5.30 pm and 7 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand on 1 February was the highest this summer to date.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Over 1,800 MW of baseload generation was offline on both days due to technical issues.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 3.20 pm, one of Stanwell's coal generators, Tarong 2 tripped and did not return to service until around 6.45 pm.\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"AEMO activated reliability emergency reserve trader (RERT) contracts in Queensland, from 5 pm until 9.30 pm, leading to intervention pricing arrangements.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-NSW interconnector (QNI)\", \"quote\": \"The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW.\"}, {\"name\": \"Terranora DC interconnector\", \"quote\": \"Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The high priced intervals coincided with the times of high demand, meaning more expensive generation was needed at these times."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Over 1,800 MW of baseload generation was offline on both days due to technical issues."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-01-31",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-NSW interconnector (QNI)",
+            "quote": "The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW."
+          },
+          {
+            "name": "Terranora DC interconnector",
+            "quote": "Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 31 January 2022, the wholesale price for electricity in Queensland was between $6,798/MWh and $12,179/MWh for the 30-minute periods between 6 pm and 7 pm.",
+          "text": "30-minute periods between 6 pm and 7 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 31 January 2022, the wholesale price for electricity in Queensland was between $6,798/MWh and $12,179/MWh for the 30-minute periods between 6 pm and 7 pm.",
+          "value": 12179
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand on 1 February was the highest this summer to date."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Over 1,800 MW of baseload generation was offline on both days due to technical issues."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 3.20 pm, one of Stanwell's coal generators, Tarong 2 tripped and did not return to service until around 6.45 pm."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constrained interconnectors meant up to 440 MW of capacity could not reach Queensland, during the time of the high prices."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "AEMO activated reliability emergency reserve trader (RERT) contracts in Queensland, from 5 pm until 9.30 pm, leading to intervention pricing arrangements."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-02-01",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-NSW interconnector (QNI)",
+            "quote": "The Queensland-NSW interconnector (QNI) was limited to around 250 MW, its nominal capacity can be up to 600 MW."
+          },
+          {
+            "name": "Terranora DC interconnector",
+            "quote": "Imports on the Terranora DC interconnector were limited to around 17 MW, its nominal capacity is 107 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 1 February the 30-minute price was between $13,429/MWh and $14,682/MWh for the 30-minute periods between 5.30 pm and 7 pm.",
+          "text": "30-minute periods between 5.30 pm and 7 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 1 February the 30-minute price was between $13,429/MWh and $14,682/MWh for the 30-minute periods between 5.30 pm and 7 pm.",
+          "value": 14682
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/31_January__&_1_February_2022_$5K_Energy_-_Report_Qld.pdf",
+    "url": "https://www.aer.gov.au/system/files/31%20January%20%20%26%201%20February%202022%20%245K%20Energy%20-%20Report%20Qld.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5259,
+    "per_attempt": [
+      {
+        "completion_tokens": 5259,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4147
+        },
+        "prompt_tokens": 13567,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 18826
+      }
+    ],
+    "prompt_tokens": 13567,
+    "reasoning_tokens": 4147,
+    "total_tokens": 18826
+  }
+}

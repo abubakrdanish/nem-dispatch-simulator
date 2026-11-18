@@ -1,0 +1,241 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:08:51+00:00",
+  "failure": null,
+  "input_sha256": "840dd3d332c01733c19587f609eab4f7b64aeb72d270bc9810644a5516d5a2b3",
+  "key": "3585619d46e5951c71dade93d396c2519e073d62f88354cb5d69a26f82e68cf9",
+  "latency_s": 301.78,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-10\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4 pm, 4.30 pm, 5 pm\", \"quote\": \"Tue 10-Nov 4 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2893 2873 2777 Spot Price ($MW/h) 10000 10000 10000 Available capacity (MW) 3124 3098 3084\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval.\"}], \"constraints_named\": [{\"id\": \"constraint used to manage the NSW Murraylink runback scheme\", \"quote\": \"The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"reducing imports across the Heywood interconnector\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink import limit\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"At other times the reduction in import capability compared to that forecast was not the result of network outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}, {\"event_date\": \"2009-11-11\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3.30 pm, 4 pm, 4.30 pm, 5 pm, 5.30 pm\", \"quote\": \"Wed 11-Nov 3.30 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2925 3039 3064 Spot Price 5062 10000 10000 Available capacity (MW) 3082 3124 3095\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval.\"}], \"constraints_named\": [{\"id\": \"constraint used to manage the NSW Murraylink runback scheme\", \"quote\": \"The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"reducing imports across the Heywood interconnector\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink import limit\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"At other times the reduction in import capability compared to that forecast was not the result of network outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}, {\"event_date\": \"2009-11-12\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3.30 pm, 4 pm, 4.30 pm, 5 pm\", \"quote\": \"Thu 12-Nov 3.30 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2810 2944 2947 Spot Price 10000 10000 10000 Available capacity (MW) 2873 3135 3122\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"On Thursday 12 November at around 2 pm, Babcock and Brown's Northern power station unit one tripped from 247 MW. This led to a short period of very low reserves.\"}, {\"label\": \"network_outage\", \"quote\": \"On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW.\"}], \"constraints_named\": [{\"id\": \"constraint used to manage the NSW Murraylink runback scheme\", \"quote\": \"The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"reducing imports across the Heywood interconnector\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink import limit\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}, {\"event_date\": \"2009-11-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4 pm, 4.30 pm\", \"quote\": \"Fri 13-Nov 4 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2856 2930 2989 Spot Price 10000 10000 10000 Available capacity (MW) 2875 2831 2874\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval.\"}], \"constraints_named\": [{\"id\": \"constraint used to manage the NSW Murraylink runback scheme\", \"quote\": \"The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"reducing imports across the Heywood interconnector\"}, {\"name\": \"Murraylink\", \"quote\": \"Murraylink import limit\"}], \"network_outages\": {\"value\": \"did_not_contribute\", \"quote\": \"At other times the reduction in import capability compared to that forecast was not the result of network outages.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint used to manage the NSW Murraylink runback scheme",
+            "quote": "The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme."
+          }
+        ],
+        "event_date": "2009-11-10",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "reducing imports across the Heywood interconnector"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink import limit"
+          }
+        ],
+        "intervals": {
+          "quote": "Tue 10-Nov 4 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2893 2873 2777 Spot Price ($MW/h) 10000 10000 10000 Available capacity (MW) 3124 3098 3084",
+          "text": "4 pm, 4.30 pm, 5 pm"
+        },
+        "network_outages": {
+          "quote": "At other times the reduction in import capability compared to that forecast was not the result of network outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint used to manage the NSW Murraylink runback scheme",
+            "quote": "The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme."
+          }
+        ],
+        "event_date": "2009-11-11",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "reducing imports across the Heywood interconnector"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink import limit"
+          }
+        ],
+        "intervals": {
+          "quote": "Wed 11-Nov 3.30 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2925 3039 3064 Spot Price 5062 10000 10000 Available capacity (MW) 3082 3124 3095",
+          "text": "3.30 pm, 4 pm, 4.30 pm, 5 pm, 5.30 pm"
+        },
+        "network_outages": {
+          "quote": "At other times the reduction in import capability compared to that forecast was not the result of network outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "On Thursday 12 November at around 2 pm, Babcock and Brown's Northern power station unit one tripped from 247 MW. This led to a short period of very low reserves."
+          },
+          {
+            "label": "network_outage",
+            "quote": "On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint used to manage the NSW Murraylink runback scheme",
+            "quote": "The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme."
+          }
+        ],
+        "event_date": "2009-11-12",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "reducing imports across the Heywood interconnector"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink import limit"
+          }
+        ],
+        "intervals": {
+          "quote": "Thu 12-Nov 3.30 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2810 2944 2947 Spot Price 10000 10000 10000 Available capacity (MW) 2873 3135 3122",
+          "text": "3.30 pm, 4 pm, 4.30 pm, 5 pm"
+        },
+        "network_outages": {
+          "quote": "On Thursday 12 November between 5.20 am and 4.35 pm a planned network outage of the Heywood to Moorabool No.1 500kV line in Victoria reduced imports into South Australia to 250 MW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme temperatures, with the first-ever November heatwave, saw maximum demand above 2800 MW each day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia were at the limit but lower than that forecast four hours ahead for every high priced trading interval."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "constraint used to manage the NSW Murraylink runback scheme",
+            "quote": "The import limits were driven by the constraint used to manage the NSW Murraylink runback scheme."
+          }
+        ],
+        "event_date": "2009-11-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "reducing imports across the Heywood interconnector"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Murraylink import limit"
+          }
+        ],
+        "intervals": {
+          "quote": "Fri 13-Nov 4 pm Actual 4 hr forecast 12 hr forecast Demand (MW) 2856 2930 2989 Spot Price 10000 10000 10000 Available capacity (MW) 2875 2831 2874",
+          "text": "4 pm, 4.30 pm"
+        },
+        "network_outages": {
+          "quote": "At other times the reduction in import capability compared to that forecast was not the result of network outages.",
+          "value": "did_not_contribute"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_10_to_13_November_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_10%20to%2013%20November%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 15278,
+    "per_attempt": [
+      {
+        "completion_tokens": 15278,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13437
+        },
+        "prompt_tokens": 21103,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 36381
+      }
+    ],
+    "prompt_tokens": 21103,
+    "reasoning_tokens": 13437,
+    "total_tokens": 36381
+  }
+}

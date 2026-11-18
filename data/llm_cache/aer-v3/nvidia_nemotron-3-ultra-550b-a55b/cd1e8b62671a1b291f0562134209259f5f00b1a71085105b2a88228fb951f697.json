@@ -1,0 +1,93 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:55:06+00:00",
+  "failure": null,
+  "input_sha256": "1e0b47a9fb06bbeeaac9a127fbaea15b686642ffba84aeac38af98514237a8df",
+  "key": "cd1e8b62671a1b291f0562134209259f5f00b1a71085105b2a88228fb951f697",
+  "latency_s": 81.64,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-02\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"5 pm and 5.30 pm trading intervals\", \"quote\": \"The spot price exceeded $5000/MWh , which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.\"}, \"peak_price\": {\"value\": 13400, \"quote\": \"reaching $6456/MWh and $13 400/MWh respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Temperatures in Queensland were high for several days in the lead up to the high price events. On the day, the maximum temperature in Brisbane reached 33 degrees, resulting in high demand for electricity.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The ability to transfer electricity from neighbouring regions of the NEM was significantly constrained due to limitations in the network. These limitations prevented other cheaper sources of electricity from competing with generation in Queensland and remaining local demand had to be met by local generation.\"}], \"constraints_named\": [{\"id\": \"N>>N- NIL__3_OPENED\", \"quote\": \"CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL\"}, {\"id\": \"N^^Q_NIL_B1\", \"quote\": \"CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL\"}], \"interconnectors_named\": [{\"name\": \"Queensland - New South Wales Interconnector (QNI)\", \"quote\": \"The Queensland - New South Wales Interconnector (QNI) consists of two high voltage AC transmission lines between Armidale, in New South Wales and Bulli Creek in Queensland.\"}, {\"name\": \"Terranora\", \"quote\": \"A second underground DC link (Terranora) allows energy to be transferred from Mullumbimby, New South Wales north to Queensland along the coast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Temperatures in Queensland were high for several days in the lead up to the high price events. On the day, the maximum temperature in Brisbane reached 33 degrees, resulting in high demand for electricity."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The ability to transfer electricity from neighbouring regions of the NEM was significantly constrained due to limitations in the network. These limitations prevented other cheaper sources of electricity from competing with generation in Queensland and remaining local demand had to be met by local generation."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N- NIL__3_OPENED",
+            "quote": "CONSTRAINT MANAGEMENT - N>>N- NIL__3_OPENED SL"
+          },
+          {
+            "id": "N^^Q_NIL_B1",
+            "quote": "CONSTRAINT MANAGEMENT - N^^Q_NIL_B1 SL"
+          }
+        ],
+        "event_date": "2017-02-02",
+        "interconnectors_named": [
+          {
+            "name": "Queensland - New South Wales Interconnector (QNI)",
+            "quote": "The Queensland - New South Wales Interconnector (QNI) consists of two high voltage AC transmission lines between Armidale, in New South Wales and Bulli Creek in Queensland."
+          },
+          {
+            "name": "Terranora",
+            "quote": "A second underground DC link (Terranora) allows energy to be transferred from Mullumbimby, New South Wales north to Queensland along the coast."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price exceeded $5000/MWh , which is the threshold for the AER to produce this report, for the 5 pm and 5.30 pm trading interval (in bold) reaching $6456/MWh and $13 400/MWh respectively.",
+          "text": "5 pm and 5.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $6456/MWh and $13 400/MWh respectively.",
+          "value": 13400
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity by generators during the day from low to high prices (which can put upward pressure on prices), did not contribute to the spot price exceeding $5000/MWh on this occasion.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_2_February_2017_(QLD)_2.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%202%20February%202017%20%28QLD%29_2.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4625,
+    "per_attempt": [
+      {
+        "completion_tokens": 4625,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4069
+        },
+        "prompt_tokens": 14733,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 19358
+      }
+    ],
+    "prompt_tokens": 14733,
+    "reasoning_tokens": 4069,
+    "total_tokens": 19358
+  }
+}

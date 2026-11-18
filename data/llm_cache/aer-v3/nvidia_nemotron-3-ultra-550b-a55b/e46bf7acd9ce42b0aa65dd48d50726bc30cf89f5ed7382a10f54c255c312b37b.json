@@ -1,0 +1,88 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:31:00+00:00",
+  "failure": null,
+  "input_sha256": "9616441c7e91d740686e753f5a30af8bf788c6554b48ec7fd5a8d884d46b4796",
+  "key": "e46bf7acd9ce42b0aa65dd48d50726bc30cf89f5ed7382a10f54c255c312b37b",
+  "latency_s": 76.63,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-01-03\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.\", \"quote\": \"The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.\"}, \"peak_price\": {\"value\": 5134, \"quote\": \"The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"A combination of near record demand, reductions in available capacity, and the sudden loss of 400 MW at Millmerran were the most significant factors contributing to the spot price exceeding $5000/MWh.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 2.15pm, unit 2 at Millmerran tripped from 400 MW.\"}, {\"label\": \"rebids\", \"quote\": \"At 1.07pm, Enertrade shifted 175 MW of capacity at Gladstone from prices of less than $60/MWh to $280/MWh. The rebid reason given was 'Material changes in market conditions::change MW distribution'. Following this rebid, prices in Queensland increased to $300/MWh.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Flows across the New South Wales to Queensland (QNI) interconnector into Queensland were between 244 MW and 418 MW during the trading interval, peaking at 554 MW at 2.20pm following the loss of the generator at Millmerran.\"}, {\"name\": \"DirectLink\", \"quote\": \"Flows across DirectLink were between zero and 30 MW south - counter price. This was as a result of a direction by NEMMCO to an MNSP.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "A combination of near record demand, reductions in available capacity, and the sudden loss of 400 MW at Millmerran were the most significant factors contributing to the spot price exceeding $5000/MWh."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 2.15pm, unit 2 at Millmerran tripped from 400 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 1.07pm, Enertrade shifted 175 MW of capacity at Gladstone from prices of less than $60/MWh to $280/MWh. The rebid reason given was 'Material changes in market conditions::change MW distribution'. Following this rebid, prices in Queensland increased to $300/MWh."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-01-03",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Flows across the New South Wales to Queensland (QNI) interconnector into Queensland were between 244 MW and 418 MW during the trading interval, peaking at 554 MW at 2.20pm following the loss of the generator at Millmerran."
+          },
+          {
+            "name": "DirectLink",
+            "quote": "Flows across DirectLink were between zero and 30 MW south - counter price. This was as a result of a direction by NEMMCO to an MNSP."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.",
+          "text": "The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland for the trading interval ending 2.30pm was $5134/MWh.",
+          "value": 5134
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_3_January_2006_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_3%20January%202006%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4863,
+    "per_attempt": [
+      {
+        "completion_tokens": 4863,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4363
+        },
+        "prompt_tokens": 4388,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9251
+      }
+    ],
+    "prompt_tokens": 4388,
+    "reasoning_tokens": 4363,
+    "total_tokens": 9251
+  }
+}

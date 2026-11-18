@@ -1,0 +1,340 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:37:41+00:00",
+  "failure": null,
+  "input_sha256": "436fbd20c21c3e40b282b1dbab3f9cfcd1ff4291fc259ec02182903c8b73eeae",
+  "key": "ccaa5d16fa419dc4e1d519b43b74718c272800e30bf4daac4a92acc4664cc221",
+  "latency_s": 314.26,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2008-03-05\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27\", \"quote\": \"Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27\"}, \"peak_price\": {\"value\": 9975, \"quote\": \"Spot price $ 9975/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"bidding behaviour by AGL significantly contributed to the high priced events.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2008-03-06\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76\", \"quote\": \"Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76\"}, \"peak_price\": {\"value\": 9951, \"quote\": \"Spot price $ 9951/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 6 March, two A units and four B units at Torrens Island were online (a total of 1030 MW) with 220 MW offered at the price floor and 810 MW priced at around the price cap.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2008-03-07\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37\", \"quote\": \"Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37\"}, \"peak_price\": {\"value\": 7004, \"quote\": \"Spot price $ 7004/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This extended heatwave caused electricity demand levels never before seen in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 7 March, two A units and four B units at Torrens Island were online (a total of 1030 MW), with 220 MW offered at the price floor and 810 MW priced above $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2008-03-12\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20\", \"quote\": \"Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"Spot price $ 10 000/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"New record demands of 2923 MW, 2935 MW and 3077 MW occurred on 12, 13 and 17 March respectively.\"}, {\"label\": \"rebids\", \"quote\": \"At 4.41 pm AGL rebid 740 MW of capacity across its portfolio from prices below $150/MWh to prices above $9000/MWh. The reason given was 'Interconnector Constraint: MN20823'.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"at around 6 pm on 11 March, unit B3 (200 MW) tripped.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 9.22 am on 12 March unit A4 tripped from 100 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"On 12 March between 4.05 pm and 6.45 pm, lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Imports across the Heywood interconnector were reduced by around 260 MW to less than 120 MW.\"}], \"constraints_named\": [{\"id\": \"MN20823\", \"quote\": \"The reason given was 'Interconnector Constraint: MN20823'.\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On 12 March between 4.05 pm and 6.45 pm, lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This rebid, combined with the reduced import capability, caused the high prices to continue for an hour longer than forecast.\"}}, {\"event_date\": \"2008-03-13\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87\", \"quote\": \"Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"Spot price $ 10 000/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"New record demands of 2923 MW, 2935 MW and 3077 MW occurred on 12, 13 and 17 March respectively.\"}, {\"label\": \"rebids\", \"quote\": \"On 13 March, all eight units at Torrens Island were online (a total of 1280 MW) with 280 MW offered at the price floor and 1000 MW priced at around the price cap.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2008-03-17\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122\", \"quote\": \"Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122\"}, \"peak_price\": {\"value\": 7894, \"quote\": \"4:30 pm $7894 3077 $362 122\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Electricity demand peaked at 3077 MW on 17 March, the highest demand ever recorded in South Australia.\"}, {\"label\": \"rebids\", \"quote\": \"On 17 March, AGL's initial offer saw three Torrens Island A units and four B units online (a total of 1160 MW) with 250 MW offered at the price floor and 910 MW offered above $5000/MWh. At 7.10 am AGL rebid 580 MW from prices above $5000/MWh to prices below $60/MWh. The reason given was '20:02 N Predispatch Demand change: Increase in Vic Demand'. This left 310 MW priced above $5000/MWh at the time of high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}, {\"name\": \"Murraylink\", \"quote\": \"the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "bidding behaviour by AGL significantly contributed to the high priced events."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-05",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27",
+          "text": "Wednesday, 5 March 2008 3:00 pm $9252 2598 $9950 -33 3:30 pm $9950 2624 $9950 -39 4:00 pm $9975 2679 $9950 0 4:30 pm $9967 2703 $9951 16 5:00 pm $9950 2697 $9948 20 5:30 pm $8300 2675 $8726 27"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9975/MWh",
+          "value": 9975
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 6 March, two A units and four B units at Torrens Island were online (a total of 1030 MW) with 220 MW offered at the price floor and 810 MW priced at around the price cap."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-06",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76",
+          "text": "Thursday, 6 March 2008 3:00 pm $9717 2689 $575 155 3:30 pm $9950 2707 $500 105 4:00 pm $9951 2740 $1560 130 4:30 pm $9951 2735 $1800 75 5:00 pm $9950 2715 $1000 76"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9951/MWh",
+          "value": 9951
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This extended heatwave caused electricity demand levels never before seen in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 7 March, two A units and four B units at Torrens Island were online (a total of 1030 MW), with 220 MW offered at the price floor and 810 MW priced above $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-07",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37",
+          "text": "Friday, 7 March 2008 3:30 pm $6979 2758 $6954 -7 4:00 pm $7004 2809 $6954 37"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 7004/MWh",
+          "value": 7004
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "New record demands of 2923 MW, 2935 MW and 3077 MW occurred on 12, 13 and 17 March respectively."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 4.41 pm AGL rebid 740 MW of capacity across its portfolio from prices below $150/MWh to prices above $9000/MWh. The reason given was 'Interconnector Constraint: MN20823'."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "at around 6 pm on 11 March, unit B3 (200 MW) tripped."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 9.22 am on 12 March unit A4 tripped from 100 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "On 12 March between 4.05 pm and 6.45 pm, lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Imports across the Heywood interconnector were reduced by around 260 MW to less than 120 MW."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "MN20823",
+            "quote": "The reason given was 'Interconnector Constraint: MN20823'."
+          }
+        ],
+        "event_date": "2008-03-12",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20",
+          "text": "Wednesday, 12 March 2008 4:30 pm $10 000 2915 $10 000 10 5:00 pm $10 000 2877 $10 000 -19 5:30 pm $10 000 2824 $56 -49 6:00 pm $10 000 2769 $56 -20"
+        },
+        "network_outages": {
+          "quote": "On 12 March between 4.05 pm and 6.45 pm, lightning in the vicinity of Tailem Bend led to the coincident loss of the Tailem Bend to Tungkillo and Tailem Bend to Cherry Gardens 275 kV lines being reclassified as a credible contingency.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 10 000/MWh",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "This rebid, combined with the reduced import capability, caused the high prices to continue for an hour longer than forecast.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "New record demands of 2923 MW, 2935 MW and 3077 MW occurred on 12, 13 and 17 March respectively."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 13 March, all eight units at Torrens Island were online (a total of 1280 MW) with 280 MW offered at the price floor and 1000 MW priced at around the price cap."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-13",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87",
+          "text": "Thursday, 13 March 2008 2:30 pm $8352 2865 $391 154 3:00 pm $10 000 2847 $968 116 3:30 pm $10 000 2876 $10 000 114 4:00 pm $10 000 2904 $10 000 72 4:30 pm $10 000 2935 $10 000 47 5:00 pm $10 000 2925 $10 000 63 5:30 pm $10 000 2900 $10 000 87"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 10 000/MWh",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Electricity demand peaked at 3077 MW on 17 March, the highest demand ever recorded in South Australia."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 17 March, AGL's initial offer saw three Torrens Island A units and four B units online (a total of 1160 MW) with 250 MW offered at the price floor and 910 MW offered above $5000/MWh. At 7.10 am AGL rebid 580 MW from prices above $5000/MWh to prices below $60/MWh. The reason given was '20:02 N Predispatch Demand change: Increase in Vic Demand'. This left 310 MW priced above $5000/MWh at the time of high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "network availability, in particular the import limit into South Australia from Victoria, contributed to the high priced events."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2008-03-17",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "the combined import limit into South Australia across the Murraylink and Heywood interconnectors was less than 450 MW"
+          }
+        ],
+        "intervals": {
+          "quote": "Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122",
+          "text": "Monday, 17 Mar 2008 4:00 pm $7570 3031 $354 85 4:30 pm $7894 3077 $362 122"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4:30 pm $7894 3077 $362 122",
+          "value": 7894
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_5_to_17_March_2008_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_5%20to%2017%20March%202008%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 19748,
+    "per_attempt": [
+      {
+        "completion_tokens": 19748,
+        "completion_tokens_details": {
+          "reasoning_tokens": 15937
+        },
+        "prompt_tokens": 36539,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 56287
+      }
+    ],
+    "prompt_tokens": 36539,
+    "reasoning_tokens": 15937,
+    "total_tokens": 56287
+  }
+}

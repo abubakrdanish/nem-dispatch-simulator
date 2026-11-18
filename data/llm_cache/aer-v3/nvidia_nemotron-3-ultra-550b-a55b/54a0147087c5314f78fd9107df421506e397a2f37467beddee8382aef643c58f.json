@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:23:17+00:00",
+  "failure": null,
+  "input_sha256": "af66181bd774c8c4f48a8f764c7970c7ac8bd88facd73b7fb032a746e4000386",
+  "key": "54a0147087c5314f78fd9107df421506e397a2f37467beddee8382aef643c58f",
+  "latency_s": 71.96,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-20\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"10 trading intervals\", \"quote\": \"the spot price in New South Wales and Queensland exceeded $5000/MWh for 10 trading intervals in total\"}, \"peak_price\": {\"value\": 9284, \"quote\": \"reaching a maximum of $9284/MWh and $8388/MWh respectively\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature in Sydney reached 40 degrees. This saw demand reach 13 276MW, which was 1400 MW greater than that forecast four hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Around 3000 MW of New South Wales generation was not offered into the market on the day.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Eraring unit two 660 Plant problems - shutdown on 19 November\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages in New South Wales significantly reduced import capability from Victoria but the impact of these outages was not forecast.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Flows across all interconnectors into New South Wales exceeded the limit for the majority of the time between 9.45 am and 11.20 am.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"At 10 am, in response to low reserves in New South Wales, AEMO issued a direction to Delta Electricity to bid Colongra unit one available. The direction was cancelled at 11.35 am. Intervention pricing was applied for the period from 10.10 am to 11.35 am.\"}], \"constraints_named\": [{\"id\": \"QNI\", \"quote\": \"The reason given was \\\"QNI constraint\\\"\"}], \"interconnectors_named\": [{\"name\": \"QNI (NSW-QLD)\", \"quote\": \"The two interconnectors between New South Wales and Queensland were constrained.\"}, {\"name\": \"VIC-NSW\", \"quote\": \"Planned network outages in New South Wales significantly reduced import capability from Victoria\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages in New South Wales significantly reduced import capability from Victoria but the impact of these outages was not forecast.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature in Sydney reached 40 degrees. This saw demand reach 13 276MW, which was 1400 MW greater than that forecast four hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Around 3000 MW of New South Wales generation was not offered into the market on the day."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Eraring unit two 660 Plant problems - shutdown on 19 November"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages in New South Wales significantly reduced import capability from Victoria but the impact of these outages was not forecast."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding in both New South Wales and Queensland also contributed to prices exceeding $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Flows across all interconnectors into New South Wales exceeded the limit for the majority of the time between 9.45 am and 11.20 am."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "At 10 am, in response to low reserves in New South Wales, AEMO issued a direction to Delta Electricity to bid Colongra unit one available. The direction was cancelled at 11.35 am. Intervention pricing was applied for the period from 10.10 am to 11.35 am."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI",
+            "quote": "The reason given was \"QNI constraint\""
+          }
+        ],
+        "event_date": "2009-11-20",
+        "interconnectors_named": [
+          {
+            "name": "QNI (NSW-QLD)",
+            "quote": "The two interconnectors between New South Wales and Queensland were constrained."
+          },
+          {
+            "name": "VIC-NSW",
+            "quote": "Planned network outages in New South Wales significantly reduced import capability from Victoria"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price in New South Wales and Queensland exceeded $5000/MWh for 10 trading intervals in total",
+          "text": "10 trading intervals"
+        },
+        "network_outages": {
+          "quote": "Planned network outages in New South Wales significantly reduced import capability from Victoria but the impact of these outages was not forecast.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "reaching a maximum of $9284/MWh and $8388/MWh respectively",
+          "value": 9284
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_20_November_2009_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_20%20November%202009%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4591,
+    "per_attempt": [
+      {
+        "completion_tokens": 4591,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3970
+        },
+        "prompt_tokens": 13221,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17812
+      }
+    ],
+    "prompt_tokens": 13221,
+    "reasoning_tokens": 3970,
+    "total_tokens": 17812
+  }
+}

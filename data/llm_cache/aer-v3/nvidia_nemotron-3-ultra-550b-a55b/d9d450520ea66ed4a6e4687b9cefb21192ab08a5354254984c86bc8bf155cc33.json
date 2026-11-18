@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:45:06+00:00",
+  "failure": null,
+  "input_sha256": "dc5d3fb043a7a3fbac0ecb217d128d6e62516ccdacedb94769a11845ef08904e",
+  "key": "d9d450520ea66ed4a6e4687b9cefb21192ab08a5354254984c86bc8bf155cc33",
+  "latency_s": 68.41,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-02-10\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"NSW: 5 pm, 5.30 pm, 6 pm; QLD: 5 pm\", \"quote\": \"only the 5 pm, 5.30 pm and 6 pm trading intervals resulted in actual spot prices above $5000/MWh. ... the actual spot price exceeded $5000/MWh for only the 5 pm trading interval.\"}, \"peak_price\": {\"value\": 14000, \"quote\": \"reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The day was characterised by high temperatures in both states, reaching a maximum of 38 degrees in Sydney and 33 degrees in Brisbane. Accordingly, as expected, demand for electricity was high in both states - prices were also expected to be high.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"One of the main reasons for the high prices was the loss, or unavailability, of a significant volume of supply from New South Wales generators, for technical reasons.\"}, {\"label\": \"constraint_violation\", \"quote\": \"With actual imports exceeding the import limit, constraints on the interconnector, designed to manage system security, 'violated'.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"interconnectors operating beyond their limits led to high prices\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"In accordance with the Electricity Rules, the five-minute price of electricity was set at the market price cap of $14 000/MWh for the duration of the 'load shedding' period in New South Wales only.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Victoria - New South Wales (Vic - NSW) interconnector\", \"quote\": \"New South Wales is connected to Victoria via the Victoria - New South Wales (Vic - NSW) interconnector.\"}, {\"name\": \"Queensland - New South Wales Interconnector (QNI)\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}, {\"name\": \"Terranora\", \"quote\": \"Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The day was characterised by high temperatures in both states, reaching a maximum of 38 degrees in Sydney and 33 degrees in Brisbane. Accordingly, as expected, demand for electricity was high in both states - prices were also expected to be high."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "One of the main reasons for the high prices was the loss, or unavailability, of a significant volume of supply from New South Wales generators, for technical reasons."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "With actual imports exceeding the import limit, constraints on the interconnector, designed to manage system security, 'violated'."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "interconnectors operating beyond their limits led to high prices"
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "In accordance with the Electricity Rules, the five-minute price of electricity was set at the market price cap of $14 000/MWh for the duration of the 'load shedding' period in New South Wales only."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2017-02-10",
+        "interconnectors_named": [
+          {
+            "name": "Victoria - New South Wales (Vic - NSW) interconnector",
+            "quote": "New South Wales is connected to Victoria via the Victoria - New South Wales (Vic - NSW) interconnector."
+          },
+          {
+            "name": "Queensland - New South Wales Interconnector (QNI)",
+            "quote": "Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          },
+          {
+            "name": "Terranora",
+            "quote": "Queensland is connected to New South Wales via two interconnectors - the Queensland - New South Wales Interconnector (QNI) and Terranora."
+          }
+        ],
+        "intervals": {
+          "quote": "only the 5 pm, 5.30 pm and 6 pm trading intervals resulted in actual spot prices above $5000/MWh. ... the actual spot price exceeded $5000/MWh for only the 5 pm trading interval.",
+          "text": "NSW: 5 pm, 5.30 pm, 6 pm; QLD: 5 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $13 967/MWh at 5.30 pm and $14 000/MWh at 6 pm.",
+          "value": 14000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high price events rather the sudden loss of low priced capacity, high demand and interconnectors operating beyond their limits led to high prices and intervention by the market operator.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Price_above_$5000MWh_-_10_February_2017_(NSW_and_Qld)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Price%20above%20%245000MWh%20-%2010%20February%202017%20%28NSW%20and%20Qld%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3977,
+    "per_attempt": [
+      {
+        "completion_tokens": 3977,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3308
+        },
+        "prompt_tokens": 19138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 23115
+      }
+    ],
+    "prompt_tokens": 19138,
+    "reasoning_tokens": 3308,
+    "total_tokens": 23115
+  }
+}

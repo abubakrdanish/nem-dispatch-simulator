@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:40:16+00:00",
+  "failure": null,
+  "input_sha256": "f79f079c77abf84dcec3183a4d87add481459aa5bee20ea358a21f2c2df998e5",
+  "key": "07905ffa575cf173930eafa86b3b6be699e2d8a55abd6e58371f14f2f103dacb",
+  "latency_s": 249.08,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-08-07\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"9:00 am and 6:30 pm trading intervals\", \"quote\": \"The following tables identify the trading intervals in which the spot price exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 12400, \"quote\": \"Spot price $12 400/MWh\"}, \"causes\": [], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no other significant rebidding.\"}}, {\"event_date\": \"2010-08-08\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"6:00 pm, 6:30 pm and 7:30 pm trading intervals\", \"quote\": \"The following tables identify the trading intervals in which the spot price exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 12400, \"quote\": \"Spot price $12 400/MWh\"}, \"causes\": [], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There was no other significant rebidding.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [],
+        "constraints_named": [],
+        "event_date": "2010-08-07",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am."
+          }
+        ],
+        "intervals": {
+          "quote": "The following tables identify the trading intervals in which the spot price exceeded $5000/MWh.",
+          "text": "9:00 am and 6:30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $12 400/MWh",
+          "value": 12400
+        },
+        "rebid_set_price": {
+          "quote": "There was no other significant rebidding.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      },
+      {
+        "causes": [],
+        "constraints_named": [],
+        "event_date": "2010-08-08",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "This was driven by an increase in the forecast import limit into Tasmania from 255 MW to 478 MW at around 3.30 am."
+          }
+        ],
+        "intervals": {
+          "quote": "The following tables identify the trading intervals in which the spot price exceeded $5000/MWh.",
+          "text": "6:00 pm, 6:30 pm and 7:30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $12 400/MWh",
+          "value": 12400
+        },
+        "rebid_set_price": {
+          "quote": "There was no other significant rebidding.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_7_and_8_August_2010_-_Tas.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_7%20and%208%20August%202010%20-%20Tas.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 9593,
+    "per_attempt": [
+      {
+        "completion_tokens": 9593,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9149
+        },
+        "prompt_tokens": 8107,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17700
+      }
+    ],
+    "prompt_tokens": 8107,
+    "reasoning_tokens": 9149,
+    "total_tokens": 17700
+  }
+}

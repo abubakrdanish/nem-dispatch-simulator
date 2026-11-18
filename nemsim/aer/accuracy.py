@@ -29,7 +29,7 @@ from collections import defaultdict
 
 import pandas as pd
 
-from nemsim.aer.extract import LABELS
+from nemsim.aer.extract import LABELS, PRIMARY
 from nemsim.config import ROOT
 
 HAND = ROOT / "data" / "aer_hand_coded.json"
@@ -37,7 +37,6 @@ JUDGED = ROOT / "data" / "aer_judgements.json"
 MODEL_LABELS = ROOT / "results" / "aer_labels.json"
 OUT = ROOT / "results" / "aer_accuracy.csv"
 MIN_POSITIVES, MIN_PRECISION, MIN_RECALL = 3, 0.80, 0.60
-PRIMARY = "nemotron"           # the model whose labels feed the results
 
 
 def _key(file: str, date: str, regions) -> tuple:
@@ -123,10 +122,10 @@ def load_judged(model: str = PRIMARY) -> dict:
     return json.loads(JUDGED.read_text()).get(model, {}) if JUDGED.exists() else {}
 
 
-def usable_labels() -> set[str]:
-    """Labels that passed on the hand-coded sample (results/aer_accuracy.csv, primary model)."""
+def usable_labels(model: str = PRIMARY) -> set[str]:
+    """Labels that passed on the hand-coded sample (results/aer_accuracy.csv) for one configuration."""
     t = pd.read_csv(OUT)
-    t = t[t.model == PRIMARY]
+    t = t[t.model == model]
     return set(t[t.usable.astype(bool)].label)
 
 

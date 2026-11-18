@@ -1,0 +1,117 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:44:49+00:00",
+  "failure": null,
+  "input_sha256": "413782d9b4133f3b269df8c99166379b214624188d50e8b3f1c348b5b9be871c",
+  "key": "9a05cbb6dcb265a50bed1399efb04485545d50b3ae6833065c99a14fc29414b3",
+  "latency_s": 57.36,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-07-21\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm and 6.30 pm trading intervals\", \"quote\": \"The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals respectively.\"}, \"peak_price\": {\"value\": 6564, \"quote\": \"The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"demand reached 8,257 MW at the 6 pm dispatch interval. This is the highest winter demand on record exceeding the previous record of 8,197 MW set in 2008.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The remaining 900 MW of capacity was on planned outages.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Almost 1,500 MW of this capacity was on unplanned outages that occurred at least 2 days prior, about half of which was the Callide C units that had yet to return to service from events on 25 May.\"}, {\"label\": \"network_outage\", \"quote\": \"The outage extension resulted in continued forced exports from Queensland into New South Wales for longer than forecast (Table 3). This contributed to both energy and FCAS high price outcomes.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding capacity to high prices and removing capacity contributed to the high prices.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Co-optimisation between the Energy and FCAS markets.\"}, {\"label\": \"constraint_violation\", \"quote\": \"As this constraint could not be satisfied it violated and when this occurs a violation penalty applies. In this case it was twice the price cap ($15,100/MWh) and contributed to setting the price in energy and FCAS.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There was limited access to low-priced capacity from New South Wales. Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales.\"}], \"constraints_named\": [{\"id\": \"NRM_QLD1_NSW1\", \"quote\": \"AEMO invoked a financial constraint used to limit the accrual of negative residues from Queensland to New South Wales from 5.45 pm through to 9.30 pm.\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales.\"}, {\"name\": \"Terranora\", \"quote\": \"The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors\"}, {\"name\": \"Directlink\", \"quote\": \"Directlink cannot transfer FCAS.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The outage extension resulted in continued forced exports from Queensland into New South Wales for longer than forecast (Table 3). This contributed to both energy and FCAS high price outcomes.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding capacity to high prices and removing capacity contributed to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "demand reached 8,257 MW at the 6 pm dispatch interval. This is the highest winter demand on record exceeding the previous record of 8,197 MW set in 2008."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The remaining 900 MW of capacity was on planned outages."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Almost 1,500 MW of this capacity was on unplanned outages that occurred at least 2 days prior, about half of which was the Callide C units that had yet to return to service from events on 25 May."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The outage extension resulted in continued forced exports from Queensland into New South Wales for longer than forecast (Table 3). This contributed to both energy and FCAS high price outcomes."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding capacity to high prices and removing capacity contributed to the high prices."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Co-optimisation between the Energy and FCAS markets."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "As this constraint could not be satisfied it violated and when this occurs a violation penalty applies. In this case it was twice the price cap ($15,100/MWh) and contributed to setting the price in energy and FCAS."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There was limited access to low-priced capacity from New South Wales. Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_QLD1_NSW1",
+            "quote": "AEMO invoked a financial constraint used to limit the accrual of negative residues from Queensland to New South Wales from 5.45 pm through to 9.30 pm."
+          }
+        ],
+        "event_date": "2021-07-21",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) required Queensland to provide its own FCAS and forced exports from Queensland into New South Wales."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The constraints to manage the line outage forced exports out of Queensland into New South Wales across both the QNI and Terranora interconnectors"
+          },
+          {
+            "name": "Directlink",
+            "quote": "Directlink cannot transfer FCAS."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals respectively.",
+          "text": "6 pm and 6.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "The outage extension resulted in continued forced exports from Queensland into New South Wales for longer than forecast (Table 3). This contributed to both energy and FCAS high price outcomes.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in Queensland reached $5,434/MWh and $6,564/MWh for the 6 pm and 6.30 pm trading intervals respectively.",
+          "value": 6564
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding capacity to high prices and removing capacity contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210721_$5000_QLD_Report_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210721%20%245000%20QLD%20Report_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4861,
+    "per_attempt": [
+      {
+        "completion_tokens": 4861,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4050
+        },
+        "prompt_tokens": 13194,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 18055
+      }
+    ],
+    "prompt_tokens": 13194,
+    "reasoning_tokens": 4050,
+    "total_tokens": 18055
+  }
+}

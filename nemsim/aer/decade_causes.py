@@ -27,8 +27,10 @@ import json
 import duckdb
 import pandas as pd
 
-from nemsim.aer.accuracy import OUT as ACCURACY, PRIMARY, usable_labels
-from nemsim.aer.test import LABELS_FILE
+import sys
+
+from nemsim.aer.accuracy import OUT as ACCURACY, usable_labels
+from nemsim.aer.extract import PRIMARY, labels_file
 from nemsim.config import ROOT
 from nemsim.decade import frame as decade_frame
 
@@ -49,9 +51,9 @@ def reportable() -> pd.DataFrame:
     return g.rename(columns={"regionid": "region"})
 
 
-def aer_day_regions() -> pd.DataFrame:
-    ev = json.loads(LABELS_FILE.read_text())["events"]
-    keep = usable_labels()
+def aer_day_regions(config: str = PRIMARY) -> pd.DataFrame:
+    ev = json.loads(labels_file(config).read_text())["events"]
+    keep = usable_labels(config)
     rows = [{"date": e["event_date"], "region": r, "causes": {c["label"] for c in e["causes"]} & keep,
              "network_statement": e["network_outages"]["value"]} for e in ev for r in e["regions"]]
     d = pd.DataFrame(rows)
@@ -61,22 +63,22 @@ def aer_day_regions() -> pd.DataFrame:
                            else "did_not_contribute" if "did_not_contribute" in set(s) else "not_stated")).reset_index()
 
 
-def run() -> pd.DataFrame:
+def run(config: str = PRIMARY) -> pd.DataFrame:
     rep = reportable()
-    aer = aer_day_regions()
+    aer = aer_day_regions(config)
     aer = aer[(aer.date >= FIRST) & (aer.date <= LAST)]
     x = rep.merge(aer, how="left", on=["date", "region"])
     x["labelled"] = x.causes.notna()
     x["causes"] = x.causes.apply(lambda c: c if isinstance(c, set) else set())
     acc = pd.read_csv(ACCURACY)
-    acc = acc[acc.model == PRIMARY].set_index("label")
+    acc = acc[acc.model == config].set_index("label")
     lab = x[x.labelled]
     rows = [{"group": "reportable day-regions (30-min price > $5,000)", "day_regions": len(x), "value_$m": x.value.sum() / 1e6},
             {"group": "  with an AER event", "day_regions": len(lab), "value_$m": lab.value.sum() / 1e6,
              "share_of_reportable_%": len(lab) / len(x) * 100, "value_share_of_reportable_%": lab.value.sum() / x.value.sum() * 100},
             {"group": "AER events not in the reportable set", "day_regions": len(aer.merge(rep, how="left", on=["date", "region"], indicator=True)
                                                                                  .query("_merge == 'left_only'"))}]
-    for label in sorted(usable_labels()):
+    for label in sorted(usable_labels(config)):
         s = lab[lab.causes.apply(lambda c: label in c)]
         rows.append({"group": f"AER attributed to {label}", "day_regions": len(s), "value_$m": s.value.sum() / 1e6,
                      "share_of_labelled_%": len(s) / len(lab) * 100, "value_share_of_labelled_%": s.value.sum() / lab.value.sum() * 100,
@@ -95,12 +97,12 @@ def run() -> pd.DataFrame:
         rows.append({"group": f"coverage {fy}", "day_regions": len(g), "value_$m": g.value.sum() / 1e6,
                      "share_of_reportable_%": len(lg) / len(g) * 100,
                      "value_share_of_reportable_%": lg.value.sum() / g.value.sum() * 100 if g.value.sum() else float("nan")})
-    out = pd.DataFrame(rows)
-    out.to_csv(OUT, index=False)
+    out = pd.DataFrame(rows).assign(config=config)
+    out.to_csv(OUT if config == PRIMARY else OUT.with_name(f"aer_decade_causes__{config}.csv"), index=False)
     with pd.option_context("display.width", 250, "display.max_columns", 20, "display.max_rows", 100):
         print(out.round(2).to_string(index=False))
     return out
 
 
 if __name__ == "__main__":
-    run()
+    run(sys.argv[1] if len(sys.argv) > 1 else PRIMARY)

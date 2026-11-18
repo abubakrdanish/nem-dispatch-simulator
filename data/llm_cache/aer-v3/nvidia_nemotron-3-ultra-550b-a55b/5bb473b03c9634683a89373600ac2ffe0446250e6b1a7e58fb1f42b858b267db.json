@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:51:37+00:00",
+  "failure": null,
+  "input_sha256": "4b75e7a05b70cb449244c4064169644cad6630d33c4d4f52cfbbeaa1cd689c72",
+  "key": "5bb473b03c9634683a89373600ac2ffe0446250e6b1a7e58fb1f42b858b267db",
+  "latency_s": 45.91,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-20\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm, 6.30 pm and 7 pm 30-minute periods\", \"quote\": \"On 20 December 2021 the wholesale price of electricity in Queensland reached $10,035/MWh, $8,602/MWh and $12,043/MWh for the 6 pm, 6.30 pm and 7 pm 30-minute periods respectively.\"}, \"peak_price\": {\"value\": 12043, \"quote\": \"On 20 December 2021 the wholesale price of electricity in Queensland reached $10,035/MWh, $8,602/MWh and $12,043/MWh for the 6 pm, 6.30 pm and 7 pm 30-minute periods respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High demand, which peaked at 9,146 MW- the highest up to that point of the summer.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Most of the reduced capacity was known and related to Callide B, Callide C, and Gladstone.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"CleanCo's Swanbank unit removed 350 MW of capacity at 11.24 am due to a 'plant trip'. Alinta Energy's Braemar 3 unit failed to start at 4.53 pm removing 172 MW of capacity.\"}, {\"label\": \"solar_output\", \"quote\": \"Falling solar generation further reduced the available supply of low-priced generation for the evening peak demand\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales Interconnector (QNI)\", \"quote\": \"A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding from low to high prices did not contribute to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High demand, which peaked at 9,146 MW- the highest up to that point of the summer."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Most of the reduced capacity was known and related to Callide B, Callide C, and Gladstone."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "CleanCo's Swanbank unit removed 350 MW of capacity at 11.24 am due to a 'plant trip'. Alinta Energy's Braemar 3 unit failed to start at 4.53 pm removing 172 MW of capacity."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Falling solar generation further reduced the available supply of low-priced generation for the evening peak demand"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-20",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales Interconnector (QNI)",
+            "quote": "A system normal constraint limited imports from NSW on the Queensland-New South Wales Interconnector (QNI), further limiting Queensland's access to low-priced generation."
+          }
+        ],
+        "intervals": {
+          "quote": "On 20 December 2021 the wholesale price of electricity in Queensland reached $10,035/MWh, $8,602/MWh and $12,043/MWh for the 6 pm, 6.30 pm and 7 pm 30-minute periods respectively.",
+          "text": "6 pm, 6.30 pm and 7 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 20 December 2021 the wholesale price of electricity in Queensland reached $10,035/MWh, $8,602/MWh and $12,043/MWh for the 6 pm, 6.30 pm and 7 pm 30-minute periods respectively.",
+          "value": 12043
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding from low to high prices did not contribute to the high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000_per_MWh_-_20_December_2021_(Queensland).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000%20per%20MWh%20-%2020%20December%202021%20%28Queensland%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3021,
+    "per_attempt": [
+      {
+        "completion_tokens": 3021,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2445
+        },
+        "prompt_tokens": 6529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9550
+      }
+    ],
+    "prompt_tokens": 6529,
+    "reasoning_tokens": 2445,
+    "total_tokens": 9550
+  }
+}

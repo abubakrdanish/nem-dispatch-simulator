@@ -1,0 +1,138 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:07:49+00:00",
+  "failure": null,
+  "input_sha256": "3943f51d201b08cce3a25f93aa23964ef74a51ff59849c2d4ff917d14f0ac820",
+  "key": "2c0e64536df4f9abae9dab0d6ed457b8753a6033b5f8c02f0172e139ff76fcbd",
+  "latency_s": 136.46,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-03-08\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6:00 pm to 7:30 pm (four 30-minute intervals)\", \"quote\": \"On 8 March 2022, from 6 pm to 7.30 pm, the 30-minute price in the Queensland region breached $5,000/MWh on 4 separate but concurrent intervals.\"}, \"peak_price\": {\"value\": 15100, \"quote\": \"30-minute price $15,100/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Record breaking, higher than forecast demand, driven by high temperatures and high humidity. Record demand on 8 March was recorded (10,088 MW at 7pm)\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 4 illustrates that solar farm generation declined significantly in the late afternoon as the sun set. Coupled with reductions in rooftop PV output (not shown), demand on the grid increased until around 5.00 pm\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"CS Energy Gladstone unit 4 Black coal 280 Planned to be offline since 26 Feb\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"CS Energy Gladstone unit 1 Black coal 280 Offline since 24 Feb - 'tube leak'\"}, {\"label\": \"network_outage\", \"quote\": \"A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constrained interconnectors meant Queensland could only access a net amount of between 4 and 139 MW of capacity from NSW. The combined nominal capacity of both interconnectors is around 707 MW.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Note: The capacity priced less than $5,000/MWh is adjusted to show effective availability, where ramp rate limited capacity could not make it to market.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-NSW interconnector (QNI)\", \"quote\": \"A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW.\"}, {\"name\": \"Terranora\", \"quote\": \"A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes.\"}}, {\"event_date\": \"2022-03-09\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"3:30 am (one 30-minute interval)\", \"quote\": \"On 9 March 2022, at 3.30 am, the 30-minute price was $5,097/MWh.\"}, \"peak_price\": {\"value\": 5097, \"quote\": \"30-minute price $5,097/MWh\"}, \"causes\": [{\"label\": \"ramp_rates\", \"quote\": \"Due to ramping constraints, constrained generators were unable to set the price for the 3.15 am interval so the price was set at $15,100/MWh\"}, {\"label\": \"ramp_rates\", \"quote\": \"22 generators were backed off at their ramp down limit, meaning they could not set price. This effectively prevented these units from setting price as they were ramp-down constrained.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Record breaking, higher than forecast demand, driven by high temperatures and high humidity. Record demand on 8 March was recorded (10,088 MW at 7pm)"
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 4 illustrates that solar farm generation declined significantly in the late afternoon as the sun set. Coupled with reductions in rooftop PV output (not shown), demand on the grid increased until around 5.00 pm"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "CS Energy Gladstone unit 4 Black coal 280 Planned to be offline since 26 Feb"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "CS Energy Gladstone unit 1 Black coal 280 Offline since 24 Feb - 'tube leak'"
+          },
+          {
+            "label": "network_outage",
+            "quote": "A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constrained interconnectors meant Queensland could only access a net amount of between 4 and 139 MW of capacity from NSW. The combined nominal capacity of both interconnectors is around 707 MW."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Note: The capacity priced less than $5,000/MWh is adjusted to show effective availability, where ramp rate limited capacity could not make it to market."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-03-08",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-NSW interconnector (QNI)",
+            "quote": "A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW."
+          },
+          {
+            "name": "Terranora",
+            "quote": "A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "On 8 March 2022, from 6 pm to 7.30 pm, the 30-minute price in the Queensland region breached $5,000/MWh on 4 separate but concurrent intervals.",
+          "text": "6:00 pm to 7:30 pm (four 30-minute intervals)"
+        },
+        "network_outages": {
+          "quote": "A constraint managing a planned outage in Lismore, NSW, limited imports from NSW on the Queensland-NSW interconnector (QNI) and actually forced exports on Terranora, from Queensland into NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "30-minute price $15,100/MWh",
+          "value": 15100
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "ramp_rates",
+            "quote": "Due to ramping constraints, constrained generators were unable to set the price for the 3.15 am interval so the price was set at $15,100/MWh"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "22 generators were backed off at their ramp down limit, meaning they could not set price. This effectively prevented these units from setting price as they were ramp-down constrained."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-03-09",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On 9 March 2022, at 3.30 am, the 30-minute price was $5,097/MWh.",
+          "text": "3:30 am (one 30-minute interval)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "30-minute price $5,097/MWh",
+          "value": 5097
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_8_&_9_March_2022_(Queensland).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%208%20%26%209%20March%202022%20%28Queensland%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4754,
+    "per_attempt": [
+      {
+        "completion_tokens": 4754,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3729
+        },
+        "prompt_tokens": 18860,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 23614
+      }
+    ],
+    "prompt_tokens": 18860,
+    "reasoning_tokens": 3729,
+    "total_tokens": 23614
+  }
+}

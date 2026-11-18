@@ -1,0 +1,135 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:03:17+00:00",
+  "failure": null,
+  "input_sha256": "d1448469819daf49519152f93671c202cede03ad1632081ded64570b7c434d6d",
+  "key": "429d87eae98f56da34e34ad87e2387ca978a555a9654d669792ca2b761a6e584",
+  "latency_s": 101.85,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-30\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 pm and 8 pm 30-minute periods\", \"quote\": \"On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.\"}, \"peak_price\": {\"value\": 8456, \"quote\": \"On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures drive a high demand for electricity through air conditioners.\"}, {\"label\": \"wind_output\", \"quote\": \"There is over 2,100 MW of registered wind generation in South Australia, but only around 50 MW of wind generation was available during the times of high prices, significantly reducing the supply of low priced generation.\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}}, {\"event_date\": \"2021-12-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7 pm 30-minute period\", \"quote\": \"On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.\"}, \"peak_price\": {\"value\": 6368, \"quote\": \"On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures drive a high demand for electricity through air conditioners.\"}, {\"label\": \"wind_output\", \"quote\": \"There is over 2,100 MW of registered wind generation in South Australia, but only around 50 MW of wind generation was available during the times of high prices, significantly reducing the supply of low priced generation.\"}, {\"label\": \"solar_output\", \"quote\": \"Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures drive a high demand for electricity through air conditioners."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There is over 2,100 MW of registered wind generation in South Australia, but only around 50 MW of wind generation was available during the times of high prices, significantly reducing the supply of low priced generation."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-30",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse."
+          }
+        ],
+        "intervals": {
+          "quote": "On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.",
+          "text": "7.30 pm and 8 pm 30-minute periods"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 30 December 2021, the 30-minute wholesale price for electricity in South Australia reached $8,456/MWh and $5,279/MWh for the 7.30 pm and 8 pm 30-minute periods.",
+          "value": 8456
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures drive a high demand for electricity through air conditioners."
+          },
+          {
+            "label": "wind_output",
+            "quote": "There is over 2,100 MW of registered wind generation in South Australia, but only around 50 MW of wind generation was available during the times of high prices, significantly reducing the supply of low priced generation."
+          },
+          {
+            "label": "solar_output",
+            "quote": "Figure 1 shows how solar farm availability was declining at the time, as the sun was setting, reducing available supply."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-31",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "A constraint managing transmission lines in NSW limited imports across Murraylink to avoid a voltage collapse."
+          }
+        ],
+        "intervals": {
+          "quote": "On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.",
+          "text": "7 pm 30-minute period"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On 31 December at 7 pm the 30-minute price reached $6,368/MWh in South Australia.",
+          "value": 6368
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity to higher prices did not contribute to the price outcomes on these days.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/30_&_31_December_2021_$5000_Energy_-_Report_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/30%20%26%2031%20December%202021%20%245000%20Energy%20-%20Report%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6226,
+    "per_attempt": [
+      {
+        "completion_tokens": 6226,
+        "completion_tokens_details": {
+          "reasoning_tokens": 5396
+        },
+        "prompt_tokens": 7798,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14024
+      }
+    ],
+    "prompt_tokens": 7798,
+    "reasoning_tokens": 5396,
+    "total_tokens": 14024
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:57:24+00:00",
+  "failure": null,
+  "input_sha256": "bc9d861483a537aba5b2027359f5e816e015bd3328bd0f0e9b4a4dcbff390e03",
+  "key": "2a2c5ac10cab216e7090c5f22400e850043fa99d4f262f0e3ba7e771b6bcbe5f",
+  "latency_s": 64.51,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-07-07\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7.30 pm trading interval\", \"quote\": \"the spot price exceeded $5000/MWh only once, reaching $8898/MWh for the 7.30 pm trading interval\"}, \"peak_price\": {\"value\": 8898, \"quote\": \"reaching $8898/MWh for the 7.30 pm trading interval\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity\"}, {\"label\": \"wind_output\", \"quote\": \"While there is in the order of 1200 MW of Semi-scheduled wind installed in South Australia, on the day it was generating below 20 MW, as forecast\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"While two gas generators; Pelican Point Power Station and Torrens Island B3, were unavailable on planned outages the remaining available generating capacity was dispatched\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network constraints were invoked to manage a planned network outage on equipment at Tailem Bend in South Australia as part of the Heywood interconnector upgrade. On 7 July, these constraints reduced the import limit into South Australia and limited generation in the south east of the State\"}], \"constraints_named\": [{\"id\": \"V::S_TB_275kV_W_B1\", \"quote\": \"The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of the Tailem Bend West bus\"}], \"interconnectors_named\": [{\"name\": \"Heywood Interconnector\", \"quote\": \"Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity\"}, {\"name\": \"MurrayLink\", \"quote\": \"The MurrayLink interconnector was limited to between 180 MW and 220 MW (its nominal limit)\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity"
+          },
+          {
+            "label": "wind_output",
+            "quote": "While there is in the order of 1200 MW of Semi-scheduled wind installed in South Australia, on the day it was generating below 20 MW, as forecast"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "While two gas generators; Pelican Point Power Station and Torrens Island B3, were unavailable on planned outages the remaining available generating capacity was dispatched"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network constraints were invoked to manage a planned network outage on equipment at Tailem Bend in South Australia as part of the Heywood interconnector upgrade. On 7 July, these constraints reduced the import limit into South Australia and limited generation in the south east of the State"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V::S_TB_275kV_W_B1",
+            "quote": "The V::S_TB_275kV_W_B1 constraint was invoked to manage the outage of the Tailem Bend West bus"
+          }
+        ],
+        "event_date": "2016-07-07",
+        "interconnectors_named": [
+          {
+            "name": "Heywood Interconnector",
+            "quote": "Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity"
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "The MurrayLink interconnector was limited to between 180 MW and 220 MW (its nominal limit)"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price exceeded $5000/MWh only once, reaching $8898/MWh for the 7.30 pm trading interval",
+          "text": "7.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "Network outages to complete augmentation works on the Heywood Interconnector between Victoria and South Australia materially reduced its capacity",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "reaching $8898/MWh for the 7.30 pm trading interval",
+          "value": 8898
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from low to high prices did not contribute to the price exceeding $5000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/prices_above_5000_-_7_July_2016.pdf",
+    "url": "https://www.aer.gov.au/system/files/prices%20above%205000%20-%207%20July%202016.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2714,
+    "per_attempt": [
+      {
+        "completion_tokens": 2714,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2153
+        },
+        "prompt_tokens": 13125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15839
+      }
+    ],
+    "prompt_tokens": 13125,
+    "reasoning_tokens": 2153,
+    "total_tokens": 15839
+  }
+}

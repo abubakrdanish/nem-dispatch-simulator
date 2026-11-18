@@ -11,7 +11,10 @@ Model output is cached under data/llm_cache (nemsim/llm), so `check` and everyth
 """
 from __future__ import annotations
 
+import contextlib
+import fcntl
 import json
+import os
 import re
 import sys
 import time
@@ -20,7 +23,7 @@ from pathlib import Path
 from nemsim.aer.text import RAW, normalise, text
 from nemsim.config import ROOT
 from nemsim.llm import (BudgetExceeded, CacheMiss, GenerationTimeout, PermanentError, PromptSpec, TransientError,
-                        default_client, extract)
+                        default_cache, default_client, extract, llm_settings)
 
 OUT = ROOT / "results" / "aer_labels.json"
 
@@ -126,6 +129,14 @@ SPEC = PromptSpec(version="aer-v2", system=SYSTEM, user_template=USER, schema=SC
 SPEC_REASONING = PromptSpec(version="aer-v2", system=SYSTEM, user_template=USER, schema=SCHEMA, temperature=0.0,
                             max_tokens=65536, extra_body={})
 MISTRAL = "mistralai/mistral-large-4-1t-a52b"
+# The corpus labels from 2026-11-17: the same prompt as aer-v2 with reasoning on, under its own version so the
+# reasoning-off corpus (aer-v2) stays cached beside it. Its 17 sample documents are a second reasoning-on run
+# over the sample, independent of SPEC_REASONING's.
+SPEC_V3 = PromptSpec(version="aer-v3", system=SYSTEM, user_template=USER, schema=SCHEMA, temperature=0.0,
+                     max_tokens=65536, extra_body={})
+# Hard cap on the whole aer-v3 corpus run, prompt plus completion, across every process. Set by the user.
+STAGE_CAP_V3 = 3_500_000
+LEDGER = ROOT / "results" / "aer_uncached_charges.json"
 
 
 def documents() -> dict[str, dict]:
@@ -157,10 +168,82 @@ def strict_found(quote: str | None, doc: str) -> bool:
     return bool(quote) and normalise(quote) in doc
 
 
-def run(urls: list[str] | None = None, spec: PromptSpec = SPEC, model: str | None = None) -> dict:
-    """Extract every document (or `urls`). Offline unless NEMSIM_LLM_MODE=online. Returns per-URL results."""
+def _cache_dir(spec: PromptSpec, model: str | None) -> Path:
+    from nemsim.llm.cache import _slug
+    return default_cache().directory / _slug(spec.version) / _slug(model or llm_settings()["model"])
+
+
+def stage_spent(spec: PromptSpec, model: str | None = None) -> dict:
+    """Tokens this prompt version and model have consumed: every cached entry's usage (all attempts), plus
+    worst-case charges recorded for calls that failed without a cache entry (timeouts, network errors)."""
+    cached = 0
+    d = _cache_dir(spec, model)
+    for f in d.glob("*.json") if d.exists() else ():
+        e = json.loads(f.read_text())
+        if e.get("prompt_sha256") == spec.sha256:
+            u = e.get("usage") or {}
+            cached += (u.get("prompt_tokens") or 0) + (u.get("completion_tokens") or 0)
+    led = json.loads(LEDGER.read_text()) if LEDGER.exists() else []
+    charged = sum(x["charged_tokens"] for x in led if x["prompt_version"] == spec.version)
+    return {"cached": cached, "uncached_charged": charged, "total": cached + charged}
+
+
+def is_cached(spec: PromptSpec, document: str, model: str | None = None) -> bool:
+    from nemsim.llm.cache import CacheKey, sha256_text
+    key = CacheKey(input_sha256=sha256_text(document), model=model or llm_settings()["model"],
+                   prompt_version=spec.version, prompt_sha256=spec.sha256)
+    return default_cache().get(key) is not None
+
+
+def worst_case(spec: PromptSpec, document: str) -> int:
+    """The most one document can cost: two attempts (a bad answer is re-asked once), each the whole prompt at
+    an over-count of one token per 3 characters plus the full completion allowance."""
+    prompt = (len(spec.system) + len(spec.user_template) + len(document)) // 3
+    return 2 * (prompt + spec.max_tokens)
+
+
+RESERVATIONS = ROOT / "results" / "aer_reservations.json"
+
+
+@contextlib.contextmanager
+def _stage_lock():
+    with open(ROOT / "results" / "aer_stage.lock", "a") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+
+
+def _alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
+def _reservations() -> list[dict]:
+    """Worst-case tokens reserved by calls in flight, in any worker. A dead worker's reservation is dropped:
+    whatever it spent is either cached or lost, and a lost call is not counted (see the report)."""
+    res = json.loads(RESERVATIONS.read_text()) if RESERVATIONS.exists() else []
+    return [x for x in res if _alive(x["pid"])]
+
+
+def _save_reservations(res: list[dict]) -> None:
+    RESERVATIONS.write_text(json.dumps(res, indent=1))
+
+
+def run(urls: list[str] | None = None, spec: PromptSpec = SPEC, model: str | None = None,
+        stage_cap: int | None = None, shard: tuple[int, int] | None = None) -> dict:
+    """Extract every document (or `urls`). Offline unless NEMSIM_LLM_MODE=online. Returns per-URL results.
+
+    With `stage_cap`, a call is made only if the tokens already spent under this prompt version and model
+    (stage_spent) plus that document's worst case stay within the cap; otherwise the run halts and says so."""
     docs = documents()
     todo = sorted(docs) if urls is None else list(urls)      # an empty list means none, never all
+    if shard:     # worker k of n takes every n-th document, so parallel workers never ask about the same one
+        todo = todo[shard[0]::shard[1]]
     client = None
     out, usage, missed, errors = {}, {"prompt_tokens": 0, "completion_tokens": 0, "calls": 0}, [], []
     for i, u in enumerate(todo, 1):
@@ -171,7 +254,32 @@ def run(urls: list[str] | None = None, spec: PromptSpec = SPEC, model: str | Non
                     client = default_client()
                 except Exception:      # offline with no key: the cache is all we need
                     client = None
-            r = extract(spec, t, model=model, client=client, source={"url": u, "file": docs[u]["file"]})
+            reserved = False
+            if stage_cap is not None and not is_cached(spec, t, model):
+                wc = worst_case(spec, t)
+                with _stage_lock():     # check and reserve atomically, so parallel workers cannot jointly overshoot
+                    res = _reservations()
+                    spent = stage_spent(spec, model)["total"] + sum(x["tokens"] for x in res)
+                    if spent + wc > stage_cap:
+                        print(f"  STAGE CAP: {spent:,} spent or reserved + {wc:,} worst case for the next document "
+                              f"> {stage_cap:,}; halting after {i - 1} documents", flush=True)
+                        break
+                    _save_reservations(res + [{"pid": os.getpid(), "url": u, "tokens": wc}])
+                reserved = True
+            try:
+                r = extract(spec, t, model=model, client=client, source={"url": u, "file": docs[u]["file"]})
+            except (GenerationTimeout, TransientError, PermanentError) as exc:
+                if reserved:    # tokens were (or may have been) spent with nothing cached: charge the worst case
+                    with _stage_lock():
+                        led = json.loads(LEDGER.read_text()) if LEDGER.exists() else []
+                        led.append({"prompt_version": spec.version, "url": u, "error": type(exc).__name__,
+                                    "charged_tokens": wc // 2})
+                        LEDGER.write_text(json.dumps(led, indent=1))
+                raise
+            finally:
+                if reserved:    # the answer is now in the cache, or charged to the ledger
+                    with _stage_lock():
+                        _save_reservations([x for x in _reservations() if not (x["pid"] == os.getpid() and x["url"] == u)])
         except CacheMiss:
             missed.append(u)
             continue
@@ -242,11 +350,18 @@ def checked(results: dict) -> tuple[list[dict], dict]:
     return events, stats
 
 
-CONFIGS = {   # name -> (spec, model). Only the first labels the corpus; the others run on the sample.
-    "nemotron": (SPEC, None),
-    "nemotron-reasoning": (SPEC_REASONING, None),
-    "mistral": (SPEC, MISTRAL),
+CONFIGS = {   # name -> (spec, model)
+    "nemotron-reasoning-v3": (SPEC_V3, None),   # reasoning on, the whole corpus: the published labels
+    "nemotron": (SPEC, None),                    # reasoning off, the whole corpus: the comparison
+    "nemotron-reasoning": (SPEC_REASONING, None),  # reasoning on, the sample only (first run)
+    "mistral": (SPEC, MISTRAL),                  # the sample only, 2 documents
 }
+PRIMARY = "nemotron-reasoning-v3"     # the configuration whose labels feed the results
+CORPUS = ("nemotron-reasoning-v3", "nemotron")   # configurations run over every document
+
+
+def labels_file(name: str = PRIMARY) -> Path:
+    return OUT if name == PRIMARY else OUT.with_name(f"aer_labels__{name}.json")
 
 
 def sample_urls() -> list[str]:
@@ -266,13 +381,21 @@ def model_events(names=tuple(CONFIGS), quiet: bool = False) -> dict[str, list[di
     return out
 
 
-def check() -> None:
-    res = run()
+def check(name: str = PRIMARY) -> None:
+    """Checked labels for every document, from the cache, for one corpus configuration."""
+    spec, model = CONFIGS[name]
+    res = run(spec=spec, model=model)
     events, stats = checked(res["results"])
-    OUT.write_text(json.dumps({"events": events, "stats": stats}, indent=1, sort_keys=True, default=str))
-    print(f"{len(events)} events; {stats['verbatim']} of {stats['quotes']} quotes verbatim; "
-          f"{stats['failed_docs']} documents with no valid answer; wrote {OUT}")
+    stats["documents_not_in_cache"] = len(res["missed"])
+    out = labels_file(name)
+    out.write_text(json.dumps({"config": name, "events": events, "stats": stats}, indent=1, sort_keys=True, default=str))
+    print(f"{name}: {len(events)} events; {stats['verbatim']} of {stats['quotes']} quotes verbatim "
+          f"({stats['strict_verbatim']} strictly); {stats['failed_docs']} documents with no valid answer; "
+          f"{len(res['missed'])} not in the cache; wrote {out}")
 
 
 if __name__ == "__main__":
-    {"run": lambda: run(), "check": check}[sys.argv[1] if len(sys.argv) > 1 else "check"]()
+    {"run": lambda: run(),
+     "run-v3": lambda: run(spec=SPEC_V3, stage_cap=STAGE_CAP_V3,
+                           shard=(int(sys.argv[2]), int(sys.argv[3])) if len(sys.argv) > 3 else None),
+     "check": lambda: [check(n) for n in CORPUS]}[sys.argv[1] if len(sys.argv) > 1 else "check"]()

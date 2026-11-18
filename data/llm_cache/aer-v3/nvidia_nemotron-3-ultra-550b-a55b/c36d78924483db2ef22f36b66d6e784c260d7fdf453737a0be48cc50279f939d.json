@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:29:15+00:00",
+  "failure": null,
+  "input_sha256": "fcd044a5238ed4742ca83b11d11ebd3854da95a5d1a43851eb3caa2fe701fd8c",
+  "key": "c36d78924483db2ef22f36b66d6e784c260d7fdf453737a0be48cc50279f939d",
+  "latency_s": 50.3,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-23\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"3 pm and 3.30 pm trading intervals\", \"quote\": \"On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.\"}, \"peak_price\": {\"value\": 7939, \"quote\": \"reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On Tuesday 23 January demand reached near-record levels in Queensland.\"}, {\"label\": \"network_outage\", \"quote\": \"A planned network outage at Tarong, combined with the loss of 120 MW of generation at Swanbank, resulted in flows between Tarong and Brisbane exceeding secure limits.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 1.45 pm, Swanbank unit B3 tripped, from 120 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At 2.30 pm, coinciding with the first use of this constraint, the limit for flows across QNI into Queensland fell by 400 MW to 25 MW, reducing imports into Queensland by 250 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"flows from New South Wales across QNI\"}, {\"name\": \"Terranora\", \"quote\": \"The Terranora interconnector was also flowing counter price during this period\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A planned network outage at Tarong, combined with the loss of 120 MW of generation at Swanbank, resulted in flows between Tarong and Brisbane exceeding secure limits.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On Tuesday 23 January demand reached near-record levels in Queensland."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A planned network outage at Tarong, combined with the loss of 120 MW of generation at Swanbank, resulted in flows between Tarong and Brisbane exceeding secure limits."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 1.45 pm, Swanbank unit B3 tripped, from 120 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At 2.30 pm, coinciding with the first use of this constraint, the limit for flows across QNI into Queensland fell by 400 MW to 25 MW, reducing imports into Queensland by 250 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2007-01-23",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "flows from New South Wales across QNI"
+          },
+          {
+            "name": "Terranora",
+            "quote": "The Terranora interconnector was also flowing counter price during this period"
+          }
+        ],
+        "intervals": {
+          "quote": "On Tuesday 23 January, the spot price in Queensland exceeded $5000/MWh in two trading intervals, reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.",
+          "text": "3 pm and 3.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "A planned network outage at Tarong, combined with the loss of 120 MW of generation at Swanbank, resulted in flows between Tarong and Brisbane exceeding secure limits.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "reaching $5920/MWh and $7939/MWh at 3 pm and 3.30 pm respectively.",
+          "value": 7939
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators did not contribute to the spot price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_23_January_2007_-_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_23%20January%202007%20-%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3228,
+    "per_attempt": [
+      {
+        "completion_tokens": 3228,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2728
+        },
+        "prompt_tokens": 6445,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9673
+      }
+    ],
+    "prompt_tokens": 6445,
+    "reasoning_tokens": 2728,
+    "total_tokens": 9673
+  }
+}

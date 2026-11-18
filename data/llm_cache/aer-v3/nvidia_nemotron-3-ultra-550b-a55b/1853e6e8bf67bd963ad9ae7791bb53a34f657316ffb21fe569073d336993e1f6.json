@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:45:36+00:00",
+  "failure": null,
+  "input_sha256": "dbc5b13206d49f53870d897df7391eb3d1cf1298dfa53e324fcb5f8324bb3466",
+  "key": "1853e6e8bf67bd963ad9ae7791bb53a34f657316ffb21fe569073d336993e1f6",
+  "latency_s": 78.26,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-11-11\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"Three 5-minute intervals at 1.40 pm, 1.50 pm, and 1.55 pm within the 2 pm 30-minute period.\", \"quote\": \"There were three 5-minute prices that exceeded $5,000/MWh during the 2 pm 30-minute period.\"}, \"peak_price\": {\"value\": 13495.02, \"quote\": \"13:40 $13,495.02 Arrow Energy BRAEMAR5 Energy $13,495.02 0.50 $6,747.51\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"Rebidding capacity to higher prices contributed to the 30-minute price exceeding $5,000/MWh.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"980 MW of baseload capacity was unavailable on the day, all of which was planned since at least October 2021.\"}, {\"label\": \"network_outage\", \"quote\": \"There were planned outages to network equipment in NSW due to the upgrade of QNI which limited access to cheaper generation from NSW.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The price for 1.55 pm reached $11,073/MWh due to the trade off between the energy and FCAS markets with the high price of FCAS contributing to all but $37/MWh of the price.\"}, {\"label\": \"demand\", \"quote\": \"Demand was higher than forecast and increased by around 700 MW between 1 pm and 2 pm driven by a change in rooftop solar output.\"}, {\"label\": \"solar_output\", \"quote\": \"From around 1 pm rooftop solar output began to fall, increasing grid demand.\"}, {\"label\": \"ramp_rates\", \"quote\": \"around 270 MW of generation with capacity priced below $5,000/MWh was unable to be dispatched because they could either not start generating in 5 minutes or were providing raise FCAS instead.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"limited imports over QNI from NSW to an average of 130 MW for the 2 pm 30-minute period compared to a usual 300-600 MW nominal limit.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland-New South Wales Interconnector (QNI)\", \"quote\": \"Upgrades to the Queensland-New South Wales Interconnector (QNI) requiring network outages in NSW limited access to cheaper generation in NSW.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There were planned outages to network equipment in NSW due to the upgrade of QNI which limited access to cheaper generation from NSW.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding capacity to higher prices contributed to the 30-minute price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "Rebidding capacity to higher prices contributed to the 30-minute price exceeding $5,000/MWh."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "980 MW of baseload capacity was unavailable on the day, all of which was planned since at least October 2021."
+          },
+          {
+            "label": "network_outage",
+            "quote": "There were planned outages to network equipment in NSW due to the upgrade of QNI which limited access to cheaper generation from NSW."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The price for 1.55 pm reached $11,073/MWh due to the trade off between the energy and FCAS markets with the high price of FCAS contributing to all but $37/MWh of the price."
+          },
+          {
+            "label": "demand",
+            "quote": "Demand was higher than forecast and increased by around 700 MW between 1 pm and 2 pm driven by a change in rooftop solar output."
+          },
+          {
+            "label": "solar_output",
+            "quote": "From around 1 pm rooftop solar output began to fall, increasing grid demand."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "around 270 MW of generation with capacity priced below $5,000/MWh was unable to be dispatched because they could either not start generating in 5 minutes or were providing raise FCAS instead."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "limited imports over QNI from NSW to an average of 130 MW for the 2 pm 30-minute period compared to a usual 300-600 MW nominal limit."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-11-11",
+        "interconnectors_named": [
+          {
+            "name": "Queensland-New South Wales Interconnector (QNI)",
+            "quote": "Upgrades to the Queensland-New South Wales Interconnector (QNI) requiring network outages in NSW limited access to cheaper generation in NSW."
+          }
+        ],
+        "intervals": {
+          "quote": "There were three 5-minute prices that exceeded $5,000/MWh during the 2 pm 30-minute period.",
+          "text": "Three 5-minute intervals at 1.40 pm, 1.50 pm, and 1.55 pm within the 2 pm 30-minute period."
+        },
+        "network_outages": {
+          "quote": "There were planned outages to network equipment in NSW due to the upgrade of QNI which limited access to cheaper generation from NSW.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "13:40 $13,495.02 Arrow Energy BRAEMAR5 Energy $13,495.02 0.50 $6,747.51",
+          "value": 13495.02
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding capacity to higher prices contributed to the 30-minute price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20211111_Energy$5kQLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL_20211111_Energy%245kQLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4317,
+    "per_attempt": [
+      {
+        "completion_tokens": 4317,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3599
+        },
+        "prompt_tokens": 11912,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16229
+      }
+    ],
+    "prompt_tokens": 11912,
+    "reasoning_tokens": 3599,
+    "total_tokens": 16229
+  }
+}

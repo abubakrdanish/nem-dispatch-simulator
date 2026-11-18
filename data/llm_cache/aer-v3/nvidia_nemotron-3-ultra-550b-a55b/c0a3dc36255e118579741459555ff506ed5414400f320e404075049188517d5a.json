@@ -1,0 +1,374 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:01:35+00:00",
+  "failure": null,
+  "input_sha256": "3ca48674abec49eefef636a729896575f6b49ceed5302d5b7bc6c5a911771f19",
+  "key": "c0a3dc36255e118579741459555ff506ed5414400f320e404075049188517d5a",
+  "latency_s": 588.89,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-04-20\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6.30 pm\", \"quote\": \"20 April 6.30 pm 7,133 below 5,000\"}, \"peak_price\": {\"value\": 7133, \"quote\": \"20 April 6.30 pm 7,133 below 5,000\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"On 20 April, there were 3 dispatch intervals at $13,200/MWh for the 6.30 pm trading interval. Intergen made a number of rebids which contributed to the high prices.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"On 20 April, there were 3 dispatch intervals at $13,200/MWh for the 6.30 pm trading interval. Intergen made a number of rebids which contributed to the high prices.\"}}, {\"event_date\": \"2022-04-28\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"28 April 6 pm 13,200 below 5,000\"}, \"peak_price\": {\"value\": 13200, \"quote\": \"28 April 6 pm 13,200 below 5,000\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"At 5.28 pm on 28 April, InterGen made a similar late rebid to the one made at 6.04 pm on 20 April, moving 105 MW from the price floor to the cap for the 5.35 and 5.40 pm dispatch intervals. Without this rebid, the price would have been below $5,000/MWh for these intervals, but the 30-minute price would have remained slightly above $5,000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 5.28 pm on 28 April, InterGen made a similar late rebid to the one made at 6.04 pm on 20 April, moving 105 MW from the price floor to the cap for the 5.35 and 5.40 pm dispatch intervals. Without this rebid, the price would have been below $5,000/MWh for these intervals, but the 30-minute price would have remained slightly above $5,000/MWh.\"}}, {\"event_date\": \"2022-05-03\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"6 pm and 6.30 pm\", \"quote\": \"3 May 6 pm 13,804 13,496\\n3 May 6.30 pm 9,342 9,105\"}, \"peak_price\": {\"value\": 13804, \"quote\": \"3 May 6 pm 13,804 13,496\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"rebids\", \"quote\": \"At 5.27 pm on 3 May, Origin Energy rebid 20 MW of capacity from $137 to $12,590/MWh at Eraring unit 3 for all 12 dispatch intervals during the high priced 6 and 6.30 pm 30 minute intervals. For a number of these dispatch intervals, Eraring unit 3 set the price. In addition, at 6.06 pm Origin rebid a total of 40 MW of capacity at Eraring units 1 and 2 from $137 to $12,590/MWh for the 6.15, 6.20, 6.25 and 6.30 pm intervals. This contributed to the 6.30 pm high price as less than 40 MW of high priced capacity was dispatched.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"imports across the Vic-NSW interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"At 5.27 pm on 3 May, Origin Energy rebid 20 MW of capacity from $137 to $12,590/MWh at Eraring unit 3 for all 12 dispatch intervals during the high priced 6 and 6.30 pm 30 minute intervals. For a number of these dispatch intervals, Eraring unit 3 set the price. In addition, at 6.06 pm Origin rebid a total of 40 MW of capacity at Eraring units 1 and 2 from $137 to $12,590/MWh for the 6.15, 6.20, 6.25 and 6.30 pm intervals. This contributed to the 6.30 pm high price as less than 40 MW of high priced capacity was dispatched.\"}}, {\"event_date\": \"2022-05-04\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"4 May 6 pm 7,236 6,849\"}, \"peak_price\": {\"value\": 7236, \"quote\": \"4 May 6 pm 7,236 6,849\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"imports across the Vic-NSW interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2022-05-05\", \"regions\": [\"QLD1\", \"NSW1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"5 May 6 pm 9,950 7,833\"}, \"peak_price\": {\"value\": 9950, \"quote\": \"5 May 6 pm 9,950 7,833\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"imports across the Vic-NSW interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"This outage contributed to the high price in NSW during all 4 high priced intervals.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2022-05-15\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"6 pm\", \"quote\": \"15 May 6 pm 6,203 below 5,000\"}, \"peak_price\": {\"value\": 6203, \"quote\": \"15 May 6 pm 6,203 below 5,000\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Terranora interconnector\", \"quote\": \"limited exports from NSW to Queensland on the Terranora interconnector to 100 MW\"}, {\"name\": \"QNI\", \"quote\": \"limited flows from NSW to Queensland on both Terranora and QNI\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages were a factor in all 7 of Queensland's high price events.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages were a factor in all 7 of Queensland's high price events."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "On 20 April, there were 3 dispatch intervals at $13,200/MWh for the 6.30 pm trading interval. Intergen made a number of rebids which contributed to the high prices."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-04-20",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          }
+        ],
+        "intervals": {
+          "quote": "20 April 6.30 pm 7,133 below 5,000",
+          "text": "6.30 pm"
+        },
+        "network_outages": {
+          "quote": "Planned network outages were a factor in all 7 of Queensland's high price events.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "20 April 6.30 pm 7,133 below 5,000",
+          "value": 7133
+        },
+        "rebid_set_price": {
+          "quote": "On 20 April, there were 3 dispatch intervals at $13,200/MWh for the 6.30 pm trading interval. Intergen made a number of rebids which contributed to the high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages were a factor in all 7 of Queensland's high price events."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 5.28 pm on 28 April, InterGen made a similar late rebid to the one made at 6.04 pm on 20 April, moving 105 MW from the price floor to the cap for the 5.35 and 5.40 pm dispatch intervals. Without this rebid, the price would have been below $5,000/MWh for these intervals, but the 30-minute price would have remained slightly above $5,000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-04-28",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          }
+        ],
+        "intervals": {
+          "quote": "28 April 6 pm 13,200 below 5,000",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": "Planned network outages were a factor in all 7 of Queensland's high price events.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "28 April 6 pm 13,200 below 5,000",
+          "value": 13200
+        },
+        "rebid_set_price": {
+          "quote": "At 5.28 pm on 28 April, InterGen made a similar late rebid to the one made at 6.04 pm on 20 April, moving 105 MW from the price floor to the cap for the 5.35 and 5.40 pm dispatch intervals. Without this rebid, the price would have been below $5,000/MWh for these intervals, but the 30-minute price would have remained slightly above $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "rebids",
+            "quote": "At 5.27 pm on 3 May, Origin Energy rebid 20 MW of capacity from $137 to $12,590/MWh at Eraring unit 3 for all 12 dispatch intervals during the high priced 6 and 6.30 pm 30 minute intervals. For a number of these dispatch intervals, Eraring unit 3 set the price. In addition, at 6.06 pm Origin rebid a total of 40 MW of capacity at Eraring units 1 and 2 from $137 to $12,590/MWh for the 6.15, 6.20, 6.25 and 6.30 pm intervals. This contributed to the 6.30 pm high price as less than 40 MW of high priced capacity was dispatched."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-05-03",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "imports across the Vic-NSW interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "3 May 6 pm 13,804 13,496\n3 May 6.30 pm 9,342 9,105",
+          "text": "6 pm and 6.30 pm"
+        },
+        "network_outages": {
+          "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "3 May 6 pm 13,804 13,496",
+          "value": 13804
+        },
+        "rebid_set_price": {
+          "quote": "At 5.27 pm on 3 May, Origin Energy rebid 20 MW of capacity from $137 to $12,590/MWh at Eraring unit 3 for all 12 dispatch intervals during the high priced 6 and 6.30 pm 30 minute intervals. For a number of these dispatch intervals, Eraring unit 3 set the price. In addition, at 6.06 pm Origin rebid a total of 40 MW of capacity at Eraring units 1 and 2 from $137 to $12,590/MWh for the 6.15, 6.20, 6.25 and 6.30 pm intervals. This contributed to the 6.30 pm high price as less than 40 MW of high priced capacity was dispatched.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-05-04",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "imports across the Vic-NSW interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "4 May 6 pm 7,236 6,849",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "4 May 6 pm 7,236 6,849",
+          "value": 7236
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-05-05",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "imports across the Vic-NSW interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "5 May 6 pm 9,950 7,833",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": "This outage contributed to the high price in NSW during all 4 high priced intervals.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "5 May 6 pm 9,950 7,833",
+          "value": 9950
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1",
+          "NSW1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages were a factor in all 7 of Queensland's high price events."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Autumn is typically a shoulder period, when coal plants often undergo planned outages for maintance."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "However, more than half of the Queensland outages during the high price events were unplanned and due to technical issues."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "One or both of these constraints were binding during each of the Queensland high prices. For example, on 20 April at 6.30 pm, when the 30-minute price was high in Queensland but not in NSW, only 87 MW could flow into Queensland from NSW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-05-15",
+        "interconnectors_named": [
+          {
+            "name": "Terranora interconnector",
+            "quote": "limited exports from NSW to Queensland on the Terranora interconnector to 100 MW"
+          },
+          {
+            "name": "QNI",
+            "quote": "limited flows from NSW to Queensland on both Terranora and QNI"
+          }
+        ],
+        "intervals": {
+          "quote": "15 May 6 pm 6,203 below 5,000",
+          "text": "6 pm"
+        },
+        "network_outages": {
+          "quote": "Planned network outages were a factor in all 7 of Queensland's high price events.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "15 May 6 pm 6,203 below 5,000",
+          "value": 6203
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20__28_April__3__4__5__15_May_-_June_$5K_Energy_-_Report_NSW___Qld(13922533.6).pdf",
+    "url": "https://www.aer.gov.au/system/files/20_%2028%20April_%203_%204_%205_%2015%20May%20-%20June%20%245K%20Energy%20-%20Report%20NSW%20_%20Qld%2813922533.6%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 26323,
+    "per_attempt": [
+      {
+        "completion_tokens": 26323,
+        "completion_tokens_details": {
+          "reasoning_tokens": 22954
+        },
+        "prompt_tokens": 6728,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 33051
+      }
+    ],
+    "prompt_tokens": 6728,
+    "reasoning_tokens": 22954,
+    "total_tokens": 33051
+  }
+}

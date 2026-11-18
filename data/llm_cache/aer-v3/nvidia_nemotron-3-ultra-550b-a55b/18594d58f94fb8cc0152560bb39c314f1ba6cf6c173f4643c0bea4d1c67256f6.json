@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:53:33+00:00",
+  "failure": null,
+  "input_sha256": "8af3bccf9627fbf529951dc65ec3e892401edba704e4cbfecd73debe7a25064f",
+  "key": "18594d58f94fb8cc0152560bb39c314f1ba6cf6c173f4643c0bea4d1c67256f6",
+  "latency_s": 37.24,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-01-18\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"4.30 pm to 6 pm trading intervals inclusive\", \"quote\": \"On 18 January 2018, the spot price for electricity in Victoria and in South Australia exceeded $5000/MWh for the 4.30 pm to 6 pm trading intervals inclusive, as forecast by the market operator, AEMO, the day before.\"}, \"peak_price\": {\"value\": 14167, \"quote\": \"Spot Price $ 14 167/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The reason why the actual price was higher than expected four hours ahead was actual demand for electricity was up to 638 MW higher than forecast by AEMO.\"}, {\"label\": \"demand\", \"quote\": \"On 18 January maximum temperatures in Melbourne and Adelaide exceeded 40 °C, leading to high forecast demand for electricity.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Loy Yang B unit 1 tripped (stopped generating unexpectedly) at 3.35 pm, resulting in an immediate reduction of 530 MW of low-priced capacity.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)\"}, {\"label\": \"interconnector_limit\", \"quote\": \"flows from NSW into Victoria were at their limit (as forecast), which at 168 MW, was significantly lower than the nominal import limit of 1300 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"The Vic-NSW interconnector connects Victoria to New South Wales.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector.\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink was exporting electricity from Tasmania into Victoria at its nominal limit during the high price period, as forecast.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Participants rebidding capacity from low to high prices did not contribute to the high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The reason why the actual price was higher than expected four hours ahead was actual demand for electricity was up to 638 MW higher than forecast by AEMO."
+          },
+          {
+            "label": "demand",
+            "quote": "On 18 January maximum temperatures in Melbourne and Adelaide exceeded 40 °C, leading to high forecast demand for electricity."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Loy Yang B unit 1 tripped (stopped generating unexpectedly) at 3.35 pm, resulting in an immediate reduction of 530 MW of low-priced capacity."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the flow of electricity from New South Wales into Victoria was limited (as forecast by the market operator)"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "flows from NSW into Victoria were at their limit (as forecast), which at 168 MW, was significantly lower than the nominal import limit of 1300 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2018-01-18",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "The Vic-NSW interconnector connects Victoria to New South Wales."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "Victoria and South Australia are electrically connected via two interconnectors: the 600 MW Heywood (Vic-SA) interconnector and the 220 MW Murraylink interconnector."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink was exporting electricity from Tasmania into Victoria at its nominal limit during the high price period, as forecast."
+          }
+        ],
+        "intervals": {
+          "quote": "On 18 January 2018, the spot price for electricity in Victoria and in South Australia exceeded $5000/MWh for the 4.30 pm to 6 pm trading intervals inclusive, as forecast by the market operator, AEMO, the day before.",
+          "text": "4.30 pm to 6 pm trading intervals inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot Price $ 14 167/MWh",
+          "value": 14167
+        },
+        "rebid_set_price": {
+          "quote": "Participants rebidding capacity from low to high prices did not contribute to the high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_18_January_2018_(Vic_SA)_0.pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2018%20January%202018%20%28Vic%20SA%29_0.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4155,
+    "per_attempt": [
+      {
+        "completion_tokens": 4155,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3520
+        },
+        "prompt_tokens": 23375,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 27530
+      }
+    ],
+    "prompt_tokens": 23375,
+    "reasoning_tokens": 3520,
+    "total_tokens": 27530
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:00:34+00:00",
+  "failure": null,
+  "input_sha256": "b91e11018629c5560eca5656ff55cc1e86802c86003db3bb032ae1eb5d837313",
+  "key": "98032cf9207bfac9a561867186bcd563932a2ce1677ee1d94cfd33702c742eeb",
+  "latency_s": 55.43,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-11-16\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"1.30 pm trading interval; 1.10 pm, 1.15 pm, 1.20 pm dispatch intervals\", \"quote\": \"On 16 November 2020, the spot price in New South Wales reached $7,496/MWh for the 1.30 pm trading interval driven by three dispatch intervals at the price cap.\"}, \"peak_price\": {\"value\": 15000, \"quote\": \"The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was 295 MW greater than forecast, 4 hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Long-term planned outages on some black coal generators reduced their available capacity from around 9,700 MW by 1,750 MW.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Technical issues experienced by a number of generators including a delay in the return to service of Bayswater unit 4 reduced the amount of capacity priced below $5,000/MWh by up to 1,300 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales.\"}, {\"label\": \"network_outage\", \"quote\": \"At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW\", \"quote\": \"flows on the VIC-NSW interconnector\"}, {\"name\": \"QNI\", \"quote\": \"The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding of capacity from prices below to above $5,000/MWh did not contribute to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was 295 MW greater than forecast, 4 hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Long-term planned outages on some black coal generators reduced their available capacity from around 9,700 MW by 1,750 MW."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Technical issues experienced by a number of generators including a delay in the return to service of Bayswater unit 4 reduced the amount of capacity priced below $5,000/MWh by up to 1,300 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales."
+          },
+          {
+            "label": "network_outage",
+            "quote": "At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2020-11-16",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW",
+            "quote": "flows on the VIC-NSW interconnector"
+          },
+          {
+            "name": "QNI",
+            "quote": "The ongoing upgrade of the QNI interconnector limited low-priced capacity from being imported from Queensland into New South Wales."
+          }
+        ],
+        "intervals": {
+          "quote": "On 16 November 2020, the spot price in New South Wales reached $7,496/MWh for the 1.30 pm trading interval driven by three dispatch intervals at the price cap.",
+          "text": "1.30 pm trading interval; 1.10 pm, 1.15 pm, 1.20 pm dispatch intervals"
+        },
+        "network_outages": {
+          "quote": "At around 12.50 pm, due to lightning near Canberra there was an unplanned outage of the Upper Tumut - Stockdill 1 330 kV and the Canberra - Stockdill 1 330 kV lines.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The dispatch price was at the market cap price of $15,000/MWh for the 1.10 pm, 1.15 pm, and 1.20 pm dispatch intervals.",
+          "value": 15000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of capacity from prices below to above $5,000/MWh did not contribute to the high price.",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20201116_NSW_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020201116%20NSW%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3359,
+    "per_attempt": [
+      {
+        "completion_tokens": 3359,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2719
+        },
+        "prompt_tokens": 6567,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9926
+      }
+    ],
+    "prompt_tokens": 6567,
+    "reasoning_tokens": 2719,
+    "total_tokens": 9926
+  }
+}

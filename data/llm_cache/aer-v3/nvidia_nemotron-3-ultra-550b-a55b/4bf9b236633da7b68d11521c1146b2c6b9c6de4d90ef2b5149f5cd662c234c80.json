@@ -1,0 +1,100 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:17:53+00:00",
+  "failure": null,
+  "input_sha256": "7b1d2bef17eb38194c386d3868076e471efeadf38032f3c97fefffa104c3ccc0",
+  "key": "4bf9b236633da7b68d11521c1146b2c6b9c6de4d90ef2b5149f5cd662c234c80",
+  "latency_s": 130.45,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-15\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"2 pm trading interval\", \"quote\": \"On 15 January 2009, the spot market price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.\"}, \"peak_price\": {\"value\": 5210.57, \"quote\": \"On 15 January the spot price in New South Wales reached $5210/MWh at 2 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in New South Wales peaked at a summer record of 13 567 MW at 2 pm, 300 MW greater than that forecast four hours ahead.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"The majority of this reduction was a result of unplanned outages and delays in returning generation plant to service.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Wallerawang Unit 7 100 Planned capacity reduction\"}, {\"label\": \"network_outage\", \"quote\": \"On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January.\"}, {\"label\": \"rebids\", \"quote\": \"At the time around 1170 MW, or 9 per cent of available capacity in New South Wales was priced above $5000/MWh, 890 MW of which was from rebidding by participants.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Total import capability into New South Wales was around 290 MW lower than forecast four hours ahead.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"The QNI import limit was close to forecast.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Outages of equipment associated with the Terranora interconnector reduced import capability below nominal levels.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"In addition, around 2100 MW of generation in New South Wales was unavailable and planned network outages led to reduced import capability.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The resulting tight supply-demand balance coupled with rebidding by New South Wales generators saw the spot price reach $5210/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in New South Wales peaked at a summer record of 13 567 MW at 2 pm, 300 MW greater than that forecast four hours ahead."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "The majority of this reduction was a result of unplanned outages and delays in returning generation plant to service."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Wallerawang Unit 7 100 Planned capacity reduction"
+          },
+          {
+            "label": "network_outage",
+            "quote": "On 15 January, the Lower Tumut to Upper Tumut 64 line was out for service as part of a 12 day planned network outage that commenced on 5 January."
+          },
+          {
+            "label": "rebids",
+            "quote": "At the time around 1170 MW, or 9 per cent of available capacity in New South Wales was priced above $5000/MWh, 890 MW of which was from rebidding by participants."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Total import capability into New South Wales was around 290 MW lower than forecast four hours ahead."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-15",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "The QNI import limit was close to forecast."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "Outages of equipment associated with the Terranora interconnector reduced import capability below nominal levels."
+          }
+        ],
+        "intervals": {
+          "quote": "On 15 January 2009, the spot market price in New South Wales exceeded $5000/MWh for the 2 pm trading interval.",
+          "text": "2 pm trading interval"
+        },
+        "network_outages": {
+          "quote": "In addition, around 2100 MW of generation in New South Wales was unavailable and planned network outages led to reduced import capability.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 15 January the spot price in New South Wales reached $5210/MWh at 2 pm.",
+          "value": 5210.57
+        },
+        "rebid_set_price": {
+          "quote": "The resulting tight supply-demand balance coupled with rebidding by New South Wales generators saw the spot price reach $5210/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_15_January_2009_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_15%20January%202009%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5449,
+    "per_attempt": [
+      {
+        "completion_tokens": 5449,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4879
+        },
+        "prompt_tokens": 5115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10564
+      }
+    ],
+    "prompt_tokens": 5115,
+    "reasoning_tokens": 4879,
+    "total_tokens": 10564
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:01:59+00:00",
+  "failure": null,
+  "input_sha256": "0ec7319142484e19151086ab4127eee6a66dcc41b26b3e9d8745138438354d1f",
+  "key": "47f728ed9bdef286ffc68ac981acf7545418098b47ca6dd38c5b4c7d8699bfa0",
+  "latency_s": 84.76,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-07-14\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"the 9 am trading interval and 2 dispatch intervals (10 minutes) at 8.55 am and 9 am\", \"quote\": \"for 2 dispatch intervals (10 minutes), the price in New South Wales was set at the cap of $15,100/MWh and the spot price for the 9 am trading interval exceeded $5,000/MWh\"}, \"peak_price\": {\"value\": 15100, \"quote\": \"the price in New South Wales was set at the cap of $15,100/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was 500 MW higher than forecast 4 hours prior for the 9 am trading interval\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Eraring unit 2 had been on a planned outage since 8 July\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Bayswater unit 2 suffered technical issues coming back from a planned outage and was unavailable by 8.40 am\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"The dispatch price for energy in New South Wales was co-optimised by the FCAS and energy markets in Queensland, resulting in 2 dispatch intervals set at the cap\"}, {\"label\": \"ramp_rates\", \"quote\": \"This high priced capacity was ramp up limited and unable to set price\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"VIC-NSW interconnector\", \"quote\": \"flows on the VIC-NSW interconnector\"}, {\"name\": \"QNI interconnector\", \"quote\": \"QNI interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"rebidding capacity from low to high prices did not contribute to prices above $5,000/MWh\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was 500 MW higher than forecast 4 hours prior for the 9 am trading interval"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Eraring unit 2 had been on a planned outage since 8 July"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Bayswater unit 2 suffered technical issues coming back from a planned outage and was unavailable by 8.40 am"
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Upgrades to the Queensland-New South Wales interconnector (QNI) limited flows from Queensland to less than 500 MW out of the 1,000 MW nominal limit"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "The dispatch price for energy in New South Wales was co-optimised by the FCAS and energy markets in Queensland, resulting in 2 dispatch intervals set at the cap"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "This high priced capacity was ramp up limited and unable to set price"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-07-14",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW interconnector",
+            "quote": "flows on the VIC-NSW interconnector"
+          },
+          {
+            "name": "QNI interconnector",
+            "quote": "QNI interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "for 2 dispatch intervals (10 minutes), the price in New South Wales was set at the cap of $15,100/MWh and the spot price for the 9 am trading interval exceeded $5,000/MWh",
+          "text": "the 9 am trading interval and 2 dispatch intervals (10 minutes) at 8.55 am and 9 am"
+        },
+        "network_outages": {
+          "quote": "Planned network outages in New South Wales limited its ability to import cheaper generation from both Victoria and Queensland",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the price in New South Wales was set at the cap of $15,100/MWh",
+          "value": 15100
+        },
+        "rebid_set_price": {
+          "quote": "rebidding capacity from low to high prices did not contribute to prices above $5,000/MWh",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/FINAL_20210714_$5000_NSW_Report_(1).pdf",
+    "url": "https://www.aer.gov.au/system/files/FINAL%2020210714%20%245000%20NSW%20Report%20%281%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4059,
+    "per_attempt": [
+      {
+        "completion_tokens": 4059,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3473
+        },
+        "prompt_tokens": 9070,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13129
+      }
+    ],
+    "prompt_tokens": 9070,
+    "reasoning_tokens": 3473,
+    "total_tokens": 13129
+  }
+}

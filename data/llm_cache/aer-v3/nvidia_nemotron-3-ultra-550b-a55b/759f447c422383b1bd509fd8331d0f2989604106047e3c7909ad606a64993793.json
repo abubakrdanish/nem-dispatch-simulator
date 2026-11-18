@@ -1,0 +1,127 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:18:38+00:00",
+  "failure": null,
+  "input_sha256": "5e2c88096da99e2266c11028a7db4178cdbbef69b65f7f6b2fbaf1733e6def61",
+  "key": "759f447c422383b1bd509fd8331d0f2989604106047e3c7909ad606a64993793",
+  "latency_s": 133.57,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"12:30 pm trading interval (dispatch intervals ending 12:15 pm to 12:25 pm)\", \"quote\": \"The spot price reached $5050/MWh for the 12.30 pm trading interval due to an incorrect input into the dispatch process.\"}, \"peak_price\": {\"value\": 5050, \"quote\": \"The spot price reached $5050/MWh for the 12.30 pm trading interval due to an incorrect input into the dispatch process.\"}, \"causes\": [{\"label\": \"interconnector_limit\", \"quote\": \"imports into South Australia across Heywood increased from 364 MW to 490 MW, (exceeding the import limit by around 140 MW).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"imports into South Australia across Heywood increased from 364 MW to 490 MW, (exceeding the import limit by around 140 MW).\"}, {\"name\": \"Murraylink\", \"quote\": \"The flows across Murraylink changed from 129 MW into South Australia to 128 MW out of South Australia\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2009-01-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"Five trading intervals between 2:00 pm and 4:00 pm inclusive (2:00, 2:30, 3:00, 3:30, 4:00 pm)\", \"quote\": \"The remainder of this report deals with the five trading intervals between 2 pm and 4 pm inclusive when the spot price exceeded $5000/MWh.\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $ 9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The temperature in Adelaide on the day reached a maximum of 37 degrees, driving high demand. Demand was above 2500 MW between 2 pm and 4 pm, reaching a maximum of 2631 MW at 4 pm. At the time of high prices demand was greater than forecast four and 12 hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap. Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW. Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW.\"}, {\"name\": \"Murraylink\", \"quote\": \"Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap. Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "interconnector_limit",
+            "quote": "imports into South Australia across Heywood increased from 364 MW to 490 MW, (exceeding the import limit by around 140 MW)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "imports into South Australia across Heywood increased from 364 MW to 490 MW, (exceeding the import limit by around 140 MW)."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "The flows across Murraylink changed from 129 MW into South Australia to 128 MW out of South Australia"
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price reached $5050/MWh for the 12.30 pm trading interval due to an incorrect input into the dispatch process.",
+          "text": "12:30 pm trading interval (dispatch intervals ending 12:15 pm to 12:25 pm)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price reached $5050/MWh for the 12.30 pm trading interval due to an incorrect input into the dispatch process.",
+          "value": 5050
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The temperature in Adelaide on the day reached a maximum of 37 degrees, driving high demand. Demand was above 2500 MW between 2 pm and 4 pm, reaching a maximum of 2631 MW at 4 pm. At the time of high prices demand was greater than forecast four and 12 hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap. Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW. Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "flows across the Heywood interconnector into South Australia were as forecast at its limit of 360 MW."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Imports into South Australia across Murraylink were around 80 MW lower than that forecast and limited to around 100 MW."
+          }
+        ],
+        "intervals": {
+          "quote": "The remainder of this report deals with the five trading intervals between 2 pm and 4 pm inclusive when the spot price exceeded $5000/MWh.",
+          "text": "Five trading intervals between 2:00 pm and 4:00 pm inclusive (2:00, 2:30, 3:00, 3:30, 4:00 pm)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $ 9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding at around 11.30 am by AGL shifted 340 MW of available capacity from prices below $101/MWh to the price cap. Dispatch of this AGL capacity set the price for the majority of the time between 1.35 pm and 4 pm.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_19_January_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_19%20January%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 7717,
+    "per_attempt": [
+      {
+        "completion_tokens": 7717,
+        "completion_tokens_details": {
+          "reasoning_tokens": 6790
+        },
+        "prompt_tokens": 8378,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16095
+      }
+    ],
+    "prompt_tokens": 8378,
+    "reasoning_tokens": 6790,
+    "total_tokens": 16095
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:15:04+00:00",
+  "failure": null,
+  "input_sha256": "256290458a1bd57cb6900b5fa5a828f13bf4a9237c1f3daf0bc056b06c7b2672",
+  "key": "643eaac4fdd59fa67c9e754c285662ac4a6fa9f2be3f7fc84c0f01329a8a89d6",
+  "latency_s": 78.39,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-01-11\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"Victoria: six trading intervals between 2.30 pm and 5.30 pm inclusive; South Australia: eight trading intervals between 1.30 pm and 5.30 pm inclusive\", \"quote\": \"The spot price in Victoria exceeded $5000/MWh for six trading intervals between 2.30 pm and 5.30 pm inclusive. The spot price in South Australia exceeded $5000/MWh for eight trading intervals between 1.30 pm and 5.30 pm inclusive.\"}, \"peak_price\": {\"value\": 9200, \"quote\": \"4.00 pm Spot price ($MW/h) 9200\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"High temperatures in Melbourne (up to 42.8°C) and Adelaide (up to 41°C), saw demand in Victoria reaching a maximum of 9879 MW at 4 pm and in South Australia a maximum of 3089 MW at 4.30 pm. Actual demand in Victoria was up to 540 MW greater than forecast 4 hours ahead.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"The only low-cost generation that was not offered in on the day was 320 MW at AGL's Torrens Island Power Station in South Australia (120 MW at Torrens Island A unit 3 and 200 MW at Torrens Island B unit 1).\"}, {\"label\": \"rebids\", \"quote\": \"This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead.\"}], \"constraints_named\": [{\"id\": \"Snuggery to Keith line constraint\", \"quote\": \"The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line.\"}, {\"id\": \"Ballarat to Bendigo line constraint\", \"quote\": \"The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint. In this case, it was the constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line.\"}], \"interconnectors_named\": [{\"name\": \"New South Wales to Victoria interconnector\", \"quote\": \"Figure 3 compares the actual import limit with that forecast 4 hours ahead during the high-price periods for the New South Wales to Victoria interconnector.\"}, {\"name\": \"Basslink\", \"quote\": \"Import capability from Tasmania across Basslink was close to forecast.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "High temperatures in Melbourne (up to 42.8°C) and Adelaide (up to 41°C), saw demand in Victoria reaching a maximum of 9879 MW at 4 pm and in South Australia a maximum of 3089 MW at 4.30 pm. Actual demand in Victoria was up to 540 MW greater than forecast 4 hours ahead."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "The only low-cost generation that was not offered in on the day was 320 MW at AGL's Torrens Island Power Station in South Australia (120 MW at Torrens Island A unit 3 and 200 MW at Torrens Island B unit 1)."
+          },
+          {
+            "label": "rebids",
+            "quote": "This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Import capability into Victoria from New South Wales and into South Australia from Victoria were both up to 400 MW lower than forecast 4 hours ahead."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Snuggery to Keith line constraint",
+            "quote": "The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line."
+          },
+          {
+            "id": "Ballarat to Bendigo line constraint",
+            "quote": "The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint. In this case, it was the constraint that protects against overloading of the Ballarat to Bendigo line should there be a loss of the Bendigo to Shepparton line."
+          }
+        ],
+        "event_date": "2010-01-11",
+        "interconnectors_named": [
+          {
+            "name": "New South Wales to Victoria interconnector",
+            "quote": "Figure 3 compares the actual import limit with that forecast 4 hours ahead during the high-price periods for the New South Wales to Victoria interconnector."
+          },
+          {
+            "name": "Basslink",
+            "quote": "Import capability from Tasmania across Basslink was close to forecast."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "The import limit (into South Australia) across the Heywood interconnector was driven by the constraint used to manage the flows across one of the Snuggery to Keith lines for the possible loss of the other Snuggery to Keith line."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "The import limit (into South Australia) across the Murraylink interconnector was also lower than forecast, driven by another constraint."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in Victoria exceeded $5000/MWh for six trading intervals between 2.30 pm and 5.30 pm inclusive. The spot price in South Australia exceeded $5000/MWh for eight trading intervals between 1.30 pm and 5.30 pm inclusive.",
+          "text": "Victoria: six trading intervals between 2.30 pm and 5.30 pm inclusive; South Australia: eight trading intervals between 1.30 pm and 5.30 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "4.00 pm Spot price ($MW/h) 9200",
+          "value": 9200
+        },
+        "rebid_set_price": {
+          "quote": "This high-priced capacity combined with rebidding of capacity into higher prices by International Power contributed to the high prices in Victoria.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_11_January_2010_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_11%20January%202010%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4866,
+    "per_attempt": [
+      {
+        "completion_tokens": 4866,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4012
+        },
+        "prompt_tokens": 19890,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 24756
+      }
+    ],
+    "prompt_tokens": 19890,
+    "reasoning_tokens": 4012,
+    "total_tokens": 24756
+  }
+}

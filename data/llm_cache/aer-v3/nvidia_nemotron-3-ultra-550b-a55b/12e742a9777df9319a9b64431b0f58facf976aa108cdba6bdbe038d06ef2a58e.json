@@ -1,0 +1,268 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-17T12:37:40+00:00",
+  "failure": null,
+  "input_sha256": "3dbd5a5c9df656cd9b9954a1241e51614602720818815bbf99da21cf5be2c20e",
+  "key": "12e742a9777df9319a9b64431b0f58facf976aa108cdba6bdbe038d06ef2a58e",
+  "latency_s": 164.21,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2013-12-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"4:00 PM and 4:30 PM trading intervals\", \"quote\": \"On Thursday 19 December 2013 the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions.\"}, \"peak_price\": {\"value\": 10627, \"quote\": \"On Thursday 19 December 2013 the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"One of the main contributors to the high prices was high demand due to extreme heat.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"A plant outage at Northern Power Station, lower than forecast contribution from wind and interconnector import flows also contributed to tight supply conditions.\"}, {\"label\": \"wind_output\", \"quote\": \"At 4 pm wind generation was around 85 MW, half that forecast four hours ahead. The reduced output from wind generation exacerbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding by participants was also an important factor. Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap.\"}, {\"label\": \"network_outage\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme\"}], \"constraints_named\": [{\"id\": \"ENOF,AGLHAL,1,LKBONNY2,1\", \"quote\": \"ENOF,AGLHAL,1,LKBONNY2,1 $0.00 191.76 $0.00\"}, {\"id\": \"ENOF,DRYCGT3,1,LKBONNY2,1\", \"quote\": \"ENOF,DRYCGT3,1,LKBONNY2,1 $0.00 4.79 $0.00\"}, {\"id\": \"ENOF,HWPS1,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS1,2,LAVNORTH,2 $0.00 -21.44 $0.00\"}, {\"id\": \"ENOF,HWPS2,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS2,2,LAVNORTH,2 $0.00 -21.44 $0.00\"}, {\"id\": \"ENOF,HWPS3,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS3,2,LAVNORTH,2 $0.00 -171.51 $0.00\"}, {\"id\": \"ENOF,HWPS4,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS4,2,LAVNORTH,2 $0.00 -21.44 $0.00\"}, {\"id\": \"ENOF,HWPS5,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS5,2,LAVNORTH,2 $0.00 171.51 $0.00\"}, {\"id\": \"ENOF,HWPS6,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS6,2,LAVNORTH,2 $0.00 -21.44 $0.00\"}, {\"id\": \"ENOF,HWPS7,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS7,2,LAVNORTH,2 $0.00 -128.63 $0.00\"}, {\"id\": \"ENOF,HWPS8,2,LAVNORTH,2\", \"quote\": \"ENOF,HWPS8,2,LAVNORTH,2 $0.00 -128.63 $0.00\"}, {\"id\": \"ENOF,LADBROK1,1,LKBONNY2,1\", \"quote\": \"ENOF,LADBROK1,1,LKBONNY2,1 $0.00 47.94 $0.00\"}, {\"id\": \"ENOF,LADBROK2,1,LKBONNY2,1\", \"quote\": \"ENOF,LADBROK2,1,LKBONNY2,1 $0.00 47.94 $0.00\"}, {\"id\": \"ENOF,LAVNORTH,2,LOYYB1,2\", \"quote\": \"ENOF,LAVNORTH,2,LOYYB1,2 $0.00 -267.99 $0.00\"}, {\"id\": \"ENOF,LAVNORTH,2,LOYYB2,2\", \"quote\": \"ENOF,LAVNORTH,2,LOYYB2,2 $0.00 -267.99 $0.00\"}, {\"id\": \"ENOF,LAVNORTH,2,VPGS,2\", \"quote\": \"ENOF,LAVNORTH,2,VPGS,2 $0.00 -321.58 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,NPS1,1\", \"quote\": \"ENOF,LKBONNY2,1,NPS1,1 $0.00 -143.82 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,NPS2,1\", \"quote\": \"ENOF,LKBONNY2,1,NPS2,1 $0.00 268.47 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,OSB-AG,1\", \"quote\": \"ENOF,LKBONNY2,1,OSB-AG,1 $0.00 133.28 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,PPCCGT,1\", \"quote\": \"ENOF,LKBONNY2,1,PPCCGT,1 $0.00 306.82 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRA1,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRA1,1 $0.00 52.74 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRA2,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRA2,1 $0.00 43.15 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRA3,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRA3,1 $0.00 43.15 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRA4,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRA4,1 $0.00 43.15 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRB1,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRB1,1 $0.00 57.53 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRB2,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRB2,1 $0.00 57.53 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRB3,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRB3,1 $0.00 57.53 $0.00\"}, {\"id\": \"ENOF,LKBONNY2,1,TORRB4,1\", \"quote\": \"ENOF,LKBONNY2,1,TORRB4,1 $0.00 57.53 $0.00\"}, {\"id\": \"ENOF,TORRA1,6,TORRA2,6\", \"quote\": \"ENOF,TORRA1,6,TORRA2,6 $0.00 0.95 $0.00\"}, {\"id\": \"ENOF,TORRA1,6,TORRA4,6\", \"quote\": \"ENOF,TORRA1,6,TORRA4,6 $0.00 0.95 $0.00\"}, {\"id\": \"ENOF,TORRA2,6,TORRA3,6\", \"quote\": \"ENOF,TORRA2,6,TORRA3,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA2,6,TORRB1,6\", \"quote\": \"ENOF,TORRA2,6,TORRB1,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA2,6,TORRB2,6\", \"quote\": \"ENOF,TORRA2,6,TORRB2,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA2,6,TORRB3,6\", \"quote\": \"ENOF,TORRA2,6,TORRB3,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA2,6,TORRB4,6\", \"quote\": \"ENOF,TORRA2,6,TORRB4,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA3,6,TORRA4,6\", \"quote\": \"ENOF,TORRA3,6,TORRA4,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA4,6,TORRB1,6\", \"quote\": \"ENOF,TORRA4,6,TORRB1,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA4,6,TORRB2,6\", \"quote\": \"ENOF,TORRA4,6,TORRB2,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA4,6,TORRB3,6\", \"quote\": \"ENOF,TORRA4,6,TORRB3,6 $0.00 3.81 $0.00\"}, {\"id\": \"ENOF,TORRA4,6,TORRB4,6\", \"quote\": \"ENOF,TORRA4,6,TORRB4,6 $0.00 3.81 $0.00\"}], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}, {\"name\": \"Murraylink\", \"quote\": \"Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"the rebidding of capacity to high prices was sufficient to require the dispatch of high priced generation and set high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "One of the main contributors to the high prices was high demand due to extreme heat."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "A plant outage at Northern Power Station, lower than forecast contribution from wind and interconnector import flows also contributed to tight supply conditions."
+          },
+          {
+            "label": "wind_output",
+            "quote": "At 4 pm wind generation was around 85 MW, half that forecast four hours ahead. The reduced output from wind generation exacerbated the supply situation and contributed to the high prices at 4 pm and 4.30 pm."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding by participants was also an important factor. Rebidding during the afternoon, particularly by AGL and GDF Suez, shifted significant capacity that was priced under $300/MWh to prices at or near the price cap."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "ENOF,AGLHAL,1,LKBONNY2,1",
+            "quote": "ENOF,AGLHAL,1,LKBONNY2,1 $0.00 191.76 $0.00"
+          },
+          {
+            "id": "ENOF,DRYCGT3,1,LKBONNY2,1",
+            "quote": "ENOF,DRYCGT3,1,LKBONNY2,1 $0.00 4.79 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS1,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS1,2,LAVNORTH,2 $0.00 -21.44 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS2,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS2,2,LAVNORTH,2 $0.00 -21.44 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS3,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS3,2,LAVNORTH,2 $0.00 -171.51 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS4,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS4,2,LAVNORTH,2 $0.00 -21.44 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS5,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS5,2,LAVNORTH,2 $0.00 171.51 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS6,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS6,2,LAVNORTH,2 $0.00 -21.44 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS7,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS7,2,LAVNORTH,2 $0.00 -128.63 $0.00"
+          },
+          {
+            "id": "ENOF,HWPS8,2,LAVNORTH,2",
+            "quote": "ENOF,HWPS8,2,LAVNORTH,2 $0.00 -128.63 $0.00"
+          },
+          {
+            "id": "ENOF,LADBROK1,1,LKBONNY2,1",
+            "quote": "ENOF,LADBROK1,1,LKBONNY2,1 $0.00 47.94 $0.00"
+          },
+          {
+            "id": "ENOF,LADBROK2,1,LKBONNY2,1",
+            "quote": "ENOF,LADBROK2,1,LKBONNY2,1 $0.00 47.94 $0.00"
+          },
+          {
+            "id": "ENOF,LAVNORTH,2,LOYYB1,2",
+            "quote": "ENOF,LAVNORTH,2,LOYYB1,2 $0.00 -267.99 $0.00"
+          },
+          {
+            "id": "ENOF,LAVNORTH,2,LOYYB2,2",
+            "quote": "ENOF,LAVNORTH,2,LOYYB2,2 $0.00 -267.99 $0.00"
+          },
+          {
+            "id": "ENOF,LAVNORTH,2,VPGS,2",
+            "quote": "ENOF,LAVNORTH,2,VPGS,2 $0.00 -321.58 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,NPS1,1",
+            "quote": "ENOF,LKBONNY2,1,NPS1,1 $0.00 -143.82 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,NPS2,1",
+            "quote": "ENOF,LKBONNY2,1,NPS2,1 $0.00 268.47 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,OSB-AG,1",
+            "quote": "ENOF,LKBONNY2,1,OSB-AG,1 $0.00 133.28 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,PPCCGT,1",
+            "quote": "ENOF,LKBONNY2,1,PPCCGT,1 $0.00 306.82 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRA1,1",
+            "quote": "ENOF,LKBONNY2,1,TORRA1,1 $0.00 52.74 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRA2,1",
+            "quote": "ENOF,LKBONNY2,1,TORRA2,1 $0.00 43.15 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRA3,1",
+            "quote": "ENOF,LKBONNY2,1,TORRA3,1 $0.00 43.15 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRA4,1",
+            "quote": "ENOF,LKBONNY2,1,TORRA4,1 $0.00 43.15 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRB1,1",
+            "quote": "ENOF,LKBONNY2,1,TORRB1,1 $0.00 57.53 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRB2,1",
+            "quote": "ENOF,LKBONNY2,1,TORRB2,1 $0.00 57.53 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRB3,1",
+            "quote": "ENOF,LKBONNY2,1,TORRB3,1 $0.00 57.53 $0.00"
+          },
+          {
+            "id": "ENOF,LKBONNY2,1,TORRB4,1",
+            "quote": "ENOF,LKBONNY2,1,TORRB4,1 $0.00 57.53 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA1,6,TORRA2,6",
+            "quote": "ENOF,TORRA1,6,TORRA2,6 $0.00 0.95 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA1,6,TORRA4,6",
+            "quote": "ENOF,TORRA1,6,TORRA4,6 $0.00 0.95 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA2,6,TORRA3,6",
+            "quote": "ENOF,TORRA2,6,TORRA3,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA2,6,TORRB1,6",
+            "quote": "ENOF,TORRA2,6,TORRB1,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA2,6,TORRB2,6",
+            "quote": "ENOF,TORRA2,6,TORRB2,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA2,6,TORRB3,6",
+            "quote": "ENOF,TORRA2,6,TORRB3,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA2,6,TORRB4,6",
+            "quote": "ENOF,TORRA2,6,TORRB4,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA3,6,TORRA4,6",
+            "quote": "ENOF,TORRA3,6,TORRA4,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA4,6,TORRB1,6",
+            "quote": "ENOF,TORRA4,6,TORRB1,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA4,6,TORRB2,6",
+            "quote": "ENOF,TORRA4,6,TORRB2,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA4,6,TORRB3,6",
+            "quote": "ENOF,TORRA4,6,TORRB3,6 $0.00 3.81 $0.00"
+          },
+          {
+            "id": "ENOF,TORRA4,6,TORRB4,6",
+            "quote": "ENOF,TORRA4,6,TORRB4,6 $0.00 3.81 $0.00"
+          }
+        ],
+        "event_date": "2013-12-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Both the Heywood and Murraylink interconnectors were constrained at their import limits for much of the afternoon."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 19 December 2013 the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm. These were the highest spot prices in the high-price period from 2.30 pm to 6 pm inclusive, during which time the (five-minute) dispatch price exceeded $10 000/MWh on 17 occasions.",
+          "text": "4:00 PM and 4:30 PM trading intervals"
+        },
+        "network_outages": {
+          "quote": "The import limit across Murraylink was close to forecast but limited to around 5 MW due to the outage of the Murraylink runback scheme",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Thursday 19 December 2013 the spot price in South Australia reached $10 627/MWh at 4 pm and $5640/MWh at 4.30 pm.",
+          "value": 10627
+        },
+        "rebid_set_price": {
+          "quote": "the rebidding of capacity to high prices was sufficient to require the dispatch of high priced generation and set high prices.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20131219_SA_5000_report.PDF",
+    "url": "https://www.aer.gov.au/system/files/20131219%20SA%205000%20report.PDF"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 15641,
+    "per_attempt": [
+      {
+        "completion_tokens": 4019,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3083
+        },
+        "prompt_tokens": 10837,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14856
+      },
+      {
+        "completion_tokens": 11622,
+        "completion_tokens_details": {
+          "reasoning_tokens": 8783
+        },
+        "prompt_tokens": 10837,
+        "prompt_tokens_details": {
+          "cached_tokens": 8768
+        },
+        "total_tokens": 22459
+      }
+    ],
+    "prompt_tokens": 21674,
+    "reasoning_tokens": 11866,
+    "total_tokens": 37315
+  }
+}

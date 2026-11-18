@@ -1,0 +1,96 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:54:02+00:00",
+  "failure": null,
+  "input_sha256": "b2d225b6851875d9048f3f85963302f9c3c94a6c4b09793e6b1075a9c07439c0",
+  "key": "c134733e469a354704eef6b1d6eaf398a82f7338bad9d85c6f2fb52de126107b",
+  "latency_s": 59.75,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2022-02-17\", \"regions\": [\"TAS1\"], \"intervals\": {\"text\": \"8:30 am 30-minute period\", \"quote\": \"On 17 February 2022 the wholesale price of electricity reached $7,783/MWh in Tasmania for the 8.30 am 30-minute period.\"}, \"peak_price\": {\"value\": 7783, \"quote\": \"On 17 February 2022 the wholesale price of electricity reached $7,783/MWh in Tasmania for the 8.30 am 30-minute period.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was slightly higher than forecast.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"700 MW of low-priced capacity was unavailable due to planned generator outages and offers below their registered capacity.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Around 480 MW of capacity was unable to be dispatched as generators were unable to ramp up following a planned reduction in availability at 8.05 am.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Around 100 MW of capacity was unable to be dispatched as it was needed to provide FCAS.\"}, {\"label\": \"network_outage\", \"quote\": \"A constraint managing a planned line outage in Tasmania forced flows into Victoria and meant Tasmania had to supply its own local Frequency Control Ancillary Services (FCAS).\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The constraint forced around 160 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Rebidding by generators or the Basslink interconnector did not contribute to high prices.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding by generators or the Basslink interconnector did not contribute to high prices.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was slightly higher than forecast."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "700 MW of low-priced capacity was unavailable due to planned generator outages and offers below their registered capacity."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Around 480 MW of capacity was unable to be dispatched as generators were unable to ramp up following a planned reduction in availability at 8.05 am."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Around 100 MW of capacity was unable to be dispatched as it was needed to provide FCAS."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A constraint managing a planned line outage in Tasmania forced flows into Victoria and meant Tasmania had to supply its own local Frequency Control Ancillary Services (FCAS)."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The constraint forced around 160 MW out of Tasmania during the high prices. Forced exports restricted Tasmania's access to lower priced capacity in Victoria"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2022-02-17",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Rebidding by generators or the Basslink interconnector did not contribute to high prices."
+          }
+        ],
+        "intervals": {
+          "quote": "On 17 February 2022 the wholesale price of electricity reached $7,783/MWh in Tasmania for the 8.30 am 30-minute period.",
+          "text": "8:30 am 30-minute period"
+        },
+        "network_outages": {
+          "quote": "There was a planned line outage of the Chapel Street to Gordon Line from 15-18 February 2022.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On 17 February 2022 the wholesale price of electricity reached $7,783/MWh in Tasmania for the 8.30 am 30-minute period.",
+          "value": 7783
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding by generators or the Basslink interconnector did not contribute to high prices.",
+          "value": "no"
+        },
+        "regions": [
+          "TAS1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000_per_MWh_-_17_February_2022_(TAS).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000%20per%20MWh%20-%2017%20February%202022%20%28TAS%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3356,
+    "per_attempt": [
+      {
+        "completion_tokens": 3356,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2834
+        },
+        "prompt_tokens": 5146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8502
+      }
+    ],
+    "prompt_tokens": 5146,
+    "reasoning_tokens": 2834,
+    "total_tokens": 8502
+  }
+}

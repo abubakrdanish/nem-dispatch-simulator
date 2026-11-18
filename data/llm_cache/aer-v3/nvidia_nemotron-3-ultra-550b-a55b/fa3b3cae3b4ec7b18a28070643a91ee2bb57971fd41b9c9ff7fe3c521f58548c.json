@@ -1,0 +1,153 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T06:12:29+00:00",
+  "failure": null,
+  "input_sha256": "fadee2368f0d1106a4dcfe48024133391fd6101ea7bf8166ca79870c3b305752",
+  "key": "fa3b3cae3b4ec7b18a28070643a91ee2bb57971fd41b9c9ff7fe3c521f58548c",
+  "latency_s": 95.38,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2011-02-01\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"3:30 pm, 4:00 pm, 4:30 pm\", \"quote\": \"On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.\"}, \"peak_price\": {\"value\": 7350, \"quote\": \"reaching $7350/MWh at 4 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Conditions at the time saw demand higher than forecast, up to 124 MW above that four hours ahead, and up to 134 MW above that forecast twelve hours ahead.\"}, {\"label\": \"rebids\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding\"}], \"constraints_named\": [{\"id\": \"QNI pd constraint pd_run_201102011\", \"quote\": \"The reasons given included \\\"change in Qld sensitivities - sl\\\", \\\"QNI pd constraint pd_run_201102011\\\" and \\\"Qld price above pd - sl\\\".\"}, {\"id\": \"N_MBTE1_B\", \"quote\": \"The reason given was \\\"transmission constraint-N_MBTE1_B\\\".\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}}, {\"event_date\": \"2011-02-02\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"2:30 pm, 3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm\", \"quote\": \"On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.\"}, \"peak_price\": {\"value\": 9044, \"quote\": \"reaching $9044/MWh at 4 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in Queensland exceeded that of the previous day, reaching a maximum of 7949 MW for the 2.30 pm trading interval.\"}, {\"label\": \"rebids\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"CS Energy reduced the available capacity across its portfolio by up to 296 MW (all of which was priced above $9800/MWh). The reasons given included \\\"CALL_B unit availability emissions sl\\\", \\\"1252P COLNSV_1 unit trip sl\\\", \\\"1006E COLNSV_5 correct error in previous bid sl\\\", \\\"KPP_1 ambient conditions sl\\\" and \\\"1217P SWAN_B_3 fabric filter maintenance sl\\\".\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"CS Energy reduced the available capacity across its portfolio by up to 296 MW (all of which was priced above $9800/MWh). The reasons given included \\\"CALL_B unit availability emissions sl\\\", \\\"1252P COLNSV_1 unit trip sl\\\", \\\"1006E COLNSV_5 correct error in previous bid sl\\\", \\\"KPP_1 ambient conditions sl\\\" and \\\"1217P SWAN_B_3 fabric filter maintenance sl\\\".\"}], \"constraints_named\": [{\"id\": \"QNI constrained\", \"quote\": \"The reasons given were \\\"1605A CS Energy reviewed 30 min predispatch/QNI constrained SL\\\" and \\\"1401A SWAN_E price lower than 30min forecast sl\\\".\"}, {\"id\": \"transmission constraint-QNI\", \"quote\": \"The reason given was \\\"1523A transmission constraint-QNI\\\".\"}], \"interconnectors_named\": [{\"name\": \"QNI\", \"quote\": \"These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Conditions at the time saw demand higher than forecast, up to 124 MW above that four hours ahead, and up to 134 MW above that forecast twelve hours ahead."
+          },
+          {
+            "label": "rebids",
+            "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding"
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI pd constraint pd_run_201102011",
+            "quote": "The reasons given included \"change in Qld sensitivities - sl\", \"QNI pd constraint pd_run_201102011\" and \"Qld price above pd - sl\"."
+          },
+          {
+            "id": "N_MBTE1_B",
+            "quote": "The reason given was \"transmission constraint-N_MBTE1_B\"."
+          }
+        ],
+        "event_date": "2011-02-01",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding"
+          }
+        ],
+        "intervals": {
+          "quote": "On 1 February, the Queensland spot price exceeded $5000/MWh on three occasions, reaching $7350/MWh at 4 pm.",
+          "text": "3:30 pm, 4:00 pm, 4:30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $7350/MWh at 4 pm.",
+          "value": 7350
+        },
+        "rebid_set_price": {
+          "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in Queensland exceeded that of the previous day, reaching a maximum of 7949 MW for the 2.30 pm trading interval."
+          },
+          {
+            "label": "rebids",
+            "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "CS Energy reduced the available capacity across its portfolio by up to 296 MW (all of which was priced above $9800/MWh). The reasons given included \"CALL_B unit availability emissions sl\", \"1252P COLNSV_1 unit trip sl\", \"1006E COLNSV_5 correct error in previous bid sl\", \"KPP_1 ambient conditions sl\" and \"1217P SWAN_B_3 fabric filter maintenance sl\"."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "CS Energy reduced the available capacity across its portfolio by up to 296 MW (all of which was priced above $9800/MWh). The reasons given included \"CALL_B unit availability emissions sl\", \"1252P COLNSV_1 unit trip sl\", \"1006E COLNSV_5 correct error in previous bid sl\", \"KPP_1 ambient conditions sl\" and \"1217P SWAN_B_3 fabric filter maintenance sl\"."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI constrained",
+            "quote": "The reasons given were \"1605A CS Energy reviewed 30 min predispatch/QNI constrained SL\" and \"1401A SWAN_E price lower than 30min forecast sl\"."
+          },
+          {
+            "id": "transmission constraint-QNI",
+            "quote": "The reason given was \"1523A transmission constraint-QNI\"."
+          }
+        ],
+        "event_date": "2011-02-02",
+        "interconnectors_named": [
+          {
+            "name": "QNI",
+            "quote": "These high prices were driven by the record demand and high prices in New South Wales, and Queensland generator rebidding"
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 February, the spot price exceeded $5000/MWh on five occasions, reaching $9044/MWh at 4 pm.",
+          "text": "2:30 pm, 3:00 pm, 3:30 pm, 4:00 pm, 4:30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $9044/MWh at 4 pm.",
+          "value": 9044
+        },
+        "rebid_set_price": {
+          "quote": "It can be seen from the above summary that a large amount of rebidding occurred on the relevant days, which significantly contributed to the high prices in Queensland.",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_1_and_2_February_2011_-_Qld.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_1%20and%202%20February%202011%20-%20Qld.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5824,
+    "per_attempt": [
+      {
+        "completion_tokens": 5824,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4626
+        },
+        "prompt_tokens": 11595,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 17419
+      }
+    ],
+    "prompt_tokens": 11595,
+    "reasoning_tokens": 4626,
+    "total_tokens": 17419
+  }
+}

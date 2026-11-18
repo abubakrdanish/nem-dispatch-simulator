@@ -1,0 +1,84 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:24:52+00:00",
+  "failure": null,
+  "input_sha256": "fbfef00d18b895db361f2f2ab5c4d62029f0513ec4a7d88116cffa031c90464b",
+  "key": "5476089ade50173997eca38f2eed1b0429ddb7d5afc266f29660b594524e0149",
+  "latency_s": 55.9,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"eight trading intervals from 2.30 pm to 6 pm inclusive\", \"quote\": \"On Thursday 19 November 2009, the spot price in South Australia exceeded $5000/MWh for eight trading intervals from 2.30 pm to 6 pm inclusive.\"}, \"peak_price\": {\"value\": 9999.77, \"quote\": \"Spot price $9999.77/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"actual demand was up to 169 MW (or 6 per cent) higher than that forecast four hours ahead\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined imports into South Australia during the high-priced period were at the limit but lower than that forecast four hours ahead\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink).\"}, {\"name\": \"Murraylink\", \"quote\": \"The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink).\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "actual demand was up to 169 MW (or 6 per cent) higher than that forecast four hours ahead"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined imports into South Australia during the high-priced period were at the limit but lower than that forecast four hours ahead"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-11-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink)."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "The average overestimate of import capability was 120 MW (15 MW across Heywood and 105 MW across Murraylink)."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 19 November 2009, the spot price in South Australia exceeded $5000/MWh for eight trading intervals from 2.30 pm to 6 pm inclusive.",
+          "text": "eight trading intervals from 2.30 pm to 6 pm inclusive"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999.77/MWh",
+          "value": 9999.77
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the prices exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_19_November_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_19%20November%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3924,
+    "per_attempt": [
+      {
+        "completion_tokens": 3924,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3553
+        },
+        "prompt_tokens": 12844,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16768
+      }
+    ],
+    "prompt_tokens": 12844,
+    "reasoning_tokens": 3553,
+    "total_tokens": 16768
+  }
+}

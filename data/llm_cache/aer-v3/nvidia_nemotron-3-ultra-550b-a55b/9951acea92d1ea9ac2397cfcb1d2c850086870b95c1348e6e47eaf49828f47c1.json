@@ -1,0 +1,110 @@
+{
+  "attempts": 2,
+  "cache_format": 1,
+  "created_at": "2026-11-18T04:40:31+00:00",
+  "failure": null,
+  "input_sha256": "e4f31e4161ef087a7e0e0465b75d3f457ce1f42231b7e193ceb894fbae13a1b4",
+  "key": "9951acea92d1ea9ac2397cfcb1d2c850086870b95c1348e6e47eaf49828f47c1",
+  "latency_s": 101.86,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2014-01-15\", \"regions\": [\"SA1\", \"VIC1\"], \"intervals\": {\"text\": \"The 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive.\", \"quote\": \"The 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive.\"}, \"peak_price\": {\"value\": 6213, \"quote\": \"At 4 pm on Wednesday 15 January 2014, the spot price reached $6213/MWh and $5972/MWh in South Australia and Victoria respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"These high price events occurred on the third day of a heat wave that affected South Australia, Victoria and southern New South Wales.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Plant failures on 14 January at AGL's Torrens Island B unit 3 (200 MW) in South Australia, Loy Yang A unit 3 (around 560 MW) in Victoria, and cooling limitations at Loy Yang B reduced the capacity of the B1 and B2 units by 99 MW.\"}, {\"label\": \"rebids\", \"quote\": \"During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Capacity priced at $12,000/MWh at Loy Yang B was dispatched, but because it was ramp rate limited it did not set the price.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price.\"}], \"constraints_named\": [{\"id\": \"V>>SML_NIL_1/V>>SML_NIL_8\", \"quote\": \"manage violating constraint V>>SML_NIL_1/V>>SML_NIL_8\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"Basslink interconnector\"}, {\"name\": \"Heywood\", \"quote\": \"The Heywood interconnector was unconstrained during the high price period\"}, {\"name\": \"Murraylink\", \"quote\": \"Flows across Murraylink were close to forecast but at low levels\"}, {\"name\": \"Vic-NSW\", \"quote\": \"Flow into Victoria across the Vic-NSW interconnector\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "These high price events occurred on the third day of a heat wave that affected South Australia, Victoria and southern New South Wales."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Plant failures on 14 January at AGL's Torrens Island B unit 3 (200 MW) in South Australia, Loy Yang A unit 3 (around 560 MW) in Victoria, and cooling limitations at Loy Yang B reduced the capacity of the B1 and B2 units by 99 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Capacity priced at $12,000/MWh at Loy Yang B was dispatched, but because it was ramp rate limited it did not set the price."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "V>>SML_NIL_1/V>>SML_NIL_8",
+            "quote": "manage violating constraint V>>SML_NIL_1/V>>SML_NIL_8"
+          }
+        ],
+        "event_date": "2014-01-15",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "Basslink interconnector"
+          },
+          {
+            "name": "Heywood",
+            "quote": "The Heywood interconnector was unconstrained during the high price period"
+          },
+          {
+            "name": "Murraylink",
+            "quote": "Flows across Murraylink were close to forecast but at low levels"
+          },
+          {
+            "name": "Vic-NSW",
+            "quote": "Flow into Victoria across the Vic-NSW interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "The 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive.",
+          "text": "The 4 pm trading interval is comprised of the six dispatch intervals from 3.35 pm to 4 pm inclusive."
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "At 4 pm on Wednesday 15 January 2014, the spot price reached $6213/MWh and $5972/MWh in South Australia and Victoria respectively.",
+          "value": 6213
+        },
+        "rebid_set_price": {
+          "quote": "During the 4 pm trading interval there was no capacity priced between $100/MWh and $8000/MWh, and, as a consequence, small changes in demand, small reductions in import capacity from Tasmania, and some rebidding triggered large increases in price.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1",
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20140115_sa_and_vic_$5000_report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20140115%20sa%20and%20vic%20%245000%20report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4193,
+    "per_attempt": [
+      {
+        "completion_tokens": 4193,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3465
+        },
+        "prompt_tokens": 11371,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 15564
+      }
+    ],
+    "prompt_tokens": 11371,
+    "reasoning_tokens": 3465,
+    "total_tokens": 15564
+  }
+}

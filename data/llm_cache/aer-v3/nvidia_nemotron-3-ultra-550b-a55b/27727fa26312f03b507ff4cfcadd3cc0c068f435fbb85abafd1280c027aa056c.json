@@ -1,0 +1,125 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:56:15+00:00",
+  "failure": null,
+  "input_sha256": "c5bbbe7769ab135dd2a21a3567d8b121de904135246fc8660b69ce11a120bcba",
+  "key": "27727fa26312f03b507ff4cfcadd3cc0c068f435fbb85abafd1280c027aa056c",
+  "latency_s": 69.32,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2020-01-04\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"4 pm to 6 pm trading intervals\", \"quote\": \"the spot price for electricity for the 4 pm to 6 pm trading intervals in New South Wales exceeded $5000/MWh\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"The maximum spot price for the day was set during the 5 pm and 5.30 pm trading intervals at $14 700/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Maximum temperatures in New South Wales exceeded 40°C on that day. This drove demand to reach a maximum of 12 334 MW at 4.30 pm.\"}, {\"label\": \"wind_output\", \"quote\": \"Sapphire Wind Farm 187 10 177 Low wind output\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Shoalhaven 240 0 240 Existing planned outage\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Less than 14 500 MW was offered just before the loss of the interconnector, mostly due to de-rating of plants due to forecast (and then actual) extreme temperatures.\"}, {\"label\": \"network_outage\", \"quote\": \"A series of unplanned network outages around the VIC-NSW interconnector occurred from around 12.30 pm. These outages culminated in the loss of the VIC-NSW interconnector during the 4 pm trading interval after the Upper and Lower Tumut switching stations were interrupted.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding of some generation capacity from low to high prices contributed to the price exceeding $5000/MWh.\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"Around half of the high priced intervals were set by the co-optimisation between the Energy and the FCAS markets.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The reasons given all related to a constraint managing the separation of New South Wales from Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The outage of the VIC-NSW interconnector resulted in an additional 460 MW of imports from Queensland into New South Wales over the QNI interconnector, up to its maximum nominal capacity of 1000 MW during the high price intervals.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"Following the loss of availability from Snowy Hydro's generators, an actual LOR 2 was declared in New South Wales from 4 pm.\"}], \"constraints_named\": [{\"id\": \"NQ_VST_ISLE_A\", \"quote\": \"constraint management - NQ_VST_ISLE_A SL\"}, {\"id\": \"NSW1,ENOF Generation deficit constraint\", \"quote\": \"NSW1,ENOF Generation deficit constraint $2 205 000 1.00 $2 205 000\"}], \"interconnectors_named\": [{\"name\": \"VIC-NSW interconnector\", \"quote\": \"New South Wales is connected to Victoria via the VIC-NSW interconnector\"}, {\"name\": \"QNI interconnector\", \"quote\": \"The outage of the VIC-NSW interconnector resulted in an additional 460 MW of imports from Queensland into New South Wales over the QNI interconnector\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"A series of unplanned network outages around the VIC-NSW interconnector occurred from around 12.30 pm. These outages culminated in the loss of the VIC-NSW interconnector during the 4 pm trading interval after the Upper and Lower Tumut switching stations were interrupted.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding of some generation capacity from low to high prices contributed to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Maximum temperatures in New South Wales exceeded 40°C on that day. This drove demand to reach a maximum of 12 334 MW at 4.30 pm."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Sapphire Wind Farm 187 10 177 Low wind output"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Shoalhaven 240 0 240 Existing planned outage"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Less than 14 500 MW was offered just before the loss of the interconnector, mostly due to de-rating of plants due to forecast (and then actual) extreme temperatures."
+          },
+          {
+            "label": "network_outage",
+            "quote": "A series of unplanned network outages around the VIC-NSW interconnector occurred from around 12.30 pm. These outages culminated in the loss of the VIC-NSW interconnector during the 4 pm trading interval after the Upper and Lower Tumut switching stations were interrupted."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding of some generation capacity from low to high prices contributed to the price exceeding $5000/MWh."
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "Around half of the high priced intervals were set by the co-optimisation between the Energy and the FCAS markets."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The reasons given all related to a constraint managing the separation of New South Wales from Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The outage of the VIC-NSW interconnector resulted in an additional 460 MW of imports from Queensland into New South Wales over the QNI interconnector, up to its maximum nominal capacity of 1000 MW during the high price intervals."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "Following the loss of availability from Snowy Hydro's generators, an actual LOR 2 was declared in New South Wales from 4 pm."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NQ_VST_ISLE_A",
+            "quote": "constraint management - NQ_VST_ISLE_A SL"
+          },
+          {
+            "id": "NSW1,ENOF Generation deficit constraint",
+            "quote": "NSW1,ENOF Generation deficit constraint $2 205 000 1.00 $2 205 000"
+          }
+        ],
+        "event_date": "2020-01-04",
+        "interconnectors_named": [
+          {
+            "name": "VIC-NSW interconnector",
+            "quote": "New South Wales is connected to Victoria via the VIC-NSW interconnector"
+          },
+          {
+            "name": "QNI interconnector",
+            "quote": "The outage of the VIC-NSW interconnector resulted in an additional 460 MW of imports from Queensland into New South Wales over the QNI interconnector"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price for electricity for the 4 pm to 6 pm trading intervals in New South Wales exceeded $5000/MWh",
+          "text": "4 pm to 6 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "A series of unplanned network outages around the VIC-NSW interconnector occurred from around 12.30 pm. These outages culminated in the loss of the VIC-NSW interconnector during the 4 pm trading interval after the Upper and Lower Tumut switching stations were interrupted.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The maximum spot price for the day was set during the 5 pm and 5.30 pm trading intervals at $14 700/MWh",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding of some generation capacity from low to high prices contributed to the price exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_4_January_2020_(NSW).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%204%20January%202020%20%28NSW%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4289,
+    "per_attempt": [
+      {
+        "completion_tokens": 4289,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3360
+        },
+        "prompt_tokens": 16952,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 21241
+      }
+    ],
+    "prompt_tokens": 16952,
+    "reasoning_tokens": 3360,
+    "total_tokens": 21241
+  }
+}

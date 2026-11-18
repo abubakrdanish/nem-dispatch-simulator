@@ -1,0 +1,129 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:22:14+00:00",
+  "failure": null,
+  "input_sha256": "ccd91234ed2df58b3cd8ccad09887355e7c13d06d78e4a13da41a4d089ff0e7a",
+  "key": "ed09ed26d63e46a7da44a2f09f284b2938fc84e8ab97cb64893408cbaec09c8c",
+  "latency_s": 124.77,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2010-04-22\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"over seven trading intervals from 12.30 pm to 4 pm inclusive\", \"quote\": \"over seven trading intervals from 12.30 pm to 4 pm inclusive\"}, \"peak_price\": {\"value\": 9999, \"quote\": \"Spot price $9999/MWh\"}, \"causes\": [{\"label\": \"network_outage\", \"quote\": \"Planned network outages restricted imports into Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At the times of high prices, imports into Victoria across the Heywood interconnector were limited to around 200 MW.\"}, {\"label\": \"rebids\", \"quote\": \"Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The constraint used to manage this outage (N>>V-X_DDH2_DDSM_2) bound for the entire high priced period.\"}, {\"label\": \"constraint_violation\", \"quote\": \"At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settlement residues accruing across the Vic-NSW interconnector. The constraint was binding from 12.05 pm, and was violated for the majority of the time.\"}, {\"label\": \"constraint_violation\", \"quote\": \"At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia. This constraint bound from 12.50 pm, and also violated for most of the period, until being revoked at 4.10 pm.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 11.14 am, effective from 11.20 am, Snowy Hydro rebid the ramp down rate at Murray from 200 MW/min to the minimum allowable of 3 MW/min.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 12.21 pm, effective from 12.30 pm, Eraring Energy reduced both the ramp up and ramp down rates at its Hume Power Station from 10 MW/min to 0 MW/min.\"}], \"constraints_named\": [{\"id\": \"N>>V-X_DDH2_DDSM_2\", \"quote\": \"The constraint used to manage this outage (N>>V-X_DDH2_DDSM_2) bound for the entire high priced period.\"}, {\"id\": \"#VIC1-NSW1_E_E\", \"quote\": \"At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settlement residues accruing across the Vic-NSW interconnector.\"}, {\"id\": \"#SA1_E_20100422\", \"quote\": \"At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia.\"}], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"On 22 April there was a planned outage of a Heywood to Moorabool 500 kV line that reduced the capacity for flows between Victoria and South Australia across the Heywood interconnector.\"}, {\"name\": \"Vic-NSW interconnector\", \"quote\": \"Two hours ahead of dispatch, flows across the Vic-NSW interconnector were forecast to be around 20 MW, counter price into New South Wales.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia.\"}, {\"name\": \"Basslink\", \"quote\": \"The Basslink interconnector tripped on 17 April as a result of the failure of a valve cooling pipe component in the valve hall causing a leak of demineralised water.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages restricted imports into Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages restricted imports into Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At the times of high prices, imports into Victoria across the Heywood interconnector were limited to around 200 MW."
+          },
+          {
+            "label": "rebids",
+            "quote": "Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The constraint used to manage this outage (N>>V-X_DDH2_DDSM_2) bound for the entire high priced period."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settlement residues accruing across the Vic-NSW interconnector. The constraint was binding from 12.05 pm, and was violated for the majority of the time."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia. This constraint bound from 12.50 pm, and also violated for most of the period, until being revoked at 4.10 pm."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 11.14 am, effective from 11.20 am, Snowy Hydro rebid the ramp down rate at Murray from 200 MW/min to the minimum allowable of 3 MW/min."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 12.21 pm, effective from 12.30 pm, Eraring Energy reduced both the ramp up and ramp down rates at its Hume Power Station from 10 MW/min to 0 MW/min."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>V-X_DDH2_DDSM_2",
+            "quote": "The constraint used to manage this outage (N>>V-X_DDH2_DDSM_2) bound for the entire high priced period."
+          },
+          {
+            "id": "#VIC1-NSW1_E_E",
+            "quote": "At 12.05 pm, AEMO invoked the constraint #VIC1-NSW1_E_E, to reduce flows into New South Wales and limit negative settlement residues accruing across the Vic-NSW interconnector."
+          },
+          {
+            "id": "#SA1_E_20100422",
+            "quote": "At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia."
+          }
+        ],
+        "event_date": "2010-04-22",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "On 22 April there was a planned outage of a Heywood to Moorabool 500 kV line that reduced the capacity for flows between Victoria and South Australia across the Heywood interconnector."
+          },
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "Two hours ahead of dispatch, flows across the Vic-NSW interconnector were forecast to be around 20 MW, counter price into New South Wales."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "At 12.50 pm, AEMO invoked the constraint #SA1_E_20100422 to reduce flows into South Australia across Murraylink and limit the accumulation of negative settlement residues into South Australia."
+          },
+          {
+            "name": "Basslink",
+            "quote": "The Basslink interconnector tripped on 17 April as a result of the failure of a valve cooling pipe component in the valve hall causing a leak of demineralised water."
+          }
+        ],
+        "intervals": {
+          "quote": "over seven trading intervals from 12.30 pm to 4 pm inclusive",
+          "text": "over seven trading intervals from 12.30 pm to 4 pm inclusive"
+        },
+        "network_outages": {
+          "quote": "Planned network outages restricted imports into Victoria from SA and NSW, and Basslink was out of service following its unplanned outage on 17 April.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $9999/MWh",
+          "value": 9999
+        },
+        "rebid_set_price": {
+          "quote": "Following the reduction in forecast price, LYMMCO rebid capacity into high prices at Loy Yang A, which drove forecast prices to close to the cap.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_22_April_2010_-_VIC_.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_22%20April%202010%20-%20VIC%20.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 6047,
+    "per_attempt": [
+      {
+        "completion_tokens": 6047,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4915
+        },
+        "prompt_tokens": 8074,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14121
+      }
+    ],
+    "prompt_tokens": 8074,
+    "reasoning_tokens": 4915,
+    "total_tokens": 14121
+  }
+}

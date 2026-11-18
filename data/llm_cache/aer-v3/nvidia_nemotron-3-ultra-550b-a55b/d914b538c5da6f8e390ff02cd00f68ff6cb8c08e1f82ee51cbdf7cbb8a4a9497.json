@@ -1,0 +1,88 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T04:44:46+00:00",
+  "failure": null,
+  "input_sha256": "19ca64683d931d41eb50d4c431f58afc1ba7d5366d1db177f3c3e63e2ca5e1db",
+  "key": "d914b538c5da6f8e390ff02cd00f68ff6cb8c08e1f82ee51cbdf7cbb8a4a9497",
+  "latency_s": 82.83,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2019-12-19\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"7 pm and 7.30 pm trading intervals\", \"quote\": \"On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.\"}, \"peak_price\": {\"value\": 14700, \"quote\": \"The maximum spot price for the day was set during the 7 pm and 7.30 pm trading intervals at $14 700/MWh, exceeding the AER's reporting threshold.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Persistent high temperatures drove demand to reach a maximum of 3108 MW at 7 pm, which was 70 MW greater than forecast.\"}, {\"label\": \"wind_output\", \"quote\": \"Of the 1800 MW of semi-scheduled wind installed, only as much as 220 MW was available.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"actual flows were between 165 MW and 209 MW lower than forecast. This means supply of cheaper generation into South Australia from neighbouring regions was materially reduced.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood\", \"quote\": \"During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit.\"}, {\"name\": \"Murraylink\", \"quote\": \"During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Persistent high temperatures drove demand to reach a maximum of 3108 MW at 7 pm, which was 70 MW greater than forecast."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Of the 1800 MW of semi-scheduled wind installed, only as much as 220 MW was available."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "actual flows were between 165 MW and 209 MW lower than forecast. This means supply of cheaper generation into South Australia from neighbouring regions was materially reduced."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2019-12-19",
+        "interconnectors_named": [
+          {
+            "name": "Heywood",
+            "quote": "During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit."
+          },
+          {
+            "name": "Murraylink",
+            "quote": "During the high priced trading intervals both the Heywood and Murraylink interconnectors were importing into South Australia at their limit."
+          }
+        ],
+        "intervals": {
+          "quote": "On 19 December 2019 the spot price for electricity for the 7 pm and 7.30 pm trading intervals reached the market cap of $14 700/MWh in South Australia.",
+          "text": "7 pm and 7.30 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The maximum spot price for the day was set during the 7 pm and 7.30 pm trading intervals at $14 700/MWh, exceeding the AER's reporting threshold.",
+          "value": 14700
+        },
+        "rebid_set_price": {
+          "quote": "Generator rebidding from low to high prices did not contribute to the price exceeding $5000/MWh.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/20191219_$5000_SA_Report.pdf",
+    "url": "https://www.aer.gov.au/system/files/20191219%20%245000%20SA%20Report.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3612,
+    "per_attempt": [
+      {
+        "completion_tokens": 3612,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3163
+        },
+        "prompt_tokens": 10369,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13981
+      }
+    ],
+    "prompt_tokens": 10369,
+    "reasoning_tokens": 3163,
+    "total_tokens": 13981
+  }
+}

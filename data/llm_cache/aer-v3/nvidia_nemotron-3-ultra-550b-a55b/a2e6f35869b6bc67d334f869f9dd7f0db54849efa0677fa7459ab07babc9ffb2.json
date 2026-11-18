@@ -1,0 +1,129 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:15:42+00:00",
+  "failure": null,
+  "input_sha256": "d5fbdf2f2ad2fb26809d3f6cb9af4ac4910cec9f19c949a6881d22cf2820a30d",
+  "key": "a2e6f35869b6bc67d334f869f9dd7f0db54849efa0677fa7459ab07babc9ffb2",
+  "latency_s": 116.24,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-01-11\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"4:00 pm trading interval (3:30 pm to 4:00 pm) with five-minute dispatch prices above $5,000/MWh from 3:45 pm\", \"quote\": \"During the 4.00 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm) five minute dispatch prices were aligned with Victoria and Queensland at less than $600/MWh until 3.45 pm, when the transmission outage occurred. The New South Wales dispatch price then diverged from the other regions to $9350/MWh.\"}, \"peak_price\": {\"value\": 5092, \"quote\": \"At 4 pm on January 11 the spot price in New South Wales peaked at $5092/MWh.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was high in New South Wales and across the NEM. National demand peaked at 30,960 MW, the highest level since last winter. The demand forecasts fluctuated through the day and in a number of cases varied significantly from actual outcomes. Demand in New South Wales reached 12,333 MW, which was 800 MW higher than forecast four hours ahead and 350 MW higher than forecast at the beginning of the trading interval.\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Munmorah unit 4 300 Shutdown on 11 December, returned to service on 27 January. Vales Point unit 6 660 Shutdown on 15 December, returned to service on 14 January. Capacity not presented 1882 (15 per cent of installed capacity)\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Liddell unit 4 513 Unit tripped on 2 January and remained out of service on this day.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.\"}, {\"label\": \"rebids\", \"quote\": \"The combination of higher than forecast demand, a step change in network capability and generator rebidding led to prices significantly greater than forecast for the trading interval. In New South Wales 1490 MW (or 14 per cent) of capacity was priced above $5000/MWh. Of this capacity, up to 870 MW resulted from rebidding by Macquarie Generation from relatively low prices during the day.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred. This step change was driven by a very short unplanned outage of the Kempsey to Nambucca 132kV line in northern New South Wales.\"}], \"constraints_named\": [{\"id\": \"Manage Snowy CSC/CSP constraints\", \"quote\": \"The rebid reason given was \\\"Manage Snowy CSC/CSP constraints\\\".\"}, {\"id\": \"Manage unexp Snowy NSW constraint bnd down\", \"quote\": \"The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \\\"Manage unexp Snowy NSW constraint bnd down\\\"\"}, {\"id\": \"Manage unexp Snow-Vic constraint bnd up\", \"quote\": \"The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \\\"Manage unexp Snow-Vic constraint bnd up\\\"\"}, {\"id\": \"Manage Sno-NSW constraint bnd dwn\", \"quote\": \"The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \\\"Manage Sno-NSW constraint bnd dwn\\\"\"}, {\"id\": \"NSW price high Snowy1 constraint not in CSP list:Bnd D\", \"quote\": \"The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \\\"NSW price high Snowy1 constraint not in CSP list:Bnd D\\\"\"}, {\"id\": \"Manage unexp Snowy- NSW constraint Band up\", \"quote\": \"The rebid reason given was \\\"Manage unexp Snowy- NSW constraint Band up\\\".\"}, {\"id\": \"Manage transmission constraint\", \"quote\": \"The rebid reason given was \\\"Manage transmission constraint\\\".\"}], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnectors\", \"quote\": \"At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred.\"}, {\"name\": \"Snowy and Queensland interconnectors\", \"quote\": \"Flows across the Snowy and Queensland interconnectors were unconstrained for all but one dispatch interval during the trading interval.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"While the outage was rectified within five minutes, a rebid into higher prices by Snowy Hydro, saw the prices across the regions realign at more than $4800/MWh for the remainder of the trading interval.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was high in New South Wales and across the NEM. National demand peaked at 30,960 MW, the highest level since last winter. The demand forecasts fluctuated through the day and in a number of cases varied significantly from actual outcomes. Demand in New South Wales reached 12,333 MW, which was 800 MW higher than forecast four hours ahead and 350 MW higher than forecast at the beginning of the trading interval."
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Munmorah unit 4 300 Shutdown on 11 December, returned to service on 27 January. Vales Point unit 6 660 Shutdown on 15 December, returned to service on 14 January. Capacity not presented 1882 (15 per cent of installed capacity)"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Liddell unit 4 513 Unit tripped on 2 January and remained out of service on this day."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales."
+          },
+          {
+            "label": "rebids",
+            "quote": "The combination of higher than forecast demand, a step change in network capability and generator rebidding led to prices significantly greater than forecast for the trading interval. In New South Wales 1490 MW (or 14 per cent) of capacity was priced above $5000/MWh. Of this capacity, up to 870 MW resulted from rebidding by Macquarie Generation from relatively low prices during the day."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred. This step change was driven by a very short unplanned outage of the Kempsey to Nambucca 132kV line in northern New South Wales."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "Manage Snowy CSC/CSP constraints",
+            "quote": "The rebid reason given was \"Manage Snowy CSC/CSP constraints\"."
+          },
+          {
+            "id": "Manage unexp Snowy NSW constraint bnd down",
+            "quote": "The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \"Manage unexp Snowy NSW constraint bnd down\""
+          },
+          {
+            "id": "Manage unexp Snow-Vic constraint bnd up",
+            "quote": "The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \"Manage unexp Snow-Vic constraint bnd up\""
+          },
+          {
+            "id": "Manage Sno-NSW constraint bnd dwn",
+            "quote": "The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \"Manage Sno-NSW constraint bnd dwn\""
+          },
+          {
+            "id": "NSW price high Snowy1 constraint not in CSP list:Bnd D",
+            "quote": "The rebid reasons given related to the higher than forecast demand and resulting changes in dispatch and network constraints and included \"NSW price high Snowy1 constraint not in CSP list:Bnd D\""
+          },
+          {
+            "id": "Manage unexp Snowy- NSW constraint Band up",
+            "quote": "The rebid reason given was \"Manage unexp Snowy- NSW constraint Band up\"."
+          },
+          {
+            "id": "Manage transmission constraint",
+            "quote": "The rebid reason given was \"Manage transmission constraint\"."
+          }
+        ],
+        "event_date": "2007-01-11",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to New South Wales interconnectors",
+            "quote": "At 3.45 pm, a combined reduction of more than 600 MW in import capability across the Queensland to New South Wales interconnectors occurred."
+          },
+          {
+            "name": "Snowy and Queensland interconnectors",
+            "quote": "Flows across the Snowy and Queensland interconnectors were unconstrained for all but one dispatch interval during the trading interval."
+          }
+        ],
+        "intervals": {
+          "quote": "During the 4.00 pm trading interval (which covers the half hour from 3.30 pm to 4.00 pm) five minute dispatch prices were aligned with Victoria and Queensland at less than $600/MWh until 3.45 pm, when the transmission outage occurred. The New South Wales dispatch price then diverged from the other regions to $9350/MWh.",
+          "text": "4:00 pm trading interval (3:30 pm to 4:00 pm) with five-minute dispatch prices above $5,000/MWh from 3:45 pm"
+        },
+        "network_outages": {
+          "quote": "An unplanned transmission outage caused a significant step reduction in imports from Queensland into New South Wales at around 3.45 pm, increasing prices in New South Wales.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "At 4 pm on January 11 the spot price in New South Wales peaked at $5092/MWh.",
+          "value": 5092
+        },
+        "rebid_set_price": {
+          "quote": "While the outage was rectified within five minutes, a rebid into higher prices by Snowy Hydro, saw the prices across the regions realign at more than $4800/MWh for the remainder of the trading interval.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_11_January_2007_-_NSW.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_11%20January%202007%20-%20NSW.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 5483,
+    "per_attempt": [
+      {
+        "completion_tokens": 5483,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4225
+        },
+        "prompt_tokens": 8645,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14128
+      }
+    ],
+    "prompt_tokens": 8645,
+    "reasoning_tokens": 4225,
+    "total_tokens": 14128
+  }
+}

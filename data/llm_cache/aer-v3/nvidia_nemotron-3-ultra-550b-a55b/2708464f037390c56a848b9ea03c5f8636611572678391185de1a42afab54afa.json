@@ -1,0 +1,100 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:50:25+00:00",
+  "failure": null,
+  "input_sha256": "3a758bdc3e51b4ab99e24affd8712ba051deeafb15f09c558bdad904ac5ea03e",
+  "key": "2708464f037390c56a848b9ea03c5f8636611572678391185de1a42afab54afa",
+  "latency_s": 59.35,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2021-12-18\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.\", \"quote\": \"The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.\"}, \"peak_price\": {\"value\": 15098, \"quote\": \"This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind generation fell significantly in the lead up to 1 am, which reduced the amount of low-priced capacity available because wind is typically offered at negative prices.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation.\"}, {\"label\": \"rebids\", \"quote\": \"These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity. This meant South Australia could not import significantly more cheap capacity from Victoria when the price rose.\"}, {\"label\": \"ramp_rates\", \"quote\": \"At 12.40 am the price first exceeded $400/MWh and reached $4,093/MWh. Subsequently, fast-start' units received a signal to come on but required 10 to 15 minutes before they could begin generating. This meant that a high price was able to persist until 1 am, when these units could increase their generation.\"}, {\"label\": \"battery_state_of_charge\", \"quote\": \"Updated SOC close to limit.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink interconnector\", \"quote\": \"An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind generation fell significantly in the lead up to 1 am, which reduced the amount of low-priced capacity available because wind is typically offered at negative prices."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation."
+          },
+          {
+            "label": "rebids",
+            "quote": "These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity. This meant South Australia could not import significantly more cheap capacity from Victoria when the price rose."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "At 12.40 am the price first exceeded $400/MWh and reached $4,093/MWh. Subsequently, fast-start' units received a signal to come on but required 10 to 15 minutes before they could begin generating. This meant that a high price was able to persist until 1 am, when these units could increase their generation."
+          },
+          {
+            "label": "battery_state_of_charge",
+            "quote": "Updated SOC close to limit."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2021-12-18",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink interconnector",
+            "quote": "An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "The remaining interconnector linking South Australia to Victoria, the Heywood interconnector, was operating at 544 MW at 12.30 am, close to its 600 MW nominal capacity."
+          }
+        ],
+        "intervals": {
+          "quote": "The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.",
+          "text": "The 30-minute price in South Australia was $5,715/MWh at 1 am on 18 December 2021. This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively."
+        },
+        "network_outages": {
+          "quote": "An unplanned outage on the Murraylink interconnector prevented imports from Victoria, further limiting South Australia's access to low-priced generation.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "This was driven by two 5-minute prices of $10,247/MWh and $15,098/MWh at 12.50 am and 12.55 am respectively.",
+          "value": 15098
+        },
+        "rebid_set_price": {
+          "quote": "These factors, combined with market participants rebidding roughly 135 MW of capacity to high prices, contributed to the 1 am 30-minute price exceeding $5,000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5,000_per_MWh_-_9_December_2021_(South_Australia).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245%2C000%20per%20MWh%20-%209%20December%202021%20%28South%20Australia%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3619,
+    "per_attempt": [
+      {
+        "completion_tokens": 3619,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2779
+        },
+        "prompt_tokens": 8395,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12014
+      }
+    ],
+    "prompt_tokens": 8395,
+    "reasoning_tokens": 2779,
+    "total_tokens": 12014
+  }
+}

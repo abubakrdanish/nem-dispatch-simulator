@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:10:24+00:00",
+  "failure": null,
+  "input_sha256": "30c9a3822952e3218ffb0c595136a1185f32cdeea1f43f15af103cd79bca6400",
+  "key": "b352583b818bd260ef109d05e0979b78f912b97957b1b82a624a4caff8ed0a57",
+  "latency_s": 59.18,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2017-01-13\", \"regions\": [\"QLD1\"], \"intervals\": {\"text\": \"the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm\", \"quote\": \"the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm\"}, \"peak_price\": {\"value\": 13883, \"quote\": \"reaching $13 883/MWh at 5 pm\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"While high demand contributed to the high prices\"}, {\"label\": \"demand\", \"quote\": \"These high prices were caused by reductions in low priced capacity, network constraints and high demand\"}, {\"label\": \"rebids\", \"quote\": \"Plant limitations, some of which related to the high temperature, saw participants rebid, reducing generation capacity by around 600 MW\"}, {\"label\": \"rebids\", \"quote\": \"At around 4 pm, effective for the high prices trading intervals, Stanwell also rebid 100 MW of capacity at Tarong from prices below $160/MWh to the price cap\"}, {\"label\": \"rebids\", \"quote\": \"These high prices were caused by reductions in low priced capacity, network constraints and high demand\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI). These limits, which are in place at all times and are designed to manage the power system should the 750 MW Kogan Creek generator fail, reduced flows into Queensland to around 100 MW\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Constraints on Terranora were forcing flow into New South Wales at 95 MW for the duration of high prices\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Queensland to New South Wales interconnector (QNI)\", \"quote\": \"Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI)\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"Constraints on Terranora were forcing flow into New South Wales at 95 MW for the duration of high prices\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"These high prices were caused by reductions in low priced capacity, network constraints and high demand\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "While high demand contributed to the high prices"
+          },
+          {
+            "label": "demand",
+            "quote": "These high prices were caused by reductions in low priced capacity, network constraints and high demand"
+          },
+          {
+            "label": "rebids",
+            "quote": "Plant limitations, some of which related to the high temperature, saw participants rebid, reducing generation capacity by around 600 MW"
+          },
+          {
+            "label": "rebids",
+            "quote": "At around 4 pm, effective for the high prices trading intervals, Stanwell also rebid 100 MW of capacity at Tarong from prices below $160/MWh to the price cap"
+          },
+          {
+            "label": "rebids",
+            "quote": "These high prices were caused by reductions in low priced capacity, network constraints and high demand"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI). These limits, which are in place at all times and are designed to manage the power system should the 750 MW Kogan Creek generator fail, reduced flows into Queensland to around 100 MW"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Constraints on Terranora were forcing flow into New South Wales at 95 MW for the duration of high prices"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2017-01-13",
+        "interconnectors_named": [
+          {
+            "name": "Queensland to New South Wales interconnector (QNI)",
+            "quote": "Network limits restricted electricity flows into Queensland from New South Wales on the Queensland to New South Wales interconnector (QNI)"
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "Constraints on Terranora were forcing flow into New South Wales at 95 MW for the duration of high prices"
+          }
+        ],
+        "intervals": {
+          "quote": "the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm",
+          "text": "the spot price for electricity in Queensland exceeded $5000/MWh for one 30-minute trading interval, reaching $13 883/MWh at 5 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $13 883/MWh at 5 pm",
+          "value": 13883
+        },
+        "rebid_set_price": {
+          "quote": "These high prices were caused by reductions in low priced capacity, network constraints and high demand",
+          "value": "yes"
+        },
+        "regions": [
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_13_January_2017_(QLD).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2013%20January%202017%20%28QLD%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3200,
+    "per_attempt": [
+      {
+        "completion_tokens": 3200,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2593
+        },
+        "prompt_tokens": 8894,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12094
+      }
+    ],
+    "prompt_tokens": 8894,
+    "reasoning_tokens": 2593,
+    "total_tokens": 12094
+  }
+}

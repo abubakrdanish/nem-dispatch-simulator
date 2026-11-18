@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:33:02+00:00",
+  "failure": null,
+  "input_sha256": "da6ed8a602390ca0fd02b6c917c0d50b512e64aa0493178b76657839cbbf71be",
+  "key": "fb8b68ad05efde5153045bac2f117a0c0cbcfcda155c7a0eff724b1bd8fd6b78",
+  "latency_s": 43.37,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-03-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"the 5 pm trading interval and four five-minute dispatch intervals from 4.30 pm\", \"quote\": \"This resulted in the dispatch of high priced generation for four five-minute dispatch intervals.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"the 5-minute dispatch price reached the price cap of $10,000/MWh for four dispatch intervals from 4.30 pm.\"}, \"causes\": [{\"label\": \"unscheduled_plant_outage\", \"quote\": \"due primarily to an unplanned outage at Flinders Power's Northern Power Station, the largest generator in South Australia.\"}, {\"label\": \"wind_output\", \"quote\": \"Although around 140 MW of (low-priced) wind generation was forecast that morning to be available during the high-price period, the actual contribution during that period was only approximately 40 MW.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"the ability to import into South Australia at the time across both interconnectors was restricted.\"}, {\"label\": \"network_outage\", \"quote\": \"The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance. Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance.\"}, {\"name\": \"Heywood\", \"quote\": \"Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator).\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance. Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator).\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the high price.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "due primarily to an unplanned outage at Flinders Power's Northern Power Station, the largest generator in South Australia."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Although around 140 MW of (low-priced) wind generation was forecast that morning to be available during the high-price period, the actual contribution during that period was only approximately 40 MW."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "the ability to import into South Australia at the time across both interconnectors was restricted."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance. Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-03-31",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance."
+          },
+          {
+            "name": "Heywood",
+            "quote": "Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator)."
+          }
+        ],
+        "intervals": {
+          "quote": "This resulted in the dispatch of high priced generation for four five-minute dispatch intervals.",
+          "text": "the 5 pm trading interval and four five-minute dispatch intervals from 4.30 pm"
+        },
+        "network_outages": {
+          "quote": "The Murraylink interconnector was out of service from 5.20 am until 7.30 pm for planned maintenance. Imports across the Heywood interconnector were limited to 340 MW by a planned maintenance outage (of a static var compensator).",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "the 5-minute dispatch price reached the price cap of $10,000/MWh for four dispatch intervals from 4.30 pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the high price.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_March_2009_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20March%202009%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3497,
+    "per_attempt": [
+      {
+        "completion_tokens": 3497,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2960
+        },
+        "prompt_tokens": 3546,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7043
+      }
+    ],
+    "prompt_tokens": 3546,
+    "reasoning_tokens": 2960,
+    "total_tokens": 7043
+  }
+}

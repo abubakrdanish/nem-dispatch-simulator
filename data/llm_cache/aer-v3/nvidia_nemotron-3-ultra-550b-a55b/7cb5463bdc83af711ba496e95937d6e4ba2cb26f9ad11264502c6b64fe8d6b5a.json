@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:16:22+00:00",
+  "failure": null,
+  "input_sha256": "d87dfa57fc6efaf1c572b1be3ff4749a56cb7d5fee030af524cc7817c7263bfa",
+  "key": "7cb5463bdc83af711ba496e95937d6e4ba2cb26f9ad11264502c6b64fe8d6b5a",
+  "latency_s": 82.06,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2016-11-18\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"3.30 pm trading interval (30-min) and seven dispatch intervals from 2.40 pm to 3.30 pm\", \"quote\": \"The spot price in New South Wales reached $11 701/MWh for the 3.30 pm trading interval. ... the price exceeded $13 600/MWh for seven dispatch intervals from 2.40 pm to 3.30 pm, inclusive.\"}, \"peak_price\": {\"value\": 13999.96, \"quote\": \"15:25 $13 999.96 AGL Energy BW01 Energy $13 999.96 0.15 $2099.99\"}, \"causes\": [{\"label\": \"rebids\", \"quote\": \"Over a series of rebids Origin and Snowy Hydro progressively shifted a total of around 3000 MW of capacity for generators in southern New South Wales to the price floor, thereby increasing their output. By 2.20 pm generation in southern New South Wales had increased to a level that caused the constraint to bind.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Origin and Snowy Hydro also rebid their ramp down rates to the minimum allowable under the Rules which prolonged the period for which the constraint was binding.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits. Consequently, additional low priced capacity from Queensland was inaccessible. ... flows across the Vic - NSW interconnector went from 780 MW into New South Wales at 2.25 pm to 90 MW counter price into Victoria at 3 pm.\"}], \"constraints_named\": [{\"id\": \"N>>N-NIL_01N\", \"quote\": \"At 2.20 pm the system normal constraint, N>>N-NIL_01N, bound.\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW\", \"quote\": \"flows across the Vic - NSW interconnector went from 780 MW into New South Wales at 2.25 pm to 90 MW counter price into Victoria at 3 pm.\"}, {\"name\": \"QNI\", \"quote\": \"Imports across QNI and the Terranora interconnector were less than 330 MW for the duration of the high prices.\"}, {\"name\": \"Terranora\", \"quote\": \"The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits.\"}, {\"name\": \"Directlink\", \"quote\": \"The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"There was rebidding of capacity which affected dispatch and contributed to the high price outcomes\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "rebids",
+            "quote": "Over a series of rebids Origin and Snowy Hydro progressively shifted a total of around 3000 MW of capacity for generators in southern New South Wales to the price floor, thereby increasing their output. By 2.20 pm generation in southern New South Wales had increased to a level that caused the constraint to bind."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Origin and Snowy Hydro also rebid their ramp down rates to the minimum allowable under the Rules which prolonged the period for which the constraint was binding."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits. Consequently, additional low priced capacity from Queensland was inaccessible. ... flows across the Vic - NSW interconnector went from 780 MW into New South Wales at 2.25 pm to 90 MW counter price into Victoria at 3 pm."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "N>>N-NIL_01N",
+            "quote": "At 2.20 pm the system normal constraint, N>>N-NIL_01N, bound."
+          }
+        ],
+        "event_date": "2016-11-18",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW",
+            "quote": "flows across the Vic - NSW interconnector went from 780 MW into New South Wales at 2.25 pm to 90 MW counter price into Victoria at 3 pm."
+          },
+          {
+            "name": "QNI",
+            "quote": "Imports across QNI and the Terranora interconnector were less than 330 MW for the duration of the high prices."
+          },
+          {
+            "name": "Terranora",
+            "quote": "The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits."
+          },
+          {
+            "name": "Directlink",
+            "quote": "The Terranora and Directlink interconnectors, which link New South Wales and Queensland, were flowing into New South Wales at their forecast limits."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price in New South Wales reached $11 701/MWh for the 3.30 pm trading interval. ... the price exceeded $13 600/MWh for seven dispatch intervals from 2.40 pm to 3.30 pm, inclusive.",
+          "text": "3.30 pm trading interval (30-min) and seven dispatch intervals from 2.40 pm to 3.30 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "15:25 $13 999.96 AGL Energy BW01 Energy $13 999.96 0.15 $2099.99",
+          "value": 13999.96
+        },
+        "rebid_set_price": {
+          "quote": "There was rebidding of capacity which affected dispatch and contributed to the high price outcomes",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_5000_MWh_-_18_November_2016_(NSW).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%205000%20MWh%20-%2018%20November%202016%20%28NSW%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4956,
+    "per_attempt": [
+      {
+        "completion_tokens": 4956,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4235
+        },
+        "prompt_tokens": 11388,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16344
+      }
+    ],
+    "prompt_tokens": 11388,
+    "reasoning_tokens": 4235,
+    "total_tokens": 16344
+  }
+}

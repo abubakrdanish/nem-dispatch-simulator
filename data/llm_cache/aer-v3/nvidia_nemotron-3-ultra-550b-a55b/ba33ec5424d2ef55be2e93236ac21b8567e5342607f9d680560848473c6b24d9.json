@@ -1,0 +1,92 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T05:41:11+00:00",
+  "failure": null,
+  "input_sha256": "c5f7f92ad0d146f991f8e6ce44769d254590d343ad106ae63a9b76639f00668b",
+  "key": "ba33ec5424d2ef55be2e93236ac21b8567e5342607f9d680560848473c6b24d9",
+  "latency_s": 42.81,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2025-07-02\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm.\", \"quote\": \"On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm.\"}, \"peak_price\": {\"value\": 11711, \"quote\": \"The prices ranged between $5,212 per MWh and $11,711 per MWh.\"}, \"causes\": [{\"label\": \"wind_output\", \"quote\": \"Wind output was low due to calm conditions in South Australia. During the evening of high prices, average 30-minute wind generation in the region was 41 MW. During the same evening period across the week prior, the average wind generation was around 420 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"Planned network outages contributed to all high prices across the quarter.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW. In addition, the Murraylink interconnector was on a planned outage. The combined outages on the two interconnectors limited South Australia's ability to import low-priced capacity by around 650 MW, while only up to 71 MW of high-priced capacity was needed to meet demand in the energy market.\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Heywood interconnector\", \"quote\": \"A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW.\"}, {\"name\": \"Murraylink interconnector\", \"quote\": \"In addition, the Murraylink interconnector was on a planned outage.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Planned network outages contributed to all high prices across the quarter.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "wind_output",
+            "quote": "Wind output was low due to calm conditions in South Australia. During the evening of high prices, average 30-minute wind generation in the region was 41 MW. During the same evening period across the week prior, the average wind generation was around 420 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Planned network outages contributed to all high prices across the quarter."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW. In addition, the Murraylink interconnector was on a planned outage. The combined outages on the two interconnectors limited South Australia's ability to import low-priced capacity by around 650 MW, while only up to 71 MW of high-priced capacity was needed to meet demand in the energy market."
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2025-07-02",
+        "interconnectors_named": [
+          {
+            "name": "Heywood interconnector",
+            "quote": "A planned outage of one South East to Tailem Bend line limited flows into South Australia on the Heywood interconnector to between 80 MW and 154 MW, compared to its nominal capacity of 600 MW."
+          },
+          {
+            "name": "Murraylink interconnector",
+            "quote": "In addition, the Murraylink interconnector was on a planned outage."
+          }
+        ],
+        "intervals": {
+          "quote": "On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm.",
+          "text": "On 2 July, the 30-minute price in South Australia exceeded $5,000 per MWh from 7.30 pm to 11 pm, with the exception of 10 pm."
+        },
+        "network_outages": {
+          "quote": "Planned network outages contributed to all high prices across the quarter.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The prices ranged between $5,212 per MWh and $11,711 per MWh.",
+          "value": 11711
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding for technical and commercial reasons contributed to the high prices (Appendix A).",
+          "value": "yes"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/AER_-_Electricity_prices_above_$5,000_MWh_-_July_to_September_2025.pdf",
+    "url": "https://www.aer.gov.au/system/files/2025-11/AER%20-%20Electricity%20prices%20above%20%245%2C000%20MWh%20-%20July%20to%20September%202025.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 3277,
+    "per_attempt": [
+      {
+        "completion_tokens": 3277,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2654
+        },
+        "prompt_tokens": 17143,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 20420
+      }
+    ],
+    "prompt_tokens": 17143,
+    "reasoning_tokens": 2654,
+    "total_tokens": 20420
+  }
+}

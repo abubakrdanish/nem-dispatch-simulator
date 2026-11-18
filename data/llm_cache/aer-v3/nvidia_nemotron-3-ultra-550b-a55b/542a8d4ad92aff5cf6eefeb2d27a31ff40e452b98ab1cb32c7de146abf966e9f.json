@@ -1,0 +1,104 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:32:18+00:00",
+  "failure": null,
+  "input_sha256": "689141c2c4a56d072e52b8852fc40626ab094e887b5e988cd5c0735c210e13e2",
+  "key": "542a8d4ad92aff5cf6eefeb2d27a31ff40e452b98ab1cb32c7de146abf966e9f",
+  "latency_s": 78.42,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2007-12-31\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"The constraints were invoked for the 12.50 pm to 1.05 pm dispatch intervals inclusive, and the spot price reached $5057/MWh at 1 pm.\", \"quote\": \"The constraints were invoked for the 12.50 pm to 1.05 pm dispatch intervals inclusive.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"Five-minute dispatch prices in South Australia reached $10,000/MWh as all online capacity was dispatched at either its maximum capability or ramp up rate until 1.05 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"extreme temperatures in South Australia resulted in near-record demand.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned outage of the Moorabool No 2 220kV busbar and the subsequent offloading of two 220 kV lines - Moorabool to Ballarat No 2 and the Mooraboool to Geelong No 1 - at 12.38 pm required four additional constraints to be invoked to manage the new configuration of the network.\"}, {\"label\": \"constraint_violation\", \"quote\": \"The new limit, however, was violated - there was insufficient online spare capacity in South Australia to meet the step change and a conflicting network constraint prevented flows of more than 85 MW into Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The limit for flows across Murraylink into South Australia changed from a maximum of around 110 MW into South Australia at 12.45 pm to forced flows of more than 160 MW into Victoria at 12.50 pm.\"}, {\"label\": \"ramp_rates\", \"quote\": \"all online plant in South Australia was dispatched at either its maximum capability or ramp up rate until 1.05 pm.\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Murraylink\", \"quote\": \"forced counter price flows from South Australia across the Murraylink interconnector.\"}, {\"name\": \"Snowy to NSW interconnector\", \"quote\": \"The constraints invoked to manage the network outage also impacted on the dispatch of the Snowy to NSW interconnector.\"}, {\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"the step change in the Snowy to Victoria limit caused an equivalent change for flows between the Snowy region and New South Wales.\"}, {\"name\": \"Basslink\", \"quote\": \"At 12.51 pm there was an unplanned outage of Basslink, which lasted until 8 January.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"On Monday 31 December at 12.45 pm an unplanned network outage at Moorabool in Victoria caused a step change on flows across Murraylink, forcing flows out of South Australia. This step change led to high priced capacity being dispatched and dispatch interval prices of up to $10,000/MWh in South Australia.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"There were no significant rebids.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "extreme temperatures in South Australia resulted in near-record demand."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned outage of the Moorabool No 2 220kV busbar and the subsequent offloading of two 220 kV lines - Moorabool to Ballarat No 2 and the Mooraboool to Geelong No 1 - at 12.38 pm required four additional constraints to be invoked to manage the new configuration of the network."
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "The new limit, however, was violated - there was insufficient online spare capacity in South Australia to meet the step change and a conflicting network constraint prevented flows of more than 85 MW into Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The limit for flows across Murraylink into South Australia changed from a maximum of around 110 MW into South Australia at 12.45 pm to forced flows of more than 160 MW into Victoria at 12.50 pm."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "all online plant in South Australia was dispatched at either its maximum capability or ramp up rate until 1.05 pm."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2007-12-31",
+        "interconnectors_named": [
+          {
+            "name": "Murraylink",
+            "quote": "forced counter price flows from South Australia across the Murraylink interconnector."
+          },
+          {
+            "name": "Snowy to NSW interconnector",
+            "quote": "The constraints invoked to manage the network outage also impacted on the dispatch of the Snowy to NSW interconnector."
+          },
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "the step change in the Snowy to Victoria limit caused an equivalent change for flows between the Snowy region and New South Wales."
+          },
+          {
+            "name": "Basslink",
+            "quote": "At 12.51 pm there was an unplanned outage of Basslink, which lasted until 8 January."
+          }
+        ],
+        "intervals": {
+          "quote": "The constraints were invoked for the 12.50 pm to 1.05 pm dispatch intervals inclusive.",
+          "text": "The constraints were invoked for the 12.50 pm to 1.05 pm dispatch intervals inclusive, and the spot price reached $5057/MWh at 1 pm."
+        },
+        "network_outages": {
+          "quote": "On Monday 31 December at 12.45 pm an unplanned network outage at Moorabool in Victoria caused a step change on flows across Murraylink, forcing flows out of South Australia. This step change led to high priced capacity being dispatched and dispatch interval prices of up to $10,000/MWh in South Australia.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Five-minute dispatch prices in South Australia reached $10,000/MWh as all online capacity was dispatched at either its maximum capability or ramp up rate until 1.05 pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": "There were no significant rebids.",
+          "value": "no"
+        },
+        "regions": [
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_31_December_2007_-_SA.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_31%20December%202007%20-%20SA.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4383,
+    "per_attempt": [
+      {
+        "completion_tokens": 4383,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3644
+        },
+        "prompt_tokens": 5115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9498
+      }
+    ],
+    "prompt_tokens": 5115,
+    "reasoning_tokens": 3644,
+    "total_tokens": 9498
+  }
+}

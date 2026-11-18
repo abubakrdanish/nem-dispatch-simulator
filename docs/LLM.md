@@ -1,12 +1,12 @@
 # The LLM layer
 
-`nemsim/llm` lets later stages ask a language model to read a document and return structured JSON. It is plumbing only: no extraction is built yet.
+`nemsim/llm` lets later stages ask a language model to read a document and return structured JSON. Its first use is the AER cause labels (below).
 
 ## The rule it exists to keep
 
 **Every published number rebuilds with no API key.** Every model response is cached as JSON under `data/llm_cache/` and committed. The model is called only to fill a cache miss, and only when online mode is asked for explicitly. CI has no key, runs offline, and fails on any miss.
 
-No model output becomes a number in any result. The model emits fields, each carrying a span quoted verbatim from the source, so every field can be checked against the document. Extraction accuracy is measured against a hand-coded sample before any extracted field is used.
+No model-derived number appears in a result without its measured accuracy beside it, and no model output is ever a price, a flow or a rung input. The model emits fields, each carrying a span quoted verbatim from the source, so every field can be checked against the document. Extraction accuracy is measured against a hand-coded sample before any extracted field is used.
 
 ## Using it
 
@@ -76,7 +76,7 @@ Settings live under `llm:` in `config/settings.yml`.
 
 **Availability.** The endpoint's own `/models` lists 83 models. The list gives no context window or limits, and listing does not mean available: `moonshotai/kimi-k2.6` is listed but returns 404 for this account.
 
-**Chosen: `nvidia/nemotron-3-ultra-550b-a55b`, with reasoning off** (`chat_template_kwargs: {"enable_thinking": false}`).
+**Chosen: `nvidia/nemotron-3-ultra-550b-a55b`, with reasoning off** (`chat_template_kwargs: {"enable_thinking": false}`). *Superseded for the AER labels on 2026-11-18: measured on the hand-coded sample, reasoning on was far more accurate and is now used (below).*
 - It is available on this account and is the largest model NVIDIA hosts natively.
 - **Context:** 262,144 tokens native per NVIDIA's NIM docs; the model card says up to 1M. That is enough for a whole AER report in one call.
 - JSON mode works.
@@ -121,17 +121,27 @@ That's about **11–12 documents**.
 
 Each prompt version keeps its own entries unless old ones are deleted, so iterating on a prompt multiplies these figures.
 
-## First real use: the AER cause labels (2026-11-17)
+## First real use: the AER cause labels (2026-11-17, re-run 2026-11-18)
 
-The prompt is `aer-v2` (`nemsim/aer/extract.py`), measured against 30 hand-coded events. The full tables are in section 19 of [the results](stage2_results.md).
+**Finding: on this task, reasoning on is worth its cost.** The same model, with the same prompt and the same 142 AER reports, misattributes a quarter as many labels with reasoning on. The full tables are in section 19 of [the results](stage2_results.md).
 
-| Configuration | Misattributed labels | Tokens on the 17 sample documents | Time |
-|---|---:|---:|---:|
-| nemotron, reasoning off (run on the whole corpus) | 18.0% (23 of 128) | 357,490 | ≈ 7 min |
-| nemotron, reasoning on | **3.9%** (5 of 128) | 485,969 (136k reasoning) | ≈ 36 min, no timeouts |
-| mistral-large-4 | 0 of 17, on 2 documents only | 125,000 for those two | 5–10 min a document |
+| Configuration | Prompt version | Misattributed labels, 30 hand-coded events | Labels passing the thresholds | Tokens | Time |
+|---|---|---:|---:|---:|---:|
+| nemotron, **reasoning on, whole corpus (published labels)** | `aer-v3` | **4.7%** (6 of 128) | 9 | **2,886,859** for 142 reports (1,898,038 prompt, 988,821 completion of which 791,857 reasoning) | ≈ 4.8 h of generation; ≈ 2.9 h wall clock, partly 4 in parallel |
+| nemotron, reasoning off, whole corpus (comparison) | `aer-v2` | 18.0% (23 of 128) | 6 | 2,096,730 for 142 reports (1,891,343 prompt, 205,387 completion) | ≈ 0.6 h of generation |
+| nemotron, reasoning on, sample only (first comparison) | `aer-v2` | 3.9% (5 of 128) | 9 | 485,969 for 17 reports | ≈ 36 min |
+| mistral-large-4, sample only | `aer-v2` | 0 of 17, on 2 reports only | — | 240,913 (125,000 on the sample) | 5–10 min a report |
 
-- **Reasoning on was far more accurate here,** at 1.36 times the tokens. The layer stage's 282 s answer and 20-minute stall did not recur: the slowest document took 348 s.
-- **Mistral cannot have reasoning switched off on this endpoint.** `chat_template_kwargs: {"enable_thinking": false}` is accepted and ignored, and 90–94% of its output is reasoning. That makes it about ten times slower than nemotron with reasoning off, so it was stopped after two sample documents.
-- **aer-v1 was abandoned.** Its quote limit (700 characters) and interval-text limit (200) failed 2 of its first 5 documents, against an instruction to keep quotes under 600. aer-v2 allows 2,000 and 600.
-- **The run caps worked as intended.** Each process stopped at 250,000 tokens, and the corpus took 8 capped runs.
+- **What reasoning fixes.** Reasoning off files network elements (Basslink, Directlink, lines) as plant outages, *system normal* constraints as network outages, constraints that set the price as violations, and "rebidding did not contribute" as a rebid. Reasoning on makes none of the network-outage errors (0 of 15, against 4 of 16) and rescues five of the seven labels reasoning off failed. Its remaining errors are an unplanned outage called planned, a negated rebid, a constraint read as low solar output, and FCAS-market rebids.
+- **What it costs.** Prompt tokens are the same either way (the report is the prompt). Completion tokens are 4.8 times as many, 80% of them reasoning, so the whole run costs 1.38 times as much. The slowest report took 589 s (64 s with reasoning off); no generation hit the 1,200 s cap.
+- **The verbatim rate falls slightly** (89.0% against 91.8% of quotes, ignoring whitespace). Reasoning on quotes more often across PDF line breaks and table cells. This is the mechanical check; the misattribution rate is the one that matters.
+- **Run to run.** The two reasoning-on runs over the same 17 sample reports give 3.9% and 4.7%, and solar output passes the threshold in one and not the other. A label measured on 4 positives is a coin toss at the threshold; treat it so.
+- **It changed a published conclusion.** The cause-conditional test went from "holds" to "consistent, not shown" (README). Label quality was not a detail.
+
+**What reproducing it takes.** About 2.9 million tokens and, at one report at a time, about 5 hours, or under 1.5 hours with four workers (`python -m nemsim.aer.extract run-v3 k 4`). The run stops itself before spending past 3.5 million tokens: before each call a worker takes a file lock, adds the tokens already cached under `aer-v3` to the worst cases other workers have reserved and its own report's worst case (two attempts, each with the full prompt and the 65,536-token completion allowance), and calls only if that stays within the cap. A call that fails without a cache entry is charged its worst case in `results/aer_uncached_charges.json`. Nobody needs to do this to rebuild the results: the cache is committed.
+
+**Other notes from the runs.**
+- **Mistral cannot have reasoning switched off on this endpoint.** `chat_template_kwargs: {"enable_thinking": false}` is accepted and ignored, and 90–94% of its output is reasoning, so it was stopped after two sample reports.
+- **aer-v1 was abandoned.** Its quote limit (700 characters) and interval-text limit (200) failed 2 of its first 5 documents. aer-v2 and aer-v3 allow 2,000 and 600.
+- **Five reports fail in each run.** Four from 2005–2008 fail in both because they name the old Snowy region, which the schema does not allow; with reasoning on, the 2 February 2006 report fails the same way. The 13 January 2017 report, which failed twice with reasoning off on an over-long constraint ID, extracts with reasoning on.
+- **The trial accepted four concurrent requests** without a single refusal. One request failed with a network error early in the run and succeeded on retry.

@@ -1,0 +1,105 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:57:24+00:00",
+  "failure": null,
+  "input_sha256": "8d69ae71a6b3b306325b321376e127e25a34e7ab785468a7dc643ae577155e30",
+  "key": "b9607a9491cd1704be2f46cc38735216f24bb4e05de59c9a70fa1cf5e252263f",
+  "latency_s": 55.69,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2015-09-23\", \"regions\": [\"NSW1\"], \"intervals\": {\"text\": \"6.30 pm and 7 pm trading intervals\", \"quote\": \"On 23 September 2015, the spot price in New South Wales exceeded $5000/MWh for the 6.30 pm and 7 pm trading intervals.\"}, \"peak_price\": {\"value\": 13420, \"quote\": \"The spot price in New South Wales reached $13 420/MWh and $ 6717/MWh for the 6.30 pm and 7 pm trading intervals respectively.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"The difference between forecast and actual demand was a contributing factor to the high prices.\"}, {\"label\": \"network_outage\", \"quote\": \"Network outages contributed to the outcomes during the day.\"}, {\"label\": \"ramp_rates\", \"quote\": \"Furthermore other generation at Mount Piper and Tallawarra priced below the dispatch price had limited 'ramp up' capability.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"There were network constraints which limited flows into New South Wales on each of the three interconnectors connecting the region to Victoria and Queensland.\"}], \"constraints_named\": [{\"id\": \"NRM_NSW1_VIC1\", \"quote\": \"18:41:A MANAGE CONSTRAINT: NRM_NSW1_VIC1\"}, {\"id\": \"N::V_CNUT_2 SL\", \"quote\": \"1847A CONSTRAINT MANAGEMENT - N::V_CNUT_2 SL\"}], \"interconnectors_named\": [{\"name\": \"Vic-NSW interconnector\", \"quote\": \"A planned outage on the Canberra to Upper Tumut line forced flows from New South Wales into Victoria across the Vic-NSW interconnector\"}, {\"name\": \"QNI\", \"quote\": \"a short notice outage was required on an Armidale to Bulli Creek transmission line limiting transfers into New South Wales from Queensland across the QNI.\"}, {\"name\": \"Terranora interconnector\", \"quote\": \"The ongoing partial outage of the Terranora interconnector set its capability to around 100 MW of imports from Queensland to New South Wales.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"Network outages contributed to the outcomes during the day.\"}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"The rebidding of capacity from low prices to high prices did not contribute to the high prices\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "The difference between forecast and actual demand was a contributing factor to the high prices."
+          },
+          {
+            "label": "network_outage",
+            "quote": "Network outages contributed to the outcomes during the day."
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "Furthermore other generation at Mount Piper and Tallawarra priced below the dispatch price had limited 'ramp up' capability."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "There were network constraints which limited flows into New South Wales on each of the three interconnectors connecting the region to Victoria and Queensland."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "NRM_NSW1_VIC1",
+            "quote": "18:41:A MANAGE CONSTRAINT: NRM_NSW1_VIC1"
+          },
+          {
+            "id": "N::V_CNUT_2 SL",
+            "quote": "1847A CONSTRAINT MANAGEMENT - N::V_CNUT_2 SL"
+          }
+        ],
+        "event_date": "2015-09-23",
+        "interconnectors_named": [
+          {
+            "name": "Vic-NSW interconnector",
+            "quote": "A planned outage on the Canberra to Upper Tumut line forced flows from New South Wales into Victoria across the Vic-NSW interconnector"
+          },
+          {
+            "name": "QNI",
+            "quote": "a short notice outage was required on an Armidale to Bulli Creek transmission line limiting transfers into New South Wales from Queensland across the QNI."
+          },
+          {
+            "name": "Terranora interconnector",
+            "quote": "The ongoing partial outage of the Terranora interconnector set its capability to around 100 MW of imports from Queensland to New South Wales."
+          }
+        ],
+        "intervals": {
+          "quote": "On 23 September 2015, the spot price in New South Wales exceeded $5000/MWh for the 6.30 pm and 7 pm trading intervals.",
+          "text": "6.30 pm and 7 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": "Network outages contributed to the outcomes during the day.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "The spot price in New South Wales reached $13 420/MWh and $ 6717/MWh for the 6.30 pm and 7 pm trading intervals respectively.",
+          "value": 13420
+        },
+        "rebid_set_price": {
+          "quote": "The rebidding of capacity from low prices to high prices did not contribute to the high prices",
+          "value": "no"
+        },
+        "regions": [
+          "NSW1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_23_September_2015_(NSW).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2023%20September%202015%20%28NSW%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4381,
+    "per_attempt": [
+      {
+        "completion_tokens": 4381,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3785
+        },
+        "prompt_tokens": 9550,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13931
+      }
+    ],
+    "prompt_tokens": 9550,
+    "reasoning_tokens": 3785,
+    "total_tokens": 13931
+  }
+}

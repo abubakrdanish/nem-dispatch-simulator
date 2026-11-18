@@ -1,0 +1,109 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:30:00+00:00",
+  "failure": null,
+  "input_sha256": "f0821dc0150cc950e3040dca82d31b6d6450881fc7be6d91efe5ac11c70a7d38",
+  "key": "ed2517be06e4140b192fa4e4342a2fbb544b22339cc1f485e2a176727f73592c",
+  "latency_s": 95.02,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-03\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"4 pm trading interval; 3.30 pm trading interval (dispatch prices above $5000/MWh)\", \"quote\": \"On 3 November 2009, the spot price in New South Wales and Queensland exceeded $5000/MWh for the 4 pm trading interval\"}, \"peak_price\": {\"value\": 6337, \"quote\": \"reaching $6337/MWh and $5706/MWh respectively\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"This resulted in the demand reaching a maximum of 12 163MW at 4 pm\"}, {\"label\": \"scheduled_plant_outage\", \"quote\": \"Planned generator outages across New South Wales and plant problems at Eraring power station on the day resulted in a tight supply-demand balance in New South Wales\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"During the day a further 1125 MW of generation capacity became unavailable due to plant problems\"}, {\"label\": \"rebids\", \"quote\": \"Rebidding into higher prices by Stanwell combined with increased exports from Queensland led to the dispatch of high priced generation in Queensland\"}, {\"label\": \"ramp_rates\", \"quote\": \"All available generation in New South Wales for the 3.30 pm, 3.35 pm and 3.40 pm dispatch intervals were either fully dispatched, ramp rate limited or trapped in ancillary services\"}, {\"label\": \"fcas_co_optimisation\", \"quote\": \"All available generation in New South Wales for the 3.30 pm, 3.35 pm and 3.40 pm dispatch intervals were either fully dispatched, ramp rate limited or trapped in ancillary services\"}, {\"label\": \"constraint_violation\", \"quote\": \"flows across the three interconnectors into New South Wales violated the limit by up to a total of 106 MW\"}, {\"label\": \"interconnector_limit\", \"quote\": \"Combined flows across the Queensland to New South Wales interconnectors were around 1200 MW, close to their total nominal limit but around 340 MW higher than forecast four hours ahead\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Victoria to New South Wales interconnector\", \"quote\": \"Flows across the Victoria to New South Wales interconnector exceeded the import limit during the 3.35 pm to 3.45 pm dispatch intervals\"}, {\"name\": \"Queensland to New South Wales interconnectors\", \"quote\": \"Combined flows across the Queensland to New South Wales interconnectors were around 1200 MW, close to their total nominal limit but around 340 MW higher than forecast four hours ahead\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"Rebidding into higher prices by Stanwell combined with increased exports from Queensland led to the dispatch of high priced generation in Queensland\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "This resulted in the demand reaching a maximum of 12 163MW at 4 pm"
+          },
+          {
+            "label": "scheduled_plant_outage",
+            "quote": "Planned generator outages across New South Wales and plant problems at Eraring power station on the day resulted in a tight supply-demand balance in New South Wales"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "During the day a further 1125 MW of generation capacity became unavailable due to plant problems"
+          },
+          {
+            "label": "rebids",
+            "quote": "Rebidding into higher prices by Stanwell combined with increased exports from Queensland led to the dispatch of high priced generation in Queensland"
+          },
+          {
+            "label": "ramp_rates",
+            "quote": "All available generation in New South Wales for the 3.30 pm, 3.35 pm and 3.40 pm dispatch intervals were either fully dispatched, ramp rate limited or trapped in ancillary services"
+          },
+          {
+            "label": "fcas_co_optimisation",
+            "quote": "All available generation in New South Wales for the 3.30 pm, 3.35 pm and 3.40 pm dispatch intervals were either fully dispatched, ramp rate limited or trapped in ancillary services"
+          },
+          {
+            "label": "constraint_violation",
+            "quote": "flows across the three interconnectors into New South Wales violated the limit by up to a total of 106 MW"
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "Combined flows across the Queensland to New South Wales interconnectors were around 1200 MW, close to their total nominal limit but around 340 MW higher than forecast four hours ahead"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-11-03",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to New South Wales interconnector",
+            "quote": "Flows across the Victoria to New South Wales interconnector exceeded the import limit during the 3.35 pm to 3.45 pm dispatch intervals"
+          },
+          {
+            "name": "Queensland to New South Wales interconnectors",
+            "quote": "Combined flows across the Queensland to New South Wales interconnectors were around 1200 MW, close to their total nominal limit but around 340 MW higher than forecast four hours ahead"
+          }
+        ],
+        "intervals": {
+          "quote": "On 3 November 2009, the spot price in New South Wales and Queensland exceeded $5000/MWh for the 4 pm trading interval",
+          "text": "4 pm trading interval; 3.30 pm trading interval (dispatch prices above $5000/MWh)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "reaching $6337/MWh and $5706/MWh respectively",
+          "value": 6337
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding into higher prices by Stanwell combined with increased exports from Queensland led to the dispatch of high priced generation in Queensland",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_3_November_2009_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_3%20November%202009%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4259,
+    "per_attempt": [
+      {
+        "completion_tokens": 4259,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3558
+        },
+        "prompt_tokens": 5990,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10249
+      }
+    ],
+    "prompt_tokens": 5990,
+    "reasoning_tokens": 3558,
+    "total_tokens": 10249
+  }
+}

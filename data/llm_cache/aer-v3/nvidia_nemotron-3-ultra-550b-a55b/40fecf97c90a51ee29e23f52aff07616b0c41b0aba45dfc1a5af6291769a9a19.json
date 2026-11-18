@@ -1,0 +1,221 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:34:48+00:00",
+  "failure": null,
+  "input_sha256": "56c5f8fd6c8bd07a3ed261a694f9dde386cede8348918c95d8dc9deb8a3ad474",
+  "key": "40fecf97c90a51ee29e23f52aff07616b0c41b0aba45dfc1a5af6291769a9a19",
+  "latency_s": 247.5,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-01-28\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"3 pm to 5 pm trading intervals\", \"quote\": \"On Wednesday 28 January the spot price in South Australia reached the price cap of $10 000/MWh five times in total (for the 3 pm to 5 pm trading intervals).\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"On Wednesday 28 January the spot price in South Australia reached the price cap of $10 000/MWh five times in total (for the 3 pm to 5 pm trading intervals).\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Extreme weather conditions in South Australia and Victoria resulted in record demand in those regions. On Wednesday in South Australia record demand of 3317 MW led to high-priced capacity being dispatched at AGL's Torrens Island power station.\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2009-01-28\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"3.30 pm trading interval\", \"quote\": \"The spot price in Victoria on Wednesday 28 January exceeded $5000/MWh once, reaching $6036/MWh at 3.30 pm.\"}, \"peak_price\": {\"value\": 6036, \"quote\": \"The spot price in Victoria on Wednesday 28 January exceeded $5000/MWh once, reaching $6036/MWh at 3.30 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"In Victoria record demand of 10 072 MW combined with the unplanned shutdown of a 200 MW Hazelwood unit saw the spot price reached $6035/MWh at 3.30 pm.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At around 2 pm Hazelwood unit four tripped from full load, reducing the available generation capacity by 215 MW (the majority of this capacity was priced below zero).\"}], \"constraints_named\": [], \"interconnectors_named\": [], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2009-01-29\", \"regions\": [\"SA1\"], \"intervals\": {\"text\": \"seven trading intervals throughout the day\", \"quote\": \"On Thursday 29 January the spot price in South Australia exceeded $5000/MWh for seven trading intervals throughout the day, reaching the price cap for the 2 pm trading interval.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"On Thursday 29 January the spot price in South Australia exceeded $5000/MWh for seven trading intervals throughout the day, reaching the price cap for the 2 pm trading interval.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in Victoria reached a new record of 10 445 MW and in South Australia demand was at near-record levels.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On Thursday afternoon an unplanned outage of the Basslink interconnector occurred... At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria. As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored.\"}], \"constraints_named\": [{\"id\": \"$200 000\", \"quote\": \"Constraint $200 000 0.00 -$14.00\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"On Thursday afternoon an unplanned outage of the Basslink interconnector occurred.\"}, {\"name\": \"Basslink\", \"quote\": \"At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}, {\"event_date\": \"2009-01-29\", \"regions\": [\"VIC1\"], \"intervals\": {\"text\": \"11 trading intervals (8.30 am to 9 am and midday to 4 pm)\", \"quote\": \"On Thursday 29 January the spot price in Victoria exceeded $5000/MWh for 11 trading intervals (8.30 am to 9 am and midday to 4 pm), reaching the price cap at 3 pm.\"}, \"peak_price\": {\"value\": 10000, \"quote\": \"On Thursday 29 January the spot price in Victoria exceeded $5000/MWh for 11 trading intervals (8.30 am to 9 am and midday to 4 pm), reaching the price cap at 3 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand in Victoria reached a new record of 10 445 MW and in South Australia demand was at near-record levels.\"}, {\"label\": \"network_outage\", \"quote\": \"An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"On Thursday afternoon an unplanned outage of the Basslink interconnector occurred... At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria. As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored.\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"At 8.22 am International Power reduced the available capacity of Hazelwood unit four by 210 MW to zero due to problems with returning the plant to service (all capacity had been priced below $15/MWh).\"}], \"constraints_named\": [{\"id\": \"$200 000\", \"quote\": \"Constraint $200 000 0.00 -$14.00\"}], \"interconnectors_named\": [{\"name\": \"Basslink\", \"quote\": \"On Thursday afternoon an unplanned outage of the Basslink interconnector occurred.\"}, {\"name\": \"Basslink\", \"quote\": \"At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria.\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.\"}, \"rebid_set_price\": {\"value\": \"not_stated\", \"quote\": null}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Extreme weather conditions in South Australia and Victoria resulted in record demand in those regions. On Wednesday in South Australia record demand of 3317 MW led to high-priced capacity being dispatched at AGL's Torrens Island power station."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-28",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "On Wednesday 28 January the spot price in South Australia reached the price cap of $10 000/MWh five times in total (for the 3 pm to 5 pm trading intervals).",
+          "text": "3 pm to 5 pm trading intervals"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "On Wednesday 28 January the spot price in South Australia reached the price cap of $10 000/MWh five times in total (for the 3 pm to 5 pm trading intervals).",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "In Victoria record demand of 10 072 MW combined with the unplanned shutdown of a 200 MW Hazelwood unit saw the spot price reached $6035/MWh at 3.30 pm."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At around 2 pm Hazelwood unit four tripped from full load, reducing the available generation capacity by 215 MW (the majority of this capacity was priced below zero)."
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2009-01-28",
+        "interconnectors_named": [],
+        "intervals": {
+          "quote": "The spot price in Victoria on Wednesday 28 January exceeded $5000/MWh once, reaching $6036/MWh at 3.30 pm.",
+          "text": "3.30 pm trading interval"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "The spot price in Victoria on Wednesday 28 January exceeded $5000/MWh once, reaching $6036/MWh at 3.30 pm.",
+          "value": 6036
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in Victoria reached a new record of 10 445 MW and in South Australia demand was at near-record levels."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On Thursday afternoon an unplanned outage of the Basslink interconnector occurred... At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria. As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "$200 000",
+            "quote": "Constraint $200 000 0.00 -$14.00"
+          }
+        ],
+        "event_date": "2009-01-29",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "On Thursday afternoon an unplanned outage of the Basslink interconnector occurred."
+          },
+          {
+            "name": "Basslink",
+            "quote": "At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 29 January the spot price in South Australia exceeded $5000/MWh for seven trading intervals throughout the day, reaching the price cap for the 2 pm trading interval.",
+          "text": "seven trading intervals throughout the day"
+        },
+        "network_outages": {
+          "quote": "An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Thursday 29 January the spot price in South Australia exceeded $5000/MWh for seven trading intervals throughout the day, reaching the price cap for the 2 pm trading interval.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "SA1"
+        ]
+      },
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand in Victoria reached a new record of 10 445 MW and in South Australia demand was at near-record levels."
+          },
+          {
+            "label": "network_outage",
+            "quote": "An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "On Thursday afternoon an unplanned outage of the Basslink interconnector occurred... At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria. As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "As a result energy prices were set to the price cap until 3.20 pm in both regions when load was able to be restored."
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "At 8.22 am International Power reduced the available capacity of Hazelwood unit four by 210 MW to zero due to problems with returning the plant to service (all capacity had been priced below $15/MWh)."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "$200 000",
+            "quote": "Constraint $200 000 0.00 -$14.00"
+          }
+        ],
+        "event_date": "2009-01-29",
+        "interconnectors_named": [
+          {
+            "name": "Basslink",
+            "quote": "On Thursday afternoon an unplanned outage of the Basslink interconnector occurred."
+          },
+          {
+            "name": "Basslink",
+            "quote": "At 2.00 pm the Basslink interconnector tripped, while exporting around 400 MW to Victoria."
+          }
+        ],
+        "intervals": {
+          "quote": "On Thursday 29 January the spot price in Victoria exceeded $5000/MWh for 11 trading intervals (8.30 am to 9 am and midday to 4 pm), reaching the price cap at 3 pm.",
+          "text": "11 trading intervals (8.30 am to 9 am and midday to 4 pm)"
+        },
+        "network_outages": {
+          "quote": "An unplanned outage of transmission equipment in the Latrobe Valley from 1.30 am to 9 am constrained off significant quantities of low-priced generation in the Latrobe Valley causing the price to reach the cap for one hour from 8 am.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "On Thursday 29 January the spot price in Victoria exceeded $5000/MWh for 11 trading intervals (8.30 am to 9 am and midday to 4 pm), reaching the price cap at 3 pm.",
+          "value": 10000
+        },
+        "rebid_set_price": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "regions": [
+          "VIC1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_28_and_29_January_2009_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_28%20and%2029%20January%202009%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 11036,
+    "per_attempt": [
+      {
+        "completion_tokens": 11036,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9120
+        },
+        "prompt_tokens": 21556,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 32592
+      }
+    ],
+    "prompt_tokens": 21556,
+    "reasoning_tokens": 9120,
+    "total_tokens": 32592
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T11:13:04+00:00",
+  "failure": null,
+  "input_sha256": "9fdb9f34ea53ca5074701185a2feb761f68aaf0792403bddd005d03b30128adb",
+  "key": "4cc08b6c274ae2d1996aa8e42fb58f4a493f942316224fb7a6460fd3510b3d98",
+  "latency_s": 160.58,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2018-01-19\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"2:30 pm (VIC1), 2:30 pm, 3:00 pm, 5:00 pm, 6:00 pm (SA1)\", \"quote\": \"In South Australia the spot price reached $11,864/MWh at 2.30 pm, $13,408/MWh at 3 pm, $5,413/MWh at 5 pm and $5,332/MWh at 6 pm. The spot price exceeded $5000/MWh only once in Victoria, reaching $10,152/MWh at 2.30 pm.\"}, \"peak_price\": {\"value\": 13408, \"quote\": \"In South Australia the spot price reached $11,864/MWh at 2.30 pm, $13,408/MWh at 3 pm, $5,413/MWh at 5 pm and $5,332/MWh at 6 pm.\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"On 19 January maximum temperatures in Melbourne and Adelaide exceeded 40°C, leading to high forecast demand for electricity.\"}, {\"label\": \"wind_output\", \"quote\": \"Local generator availability was lower than forecast for the 2.30 pm and 3 pm trading intervals by around 220 MW and around 70 MW for the 5 pm trading interval. This was mainly due to lower than forecast semi-scheduled wind generation.\"}, {\"label\": \"administered_pricing_or_intervention\", \"quote\": \"Due to the ever tightening supply and demand balance in both regions, at around 2 pm, AEMO activated Reliability Emergency Reserve Trader (RERT) contracts in Victoria and South Australia. As a result, AEMO invoked special pricing arrangements called 'what-if' pricing.\"}], \"constraints_named\": [{\"id\": \"#RT_VIC\", \"quote\": \"To facilitate the RERT process, constraints commencing with the following identifiers will be evident at various times in dispatch. #RT_VIC\"}, {\"id\": \"vs_250\", \"quote\": \"respond to constraint vs_250\"}], \"interconnectors_named\": [{\"name\": \"vic-sa net ic\", \"quote\": \"band adj due to material change in vic-sa net ic ~ vic import duration extended @1430 sl~\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"no\", \"quote\": \"Rebidding did not contribute to the high price outcomes.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "On 19 January maximum temperatures in Melbourne and Adelaide exceeded 40°C, leading to high forecast demand for electricity."
+          },
+          {
+            "label": "wind_output",
+            "quote": "Local generator availability was lower than forecast for the 2.30 pm and 3 pm trading intervals by around 220 MW and around 70 MW for the 5 pm trading interval. This was mainly due to lower than forecast semi-scheduled wind generation."
+          },
+          {
+            "label": "administered_pricing_or_intervention",
+            "quote": "Due to the ever tightening supply and demand balance in both regions, at around 2 pm, AEMO activated Reliability Emergency Reserve Trader (RERT) contracts in Victoria and South Australia. As a result, AEMO invoked special pricing arrangements called 'what-if' pricing."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "#RT_VIC",
+            "quote": "To facilitate the RERT process, constraints commencing with the following identifiers will be evident at various times in dispatch. #RT_VIC"
+          },
+          {
+            "id": "vs_250",
+            "quote": "respond to constraint vs_250"
+          }
+        ],
+        "event_date": "2018-01-19",
+        "interconnectors_named": [
+          {
+            "name": "vic-sa net ic",
+            "quote": "band adj due to material change in vic-sa net ic ~ vic import duration extended @1430 sl~"
+          }
+        ],
+        "intervals": {
+          "quote": "In South Australia the spot price reached $11,864/MWh at 2.30 pm, $13,408/MWh at 3 pm, $5,413/MWh at 5 pm and $5,332/MWh at 6 pm. The spot price exceeded $5000/MWh only once in Victoria, reaching $10,152/MWh at 2.30 pm.",
+          "text": "2:30 pm (VIC1), 2:30 pm, 3:00 pm, 5:00 pm, 6:00 pm (SA1)"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "In South Australia the spot price reached $11,864/MWh at 2.30 pm, $13,408/MWh at 3 pm, $5,413/MWh at 5 pm and $5,332/MWh at 6 pm.",
+          "value": 13408
+        },
+        "rebid_set_price": {
+          "quote": "Rebidding did not contribute to the high price outcomes.",
+          "value": "no"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/Prices_above_$5000MWh_-_19_January_2018_(Vic_SA).pdf",
+    "url": "https://www.aer.gov.au/system/files/Prices%20above%20%245000MWh%20-%2019%20January%202018%20%28Vic%20SA%29.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4425,
+    "per_attempt": [
+      {
+        "completion_tokens": 4425,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3803
+        },
+        "prompt_tokens": 19630,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 24055
+      }
+    ],
+    "prompt_tokens": 19630,
+    "reasoning_tokens": 3803,
+    "total_tokens": 24055
+  }
+}

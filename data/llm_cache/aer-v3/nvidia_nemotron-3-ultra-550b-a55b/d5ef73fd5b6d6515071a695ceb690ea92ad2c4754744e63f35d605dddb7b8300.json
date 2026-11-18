@@ -1,0 +1,101 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:26:48+00:00",
+  "failure": null,
+  "input_sha256": "6a884a6eb48864045e33fa880e23b903672db4bcad3e9fdfd61c2041b94150c6",
+  "key": "d5ef73fd5b6d6515071a695ceb690ea92ad2c4754744e63f35d605dddb7b8300",
+  "latency_s": 119.57,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2006-01-26\", \"regions\": [\"VIC1\", \"SA1\"], \"intervals\": {\"text\": \"The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm\", \"quote\": \"The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm, peaking at $7416/MWh and $7758/MWh respectively.\"}, \"peak_price\": {\"value\": 9683.31, \"quote\": \"Five-minute dispatch prices in South Australia rose to a high of $9683/MWh at 2.35 pm\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"A combination of temperature driven high demands in both Victoria and South Australia\"}, {\"label\": \"unscheduled_plant_outage\", \"quote\": \"Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems.\"}, {\"label\": \"rebids\", \"quote\": \"rebidding by International Power ... contributed to the price exceeding $5000/MWh.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions\"}], \"constraints_named\": [], \"interconnectors_named\": [{\"name\": \"Snowy to Victoria interconnector\", \"quote\": \"flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions in the Snowy region.\"}, {\"name\": \"Heywood interconnector\", \"quote\": \"Prices were aligned between Victoria and South Australia all day, with the Heywood interconnector at close to zero for the peak demand periods.\"}, {\"name\": \"MurrayLink\", \"quote\": \"The limit across MurrayLink into South Australia was zero from 2.40 pm.\"}, {\"name\": \"Snowy to New South Wales interconnector\", \"quote\": \"This saw the limit on flows into Victoria restored to around 1600 MW and, relieve the constraint on the interconnector. The re-orientation, however, resulted in significant counter-price flows on the Snowy to New South Wales interconnector.\"}], \"network_outages\": {\"value\": \"not_stated\", \"quote\": null}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"rebidding by International Power ... contributed to the price exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "A combination of temperature driven high demands in both Victoria and South Australia"
+          },
+          {
+            "label": "unscheduled_plant_outage",
+            "quote": "Two units at Yallourn in Victoria and one at Northern power station in South Australia were out of service as a result of plant problems."
+          },
+          {
+            "label": "rebids",
+            "quote": "rebidding by International Power ... contributed to the price exceeding $5000/MWh."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions"
+          }
+        ],
+        "constraints_named": [],
+        "event_date": "2006-01-26",
+        "interconnectors_named": [
+          {
+            "name": "Snowy to Victoria interconnector",
+            "quote": "flows into Victoria from Snowy were reduced from 1600 MW to 1100 MW by NEMMCO to manage network conditions in the Snowy region."
+          },
+          {
+            "name": "Heywood interconnector",
+            "quote": "Prices were aligned between Victoria and South Australia all day, with the Heywood interconnector at close to zero for the peak demand periods."
+          },
+          {
+            "name": "MurrayLink",
+            "quote": "The limit across MurrayLink into South Australia was zero from 2.40 pm."
+          },
+          {
+            "name": "Snowy to New South Wales interconnector",
+            "quote": "This saw the limit on flows into Victoria restored to around 1600 MW and, relieve the constraint on the interconnector. The re-orientation, however, resulted in significant counter-price flows on the Snowy to New South Wales interconnector."
+          }
+        ],
+        "intervals": {
+          "quote": "The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm, peaking at $7416/MWh and $7758/MWh respectively.",
+          "text": "The spot price was greater than $5000/MWh in Victoria and South Australia for the half hour trading interval ending 3 pm"
+        },
+        "network_outages": {
+          "quote": null,
+          "value": "not_stated"
+        },
+        "peak_price": {
+          "quote": "Five-minute dispatch prices in South Australia rose to a high of $9683/MWh at 2.35 pm",
+          "value": 9683.31
+        },
+        "rebid_set_price": {
+          "quote": "rebidding by International Power ... contributed to the price exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "VIC1",
+          "SA1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_26_January_2006_-_SA_and_VIC.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_26%20January%202006%20-%20SA%20and%20VIC.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 2658,
+    "per_attempt": [
+      {
+        "completion_tokens": 2658,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2063
+        },
+        "prompt_tokens": 6666,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9324
+      }
+    ],
+    "prompt_tokens": 6666,
+    "reasoning_tokens": 2063,
+    "total_tokens": 9324
+  }
+}

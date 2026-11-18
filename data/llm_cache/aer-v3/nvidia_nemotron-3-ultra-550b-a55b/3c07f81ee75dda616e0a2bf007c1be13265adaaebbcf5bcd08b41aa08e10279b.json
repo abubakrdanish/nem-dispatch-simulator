@@ -1,0 +1,110 @@
+{
+  "attempts": 1,
+  "cache_format": 1,
+  "created_at": "2026-11-18T10:28:25+00:00",
+  "failure": null,
+  "input_sha256": "d84695ed8fb499ee95dfc4ff82b3f226c25ddc0edf30a82bf03a1b135cc3733b",
+  "key": "3c07f81ee75dda616e0a2bf007c1be13265adaaebbcf5bcd08b41aa08e10279b",
+  "latency_s": 85.38,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "prompt_sha256": "59d3bae57b7553825fa66fd06769d9c2e077b29ad645d40902343ceb52a2f1f0",
+  "prompt_version": "aer-v3",
+  "raw_response": "{\"events\": [{\"event_date\": \"2009-11-27\", \"regions\": [\"NSW1\", \"QLD1\"], \"intervals\": {\"text\": \"On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval.\", \"quote\": \"On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval.\"}, \"peak_price\": {\"value\": 8933, \"quote\": \"Spot price $8933/MWh\"}, \"causes\": [{\"label\": \"demand\", \"quote\": \"Demand was also higher than forecast four hours ahead in both New South Wales and Queensland by a combined total of up to 700 MW.\"}, {\"label\": \"network_outage\", \"quote\": \"The contributing factors included a planned network outage in New South Wales, which significantly reduced the capability for imports from Victoria.\"}, {\"label\": \"interconnector_limit\", \"quote\": \"The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh.\"}, {\"label\": \"rebids\", \"quote\": \"The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh.\"}], \"constraints_named\": [{\"id\": \"QNI constraint\", \"quote\": \"A:Swan_E manage QNI constraint\"}, {\"id\": \"PD0932\", \"quote\": \"Interconnector forecast limit PD0932: Band shift\"}, {\"id\": \"VIC-NSW limit\", \"quote\": \"Forecast interconnector VIC-NSW limit::Band shift\"}], \"interconnectors_named\": [{\"name\": \"Victoria to New South Wales interconnector\", \"quote\": \"Total import capability into New South Wales from Victoria was lower than forecast for the whole period.\"}, {\"name\": \"QNI\", \"quote\": \"A:Swan_E manage QNI constraint\"}, {\"name\": \"Basslink\", \"quote\": \"Basslink T-V- MNSP1TAS1\"}], \"network_outages\": {\"value\": \"contributed\", \"quote\": \"The contributing factors included a planned network outage in New South Wales, which significantly reduced the capability for imports from Victoria.\"}, \"rebid_set_price\": {\"value\": \"yes\", \"quote\": \"The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh.\"}}]}",
+  "result": {
+    "events": [
+      {
+        "causes": [
+          {
+            "label": "demand",
+            "quote": "Demand was also higher than forecast four hours ahead in both New South Wales and Queensland by a combined total of up to 700 MW."
+          },
+          {
+            "label": "network_outage",
+            "quote": "The contributing factors included a planned network outage in New South Wales, which significantly reduced the capability for imports from Victoria."
+          },
+          {
+            "label": "interconnector_limit",
+            "quote": "The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh."
+          },
+          {
+            "label": "rebids",
+            "quote": "The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh."
+          }
+        ],
+        "constraints_named": [
+          {
+            "id": "QNI constraint",
+            "quote": "A:Swan_E manage QNI constraint"
+          },
+          {
+            "id": "PD0932",
+            "quote": "Interconnector forecast limit PD0932: Band shift"
+          },
+          {
+            "id": "VIC-NSW limit",
+            "quote": "Forecast interconnector VIC-NSW limit::Band shift"
+          }
+        ],
+        "event_date": "2009-11-27",
+        "interconnectors_named": [
+          {
+            "name": "Victoria to New South Wales interconnector",
+            "quote": "Total import capability into New South Wales from Victoria was lower than forecast for the whole period."
+          },
+          {
+            "name": "QNI",
+            "quote": "A:Swan_E manage QNI constraint"
+          },
+          {
+            "name": "Basslink",
+            "quote": "Basslink T-V- MNSP1TAS1"
+          }
+        ],
+        "intervals": {
+          "quote": "On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval.",
+          "text": "On 27 November 2009, the spot price in New South Wales exceeded $5000/MWh for the 3.30 pm and 4 pm trading intervals. In Queensland the spot price exceeded $5000/MWh for the 3.30 pm trading interval."
+        },
+        "network_outages": {
+          "quote": "The contributing factors included a planned network outage in New South Wales, which significantly reduced the capability for imports from Victoria.",
+          "value": "contributed"
+        },
+        "peak_price": {
+          "quote": "Spot price $8933/MWh",
+          "value": 8933
+        },
+        "rebid_set_price": {
+          "quote": "The combination of higher than forecast demand, lower than forecast imports from Victoria and rebidding by generators into higher prices contributed to prices exceeding $5000/MWh.",
+          "value": "yes"
+        },
+        "regions": [
+          "NSW1",
+          "QLD1"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "file": "data/raw/aer/docs/5000Report_27_November_2009_-_NSW_and_QLD.pdf",
+    "url": "https://www.aer.gov.au/system/files/5000Report_27%20November%202009%20-%20NSW%20and%20QLD.pdf"
+  },
+  "status": "ok",
+  "usage": {
+    "completion_tokens": 4170,
+    "per_attempt": [
+      {
+        "completion_tokens": 4170,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3513
+        },
+        "prompt_tokens": 6845,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11015
+      }
+    ],
+    "prompt_tokens": 6845,
+    "reasoning_tokens": 3513,
+    "total_tokens": 11015
+  }
+}
