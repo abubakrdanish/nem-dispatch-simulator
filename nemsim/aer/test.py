@@ -17,6 +17,10 @@ Fixed before any label was seen (2026-11-16), so the test cannot be fitted to it
 
 Every cause cell gives region-intervals, events and days, so thin cells show. Labels are evidence about
 what the AER said, not about the market: a cell is "intervals the AER attributed to X".
+
+The four-way network-cause partition and its leave-one-month-out checks were added after seeing the
+outage result.  They are exploratory, not part of the rule above.  They use the reasoning-on labels only
+and do not borrow the outage test's pre-registered verdict rule.
 """
 from __future__ import annotations
 
@@ -31,12 +35,17 @@ from nemsim.aer.accuracy import usable_labels
 from nemsim.aer.extract import PRIMARY, labels_file
 from nemsim.config import ROOT
 from nemsim.ladder import SAMPLES, frame
-from nemsim.spike_sample import boot
 
 OUT = ROOT / "results" / "aer_cause_test.csv"
 NETWORK = {"network_outage"}
 NETWORK_BROAD = {"network_outage", "interconnector_limit", "constraint_violation"}
 REPORT_THRESHOLD = 5000.0
+EXPLORATORY_CELLS = (
+    "network outage named",
+    "interconnector limit named, no outage",
+    "constraint violation named, neither",
+    "none of the three named",
+)
 
 
 def out_file(config: str = PRIMARY):
@@ -44,20 +53,29 @@ def out_file(config: str = PRIMARY):
 
 
 def event_rows(config: str = PRIMARY) -> pd.DataFrame:
-    """One row per (date, region) with the union of usable cause labels from every event naming it."""
+    """One row per (date, region), retaining both all named and usable causes.
+
+    The pre-registered outage test uses only accuracy-qualified ``causes``.  The
+    requested exploratory partition uses ``named_causes`` for its three named
+    categories, so its zero-sized constraint-violation-only cell remains visible
+    even though that label failed the accuracy threshold.
+    """
     ev = json.loads(labels_file(config).read_text())["events"]
     keep = usable_labels(config)
     rows = []
     for e in ev:
-        causes = {c["label"] for c in e["causes"]} & keep
+        named = {c["label"] for c in e["causes"]}
+        causes = named & keep
         for r in e["regions"]:
-            rows.append({"date": e["event_date"], "region": r, "causes": causes, "url": e["url"],
+            rows.append({"date": e["event_date"], "region": r, "causes": causes, "named_causes": named,
+                         "url": e["url"],
                          "network_statement": e["network_outages"]["value"]})
     d = pd.DataFrame(rows)
     if d.empty:
         return d
     return d.groupby(["date", "region"]).agg(
-        causes=("causes", lambda s: set().union(*s)), urls=("url", lambda s: sorted(set(s))),
+        causes=("causes", lambda s: set().union(*s)), named_causes=("named_causes", lambda s: set().union(*s)),
+        urls=("url", lambda s: sorted(set(s))),
         network_statement=("network_statement", lambda s: "contributed" if "contributed" in set(s)
                            else "did_not_contribute" if "did_not_contribute" in set(s) else "not_stated")
     ).reset_index()
@@ -72,18 +90,72 @@ def scored() -> pd.DataFrame:
     return x
 
 
+def _day_interval(g: pd.DataFrame, numerator, denominator=None, reps: int = 2000) -> tuple[float, float]:
+    """95% interval for a mean or ratio, resampling whole market days."""
+    if not len(g):
+        return float("nan"), float("nan")
+    n = np.asarray(numerator, dtype=float)
+    d = np.ones(len(g)) if denominator is None else np.asarray(denominator, dtype=float)
+    day = pd.DataFrame({"date": g.date.to_numpy(), "n": n, "d": d}).groupby("date")[["n", "d"]].sum()
+    rng = np.random.default_rng(0)
+    idx = rng.integers(0, len(day), (reps, len(day)))
+    ns = day.n.to_numpy()[idx].sum(1)
+    ds = day.d.to_numpy()[idx].sum(1)
+    return tuple(np.percentile(ns / ds * 100, [2.5, 97.5]))
+
+
 def measures(g: pd.DataFrame) -> dict:
     out = {"region_intervals": len(g), "days": g.date.nunique(), "day_regions": len(g[["date", "region"]].drop_duplicates())}
     if not len(g):
         return out
     w = g.weight.abs()
     for rung, col in (("r4", "abs_error"), ("r2", "r2_abs_error")):
-        hit = g[col] <= 5
-        lo, hi = boot(g.assign(hit=hit.to_numpy()), "hit")
-        out.update({f"{rung} within $5": hit.mean() * 100, f"{rung} ci_lo": lo, f"{rung} ci_hi": hi,
-                    f"{rung} within 10%": (g[col] <= 0.1 * g.target.abs()).mean() * 100,
-                    f"{rung} within $5 by $": (w * hit).sum() / w.sum() * 100})
+        hit5 = g[col] <= 5
+        hit10 = g[col] <= 0.1 * g.target.abs()
+        lo5, hi5 = _day_interval(g, hit5)
+        lo10, hi10 = _day_interval(g, hit10)
+        low, hiw = _day_interval(g, w * hit5, w)
+        out.update({
+            f"{rung} within $5": hit5.mean() * 100,
+            f"{rung} ci_lo": lo5, f"{rung} ci_hi": hi5,
+            f"{rung} within 10%": hit10.mean() * 100,
+            f"{rung} within 10% ci_lo": lo10, f"{rung} within 10% ci_hi": hi10,
+            f"{rung} within $5 by $": (w * hit5).sum() / w.sum() * 100,
+            f"{rung} within $5 by $ ci_lo": low, f"{rung} within $5 by $ ci_hi": hiw,
+        })
     return out
+
+
+def _exploratory_cell(causes: set[str]) -> str:
+    if "network_outage" in causes:
+        return EXPLORATORY_CELLS[0]
+    if "interconnector_limit" in causes:
+        return EXPLORATORY_CELLS[1]
+    if "constraint_violation" in causes:
+        return EXPLORATORY_CELLS[2]
+    return EXPLORATORY_CELLS[3]
+
+
+def leave_one_month_out(x: pd.DataFrame) -> list[dict]:
+    """Exploratory rung-4 within-$5 contrasts with each sample month removed."""
+    rows = []
+    p = x[(x.rrp >= REPORT_THRESHOLD) & x.labelled]
+    for month in SAMPLES["seventeen"]:
+        g = p[p.month != month]
+        for split, has in (
+            ("outage", g.named_causes.apply(lambda c: "network_outage" in c)),
+            ("any network cause", g.named_causes.apply(lambda c: bool(c & NETWORK_BROAD))),
+        ):
+            a, b = g[has], g[~has]
+            ah, bh = (a.abs_error <= 5).mean() * 100, (b.abs_error <= 5).mean() * 100
+            rows.append({
+                "population": "$5,000+ leave one month out", "group": f"exploratory: {split} contrast",
+                "held_out_month": month, "region_intervals": len(g),
+                "group_a_region_intervals": len(a), "group_b_region_intervals": len(b),
+                "r4 group A within $5": ah, "r4 group B within $5": bh,
+                "r4 within $5 gap pp": ah - bh,
+            })
+    return rows
 
 
 def run(config: str = PRIMARY) -> pd.DataFrame:
@@ -95,6 +167,7 @@ def run(config: str = PRIMARY) -> pd.DataFrame:
     x = x.merge(ev, how="left", on=["date", "region"])
     x["labelled"] = x.urls.notna()
     x["causes"] = x.causes.apply(lambda c: c if isinstance(c, set) else set())
+    x["named_causes"] = x.named_causes.apply(lambda c: c if isinstance(c, set) else set())
     rows = []
     june25 = x.date.str.startswith("2025-06")
     for pop, sel in (("$5,000+", x.rrp >= REPORT_THRESHOLD), ("$5,000+ without June 2025", (x.rrp >= REPORT_THRESHOLD) & ~june25),
@@ -114,12 +187,31 @@ def run(config: str = PRIMARY) -> pd.DataFrame:
         for v in ("contributed", "did_not_contribute", "not_stated"):
             rows.append({"population": pop, "group": f"AER statement on network outages: {v}",
                          **measures(lab[lab.network_statement == v])})
+    if config == PRIMARY:
+        # Exploratory: mutually exclusive priority order specified after the
+        # outage result was known.  Raw, verbatim reasoning-on names are used
+        # for the three requested labels; no pre-registered verdict is applied.
+        p = x[(x.rrp >= REPORT_THRESHOLD) & x.labelled].copy()
+        p["exploratory_cell"] = p.named_causes.apply(_exploratory_cell)
+        for cell in EXPLORATORY_CELLS:
+            rows.append({"population": "$5,000+", "group": f"exploratory: {cell}",
+                         **measures(p[p.exploratory_cell == cell])})
+        has = p.named_causes.apply(lambda c: bool(c & NETWORK_BROAD))
+        rows.append({"population": "$5,000+", "group": "exploratory: any network cause named",
+                     **measures(p[has])})
+        # The comparison row is already the fourth mutually exclusive cell.
+        assert (p[~has].exploratory_cell == EXPLORATORY_CELLS[3]).all()
+        rows.extend(leave_one_month_out(x))
     out = pd.DataFrame(rows).assign(config=config)
     out.to_csv(out_file(config), index=False)
     with pd.option_context("display.width", 250, "display.max_columns", 30, "display.max_rows", 200):
         cols = ["population", "group", "region_intervals", "day_regions", "days", "r4 within $5", "r4 ci_lo", "r4 ci_hi",
                 "r4 within 10%", "r4 within $5 by $", "r2 within $5", "r2 within 10%", "r2 within $5 by $"]
         print(out[[c for c in cols if c in out]].round(1).to_string(index=False))
+        lomo = out[out.population == "$5,000+ leave one month out"]
+        if len(lomo):
+            print("\nExploratory leave-one-month-out rung-4 within-$5 contrasts (percentage points):")
+            print(lomo[["held_out_month", "group", "r4 within $5 gap pp"]].round(1).to_string(index=False))
     return out
 
 

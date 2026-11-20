@@ -1689,11 +1689,11 @@ The six reasoning-on misattributions: a footnote about Pelican Point's long-term
 | scheduled plant outage | 10 | 0.82 / 0.90 | **rescued** | 0.58 / 0.70 | no |
 | battery state of charge | 8 | 1.00 / 0.62 | **rescued** | 0.75 / 0.38 | no |
 | FCAS co-optimisation | 8 | 1.00 / 0.50 | **lost** | 1.00 / 0.62 | yes |
-| solar output | 4 | 0.75 / 0.75 | **lost** | 1.00 / 0.75 | yes |
+| solar output | 4 | 0.75 / 0.75 | **dropped: run-to-run unstable** | 1.00 / 0.75 | yes |
 | administered pricing or intervention | 3 | 1.00 / 0.33 | no | 0.75 / 1.00 | no |
 | constraint violation | 2 | none given / 0.00 | no | 0.20 / 0.50 | no |
 
-- **Run to run.** Between the two reasoning-on runs over the sample, solar output (precision 1.00 against 0.75, on 4 positives) and unscheduled plant outage (recall 0.47 against 0.71) cross a threshold. Labels this close to a threshold on so few positives should be read as marginal either way.
+- **Run to run.** Between the two reasoning-on runs over the sample, solar output (precision 1.00 against 0.75, on 4 positives) and unscheduled plant outage (recall 0.47 against 0.71) cross a threshold. `solar output` is dropped for run-to-run instability, not for failing the threshold in one chosen run: its status changes on the same hand-coded sample. The five labels newly passing in the published run remain. `FCAS co-optimisation` remains dropped, and "a rebid set the price" remains unusable.
 - **Statements.** Network outages contributed: the model says so on 16 sample events, all 16 right, of 19 (P 1.00, R 0.84). Did not contribute: 4 of 4. "A rebid set the price": yes on 11, 2 right, against 3 in the hand codes; still dropped.
 
 **The test on the reasoning-on labels** ($5,000+ region-intervals; same definitions as 19.3):
@@ -1761,7 +1761,7 @@ The same split on every $300+ region-interval in a labelled day-region: network-
 | ramp rates and slow starts | 48 | 25.1% | 22.4% | 1.00 | 1.00 | 24.3% (21.9%) |
 | battery state of charge | 27 | 14.1% | 17.2% | 1.00 | 0.62 | dropped |
 | FCAS co-optimisation | | | | | | 15.8% (19.4%); dropped now |
-| solar output | | | | | | 14.1% (8.7%); dropped now |
+| solar output | | | | | | 14.1% (8.7%); dropped for run-to-run instability |
 
 **The AER's explicit network-outage statement:** contributed on 51.8% of labelled day-regions (39.6% of value), did not contribute on 8.4% (14.1%), not stated on 39.8% (46.3%).
 
@@ -1769,4 +1769,66 @@ The same split on every $300+ region-interval in a labelled day-region: network-
 - **The cause-conditional test: yes.** "Holds" became "consistent, not shown". Rung 4 still does better on network-attributed spikes in every cut, but no cut separates the intervals, and without June 2025 the gap is under 4 points.
 - **June 2025: the collapse is now total.** Without it, network-attributed and the rest are 31.4% against 27.6%.
 - **The decade cut: not materially for the labels both runs kept** (1–8 points; network outage 50.8% against 49.2% of day-regions). Coverage rose from 82% to 88%, and five more causes are now measured well enough to report, which changes the picture of the decade: interconnector limits on two thirds of reportable spikes, unplanned plant outages on over half and carrying 69.5% of the value.
+
+### 19.7 Exploratory network-cause test and leave-one-month-out
+
+**Status: exploratory throughout.** The outage prediction and its rule were fixed before the labels were seen. This different hypothesis — that rung 4's gain comes from network constraints generally, rather than outages in particular — was inferred from the cells in 19.6 after that result was known. Nothing in this section is pre-registered, none of the outage test's thresholds is reused, and these results do not have the standing of the ladder measurements.
+
+**Observed before the test.** In 19.6 rung 4 was within $5 on 31.4% of the network-outage cell and 28.4% of the overlapping interconnector-limit cell. That table supported an inference, not a test. The test here uses only the reasoning-on labels and partitions every $5,000+ region-interval in an AER-reported day-region, in priority order:
+
+1. `network outage` named;
+2. `interconnector limit` named, no outage named;
+3. `constraint violation` named, neither of the above;
+4. none of the three named.
+
+The labels' measured accuracy on 30 hand-coded events is beside the result because the partition is model-produced: network outage precision 1.00, recall 0.79 (19 positives); interconnector limit precision 1.00, recall 0.71 (24 positives); constraint violation has no measured precision and 0.00 recall (2 positives), so it is unusable. Its exclusive cell is empty in this sample and therefore changes no aggregate. `solar output` is not part of this partition and is dropped everywhere for run-to-run instability.
+
+**Measured, rung 4** (each interval is a day-block 95% interval; counts and distinct market days are repeated because the cells are thin):
+
+| Mutually exclusive AER label cell | Region-intervals | Days | Within $5 | Within 10% | Within $5, dollar-weighted |
+|---|---:|---:|---:|---:|---:|
+| Network outage named | 236 | 18 | 31.4% (18.5–47.4) | 58.9% (37.0–78.8) | 25.2% (12.6–38.2) |
+| Interconnector limit named, no outage | 75 | 8 | 37.3% (22.2–60.6) | 61.3% (44.7–80.4) | 41.2% (23.0–74.9) |
+| Constraint violation named, neither | 0 | 0 | — | — | — |
+| None of the three named | 571 | 7 | 10.2% (2.0–29.5) | 61.8% (49.8–74.5) | 7.9% (2.3–22.2) |
+
+**Measured, rung 2** (same cells, counts, days and resampling):
+
+| Mutually exclusive AER label cell | Region-intervals | Days | Within $5 | Within 10% | Within $5, dollar-weighted |
+|---|---:|---:|---:|---:|---:|
+| Network outage named | 236 | 18 | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) |
+| Interconnector limit named, no outage | 75 | 8 | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) |
+| Constraint violation named, neither | 0 | 0 | — | — | — |
+| None of the three named | 571 | 7 | 0.5% (0.0–1.2) | 19.4% (0.6–42.4) | 0.4% (0.0–1.1) |
+
+**Measured comparison: the exploratory network-cause split does not separate.** When any of the three network causes is named, rung 4 is within $5 on 32.8% of 311 region-intervals across 26 days (95% interval 22.2–46.7). When none is named, it is within $5 on 10.2% of 571 across 7 days (2.0–29.5). The intervals overlap. The point gap is 22.6 points, larger than the outage-only gap of 18.0, and the interval overlap is narrower, but it still does not separate. That is the answer.
+
+For completeness, on the same 311 network-cause intervals rung 4 gets 59.5% within 10% (42.9–76.0) and 29.9% dollar-weighted (17.7–46.3); on the same 571 none-named intervals it gets 61.8% (49.8–74.5) and 7.9% (2.3–22.2). Rung 2 is 0.0% on all three measures (all intervals 0.0–0.0) across the 311 intervals and 26 days; across the 571 intervals and 7 days it is 0.5% within $5 (0.0–1.2), 19.4% within 10% (0.6–42.4), and 0.4% dollar-weighted (0.0–1.1).
+
+**Measured leave-one-month-out distribution.** The contrast is rung 4's within-$5 share in the named group minus its share in the comparison group, in percentage points. Every one of the seventeen sample months is removed in turn, including months with no region-interval in this labelled $5,000+ population; those removals correctly leave the contrast unchanged.
+
+| Month held out | Outage minus no outage | Any network cause minus none named |
+|---|---:|---:|
+| 2020-01 | 25.6 | 29.5 |
+| 2024-08 | 12.2 | 19.0 |
+| 2024-10 | 18.9 | 23.3 |
+| 2024-11 | 17.1 | 17.7 |
+| 2024-12 | 19.2 | 23.7 |
+| 2025-01 | 16.5 | 21.7 |
+| 2025-02 | 17.8 | 22.1 |
+| 2025-05 | 19.7 | 24.0 |
+| 2025-06 | 3.7 | 8.5 |
+| 2025-07 | 19.9 | 25.0 |
+| 2025-08 | 18.0 | 22.6 |
+| 2025-09 | 18.0 | 22.6 |
+| 2025-11 | 18.4 | 23.0 |
+| 2025-12 | 18.1 | 22.7 |
+| 2026-01 | 21.1 | 27.0 |
+| 2026-02 | 18.0 | 22.6 |
+| 2026-05 | 18.0 | 22.6 |
+
+- **Outage split:** minimum 3.7 points (June 2025 held out), maximum 25.6 (January 2020), positive in 17 of 17 hold-outs.
+- **Exploratory network-cause split:** minimum 8.5 points (June 2025), maximum 29.5 (January 2020), positive in 17 of 17.
+
+**Inferred.** The network-cause definition produces a larger and somewhat less month-sensitive gap than outage alone, but the full-sample intervals overlap and June 2025 still carries much of the magnitude. The correct next claim is **worth a pre-registered test on held-out data**, not shown. No third cut was tried.
 

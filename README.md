@@ -37,9 +37,17 @@ What remains open is that errors inside rung 4 could still offset each other. Th
 - **Breaking accuracy out by actual price band is not new.** Eschenbaum's Table B14, Panel D, does it for nempy.
 - **"Not found" rests on a few web searches and one central paper read only in abstract.** If that paper reports a dollar-weighted decomposition, this part is a replication. [Section 9.3](docs/stage2_results.md#93-the-literature) has what was read and what was not.
 
-## The finding, as it stands
+## The result, as it stands
 
-**Network constraints are the only input-based layer that reaches the spike band, and even they leave most of it unreached.** Rung 4 gets **26.4%** of region-intervals priced at $300 or more within $5 of AEMO's price on the original ten months, and **29.1%** on all seventeen. The **reachable bound** is the share any model of that kind could get within $5, found knowing the actual prices, shadow prices and flows, so it is a bound, never a model. For rung 4 it is **75.3%** on the ten months and **80.7%** on the seventeen. The direction is not new: the abstract of Gorman, MacGill and Bruce (2024) reports that neglecting network and security constraints mainly affects peak prices (the paper itself is paywalled and has not been read here). This project measures that direction a different way; it does not discover it.
+**Measured: the ladder works, but not monotonically.** With the fixed-bid correction applied, rung 4 gets **60.7%** of all 741,565 scored region-intervals within $5 of AEMO's price, **29.3%** of the 8,398 region-intervals at $300 or more, and **45.9%** when errors are weighted by settled value. Rung 3b goes backwards: solving interconnector flows without the generic constraints gets **15.7%** overall and **0.4%** on the $300+ band, worse than rung 2's 21.1% and 2.5%. Network constraints are the only input-based layer here that reaches the spike band, and even they leave most of it unreached. The detailed tables below use the original scored rows before the fixed-bid correction; no figure moves by more than 0.2 points, and the before/after table is reported under [fixed bids](#where-the-ladder-stops-and-why).
+
+**Measured: the cause-conditional claim is consistent with the better labels, not shown by this sample.** The reasoning-on labels misattribute 4.7% of labels overall (6 of 128); `network outage`, which this comparison uses, has measured precision 1.00 and recall 0.79 on 19 hand-coded positives. On $5,000+ region-intervals in AER-reported day-regions, rung 4 is within $5 on **31.4% of 236 intervals across 18 days** when those labels say a network outage contributed, against **13.3% of 646 intervals across 15 days** otherwise. The day-resampled 95% intervals are **18.5–47.4%** and **5.2–34.0%**. They overlap, so the test does not separate the groups.
+
+**Without June 2025 the separation falls below four points:** 31.4% against 27.6% on 297 non-outage region-intervals across 12 days. In the systematic leave-one-month-out check, removing June gives the smallest outage gap, **3.7 points**; all 17 hold-outs remain positive, but the gaps range from 3.7 to 25.6 points. One month carrying the magnitude of the result is a finding, not a footnote.
+
+**The earlier published result held on worse labels, and the six-day check shows why.** Reasoning off gave 37.4% against 4.5% with non-overlapping intervals. It had misfiled six system-normal or overload-avoidance day-regions as network outages; those 78 region-intervals are ones rung 4 prices well. Removing only those six day-regions from the old label set changes the comparison to 31.8% (20.3–45.6) against 11.5% (4.1–32.9), which overlaps. The earlier separation was an artefact of label error, not a finding.
+
+**Inferred, then tested exploratorily:** rung 4's gain may come from network constraints generally, rather than outages in particular. The exploratory test below groups outages (precision 1.00, recall 0.79) with interconnector limits (1.00, 0.71) and constraint violations (no measured precision, 0.00 recall; unusable and an empty exclusive cell here). It produces a larger point gap, but its day-resampled intervals still overlap. The result is worth a pre-registered test on held-out data, not shown here. The direction is also not new: the abstract of Gorman, MacGill and Bruce (2024) reports that neglecting network and security constraints mainly affects peak prices (the paper itself is paywalled and has not been read here).
 
 **What every number below is measured on.**
 
@@ -271,12 +279,13 @@ The project's thesis is that rung 4's gain comes from the network. Until now it 
 | scheduled plant outage | 10 | 0.82 / 0.90 | **yes, rescued** | 0.58 / 0.70 | no |
 | battery state of charge | 8 | 1.00 / 0.62 | **yes, rescued** | 0.75 / 0.38 | no |
 | FCAS co-optimisation | 8 | 1.00 / 0.50 | **no, lost** | 1.00 / 0.62 | yes |
-| solar output | 4 | 0.75 / 0.75 | **no, lost** | 1.00 / 0.75 | yes |
+| solar output | 4 | 0.75 / 0.75 | **no, run-to-run unstable** | 1.00 / 0.75 | yes |
 | administered pricing or intervention | 3 | 1.00 / 0.33 | no | 0.75 / 1.00 | no |
 | constraint violation | 2 | none given / 0.00 | no | 0.20 / 0.50 | no |
 
 - **The "a rebid set the price" field stays dropped:** with reasoning on, the model says yes on 11 sample events where the reports support 3 (2 of them agree).
 - **The network-outage statement is kept.** When the AER says outages did not contribute, the model records it every time (4 of 4). When it says they did, precision is 16/16 and recall 16/19.
+- **`solar output` is dropped for run-to-run instability, not because one run failed the threshold.** On the same hand-coded sample it passes one reasoning-on run at 1.00 precision and fails the other at 0.75, with only four positives. A label that changes status between repeat runs is not stable enough to publish.
 
 **The test.**
 - **Population.** Region-intervals in the seventeen months with an actual price of $5,000/MWh or more, on the rows all five rungs scored, in a region and on a day the AER reported.
@@ -296,6 +305,17 @@ The project's thesis is that rung 4's gain comes from the network. Until now it 
 - **Why it changed.** Ten day-regions moved out of "network outage" between the runs, and rung 4 prices them fairly well. Six are reasoning-off misattributions the new run fixed: *system normal* constraints and constraints to avoid overloading a line, which the AER does not call outages (NSW on 26 and 27 November and 2 December 2024, Queensland on 2 December 2024, South Australia on 1 February 2025 and 26 January 2026). Four are outages the new run missed (the January 2020 bushfire line outages, the July 2025 South East–Tailem Bend outage, Basslink on 12 January 2026, Rowville–South Morang on 27 January 2026).
 - **Taking the better reading of each** (reasoning-off labels with the six system-normal days removed, a sensitivity check of my own reading, not a measured label set) gives 31.8% (20.3–45.6) against 11.5% (4.1–32.9). That also overlaps. So the earlier "holds" depended on counting system-normal constraint days as network outages.
 - **What it does establish.** Across 18 network-attributed days rung 4 is right about a third of the time and rung 2 never is, and where the AER says outages did *not* contribute (4 days, all but one in June 2025) rung 4 is almost never right. Rung 4 does as well on interconnector limits (28.4%), which include system-normal constraints, as on outages. That fits a model that gains from network constraints generally, not from outages in particular. It is an inference from the cells, not a test.
+
+**Exploratory test of that inference.** This was specified after the outage result was seen. It is not pre-registered, does not use the outage test's thresholds, and does not have the ladder measurements' standing. The mutually exclusive partition is: network outage; interconnector limit with no outage; constraint violation with neither; none of the three. The reasoning-on labels have measured precision/recall of 1.00/0.79 for network outage, 1.00/0.71 for interconnector limit, and no measured precision/0.00 recall for constraint violation, which is unusable; the last cell contains zero intervals here and changes no aggregate.
+
+| $5,000+ AER-reported region-intervals | Region-intervals | Days | Rung 4 within $5 (95% interval, whole days) | Rung 2 within $5 (95% interval) |
+|---|---:|---:|---:|---:|
+| Network outage named | 236 | 18 | 31.4% (18.5–47.4) | 0.0% (0.0–0.0) |
+| Interconnector limit named, no outage | 75 | 8 | 37.3% (22.2–60.6) | 0.0% (0.0–0.0) |
+| Constraint violation named, neither | 0 | 0 | — | — |
+| None of the three named | 571 | 7 | 10.2% (2.0–29.5) | 0.5% (0.0–1.2) |
+
+**The exploratory network-cause split does not separate.** Rung 4 gets 32.8% of 311 region-intervals across 26 days within $5 when any network cause is named, against 10.2% of 571 across 7 days when none is named. The intervals, 22.2–46.7% and 2.0–29.5%, overlap. The 22.6-point gap is larger than the outage-only gap of 18.0 points, but overlap remains the answer. Across all 17 leave-one-month-out runs the network-cause gap stays positive and ranges from 8.5 points (June 2025 removed) to 29.5 (January 2020 removed). That is worth a pre-registered test on held-out data, not evidence that the hypothesis is shown. Full metrics and every hold-out are in [section 19.7](docs/stage2_results.md#197-exploratory-network-cause-test-and-leave-one-month-out).
 
 Per cause, reasoning-on labels (labels overlap):
 

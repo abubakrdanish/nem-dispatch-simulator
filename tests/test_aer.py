@@ -66,6 +66,20 @@ def test_scorer_separates_wrong_labels_from_misattributed_quotes():
     assert s["statements"]["network_outages"]["agree"] == 1 and s["statements"]["rebid_set_price"]["agree"] == 0
 
 
+def test_solar_output_is_dropped_for_instability_even_when_it_passes_thresholds():
+    hand = [{"file": f"f{i}", "event_date": f"2020-01-{i + 1:02d}", "regions": ["SA1"],
+             "causes": {"solar_output": "q"}, "network_outages": {"value": "not_stated"},
+             "rebid_set_price": {"value": "not_stated"}} for i in range(3)]
+    model = [{"file": h["file"], "event_date": h["event_date"], "regions": h["regions"],
+              "causes": [{"label": "solar_output", "quote": "q"}],
+              "network_outages": {"value": "not_stated"}, "rebid_set_price": {"value": "not_stated"}}
+             for h in hand]
+    judged = {f"{h['file']}|{h['event_date']}|('SA1',)|solar_output": {"supported": True} for h in hand}
+    row = accuracy.score(model, hand, judged)["table"].set_index("label").loc["solar_output"]
+    assert row.passes_thresholds
+    assert not row.usable
+
+
 def test_a_label_the_blind_coding_missed_is_added_when_the_judge_finds_it_supported():
     hand = [{"file": "f", "event_date": "2020-01-31", "regions": ["SA1"], "causes": {},
              "network_outages": {"value": "not_stated"}, "rebid_set_price": {"value": "not_stated"}}]
@@ -85,6 +99,22 @@ def test_verdict_needs_separated_intervals_to_say_the_prediction_holds():
     assert cause_test.verdict(table(40, 30, 20, 25)) == "holds"
     assert cause_test.verdict(table(40, 20, 20, 25)) == "consistent, not shown"
     assert cause_test.verdict(table(15, 10, 20, 25)) == "does not hold"
+
+
+def test_exploratory_network_partition_is_mutually_exclusive_and_prioritised():
+    assert cause_test._exploratory_cell({"network_outage", "interconnector_limit"}) == "network outage named"
+    assert cause_test._exploratory_cell({"interconnector_limit", "constraint_violation"}) == "interconnector limit named, no outage"
+    assert cause_test._exploratory_cell({"constraint_violation"}) == "constraint violation named, neither"
+    assert cause_test._exploratory_cell({"demand"}) == "none of the three named"
+
+
+def test_day_interval_resamples_whole_days_for_weighted_and_unweighted_measures():
+    g = pd.DataFrame({"date": ["2020-01-01", "2020-01-01", "2020-01-02"],
+                      "hit": [True, False, True], "weight": [1.0, 3.0, 2.0]})
+    lo, hi = cause_test._day_interval(g, g.hit)
+    low, hiw = cause_test._day_interval(g, g.weight * g.hit, g.weight)
+    assert 50 <= lo <= hi <= 100
+    assert 25 <= low <= hiw <= 100
 
 
 def test_run_with_an_empty_list_extracts_nothing(monkeypatch):

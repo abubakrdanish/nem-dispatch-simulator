@@ -37,6 +37,11 @@ JUDGED = ROOT / "data" / "aer_judgements.json"
 MODEL_LABELS = ROOT / "results" / "aer_labels.json"
 OUT = ROOT / "results" / "aer_accuracy.csv"
 MIN_POSITIVES, MIN_PRECISION, MIN_RECALL = 3, 0.80, 0.60
+# A threshold pass is not enough when the same hand-coded sample changes verdict
+# across independent runs.  solar_output passed one reasoning-on run and failed
+# the other, on only four positives, so it is excluded for instability rather
+# than described as a threshold failure.
+UNSTABLE_LABELS = {"solar_output"}
 
 
 def _key(file: str, date: str, regions) -> tuple:
@@ -107,7 +112,9 @@ def score(model_events: list[dict], hand: list[dict], judged: dict, extra: set |
                      "recall_blind": c["tp_blind"] / (c["tp_blind"] + fn_blind) if c["tp_blind"] + fn_blind else float("nan"),
                      "added_by_adjudication": c["added"]})
     t = pd.DataFrame(rows)
-    t["usable"] = ((t.reference_positives >= MIN_POSITIVES) & (t.precision >= MIN_PRECISION) & (t.recall >= MIN_RECALL))
+    t["passes_thresholds"] = ((t.reference_positives >= MIN_POSITIVES) & (t.precision >= MIN_PRECISION)
+                              & (t.recall >= MIN_RECALL))
+    t["usable"] = t.passes_thresholds & ~t.label.isin(UNSTABLE_LABELS)
     return {"table": t, "events_matched": len(m), "events": len(hand), "verbatim_labels": verb,
             "misattributed": mis, "misattribution_rate": len(mis) / (verb - len(unjudged)) if verb - len(unjudged) else float("nan"),
             "unjudged": unjudged,
@@ -123,10 +130,13 @@ def load_judged(model: str = PRIMARY) -> dict:
 
 
 def usable_labels(model: str = PRIMARY) -> set[str]:
-    """Labels that passed on the hand-coded sample (results/aer_accuracy.csv) for one configuration."""
+    """Stable labels that passed the hand-coded sample thresholds for one configuration."""
     t = pd.read_csv(OUT)
     t = t[t.model == model]
-    return set(t[t.usable.astype(bool)].label)
+    # Older generated CSVs predate the explicit instability column.  Apply the
+    # exclusion here too, so rebuilding downstream results never depends on
+    # whether that gitignored CSV has already been regenerated.
+    return set(t[t.usable.astype(bool) & ~t.label.isin(UNSTABLE_LABELS)].label)
 
 
 def additions(models: dict[str, list[dict]], hand: list[dict]) -> set:
