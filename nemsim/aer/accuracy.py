@@ -37,11 +37,12 @@ JUDGED = ROOT / "data" / "aer_judgements.json"
 MODEL_LABELS = ROOT / "results" / "aer_labels.json"
 OUT = ROOT / "results" / "aer_accuracy.csv"
 MIN_POSITIVES, MIN_PRECISION, MIN_RECALL = 3, 0.80, 0.60
-# A threshold pass is not enough when the same hand-coded sample changes verdict
-# across independent runs.  solar_output passed one reasoning-on run and failed
-# the other, on only four positives, so it is excluded for instability rather
-# than described as a threshold failure.
-UNSTABLE_LABELS = {"solar_output"}
+# Accuracy thresholds are necessary but not sufficient.  Keep each explicit
+# exclusion separate because the reasons are evidence, not one generic bucket.
+EXCLUDED_LABELS = {
+    "solar_output": "run-to-run instability",
+    "constraint_violation": "zero measured recall",
+}
 
 
 def _key(file: str, date: str, regions) -> tuple:
@@ -114,7 +115,7 @@ def score(model_events: list[dict], hand: list[dict], judged: dict, extra: set |
     t = pd.DataFrame(rows)
     t["passes_thresholds"] = ((t.reference_positives >= MIN_POSITIVES) & (t.precision >= MIN_PRECISION)
                               & (t.recall >= MIN_RECALL))
-    t["usable"] = t.passes_thresholds & ~t.label.isin(UNSTABLE_LABELS)
+    t["usable"] = t.passes_thresholds & ~t.label.isin(EXCLUDED_LABELS)
     return {"table": t, "events_matched": len(m), "events": len(hand), "verbatim_labels": verb,
             "misattributed": mis, "misattribution_rate": len(mis) / (verb - len(unjudged)) if verb - len(unjudged) else float("nan"),
             "unjudged": unjudged,
@@ -136,7 +137,7 @@ def usable_labels(model: str = PRIMARY) -> set[str]:
     # Older generated CSVs predate the explicit instability column.  Apply the
     # exclusion here too, so rebuilding downstream results never depends on
     # whether that gitignored CSV has already been regenerated.
-    return set(t[t.usable.astype(bool) & ~t.label.isin(UNSTABLE_LABELS)].label)
+    return set(t[t.usable.astype(bool) & ~t.label.isin(EXCLUDED_LABELS)].label)
 
 
 def additions(models: dict[str, list[dict]], hand: list[dict]) -> set:

@@ -2,6 +2,7 @@
 extra, so nothing here imports it; the service itself is checked only if it is installed."""
 from collections import Counter
 from datetime import datetime
+from pathlib import Path
 
 import duckdb
 import pandas as pd
@@ -15,6 +16,15 @@ from nemsim.web import data
 from tests.fixtures.synthetic import INTERVALS, build as build_fixture
 
 T = [datetime.fromisoformat(t) for t in INTERVALS]
+PAGE = Path(__file__).parents[1] / "nemsim" / "web" / "static" / "index.html"
+
+
+def test_frontend_normalises_date_only_timestamps_before_rendering():
+    """A public day link can carry t=YYYY-MM-DD; every parser consumer must receive an interval timestamp."""
+    page = PAGE.read_text()
+    assert 'const intervalStamp = s => s.includes("T") ? s : s + "T00:05";' in page
+    assert 'const [a, b = "00:05"] = s.split("T")' in page
+    assert 'S.t = intervalStamp(q.get("t") || META.default.t);' in page
 
 
 def test_warehouse_connection_refuses_writes(tmp_path):

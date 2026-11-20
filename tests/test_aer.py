@@ -80,6 +80,21 @@ def test_solar_output_is_dropped_for_instability_even_when_it_passes_thresholds(
     assert not row.usable
 
 
+def test_explicit_label_exclusions_keep_their_distinct_reasons(monkeypatch, tmp_path):
+    out = tmp_path / "accuracy.csv"
+    pd.DataFrame([
+        {"model": extract.PRIMARY, "label": "demand", "usable": True},
+        {"model": extract.PRIMARY, "label": "solar_output", "usable": True},
+        {"model": extract.PRIMARY, "label": "constraint_violation", "usable": True},
+    ]).to_csv(out, index=False)
+    monkeypatch.setattr(accuracy, "OUT", out)
+    assert accuracy.usable_labels() == {"demand"}
+    assert accuracy.EXCLUDED_LABELS == {
+        "solar_output": "run-to-run instability",
+        "constraint_violation": "zero measured recall",
+    }
+
+
 def test_a_label_the_blind_coding_missed_is_added_when_the_judge_finds_it_supported():
     hand = [{"file": "f", "event_date": "2020-01-31", "regions": ["SA1"], "causes": {},
              "network_outages": {"value": "not_stated"}, "rebid_set_price": {"value": "not_stated"}}]
@@ -104,8 +119,8 @@ def test_verdict_needs_separated_intervals_to_say_the_prediction_holds():
 def test_exploratory_network_partition_is_mutually_exclusive_and_prioritised():
     assert cause_test._exploratory_cell({"network_outage", "interconnector_limit"}) == "network outage named"
     assert cause_test._exploratory_cell({"interconnector_limit", "constraint_violation"}) == "interconnector limit named, no outage"
-    assert cause_test._exploratory_cell({"constraint_violation"}) == "constraint violation named, neither"
-    assert cause_test._exploratory_cell({"demand"}) == "none of the three named"
+    assert cause_test._exploratory_cell({"constraint_violation"}) == "neither network cause named"
+    assert cause_test._exploratory_cell({"demand"}) == "neither network cause named"
 
 
 def test_day_interval_resamples_whole_days_for_weighted_and_unweighted_measures():

@@ -1057,6 +1057,8 @@ January 2020 needed three ingest changes: `DIRECTION` filled from registration (
 
 ### 13.4 Rungs 2 and 4 on the expanded sample
 
+This section records the stored scores before the fixed-bid correction. Section 18.2 reports the corrected figures and their before/after differences.
+
 **Measured.** The share of region-intervals where the rung's price is within $5 of `DISPATCHPRICE.RRP` (pricing run). The denominator is the region-intervals both rungs scored. Excluded are a month's first 48 intervals where the previous month's offers are not loaded, and AEMO's own gaps. The $300+ column takes the subset whose actual price is ≥ $300; its range is a 95% day-block bootstrap. "By $" weights by price × demand ÷ 12, using `TRADINGPRICE.RRP` for January 2020 because energy then settled on the 30-minute price. The rungs read offers, availability, invoked constraints and their right-hand sides, and definitions. They read no dispatch outcome (`tests/test_harness.py::test_dispatch_outcomes_are_withheld_from_units`).
 
 | Sample | Region-intervals | Rung 2 | Rung 4 | Rung 2, $300+ | Rung 4, $300+ | Rung 4, by $ |
@@ -1116,6 +1118,8 @@ A first diagnosis, reading `MARGINALVALUE` to see which constraints bound, point
 ---
 
 ## 15. The whole ladder on each sample
+
+This section records the stored scores before the fixed-bid correction. Section 18.2 reports the corrected figures and their before/after differences.
 
 Every rung was scored on all seventeen months by 9 November. Rungs 1, 3a and 3b were run on the seven spike months for the frontend (stage 7) with the unchanged `nemsim.evaluate`, after the last change to any rung's code. Rungs 1, 2 and 3a reproduce their stored ten-month prices exactly when re-run. Rung 3b moves 0.6–1.35% of prices through LP degeneracy without changing any within-$5 outcome (section 14). So no rung needed re-running for this section. `python -m nemsim.ladder report` computes it, and `results/ladder.csv` has every cell.
 
@@ -1691,9 +1695,10 @@ The six reasoning-on misattributions: a footnote about Pelican Point's long-term
 | FCAS co-optimisation | 8 | 1.00 / 0.50 | **lost** | 1.00 / 0.62 | yes |
 | solar output | 4 | 0.75 / 0.75 | **dropped: run-to-run unstable** | 1.00 / 0.75 | yes |
 | administered pricing or intervention | 3 | 1.00 / 0.33 | no | 0.75 / 1.00 | no |
-| constraint violation | 2 | none given / 0.00 | no | 0.20 / 0.50 | no |
+| constraint violation | 2 | none given / 0.00 | **dropped: zero measured recall** | 0.20 / 0.50 | no |
 
 - **Run to run.** Between the two reasoning-on runs over the sample, solar output (precision 1.00 against 0.75, on 4 positives) and unscheduled plant outage (recall 0.47 against 0.71) cross a threshold. `solar output` is dropped for run-to-run instability, not for failing the threshold in one chosen run: its status changes on the same hand-coded sample. The five labels newly passing in the published run remain. `FCAS co-optimisation` remains dropped, and "a rebid set the price" remains unusable.
+- **A separate exclusion.** `constraint violation` is dropped for zero measured recall. It is not used in the exploratory network partition; this is a different reason from `solar output`'s run-to-run instability.
 - **Statements.** Network outages contributed: the model says so on 16 sample events, all 16 right, of 19 (P 1.00, R 0.84). Did not contribute: 4 of 4. "A rebid set the price": yes on 11, 2 right, against 3 in the hand codes; still dropped.
 
 **The test on the reasoning-on labels** ($5,000+ region-intervals; same definitions as 19.3):
@@ -1778,10 +1783,9 @@ The same split on every $300+ region-interval in a labelled day-region: network-
 
 1. `network outage` named;
 2. `interconnector limit` named, no outage named;
-3. `constraint violation` named, neither of the above;
-4. none of the three named.
+3. neither retained network cause named.
 
-The labels' measured accuracy on 30 hand-coded events is beside the result because the partition is model-produced: network outage precision 1.00, recall 0.79 (19 positives); interconnector limit precision 1.00, recall 0.71 (24 positives); constraint violation has no measured precision and 0.00 recall (2 positives), so it is unusable. Its exclusive cell is empty in this sample and therefore changes no aggregate. `solar output` is not part of this partition and is dropped everywhere for run-to-run instability.
+The labels' measured accuracy on 30 hand-coded events is beside the result because the partition is model-produced: network outage precision 1.00, recall 0.79 (19 positives); interconnector limit precision 1.00, recall 0.71 (24 positives). `constraint violation` has no measured precision and 0.00 recall (2 positives), so it is excluded for zero measured recall. That is separate from `solar output`, which is dropped everywhere for run-to-run instability.
 
 **Measured, rung 4** (each interval is a day-block 95% interval; counts and distinct market days are repeated because the cells are thin):
 
@@ -1789,8 +1793,7 @@ The labels' measured accuracy on 30 hand-coded events is beside the result becau
 |---|---:|---:|---:|---:|---:|
 | Network outage named | 236 | 18 | 31.4% (18.5–47.4) | 58.9% (37.0–78.8) | 25.2% (12.6–38.2) |
 | Interconnector limit named, no outage | 75 | 8 | 37.3% (22.2–60.6) | 61.3% (44.7–80.4) | 41.2% (23.0–74.9) |
-| Constraint violation named, neither | 0 | 0 | — | — | — |
-| None of the three named | 571 | 7 | 10.2% (2.0–29.5) | 61.8% (49.8–74.5) | 7.9% (2.3–22.2) |
+| Neither retained network cause named | 571 | 7 | 10.2% (2.0–29.5) | 61.8% (49.8–74.5) | 7.9% (2.3–22.2) |
 
 **Measured, rung 2** (same cells, counts, days and resampling):
 
@@ -1798,16 +1801,15 @@ The labels' measured accuracy on 30 hand-coded events is beside the result becau
 |---|---:|---:|---:|---:|---:|
 | Network outage named | 236 | 18 | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) |
 | Interconnector limit named, no outage | 75 | 8 | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) | 0.0% (0.0–0.0) |
-| Constraint violation named, neither | 0 | 0 | — | — | — |
-| None of the three named | 571 | 7 | 0.5% (0.0–1.2) | 19.4% (0.6–42.4) | 0.4% (0.0–1.1) |
+| Neither retained network cause named | 571 | 7 | 0.5% (0.0–1.2) | 19.4% (0.6–42.4) | 0.4% (0.0–1.1) |
 
-**Measured comparison: the exploratory network-cause split does not separate.** When any of the three network causes is named, rung 4 is within $5 on 32.8% of 311 region-intervals across 26 days (95% interval 22.2–46.7). When none is named, it is within $5 on 10.2% of 571 across 7 days (2.0–29.5). The intervals overlap. The point gap is 22.6 points, larger than the outage-only gap of 18.0, and the interval overlap is narrower, but it still does not separate. That is the answer.
+**Measured comparison: the exploratory network-cause split does not separate.** When either retained network cause is named, rung 4 is within $5 on 32.8% of 311 region-intervals across 26 days (95% interval 22.2–46.7). When neither is named, it is within $5 on 10.2% of 571 across 7 days (2.0–29.5). The intervals overlap. The point gap is 22.6 points, larger than the outage-only gap of 18.0, and the interval overlap is narrower, but it still does not separate. That is the answer. The comparison side has 571 region-intervals but only 7 distinct days; that thin day count, not label quality, is the binding limitation behind its 2.0–29.5 interval.
 
-For completeness, on the same 311 network-cause intervals rung 4 gets 59.5% within 10% (42.9–76.0) and 29.9% dollar-weighted (17.7–46.3); on the same 571 none-named intervals it gets 61.8% (49.8–74.5) and 7.9% (2.3–22.2). Rung 2 is 0.0% on all three measures (all intervals 0.0–0.0) across the 311 intervals and 26 days; across the 571 intervals and 7 days it is 0.5% within $5 (0.0–1.2), 19.4% within 10% (0.6–42.4), and 0.4% dollar-weighted (0.0–1.1).
+For completeness, on the same 311 network-cause intervals rung 4 gets 59.5% within 10% (42.9–76.0) and 29.9% dollar-weighted (17.7–46.3); on the same 571 neither-named intervals it gets 61.8% (49.8–74.5) and 7.9% (2.3–22.2). Rung 2 is 0.0% on all three measures (all intervals 0.0–0.0) across the 311 intervals and 26 days; across the 571 intervals and 7 days it is 0.5% within $5 (0.0–1.2), 19.4% within 10% (0.6–42.4), and 0.4% dollar-weighted (0.0–1.1).
 
 **Measured leave-one-month-out distribution.** The contrast is rung 4's within-$5 share in the named group minus its share in the comparison group, in percentage points. Every one of the seventeen sample months is removed in turn, including months with no region-interval in this labelled $5,000+ population; those removals correctly leave the contrast unchanged.
 
-| Month held out | Outage minus no outage | Any network cause minus none named |
+| Month held out | Outage minus no outage | Either retained network cause minus neither named |
 |---|---:|---:|
 | 2020-01 | 25.6 | 29.5 |
 | 2024-08 | 12.2 | 19.0 |

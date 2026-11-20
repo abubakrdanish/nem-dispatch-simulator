@@ -30,7 +30,7 @@ How much of the actual clearing price in Australia's National Electricity Market
 What remains open is that errors inside rung 4 could still offset each other. The dropped constraint terms tighten its constraints in NSW (section 9.1 of the results) while other errors push the other way, and nothing here rules out that the net is flattering.
 
 **Completeness, in the sense of Fudenberg, Kleinberg, Liang and Mullainathan** ("Measuring the Completeness of Economic Models", *Journal of Political Economy* 130(4), 956–990, 2022, doi:10.1086/718371). They define completeness as the reduction in prediction error a model achieves over a naive rule, divided by the achievable reduction.
-- **Applied to the within-$5 share:** naive is rung 1, a bare merit order, and achievable is the full-network bound. On all seventeen months rung 4's completeness is **(60.6 − 0.2) / (96.2 − 0.2) = 63%** overall, and **(29.1 − 0.0) / (80.7 − 0.0) = 36%** on the $300+ band.
+- **Applied to the within-$5 share:** naive is rung 1, a bare merit order, and achievable is the full-network bound. On all seventeen months rung 4's completeness is **(60.7 − 0.2) / (96.2 − 0.2) = 63%** overall, and **(29.3 − 0.0) / (80.7 − 0.0) = 36%** on the $300+ band.
 - **This bound is not their irreducible error.** It is an oracle found knowing outcomes, and restricted to explanations through offers, shadow prices and the network, so a fuller model could in principle exceed it. Read these as completeness against offer-based explanation, not against all possible predictors.
 
 **The cut I have not found reported:** accuracy **weighted by settled dollars**, at 5-minute resolution against AEMO's prices, with every rung of a ladder scored on the same region-intervals. Also **reachable bounds**, saying how much of each price band any model of a given kind could reach, and a **negative rung** with its mechanism measured.
@@ -39,15 +39,19 @@ What remains open is that errors inside rung 4 could still offset each other. Th
 
 ## The result, as it stands
 
-**Measured: the ladder works, but not monotonically.** With the fixed-bid correction applied, rung 4 gets **60.7%** of all 741,565 scored region-intervals within $5 of AEMO's price, **29.3%** of the 8,398 region-intervals at $300 or more, and **45.9%** when errors are weighted by settled value. Rung 3b goes backwards: solving interconnector flows without the generic constraints gets **15.7%** overall and **0.4%** on the $300+ band, worse than rung 2's 21.1% and 2.5%. Network constraints are the only input-based layer here that reaches the spike band, and even they leave most of it unreached. The detailed tables below use the original scored rows before the fixed-bid correction; no figure moves by more than 0.2 points, and the before/after table is reported under [fixed bids](#where-the-ladder-stops-and-why).
+**Measured: the ladder works, but not monotonically.** With the fixed-bid correction applied, rung 4 gets **60.7%** of all 741,565 scored region-intervals within $5 of AEMO's price, **29.3%** of the 8,398 region-intervals at $300 or more, and **45.9%** when errors are weighted by settled value. Rung 3b goes backwards: solving interconnector flows without the generic constraints gets **15.7%** overall and **0.4%** on the $300+ band, worse than rung 2's 21.1% and 2.5%. Network constraints are the only input-based layer here that reaches the spike band, and even they leave most of it unreached. The tables below include the fixed-bid correction; the before/after measurement is retained under [fixed bids](#where-the-ladder-stops-and-why).
 
 **Measured: the cause-conditional claim is consistent with the better labels, not shown by this sample.** The reasoning-on labels misattribute 4.7% of labels overall (6 of 128); `network outage`, which this comparison uses, has measured precision 1.00 and recall 0.79 on 19 hand-coded positives. On $5,000+ region-intervals in AER-reported day-regions, rung 4 is within $5 on **31.4% of 236 intervals across 18 days** when those labels say a network outage contributed, against **13.3% of 646 intervals across 15 days** otherwise. The day-resampled 95% intervals are **18.5–47.4%** and **5.2–34.0%**. They overlap, so the test does not separate the groups.
 
-**Without June 2025 the separation falls below four points:** 31.4% against 27.6% on 297 non-outage region-intervals across 12 days. In the systematic leave-one-month-out check, removing June gives the smallest outage gap, **3.7 points**; all 17 hold-outs remain positive, but the gaps range from 3.7 to 25.6 points. One month carrying the magnitude of the result is a finding, not a footnote.
+**The direction is robust to removing any single month; the size is not.** The outage contrast stays positive in all **17 of 17** leave-one-month-out runs, but removing June 2025 reduces it to **3.7 points**, while removing any other month gives **12.2 to 25.6 points**. On the direct cut without June, rung 4 gets 31.4% against 27.6% on 297 non-outage region-intervals across 12 days. June drives the magnitude, not the direction. That does not rescue the claim: the full-sample day-resampled intervals still overlap, so the test still does not separate the groups.
 
 **The earlier published result held on worse labels, and the six-day check shows why.** Reasoning off gave 37.4% against 4.5% with non-overlapping intervals. It had misfiled six system-normal or overload-avoidance day-regions as network outages; those 78 region-intervals are ones rung 4 prices well. Removing only those six day-regions from the old label set changes the comparison to 31.8% (20.3–45.6) against 11.5% (4.1–32.9), which overlaps. The earlier separation was an artefact of label error, not a finding.
 
-**Inferred, then tested exploratorily:** rung 4's gain may come from network constraints generally, rather than outages in particular. The exploratory test below groups outages (precision 1.00, recall 0.79) with interconnector limits (1.00, 0.71) and constraint violations (no measured precision, 0.00 recall; unusable and an empty exclusive cell here). It produces a larger point gap, but its day-resampled intervals still overlap. The result is worth a pre-registered test on held-out data, not shown here. The direction is also not new: the abstract of Gorman, MacGill and Bruce (2024) reports that neglecting network and security constraints mainly affects peak prices (the paper itself is paywalled and has not been read here).
+**Inferred, then tested exploratorily:** rung 4's gain may come from network constraints generally, rather than outages in particular. The exploratory test below groups outages (precision 1.00, recall 0.79) with interconnector limits (1.00, 0.71). It produces a larger point gap, but its day-resampled intervals still overlap. The result is worth a pre-registered test on held-out data, not shown here. The direction is also not new: the abstract of Gorman, MacGill and Bruce (2024) reports that neglecting network and security constraints mainly affects peak prices (the paper itself is paywalled and has not been read here).
+
+**Measured: rung 2 is within $5 on 0 of 311 network-attributed region-intervals across 26 days.** It is never correct in either constituent cell: 0 of 236 outage-attributed intervals across 18 days, and 0 of 75 interconnector-limit intervals across 8 days. The network-constraint rung is not making a small improvement to the merit order on these events; it is reaching prices rung 2 never reaches once.
+
+**The binding limitation on the cause-conditional test is the number of distinct comparison days, not label quality.** The retained labels are accurate enough to use, but the “neither network cause named” group is 571 region-intervals drawn from only **7 days**. That thin day count produces its 2.0–29.5% interval; better labelling cannot add independent spike days to this sample.
 
 **What every number below is measured on.**
 
@@ -59,27 +63,27 @@ What remains open is that errors inside rung 4 could still offset each other. Th
   - *The seven spike months* were added in stage 6b because they rank high on $300+ settled value. Checked afterwards, the AER records network limits behind the biggest day in every one ([selection rule below](#seven-spike-months-added-on-purpose)).
 - **Both samples sit outside the months that hold most of the decade's spike money.** March 2021 to July 2024 has no final-offer tables in AEMO's archive, so it is outside every sample here. It holds 62% of the decade's $300+ settled value, including the 2022 crisis ([Data](#data)).
 
-**The original ten months** (433,900 region-intervals, $16.7bn of settled value):
+**The original ten months** (434,125 region-intervals, $16.7bn of settled value):
 
 | Actual price | Share of region-intervals | Share of settled value | Rung 2 | Rung 3a (mechanical lift) | Rung 3b | **Rung 4** |
 |---|---:|---:|---:|---:|---:|---:|
-| Negative | 18.6% | −2.4% | 37.6% | 64.8% | 41.3% | **77.6%** |
-| $0–50 | 19.3% | 3.3% | 9.7% | 39.9% | 19.1% | **44.0%** |
-| $50–300 | 61.0% | 68.8% | 18.6% | 44.9% | 7.8% | **53.2%** |
-| **$300+** | **1.1%** | **30.3%** | **2.1%** | **17.3%** | **0.5%** | **26.4%** |
-| All | 100% | 100% | 20.3% | 47.3% | 16.1% | **55.7%** |
-| All, weighted by settled value | | | 12.8% | 30.1% | 3.9% | **44.3%** |
+| Negative | 18.6% | −2.4% | 37.7% | 65.3% | 41.3% | **77.8%** |
+| $0–50 | 19.3% | 3.3% | 9.8% | 40.0% | 19.1% | **44.2%** |
+| $50–300 | 61.0% | 68.8% | 18.6% | 44.9% | 7.7% | **53.3%** |
+| **$300+** | **1.1%** | **30.3%** | **2.2%** | **17.3%** | **0.5%** | **26.4%** |
+| All | 100% | 100% | 20.3% | 47.4% | 16.1% | **55.8%** |
+| All, weighted by settled value | | | 12.9% | 30.1% | 3.9% | **44.4%** |
 
-**All seventeen months** (741,340 region-intervals, $30.7bn; the ten above plus the seven spike months):
+**All seventeen months** (741,565 region-intervals, $30.7bn; the ten above plus the seven spike months):
 
 | Actual price | Share of region-intervals | Share of settled value | Rung 2 | Rung 3a (mechanical lift) | Rung 3b | **Rung 4** |
 |---|---:|---:|---:|---:|---:|---:|
-| Negative | 16.9% | −2.2% | 34.7% | 61.6% | 35.6% | **77.4%** |
-| $0–50 | 19.0% | 3.8% | 15.4% | 40.5% | 20.8% | **54.5%** |
+| Negative | 16.9% | −2.2% | 34.8% | 62.1% | 35.7% | **77.8%** |
+| $0–50 | 19.0% | 3.8% | 15.4% | 40.7% | 20.8% | **54.7%** |
 | $50–300 | 62.9% | 68.1% | 19.4% | 44.4% | 9.1% | **58.5%** |
-| **$300+** | **1.1%** | **30.4%** | **2.5%** | **19.7%** | **0.4%** | **29.1%** |
-| All | 100% | 100% | 21.0% | 46.3% | 15.7% | **60.6%** |
-| All, weighted by settled value | | | 13.6% | 29.8% | 4.0% | **45.7%** |
+| **$300+** | **1.1%** | **30.4%** | **2.5%** | **19.7%** | **0.4%** | **29.3%** |
+| All | 100% | 100% | 21.1% | 46.4% | 15.7% | **60.7%** |
+| All, weighted by settled value | | | 13.6% | 29.8% | 3.9% | **45.9%** |
 
 A $5 miss on a $40 price and on a $5,000 spike are not the same thing, so the tables are split by actual price. Rung 1 is 0.1% (ten months) and 0.2% (seventeen) and is left out of these two tables. The share columns describe each sample only: the samples were chosen with spikes in them, and the market's own spike share is in the next section. Every other measure is in `results/ladder.csv` (`python -m nemsim.ladder report`): within 10%, mean absolute error, and each rung by region and by month.
 
@@ -112,7 +116,7 @@ Each cell is the band's share of settled value, with its share of region-interva
 
 **In the ten-month table, the $300+ row is mostly June 2025, and June 2025 was not a network event.** In the ten months, June supplies 45% of the region-intervals above $300 and 53% of that band's settled value. Two episodes, 11–13 June and 26–27 June, carry it. 12 June and 26 June alone hold 42% of the spike band's settled value across all ten months. The AER's report on the quarter's high prices attributes both to cold-weather demand, a calm wind and coal outages. It says network outages "did not contribute", and the mainland regions were price-aligned with interconnectors not limiting. Prices at the margin were set by a few hundred MW of rebids, batteries running out of charge, ramp limits and the energy–FCAS trade-off. [Section 9.2](docs/stage2_results.md#92-what-june-2025-was) has the detail and sources.
 
-**Without June every directional conclusion holds, and most get stronger.** On the ten months without June 2025, rung 4 gets 30.3% within $5 on $300+ (95% interval from resampling whole days, 26.3–34.4) and 51.3% weighted by settled value, and the reachable bound on $300+ is 85.3%. On the seventeen months without June it gets 31.8% (27.7–36.1) and 49.2%, against a bound of 86.9%. What did depend on June was a magnitude: in the ten months, spikes set 30% of settled value with June and 20% without it. That figure no longer stands for the market; the decade's 23.4%, above, replaces it.
+**Without June every directional conclusion holds, and most get stronger.** On the ten months without June 2025, rung 4 gets 30.2% within $5 on $300+ (95% interval from resampling whole days, 26.1–34.4) and 51.5% weighted by settled value, and the reachable bound on $300+ is 85.3%. On the seventeen months without June it gets 31.9% (27.7–36.2) and 49.4%, against a bound of 86.9%. What did depend on June was a magnitude: in the ten months, spikes set 30% of settled value with June and 20% without it. That figure no longer stands for the market; the decade's 23.4%, above, replaces it.
 
 The ladder, with each figure's sample in its column heading. "Within $5" is over all region-intervals. Each rung's bound is of its own kind:
 - **Single-price oracle:** the one NEM-wide price per interval that puts the most regions within $5.
@@ -124,10 +128,10 @@ All three are found knowing actual outcomes.
 | Rung | Includes, exactly | Within $5, ten months | Within $5, seventeen months | Reachable bound, ten / seventeen | Share of bound, ten / seventeen |
 |---|---|---:|---:|---:|---:|
 | 1. Merit order, offers capped at declared availability | One NEM-wide stack of final energy offers, each capped at its own MAXAVAIL, and nothing else on the supply side | 0.1% | 0.2% | 51.9% / 53.2% (single-price oracle) | 0.2% / 0.4% |
-| 2. Merit order, offers capped at AEMO's dispatch availability | Rung 1, with each unit capped at `DISPATCHLOAD.AVAILABILITY`. That changes only wind and solar, which it caps at AEMO's unconstrained forecast for the interval (UIGF), made before dispatch, not at realised output | 20.3% | 21.0% | 51.9% / 53.2% (single-price oracle) | 39% / 40% |
-| 3a. Regional, flows held at actual | **The mechanical ceiling lift, not a modelling gain:** rung 2 as five regional stacks, each told its actual net interchange (an outcome) | 47.3% | 46.3% | 72.8% / 71.2% (regional stack) | 65% / 65% |
+| 2. Merit order, offers capped at AEMO's dispatch availability | Rung 1, with each unit capped at `DISPATCHLOAD.AVAILABILITY`. That changes only wind and solar, which it caps at AEMO's unconstrained forecast for the interval (UIGF), made before dispatch, not at realised output | 20.3% | 21.1% | 51.9% / 53.2% (single-price oracle) | 39% / 40% |
+| 3a. Regional, flows held at actual | **The mechanical ceiling lift, not a modelling gain:** rung 2 as five regional stacks, each told its actual net interchange (an outcome) | 47.4% | 46.4% | 72.8% / 71.2% (regional stack) | 65% / 65% |
 | 3b. Regional, flows solved | Rung 2 as a five-region LP: flows within standing ratings, AEMO's loss equation, ramp limits. **Worse than no network at all overall, and above $50, on both samples** (better than rung 2 only in the negative and $0–50 bands). Without the constraints that couple them, the links run past their real limits and parallel paths run against each other | 16.1% | 15.7% | no bound of its own kind | |
-| 4. Network constraints | Rung 3b plus every invoked generic constraint it can represent (83% of invoked constraint-intervals on the ten months, 84% on the seventeen): their right-hand sides, set before dispatch, and their equations | 55.7% | 60.6% | 96.0% / 96.2% (full network) | 58% / 63% |
+| 4. Network constraints | Rung 3b plus every invoked generic constraint it can represent (83% of invoked constraint-intervals on the ten months, 84% on the seventeen): their right-hand sides, set before dispatch, and their equations | 55.8% | 60.7% | 96.0% / 96.2% (full network) | 58% / 63% |
 
 **One outcome is in every rung:** each clears against `TOTALDEMAND` plus the scheduled load AEMO actually dispatched (pumping and battery charging), because no rung models a load's bid.
 
@@ -151,7 +155,7 @@ One interval shows where the network rung's remaining error comes from. All time
 
 **Across all seventeen months the mechanism is real but not dominant** (`python -m nemsim.link_sweep run`, then `report`; [section 17](docs/stage2_results.md#17-does-the-basslink-finding-generalise)). An expensive miss here is a region-interval at $300 or more that rung 4 misses by more than $5; there are 5,950.
 - **11.1% of them by count, 22.4% by value at stake,** are an interconnector into the region held at a limit AEMO records as set by an FCAS constraint, which rung 4 over-flows. Victoria accounts for most: 47% of its misses, nearly all Basslink.
-- **Probe, using outcomes:** holding just those links at AEMO's flow lifts rung 4 on the $300+ band from 29.1% to 32.5% within $5, and weighted by value from 45.7% to 47.4%. It breaks 17 expensive region-intervals that were right.
+- **Probe, using outcomes (measured before the fixed-bid correction):** holding just those links at AEMO's flow lifts rung 4 on the $300+ band from 29.1% to 32.5% within $5, and weighted by value from 45.7% to 47.4%. It breaks 17 expensive region-intervals that were right.
 - **Holding every link at AEMO's flow** lifts the band to 33.5% but breaks 371.
 - **The rest of the misses lie elsewhere:** 42% have no link limiting imports into the region at all.
 
@@ -177,17 +181,17 @@ Together the seventeen months hold 21.9% of the decade's $300+ settled value: 11
 
 | Sample | Region-intervals | Rung 2 | **Rung 4** | Rung 4, $300+ | Rung 4, by settled value |
 |---|---:|---:|---:|---:|---:|
-| Original ten | 433,900 | 20.3% | **55.7%** | 26.4% (23.1–31.0) of 4,811 | 44.3% |
-| Seven spike months | 307,440 | 22.1% | **67.5%** | 32.9% (26.6–39.7) of 3,587 | 47.3% |
-| All seventeen | 741,340 | 21.0% | **60.6%** | 29.1% (25.7–33.3) of 8,398 | 45.7% |
-| All seventeen, without 2020-01 | 696,940 | 19.8% | **59.8%** | 30.0% (26.4–34.2) of 8,054 | 46.8% |
+| Original ten | 434,125 | 20.3% | **55.8%** | 26.4% (23.1–31.0) of 4,811 | 44.4% |
+| Seven spike months | 307,440 | 22.2% | **67.6%** | 33.1% (26.8–39.9) of 3,587 | 47.6% |
+| All seventeen | 741,565 | 21.1% | **60.7%** | 29.3% (25.8–33.4) of 8,398 | 45.9% |
+| All seventeen, without 2020-01 | 697,165 | 19.8% | **59.9%** | 30.2% (26.5–34.3) of 8,054 | 47.0% |
 
 Rung 2 gets 2.1% of the original ten's $300+ region-intervals within $5, and 2.5% of the seventeen's.
 
 - **The finding holds on spikes of other kinds.** On the $300+ band rung 4 reaches 26% to 33%, and the two samples' intervals overlap. Rung 2 stays near zero. The network constraints are still the only layer that reaches the spike band at all.
-- **Read rung 4's 67.5% on the seven with their selection in mind.** These months were chosen for spike value, and in every one the AER independently records network limits behind the biggest day. They are network-heavy by construction, and rung 4 is the network rung. Its share of its own reachable bound is also higher on the seven, 70% against 58%. So 67.5% describes rung 4 on network-limited spike months, not a general improvement, and the gap to the ten months' 55.7% is not evidence that the model is better than the ten-month figure says.
+- **Read rung 4's 67.6% on the seven with their selection in mind.** These months were chosen for spike value, and in every one the AER independently records network limits behind the biggest day. They are network-heavy by construction, and rung 4 is the network rung. Its share of its own reachable bound is also higher on the seven, 70% against 58%. So 67.6% describes rung 4 on network-limited spike months, not a general improvement, and the gap to the ten months' 55.8% is not evidence that the model is better than the ten-month figure says.
 - **January 2020: rung 4 gets the transmission event right and the heat wrong.** Over the month rung 4 gets 8.4% (3.1–13.3) of 344 spike region-intervals within $5, the lowest of any month with more than 100. But the misses are not the islanding. In SA's four dispatch intervals after the constraints came in, 13:40 to 13:55 on 31 January, rung 4 prices SA at the $14,700 cap, exactly as AEMO did, from offers and invoked constraints alone. What it misses is the Victorian and NSW afternoon. There the median actual price above $300 was $14,700 in Victoria and $12,786 in NSW, against rung 4's $497 and $429. Those are the prices the AER puts down to heat, lost imports and plant failures, a scarcity event like June 2025, and 4 January is the other large miss: median spike price $14,700, mostly NSW, against rung 4's $113. Its cause is not read here. By money, January 2020's spike value is 54% NSW, 37% Victoria and only 4% SA, so the event that makes the month a network test carries little of its money. A median hides how it misses: through the afternoon rung 4 flips between the cap and $0–550 from one interval to the next. On the Victorian side most of the miss is measured: Basslink held back by FCAS constraints rung 4 cannot represent ([worked example above](#a-worked-example-basslink-31-january-2020-1845)). The NSW side and 4 January are not diagnosed.
-- **Per-month spread is wide.** Rung 4 on $300+ ranges from 8.4% (2020-01) and 11.7% (2025-05) to 49.2% (2025-01) across the seven. A ten-month mean hides that. `results/spike_sample.csv` has every month.
+- **Per-month spread is wide.** Rung 4 on $300+ ranges from 8.4% (2020-01) and 11.7% (2025-05) to 50.8% (2025-01) across the seven. A ten-month mean hides that. `results/spike_sample.csv` has every month.
 
 ### Are spike prices in the bid stack?
 
@@ -231,7 +235,7 @@ The link-channel row was measured before the fixed-bid correction; every other r
   | 4 | 60.6% → 60.7% | 29.1% → 29.3% | 45.7% → 45.9% |
 
 - **Of the 852 rung 4 spike misses with a fixed-bid constraint binding in the same region, it fixes 17.** In most of them the unit's offer already amounted to its fixed MW at the floor price, so rung 4 had dispatched it there anyway. A binding `$` constraint in AEMO's solution, even at a marginal value in the millions, did not mean rung 4 had dispatched that unit differently.
-- **The tables above this section are from before the correction.** No figure in them moves by more than 0.2 points (`results/fixed_bids_ladder.csv`; section 18 of the results).
+- **The main ladder and spike-sample tables above include the correction.** The before/after row here preserves the audit trail; no figure moved by more than 0.2 points (`results/fixed_bids_ladder.csv`; section 18 of the results). The FCAS link-channel probe is the one explicitly marked pre-correction measurement.
 
 **What stays unexplained.** On the spike band rung 4 misses about 70% of region-intervals, and handing it both FCAS channels still leaves about 66%. What sits there:
 
@@ -281,11 +285,12 @@ The project's thesis is that rung 4's gain comes from the network. Until now it 
 | FCAS co-optimisation | 8 | 1.00 / 0.50 | **no, lost** | 1.00 / 0.62 | yes |
 | solar output | 4 | 0.75 / 0.75 | **no, run-to-run unstable** | 1.00 / 0.75 | yes |
 | administered pricing or intervention | 3 | 1.00 / 0.33 | no | 0.75 / 1.00 | no |
-| constraint violation | 2 | none given / 0.00 | no | 0.20 / 0.50 | no |
+| constraint violation | 2 | none given / 0.00 | **no, zero measured recall** | 0.20 / 0.50 | no |
 
 - **The "a rebid set the price" field stays dropped:** with reasoning on, the model says yes on 11 sample events where the reports support 3 (2 of them agree).
 - **The network-outage statement is kept.** When the AER says outages did not contribute, the model records it every time (4 of 4). When it says they did, precision is 16/16 and recall 16/19.
 - **`solar output` is dropped for run-to-run instability, not because one run failed the threshold.** On the same hand-coded sample it passes one reasoning-on run at 1.00 precision and fails the other at 0.75, with only four positives. A label that changes status between repeat runs is not stable enough to publish.
+- **`constraint violation` is dropped for zero measured recall.** That is a separate failure from `solar output`'s run-to-run instability, and the label is not used in the exploratory network partition.
 
 **The test.**
 - **Population.** Region-intervals in the seventeen months with an actual price of $5,000/MWh or more, on the rows all five rungs scored, in a region and on a day the AER reported.
@@ -306,16 +311,15 @@ The project's thesis is that rung 4's gain comes from the network. Until now it 
 - **Taking the better reading of each** (reasoning-off labels with the six system-normal days removed, a sensitivity check of my own reading, not a measured label set) gives 31.8% (20.3–45.6) against 11.5% (4.1–32.9). That also overlaps. So the earlier "holds" depended on counting system-normal constraint days as network outages.
 - **What it does establish.** Across 18 network-attributed days rung 4 is right about a third of the time and rung 2 never is, and where the AER says outages did *not* contribute (4 days, all but one in June 2025) rung 4 is almost never right. Rung 4 does as well on interconnector limits (28.4%), which include system-normal constraints, as on outages. That fits a model that gains from network constraints generally, not from outages in particular. It is an inference from the cells, not a test.
 
-**Exploratory test of that inference.** This was specified after the outage result was seen. It is not pre-registered, does not use the outage test's thresholds, and does not have the ladder measurements' standing. The mutually exclusive partition is: network outage; interconnector limit with no outage; constraint violation with neither; none of the three. The reasoning-on labels have measured precision/recall of 1.00/0.79 for network outage, 1.00/0.71 for interconnector limit, and no measured precision/0.00 recall for constraint violation, which is unusable; the last cell contains zero intervals here and changes no aggregate.
+**Exploratory test of that inference.** This was specified after the outage result was seen. It is not pre-registered, does not use the outage test's thresholds, and does not have the ladder measurements' standing. The mutually exclusive partition is: network outage; interconnector limit with no outage; neither retained network cause. The reasoning-on labels have measured precision/recall of 1.00/0.79 for network outage and 1.00/0.71 for interconnector limit. `constraint violation` is excluded because its measured recall is zero; this is separate from `solar output`, which is excluded for run-to-run instability.
 
 | $5,000+ AER-reported region-intervals | Region-intervals | Days | Rung 4 within $5 (95% interval, whole days) | Rung 2 within $5 (95% interval) |
 |---|---:|---:|---:|---:|
 | Network outage named | 236 | 18 | 31.4% (18.5–47.4) | 0.0% (0.0–0.0) |
 | Interconnector limit named, no outage | 75 | 8 | 37.3% (22.2–60.6) | 0.0% (0.0–0.0) |
-| Constraint violation named, neither | 0 | 0 | — | — |
-| None of the three named | 571 | 7 | 10.2% (2.0–29.5) | 0.5% (0.0–1.2) |
+| Neither retained network cause named | 571 | 7 | 10.2% (2.0–29.5) | 0.5% (0.0–1.2) |
 
-**The exploratory network-cause split does not separate.** Rung 4 gets 32.8% of 311 region-intervals across 26 days within $5 when any network cause is named, against 10.2% of 571 across 7 days when none is named. The intervals, 22.2–46.7% and 2.0–29.5%, overlap. The 22.6-point gap is larger than the outage-only gap of 18.0 points, but overlap remains the answer. Across all 17 leave-one-month-out runs the network-cause gap stays positive and ranges from 8.5 points (June 2025 removed) to 29.5 (January 2020 removed). That is worth a pre-registered test on held-out data, not evidence that the hypothesis is shown. Full metrics and every hold-out are in [section 19.7](docs/stage2_results.md#197-exploratory-network-cause-test-and-leave-one-month-out).
+**The exploratory network-cause split does not separate.** Rung 4 gets 32.8% of 311 region-intervals across 26 days within $5 when either retained network cause is named, against 10.2% of 571 across 7 days when neither is named. The intervals, 22.2–46.7% and 2.0–29.5%, overlap. The 22.6-point gap is larger than the outage-only gap of 18.0 points, but overlap remains the answer. Across all 17 leave-one-month-out runs the network-cause gap stays positive and ranges from 8.5 points (June 2025 removed) to 29.5 (January 2020 removed). That is worth a pre-registered test on held-out data, not evidence that the hypothesis is shown. Full metrics and every hold-out are in [section 19.7](docs/stage2_results.md#197-exploratory-network-cause-test-and-leave-one-month-out).
 
 Per cause, reasoning-on labels (labels overlap):
 
@@ -372,7 +376,7 @@ The documents (`nemsim/aer/collect.py`), every label with its quote (`results/ae
 
 **Rungs 3b and 4 are linear programs, and where a price is degenerate the solver's choice can move between runs.** Where supply meets demand exactly at a band edge, a range of prices satisfies the LP. Re-running rung 3b changed 1.35% of June 2025's prices and 0.60% of September 2025's, and not one region-interval's within-$5 outcome. Rung 4 re-run on five episode days changed 11 of 7,200 prices. Rungs 1, 2 and 3a reproduce exactly.
 
-**A stated bias.** Rung 4 drops constraint terms on units it has no variable for: loads held at actual, and non-scheduled units. Over the ten months, that changes 27.7% of the constraint-intervals it applies. Measured against AEMO's reported values, the change leaves rung 4's constraints **tighter, not looser**, than the real ones. It concentrates in NSW and in negative and low-price intervals, where rung 4's prices also run high (+$8.6 mean error in the negative band). On binding constraints the mean effect is −0.1 MW, and on the $300+ band 94% of applied constraints match AEMO within 1 MW as rung 4 represents them. So it barely touches the ten-month 26.4%; the 55.7% has more exposure. This audit has not been re-run on the seven spike months. The only pre-dispatch stand-in, `INITIALMW`, recovers almost none of it, so the terms stay dropped rather than being filled with actual MW ([section 9.1](docs/stage2_results.md#91-the-dropped-constraint-terms)). Battery charging is held at actual in every rung, and no rung models state of charge.
+**A stated bias.** Rung 4 drops constraint terms on units it has no variable for: loads held at actual, and non-scheduled units. Over the ten months, that changes 27.7% of the constraint-intervals it applies. Measured against AEMO's reported values, the change leaves rung 4's constraints **tighter, not looser**, than the real ones. It concentrates in NSW and in negative and low-price intervals, where rung 4's prices also run high (+$8.6 mean error in the negative band). On binding constraints the mean effect is −0.1 MW, and on the $300+ band 94% of applied constraints match AEMO within 1 MW as rung 4 represents them. So it barely touches the ten-month 26.4%; the 55.8% has more exposure. This audit has not been re-run on the seven spike months. The only pre-dispatch stand-in, `INITIALMW`, recovers almost none of it, so the terms stay dropped rather than being filled with actual MW ([section 9.1](docs/stage2_results.md#91-the-dropped-constraint-terms)). Battery charging is held at actual in every rung, and no rung models state of charge.
 
 On the stage 1 research window (2025-09-01 04:05 to 2025-09-02 02:10, 1,330 region-intervals), the harness also reproduces the research's four simple-model figures to within about a point, including its 28%, which belongs to a model told the actual flows ([nemsim/reproduce.py](nemsim/reproduce.py)).
 
@@ -408,6 +412,8 @@ The AER's reports on high-price events are published under Creative Commons Attr
 pip install -e ".[frontend]"     # FastAPI and uvicorn, kept out of requirements.lock and CI
 python -m nemsim.web             # then open http://127.0.0.1:8765
 ```
+
+This repository has no deployment configuration or deploy workflow: the command above binds to `127.0.0.1`, and CI only runs tests. Editing or pushing the repository therefore does not update a public host; any externally hosted copy must be redeployed manually through the service that owns it.
 
 Pick an interval and the page shows what the market did, what each rung said, and why they differ. Every modelled price on the page is the scored result already in `results/`. The warehouse is opened read-only, so DuckDB itself refuses any write.
 

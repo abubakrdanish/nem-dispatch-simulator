@@ -9,8 +9,8 @@ Fixed before any label was seen (2026-11-16), so the test cannot be fitted to it
 - **Population.** Region-intervals with an actual price (DISPATCHPRICE.RRP, pricing run) of $5,000/MWh or
   more, the AER's reporting threshold. Reported beside it: every $300+ region-interval in an AER-labelled
   day-region. $300+ region-intervals on days the AER did not report form their own bucket.
-- **Network-attributed.** Primary: the event carries the network_outage label. Broader: network_outage,
-  interconnector_limit or constraint_violation.
+- **Network-attributed.** Primary: the event carries the network_outage label. Broader: network_outage
+  or interconnector_limit. Constraint violation is excluded because its measured recall is zero.
 - **The prediction holds** if rung 4's within-$5 share on network-attributed $5,000+ region-intervals is
   higher than on the rest and the 95% day-block intervals do not overlap. Higher but overlapping is
   "consistent, not shown". Lower is "does not hold".
@@ -18,7 +18,7 @@ Fixed before any label was seen (2026-11-16), so the test cannot be fitted to it
 Every cause cell gives region-intervals, events and days, so thin cells show. Labels are evidence about
 what the AER said, not about the market: a cell is "intervals the AER attributed to X".
 
-The four-way network-cause partition and its leave-one-month-out checks were added after seeing the
+The three-way network-cause partition and its leave-one-month-out checks were added after seeing the
 outage result.  They are exploratory, not part of the rule above.  They use the reasoning-on labels only
 and do not borrow the outage test's pre-registered verdict rule.
 """
@@ -38,13 +38,12 @@ from nemsim.ladder import SAMPLES, frame
 
 OUT = ROOT / "results" / "aer_cause_test.csv"
 NETWORK = {"network_outage"}
-NETWORK_BROAD = {"network_outage", "interconnector_limit", "constraint_violation"}
+NETWORK_BROAD = {"network_outage", "interconnector_limit"}
 REPORT_THRESHOLD = 5000.0
 EXPLORATORY_CELLS = (
     "network outage named",
     "interconnector limit named, no outage",
-    "constraint violation named, neither",
-    "none of the three named",
+    "neither network cause named",
 )
 
 
@@ -56,9 +55,9 @@ def event_rows(config: str = PRIMARY) -> pd.DataFrame:
     """One row per (date, region), retaining both all named and usable causes.
 
     The pre-registered outage test uses only accuracy-qualified ``causes``.  The
-    requested exploratory partition uses ``named_causes`` for its three named
-    categories, so its zero-sized constraint-violation-only cell remains visible
-    even though that label failed the accuracy threshold.
+    requested exploratory partition uses ``named_causes`` for its two retained
+    network labels.  ``constraint_violation`` is explicitly excluded for zero
+    measured recall and does not define a cell.
     """
     ev = json.loads(labels_file(config).read_text())["events"]
     keep = usable_labels(config)
@@ -131,9 +130,7 @@ def _exploratory_cell(causes: set[str]) -> str:
         return EXPLORATORY_CELLS[0]
     if "interconnector_limit" in causes:
         return EXPLORATORY_CELLS[1]
-    if "constraint_violation" in causes:
-        return EXPLORATORY_CELLS[2]
-    return EXPLORATORY_CELLS[3]
+    return EXPLORATORY_CELLS[2]
 
 
 def leave_one_month_out(x: pd.DataFrame) -> list[dict]:
@@ -190,7 +187,7 @@ def run(config: str = PRIMARY) -> pd.DataFrame:
     if config == PRIMARY:
         # Exploratory: mutually exclusive priority order specified after the
         # outage result was known.  Raw, verbatim reasoning-on names are used
-        # for the three requested labels; no pre-registered verdict is applied.
+        # for the two retained network labels; no pre-registered verdict is applied.
         p = x[(x.rrp >= REPORT_THRESHOLD) & x.labelled].copy()
         p["exploratory_cell"] = p.named_causes.apply(_exploratory_cell)
         for cell in EXPLORATORY_CELLS:
@@ -200,7 +197,7 @@ def run(config: str = PRIMARY) -> pd.DataFrame:
         rows.append({"population": "$5,000+", "group": "exploratory: any network cause named",
                      **measures(p[has])})
         # The comparison row is already the fourth mutually exclusive cell.
-        assert (p[~has].exploratory_cell == EXPLORATORY_CELLS[3]).all()
+        assert (p[~has].exploratory_cell == EXPLORATORY_CELLS[2]).all()
         rows.extend(leave_one_month_out(x))
     out = pd.DataFrame(rows).assign(config=config)
     out.to_csv(out_file(config), index=False)

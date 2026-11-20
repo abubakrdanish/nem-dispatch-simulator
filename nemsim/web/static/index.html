@@ -185,7 +185,8 @@ const sdollars = v => v == null ? "–" : Math.abs(v) < 0.5 ? "$0" : (v > 0 ? "+
 const mw = v => v == null ? "–" : Math.round(v).toLocaleString() + " MW";
 const pad = n => String(n).padStart(2, "0");
 const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
-const parse = s => { const [a, b] = s.split("T"); const [y, m, d] = a.split("-").map(Number); const [h, mi] = b.split(":").map(Number); return new Date(y, m - 1, d, h, mi); };
+const intervalStamp = s => s.includes("T") ? s : s + "T00:05";
+const parse = s => { const [a, b = "00:05"] = s.split("T"); const [y, m, d] = a.split("-").map(Number); const [h, mi] = b.split(":").map(Number); return new Date(y, m - 1, d, h, mi); };
 const human = s => { const d = parse(s); return d.toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short", year: "numeric"}) + ", interval ending " + s.slice(11) + " AEST"; };
 const dayOf = s => { const d = parse(s); d.setMinutes(d.getMinutes() - 5); return iso(d).slice(0, 10); };
 const chip = c => { const [k, lab] = CLASS[c] || ["c-none", "not scored"]; return `<span class="chip ${k}">${lab}</span>`; };
@@ -446,7 +447,7 @@ async function init() {
     $("episodes").appendChild(b);
   }
   const q = new URLSearchParams(location.search);
-  S.view = q.get("view") || "interval"; S.t = q.get("t") || META.default.t;
+  S.view = q.get("view") || "interval"; S.t = intervalStamp(q.get("t") || META.default.t);
   S.region = q.get("region") || (q.get("t") ? "VIC1" : META.default.region); S.scope = q.get("scope") || "region";
   S.all = q.get("all") === "1";
   if (q.get("theme")) document.documentElement.dataset.theme = q.get("theme");
